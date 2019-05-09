@@ -1,0 +1,62 @@
+@font-face {
+  font-family: "Raleway Regular";
+  src: url(../packages/fonts/Raleway-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: "Raleway SemiBold";
+  src: url(../packages/fonts/Raleway-SemiBold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: "Raleway Bold";
+  src: url(../packages/fonts/Raleway-Bold.ttf) format('truetype');
+}
+
+$textFont: "Raleway Regular", sans-serif;
+$textColor: #000;
+$mainColor: #edb026;
+  
+$headerFontMedium: "Rwaleway SemiBold", sans-serif;
+$headerFontBold: "Raleway Bold", sans-serif;
+
+@mixin respondTo($device){
+	@if $device == phones {
+		@media (max-width: 479px) {@content}
+	}
+	@else if $device == wide-phones {
+		@media (min-width: 480px) and (max-width: 767px) {@content}
+	}
+	@else if $device == tablets {
+		@media (min-width: 768px) and (max-width: 991px) {@content}
+	}
+	@else if $device == small-desktops {
+		@media (min-width: 992px) and (max-width: 1199px) {@content}	
+	}
+	@else if $device == lg-desktops {
+		@media (min-width: 1200px) and (max-width: 1440px) {@content}
+	}
+	@else if $device == xlg-desktops {
+		@media (min-width: 1441px) {@content}
+	}
+}
+
+@mixin customRespond($_minWidth, $_maxWidth) {
+	@media (min-width: $_minWidth) and (max-width: $_maxWidth) {@content} 
+}
+
+@mixin header {
+	font: 30px/37px $headerFontBold;
+}
+
+@mixin text {
+	font: 16px/25px $textFont;
+}
+
+@mixin frame($_gridTemplate) {
+		margin: 30px 0 100px 0; 
+		display: grid;
+		justify-content: center;
+		grid-template: $_gridTemplate;
+		grid-gap: 20px;
+}
