@@ -1,0 +1,9 @@
+[2018-11-11 14:47:00] layer "PSDFreebies.com": Unsupported extension: com
+[2018-11-11 14:47:00] layer "+123 4567 8900": Expected Either a default asset specification or a layer asset specification but "+" found.
+[2018-11-11 16:09:30] layer "googlePlay.png": Asset path is too long: googlePlay.png
+[2018-11-11 14:47:00] layer "+123 4567 8900": Expected Either a default asset specification or a layer asset specification but "+" found.
+[2018-11-11 14:47:00] layer "+123, Main Street, Your City, New York, USA 789456  +123 4567 8": Expected Either a default asset specification or a layer asset specification but "+" found.
+[2018-11-11 14:47:00] layer "Copyright © 2015 PSDfreebies.com": Unsupported extension: com
+[2018-11-11 14:47:00] layer "www.psdfreebies.com": Unsupported extension: com
+[2018-11-11 16:13:29] layer "PSDFreebies.com": Unsupported extension: com
+[2018-11-11 14:47:00] layer "PSDFreebies.com": Unsupported extension: com

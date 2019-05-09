@@ -1,0 +1,763 @@
+@import "_variables";
+
+.wrapper {
+	max-width: 1600px;
+	margin: 0 auto;	
+}
+/*=======================================================================*/
+/*--------------------------H--E--A--D--E--R-----------------------------*/
+/*-----------------------------------------------------------------------*/
+/*=======================================================================*/
+.mainHeader {
+	position: relative;
+	height: 739px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	flex-direction: row;
+	padding: 70px 110px;
+	box-sizing: border-box;
+	background: url('../packages/images/header.jpg') no-repeat center center/cover;
+	@include customRespondTo (0, 712px) {
+		padding: 70px 20px;
+	};
+	@include customRespondTo (0, 374px) {
+		height: 600px;
+	};
+	&__logo {
+		font: 44.5px $headerFont;
+		color: $lightColor;
+		&TextSpan {
+			color: #daa505;
+		}
+		&Text:first-child {
+			margin: 0;
+			width: 177px;
+		}
+		&Text:nth-child(2) {
+			width: 177px;
+			font-size: 16px;
+			margin: 11px 0 0 0;
+			text-transform: uppercase;
+			letter-spacing: 3.3px;
+			text-align: center;
+		}
+	}
+	&__navigationAdaptive { 
+		display: none;
+	    width: 45px;
+	    height: 35px;
+	    position: relative;
+	    cursor: pointer;
+	    margin-top: 10px;
+	    @include customRespondTo (0, 1100px) {
+	    	display: inline-block;
+	    };
+	    @include customRespondTo (0, 712px) {
+	    	margin-right: 30px;
+	    };
+	    &Icon {
+	    	display: block;
+		    position: absolute;
+		    height: 9px;
+		    width: 100%;
+		    background: $lightColor;
+		    border-radius: 9px;
+		    opacity: 1;
+		    left: 0;
+		    transform: rotate(0deg);
+		    transition: .25s ease-in-out;
+		    &:nth-child(1) {
+		    	top: 0px;
+		    }
+		    &:nth-child(2),
+		    &:nth-child(3) {
+		    	top: 13px;
+		    }
+		    &:nth-child(4) {
+		    	top: 26px;
+		    }
+		    &_open {
+		    	&:nth-child(1) {
+		    		top: 18px;
+				    width: 0%;
+				    left: 50%;
+		    	}
+			    &:nth-child(2) {
+			    	transform: rotate(45deg);
+			    }
+			    &:nth-child(3) {
+			    	transform: rotate(-45deg);
+		    	}
+		    	&:nth-child(4) {
+		    		top: 18px;
+				    width: 0%;
+				    left: 50%;
+		   	 	}
+		    }
+	    }
+	}
+	&__navigation {
+		max-width: 675px;
+		height: 30px;
+		display: flex;
+		justify-content: space-between;
+		@include customRespondTo (0, 1100px) {
+			display: none;
+		}; 
+		&Item {
+			display: block;
+			width: 150px;
+			height: 30px;
+			font: 14.5px/30px $headerFont;
+			text-decoration: none;
+			color: $lightColor;
+			text-transform: uppercase;
+			box-sizing: border-box;
+			text-align: center;
+			&:hover {
+				border: 1px solid $mainColor;
+				background-color: $mainColor;
+				border-radius: 17px; 	
+			}
+		}
+		&_open {
+			position: absolute;
+			display: block;
+			top: 130px;
+			right: 55px;
+			@include customRespondTo (0, 712px) {
+				right: 0;
+			};
+		}
+	}
+	&__booking {
+		color: $lightColor;
+		width: 100%;
+		font-family: $headerFont;
+		text-transform: uppercase;
+		text-align: center;
+		@include respondTo (small-desktops) {
+			margin-top: 100px;
+		};
+		@include customRespondTo (0, 991px) {
+			margin-top: 150px;
+		};
+		&Item {
+			&:first-child {
+				margin: 40px 0 0 0;
+				font-size: 38px;
+				color: #ffc61a;
+				@include customRespondTo (0, 345px) {
+					font-size: 30px;
+				};
+			}
+			&:nth-child(2) {
+				margin: 20px 0 0 0;
+				font-size: 67px;
+				@include customRespondTo (363px, 532px) {
+					font-size: 45px;
+				};
+				@include customRespondTo (0, 363px) {
+					font-size: 30px;
+				};
+			}
+			&:last-child {
+				letter-spacing: 15px;
+				font-size: 16.5px;
+				margin: 30px 0 400px 50px;
+			}
+			&Img {
+				display: block;
+				margin: 50px auto 0;
+				@include respondTo (small-desktops) {
+					width: 613px;
+					height: 342px;
+					margin-top: 65px; 
+				};
+				@include customRespondTo (713px, 991px) {
+					width: 413px;
+					height: 242px;
+					margin-top: 70px;
+				};
+				@include customRespondTo (363px, 712px) {
+					width: 310px;
+					height: 180px;
+					margin-top: 130px;
+				};
+				@include customRespondTo (0, 363px) {
+					width: 210px;
+					height: 130px;
+					margin-top: 7 l,0px;
+				};
+			}
+		}
+	}
+}
+/*=======================================================================*/
+/*--------------------------------F--I--R--S--T--------------------------*/
+/*-----------------------------S--E--C--T--I--O--N-----------------------*/
+/*=======================================================================*/
+.bestInCity{
+	width: 100%;
+	background-color: $mainColor;
+	padding: 150px 20px 80px;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: space-around;
+	@include customRespondTo (0, 1199px) {
+		flex-direction: column;
+		align-items: center;	
+	};
+	&__description {
+		color: $darckColor;
+		width: 600px;	
+		@include customRespondTo (0, 1199px) {
+			width: 100%;
+			text-align: center;
+		};
+		&Statment {
+			font: 32.5px $headerFont;
+			text-transform: uppercase;
+		}
+		&Header {
+			margin: 25px 0 0 0;
+			font: 53px $headerFont;
+			text-transform: uppercase;	
+		}
+		&Text {
+			margin: 45px 0 0 0;
+			font: 18px $textFont;
+			@include customRespondTo (0, 1199px) {
+				font-size: 24px;
+			};
+		}
+		&More {
+			margin: 56px 0 20px;
+			@include readMore ($darckColor, $lightColor);
+			@include customRespondTo (0, 1199px) {
+				margin: 56px auto 20px;
+			};
+		}
+		&Form {
+			background-color: $lightColor;
+			max-width: 422px;
+			min-height: 472px;
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: space-around;
+			align-content: flex-start;
+			&Header {
+				width: 100%;
+				height: 77px;
+				background: $darckColor;
+				padding: 0 0 0 40px;
+				box-sizing: border-box;
+				font: 35.5px/77px $headerFont;
+				text-transform: uppercase;
+				color: $lightColor;
+				&Span {
+					color: $mainColor;
+				}
+			}
+			&Item {
+				border: none;
+				border-bottom: 3px solid #e4e4e4;
+				outline: none;
+				width: 171px;
+				height: 55px;
+				font: 22px $textFont;
+				color: #4b4b4b;
+				&:nth-child(-n+3) {
+					margin: 30px 0 0 0;
+				} 
+				&:nth-child(even)::placeholder {
+					color: $darckColor;
+				}
+				&:nth-child(8) {
+					max-width: 382px;
+					@include customRespondTo (0, 422px) {
+						width: 90%;
+					};
+				}
+				@include customRespondTo (0, 422px) {
+					width: 90%;
+				};
+				&Submit {
+					display: block;
+					font: 30px/50px $buttonFont;
+					text-transform: uppercase;
+					width: 376px;
+					height: 50px;
+					background-color: $darckColor;
+					color: $lightColor;
+					padding: 0 0 50px 0;
+					margin: 45px;
+					@include customRespondTo (0, 422px) {
+						width: 200px;
+					};
+					&:hover {
+						cursor: pointer;
+					}
+				}
+			}
+		}
+	}
+}
+/*=======================================================================*/
+/*------------------------------S--E--C--O--N--D-------------------------*/
+/*-----------------------------S--E--C--T--I--O--N-----------------------*/
+/*=======================================================================*/
+.priceList {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	@include customRespondTo (0, 1199px) {
+		flex-direction: column;
+		align-items: center;
+	};
+	&__header {
+		margin: 63px 0 0 0;
+		width: 100%;
+		font: 45px $headerFont;
+		color: $darckColor;
+		text-transform: uppercase;
+		text-align: center;	
+		&Span {
+			display: block;
+			font-size: 32.5px;
+			color: $mainColor;
+		}
+	}
+	&__item {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		max-width: 373px;
+		min-height: 424px;
+		margin: 133px 0 0 0;
+		background-color: #f5f4f2;
+		text-align: center;
+		@include customRespondTo (0, 1199px) {
+			max-width: 100%;
+		};
+		&:nth-child(-n+3) {
+			margin-right: 35px;
+			@include customRespondTo (0, 1199px) {
+				margin-right: 0;
+			};
+		}
+		&Image {
+			display: block;
+			margin: -85px auto 0;
+			@include customRespondTo (0, 374px) {
+				width: 244px;
+				height: 119px;
+				margin-top: -60px;
+			};
+		} 
+		&Header {
+			margin: 20px 0;
+			font: 31.5px $headerFont;
+			text-transform: uppercase;	
+		}
+		&Description {
+			font: 18px $textFont;
+			color: $textColor;
+			padding: 0 35px;
+		}
+		&Rate {
+			margin: 30px 0;
+			font: 45px $headerFont;
+			color: $mainColor;
+			&_mostPopular {
+				color: $darckColor;
+			}
+		}
+		&More {
+			align-self: center;
+			@include readMore ($mainColor, $darckColor);
+			&_mostPopular {
+				background-color: $darckColor;
+				color: $lightColor;
+			}
+		}
+		&_mostPopular {
+			background-color: $mainColor;
+			&:after {
+				width: 0; 
+				height: 0;
+				border-bottom: 74px solid $darckColor;
+				border-left: 74px solid transparent;
+				content: "";
+				position: absolute;
+				bottom: 0;
+				right: 0;
+			}
+			&:before {
+				content: "\2605";
+				font-size: 45px;
+				color: $mainColor;
+				z-index: 1;
+				position: absolute;
+				bottom: 0;
+				right: 0;
+			}
+		}
+	}
+}
+/*=======================================================================*/
+/*--------------------------------T--H--I--R--D--------------------------*/
+/*-----------------------------S--E--C--T--I--O--N-----------------------*/
+/*=======================================================================*/
+.weDoBest {
+	margin: 77px 0 0 0;
+	background: url(../packages/images/wdbBack.jpg) no-repeat center center/cover;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	@include customRespondTo (0, 650px) {
+		padding: 20px;
+		box-sizing: border-box; 
+	};
+	&__header {
+		margin: 81 0 100px 0;
+		width: 100%;
+		font: 45px $headerFont;
+		color: $lightColor;
+		text-transform: uppercase;
+		text-align: center;
+		&Span {
+			margin-bottom: 16px;
+			font-size: 32.5px;
+			color: $mainColor;
+			display: block;
+		}
+	}
+	&__unit { 	
+		width: 500px;
+		&:nth-child(even) {
+			margin-right: 100px;
+			@include customRespondTo (0, 1099px) {
+				margin-right: 0;
+			};
+		}
+		&:nth-child(n+2) {
+			margin-top: 85px;
+		}
+
+		&Icon {
+			margin: 10px 40px 20px 0;
+			font: 30px/81px FontAwesome; 
+			width: 81px;
+			height: 81px;
+			border-radius: 50%;
+			background-color: $mainColor;
+			text-align: center;
+			float: left; 
+			@include customRespondTo (0, 438px) {
+				float: none;
+				margin: 0 auto 20px;
+			};
+		}
+		&Header {
+			font: 27px $headerFont;
+			color: $mainColor;
+			text-transform: uppercase;
+		}
+		&Description {
+			text-align: left;
+			margin: 15px 0 0 0;
+			font: 18px $textFont;
+			color: $lightColor;
+			@include customRespondTo (0, 438px) {
+				text-align: center;
+			};
+		}
+		@include customRespondTo (0, 438px) {
+			text-align: center;
+		};	
+	}
+	&__more{
+		margin: 85px 0 71px 0;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		&Button {
+			@include readMore ($mainColor, $darckColor);
+		}
+	}
+}
+/*=======================================================================*/
+/*-------------------------------F--O--U--R--T--H------------------------*/
+/*-----------------------------S--E--C--T--I--O--N-----------------------*/
+/*=======================================================================*/
+.bestCabServies {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	background: url(../packages/images/hand.png) right bottom/cover no-repeat;
+	@include customRespondTo (0, 870px) {
+		background: none;
+	};
+	&__header {
+		width: 100%;
+		height: 100px;
+		font: 45px $headerFont;
+		color: $darckColor;
+		text-transform: uppercase;
+		text-align: center;	
+		&Span {
+			margin-bottom: 16px;
+			font-size: 32.5px;
+			color: $mainColor;
+			display: block;
+		}
+	}
+	&__unit {
+		margin: 81px 0 161px -400px;
+		max-width: 450px;
+		@include customRespondTo (0, 870px) {
+			margin: 81px auto;
+		};
+		@include customRespondTo (0, 460px) {
+			text-align: center;
+		};
+		&Header {
+			font: 26px $headerFont;
+		}
+		&Description {
+			margin-top: 28px;
+			font: 18px $textFont;
+			color: $textColor;
+			margin-top: 30px;
+		}
+		&Store {
+			margin-top: 66px;
+			&Link {
+				@include customRespondTo (0, 423px) {
+					display: block;
+					margin-top: 20px;
+					text-align: center;
+				};
+			}
+		}
+	}
+}
+/*=======================================================================*/
+/*---------------------------------F--I--T--H----------------------------*/
+/*-----------------------------S--E--C--T--I--O--N-----------------------*/
+/*=======================================================================*/
+.happyClients {
+	background: url(../packages/images/hcBack.jpg) center center/cover no-repeat;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	@include customRespondTo (0, 1191px) {
+		flex-direction: column;
+		align-items: center;
+	};
+	&__header {
+		margin-top: 110px;
+		width: 100%;
+		font: 44px $headerFont;
+		color: $lightColor;
+		text-transform: uppercase;
+		text-align: center;	
+		&Span {
+			margin-bottom: 20px;
+			font-size: 35px;
+			color: $mainColor;
+			display: block;
+		}
+	}
+	&__unit {
+		margin: 0 0 60px 0;
+		padding: 50px;
+		box-sizing: border-box;
+		max-width: 580px;
+		min-height: 250px;
+		background-color: #040707;
+		border-radius: 50px;
+		&Comment {
+			font: 18px $textFont;
+			color: $lightColor;
+			margin-bottom: 20px;
+		}
+		&User {
+			&Face {
+				float: left;
+			}
+			&Name,
+			&Position {
+				display: block;
+				text-transform: uppercase;
+			}
+			&Name {
+				font: 25px $headerFont;
+				color: $mainColor;
+				margin-left: 92px;
+			}
+			&Position {
+				font: 18px $headerFont;
+				color: $lightColor;
+				margin-left: 98px;
+			}
+		}
+		&:nth-child(2) {
+			margin: 0 32px 60px 0;
+			@include customRespondTo (0, 1191px) {
+				margin-right: 0;
+			};
+		}
+	}
+
+}
+/*=======================================================================*/
+/*-----------------------------A--S--I--D--E-----------------------------*/
+/*-----------------------------------------------------------------------*/
+/*=======================================================================*/
+.aside {
+	padding: 60px 0;
+	box-sizing: border-box;
+	background-color: $mainColor;
+	text-align: center;
+	&__content {
+		font: 32.5px $headerFont;
+		&Span {
+			margin: 32px 0 0 0;
+			font: 71px $headerFont;
+			display: block;
+			@include customRespondTo (0, 343px) {
+				font-size: 60px;
+			};
+		}
+	}
+}
+/*=======================================================================*/
+/*---------------------------F--O--O--T--E--R----------------------------*/
+/*-----------------------------------------------------------------------*/
+/*=======================================================================*/
+.footer {
+	background-color:  #020100;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	color: $lightColor;
+	@include customRespondTo (0, 1214px) {
+		flex-direction: column;
+		align-items: center;
+	};
+	@include customRespondTo (0, 422px) {
+		padding: 20px;
+		box-sizing: border-box;
+	};
+	&__unit {
+		margin: 76px 0 0 0;
+		width: 345px;
+		@include customRespondTo (0, 1214px) {
+			width: 100%;
+			text-align: center;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		};
+		&Header {
+			font: 31.5px $headerFont;
+			text-transform: uppercase;
+		}
+		&:nth-child(-n+2) {
+			margin-right: 90px;	
+			@include customRespondTo (0, 1214px) {
+				margin-right: 0;
+			};
+		}
+		&Separator {
+			margin: 40px 0 46px 0;
+			width: 339px;
+			height: 8px;
+			background-color: $mainColor;
+			@include customRespondTo (0, 1214px) {
+				width: 70%;
+			};
+		}
+		&Social {
+			margin: 40px 0 0 0;
+			&Link {
+				&Icon {
+					color: $mainColor;
+					font-size: 20px;
+					letter-spacing: 20px;
+				}
+			}
+		}
+		&Download {
+			margin: 20px 0 0 0;
+			&Link {
+				width: 180px;
+				text-decoration: none;
+				display: block;
+				color: $mainColor;
+				font: 20px/30px $textFont;
+				&:first-child {
+					margin-bottom: 15px;
+				}
+				&Icon {
+					font-size: 30px;
+					color: $lightColor;
+					float: right;
+				}
+			}
+		}
+		&Contacts {
+			margin: 0 20px 20px 0;
+			text-decoration: none;
+			color: $lightColor;
+			display: inline-block;
+			width: 340px;
+			@include customRespondTo (0, 425px) {
+				width: 	250px;
+				margin: 0;
+			};
+			&Icon {
+				margin: -5px 20px 0 0;
+				display: block;
+				font-size: 22px;
+				height: 50px;
+				line-height: 30px;
+				float: left;
+				@include customRespondTo (0, 425px) {
+
+				};
+			}
+			&Span {
+				display: inline-block;
+				font: 18px $textFont;
+				@include customRespondTo (0, 1214px) {
+					font-size: 24px;
+				};
+				@include customRespondTo (0, 425px) {
+					font-size: 	16px;
+				};
+			}
+		}
+		&Text {
+			font: 18px $textFont;
+			@include customRespondTo (0, 1214px) {
+				width: 60%;
+				font-size: 24px;
+			};
+			@include customRespondTo (0, 425px) {
+				font-size: 	16px;
+			};
+		}
+	}
+	
+	&__copyright {
+		margin: 50px 0 0 0;
+		font: 14px/52px $textFont;
+		width: 100%;
+		height: 52px;
+		text-align: center;
+	}
+}	
