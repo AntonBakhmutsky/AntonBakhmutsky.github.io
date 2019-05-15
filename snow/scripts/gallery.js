@@ -2,10 +2,8 @@
 
 let links = document.querySelectorAll('.workWithCustomer__link');
 let	frame = document.getElementById('frame');
-let	img = document.createElement('img');
 let	link, html;
 
-img.className = 'workWithCustomer-projects__frameImage';
 
 function changeFrame(event) {
 	event.preventDefault();
@@ -19,7 +17,7 @@ function changeFrame(event) {
 	this.classList.add('linkActive');
 	frame.innerHTML = '';
 	for (let i = 1; i < 11; i++) {
-		html += `<img src="../packages/images/projects/${this.dataset.folder}/general/${i}.jpg" alt="#" class="workWithCustomer-projects__frameImage">`; 
+		html += `<img src="packages/images/projects/${this.dataset.folder}/general/${i}.jpg" alt="#" class="workWithCustomer-projects__frameImage">`; 
 	}
 	frame.innerHTML = html;
 }
