@@ -94,6 +94,13 @@
 		transition: color .5s ease-out;
 	}
 }
+.slider {
+	width: 100%;
+	/* background: #000; */
+}
+#gallery {
+	margin: 0 auto;
+}
 .video {
 	display: flex;
 	justify-content: space-between;
