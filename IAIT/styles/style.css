@@ -1,0 +1,175 @@
+@font-face {
+  font-family: "CeraPro Regular";
+  src: url("../packages/fonts/cera_pro/CeraPro-Regular.ttf");
+}
+@font-face {
+  font-family: "CeraPro Bold";
+  src: url("../packages/fonts/cera_pro/CeraPro-Bold.ttf");
+}
+/*--------------------------Entry----------------------------------*/
+.body {
+  background-color: #323657;
+}
+
+.mainWrapper {
+  margin: 0 auto;
+  max-width: 1600px;
+  height: 100vh;
+}
+
+.main {
+  height: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+@media (min-width: 0) and (max-width: 699px) {
+  .main {
+    flex-direction: column;
+    justify-content: space-around;
+  }
+}
+.main__link {
+  display: block;
+}
+.main__link:first-child {
+  margin-right: 100px;
+}
+@media (min-width: 0) and (max-width: 699px) {
+  .main__link:first-child {
+    margin: 0;
+  }
+}
+.main__linkPicture {
+  width: 300px;
+  height: 185px;
+  filter: opacity(50%);
+}
+.main__linkPicture:hover {
+  filter: none;
+  transition: filter .5s ease-out .1s;
+}
+
+/*------------------------------------------------------------------------*/
+.wrapper {
+  max-width: 1600px;
+  margin: 0 auto;
+  background-color: #323657;
+  color: #fff;
+  text-shadow: 2px 2px 4px #000;
+}
+
+.mainHeader {
+  display: flex;
+  flex-flow: row wrap;
+  height: 400px;
+  background: url("../packages/img/header.jpg") center center no-repeat;
+  background-size: cover;
+}
+.mainHeader__header {
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  font: 40px/1.5 "CeraPro Bold", sans-serif;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px #000;
+}
+.mainHeader .navigation {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-self: flex-end;
+  justify-content: space-around;
+  text-align: center;
+  background-color: #1755cb;
+}
+.mainHeader .navigation__link {
+  color: #fff;
+  display: block;
+  text-transform: uppercase;
+  text-decoration: none;
+  font: 30px/1.5 "CeraPro Bold", sans-serif;
+  box-sizing: border-box;
+}
+.mainHeader .navigation__link:hover {
+  color: #113e94;
+  transition: color .15s ease-out;
+}
+.mainHeader .navigation__separator {
+  display: block;
+  font: 30px/50px "CeraPro Bold", sans-serif;
+}
+.mainHeader__logo {
+  text-align: center;
+  align-self: center;
+  width: 100%;
+}
+.mainHeader__logoImage {
+  width: 100px;
+  height: 100px;
+}
+
+.section {
+  padding: 50px;
+  width: 100%;
+  height: 900px;
+  display: flex;
+  flex-flow: column nowrap;
+  box-sizing: border-box;
+}
+.section .desc {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.section .desc__header {
+  width: 100%;
+  margin: 20px 0;
+  font: 60px/1.5 "CeraPro Bold", sans-serif;
+  text-transform: uppercase;
+}
+.section .desc__underline {
+  max-width: 850px;
+  height: 4px;
+  background: #1755cb;
+}
+.section .desc__text {
+  margin: 30px 0 0 0;
+  opacity: 0.9;
+  font: 30px/1.5 "CeraPro Regular", sans-serif;
+}
+.section .desc__list {
+  padding: 0;
+  list-style: none;
+  font: 30px/1.5 "CeraPro Regular", sans-serif;
+  opacity: 0.8;
+}
+.section .desc__listItem {
+  display: flex;
+}
+.section .desc__listItem::before {
+  align-self: center;
+  content: "";
+  background: #1755cb;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin: 0 10px 0 0;
+}
+.section_aboutUs {
+  justify-content: center;
+  background: url("../packages/img/aboutUs.jpg") center center no-repeat;
+  background-size: cover;
+  text-shadow: 3px 3px 6px #000;
+}
+
+.mainFooter {
+  width: 100%;
+  height: 50px;
+  background-color: #1755cb;
+}
+
+/*# sourceMappingURL=style.css.map */
