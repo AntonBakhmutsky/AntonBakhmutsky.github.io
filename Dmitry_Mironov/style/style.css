@@ -1,0 +1,254 @@
+@font-face {
+  font-family: "CeraPro Regular";
+  src: url("../packages/fonts/cera_pro/CeraPro-Regular.ttf");
+}
+@font-face {
+  font-family: "CeraPro Bold";
+  src: url("../packages/fonts/cera_pro/CeraPro-Bold.ttf");
+}
+.wrapper {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.mainHeader,
+.mainFooter {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  padding: 40px 60px;
+  height: 100px;
+  background: #323657;
+  border: solid 1px #707070;
+  box-sizing: border-box;
+}
+.mainHeader .navigation__link,
+.mainFooter .navigation__link {
+  text-decoration: none;
+  color: #fff;
+  font: 20px "CeraPro Bold", sans-serif;
+  margin-right: 30px;
+}
+.mainHeader .navigation__link:last-child,
+.mainFooter .navigation__link:last-child {
+  margin-right: 0;
+}
+.mainHeader .navigation__link:hover,
+.mainFooter .navigation__link:hover {
+  color: #1755cb;
+  transition: color .3s ease-out;
+}
+.mainHeader .adress,
+.mainFooter .adress {
+  display: block;
+  text-decoration: none;
+  font: 20px "CeraPro Bold", sans-serif;
+  color: #fff;
+}
+.mainHeader .adress:hover,
+.mainFooter .adress:hover {
+  color: #1755cb;
+  transition: color .3s ease-out;
+  cursor: pointer;
+}
+
+.section {
+  width: 100%;
+  height: 900px;
+  display: flex;
+  box-sizing: border-box;
+}
+.section .desc {
+  display: flex;
+  flex-direction: column;
+}
+.section .desc__header {
+  margin: 20px 0;
+  font: 50px/1.5 "CeraPro Bold", sans-serif;
+  text-transform: uppercase;
+}
+.section .desc__underline {
+  width: 228px;
+  height: 4px;
+  background: #1755cb;
+}
+.section .desc__text {
+  opacity: 0.9;
+  text-transform: uppercase;
+  font-family: "CeraPro Regular", sans-serif;
+  line-height: 1.5;
+}
+.section__image {
+  display: block;
+}
+.section_main {
+  justify-content: space-around;
+  background: url("../packages/img/desktop/cemicircle/gray_right.svg") right center no-repeat;
+}
+.section_main .desc {
+  margin: 0 0 -30px 0 0;
+  align-self: center;
+}
+.section_main .desc__header {
+  margin-left: 60px;
+  font-size: 45px;
+}
+.section_main .desc__underline {
+  height: 7px;
+  width: 595px;
+}
+.section_main .desc__text {
+  margin-left: 60px;
+  font: 30px/1.5 "CeraPro Regular", sans-serif;
+}
+.section_exchange {
+  align-content: center;
+  background: url("../packages/img/desktop/back.jpg") no-repeat;
+  flex-direction: column;
+  justify-content: center;
+}
+.section_exchange .desc {
+  text-align: center;
+}
+.section_exchange .desc__header {
+  margin: 0;
+}
+.section_exchange .desc__underline {
+  margin: 20px 0 0 0;
+  align-self: center;
+}
+.section_exchange .desc__text {
+  font-size: 20px;
+}
+.section_exchange .desc__gallery {
+  overflow: hidden;
+  margin: 89px 0 60px 0;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+.section_exchange .desc__galleryImage {
+  display: block;
+  margin-right: 60px;
+}
+.section_exchange .desc__galleryImage:last-child {
+  margin: 0;
+}
+.section_features {
+  align-items: center;
+  justify-content: space-around;
+  background: url("../packages/img/desktop/cemicircle/gray_left.svg") left center no-repeat;
+}
+.section_features .section__image {
+  display: block;
+}
+.section_features .desc__underline {
+  height: 4px;
+  width: 228px;
+}
+.section_features .desc__lists {
+  display: flex;
+  flex-flow: row nowrap;
+}
+.section_features .desc__listsItem {
+  padding: 0;
+  list-style: none;
+  font: 20px/2 "CeraPro Regular", sans-serif;
+  text-transform: uppercase;
+  color: #323657;
+}
+.section_features .desc__listsItem:first-child {
+  margin-right: 90px;
+}
+.section_orders {
+  align-items: center;
+  justify-content: space-around;
+  background: url("../packages/img/desktop/cemicircle/white_right.svg") right center no-repeat, url("../packages/img/desktop/back.jpg") no-repeat;
+}
+.section_orders .desc__text {
+  margin: 60px 0 0 0;
+  font: 30px "CeraPro Bold", sans-serif;
+}
+.section_orders .desc__list {
+  list-style: none;
+  font: 30px/1.5 "CeraPro Regular", sans-serif;
+}
+.section_orders .desc__listItem {
+  display: flex;
+}
+.section_orders .desc__listItem::before {
+  align-self: center;
+  content: "";
+  background: #1755cb;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin: 0 10px 0 0;
+}
+.section_orders .section__image {
+  width: 466px;
+  height: 580px;
+}
+.section_charts {
+  background: url("../packages/img/desktop/cemicircle/gray_left.svg") left center no-repeat;
+  justify-content: space-around;
+  align-items: center;
+}
+.section_charts .section__image {
+  width: 466px;
+  height: 580px;
+}
+.section_charts .desc__list {
+  padding: 0;
+  list-style: none;
+  text-transform: uppercase;
+  font: 30px/1.5 "CeraPro Bold", sans-serif;
+}
+.section_charts .desc__listItemSpan {
+  color: #1755cb;
+}
+.section_charts .desc__text {
+  font-size: 20px;
+}
+.section_orderbook {
+  background: url("../packages/img/desktop/cemicircle/white_right.svg") right center no-repeat, url("../packages/img/desktop/back.jpg") no-repeat;
+  justify-content: space-around;
+  align-items: center;
+}
+.section_orderbook .desc {
+  margin-top: 60px;
+}
+.section_orderbook .desc__text {
+  margin-top: 60px;
+  font: 30px "CeraPro Bold", sans-serif;
+  text-transform: uppercase;
+  opacity: 1;
+}
+.section_orderbook .section__image {
+  margin: 0 -45px 0 0;
+  width: 326px;
+  height: 580px;
+}
+.section_timeline {
+  align-items: center;
+  justify-content: space-around;
+  background: url("../packages/img/desktop/cemicircle/gray_left.svg") left center no-repeat;
+}
+.section_timeline .section__image {
+  width: 466px;
+  height: 580px;
+}
+.section_timeline .desc__text {
+  font: 30px "CeraPro Bold", sans-serif;
+}
+.section_demo {
+  background: url("../packages/img/desktop/cemicircle/white_right.svg") right center no-repeat, url("../packages/img/desktop/back.jpg") no-repeat;
+  justify-content: space-around;
+  align-items: center;
+}
+.section_demo .desc__text {
+  margin-top: 60px;
+  font: 20px "CeraPro Bold", sans-serif;
+}
+
+/*# sourceMappingURL=style.css.map */
