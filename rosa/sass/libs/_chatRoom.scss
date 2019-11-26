@@ -1,0 +1,204 @@
+.chat {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    &__header {
+        display: flex;
+        justify-content: center;
+        flex: 0 0 auto;
+        background: #844F9C;
+        line-height: 30px;
+        font-weight: bold;
+        color: #fff;
+        &Number {
+            margin-right: 5.5px;
+        }
+        &Check {
+            display: none;
+            width: 15px;
+            height: 15px;
+            background: url(../img/chat/check_mark.svg) no-repeat center 40%;
+            align-self: center;
+        }
+        &Desc {
+            margin-right: 15px;
+        }
+    }
+    &__body {
+        flex: 1 0 auto;
+        &Desc {
+            display: none;
+            margin-top: 25px;
+            font: bold 12px/14px $textFont;
+            color: #68648C;
+            text-align: center;
+        }
+    }
+    &__footer {
+        box-sizing: border-box;
+        padding: 6px 0;
+        width: 100%;
+        flex: 0 0 auto;
+        background: #F9F9F9;
+        border-top: 1px solid #8F91AA;
+        border-bottom: 1px solid #EAEBEF;
+        &Closed {
+            display: none;
+            box-sizing: border-box;
+            padding: 6px 30px;
+        }
+        &TextArea {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        &Btn {
+            display: block;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            &_clip{
+                margin-right: 12px;
+                background: url(../img/chat/papper_clip.svg) no-repeat center;
+                background-color: #8F91AA;
+            }
+            &_telegram {
+                background: url(../img/chat/telegram.svg) no-repeat 40% center;
+                background-color: #844F9C;
+            }
+        }
+        &Input {
+            margin-right: 12px;
+            width: 216px;
+            height: 30px;
+            box-sizing: border-box;
+            padding: 0 15px;
+            border: 1px solid #68648C;
+            border-radius: 17px;
+        }
+    }
+    &__correspondence {
+        box-sizing: border-box;
+        padding: 15px;
+    }
+    &__name {
+        margin-top: 10px;
+        box-sizing: border-box;
+        padding-left: 45px;
+        font: 10px/20px $textFont;
+        color: #9D9FB5;
+    }
+    &__message {
+        &Item {
+            margin-top: 5px;
+            display: flex;
+            &Face {
+                display: block;
+                width: 35px;
+                height: 35px;
+                border-radius: 50%;
+            }
+            &Text {
+                max-width: 180px;
+                box-sizing: border-box;
+                padding: 10px;
+                border-radius: 8px;
+                font: 12px/14px $textFont;
+                color: #fff;
+            }
+            &Time {
+                font: 10px/20px $textFont;
+                color: #9D9FB5;
+                align-self: center;
+            }
+        }
+        &_curator {
+            .chat__messageItem {
+                &Text {
+                background: #68648C;
+                border-top-left-radius: 0;
+                margin-right: 10px; 
+                }
+                &Face {
+                    margin-right: 10px;
+                }
+            }
+            &_noFace {
+                .chat__messageItem {
+                    &Text {
+                        margin-left: 45px;
+                    }
+                }
+            }
+        }
+        &_user {
+            &:nth-child(1) {
+                margin-top: 20px;
+            }
+            .chat__messageItem {
+                margin-top: 20px;
+                flex-direction: row-reverse;
+                &Text {
+                    position: relative;
+                    background: #844F9C;
+                    border-top-right-radius: 0;
+                    margin-left: 10px;
+                    &Smile {
+                        display: inline-block;
+                        margin: 0 0 -3px 5px;
+                        width: 13px;
+                        height: 13px;
+                        background: url(../img/chat/smile.png);
+                    }
+                    &::before {
+                        content: "";
+                        bottom: 1px;
+                        right: 2px;
+                        position: absolute;
+                        width: 13px;
+                        height: 13px;
+                        background: url('../img/chat/message_read.svg') no-repeat center;
+                    }
+                }
+                &Face {
+                    margin-left: 10px;
+                }
+            }
+            &_noFace {
+                .chat__messageItem {
+                    margin-top: 5px;
+                    &Text {
+                        margin-right: 45px;
+                    }
+                }
+            }
+        }
+    }
+    &_closed {
+        .chat__header {
+            background: #68648C;
+            &Check {
+                display: block;
+            }
+        }
+        .chat__footer {
+            &TextArea {
+                display: none;
+            }
+            &Closed {
+                display: block;
+                font: 12px/14px $textFont;
+                color: #68648C;
+            }
+        }
+    }
+    &_empty {
+        .chat__bodyDesc {
+            display: block;
+        }
+        .chat__correspondence {
+            display: none;
+        }
+    }
+}

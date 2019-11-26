@@ -1,0 +1,153 @@
+.partnerInside {
+    @include container;
+    flex-direction: column;
+    align-items: center;
+    &__container {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0 20px;
+    }
+    &__image {
+        width: 100%;
+        background: #fff;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        &Item {
+            display: block;
+            width: 100%;
+            height: 176px;
+        }
+    }
+    &__about {
+        background: #fff;
+        color: #131929;
+        box-sizing: border-box;
+        padding: 16px 10px 28px;
+        border-radius: 5px;
+        box-shadow: 0 -5px 10px rgba(0, 0, 0, .25);
+        &Status {
+            display: inline-block;
+            box-sizing: border-box  ;
+            padding: 0 10px;
+            height: 23px;
+            background: #160840;
+            color: #fff;
+            border-radius: 8px;
+            font: bold 12px/23px $textFont;
+            text-align: center;
+        }
+        &Header {
+            margin-top: 15px;
+            font: bold 20px/24px $textFont;
+        }
+        &Text {
+            margin-top: 25px;
+        }
+        &Contacts {
+            display: flex;
+            flex-direction: column;
+            &Details {
+                display: flex;
+                flex-direction: column;
+                &Item {
+                    color: #131929;
+                    margin-top: 25px;
+                    line-height: 20px;
+                    display: block;
+                    padding-left: 30px;
+                    &:first-child {
+                        background: url(../img/partner_inside/phone.svg) no-repeat left;
+                    }
+                    &:nth-child(2) {
+                        background: url(../img/partner_inside/mail.svg) no-repeat left;
+                    }
+                }
+            }
+        }
+        &Social {
+            display: flex;
+            margin-top: 30px;
+            align-items: center;
+            &Link {
+                margin-right: 25px;
+            }
+        }
+        &Site {
+            padding-left: 30px;
+            box-sizing: border-box;
+            margin-top: 25px;
+            width: 260px;
+            height: 48px;
+            border-radius: 8px;
+            background: url(../img/partner_inside/link.svg) no-repeat 2% 50%;
+            background-color: #EAEBEF;
+            font: bold 16px/48px $textFont;
+            align-self: center;
+            overflow: hidden;
+            &Link {
+                color: #131929;
+            }
+        }
+        &Map {
+            margin-top: 25px;
+            align-self: center;
+
+            &Adress {
+                box-sizing: border-box;
+                padding-left: 30px;
+                font-weight: bold;
+                line-height: 20px;
+                background: url(../img/partner_inside/blue_mark.svg) no-repeat 0 50%;
+                background-size: 20px 20px;
+            }
+            &Image {
+                position: relative;
+                margin-top: 25px;
+                text-align: center;
+                &::after {
+                    content: "";
+                    width: 45px;
+                    height: 50px;
+                    position: absolute;
+                    top: 110px;
+                    left: 110px;
+                    background: url(../img/partner_inside/red_mark.svg) no-repeat center;
+                }
+            }
+        }
+        &Stock {
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+            padding: 10px 20px 30px;
+            border: 1px solid #DC4497;
+            border-radius: 8px;
+            &List {
+                padding-left: 25px;
+                &Item {
+                    position: relative;
+                    margin-top: 25px;
+                    box-sizing: border-box;
+                    &::before {
+                        position: absolute;
+                        top: 5px;
+                        left: -22.5px;
+                        content: "";
+                        width: 9px;
+                        height: 9px;
+                        border-radius: 50%;
+                        background-color: #DC4497;
+                    }
+                }
+            }
+        }
+    }
+    &__cancel {
+        align-self: center;
+        &Item {
+            cursor: pointer;
+        }
+    }
+}

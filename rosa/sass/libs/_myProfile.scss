@@ -1,0 +1,573 @@
+.myProfile {
+  &_disabled {
+    display: none;
+  }
+  flex: 1 0 auto;
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__header {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    &Buttons {
+      margin: 24px 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &Item {
+        transition: all .1s;
+        box-sizing: border-box;
+        text-decoration: none;
+        color: #68648c;
+        font: bold 12px/33px $textFont;
+        text-align: center;
+        text-transform: uppercase;
+        display: block;
+        height: 33px;
+        &:first-child {
+          margin-right: 30px;
+        }
+        &_active {
+          color: #000;
+          font-size: 20px;
+          border-bottom: 3px solid $lightColor;
+        }
+      }
+    }
+    &Desc {
+      align-self: center;
+      padding: 0;
+      width: 320px;
+      height: 24px;
+      font: bold 20px/24px $textFont;
+    }
+    &Face {
+      margin-top: 30px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &Cross,
+      &Edit {
+        width: 27px;
+        height: 27px;
+        border-radius: 50%;
+        background-color: #61637e;
+        cursor: pointer;
+      }
+      &Cross {
+        background-image: url(../img/cross_l.svg), url(../img/cross_r.svg);
+        background-repeat: no-repeat, no-repeat;
+        background-position: center, center;
+        margin-right: 25px;
+      }
+      &Image {
+        margin-right: 25px;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        border: 2px solid $lightColor;
+      }
+      &Edit {
+        background-image: url(../img/Edit.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+  }
+  &__form {
+    margin: 32px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &Item {
+      margin-bottom: 25px;
+      display: flex;
+      flex-direction: column;
+      #datepicker {
+        background-image: url(../img/calendarDark.svg);
+        background-repeat: no-repeat;
+        background-position: 95% center;
+        &:focus {
+          background-image: url(../img/calendarLight.svg);
+          transition: .2s;
+        }
+      }
+      &Input {
+        &_correct {
+          box-sizing: border-box;
+          background: #c8fff4;
+          border-color: #27caaa;
+          color: #27caaa;
+          transition: all .3s ease-out;
+          &Message {
+            margin-top: 3px;
+            width: 320px;
+            padding-left: 30px;
+            align-self: center;
+            font: 12px/20px $textFont;
+            color: #27caaa;
+          }
+        }
+        &_wrong {
+          box-sizing: border-box;
+          background: #ffd3e5;
+          border-color: #dc4497;
+          color: #dc4497;
+          transition: all .3s ease-out;
+          &Message {
+            margin-top: 3px;
+            width: 320px;
+            padding-left: 30px;
+            align-self: center;
+            font: 12px/20px $textFont;
+            color: #dc4497;
+          }
+        }
+        align-self: center;
+        width: 260px;
+        height: 48px;
+        border: 1px solid #68648c;
+        border-radius: 3px;
+        box-sizing: border-box;
+        outline: none;
+        padding-left: 13px;
+        font: 16px/19px $textFont;
+        &:focus {
+          border-color: $lightColor;
+          transition: border-color .3s ease-out;
+        }
+        &Label {
+          align-self: center;
+          width: 320px;
+          box-sizing: border-box;
+          padding-left: 30px;
+          color: #68648c;
+          margin-bottom: 11px;
+          order: -1;
+        }
+      }
+      &Wrap {
+        max-width: 100%;
+        display: flex;
+        justify-content: space-between;
+      }
+      &Radio {
+        width: 130px;
+        position: relative;
+        margin: 30px 0;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &Btn {
+          &:checked + .myProfile__formItemRadioLabel:after {
+            opacity: 1;
+          }
+          &:not(:checked) + .myProfile__formItemRadioLabel:after {
+            opacity: 0;
+          }
+          &:checked,
+          &:not(:checked) {
+            position: absolute;
+            left: -9999px;
+            & + .myProfile__formItemRadioLabel {
+              display: inline-block;
+              position: relative;
+              padding-left: 40px;
+              line-height: 20px;
+              cursor: pointer;
+              &:nth-child(2) {
+                margin-right: 23px;
+              }
+              &:before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: -6px;
+                width: 25px;
+                height: 25px;
+                border: 1px solid #9d9fb5;
+                background-color: #fff;
+                border-radius: 3px;
+              }
+              &:after {
+                content: "";
+                position: absolute;
+                transition: all .2s ease;
+                left: 4%;
+                top: -1.55px;
+                width: 17px;
+                height: 17px;
+                border-radius: 3px;
+                background-color: $lightColor;
+              }
+            }
+          }
+          &:checked + .myProfile__formItemRadioLabel:before {
+            border: 1px solid $lightColor;
+            transition: border .2s ease-out;
+          }
+        }
+        &Label {
+          align-self: center;
+          font: 16px/19px $textFont;
+        }
+        .myProfile__formGender {
+          position: absolute;
+          left: 0;
+          top: -20px;
+          font: 14px/20px $textFont;
+          color: #68648C;
+        }
+      }
+    }
+  }
+  &__about {
+    box-sizing: border-box;
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &Link {
+      display: block;
+      background: $lightColor;
+      border-radius: 3px;
+      width: 124px;
+      height: 30px;
+      font: bold 16px/30px $textFont;
+      color: #fff;
+      align-self: center;
+      border: none;
+      outline: none;
+      &:disabled {
+        background: #9d9fb5;
+      }
+    }
+    &Header {
+      box-sizing: border-box;
+      width: 100%;
+      padding: 0 30px;
+      font: bold 20px/24px $textFont;
+    }
+    &SubHeader {
+      box-sizing: border-box;
+      width: 100%;
+      padding: 0 30px;
+      color: #68648c;
+    }
+    &Social {
+      box-sizing: border-box;
+      padding: 0 30px;
+      width: 100%;
+      margin: 25px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      &Container {
+        margin: 0 auto;
+        width: 320px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        &Form {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+      }
+      &Image {
+        display: block;
+      }
+      &Desc {
+        flex-basis: 45%;
+        font: 14px/17px $textFont;
+      }
+      &Switch {
+        position: relative;
+        width: 73px;
+        height: 12px;
+        border-radius: 10px;
+        opacity: .4;
+        &_firstStage {
+          background: #9d9fb5;
+          transition: all .3s ease-out;
+          &::after {
+            opacity: 1;
+            position: absolute;
+            content: "";
+            top: -4px;
+            left: 0;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: darken(#9d9fb5, 30%);
+            box-shadow: 0 1px 5px rgba(160, 155, 155, .58);
+            transition: left .3s ease-out;
+          }
+        }
+        &_secondStage {
+          background: #844f9c;
+          transition: all .3s ease-out;
+          &::after {
+            position: absolute;
+            content: "";
+            top: -4px;
+            left: 26.5px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: darken(rgb(135, 5, 195), 10%);
+            transition: left .3s ease-out;
+            box-shadow: 0 1px 5px rgba(160, 155, 155, .58);
+            opacity: 1;
+          }
+        }
+        &_thirdStage {
+          background: $lightColor;
+          opacity: .8;
+          transition: all .3s ease-out;
+          &::after {
+            position: absolute;
+            content: "";
+            top: -4px;
+            left: 53.5px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: darken($lightColor, 5%);
+            transition: left .3s ease-out;
+            box-shadow: 0 1px 5px rgba(160, 155, 155, .58);
+          }
+        }
+      }
+    }
+    &Tab {
+      box-sizing: border-box;
+      width: 320px;
+      background: #f9f9f9;
+      border-bottom: 2px solid #f0f0f0;
+      &Header {
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &Text {
+          font: bold 20px/24px $textFont;
+        }
+      }
+      &Arrow {
+        width: 20px;
+        height: 10px;
+        display: block;
+        &_active {
+          transform: rotate(180deg);
+          transition: .2s;
+        }
+      }
+      &Container {
+        width: 62px;
+        height: 62px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      &Content {
+        padding: 20px;
+        display: none;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        &_active {
+          display: flex;
+        }
+        &Item {
+          position: relative;
+          background-color: #f0f0f0;
+          box-sizing: border-box;
+          border: 2px solid $lightColor;
+          margin-bottom: 8px;
+          padding: 5px 0;
+          border-radius: 8px;
+          width: 90px;
+          height: 90px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+          align-content: center;
+          &Check {
+            display: none;
+          }
+          &_active {
+            background-color: #fff;
+            &::after {
+              content: "";
+              position: absolute;
+              top: -7px;
+              right: -7px;
+              width: 20px;
+              height: 20px;
+              border-radius: 50%;
+              background-color: $lightColor;
+              background-image: url(../img/checkMark.png);
+              background-repeat: no-repeat;
+              background-position: center;
+            }
+          }
+          &Image {
+            display: block;
+          }
+          &Desc {
+            font: bold 10px/13px $textFont;
+          }
+        }
+      }
+    }
+  }
+  &__submit {
+    &Btn {
+      margin: 30px 0;
+      width: 260px;
+      height: 48px;
+      background-color: $lightColor;
+      border: none;
+      outline: none;
+      border-radius: 8px;
+      color: #fff;
+      font: bold 20px/24px $textFont;
+    }
+  }
+}
+.settings {
+  &_active {
+    display: flex;
+  }
+  flex: 1 0 auto;
+  margin: 0 auto;
+  display: none;
+  flex-direction: column;
+  &__header {
+    align-self: center;
+    box-sizing: border-box;
+    width: 320px;
+    padding: 0 30px;
+    margin: 20px 0;
+    font: bold 20px/24px $textFont;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &Container {
+      box-sizing: border-box;
+      width: 100%;
+      background-color: #f9f9f9;
+      padding: 10px 30px 0;
+      margin-bottom: 16px;
+    }
+    &Switch {
+      height: 34px;
+      width: 320px;
+      padding: 0 30px;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &Input {
+        display: none;
+        & + .settings__formSwitchLabel {
+          display: block;
+          position: relative;
+          cursor: pointer;
+          &::before {
+            content: "";
+            position: absolute;
+            top: 5px;
+            right: 0;
+            width: 50px;
+            height: 12px;
+            border-radius: 10px;
+            background: #9d9fb5;
+            opacity: .4;
+            transition: .2s;
+          }
+          &::after {
+            content: "";
+            position: absolute;
+            top: 1px;
+            right: 30px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: darken(#9d9fb5, 5%);
+            box-shadow: 0 1px 5px rgba(160, 155, 155, .58);
+            transition: .3s;
+          }
+        }
+        &:checked + .settings__formSwitchLabel::before {
+          background: $lightColor;
+        }
+        &:checked + .settings__formSwitchLabel::after {
+          right: 0;
+          background: darken($lightColor, 5%);
+          transition: .3s;
+        }
+      }
+      &Label {
+        width: 100%;
+        font: 16px/19px $textFont;
+        color: #68648c;
+      }
+    }
+    &Exit {
+      margin-bottom: 43px;
+      width: 260px;
+      height: 48px;
+      border: 2px solid #dc4497;
+      border-radius: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &Btn {
+        margin: 0 20px 0 0;
+        display: block;
+        font: bold 20px/48px $textFont;
+        text-decoration: none;
+        text-align: center;
+        color: #dc4497;
+      }
+      &Image {
+        display: block;
+      }
+    }
+  }
+}
+.settings_changePassword {
+  flex: 1 0 auto;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+/*-------------------------------------------------MULTI-SELECT------------------------------------------------*/
+.ss-single-selected {
+  width:280px;
+  height: 48px;
+}
+.ss-option.ss-disabled.ss-option-selected {
+  display: none;
+}
+.myProfile__formItemSelectItem {
+  font: 16px/19px $textFont;
+  color: #000;
+}
+.myProfile__formItemSelectItem_last {
+  color: $lightColor;
+  text-decoration: underline;
+}

@@ -1,0 +1,92 @@
+.voucher {
+    color: #131929;
+    display: flex;
+    flex-direction: column;
+    &__image {
+        padding: 1px;
+        height: 205px;
+        background: url(../img/shop/logo.png) no-repeat center, url(../img/shop/logo_back2.jpg) no-repeat;
+        background-size: auto, cover;    
+    }
+    &__body {
+        box-sizing: border-box;
+        border-radius: 5px;
+        background: #FEFEFE;
+        box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.25);
+        padding: 20px 30px 20px;
+    }
+    &__price {
+        color: #68648C;
+        .shop__coinsCount {
+            font: bold 20px/24px $textFont;
+            color: #131929  ;
+        }
+    }
+    &__header {
+        font: bold 20px/24px $textFont;
+        margin: 25px 0 20px;
+    }
+    &__text {
+        margin-bottom: 15px;
+    }
+    &__qr {
+        display: none;
+        &Image {
+            display: flex;
+            justify-content: center;
+        }
+    }
+    &__code {
+        width: 100%;
+        height: 68px;
+        background: #EAEBEF;
+        font: bold 30px/68px $textFont;
+        text-align: center;
+        border-radius: 5px;
+    }
+    &__use {
+        &List {
+            box-sizing: border-box;
+            padding: 0 0 0 30px;
+            font-weight: bold;
+            &Item {
+                position: relative;
+                margin-bottom: 20px;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 9px;
+                    height: 9px;
+                    border-radius: 50%;
+                    background: $lightColor;
+                    left: -28px;
+                    top: 5px;
+                }
+            }
+        }
+    }
+    &__map {
+        align-self: center;
+        max-width: 260px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 25px;
+        &::after {
+            content: "";
+            width: 45px;
+            height: 50px;
+            position: absolute;
+            top: 110px;
+            left: 110px;
+            background: url(../img/partner_inside/red_mark.svg) no-repeat center;
+        }
+    }
+    &__button {
+        align-self: center;
+        &Btn {
+            background: url(../img/shop/buy.svg) no-repeat center;
+            background-color: $lightColor;
+        }
+    }
+}

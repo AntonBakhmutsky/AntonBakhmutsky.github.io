@@ -1,0 +1,88 @@
+.main__footer {
+  position: fixed;
+  bottom: 0;
+  flex: 0 0 auto;
+  height: 70px;
+  box-sizing: border-box;
+  padding: 0 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background: #f9f9f9;
+  z-index: 1000;
+  &Item {
+    width: 56px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    &:nth-child(1) > &Image {
+      background-image: url("../img/footer/footer__1_black.svg");
+    }
+    &:nth-child(2) > &Image {
+      background-image: url("../img/footer/footer__2_black.svg");
+    }
+    &:nth-child(3) > &Image {
+      background-image: url("../img/footer/footer__3_black.svg");
+    }
+    &:nth-child(4) > &Image {
+      background-image: url("../img/footer/footer__4_black.svg");
+    }
+    &:nth-child(5) > &Image {
+      background-image: url("../img/footer/footer__5_black.svg");
+    }
+    &_active {
+      &:nth-child(1) > .main__footerItemImage {
+        background-color: $lightColor;
+        background-image: url("../img/footer/footer__1_white.svg");
+      }
+      &:nth-child(2) > .main__footerItemImage {
+        background-color: $lightColor;
+        background-image: url("../img/footer/footer__2_white.svg");
+      }
+      &:nth-child(3) > .main__footerItemImage {
+        background-color: $lightColor;
+        background-image: url("../img/footer/footer__3_white.svg");
+      }
+      &:nth-child(4) > .main__footerItemImage {
+        background-color: $lightColor;
+        background-image: url("../img/footer/footer__4_white.svg");
+      }
+      &:nth-child(5) > .main__footerItemImage {
+        background-color: $lightColor;
+        background-image: url("../img/footer/footer__5_white.svg");
+      }
+    }
+    &Image {
+      display: flex;
+      width: 45px;
+      height: 45px;
+      border-radius: 3px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 65%;
+    }
+    &Desc {
+      margin-top: 5px;
+      width: 100%;
+      text-align: center;
+      font: bold 8px/10px $textFont;
+    }
+    .numberOfNotifications {
+      position: absolute;
+      right: 1px;
+      top: 0;
+      display: block;
+      width: 16.06px;
+      height: 16.06px;
+      border-radius: 50%;
+      border: 1px solid #fff;
+      background: $lightColor;
+      font: bold 8px/16.06px $textFont;
+      text-align: center;
+      color: #fff;
+    }
+  }
+}

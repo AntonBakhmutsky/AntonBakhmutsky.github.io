@@ -1,0 +1,44 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    font-family: "Fira Sans", sans-serif;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    background: #DFDDFA;
+}
+.page404 {
+    width: 100vw;
+    height: 85vh;
+    background: url(../img/404.svg) no-repeat center;
+    background-size: cover;
+    box-sizing: border-box;
+    padding: 0 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__header {
+        width: 100%;
+        margin-top: 20%;
+        font: bold 20px/24px $textFont;
+    }
+    &__description {
+        margin-top: 15px;
+        color: #160840;
+    }
+    &__exit {
+        margin-top: 25px;
+        display: block;
+        width: 260px;
+        height: 48px;
+        background: #844F9C;
+        font: bold 20px/48px $textFont;
+        color: #fff;
+        text-align: center;
+        border-radius: 8px;
+    }
+}

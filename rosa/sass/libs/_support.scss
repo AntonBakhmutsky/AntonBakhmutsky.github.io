@@ -1,0 +1,221 @@
+.support {
+    display: none;
+    flex-direction: column;
+    &_active {
+        display: flex;
+    }
+    .createTicket {
+        width: 100%;
+        &__container {
+            @include container;
+            flex-direction: column;
+            padding: 0 30px 0 27px;
+        }
+        &__btn {
+            align-self: center;
+            display: block;
+            width: 260px;
+            height: 48px;
+            background: $darkColor_2;
+            border-radius: 8px;
+            font: bold 20px/48px $textFont;
+            color: #fff;
+            text-align: center;
+            &_disabled {
+                display: none;
+            }
+        }
+        &__form {
+            &_disabled {
+                display: none;
+            }
+            width: 100%;
+            margin-top: 25px;
+            display: flex;
+            flex-direction: column;
+            &Header {
+                margin-top: 25px;
+                font: bold 20px/24px $textFont;
+                text-align: center;
+            }
+            &Popular {
+                margin-top: 25px;
+                display: flex;
+                flex-flow: row wrap;
+                &Item {
+                    margin: 0 5px 10px 0;
+                    border-radius: 8px;
+                    height: 23px;
+                    padding: 0 4px;
+                    box-sizing: border-box;
+                    background: #68648C;
+                    font: 12px/23px $textFont;
+                    &_active {
+                        background: $darkColor_2;
+                    }
+                }
+            }
+            &Input {
+                display: flex;
+                flex-direction: column;
+                &Label {
+                    margin-top: 15px;
+                    font: 14px/17px $textFont;
+                }
+                &TextArea {
+                    margin-top: 15px;
+                    width: 260px;
+                    height: 48px;
+                    padding-left: 11px;
+                    border: 1px solid #68648C;
+                    box-sizing: border-box;
+                    border-radius: 3px;
+                    font: 16px/38px $textFont;
+                    color: #131929;
+                }
+            }
+            &Submit {
+                margin-top: 30px;
+                display: flex;
+                justify-content: space-around;
+                &Item {
+                    width: 123px;
+                    height: 30px;
+                    font: bold 16px/30px $textFont;
+                    text-align: center;
+                    background: $darkColor_2;
+                    border: none;
+                    outline: none;
+                    border-radius: 3px;
+                    &:nth-child(2) {
+                        background: #68648C;
+                    }
+                }
+            }
+        }
+    }
+    .ticketArea {
+        margin-top: 20px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        &__container {
+            @include container;
+            padding: 0 10px;
+            flex-direction: column;
+        }
+        &__item {
+            margin-top: 10px;
+            background: #fff;
+            border-radius: 5px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            color: #000;
+            &:last-child {
+                margin-bottom: 10px;
+            }
+        }
+        &__top {
+            box-sizing: border-box;
+            padding: 10px 15px 0;
+            height: 45px;
+            display: flex;
+            justify-content: space-between;
+            &Number {
+                padding: 0 10px;
+                box-sizing: border-box;
+                height: 23px;
+                border-radius: 8px;
+                background: #68648C;
+                color: #FEFEFE;
+                font: bold 16px/23px $textFont;
+                text-align: center;
+            }
+            &Status {
+                height: 23px;
+                box-sizing: border-box;
+                padding: 0 10px;
+                font: bold 12px/23px $textFont;
+                border-radius: 8px;
+                color: #FEFEFE;
+            }        
+        }
+        &__middle {
+            box-sizing: border-box;
+            padding: 15px;
+            color: #131929;
+            font: bold 20px/24px $textFont;
+            border-top: 1px solid #C4C4C4;
+        }
+        &__bottom {
+            box-sizing: border-box;
+            padding: 15px;
+            border-top: 1px solid #C4C4C4;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #68648C;
+            &Left {
+                font: bold 12px/14px $textFont;
+                display: flex;
+                align-items: center;
+                &Image {
+                    margin-right: 5px;
+                    display: block;
+                    border-radius: 50%;
+                }
+                &Text {
+                    display: block;
+                }
+            }
+            &Right {
+                display: flex;
+                align-items: center;
+                &Task {
+                    margin-right: 5px;
+                    display: block;
+                    font: bold 12px/14px $textFont;
+                }
+                &Number {
+                    display: block;
+                    padding: 0 10px;
+                    box-sizing: border-box;
+                    height: 23px;
+                    border-radius: 8px;
+                    background: $lightColor;
+                    color: #FEFEFE;
+                    font: bold 16px/23px $textFont;
+                    text-align: center;
+                }
+            }
+        }
+    }
+    .ticketArea__item_created {
+        .ticketArea__topStatus {
+            background: #27CAAA;
+        }
+    }
+    .ticketArea__item_pending {
+        .ticketArea__topStatus {
+            background: $darkColor_2;
+        }
+    }
+    .ticketArea__item_closed {
+        .ticketArea__topNumber {
+            background: #9D9FB5;
+        }
+        .ticketArea__topStatus {
+            background: #9D9FB5;
+        }
+        .ticketArea__middle {
+            color: #9D9FB5;
+        }
+        .ticketArea__bottom {
+            color: #9D9FB5;
+        }
+        .ticketArea__bottomLeftImage {
+            opacity: .6;
+        }
+    }
+}

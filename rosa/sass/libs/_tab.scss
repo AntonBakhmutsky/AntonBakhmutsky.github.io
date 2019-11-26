@@ -1,0 +1,35 @@
+.tab {
+    &_shop {
+        .tab__container {
+           padding: 0 50px;
+        }
+    }
+    width: 100%;
+    margin: 25px 0 30px;
+    &__container {
+        @include container;
+        padding: 0 10px;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__btn {
+        display: block;
+        color: #68648C;
+        font: bold 12px/14px $textFont;
+        text-transform: uppercase;
+        &_darkTheme {
+            color: #9D9FB5;
+        }
+        &_active {
+            font-size: 20px;
+            line-height: 24px;
+            color: #000;
+            border-bottom: 3px solid $lightColor;
+            &_darkTheme {
+                @extend .tab__btn_active;
+                color: #fff;
+            } 
+        }
+     
+    }
+}

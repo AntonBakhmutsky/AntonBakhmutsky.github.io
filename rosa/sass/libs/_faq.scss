@@ -1,0 +1,74 @@
+.faq {
+    &_active {
+        display: flex;
+    }
+    display: none;
+    width: 100%;
+    flex: 1 0 auto;
+    .popularQuestions {
+        width: 100%;
+        &__container {
+            @include container;
+            padding: 0 30px;
+            flex-direction: column;
+            justify-content: center;
+        }
+        &__header {
+            font: bold 20px/24px $textFont;
+        }
+        &__filter {
+            margin: 30px 0 15px;
+            display: flex;
+            flex-flow: row wrap;
+            &Item {
+                margin: 0 10px 10px 0;
+                padding: 0 15px;
+                height: 27px;
+                box-sizing: border-box;
+                border: 1px solid #160840;
+                border-radius: 8px;
+                font: 500 14px/27px $textFont;
+                text-align-last: center;
+                &_active {
+                    background: #000;
+                    color: #fff;
+                }
+            }
+        }
+        &__answer {
+            border-bottom: 2px solid #F0F0F0;
+            &Container {
+                @include container;
+                flex-direction: column;
+                padding: 0 30px;
+            }
+            &Header {
+                margin-top: 20px;
+                font: bold 20px/24px $textFont;
+            }
+            &More {
+                margin: 20px 0 30px 0;
+                width: 106px;
+                height: 23px;
+                padding: 0 10px;
+                box-sizing: border-box;
+                border-radius: 8px;
+                background-color: $lightColor;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                &Link {
+                    display: block;
+                    color: #fff;
+                    font: bold 12px/23px $textFont;
+                }
+                &Arrow {
+                    display: block;
+                    width: 15px;
+                    height: 20px;
+                    background: url(../img/arrow_down_white.svg) center no-repeat;
+                }
+            }
+        }
+    }
+}

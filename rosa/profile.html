@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/slimselect.css">
+    <link rel="stylesheet" href="styles/auto-complete.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/foopicker.css">
+    <title>Personal area</title>
+</head>
+
+<body>
+    <header class="main__header">
+        <a href="#" class="main__headerArrow"><img class="main__headerArrowImg" src="img/union.svg" alt="arrow"></a>
+        <div class="main__headerQr">
+            <img class="main__headerQrImage" src="img/qr.svg" alt="qr">
+        </div>
+        <div class="main__headerFace">
+            <img class="main__headerFaceImage" src="img/face.png" alt="face">
+        </div>
+    </header>
+    <main>
+        <div class="myProfile__headerButtons">
+            <a class="myProfile__headerButtonsItem myProfile__headerButtonsItem_active" href="#"
+                id="profile">профиль</a>
+            <a class="myProfile__headerButtonsItem" href="#" id="settings">настройки</a>
+        </div>
+        <div class="myProfile">
+            <div class="myProfile__header">
+                <h2 class="myProfile__headerDesc">
+                    Основная информация
+                </h2>
+                <div class="myProfile__headerFace">
+                    <div class="myProfile__headerFaceCross"></div>
+                    <div class="myProfile__headerFaceImage"></div>
+                    <div class="myProfile__headerFaceEdit"></div>
+                </div>
+            </div>
+            <form class="myProfile__form" action="#" method="post">
+                <div class="myProfile__formItem">
+                    <input class="myProfile__formItemInput" type="text" name="userSurname" id="userSurname"
+                        placeholder="Введите фамилию">
+                    <label class="myProfile__formItemInputLabel" for="userSurname">Фамилия</label>
+                </div>
+                <div class="myProfile__formItem">
+                    <input class="myProfile__formItemInput" type="text" name="userName" id="userName"
+                        placeholder="Введите имя">
+                    <label class="myProfile__formItemInputLabel" for="userName">Имя</label>
+                </div>
+                <div class="myProfile__formItem">
+                    <input class="myProfile__formItemInput" type="text" name="userPatronymic" id="userPatronymic"
+                        placeholder="Введите отчество">
+                    <label class="myProfile__formItemInputLabel" for="userPatronymic">Отчество</label>
+                </div>
+                <div class="myProfile__formItem">
+                    <input class="myProfile__formItemInput" type="text" name="userNickname" id="userNickname"
+                        placeholder="Введите прозвище">
+                    <label class="myProfile__formItemInputLabel" for="userNickname">Прозвище</label>
+                </div>
+                <div class="myProfile__formItemWrap">
+                    <div class="myProfile__formItemRadio">
+                        <div class="myProfile__formGender">Пол</div>
+                        <input class="myProfile__formItemRadioBtn" type="radio" name="gender" id="male" checked>
+                        <label class="myProfile__formItemRadioLabel" for="male">Мужской</label>
+                    </div>
+                    <div class="myProfile__formItemRadio">
+                        <input class="myProfile__formItemRadioBtn" type="radio" name="gender" id="female">
+                        <label class="myProfile__formItemRadioLabel" for="female">Женский</label>
+                    </div>
+                </div>
+                <div class="myProfile__formItem">
+                    <input class="myProfile__formItemInput" type="text" id="datepicker" value="01.01.1979">
+                    <label class="myProfile__formItemInputLabel" for="datepicker">День рождения</label>
+                </div>
+                <div class="myProfile__formItem">
+                    <input class="myProfile__formItemInput" type="text" name="country" id="country">
+                    <label class="myProfile__formItemInputLabel" for="country">Страна</label>
+                </div>
+                <div class="myProfile__formItem">
+                    <input class="myProfile__formItemInput" type="text" name="city" id="city">
+                    <label class="myProfile__formItemInputLabel" for="city">Город</label>
+                </div>
+                <div class="myProfile__formItem">
+                    <select id="select">
+                        <option class="myProfile__formItemSelectItem myProfile__formItemSelectItem_disabled"
+                            value="Выберите место">Выберите место</option>
+                        <option class="myProfile__formItemSelectItem" value="AYS DESIGN">AYS DESIGN</option>
+                        <option class="myProfile__formItemSelectItem" value="ROSA SKI INN">ROSA SKI INN</option>
+                        <option class="myProfile__formItemSelectItem" value="Приют панды">Приют панды</option>
+                        <option class="myProfile__formItemSelectItem myProfile__formItemSelectItem_last" value="Другое">
+                            Другое</option>
+                    </select>
+                    <label class="myProfile__formItemInputLabel" for="select">Где остановился</label>
+                </div>
+                <div class="myProfile__about">
+                    <h2 class="myProfile__aboutHeader">
+                        Расскажите о себе
+                    </h2>
+                    <h4 class="myProfile__aboutSubHeader">
+                        Социальные сети
+                    </h4>
+                    <div class="myProfile__aboutSocial">
+                        <img class="myProfile__aboutSocialImage" src="img/vk.png" alt="social">
+                        <div class="myProfile__aboutSocialDesc">ВКонтакте</div>
+                        <div class="myProfile__aboutSocialSwitch myProfile__aboutSocialSwitch_thirdStage"></div>
+                    </div>
+                    <div class="myProfile__aboutSocialContainer">
+                        <div class="myProfile__aboutSocial">
+                            <img class="myProfile__aboutSocialImage" src="img/insta.png" alt="social">
+                            <div class="myProfile__aboutSocialDesc">Instagram</div>
+                            <div class="myProfile__aboutSocialSwitch myProfile__aboutSocialSwitch_secondStage"></div>
+                        </div>
+                        <div class="myProfile__aboutSocialContainerForm">
+                            <div class="myProfile__formItem">
+                                <input class="myProfile__formItemInput" type="text" name="instagramProfile"
+                                    id="instagramProfile" placeholder="Введите ссылку на профиль">
+                            </div>
+                            <input class="myProfile__aboutLink" type="submit" value="Привязать" disabled>
+                        </div>
+                    </div>
+                    <div class="myProfile__aboutSocialContainer">
+                        <div class="myProfile__aboutSocial">
+                            <img class="myProfile__aboutSocialImage" src="img/twitter.png" alt="social">
+                            <div class="myProfile__aboutSocialDesc">Twitter</div>
+                            <div class="myProfile__aboutSocialSwitch myProfile__aboutSocialSwitch_firstStage"></div>
+                        </div>
+                        <div class="myProfile__aboutSocialContainerForm">
+                            <div class="myProfile__formItem">
+                                <input class="myProfile__formItemInput myProfile__formItemInput_wrong" type="text"
+                                    name="instagramProfile" id="twitterProfile" placeholder="Введите ссылку на профиль"
+                                    value="https://twitter.com/realdonaldtr">
+                                <div class="myProfile__formItemInput_wrongMessage">Аккаунт не найден</div>
+                            </div>
+                            <input class="myProfile__aboutLink" type="submit" value="Привязать">
+                        </div>
+                    </div>
+                    <div class="myProfile__aboutSocial">
+                        <img class="myProfile__aboutSocialImage" src="img/facebook.png" alt="social">
+                        <div class="myProfile__aboutSocialDesc">Facebook</div>
+                        <div class="myProfile__aboutSocialSwitch myProfile__aboutSocialSwitch_firstStage"></div>
+                    </div>
+                    <div class="myProfile__aboutTab">
+                        <div class="myProfile__aboutTabHeader">
+                            <h4 class="myProfile__aboutTabHeaderText">На чем катаете?</h4>
+                            <img class="myProfile__aboutTabArrow myProfile__aboutTabArrow_active" src="img/arrow.png"
+                                alt="arrow">
+                        </div>
+                        <div class="myProfile__aboutTabContent myProfile__aboutTabContent_active">
+                            <div class="myProfile__aboutTabContentItem myProfile__aboutTabContentItem_active">
+                                <div class="myProfile__aboutTabContainer">
+                                    <img class="myProfile__aboutTabContentItemImage" src="img/hobbies/snowboard.svg"
+                                        alt="image">
+                                </div>
+                                <div class="myProfile__aboutTabContentItemDesc">Борд</div>
+                                <input class="myProfile__aboutTabContentItemCheck" type="checkbox" name="Board" checked>
+                            </div>
+                            <div class="myProfile__aboutTabContentItem myProfile__aboutTabContentItem_active">
+                                <div class="myProfile__aboutTabContainer">
+                                    <img class="myProfile__aboutTabContentItemImage" src="img/hobbies/skiing.svg"
+                                        alt="image">
+                                </div>
+                                <div class="myProfile__aboutTabContentItemDesc">Лыжи</div>
+                                <input class="myProfile__aboutTabContentItemCheck" type="checkbox" name="skiing"
+                                    checked>
+                            </div>
+                            <div class="myProfile__aboutTabContentItem">
+                                <div class="myProfile__aboutTabContainer">
+                                    <img class="myProfile__aboutTabContentItemImage" src="img/hobbies/snowskate.svg"
+                                        alt="image">
+                                </div>
+                                <div class="myProfile__aboutTabContentItemDesc">Сноускейт</div>
+                                <input class="myProfile__aboutTabContentItemCheck" type="checkbox" name="snowskate">
+                            </div>
+                            <div class="myProfile__aboutTabContentItem">
+                                <div class="myProfile__aboutTabContainer">
+                                    <img class="myProfile__aboutTabContentItemImage" src="img/hobbies/snowscooter.svg"
+                                        alt="image">
+                                </div>
+                                <div class="myProfile__aboutTabContentItemDesc">Сноукат</div>
+                                <input class="myProfile__aboutTabContentItemCheck" type="checkbox" name="snowscooter">
+                            </div>
+                            <div class="myProfile__aboutTabContentItem">
+                                <div class="myProfile__aboutTabContainer">
+                                    <img class="myProfile__aboutTabContentItemImage"
+                                        src="img/hobbies/inflatable_snow_tube.svg" alt="image">
+                                </div>
+                                <div class="myProfile__aboutTabContentItemDesc">Ватрушка</div>
+                                <input class="myProfile__aboutTabContentItemCheck" type="checkbox"
+                                    name="inflatableSnowTube">
+                            </div>
+                            <div class="myProfile__aboutTabContentItem">
+                                <div class="myProfile__aboutTabContainer">
+                                    <img class="myProfile__aboutTabContentItemImage"
+                                        src="img/hobbies/running_skates.svg" alt="image">
+                                </div>
+                                <div class="myProfile__aboutTabContentItemDesc">Коньки беговые</div>
+                                <input class="myProfile__aboutTabContentItemCheck" type="checkbox"
+                                    name="running_skates">
+                            </div>
+                            <div class="myProfile__aboutTabContentItem myProfile__aboutTabContentItem_active">
+                                <div class="myProfile__aboutTabContainer">
+                                    <img class="myProfile__aboutTabContentItemImage" src="img/hobbies/cardboard.svg"
+                                        alt="image">
+                                </div>
+                                <div class="myProfile__aboutTabContentItemDesc">Картонка</div>
+                                <input class="myProfile__aboutTabContentItemCheck" type="checkbox" name="cardboard"
+                                    checked>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="myProfile__aboutTab">
+                        <div class="myProfile__aboutTabHeader">
+                            <h4 class="myProfile__aboutTabHeaderText">Где проведете новый год?</h4>
+                            <img class="myProfile__aboutTabArrow" src="img/arrow.png" alt="arrow">
+                        </div>
+                        <div class="myProfile__aboutTabContent">
+                            <div class="myProfile__aboutTabContentItem myProfile__aboutTabContentItem_active">
+                                <div class="myProfile__aboutTabContainer">
+                                    <img class="myProfile__aboutTabContentItemImage" src="img/hobbies/snowboard.svg"
+                                        alt="image">
+                                </div>
+                                <div class="myProfile__aboutTabContentItemDesc">Борд</div>
+                                <input class="myProfile__aboutTabContentItemCheck" type="checkbox" name="Board" checked>
+                            </div>
+                            <div class="myProfile__aboutTabContentItem myProfile__aboutTabContentItem_active">
+                                <div class="myProfile__aboutTabContainer">
+                                    <img class="myProfile__aboutTabContentItemImage" src="img/hobbies/skiing.svg"
+                                        alt="image">
+                                </div>
+                                <div class="myProfile__aboutTabContentItemDesc">Лыжи</div>
+                                <input class="myProfile__aboutTabContentItemCheck" type="checkbox" name="skiing"
+                                    checked>
+                            </div>
+                            <div class="myProfile__aboutTabContentItem">
+                                <div class="myProfile__aboutTabContainer">
+                                    <img class="myProfile__aboutTabContentItemImage" src="img/hobbies/snowskate.svg"
+                                        alt="image">
+                                </div>
+                                <div class="myProfile__aboutTabContentItemDesc">Сноускейт</div>
+                                <input class="myProfile__aboutTabContentItemCheck" type="checkbox" name="snowskate">
+                            </div>
+                            <div class="myProfile__aboutTabContentItem">
+                                <div class="myProfile__aboutTabContainer">
+                                    <img class="myProfile__aboutTabContentItemImage" src="img/hobbies/snowscooter.svg"
+                                        alt="image">
+                                </div>
+                                <div class="myProfile__aboutTabContentItemDesc">Сноукат</div>
+                                <input class="myProfile__aboutTabContentItemCheck" type="checkbox" name="snowscooter">
+                            </div>
+                            <div class="myProfile__aboutTabContentItem">
+                                <div class="myProfile__aboutTabContainer">
+                                    <img class="myProfile__aboutTabContentItemImage"
+                                        src="img/hobbies/inflatable_snow_tube.svg" alt="image">
+                                </div>
+                                <div class="myProfile__aboutTabContentItemDesc">Ватрушка</div>
+                                <input class="myProfile__aboutTabContentItemCheck" type="checkbox"
+                                    name="inflatableSnowTube">
+                            </div>
+                            <div class="myProfile__aboutTabContentItem">
+                                <div class="myProfile__aboutTabContainer">
+                                    <img class="myProfile__aboutTabContentItemImage"
+                                        src="img/hobbies/running_skates.svg" alt="image">
+                                </div>
+                                <div class="myProfile__aboutTabContentItemDesc">Коньки беговые</div>
+                                <input class="myProfile__aboutTabContentItemCheck" type="checkbox"
+                                    name="running_skates">
+                            </div>
+                            <div class="myProfile__aboutTabContentItem myProfile__aboutTabContentItem_active">
+                                <div class="myProfile__aboutTabContainer">
+                                    <img class="myProfile__aboutTabContentItemImage" src="img/hobbies/cardboard.svg"
+                                        alt="image">
+                                </div>
+                                <div class="myProfile__aboutTabContentItemDesc">Картонка</div>
+                                <input class="myProfile__aboutTabContentItemCheck" type="checkbox" name="cardboard"
+                                    checked>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="myProfile__aboutTab">
+                        <div class="myProfile__aboutTabHeader">
+                            <h4 class="myProfile__aboutTabHeaderText">Какой вид спорта<br>предпочитаете</h4>
+                            <img class="myProfile__aboutTabArrow" src="img/arrow.png" alt="arrow">
+                        </div>
+                        <div class="myProfile__aboutTabContent">
+                            <div class="myProfile__aboutTabContentItem myProfile__aboutTabContentItem_active">
+                                <div class="myProfile__aboutTabContainer">
+                                    <img class="myProfile__aboutTabContentItemImage" src="img/hobbies/snowboard.svg"
+                                        alt="image">
+                                </div>
+                                <div class="myProfile__aboutTabContentItemDesc">Борд</div>
+                                <input class="myProfile__aboutTabContentItemCheck" type="checkbox" name="Board" checked>
+                            </div>
+                            <div class="myProfile__aboutTabContentItem myProfile__aboutTabContentItem_active">
+                                <div class="myProfile__aboutTabContainer">
+                                    <img class="myProfile__aboutTabContentItemImage" src="img/hobbies/skiing.svg"
+                                        alt="image">
+                                </div>
+                                <div class="myProfile__aboutTabContentItemDesc">Лыжи</div>
+                                <input class="myProfile__aboutTabContentItemCheck" type="checkbox" name="skiing"
+                                    checked>
+                            </div>
+                            <div class="myProfile__aboutTabContentItem">
+                                <div class="myProfile__aboutTabContainer">
+                                    <img class="myProfile__aboutTabContentItemImage" src="img/hobbies/snowskate.svg"
+                                        alt="image">
+                                </div>
+                                <div class="myProfile__aboutTabContentItemDesc">Сноускейт</div>
+                                <input class="myProfile__aboutTabContentItemCheck" type="checkbox" name="snowskate">
+                            </div>
+                            <div class="myProfile__aboutTabContentItem">
+                                <div class="myProfile__aboutTabContainer">
+                                    <img class="myProfile__aboutTabContentItemImage" src="img/hobbies/snowscooter.svg"
+                                        alt="image">
+                                </div>
+                                <div class="myProfile__aboutTabContentItemDesc">Сноукат</div>
+                                <input class="myProfile__aboutTabContentItemCheck" type="checkbox" name="snowscooter">
+                            </div>
+                            <div class="myProfile__aboutTabContentItem">
+                                <div class="myProfile__aboutTabContainer">
+                                    <img class="myProfile__aboutTabContentItemImage"
+                                        src="img/hobbies/inflatable_snow_tube.svg" alt="image">
+                                </div>
+                                <div class="myProfile__aboutTabContentItemDesc">Ватрушка</div>
+                                <input class="myProfile__aboutTabContentItemCheck" type="checkbox"
+                                    name="inflatableSnowTube">
+                            </div>
+                            <div class="myProfile__aboutTabContentItem">
+                                <div class="myProfile__aboutTabContainer">
+                                    <img class="myProfile__aboutTabContentItemImage"
+                                        src="img/hobbies/running_skates.svg" alt="image">
+                                </div>
+                                <div class="myProfile__aboutTabContentItemDesc">Коньки беговые</div>
+                                <input class="myProfile__aboutTabContentItemCheck" type="checkbox"
+                                    name="running_skates">
+                            </div>
+                            <div class="myProfile__aboutTabContentItem myProfile__aboutTabContentItem_active">
+                                <div class="myProfile__aboutTabContainer">
+                                    <img class="myProfile__aboutTabContentItemImage" src="img/hobbies/cardboard.svg"
+                                        alt="image">
+                                </div>
+                                <div class="myProfile__aboutTabContentItemDesc">Картонка</div>
+                                <input class="myProfile__aboutTabContentItemCheck" type="checkbox" name="cardboard"
+                                    checked>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="myProfile__submit">
+                    <input class="myProfile__submitBtn" type="submit" value="Сохранить">
+                </div>
+            </form>
+        </div>
+        <div class="settings">
+            <h2 class="settings__header">Задать пароль</h2>
+            <form class="settings__form" action="#" method="post">
+                <div class="settings__formContainer">
+                    <div class="myProfile__formItem">
+                        <input class="myProfile__formItemInput" type="password" name="newPassword" id="newPassword"
+                            placeholder="Введите новый пароль">
+                        <label class="myProfile__formItemInputLabel" for="newPassword">Новый пароль</label>
+                    </div>
+                    <div class="myProfile__formItem">
+                        <input class="myProfile__formItemInput myProfile__formItemInput_wrong" type="password"
+                            name="confirmPassword" id="confirmPassword" placeholder="Подтвердите новый пароль"
+                            value="qwerty">
+                        <label class="myProfile__formItemInputLabel" for="confirmPassword">Подтвердите новый
+                            пароль</label>
+                        <div class="myProfile__formItemInput_wrongMessage">Пароли не совпадают</div>
+                    </div>
+                </div>
+                <div class="myProfile__formItem">
+                    <input class="myProfile__formItemInput" type="email" name="email" id="email"
+                        placeholder="Введите E-mail">
+                    <label class="myProfile__formItemInputLabel" for="email">E-mail</label>
+                </div>
+                <div class="myProfile__formItem">
+                    <input class="myProfile__formItemInput" type="tel" name="phone" id="phone"
+                        placeholder="Введите номер телефона">
+                    <label class="myProfile__formItemInputLabel" for="phone">Телефон</label>
+                </div>
+                <div class="settings__formSwitch">
+                    <input class="settings__formSwitchInput" type="checkbox" id="receiveNotifications">
+                    <label class="settings__formSwitchLabel" for="receiveNotifications">Получать уведомления</label>
+                </div>
+                <div class="myProfile__submit">
+                    <input class="myProfile__submitBtn" type="submit" value="Сохранить">
+                </div>
+                <div class="settings__formExit">
+                    <a class="settings__formExitBtn" href="#">Выйти</a>
+                    <img class="settings__formExitImage" src="img/exit.svg" alt="image">
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer class="main__footer">
+        <div class="main__footerItem">
+            <div class="main__footerItemImage">
+            </div>
+            <div class="main__footerItemDesc">Уведомления</div>
+            <i class="numberOfNotifications">23</i>
+        </div>
+        <div class="main__footerItem">
+            <div class="main__footerItemImage">
+            </div>
+            <div class="main__footerItemDesc">Задания</div>
+        </div>
+        <div class="main__footerItem">
+            <div class="main__footerItemImage">
+            </div>
+            <div class="main__footerItemDesc">Призы</div>
+        </div>
+        <div class="main__footerItem">
+            <div class="main__footerItemImage">
+            </div>
+            <div class="main__footerItemDesc">Рейтинги</div>
+        </div>
+        <div class="main__footerItem">
+            <div class="main__footerItemImage">
+            </div>
+            <div class="main__footerItemDesc">Информация</div>
+            <i class="numberOfNotifications">2</i>
+        </div>
+    </footer>
+</body>
+<script src="scripts/foopicker.js"></script>
+<script src="scripts/myProfile.js"></script>
+<script src="scripts/slimselect.js"></script>
+<script src="scripts/auto-complete.js"></script>
+
+</html>

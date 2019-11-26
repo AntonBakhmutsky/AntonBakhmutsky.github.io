@@ -1,0 +1,12 @@
+main {
+    padding-bottom: 70px;
+}
+
+.main {
+    flex-basis: 87%;
+    &_darkTheme {
+        padding-top: 1px;
+        background: #160840;
+        color: #fff;
+    }
+}
