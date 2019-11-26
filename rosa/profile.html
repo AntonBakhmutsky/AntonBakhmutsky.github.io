@@ -32,12 +32,16 @@
         </div>
         <div class="myProfile">
             <div class="myProfile__header">
-                <h2 class="myProfile__headerDesc">
-                    Основная информация
-                </h2>
+                <div class="myProfile__aboutSocialContainer">
+                    <h2 class="myProfile__headerDesc">
+                        Основная информация
+                    </h2>
+                </div>
                 <div class="myProfile__headerFace">
                     <div class="myProfile__headerFaceCross"></div>
-                    <div class="myProfile__headerFaceImage"></div>
+                    <div class="myProfile__headerFaceImage">
+                        <img src="img/face.png" alt="image">
+                    </div>
                     <div class="myProfile__headerFaceEdit"></div>
                 </div>
             </div>
@@ -98,16 +102,20 @@
                     <label class="myProfile__formItemInputLabel" for="select">Где остановился</label>
                 </div>
                 <div class="myProfile__about">
-                    <h2 class="myProfile__aboutHeader">
-                        Расскажите о себе
-                    </h2>
-                    <h4 class="myProfile__aboutSubHeader">
-                        Социальные сети
-                    </h4>
-                    <div class="myProfile__aboutSocial">
-                        <img class="myProfile__aboutSocialImage" src="img/vk.png" alt="social">
-                        <div class="myProfile__aboutSocialDesc">ВКонтакте</div>
-                        <div class="myProfile__aboutSocialSwitch myProfile__aboutSocialSwitch_thirdStage"></div>
+                    <div class="myProfile__aboutSocialContainer">
+                        <h2 class="myProfile__aboutHeader">
+                            Расскажите о себе
+                        </h2>
+                        <h4 class="myProfile__aboutSubHeader">
+                            Социальные сети
+                        </h4>
+                    </div>
+                    <div class="myProfile__aboutSocialContainer">
+                        <div class="myProfile__aboutSocial">
+                            <img class="myProfile__aboutSocialImage" src="img/vk.png" alt="social">
+                            <div class="myProfile__aboutSocialDesc">ВКонтакте</div>
+                            <div class="myProfile__aboutSocialSwitch myProfile__aboutSocialSwitch_thirdStage"></div>
+                        </div>
                     </div>
                     <div class="myProfile__aboutSocialContainer">
                         <div class="myProfile__aboutSocial">
@@ -139,15 +147,17 @@
                             <input class="myProfile__aboutLink" type="submit" value="Привязать">
                         </div>
                     </div>
-                    <div class="myProfile__aboutSocial">
-                        <img class="myProfile__aboutSocialImage" src="img/facebook.png" alt="social">
-                        <div class="myProfile__aboutSocialDesc">Facebook</div>
-                        <div class="myProfile__aboutSocialSwitch myProfile__aboutSocialSwitch_firstStage"></div>
+                    <div class="myProfile__aboutSocialContainer">
+                        <div class="myProfile__aboutSocial">
+                            <img class="myProfile__aboutSocialImage" src="img/facebook.png" alt="social">
+                            <div class="myProfile__aboutSocialDesc">Facebook</div>
+                            <div class="myProfile__aboutSocialSwitch myProfile__aboutSocialSwitch_firstStage"></div>
+                        </div>
                     </div>
                     <div class="myProfile__aboutTab">
                         <div class="myProfile__aboutTabHeader">
                             <h4 class="myProfile__aboutTabHeaderText">На чем катаете?</h4>
-                            <img class="myProfile__aboutTabArrow myProfile__aboutTabArrow_active" src="img/arrow.png"
+                            <img class="myProfile__aboutTabArrow myProfile__aboutTabArrow_active" src="img/black_arrow.svg"
                                 alt="arrow">
                         </div>
                         <div class="myProfile__aboutTabContent myProfile__aboutTabContent_active">
@@ -216,7 +226,7 @@
                     <div class="myProfile__aboutTab">
                         <div class="myProfile__aboutTabHeader">
                             <h4 class="myProfile__aboutTabHeaderText">Где проведете новый год?</h4>
-                            <img class="myProfile__aboutTabArrow" src="img/arrow.png" alt="arrow">
+                            <img class="myProfile__aboutTabArrow" src="img/black_arrow.svg" alt="arrow">
                         </div>
                         <div class="myProfile__aboutTabContent">
                             <div class="myProfile__aboutTabContentItem myProfile__aboutTabContentItem_active">
@@ -284,7 +294,7 @@
                     <div class="myProfile__aboutTab">
                         <div class="myProfile__aboutTabHeader">
                             <h4 class="myProfile__aboutTabHeaderText">Какой вид спорта<br>предпочитаете</h4>
-                            <img class="myProfile__aboutTabArrow" src="img/arrow.png" alt="arrow">
+                            <img class="myProfile__aboutTabArrow" src="img/black_arrow.svg" alt="arrow">
                         </div>
                         <div class="myProfile__aboutTabContent">
                             <div class="myProfile__aboutTabContentItem myProfile__aboutTabContentItem_active">
@@ -349,6 +359,7 @@
                             </div>
                         </div>
                     </div>
+
                 </div>
                 <div class="myProfile__submit">
                     <input class="myProfile__submitBtn" type="submit" value="Сохранить">
@@ -399,37 +410,37 @@
     </main>
     <footer class="main__footer">
         <div class="main__footerItem">
-            <div class="main__footerItemImage">
+            <div class="main__footerItemImage  main__footerItemImage_notifications">
             </div>
             <div class="main__footerItemDesc">Уведомления</div>
             <i class="numberOfNotifications">23</i>
         </div>
         <div class="main__footerItem">
-            <div class="main__footerItemImage">
+            <div class="main__footerItemImage  main__footerItemImage_tasks">
             </div>
             <div class="main__footerItemDesc">Задания</div>
         </div>
         <div class="main__footerItem">
-            <div class="main__footerItemImage">
+            <div class="main__footerItemImage  main__footerItemImage_prizes">
             </div>
             <div class="main__footerItemDesc">Призы</div>
         </div>
         <div class="main__footerItem">
-            <div class="main__footerItemImage">
+            <div class="main__footerItemImage main__footerItemImage_rating">
             </div>
             <div class="main__footerItemDesc">Рейтинги</div>
         </div>
         <div class="main__footerItem">
-            <div class="main__footerItemImage">
+            <div class="main__footerItemImage main__footerItemImage_information ">
             </div>
             <div class="main__footerItemDesc">Информация</div>
             <i class="numberOfNotifications">2</i>
         </div>
     </footer>
+    <script src="scripts/foopicker.js"></script>
+    <script src="scripts/myProfile.js"></script>
+    <script src="scripts/slimselect.js"></script>
+    <script src="scripts/auto-complete.js"></script>
 </body>
-<script src="scripts/foopicker.js"></script>
-<script src="scripts/myProfile.js"></script>
-<script src="scripts/slimselect.js"></script>
-<script src="scripts/auto-complete.js"></script>
 
 </html>

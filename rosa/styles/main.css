@@ -100,30 +100,27 @@ main {
   align-items: center;
   cursor: pointer;
   position: relative; }
-.main__footerItem:nth-child(1) > .main__footerItemImage {
+.main__footerItemImage_notifications {
   background-image: url("../img/footer/footer__1_black.svg"); }
-.main__footerItem:nth-child(2) > .main__footerItemImage {
+.main__footerItemImage_tasks {
   background-image: url("../img/footer/footer__2_black.svg"); }
-.main__footerItem:nth-child(3) > .main__footerItemImage {
+.main__footerItemImage_prizes {
   background-image: url("../img/footer/footer__3_black.svg"); }
-.main__footerItem:nth-child(4) > .main__footerItemImage {
+.main__footerItemImage_rating {
   background-image: url("../img/footer/footer__4_black.svg"); }
-.main__footerItem:nth-child(5) > .main__footerItemImage {
+.main__footerItemImage_information {
   background-image: url("../img/footer/footer__5_black.svg"); }
-.main__footerItem_active:nth-child(1) > .main__footerItemImage {
-  background-color: #009BE2;
+.main__footerItem_active .main__footerItemImage {
+  background-color: #009BE2; }
+.main__footerItem_active .main__footerItemImage_notifications {
   background-image: url("../img/footer/footer__1_white.svg"); }
-.main__footerItem_active:nth-child(2) > .main__footerItemImage {
-  background-color: #009BE2;
+.main__footerItem_active .main__footerItemImage_tasks {
   background-image: url("../img/footer/footer__2_white.svg"); }
-.main__footerItem_active:nth-child(3) > .main__footerItemImage {
-  background-color: #009BE2;
+.main__footerItem_active .main__footerItemImage_prizes {
   background-image: url("../img/footer/footer__3_white.svg"); }
-.main__footerItem_active:nth-child(4) > .main__footerItemImage {
-  background-color: #009BE2;
+.main__footerItem_active .main__footerItemImage_rating {
   background-image: url("../img/footer/footer__4_white.svg"); }
-.main__footerItem_active:nth-child(5) > .main__footerItemImage {
-  background-color: #009BE2;
+.main__footerItem_active .main__footerItemImage_information {
   background-image: url("../img/footer/footer__5_white.svg"); }
 .main__footerItemImage {
   display: flex;
@@ -163,7 +160,6 @@ main {
 .myProfile_disabled {
   display: none; }
 .myProfile__header {
-  text-align: center;
   width: 100%;
   display: flex;
   flex-direction: column; }
@@ -191,7 +187,7 @@ main {
   border-bottom: 3px solid #009BE2; }
 .myProfile__headerDesc {
   align-self: center;
-  padding: 0;
+  padding: 0 0 0 30px;
   width: 320px;
   height: 24px;
   font: bold 20px/24px "Fira Sans", sans-serif; }
@@ -217,12 +213,17 @@ main {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  border: 2px solid #009BE2; }
+  border: 2px solid #009BE2;
+  overflow: hidden; }
+.myProfile__headerFaceImage > img {
+  width: 100%;
+  height: 100%; }
 .myProfile__headerFaceEdit {
   background-image: url(../img/Edit.svg);
   background-repeat: no-repeat;
   background-position: center; }
 .myProfile__form {
+  width: 100%;
   margin: 32px 0 0 0;
   display: flex;
   flex-direction: column;
@@ -347,7 +348,7 @@ main {
   color: #68648C; }
 .myProfile__about {
   box-sizing: border-box;
-  width: 320px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center; }
@@ -448,9 +449,12 @@ main {
   background: #008ac9;
   transition: left .3s ease-out;
   box-shadow: 0 1px 5px rgba(160, 155, 155, 0.58); }
+.myProfile__aboutContainer {
+  width: 100%;
+  background: #f9f9f9; }
 .myProfile__aboutTab {
   box-sizing: border-box;
-  width: 320px;
+  width: 100%;
   background: #f9f9f9;
   border-bottom: 2px solid #f0f0f0; }
 .myProfile__aboutTabHeader {
@@ -461,8 +465,6 @@ main {
 .myProfile__aboutTabHeaderText {
   font: bold 20px/24px "Fira Sans", sans-serif; }
 .myProfile__aboutTabArrow {
-  width: 20px;
-  height: 10px;
   display: block; }
 .myProfile__aboutTabArrow_active {
   transform: rotate(180deg);
@@ -544,7 +546,8 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  width: 100%; }
 .settings__formContainer {
   box-sizing: border-box;
   width: 100%;

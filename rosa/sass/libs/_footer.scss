@@ -18,41 +18,41 @@
     align-items: center;
     cursor: pointer;
     position: relative;
-    &:nth-child(1) > &Image {
-      background-image: url("../img/footer/footer__1_black.svg");
-    }
-    &:nth-child(2) > &Image {
-      background-image: url("../img/footer/footer__2_black.svg");
-    }
-    &:nth-child(3) > &Image {
-      background-image: url("../img/footer/footer__3_black.svg");
-    }
-    &:nth-child(4) > &Image {
-      background-image: url("../img/footer/footer__4_black.svg");
-    }
-    &:nth-child(5) > &Image {
-      background-image: url("../img/footer/footer__5_black.svg");
+    &Image {
+      &_notifications {
+        background-image: url("../img/footer/footer__1_black.svg");
+      }
+      &_tasks {
+        background-image: url("../img/footer/footer__2_black.svg");
+      }
+      &_prizes {
+        background-image: url("../img/footer/footer__3_black.svg");
+      }
+      &_rating {
+        background-image: url("../img/footer/footer__4_black.svg");
+      }
+      &_information {
+        background-image: url("../img/footer/footer__5_black.svg");
+      }
     }
     &_active {
-      &:nth-child(1) > .main__footerItemImage {
+      .main__footerItemImage {
         background-color: $lightColor;
-        background-image: url("../img/footer/footer__1_white.svg");
-      }
-      &:nth-child(2) > .main__footerItemImage {
-        background-color: $lightColor;
-        background-image: url("../img/footer/footer__2_white.svg");
-      }
-      &:nth-child(3) > .main__footerItemImage {
-        background-color: $lightColor;
-        background-image: url("../img/footer/footer__3_white.svg");
-      }
-      &:nth-child(4) > .main__footerItemImage {
-        background-color: $lightColor;
-        background-image: url("../img/footer/footer__4_white.svg");
-      }
-      &:nth-child(5) > .main__footerItemImage {
-        background-color: $lightColor;
-        background-image: url("../img/footer/footer__5_white.svg");
+        &_notifications {
+          background-image: url("../img/footer/footer__1_white.svg");
+        }
+        &_tasks {
+          background-image: url("../img/footer/footer__2_white.svg");
+        }
+        &_prizes {
+          background-image: url("../img/footer/footer__3_white.svg");
+        }
+        &_rating {
+          background-image: url("../img/footer/footer__4_white.svg");
+        }
+        &_information {
+          background-image: url("../img/footer/footer__5_white.svg");
+        }
       }
     }
     &Image {
