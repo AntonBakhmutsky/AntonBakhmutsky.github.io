@@ -5,9 +5,11 @@
         }
     }
     width: 100%;
-    margin: 25px 0 30px;
+    margin-bottom: 30px;
+    padding-top: 30px;
     &__container {
         @include container;
+        height: 27px;
         padding: 0 10px;
         justify-content: space-between;
         align-items: center;
@@ -25,6 +27,7 @@
             line-height: 24px;
             color: #000;
             border-bottom: 3px solid $lightColor;
+            transition: .3s all;
             &_darkTheme {
                 @extend .tab__btn_active;
                 color: #fff;

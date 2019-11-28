@@ -1,0 +1,78 @@
+p {
+  margin: 20px 30px 0 30px;
+}
+
+ul {
+  margin: 15px 30px;
+}
+
+ul li {
+  position: relative;
+  padding-left: 22px;
+  margin-top: 10px;
+}
+
+ul li:before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background: #009be2;
+  border-radius: 50%;
+  position: absolute;
+  top: 5px;
+  left: 0;
+}
+
+b {
+  font-weight: bold;
+  color: #131929;
+}
+
+strong {
+  font-weight: bold;
+  color: #131929;
+}
+
+ol {
+  list-style: decimal;
+  margin: 15px 30px;
+  padding: 0 15px;
+}
+
+ol li {
+  position: relative;
+  padding-left: 5px;
+  margin-top: 10px;
+}
+
+blockquote {
+  background: #f9f9f9;
+  padding: 40px 30px;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+  color: #131929;
+  position: relative;
+}
+
+blockquote:before {
+  content: "";
+  position: absolute;
+  top: 16px;
+  left: 30px;
+  width: 12px;
+  height: 10px;
+  display: inline-block;
+  background-image: url(../img/quote-top.svg);
+}
+
+blockquote:after {
+  content: "";
+  position: absolute;
+  bottom: 16px;
+  right: 30px;
+  width: 13px;
+  height: 10px;
+  display: inline-block;
+  background-image: url(../img/quote-bottom.svg);
+}

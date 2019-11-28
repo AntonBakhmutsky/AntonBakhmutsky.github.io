@@ -386,10 +386,16 @@
         justify-content: center;
       }
       &Content {
-        padding: 20px;
         display: none;
-        flex-flow: row wrap;
-        justify-content: space-around;
+        justify-content: center;
+        &Container {
+          padding: 20px;
+          width: 320px;
+          display: flex;
+          box-sizing: border-box;
+          flex-flow: row wrap;
+          justify-content: space-around;
+        }
         &_active {
           display: flex;
         }

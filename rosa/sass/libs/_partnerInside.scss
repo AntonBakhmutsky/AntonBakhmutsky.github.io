@@ -42,7 +42,7 @@
             font: bold 20px/24px $textFont;
         }
         &Text {
-            margin-top: 25px;
+            margin: 25px 0 0 0;
         }
         &Contacts {
             display: flex;
@@ -125,8 +125,10 @@
             border: 1px solid #DC4497;
             border-radius: 8px;
             &List {
+                margin: 0;
                 padding-left: 25px;
                 &Item {
+                    padding: 0;
                     position: relative;
                     margin-top: 25px;
                     box-sizing: border-box;
