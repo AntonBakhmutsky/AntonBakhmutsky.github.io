@@ -138,8 +138,8 @@ blockquote:after {
 
 /*-----------------------------------------------------MAIN-----------------------------------------------------*/
 main {
-  padding-bottom: 70px;
-  height: 100%; }
+  box-sizing: border-box;
+  padding-bottom: 70px; }
 
 .main {
   flex-basis: 87%; }
