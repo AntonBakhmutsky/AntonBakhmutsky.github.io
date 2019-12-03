@@ -5,6 +5,7 @@ main {
 }
 
 .main {
+    overflow-x: hidden;
     height: 100%;
     &_darkTheme {
         background: #160840;
@@ -19,4 +20,9 @@ main {
         flex-direction: column;
         justify-content: space-between;
     }
+}
+
+.wrap {
+    height: calc(100vh - 70px);
+    background: linear-gradient(180deg, #009AE4 0%, #D20169 100%);
 }

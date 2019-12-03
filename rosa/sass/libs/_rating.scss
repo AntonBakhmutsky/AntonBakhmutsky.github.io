@@ -2,6 +2,7 @@
     &__table {
         display: flex;
         flex-direction: column;
+        min-height: 50vh;
     }
     &__item {
         min-width: 300px;
@@ -27,7 +28,14 @@
             display: flex;
             align-items: center;
             &Image {
+                border-radius: 50%;
+                width: 20px;
+                height: 20px;
                 margin-right: 5px;
+                box-sizing: border-box;
+                &Picture {
+                    min-width: 100%;
+                }
             }
             &Name {
                 font: bold 12px/20px $textFont;
@@ -70,8 +78,6 @@
             }
             .rating__itemUserImage {
                 border: 2px solid #FEFEFE;
-                box-sizing: border-box;
-                border-radius: 50%;
             }
         }
     }
@@ -82,5 +88,10 @@
         align-items: center;
         margin: 0 10px;
         height: 70px;
+        &Arrow {
+            &_disabled {
+                display: none;
+            }
+        }
     }
 }
