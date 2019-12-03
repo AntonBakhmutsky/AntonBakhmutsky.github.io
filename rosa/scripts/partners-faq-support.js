@@ -18,7 +18,7 @@ window.addEventListener('load', () => {
                 el.classList.add('tab__btn_darkTheme');
                 el.classList.remove('tab__btn_active');
             });
-            main.classList.add('main_darkTheme');     
+            main.classList.add('main_gradientTheme');     
         }
         partnersBtn.classList.add('tab__btn_active_darkTheme');
         pageBloks.forEach(el => el.classList.remove(el.classList[0] + '_active'));
@@ -27,7 +27,7 @@ window.addEventListener('load', () => {
     const showFaq = () => {
         if (faqBtn.classList.contains('tab__btn_darkTheme')) {
             buttons.forEach(el => el.classList.remove('tab__btn_active_darkTheme', 'tab__btn_darkTheme'));
-            main.classList.remove('main_darkTheme');
+            main.classList.remove('main_gradientTheme');
         } 
         faqBtn.classList.add('tab__btn_active');
         pageBloks.forEach(el => el.classList.remove(el.classList[0] + '_active'));
@@ -41,7 +41,7 @@ window.addEventListener('load', () => {
                 el.classList.add('tab__btn_darkTheme');
                 el.classList.remove('tab__btn_active');
             });
-            main.classList.add('main_darkTheme');     
+            main.classList.add('main_gradientTheme');     
         }
         supportBtn.classList.add('tab__btn_active_darkTheme');
         pageBloks.forEach(el => el.classList.remove(el.classList[0] + '_active'));
@@ -70,4 +70,15 @@ window.addEventListener('load', () => {
 
     ticketBtn.addEventListener('click', showForm);
     ticketCancel.addEventListener('click', cancelTicket);
+
+    // open question
+    const buttonArray = document.querySelectorAll('.popularQuestions__answerMore');
+
+    function toggleContent() {
+        this.classList.toggle('popularQuestions__answerMore_active');
+        const content = this.closest('.popularQuestions__answerContainer').childNodes[3];
+        (content.style.maxHeight) ? content.style.maxHeight = null : content.style.maxHeight = content.scrollHeight + 'px';
+    }
+
+    buttonArray.forEach(el => el.addEventListener('click', toggleContent));
 });

@@ -1,0 +1,39 @@
+.modalQr {
+    position: absolute;
+    top: -100vh;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 46px 0 70px;
+    width: 100vw;
+    height: 100vh;
+    background: #fff;
+    z-index: 1000;
+    color: #131929;
+    transition: top .3s;
+    &__header {
+        @include blockHeader;
+    }
+    &__image {
+        margin: 40px 0;
+    }
+    &__id {
+        @include blockHeader;
+    }
+    &__button {
+        margin-top: 33px;
+        &Btn {
+            @include btnBlue;
+        }
+    }
+    &_active {
+        top: 0;
+    }
+}
+
+.body_qr {
+    overflow: hidden;
+}

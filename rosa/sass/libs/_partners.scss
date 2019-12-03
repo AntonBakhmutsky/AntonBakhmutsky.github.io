@@ -34,7 +34,6 @@
             }
         }
         &Bottom {
-            height: 135px;
             position: relative;
             padding: 20px;
             box-sizing: border-box;
@@ -47,7 +46,7 @@
             color: #131929;
         }
         &Desc {
-            margin-top: 12px;
+            margin: 12px 0 0 0;
             color: #131929;
         }
         &Stock {

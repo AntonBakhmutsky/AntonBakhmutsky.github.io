@@ -85,7 +85,8 @@
   font-size: 14px;
   line-height: 17px;
   height: 25px;
-  color: #FEFEFE; }
+  color: #FEFEFE;
+  transition: all .1s; }
 
 .task_list .filter .item img {
   margin-right: 5px;
@@ -1549,18 +1550,22 @@
   color: #FEFEFE;
   padding: 0 30px; }
 
-.one_task .content_block .job_rating {
+.one_task .content_block .job_rating,
+.congrats__descriptionForm .job_rating {
   padding: 20px 30px;
   background: #F9F9F9;
   margin-bottom: 20px; }
 
-.one_task .content_block .job_rating .form_block {
+.one_task .content_block .job_rating .form_block,
+.congrats__descriptionForm .job_rating .form_block {
   display: none; }
 
-.one_task .content_block .job_rating .form_block.active {
+.one_task .content_block .job_rating .form_block.active,
+.congrats__descriptionForm .job_rating .form_block.active {
   display: block; }
 
-.one_task .content_block .job_rating .caption {
+.one_task .content_block .job_rating .caption,
+.congrats__descriptionForm .job_rating .caption {
   margin-bottom: 18px;
   font-weight: bold;
   font-size: 20px;
@@ -1571,31 +1576,37 @@
 .one_task .content_block .job_rating textarea {
   margin-top: 10px; }
 
-.one_task .content_block .job_rating .btn_block {
+.one_task .content_block .job_rating .btn_block,
+.congrats__descriptionForm .job_rating .btn_block {
   margin-top: 15px;
   text-align: center;
   display: none; }
 
-.one_task .content_block .job_rating .btn_block.active {
+.one_task .content_block .job_rating .btn_block.active,
+.congrats__descriptionForm .job_rating .btn_block.active {
   display: block; }
 
-.one_task .content_block .job_rating .btn_submit_block {
+.one_task .content_block .job_rating .btn_submit_block,
+.congrats__descriptionForm .job_rating .btn_submit_block {
   margin-top: 20px;
   text-align: center; }
 
-.one_task .content_block .job_rating .rating_block {
+.one_task .content_block .job_rating .rating_block,
+.congrats__descriptionForm .job_rating .rating_block {
   display: flex;
   align-items: center;
   justify-content: center; }
 
-.one_task .content_block .job_rating .rating_block .star {
+.one_task .content_block .job_rating .rating_block .star,
+.congrats__descriptionForm .job_rating .rating_block .star {
   display: inline-block;
   width: 23px;
   height: 24px;
   background-image: url(../img/star.svg);
   margin: 0 5px; }
 
-.one_task .content_block .job_rating .rating_block .star.active {
+.one_task .content_block .job_rating .rating_block .star.active,
+.congrats__descriptionForm .job_rating .rating_block .star.active {
   background-image: url(../img/star-active.svg); }
 
 .one_task .content_block .time_block {

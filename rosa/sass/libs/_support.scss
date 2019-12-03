@@ -8,6 +8,7 @@
         width: 100%;
         &__container {
             @include container;
+            align-content: center;
             flex-direction: column;
             padding: 0 30px 0 27px;
         }

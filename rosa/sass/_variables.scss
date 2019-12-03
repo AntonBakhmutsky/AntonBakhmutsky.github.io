@@ -4,41 +4,16 @@ $darkColor: #3D3868;
 $darkColor_2: #844F9C;
 $svgFill: #211D49;
 $svgFillActive: #fff;
-@mixin respondTo($device) {
-  @if $device==phones {
-    @media (max-width: 479px) {
-      @content
-    }
-  }
-  @else if $device==wide-phones {
-    @media (min-width: 480px) and (max-width: 767px) {
-      @content
-    }
-  }
-  @else if $device==tablets {
-    @media (min-width: 768px) and (max-width: 991px) {
-      @content
-    }
-  }
-  @else if $device==small-desktops {
-    @media (min-width: 992px) and (max-width: 1199px) {
-      @content
-    }
-  }
-  @else if $device==lg-desktops {
-    @media (min-width: 1200px) and (max-width: 1440px) {
-      @content
-    }
-  }
-  @else if $device==xlg-desktops {
-    @media (min-width: 1441px) {
-      @content
-    }
-  }
-}
+
 @mixin customRespondTo($_minWidth, $_maxWidth) {
   @media (min-width: $_minWidth) and (max-width: $_maxWidth) {
-    @content
+    @content;
+  }
+}
+
+@mixin customRespondMobile($_minWidth) {
+  @media (min-width: $_minWidth) {
+    @content;
   }
 }
 
@@ -47,4 +22,42 @@ $svgFillActive: #fff;
   margin: 0 auto;
   display: flex;
   box-sizing: border-box;
+}
+@mixin blockHeader {
+  font: bold 20px/24px $textFont;
+  box-sizing: border-box;
+}
+@mixin btnBlue {
+  width: 260px;
+  height: 48px;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  background: $lightColor;
+  font: bold 20px/24px $textFont;
+  color: #FEFEFE;
+}
+@mixin btnViolet {
+  width: 260px;
+  height: 48px;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  background: #844F9C;
+  font: bold 20px/24px $textFont;
+  color: #FEFEFE;
+}
+@mixin more {
+  margin: 20px 0 30px 0;
+  width: 106px;
+  height: 23px;
+  padding: 0 10px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  background-color: $lightColor;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
 }

@@ -46,6 +46,7 @@ ol li {
 }
 
 blockquote {
+  box-sizing: border-box;
   background: #f9f9f9;
   padding: 40px 30px;
   font-weight: bold;
@@ -75,4 +76,79 @@ blockquote:after {
   height: 10px;
   display: inline-block;
   background-image: url(../img/quote-bottom.svg);
+}
+
+.trouble {
+  &__open {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    cursor: pointer;
+    &Text {
+      font: 500 12px/14.5px $textFont;
+      text-decoration: underline;
+      margin-right: 10px; 
+    }
+    &Arrow {
+      transition: .3s all;
+    }
+    &_active {
+      .trouble__openArrow {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  &__form {
+    &_active {
+      display: flex;
+    }
+    display: none;
+    flex-direction: column;
+    margin: 0 30px;
+    &Popular {
+      display: flex;
+      flex-wrap: wrap;
+      &Item {
+        height: 23px;
+        font: 500 12px/23px $textFont;
+        box-sizing: border-box;
+        padding: 0 6px;
+        border-radius: 8px;
+        background: #68648C;
+        margin: 0 5px 10px 0;
+        &:last-child {
+          margin: 0;
+        }
+        &_active {
+          background: #844F9C;
+        }
+      }
+    }
+    &Comment {
+      display: flex;
+      flex-direction: column;
+      &Label {
+        margin-top: 5px;
+        font: 14px/17px $textFont;
+      }
+      &Message {
+        margin-top: 15px;
+        height: 48px;
+        border: 1px solid #68648C;
+        border-radius: 3px;
+        box-sizing: border-box;
+        padding-left: 12px;
+        outline: none;  
+        font: 16px/38px $textFont;
+        color: #68648C;
+      }
+    }
+    &Submit {
+      margin: 30px 0;
+      &Btn {
+        @include btnViolet;
+      }
+    }
+  }
 }

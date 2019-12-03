@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/main.css">
-    <title>voucher</title>
+    <title>congrats</title>
 </head>
 
 <body>
@@ -22,16 +22,113 @@
             <img class="main__headerFaceImage" src="img/face.png" alt="face">
         </div>
     </header>
+    <!--------------------------------------------- QR modal ------------------------------------------->
+    <div class="modalQr">
+        <h2 class="modalQr__header">Ваш QR-код</h2>
+        <img class="modalQr__image" src="img/global/qr.svg" alt="qr">
+        <div class="modalQr__id">Ваш id: 385394290</div>
+        <div class="modalQr__button">
+            <button class="modalQr__buttonBtn">Свернуть</button>
+        </div>
+    </div>
     <!--------------------------------------------- main --------------------------------------------->
     <main>
         <div class="main main_darkTheme">
             <div class="congrats">
-                <div class="congrats__header">
-                    <div class="congrats__headerNumber">#10</div>
-                    <div class="congrats__headerText">Задание выполнено</div>
-                    <div class="congrats__headerCheck"></div>
+                <div class="congrats__status">
+                    <div class="congrats__statusNumber">#10</div>
+                    <div class="congrats__statusText">Задание выполнено</div>
+                    <div class="congrats__statusCheck"></div>
                 </div>
-            </div> 
+                <div class="congrats__description">
+                    <h2 class="congrats__descriptionHeader">Поздравляем!</h2>
+                    <h2 class="congrats__descriptionHeader">Ты выполнил задание</h2>
+                    <div class="congrats__descriptionReward">
+                        <div class="reward_text">Призы за задание:</div>
+                        <div class="reward_block">
+                            <div class="item">
+                                <p>Монеты</p>
+                                <div class="reward">
+                                    <img src="img/reward-img-1.svg" alt="reward">
+                                    <div class="number">100</div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <p>Призы</p>
+                                <div class="reward">
+                                    <img src="img/reward-img-2.svg" alt="reward">
+                                    <div class="number">100</div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <p>Очки рейтинга</p>
+                                <div class="reward">
+                                    <img src="img/reward-img-3.svg" alt="reward">
+                                    <div class="number">100</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="congrats__descriptionAfter">
+                        Все твои награды ты можешь посмотреть в
+                        <a class="congrats__descriptionAfterLink" href="#">магазине призов</a>
+                    </div>
+                    <div class="congrats__descriptionForm">
+                        <div class="job_rating">
+                            <div class="caption">
+                                Понравилось задание?
+                            </div>
+                            <div class="btn_block active">
+                                <button class="small_violet_btn">Оценить</button>
+                            </div>
+                            <form class="form_block">
+                                <div class="rating_block">
+                                    <div class="star active"></div>
+                                    <div class="star"></div>
+                                    <div class="star"></div>
+                                    <div class="star"></div>
+                                    <div class="star"></div>
+                                </div>
+                                <textarea>Задание понравилось, но расстроился что проиграл(</textarea>
+                                <div class="btn_submit_block">
+                                    <button type="submit" class="small_violet_btn" disabled>Оценить</button>
+                                </div>
+                            </form>
+                            <div class="congrats__descriptionFormMessage">
+                                Спасибо! Твой отзыв поможет нам стать лучше!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="congrats__exit">
+                    <button class="congrats__exitBtn">К заданиям!</button>
+                </div>
+                <div class="trouble">
+                    <div class="trouble__open">
+                        <div class="trouble__openText">Есть проблема?</div>
+                        <img class="trouble__openArrow" src="img/congrats/arrow.svg" alt="arrow">
+                    </div>
+                    <form class="trouble__form">
+                        <div class="trouble__formPopular">
+                            <div class="trouble__formPopularItem trouble__formPopularItem_active">
+                                Задание не засчитывается
+                            </div>
+                            <div class="trouble__formPopularItem">Ответ не принят</div>
+                            <div class="trouble__formPopularItem">Модератор не на месте</div>
+                        </div>
+                        <div class="trouble__formComment">
+                            <label class="trouble__formCommentLabel" for="yourComment">
+                                Оставьте комментарий описывающий вашу проблему
+                            </label>
+                            <textarea class="trouble__formCommentMessage" name="yourComment" id="yourComment"
+                                placeholder="Введите комментарий"></textarea>
+                        </div>
+                        <div class="trouble__formSubmit">
+                            <input class="trouble__formSubmitBtn" type="submit" value="Отправить ответ">
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
     </main>
     <!--------------------------------------------- footer --------------------------------------------->
@@ -42,7 +139,7 @@
             <div class="main__footerItemDesc">Уведомления</div>
             <i class="numberOfNotifications">23</i>
         </div>
-        <div class="main__footerItem">
+        <div class="main__footerItem main__footerItem_active">
             <div class="main__footerItemImage  main__footerItemImage_tasks">
             </div>
             <div class="main__footerItemDesc">Задания</div>
@@ -56,14 +153,16 @@
             <div class="main__footerItemImage main__footerItemImage_rating">
             </div>
             <div class="main__footerItemDesc">Рейтинги</div>
-            <i class="numberOfNotifications">2</i>
         </div>
-        <div class="main__footerItem main__footerItem_active">
+        <div class="main__footerItem">
             <div class="main__footerItemImage main__footerItemImage_information ">
             </div>
             <div class="main__footerItemDesc">Информация</div>
+            <i class="numberOfNotifications">2</i>
         </div>
     </footer>
+    <script src="scripts/qr.js"></script>
+    <script src="scripts/congrats.js"></script>
 </body>
 
 </html>

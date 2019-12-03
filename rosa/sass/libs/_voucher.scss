@@ -2,18 +2,41 @@
     color: #131929;
     display: flex;
     flex-direction: column;
-    &__image {
-        padding: 1px;
-        height: 205px;
-        background: url(../img/shop/logo.png) no-repeat center, url(../img/shop/logo_back2.jpg) no-repeat;
-        background-size: auto, cover;    
+    align-items: center;
+    height: 100%;
+    &__head {
+        width: 100%;
+        position: relative;
+        &Image {
+            width: 100%;
+            height: 100%;
+        }
+        .shop__goodsFilterItems {
+            position: absolute;
+            top: 0px;
+            left: 10px;
+        }
     }
     &__body {
+        height: 100%;
+        width: 100%;
+        margin-top: -5px;
         box-sizing: border-box;
-        border-radius: 5px;
+        border-radius: 5px 5px 0 0;
         background: #FEFEFE;
         box-shadow: 0 -5px 10px rgba(0, 0, 0, .25);
         padding: 20px 30px 20px;
+        z-index: 10;
+
+        p, ul, ol {
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        blockquote {
+            margin-left: -30px;
+            margin-right: -30px;
+        }
     }
     &__price {
         color: #68648C;
@@ -34,6 +57,7 @@
         &Image {
             display: flex;
             justify-content: center;
+            margin-bottom: 30px;
         }
     }
     &__code {
@@ -43,6 +67,7 @@
         font: bold 30px/68px $textFont;
         text-align: center;
         border-radius: 5px;
+        margin-bottom: 20px;
     }
     &__use {
         &List {
@@ -51,9 +76,13 @@
             padding: 0 0 0 30px;
             font-weight: bold;
             &Item {
-                padding: 0;
+                padding: 0 0 0 10px;
                 position: relative;
                 margin-bottom: 20px;
+                &Span {
+                    display: block;
+                    margin-top: 10px;
+                }
                 &::before {
                     content: "";
                     position: absolute;
@@ -74,21 +103,132 @@
         display: flex;
         justify-content: center;
         margin: 0 auto 25px;
-        &::after {
-            content: "";
-            width: 45px;
-            height: 50px;
-            position: absolute;
-            top: 110px;
-            left: 110px;
-            background: url(../img/partner_inside/red_mark.svg) no-repeat center;
-        }
     }
     &__button {
         align-self: center;
         &Btn {
             background: url(../img/shop/buy.svg) no-repeat center;
             background-color: $lightColor;
+        }
+    }
+    &__toGet {
+        &Header {
+            @include blockHeader;
+        }
+        &Text,
+        &Addres {
+            font: bold 14px/17px $textFont;
+            margin: 20px 0;
+        }
+    }
+    &__yourCode {
+        display: none;
+    }
+    &__status {
+        @include blockHeader;
+        display: none;
+    }
+    /*--------------modifiers---------------------*/
+    &_get {
+        .voucher__status {
+            display: block;
+        }
+        .voucher__header {
+            margin-top: 0;
+        }
+        .voucher__body {
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+        .voucher__price {
+            display: none;
+        }
+        .voucher__qr {
+            display: block;
+        }
+        .voucher__button {
+            display: none;
+        }
+        .voucher__yourCode {
+            display: block;
+        }
+        .voucher__map_first {
+            display: none;
+        }
+        .voucher__toGet {
+            display: none;
+        }
+    }
+    &_bought {
+        .voucher__header {
+            margin-top: 0;
+        }
+        .voucher__body {
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+        .voucher__price {
+            display: none;
+        }
+        .voucher__qr {
+            display: block;
+        }
+        .voucher__button {
+            display: none;
+        }
+        .voucher__yourCode {
+            display: block;
+        }
+        .voucher__map_first {
+            display: none;
+        }
+    }
+    &_off {
+        .voucher__head {
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(254, 254, 254, 0.6);;
+            }
+            .shop__goodsFilterItemsItem {
+                background: #9D9FB5;
+            }
+        }
+        .voucher__body {
+            color: #9D9FB5;
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+        .voucher__header {
+            margin-top: 0;
+        }
+        .voucher__price {
+            display: none;
+        }
+        .voucher__mapImage {
+            filter: grayscale(100%) opacity(40%);
+        }
+        .voucher__button {
+            display: none;
+        }
+        .voucher__useListItem {
+            &::before {
+                content: "";
+                background: #9D9FB5;
+            }
+        }
+        .voucher__map_first {
+            display: none;
+        }
+        .voucher__toGet {
+            display: none;
+        }
+        .voucher__map {
+            margin-bottom: 0;
         }
     }
 }

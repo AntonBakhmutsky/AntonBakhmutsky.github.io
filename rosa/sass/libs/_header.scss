@@ -1,4 +1,5 @@
 .main__header {
+  z-index: 1001;
   position: relative;
   flex: 0 0 auto;
   overflow: hidden;
@@ -38,6 +39,7 @@
     background: #FEFEFE;
     background-size: contain;
     box-shadow: 0 10px 20px rgba(60, 96, 195, .24);
+    cursor: pointer;
   }
   &Face {
     top: 9px;

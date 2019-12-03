@@ -1,12 +1,22 @@
 main {
+    flex: 1 0 auto;
     box-sizing: border-box;
     padding-bottom: 70px;
 }
 
 .main {
-    flex-basis: 87%;
+    height: 100%;
     &_darkTheme {
         background: #160840;
-        color: #fff;
+        color: #FEFEFE;
+    }
+    &_gradientTheme {
+        background: linear-gradient(180deg, #009AE4 0%, #D20169 100%);
+        color: #FEFEFE;
+    }
+    &_rating {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 }

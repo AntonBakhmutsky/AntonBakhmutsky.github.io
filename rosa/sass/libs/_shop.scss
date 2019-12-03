@@ -2,6 +2,7 @@
     &_disabled {
         display: none;
     }
+    height: 100%;
     box-sizing: border-box;
     padding: 0 10px;
     display: flex;
@@ -40,20 +41,13 @@
             box-sizing: border-box;
             padding: 0 10px;
             border: 1px solid #FEFEFE;
+            transition: all .1s;
             &Image {
                 margin-right: 9px;
             }
-            &:nth-child(2) {
-                border-color: #FFA944;
-            }
-            &:nth-child(3) {
-                border-color: #FF7BC2;
-            }
-            &:nth-child(4) {
-                border-color: #14CF8C;
-            }
-            &:nth-child(5) {
-                border-color: #E13842;
+            &_active {
+                background: linear-gradient(180deg, #DA006E 0%, #82509D 100%);
+                border: none;
             }
         }
     }
@@ -79,8 +73,8 @@
             flex-flow: row wrap;
             &Image {
                 position: relative;
-                width: 100px;
-                height: 110px;
+                width: 95px;
+                height: 100px;
                 justify-content: center;
                 margin-right: 15px;
                 border-radius: 5px;
@@ -102,7 +96,7 @@
                 display: flex;
                 flex-direction: column;
                 &Promo {
-                    width: 165px;
+                    width: 170px;
                     font-weight: bold;
                 }
                 .shop__coinsCount {
@@ -118,8 +112,8 @@
                         position: absolute;
                         top: 0;
                         left: 0;
-                        width: 100px;
-                        height: 110px;
+                        width: 95px;
+                        height: 100px;
                         background: linear-gradient(180deg, #2A0B4C 0%, rgba(42, 11, 76, 0) 100%);
                         border-radius: 5px;
                     }
@@ -148,8 +142,8 @@
                         position: absolute;
                         top: 0;
                         left: 0;
-                        width: 100px;
-                        height: 110px;
+                        width: 95px;
+                        height: 100px;
                         background: rgba(254, 254, 254, 0.6);;
                         border-radius: 5px;
                     }
@@ -200,7 +194,7 @@
             flex-basis: 70%;
             margin-top: 10px;
             display: flex;
-            align-items: flex-end;   
+            align-items: flex-end;
             &Item {
                 height: 16px;
                 text-align: center;
@@ -210,16 +204,11 @@
                 border-radius: 8px;
                 box-sizing: border-box;
                 padding: 0 6px;
-                color: #fff;
+                color: #FEFEFE;
                 margin-right: 10px;
+                background: linear-gradient(180deg, #DA006E 0%, #82509D 100%);
                 &:last-child {
                     margin: 0;
-                }
-                &_promo {
-                    background: #FFA944;
-                }
-                &_mitt {
-                    background: #FF7BC2;
                 }
             }
         }

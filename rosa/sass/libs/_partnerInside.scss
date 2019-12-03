@@ -16,7 +16,7 @@
         &Item {
             display: block;
             width: 100%;
-            height: 176px;
+            height: 100%;
         }
     }
     &__about {
@@ -26,6 +26,8 @@
         padding: 16px 10px 28px;
         border-radius: 5px;
         box-shadow: 0 -5px 10px rgba(0, 0, 0, .25);
+        margin-top: -5px;
+        z-index: 10;
         &Status {
             display: inline-block;
             box-sizing: border-box  ;
@@ -105,15 +107,6 @@
                 position: relative;
                 margin-top: 25px;
                 text-align: center;
-                &::after {
-                    content: "";
-                    width: 45px;
-                    height: 50px;
-                    position: absolute;
-                    top: 110px;
-                    left: 110px;
-                    background: url(../img/partner_inside/red_mark.svg) no-repeat center;
-                }
             }
         }
         &Stock {
