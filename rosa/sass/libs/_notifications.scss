@@ -1,7 +1,6 @@
 .notifications {
     &__wrapper {
         box-sizing: border-box;
-        padding-bottom: 30px;
     }
     &__header {
         @include blockHeader;
@@ -12,7 +11,7 @@
         background: #fff;
         color: #131929;
         box-sizing: border-box;
-        border-radius: 5px;
+        border-radius: 5px 5px 0 0;
         &Item {
             box-sizing: border-box;
             padding: 20px 0;

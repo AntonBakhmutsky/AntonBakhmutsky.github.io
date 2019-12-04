@@ -1,13 +1,9 @@
 @import '_variables';
-html {
-  height: 100%;
-}
 body {
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100%;
   min-width: 320px;
   margin: 0 auto;
   font-family: 'Fira Sans', sans-serif;
@@ -15,6 +11,7 @@ body {
   font-size: 14px;
   line-height: 20px;
   color: #131929;
+  min-height: 100vh;
 }
 /*-----------------------------------------------GLOBAL---ELEMENTS----------------------------------------------*/
 @import 'libs/_global.scss';
@@ -51,4 +48,7 @@ body {
 /*---------------------------------------------------RATING-----------------------------------------------------*/
 @import 'libs/_rating.scss';
 /*-----------------------------------------------PUBLIC--PROFILE------------------------------------------------*/
-@import 'libs/_publicProfile.scss'
+@import 'libs/_publicProfile.scss';
+/*---------------------------------------------------ADMIN------------------------------------------------------*/
+@import 'libs/_admin.scss';
+

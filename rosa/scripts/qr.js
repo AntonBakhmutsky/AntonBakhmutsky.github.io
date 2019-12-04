@@ -6,7 +6,7 @@ window.addEventListener('load', () => {
     const qrBtn = document.querySelector('.main__headerQr');
     const cancelBtn = document.querySelector('.modalQr__buttonBtn');
     const body = document.getElementsByTagName('body')[0];
-    
+
     const toggleQr = () => {
         qr.classList.toggle('modalQr_active');
         body.classList.toggle('body_qr');
@@ -17,5 +17,5 @@ window.addEventListener('load', () => {
     }
 
     qrBtn.addEventListener('click', toggleQr);
-    cancelBtn.addEventListener('click', closeQr); 
+    cancelBtn.addEventListener('click', closeQr);
 });

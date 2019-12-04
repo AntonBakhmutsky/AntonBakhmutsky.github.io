@@ -271,6 +271,9 @@ body {
   justify-content: center;
   margin-top: 15px;
 }
+.registration_page .bottom_block .additional_block p {
+  margin: 0;
+}
 .registration_page .bottom_block .additional_block a {
   display: inline-block;
   font-weight: bold;

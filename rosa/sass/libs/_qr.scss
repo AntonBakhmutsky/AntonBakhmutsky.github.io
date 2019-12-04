@@ -8,7 +8,7 @@
     align-items: center;
     box-sizing: border-box;
     padding: 46px 0 70px;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     background: #fff;
     z-index: 1000;
@@ -30,10 +30,14 @@
         }
     }
     &_active {
-        top: 0;
+        top: 0 !important;
     }
 }
 
 .body_qr {
     overflow: hidden;
+
+    .wrapper {
+        overflow: hidden;
+    }
 }
