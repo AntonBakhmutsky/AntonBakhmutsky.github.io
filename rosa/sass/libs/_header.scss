@@ -1,7 +1,7 @@
 .main__header {
   z-index: 1001;
-  position: relative;
-  flex: 0 0 auto;
+  position: fixed;
+  top: 0;
   overflow: hidden;
   box-sizing: border-box;
   padding: 0 20px;

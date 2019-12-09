@@ -14,7 +14,7 @@
             justify-content: center;
         }
         &__header {
-            font: bold 20px/24px $textFont;
+            @include blockHeader;
             margin-bottom: 20px;
         }
         &__filter {
@@ -55,7 +55,7 @@
             }
             &Header {
                 margin: 20px 0;
-                font: bold 20px/24px $textFont;
+                @include blockHeader;
             }
             &Text {
                 max-height: 0;

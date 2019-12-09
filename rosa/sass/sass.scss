@@ -1,17 +1,13 @@
 @import '_variables';
 body {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   min-width: 320px;
   margin: 0 auto;
-  font-family: 'Fira Sans', sans-serif;
+  font-family: 'IBM Plex Mono', monospace;
   font-weight: normal;
   font-size: 14px;
-  line-height: 20px;
+  line-height: 17px;
   color: #131929;
-  min-height: 100vh;
 }
 /*-----------------------------------------------GLOBAL---ELEMENTS----------------------------------------------*/
 @import 'libs/_global.scss';
@@ -42,13 +38,26 @@ body {
 /*------------------------------------------------- task_list --------------------------------------------------*/
 @import 'libs/_taskList';
 /*--------------------------------------------------CONGRATS----------------------------------------------------*/
-@import 'libs/_congrats.scss';
+@import 'libs/_congrats';
 /*------------------------------------------------NOTIFICATIONS-------------------------------------------------*/
 @import 'libs/_notifications';
 /*---------------------------------------------------RATING-----------------------------------------------------*/
-@import 'libs/_rating.scss';
+@import 'libs/_rating';
 /*-----------------------------------------------PUBLIC--PROFILE------------------------------------------------*/
-@import 'libs/_publicProfile.scss';
+@import 'libs/_publicProfile';
 /*---------------------------------------------------ADMIN------------------------------------------------------*/
-@import 'libs/_admin.scss';
-
+@import 'libs/_admin';
+/*-------------------------------------------------GIVE--PRIZE--------------------------------------------------*/
+@import 'libs/_givePrize';
+/*------------------------------------------------MEMBER--PRIZE-------------------------------------------------*/
+@import 'libs/_memberPrize';
+/*--------------------------------------------PRIZE--BY--MODERATOR----------------------------------------------*/
+@import 'libs/_prizeByModerator';
+/*---------------------------------------------AFTER--THE--PRIZE------------------------------------------------*/
+@import 'libs/_afterThePrize';
+/*----------------------------------------------MODERATOR--STORY------------------------------------------------*/
+@import 'libs/_moderatorStory';
+/*---------------------------------------------APPROVE--THE--TASK-----------------------------------------------*/
+@import 'libs/_approveTask';
+/*-----------------------------------------------CONGRATS--PRIZE------------------------------------------------*/
+@import 'libs/_congratsPrize';

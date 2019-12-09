@@ -11,22 +11,22 @@ window.addEventListener('load', () => {
     const pageBloks = [partners, faq, support];
 
     const showPartners = () => {
-        if (partnersBtn.classList.contains('tab__btn_darkTheme')) {
-            buttons.forEach(el => el.classList.remove('tab__btn_active_darkTheme'));
+        if (partnersBtn.classList.contains('tab__btn_gradientTheme')) {
+            buttons.forEach(el => el.classList.remove('tab__btn_active_gradientTheme'));
         } else {
             buttons.forEach(el => {
-                el.classList.add('tab__btn_darkTheme');
+                el.classList.add('tab__btn_gradientTheme');
                 el.classList.remove('tab__btn_active');
             });
             main.classList.add('main_gradientTheme');     
         }
-        partnersBtn.classList.add('tab__btn_active_darkTheme');
+        partnersBtn.classList.add('tab__btn_active_gradientTheme');
         pageBloks.forEach(el => el.classList.remove(el.classList[0] + '_active'));
         partners.classList.add('partners_active');
     }
     const showFaq = () => {
-        if (faqBtn.classList.contains('tab__btn_darkTheme')) {
-            buttons.forEach(el => el.classList.remove('tab__btn_active_darkTheme', 'tab__btn_darkTheme'));
+        if (faqBtn.classList.contains('tab__btn_gradientTheme')) {
+            buttons.forEach(el => el.classList.remove('tab__btn_active_gradientTheme', 'tab__btn_gradientTheme'));
             main.classList.remove('main_gradientTheme');
         } 
         faqBtn.classList.add('tab__btn_active');
@@ -34,16 +34,16 @@ window.addEventListener('load', () => {
         faq.classList.add('faq_active');
     }
     const showSupport = () => {
-        if (supportBtn.classList.contains('tab__btn_darkTheme')) {
-            buttons.forEach(el => el.classList.remove('tab__btn_active_darkTheme'));
+        if (supportBtn.classList.contains('tab__btn_gradientTheme')) {
+            buttons.forEach(el => el.classList.remove('tab__btn_active_gradientTheme'));
         } else {
             buttons.forEach(el => {
-                el.classList.add('tab__btn_darkTheme');
+                el.classList.add('tab__btn_gradientTheme');
                 el.classList.remove('tab__btn_active');
             });
             main.classList.add('main_gradientTheme');     
         }
-        supportBtn.classList.add('tab__btn_active_darkTheme');
+        supportBtn.classList.add('tab__btn_active_gradientTheme');
         pageBloks.forEach(el => el.classList.remove(el.classList[0] + '_active'));
         support.classList.add('support_active');
     }

@@ -2,7 +2,6 @@
     &__table {
         display: flex;
         flex-direction: column;
-        min-height: 50vh;
     }
     &__item {
         min-width: 300px;
@@ -52,7 +51,7 @@
                 width: 15px;
                 height: 15px;
                 background: url(../img/rating/blue_star.svg);
-            }   
+            }
             &Image {
                 margin-right: 5px;
                 fill: #FEFEFE;
@@ -71,6 +70,7 @@
         &_myPlace {
             background: $lightColor;
             color: #FEFEFE;
+            border: 2px solid #fff;
             .rating__itemScore {
                 &::before {
                     background: url(../img/rating/white_star.svg);
@@ -78,6 +78,9 @@
             }
             .rating__itemUserImage {
                 border: 2px solid #FEFEFE;
+            }
+            .rating__itemNumber_prizePlace {
+                color: #FEFEFE;
             }
         }
     }

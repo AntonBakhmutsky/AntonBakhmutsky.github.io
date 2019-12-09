@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="format-detection" content="telephone=no">
     <title>Главная</title>
-    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,500,700|Roboto+Slab:400,500,700&display=swap" rel="stylesheet">
     <link href="styles/reset.css" rel="stylesheet">
     <link href="styles/slick.css" rel="stylesheet">
     <link href="styles/slick-theme.css" rel="stylesheet">
@@ -16,123 +16,128 @@
 
 <body>
 
-    <!--------------------------------------------- header --------------------------------------------->
-    <header class="main__header">
-        <a href="#" class="main__headerArrow"><img class="main__headerArrowImg" src="img/union.svg" alt="arrow"></a>
-        <div class="main__headerQr">
-            <img class="main__headerQrImage" src="img/qr.svg" alt="qr">
-        </div>
-        <div class="main__headerFace">
-            <img class="main__headerFaceImage" src="img/face.png" alt="face">
-        </div>
-    </header>
-    <!--------------------------------------------- QR modal ------------------------------------------->
-    <div class="modalQr">
-        <h2 class="modalQr__header">Ваш QR-код</h2>
-        <img class="modalQr__image" src="img/global/qr.svg" alt="qr">
-        <div class="modalQr__id">Ваш id: 385394290</div>
-        <div class="modalQr__button">
-            <button class="modalQr__buttonBtn">Свернуть</button>
-        </div>
+<!--------------------------------------------- header --------------------------------------------->
+<header class="main__header">
+    <a href="#" class="main__headerArrow"><img class="main__headerArrowImg" src="img/union.svg" alt="arrow"></a>
+    <div class="main__headerQr">
+        <img class="main__headerQrImage" src="img/qr.svg" alt="qr">
     </div>
-    <!--------------------------------------------- main --------------------------------------------->
-    <main>
-        <div class="one_task">
-            <div class="main_block" style="background-image: url(img/one-task-img-1.jpg);">
-                <div class="top_block">
-                    <div class="number">#3456</div>
-                    <div class="filter">
-                        <div class="item sport active">
-                            <img src="img/filter-4.svg" alt="filter">
-                            <span>Спорт</span>
+    <div class="main__headerFace">
+        <img class="main__headerFaceImage" src="img/face.png" alt="face">
+    </div>
+</header>
+<!--------------------------------------------- QR modal ------------------------------------------->
+<div class="modalQr">
+    <h2 class="modalQr__header">Ваш QR-код</h2>
+    <img class="modalQr__image" src="img/global/qr.svg" alt="qr">
+    <div class="modalQr__id">Ваш id: 385394290</div>
+    <div class="modalQr__button">
+        <button class="modalQr__buttonBtn">Свернуть</button>
+    </div>
+</div>
+<!--------------------------------------------- main --------------------------------------------->
+<main>
+    <div class="wrap">
+        <div class="main">
+            <div class="one_task">
+                <div class="main_block" style="background-image: url(img/one-task-img-1.jpg);">
+                    <div class="top_block">
+                        <div class="number">#3456</div>
+                        <div class="filter">
+                            <div class="item sport active">
+                                <img src="img/filter-4.svg" alt="filter">
+                                <span>Спорт</span>
+                            </div>
+                        </div>
+                        <div class="year">
+                            <img src="img/year-black.svg" alt="year">
                         </div>
                     </div>
-                    <div class="year">
-                        <img src="img/year-black.svg" alt="year">
-                    </div>
-                </div>
-                <div class="bottom_block">
-                    <div class="reward_block">
-                        <div class="item">
-                            <p>Монеты</p>
-                            <div class="reward">
-                                <img src="img/reward-img-1.svg" alt="reward">
-                                <div class="number">100</div>
+                    <div class="bottom_block">
+                        <div class="reward_block">
+                            <div class="item">
+                                <p>Монеты</p>
+                                <div class="reward">
+                                    <img src="img/reward-img-1.svg" alt="reward">
+                                    <div class="number">100</div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="task_footer">
-                <div class="task_verification">
-                    <div class="caption">Проверяем выполнение....</div>
-                    <div class="text">Робот пошел смотреть, подождите немного.</div>
+                <div class="task_footer">
+                    <div class="task_verification">
+                        <div class="caption">Проверяем выполнение....</div>
+                        <div class="text">Робот пошел смотреть, подождите немного.</div>
+                    </div>
+                    <div class="validation_error">
+                        <div class="caption">Мы не нашли пост :(</div>
+                        <div class="text">
+                            Убедись что выполнил все условия и нажми кнопку “Проверить еще раз”, или вставь ссылку в
+                            поле
+                            ниже
+                        </div>
+                        <textarea></textarea>
+                    </div>
+                    <div class="open_btn active">
+                        <a href="#">Есть проблема?</a>
+                        <i></i>
+                    </div>
+                    <form class="send_message active">
+                        <div class="title_block">
+                            <div class="title active">Задание не засчитывается</div>
+                            <div class="title">Ответ не принят</div>
+                            <div class="title">Модератор не на месте</div>
+                        </div>
+                        <div class="text">
+                            Оставьте комментарий описывающий вашу проблему
+                        </div>
+                        <textarea placeholder="Введите комментарий"></textarea>
+                        <div class="btn_block">
+                            <button type="submit" class="violet_btn">Отправить ответ</button>
+                        </div>
+                    </form>
                 </div>
-                <div class="validation_error">
-                    <div class="caption">Мы не нашли пост :(</div>
-                    <div class="text">
-                        Убедись что выполнил все условия и нажми кнопку “Проверить еще раз”, или вставь ссылку в поле
-                        ниже
-                    </div>
-                    <textarea></textarea>
-                </div>
-                <div class="open_btn active">
-                    <a href="#">Есть проблема?</a>
-                    <i></i>
-                </div>
-                <form class="send_message active">
-                    <div class="title_block">
-                        <div class="title active">Задание не засчитывается</div>
-                        <div class="title">Ответ не принят</div>
-                        <div class="title">Модератор не на месте</div>
-                    </div>
-                    <div class="text">
-                        Оставьте комментарий описывающий вашу проблему
-                    </div>
-                    <textarea placeholder="Введите комментарий"></textarea>
-                    <div class="btn_block">
-                        <button type="submit" class="violet_btn">Отправить ответ</button>
-                    </div>
-                </form>
             </div>
         </div>
-    </main>
+    </div>
+</main>
 
-    <!--------------------------------------------- footer --------------------------------------------->
-    <footer class="main__footer">
-        <div class="main__footerItem">
-            <div class="main__footerItemImage  main__footerItemImage_notifications">
-            </div>
-            <div class="main__footerItemDesc">Уведомления</div>
-            <i class="numberOfNotifications">23</i>
+<!--------------------------------------------- footer --------------------------------------------->
+<footer class="main__footer">
+    <div class="main__footerItem">
+        <div class="main__footerItemImage  main__footerItemImage_notifications">
         </div>
-        <div class="main__footerItem">
-            <div class="main__footerItemImage  main__footerItemImage_tasks">
-            </div>
-            <div class="main__footerItemDesc">Задания</div>
+        <div class="main__footerItemDesc">Уведомления</div>
+        <i class="numberOfNotifications">23</i>
+    </div>
+    <div class="main__footerItem">
+        <div class="main__footerItemImage  main__footerItemImage_tasks">
         </div>
-        <div class="main__footerItem">
-            <div class="main__footerItemImage  main__footerItemImage_prizes">
-            </div>
-            <div class="main__footerItemDesc">Призы</div>
+        <div class="main__footerItemDesc">Задания</div>
+    </div>
+    <div class="main__footerItem">
+        <div class="main__footerItemImage  main__footerItemImage_prizes">
         </div>
-        <div class="main__footerItem">
-            <div class="main__footerItemImage main__footerItemImage_rating">
-            </div>
-            <div class="main__footerItemDesc">Рейтинги</div>
-            <i class="numberOfNotifications">2</i>
+        <div class="main__footerItemDesc">Призы</div>
+    </div>
+    <div class="main__footerItem">
+        <div class="main__footerItemImage main__footerItemImage_rating">
         </div>
-        <div class="main__footerItem main__footerItem_active">
-            <div class="main__footerItemImage main__footerItemImage_information ">
-            </div>
-            <div class="main__footerItemDesc">Информация</div>
+        <div class="main__footerItemDesc">Рейтинги</div>
+        <i class="numberOfNotifications">2</i>
+    </div>
+    <div class="main__footerItem main__footerItem_active">
+        <div class="main__footerItemImage main__footerItemImage_information ">
         </div>
-    </footer>
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        <div class="main__footerItemDesc">Информация</div>
+    </div>
+</footer>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"
         integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-    <script src="scripts/slick.min.js"></script>
-    <script src="scripts/main.js"></script>
-    <script src="scripts/qr.js"></script>
+<script src="scripts/slick.min.js"></script>
+<script src="scripts/main.js"></script>
+<script src="scripts/qr.js"></script>
 </body>
 
 </html>

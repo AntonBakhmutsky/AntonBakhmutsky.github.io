@@ -1,6 +1,7 @@
 .public {
     box-sizing: border-box;
     padding: 20px 0 20px;
+    color: #131929;
     &__head {
         display: flex;
         flex-direction: column;
@@ -14,6 +15,7 @@
             border: 2px solid #D9016F;
             &Picture {
                 min-width: 100%;
+                background: #ffffff;
             }
         }
         &Name {
@@ -93,7 +95,7 @@
                 &Picture {
                     width: 40px;
                     height: 40px;
-                }    
+                }
             }
         }
     }

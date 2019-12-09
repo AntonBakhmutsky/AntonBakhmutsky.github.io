@@ -259,7 +259,7 @@
       box-sizing: border-box;
       width: 100%;
       padding: 0 30px;
-      font: bold 20px/24px $textFont;
+      @include blockHeader;
     }
     &SubHeader {
       box-sizing: border-box;
@@ -368,7 +368,7 @@
         justify-content: space-between;
         align-items: center;
         &Text {
-          font: bold 20px/24px $textFont;
+          @include blockHeader;
         }
       }
       &Arrow {

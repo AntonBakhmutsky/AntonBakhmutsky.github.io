@@ -41,7 +41,7 @@
         }
         &Header {
             margin-top: 15px;
-            font: bold 20px/24px $textFont;
+            @include blockHeader;
         }
         &Text {
             margin: 25px 0 0 0;

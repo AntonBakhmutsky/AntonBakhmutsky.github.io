@@ -5,35 +5,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,500,700|Roboto+Slab:400,500,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/main.css">
     <title>physical promotional code</title>
 </head>
 
 <body>
-    <!--------------------------------------------- header --------------------------------------------->
-    <header class="main__header">
-        <a href="#" class="main__headerArrow"><img class="main__headerArrowImg" src="img/union.svg" alt="arrow"></a>
-        <div class="main__headerQr">
-            <img class="main__headerQrImage" src="img/qr.svg" alt="qr">
-        </div>
-        <div class="main__headerFace">
-            <img class="main__headerFaceImage" src="img/face.png" alt="face">
-        </div>
-    </header>
-    <!--------------------------------------------- QR modal ------------------------------------------->
-    <div class="modalQr">
-        <h2 class="modalQr__header">Ваш QR-код</h2>
-        <img class="modalQr__image" src="img/global/qr.svg" alt="qr">
-        <div class="modalQr__id">Ваш id: 385394290</div>
-        <div class="modalQr__button">
-            <button class="modalQr__buttonBtn">Свернуть</button>
-        </div>
+<!--------------------------------------------- header --------------------------------------------->
+<header class="main__header">
+    <a href="#" class="main__headerArrow"><img class="main__headerArrowImg" src="img/union.svg" alt="arrow"></a>
+    <div class="main__headerQr">
+        <img class="main__headerQrImage" src="img/qr.svg" alt="qr">
     </div>
-    <!--------------------------------------------- main --------------------------------------------->
-    <main>
-        <div class="main main_gradientTheme">
+    <div class="main__headerFace">
+        <img class="main__headerFaceImage" src="img/face.png" alt="face">
+    </div>
+</header>
+<!--------------------------------------------- QR modal ------------------------------------------->
+<div class="modalQr">
+    <h2 class="modalQr__header">Ваш QR-код</h2>
+    <img class="modalQr__image" src="img/global/qr.svg" alt="qr">
+    <div class="modalQr__id">Ваш id: 385394290</div>
+    <div class="modalQr__button">
+        <button class="modalQr__buttonBtn">Свернуть</button>
+    </div>
+</div>
+<!--------------------------------------------- main --------------------------------------------->
+<main>
+    <div class="wrap">
+        <div class="main">
             <div class="voucher voucher_get">
                 <div class="voucher__head">
                     <img class="voucher__headImage" src="img/voucher/kant.jpg" alt="image">
@@ -111,38 +112,39 @@
                 </div>
             </div>
         </div>
-    </main>
-    <!--------------------------------------------- footer --------------------------------------------->
-    <footer class="main__footer">
-        <div class="main__footerItem">
-            <div class="main__footerItemImage  main__footerItemImage_notifications">
-            </div>
-            <div class="main__footerItemDesc">Уведомления</div>
-            <i class="numberOfNotifications">23</i>
+    </div>
+</main>
+<!--------------------------------------------- footer --------------------------------------------->
+<footer class="main__footer">
+    <div class="main__footerItem">
+        <div class="main__footerItemImage  main__footerItemImage_notifications">
         </div>
-        <div class="main__footerItem">
-            <div class="main__footerItemImage  main__footerItemImage_tasks">
-            </div>
-            <div class="main__footerItemDesc">Задания</div>
+        <div class="main__footerItemDesc">Уведомления</div>
+        <i class="numberOfNotifications">23</i>
+    </div>
+    <div class="main__footerItem">
+        <div class="main__footerItemImage  main__footerItemImage_tasks">
         </div>
-        <div class="main__footerItem">
-            <div class="main__footerItemImage  main__footerItemImage_prizes">
-            </div>
-            <div class="main__footerItemDesc">Призы</div>
+        <div class="main__footerItemDesc">Задания</div>
+    </div>
+    <div class="main__footerItem">
+        <div class="main__footerItemImage  main__footerItemImage_prizes">
         </div>
-        <div class="main__footerItem">
-            <div class="main__footerItemImage main__footerItemImage_rating">
-            </div>
-            <div class="main__footerItemDesc">Рейтинги</div>
-            <i class="numberOfNotifications">2</i>
+        <div class="main__footerItemDesc">Призы</div>
+    </div>
+    <div class="main__footerItem">
+        <div class="main__footerItemImage main__footerItemImage_rating">
         </div>
-        <div class="main__footerItem main__footerItem_active">
-            <div class="main__footerItemImage main__footerItemImage_information ">
-            </div>
-            <div class="main__footerItemDesc">Информация</div>
+        <div class="main__footerItemDesc">Рейтинги</div>
+        <i class="numberOfNotifications">2</i>
+    </div>
+    <div class="main__footerItem main__footerItem_active">
+        <div class="main__footerItemImage main__footerItemImage_information ">
         </div>
-    </footer>
-    <script src="scripts/qr.js"></script>
+        <div class="main__footerItemDesc">Информация</div>
+    </div>
+</footer>
+<script src="scripts/qr.js"></script>
 </body>
 
 </html>

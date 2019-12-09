@@ -1,0 +1,145 @@
+.story {
+    margin: 20px 10px 40px;
+    .tasks, .prizes {
+        display: flex;
+        flex-direction: column;
+        &_disabled {
+            display: none;
+        }
+    }
+    &__arrow {
+        &Right {
+            width: 13px;
+            height: 11px;
+        }
+    }
+    &__item {
+        background: #FEFEFE;
+        border-radius: 8px;
+        color: #131929;
+        margin-bottom: 10px;
+        &_issued, &_approve {
+            .story__headStatusText {
+                color: #66C902;
+            }
+        }
+        &_replace, &_outOfRules {
+            .story__headStatusText {
+                color: #844F9C;
+            }
+        }
+        &_failed {
+            .story__headStatusText {
+                color: #D20C3C;
+            }
+        }
+    }
+    &__head {
+        box-sizing: border-box;
+        padding: 10px 18px 13px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &Date {
+            font: bold 10px/13px $headerFont;
+        }
+        &Status {
+            font: bold 11px/20px $headerFont;
+            display: flex;
+            align-items: center;
+            &Text {
+                margin-right: 3px;
+            }
+        }
+    }
+    &__body {
+        display: flex;
+        box-sizing: border-box;
+        padding: 10px 15px 14px;
+        border-top: 1px solid #9D9FB5;
+        border-bottom: 1px solid #9D9FB5;
+        align-items: center;
+        &User {
+            display: flex;
+            &Image {
+                align-self: flex-end;
+                width: 20px;
+                height: 20px;
+                overflow: hidden;
+                border-radius: 50%;
+                margin: 0 5px -3px 0;
+                &Picture {
+                    min-width: 100%;
+                }
+            }
+            &Desc {
+                align-self: center;
+                display: flex;
+                flex-direction: column;
+                &Status {
+                    font: bold 8px/14px $textFont;
+                    color: #9D9FB5;
+                }
+                &Name {
+                    font: bold 11px/14px $textFont;
+                }
+            }
+            &:first-child {
+                margin-right: 14px;
+            }
+        }
+        &Arrow {
+            @extend .story__arrowRight;
+            align-self: flex-end;
+            margin-right: 14px;
+            margin-bottom: 1px;
+        }
+    }
+    &__footer {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        box-sizing: border-box;
+        padding: 15px 17px;
+        &Prize {
+            display: flex;
+            align-items: flex-end;
+            &Image {
+                width: 18px;
+                height: 20px;
+                margin-right: 8px;
+                display: flex;
+                &Picture {
+                    min-width: 100%;
+                }
+            }
+            &Desc {
+                font: bold 9px/11px $textFont;
+                text-decoration: underline;                
+            }
+            &:first-child {
+                margin-bottom: 9px;
+            }
+        }
+        &Arrow {
+            width: 11px;
+            height: 13px;
+            margin: 0 0 8px 3px;
+        }
+        &Task {
+            display: flex;
+            justify-content: space-between;
+            &Number {
+                margin-right: 10px;
+                align-self: flex-end;
+                font: bold 14px/14px $headerFont;
+            }
+            &Text {
+                align-self: flex-end;
+                font: bold 9px/9px $textFont;
+                text-decoration: underline;
+                margin-bottom: 2px;
+            }
+        }
+    }
+}

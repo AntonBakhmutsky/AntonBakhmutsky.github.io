@@ -1,9 +1,8 @@
-.voucher {
+.voucher, .prizeByModerator {
     color: #131929;
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100%;
     &__head {
         width: 100%;
         position: relative;
@@ -20,7 +19,7 @@
     &__body {
         height: 100%;
         width: 100%;
-        margin-top: -5px;
+        margin-top: -10px;
         box-sizing: border-box;
         border-radius: 5px 5px 0 0;
         background: #FEFEFE;
@@ -46,7 +45,7 @@
         }
     }
     &__header {
-        font: bold 20px/24px $textFont;
+        @include blockHeader;
         margin: 25px 0 20px;
     }
     &__text {

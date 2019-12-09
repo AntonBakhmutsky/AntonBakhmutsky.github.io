@@ -11,7 +11,7 @@
   background: #f9f9f9;
   z-index: 1000;
   &Item {
-    width: 56px;
+    width: 65px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -34,6 +34,12 @@
       &_information {
         background-image: url("../img/footer/footer__5_black.svg");
       }
+      &_support {
+        background-image: url("../img/footer/footer__6_black.svg");
+      }
+      &_history {
+        background-image: url("../img/footer/footer__7_black.svg");
+      }
     }
     &_active {
       .main__footerItemImage {
@@ -52,6 +58,12 @@
         }
         &_information {
           background-image: url("../img/footer/footer__5_white.svg");
+        }
+        &_support {
+          background-image: url("../img/footer/footer__6_white.svg");
+        }
+        &_history {
+          background-image: url("../img/footer/footer__7_white.svg");
         }
       }
     }
@@ -80,7 +92,7 @@
       border-radius: 50%;
       border: 1px solid #fff;
       background: $lightColor;
-      font: bold 8px/16.06px $textFont;
+      font: bold 8px/15.06px $textFont;
       text-align: center;
       color: #fff;
     }

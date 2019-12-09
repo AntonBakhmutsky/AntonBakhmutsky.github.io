@@ -1,6 +1,6 @@
 /*------------------------------------------- base -------------------------------------------*/
 body {
-  font-family: 'Fira Sans', sans-serif;
+  font-family: "IBM Plex Mono", monospace;
   font-weight: normal;
   font-size: 14px;
   line-height: 20px;
@@ -133,28 +133,28 @@ body {
   color: #FFFFFF;
 }
 .registration_page .content_block .input_block ::-webkit-input-placeholder {
-  font-family: 'Fira Sans', sans-serif;
+  font-family: "IBM Plex Mono", monospace;
   font-weight: normal;
   font-size: 14px;
   line-height: 20px;
   color: #9D9FB5;
 }
 .registration_page .content_block .input_block ::-moz-placeholder {
-  font-family: 'Fira Sans', sans-serif;
+  font-family: "IBM Plex Mono", monospace;
   font-weight: normal;
   font-size: 14px;
   line-height: 20px;
   color: #9D9FB5;
 }
 .registration_page .content_block .input_block :-moz-placeholder {
-  font-family: 'Fira Sans', sans-serif;
+  font-family: "IBM Plex Mono", monospace;
   font-weight: normal;
   font-size: 14px;
   line-height: 20px;
   color: #9D9FB5;
 }
 .registration_page .content_block .input_block :-ms-input-placeholder {
-  font-family: 'Fira Sans', sans-serif;
+  font-family: "IBM Plex Mono", monospace;
   font-weight: normal;
   font-size: 14px;
   line-height: 20px;

@@ -1,0 +1,61 @@
+.memberPrize {
+    box-sizing: border-box;
+    padding: 25px 0;
+    &__head {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .shop__filter {
+            margin: 0 10px;
+        }
+    }
+    &__change {
+        margin: 0 10px 25px;
+        .shop__goodsItem .shop__goodsItem_second .shop__goodsItem_endedPrize {
+            color: red;
+        }
+    }
+    &__price {
+        flex-basis: 60%;
+        display: flex;
+        align-items: flex-end;
+        margin-top: 10px;
+        &Container {
+            display: flex;
+            align-items: center;
+        }
+        &Image {
+            width: 12.5px;
+            height: 12.5px;
+            margin-right: 5px;
+        }
+        &Count {
+            font-weight: bold;
+            color: #68648C;
+        }
+    }
+    &__header {
+        margin-bottom: 30px;
+        @include blockHeader;
+    }
+    &__user {
+        display: flex;
+        align-items: center;
+        margin-bottom: 25px;
+        &Image {
+            box-sizing: border-box;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 1px solid #fff;
+            margin-right: 10px;
+            &Picture {
+                min-width: 100%;
+            }
+        }
+    }
+    .shop__goods {
+        margin: 20px 10px;
+    }
+}

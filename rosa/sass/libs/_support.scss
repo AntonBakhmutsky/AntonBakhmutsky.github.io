@@ -36,7 +36,7 @@
             flex-direction: column;
             &Header {
                 margin-top: 25px;
-                font: bold 20px/24px $textFont;
+                @include blockHeader;
                 text-align: center;
             }
             &Popular {
@@ -146,7 +146,7 @@
             box-sizing: border-box;
             padding: 15px;
             color: #131929;
-            font: bold 20px/24px $textFont;
+            @include blockHeader;
             border-top: 1px solid #C4C4C4;
         }
         &__bottom {
