@@ -17,7 +17,7 @@
         color: #131929;
         &Number {
             width: 20%;
-            font: bold 12px/14px $textFont;
+            font: bold 12px/14px $headerFont;
             &_prizePlace {
                 color: $lightColor;
             }
@@ -61,7 +61,7 @@
                 padding-left: 5px;
                 display: block;
                 position: relative;
-                font: bold 14px/17px $textFont;
+                font: bold 14px/17px $headerFont;
             }
         }
         &:last-child {

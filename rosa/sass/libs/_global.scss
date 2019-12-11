@@ -54,6 +54,7 @@ blockquote {
   line-height: 17px;
   color: #131929;
   position: relative;
+  margin: 15px 0;
 }
 
 blockquote:before {
@@ -88,7 +89,7 @@ blockquote:after {
     &Text {
       font: 500 12px/14.5px $textFont;
       text-decoration: underline;
-      margin-right: 10px; 
+      margin-right: 10px;
     }
     &Arrow {
       transition: .3s all;
@@ -139,7 +140,7 @@ blockquote:after {
         border-radius: 3px;
         box-sizing: border-box;
         padding-left: 12px;
-        outline: none;  
+        outline: none;
         font: 16px/38px $textFont;
         color: #68648C;
       }
@@ -149,6 +150,40 @@ blockquote:after {
       &Btn {
         @include btnViolet;
       }
+    }
+  }
+}
+/*--------- mask for inputs ----------*/
+.input__wrap {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 17px;
+    height: 46px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    top: 1px;
+    right: 1px;
+  }
+  &_white {
+    &::after {
+      content: "";
+      background: linear-gradient(270deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+    }
+  }
+  &_green {
+    &::after {
+      content: "";
+      background: linear-gradient(270deg, #EBFFD7 0%, rgba(235, 255, 215, 0) 100%);
+    }
+  }
+  &_red {
+    &::after {
+      content: "";
+      background: linear-gradient(270deg, #FFE5EC 46.86%, rgba(255, 229, 236, 0) 100%);
     }
   }
 }

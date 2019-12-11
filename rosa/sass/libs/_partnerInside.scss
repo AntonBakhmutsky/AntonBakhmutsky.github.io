@@ -60,9 +60,11 @@
                     padding-left: 30px;
                     &:first-child {
                         background: url(../img/partner_inside/phone.svg) no-repeat left;
+                        font-family: $headerFont;
                     }
                     &:nth-child(2) {
                         background: url(../img/partner_inside/mail.svg) no-repeat left;
+                        font-family: $headerFont;
                     }
                 }
             }
@@ -89,6 +91,7 @@
             overflow: hidden;
             &Link {
                 color: #131929;
+                font-family: $headerFont;
             }
         }
         &Map {
@@ -96,6 +99,7 @@
             align-self: center;
 
             &Adress {
+                font-family: $headerFont;
                 box-sizing: border-box;
                 padding-left: 30px;
                 font-weight: bold;

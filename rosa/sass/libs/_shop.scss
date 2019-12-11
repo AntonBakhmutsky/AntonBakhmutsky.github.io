@@ -9,7 +9,7 @@
     &__coins {
         display: flex;
         justify-content: center;
-        font: 20px/24px $textFont;
+        font: 20px/24px $headerFont;
         &Count {
             position: relative;
             margin-left: 15px;
@@ -17,7 +17,7 @@
             font-weight: bold;
             &::after {
                 position: absolute;
-                top: 7px;
+                top: 6px;
                 right: -18px;
                 content: "";
                 width: 13px;
@@ -111,7 +111,7 @@
                 flex-direction: column;
                 &Count  {
                     margin-top: 10px;
-                    font: bold 18px/22px $textFont;
+                    font: bold 18px/22px $headerFont;
                     color: #160840;
                     &Span {
                         font-size: 14px;
@@ -131,11 +131,30 @@
                 &Promo {
                     width: 170px;
                     font-weight: bold;
+                    font-family: $headerFont;
                 }
                 .shop__coinsCount {
                     margin: 5px 0 0 0;
-                    font: bold 20px/24px $textFont;
+                    font: bold 20px/24px $headerFont;
                     align-self: flex-start;
+                }
+                &MyRose {
+                    font-family: $headerFont;
+                    font-weight: bold;
+                }
+                &Status {
+                    font: bold 8px/20px $textFont;
+                }
+                &Points {
+                    @extend .shop__coinsCount;
+                    &:after {
+                        content: "";
+                        top: 6px;
+                        width: 14px;
+                        height: 14px;
+                        background: url(../img/global/prizes/rosa.svg) no-repeat center;
+                        background-size: cover;
+                    }
                 }
             }
             &_low, &_issued, &_lowPrize, &_endedPrize, &_changePrize {
@@ -261,6 +280,35 @@
                     }
                 }
             }
+            &_myRose {
+                border: 2px solid #D9016F;
+            }
+            &_myRose-waiting {
+                .shop__goodsItemImage {
+                    &::before {
+                        content: "";
+                        width: 95px;
+                        height: 100px;
+                        background: rgba(254, 254, 254, 0.6);
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                    }
+                }
+                .shop__goodsItemDescStatus {
+                    color: #D9016F;
+                }
+                .shop__goodsItemDescPoints {
+                    color: #9D9FB5;
+                    &::after {
+                        content: "";
+                        background: url(../img/global/prizes/rosa-disabled.svg) no-repeat center;
+                        width: 14px;
+                        height: 14px;
+                        background-size: cover;
+                    }
+                }
+            }
         }
         &FilterItems {
             .shop__filterItemImage {
@@ -274,7 +322,6 @@
             align-items: flex-end;
             &Item {
                 height: 16px;
-                text-align: center;
                 font: 500 8px/16px $textFont;
                 display: flex;
                 align-items: center;
@@ -284,6 +331,12 @@
                 color: #FEFEFE;
                 margin-right: 10px;
                 background: linear-gradient(180deg, #DA006E 0%, #82509D 100%);
+                &_myRose {
+                    .shop__filterItemImage {
+                        width: 10px;
+                        height: 10px;
+                    }
+                }
             }
         }
     }

@@ -17,6 +17,7 @@
     &__header {
         font: bold 14px/16.5px $textFont;
         text-align: center;
+        font-family: $headerFont;
     }
     &__item {
         margin: 20px 0;
@@ -42,7 +43,7 @@
             background-color: #fff;
         }
         &Header {
-            font: bold 16px/19px $textFont;
+            font: bold 16px/19px $headerFont;
             color: #131929;
         }
         &Desc {
@@ -56,9 +57,9 @@
             width: 58px;
             height: 23px;
             border-radius: 8px;
-            font: 500 12px/23px $textFont;
+            font: 500 12px/23px $headerFont;
             text-align: center;
-            background: #DC4497;
+            background: linear-gradient(180deg, #DA006E 0%, #82509D 100%);
         }
         &More {
             margin-top: 13px;

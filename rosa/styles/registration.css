@@ -54,6 +54,7 @@ body {
   font-size: 24px;
   line-height: 29px;
   text-shadow: 2px 2px 0 #232D5E;
+  font-family: 'Roboto Slab', serif;
 }
 .registration_page .content_block .waiting_code {
   font-weight: bold;
@@ -78,6 +79,9 @@ body {
 }
 .registration_page .content_block .waiting_code .text {
   margin: 0 10px;
+}
+.registration_page .content_block .waiting_code .time {
+  font-family: 'Roboto Slab', serif;
 }
 .registration_page .content_block .code_repeat {
   text-align: center;
@@ -129,7 +133,7 @@ body {
   font-weight: normal;
   font-size: 22px;
   line-height: 26px;
-  text-align: left;
+  text-align: center;
   color: #FFFFFF;
 }
 .registration_page .content_block .input_block ::-webkit-input-placeholder {

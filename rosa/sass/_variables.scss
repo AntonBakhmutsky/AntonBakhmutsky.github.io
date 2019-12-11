@@ -29,6 +29,7 @@ $svgFillActive: #fff;
   box-sizing: border-box;
 }
 @mixin btnBlue {
+  align-self: center;
   width: 260px;
   height: 48px;
   border: none;
@@ -37,8 +38,12 @@ $svgFillActive: #fff;
   background: $lightColor;
   font: bold 20px/24px $textFont;
   color: #FEFEFE;
+  &:disabled {
+    background: #9D9FB5;
+  }
 }
 @mixin btnViolet {
+  align-self: center;
   width: 260px;
   height: 48px;
   border: none;
@@ -49,6 +54,7 @@ $svgFillActive: #fff;
   color: #FEFEFE;
 }
 @mixin btnGray {
+  align-self: center;
   width: 260px;
   height: 48px;
   border: none;
@@ -79,7 +85,7 @@ $svgFillActive: #fff;
   box-sizing: border-box;
   padding-left: 10px;
   border-radius: 3px;
-  font: 16px/48px $textFont;
+  font: 16px/48px $headerFont;
   &::placeholder {
     color: #68648C;
   }

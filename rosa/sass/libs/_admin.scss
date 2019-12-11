@@ -141,16 +141,13 @@
           }
         }
       }
-      .other_tasks {
-
-      }
     }
   }
 }
 
 /*------------------------------------------- moderator_task -------------------------------------------*/
 .moderator_task {
-  padding: 20px 10px;
+  padding: 20px 0;
   h1 {
     font-weight: bold;
     font-size: 19px;
@@ -160,6 +157,8 @@
     font-family: $headerFont;
   }
   .description {
+    box-sizing: border-box;
+    padding: 0 30px;
     margin-top: 15px;
     font-weight: bold;
     font-size: 19px;
@@ -168,6 +167,8 @@
     font-family: $headerFont;
   }
   .btn_block {
+    box-sizing: border-box;
+    padding: 0 25px;
     margin-top: 25px;
     button {
       margin-top: 20px;
@@ -187,10 +188,13 @@
   .moderator_task_wrapper {
     margin-top: 30px;
     .moderator_task_block {
-      margin-top: 20px;
+      margin: 20px 10px 0;
       background: #FEFEFE;
       border-radius: 8px;
+      transition: .3s all;
       &.active {
+          margin-left: 0;
+          margin-right: 0;
         .moderator_header_block {
           .more {
             display: none;
@@ -201,7 +205,7 @@
         }
       }
       .moderator_header_block {
-        padding: 20px 15px;
+        padding: 20px 30px;
         .caption {
           font-family: $headerFont;
           font-weight: bold;

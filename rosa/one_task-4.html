@@ -44,52 +44,57 @@
                     <div class="top_block">
                         <div class="number">#3456</div>
                         <div class="filter">
-                            <div class="item sport active">
+                            <div class="item disabled">
+                                <img src="img/filter-1.svg" alt="filter">
+                                <span>Семейные</span>
+                            </div>
+                            <div class="item disabled">
+                                <img src="img/filter-2.svg" alt="filter">
+                                <span>Креатив</span>
+                            </div>
+                            <div class="item disabled">
+                                <img src="img/filter-3.svg" alt="filter">
+                                <span>Тусовка</span>
+                            </div>
+                            <div class="item disabled">
                                 <img src="img/filter-4.svg" alt="filter">
                                 <span>Спорт</span>
                             </div>
                         </div>
                         <div class="year">
-                            <img src="img/year-black.svg" alt="year">
+                            <img src="img/year-grey-2.svg" alt="year">
                         </div>
                     </div>
+                </div>
+                <div class="content_block">
                     <div class="bottom_block">
                         <div class="reward_block">
                             <div class="item">
                                 <p>Монеты</p>
                                 <div class="reward">
-                                    <img src="img/reward-img-1.svg" alt="reward">
+                                    <img src="img/global/prizes/coin-disabled.svg" alt="reward">
+                                    <div class="number">100</div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <p>Призы</p>
+                                <div class="reward">
+                                    <img src="img/global/prizes/gift-disabled.svg" alt="reward">
+                                    <div class="number">100</div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <p>Моя роза</p>
+                                <div class="reward">
+                                    <img src="img/global/prizes/rosa-disabled.svg" alt="reward">
                                     <div class="number">100</div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="content_block">
                     <div class="task_name">
                         Задание выполнено
                         <i></i>
-                    </div>
-                    <div class="job_rating">
-                        <div class="caption">
-                            Понравилось задание?
-                        </div>
-                        <div class="btn_block active">
-                            <button class="small_violet_btn">Оценить</button>
-                        </div>
-                        <form class="form_block">
-                            <div class="rating_block">
-                                <div class="star active"></div>
-                                <div class="star"></div>
-                                <div class="star"></div>
-                                <div class="star"></div>
-                                <div class="star"></div>
-                            </div>
-                            <textarea></textarea>
-                            <div class="btn_submit_block">
-                                <button type="submit" class="small_violet_btn" disabled>Оценить</button>
-                            </div>
-                        </form>
                     </div>
                     <div class="time_block">
                         <img src="img/task-time.svg" alt="time">
@@ -166,14 +171,30 @@
                         </div>
                     </div>
                     <div class="bold_text">
-                        Призы за задание:
+                        Награды за задания:
                     </div>
-                    <div class="reward_block">
-                        <div class="item">
-                            <p>Монеты</p>
-                            <div class="reward">
-                                <img src="img/reward-img-1.svg" alt="reward">
-                                <div class="number">100</div>
+                    <div class="prize_block">
+                        <div class="reward_block">
+                            <div class="item">
+                                <p>Монеты</p>
+                                <div class="reward">
+                                    <img src="img/global/prizes/coin-disabled.svg" alt="reward">
+                                    <div class="number">100</div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <p>Призы</p>
+                                <div class="reward">
+                                    <img src="img/global/prizes/gift-disabled.svg" alt="reward">
+                                    <div class="number">100</div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <p>Моя роза</p>
+                                <div class="reward">
+                                    <img src="img/global/prizes/rosa-disabled.svg" alt="reward">
+                                    <div class="number">100</div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -243,19 +264,28 @@
                                     <div class="text">
                                         Внимательно посмотри на карту, это очень важно ты должен находиться в
                                         <span class="grey_text">
-                                        <img src="img/task-place-icon.svg" alt="icon">
-                                        100 метрах от точки назначения
-                                    </span>
+                                                <span>
+                                                    <img src="img/task-place-icon.svg" alt="icon">
+                                                    100 метрах от точки назначения
+                                                </span>
+                                                <i class="refresh"></i>
+                                            </span>
                                         время выполнения -
                                         <span class="grey_text">
-                                        <img src="img/task-time-icon.svg" alt="icon">
-                                        до 18:00
-                                    </span>
+                                                <span>
+                                                    <img src="img/task-time-icon.svg" alt="icon">
+                                                до 18:00
+                                                </span>
+
+                                            </span>
                                         ,
                                         <span class="grey_text">
-                                        <img src="img/task-sun-icon.svg" alt="icon">
-                                        погода должна быть солнечной
-                                    </span>
+                                                <span>
+                                                     <img src="img/task-sun-icon.svg" alt="icon">
+                                                    погода должна быть солнечной
+                                                </span>
+                                               <i class="refresh"></i>
+                                            </span>
                                     </div>
                                 </div>
                             </div>
@@ -265,19 +295,28 @@
                                     <div class="text">
                                         Внимательно посмотри на карту, это очень важно ты должен находиться в
                                         <span class="red_text">
-                                        <img src="img/task-place-icon.svg" alt="icon">
-                                        100 метрах от точки назначения
-                                    </span>
+                                                <span>
+                                                     <img src="img/task-place-icon.svg" alt="icon">
+                                                100 метрах от точки назначения
+                                                </span>
+                                               <i class="refresh"></i>
+                                            </span>
                                         время выполнения -
                                         <span class="red_text">
-                                        <img src="img/task-time-icon.svg" alt="icon">
-                                        до 18:00
-                                    </span>
+                                                <span>
+                                                     <img src="img/task-time-icon.svg" alt="icon">
+                                                до 18:00
+                                                </span>
+                                               <i class="refresh"></i>
+                                            </span>
                                         ,
                                         <span class="red_text">
-                                        <img src="img/task-sun-icon.svg" alt="icon">
-                                        погода должна быть солнечной
-                                    </span>
+                                                <span>
+                                                     <img src="img/task-sun-icon.svg" alt="icon">
+                                                погода должна быть солнечной
+                                                </span>
+                                               <i class="refresh"></i>
+                                            </span>
                                     </div>
                                 </div>
                             </div>
@@ -287,19 +326,28 @@
                                     <div class="text">
                                         Внимательно посмотри на карту, это очень важно ты должен находиться в
                                         <span class="green_text">
-                                        <img src="img/task-place-icon.svg" alt="icon">
-                                        100 метрах от точки назначения
-                                    </span>
+                                                <span>
+                                                     <img src="img/task-place-icon.svg" alt="icon">
+                                                100 метрах от точки назначения
+                                                </span>
+                                               <i class="refresh"></i>
+                                            </span>
                                         время выполнения -
                                         <span class="green_text">
-                                        <img src="img/task-time-icon.svg" alt="icon">
-                                        до 18:00
-                                    </span>
+                                                <span>
+                                                     <img src="img/task-time-icon.svg" alt="icon">
+                                                до 18:00
+                                                </span>
+                                               <i class="refresh"></i>
+                                            </span>
                                         ,
                                         <span class="green_text">
-                                        <img src="img/task-sun-icon.svg" alt="icon">
-                                        погода должна быть солнечной
-                                    </span>
+                                                <span>
+                                                     <img src="img/task-sun-icon.svg" alt="icon">
+                                                погода должна быть солнечной
+                                                </span>
+                                                <i class="refresh"></i>
+                                            </span>
                                     </div>
                                 </div>
                             </div>
@@ -392,24 +440,34 @@
                     <div class="btn_block">
                         <button class="blue_btn">Готово!</button>
                     </div>
-                    <div class="open_btn active">
+                    <div class="open_btn">
                         <a href="#">Есть проблема?</a>
                         <i></i>
                     </div>
-                    <form class="send_message active">
-                        <div class="title_block">
-                            <div class="title active">Задание не засчитывается</div>
-                            <div class="title">Ответ не принят</div>
-                            <div class="title">Модератор не на месте</div>
+                    <div class="support__block">
+                        <div class="open_btn active">
+                            <a href="#">Есть проблема?</a>
+                            <i></i>
                         </div>
-                        <div class="text">
-                            Оставьте комментарий описывающий вашу проблему
+                        <div class="support__blockMessage">
+                            Если у вас возникли проблемы позвоните
                         </div>
-                        <textarea placeholder="Введите комментарий"></textarea>
-                        <div class="btn_block">
-                            <button type="submit" class="violet_btn">Отправить ответ</button>
+                        <div class="support__blockPhone">
+                            <span class="support__blockPhoneNumber">+7 921 7564783</span>
+                            <img class="support__blockPhoneImage" src="img/global/phone.svg" alt="phone">
                         </div>
-                    </form>
+                        <div class="support__blockMessage">
+                            Или напишите
+                        </div>
+                        <div class="support__blockLink">
+                            <img class="support__blockLinkImage" src="img/global/whatsapp.svg" alt="whatsapp">
+                            <a class="support__blockLinkText" href="#">https://chat.whatsapp.com/FtEffc8HNRq6SjRcVMRKHw</a>
+                        </div>
+                        <div class="support__blockLink">
+                            <img class="support__blockLinkImage" src="img/global/telegram.svg" alt="telegram">
+                            <a class="support__blockLinkText" href="#">https://chat.whatsapp.com/FtEffc8HNRq6SjRcVMRKHw</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

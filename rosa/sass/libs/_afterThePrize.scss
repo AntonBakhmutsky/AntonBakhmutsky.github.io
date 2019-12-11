@@ -5,6 +5,7 @@
     box-sizing: border-box;
     padding: 25px 0 30px;
     &__header {
+        text-align: center;
         font: bold 19px/25px $headerFont;
         margin:0 32px 10px;
         &Span {

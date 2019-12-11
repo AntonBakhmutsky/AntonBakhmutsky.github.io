@@ -36,11 +36,36 @@
             margin-left: -30px;
             margin-right: -30px;
         }
+        &_rosa {
+            padding: 20px 0;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            .voucher__rosaStatus {
+                margin-left: 30px;
+            }
+            .voucher__price {
+                margin-left: 30px;
+            }
+            .voucher__header {
+                margin: 25px 30px;
+            }
+            .voucher__text {
+                margin: 0 30px 15px;
+            }
+            .voucher__button {
+                margin: 40px 0;
+                display: flex;
+                justify-content: center;
+                &Item {
+                    @include btnBlue;
+                }
+            }
+        }
     }
     &__price {
         color: #68648C;
         .shop__coinsCount {
-            font: bold 20px/24px $textFont;
+            font: bold 20px/24px $headerFont;
             color: #131929  ;
         }
     }
@@ -63,7 +88,7 @@
         width: 100%;
         height: 68px;
         background: #EAEBEF;
-        font: bold 30px/68px $textFont;
+        font: bold 30px/68px $headerFont;
         text-align: center;
         border-radius: 5px;
         margin-bottom: 20px;
@@ -75,9 +100,11 @@
             padding: 0 0 0 30px;
             font-weight: bold;
             &Item {
+                font-family: $headerFont;
                 padding: 0 0 0 10px;
                 position: relative;
                 margin-bottom: 20px;
+                font-family: $headerFont;
                 &Span {
                     display: block;
                     margin-top: 10px;
@@ -92,6 +119,53 @@
                     left: -28px;
                     top: 5px;
                 }
+            }
+        }
+        &Point {
+            display: flex;
+            flex-wrap: wrap;
+            box-sizing: border-box;
+            padding: 20px 30px;
+            border-bottom: 2px solid #F0F0F0;
+            &Link {
+                &Inside {
+                    margin-top: 20px;
+                    height: 56px;
+                    box-sizing: border-box;
+                    padding: 0 10px;
+                    background: #EAEBEF;
+                    border-radius: 8px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    &Image {
+                        width: 20px;
+                        height: 20px;
+                        margin-right: 10px;
+                    }
+                    &Text {
+                        font: bold 16px/56px $headerFont;
+                        color: #131929;
+                    }
+                }
+            }
+            &:last-child {
+                border: none;
+            }
+            &Number {
+                flex-basis: 5%;
+                font: bold 25px/30px $headerFont;
+                color: $lightColor;
+                margin-right: 20px;
+            }
+            &Text {
+                box-sizing: border-box;
+                padding-top: 4px;
+                font-weight: bold;
+                flex-basis: 86%;
+            }
+            &Link {
+                width: 100%;
             }
         }
     }
@@ -125,6 +199,7 @@
     }
     &__status {
         @include blockHeader;
+        font-family: $textFont;
         display: none;
     }
     /*--------------modifiers---------------------*/
@@ -228,6 +303,13 @@
         }
         .voucher__map {
             margin-bottom: 0;
+        }
+    }
+    &__rosaStatus {
+        font-weight: bold;
+        margin-bottom: 10px;
+        &_waiting {
+            color: #D9016F;
         }
     }
 }

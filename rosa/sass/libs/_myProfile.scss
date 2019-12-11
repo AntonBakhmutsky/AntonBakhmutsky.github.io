@@ -23,13 +23,14 @@
         box-sizing: border-box;
         text-decoration: none;
         color: #68648c;
-        font: bold 12px/33px $textFont;
+        font: bold 12px/33px $headerFont;
         text-align: center;
         text-transform: uppercase;
         display: block;
         height: 33px;
-        &:first-child {
-          margin-right: 30px;
+        margin-right: 30px;
+        &:last-child {
+          margin-right: 0;
         }
         &_active {
           color: #000;
@@ -39,11 +40,11 @@
       }
     }
     &Desc {
+      text-align: center;
       align-self: center;
-      padding: 0 0 0 30px;
       width: 320px;
       height: 24px;
-      font: bold 20px/24px $textFont;
+      font: bold 20px/24px $headerFont;
     }
     &Face {
       margin-top: 30px;
@@ -92,10 +93,24 @@
     justify-content: center;
     align-items: center;
     &Item {
+      position: relative;
       margin-bottom: 25px;
       display: flex;
       flex-direction: column;
+      align-items: center;
+      // &::after {
+      //   content: "";
+      //   position: absolute;
+      //   border-top-right-radius: 3px;
+      //   border-bottom-right-radius: 3px;
+      //   width: 17px;
+      //   height: 46px;
+      //   top: 29px;
+      //   right: 31px;
+      //   background: linear-gradient(270deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+      // }
       #datepicker {
+        font-family: $headerFont;
         background-image: url(../img/calendarDark.svg);
         background-repeat: no-repeat;
         background-position: 95% center;
@@ -105,11 +120,13 @@
         }
       }
       &Input {
+        display: block;
+        position: relative;
         &_correct {
           box-sizing: border-box;
-          background: #c8fff4;
-          border-color: #27caaa;
-          color: #27caaa;
+          background: #EBFFD7;
+          border-color: #66C902;
+          color: #66C902;
           transition: all .3s ease-out;
           &Message {
             margin-top: 3px;
@@ -117,14 +134,14 @@
             padding-left: 30px;
             align-self: center;
             font: 12px/20px $textFont;
-            color: #27caaa;
+            color: #66C902;
           }
         }
         &_wrong {
           box-sizing: border-box;
-          background: #ffd3e5;
-          border-color: #dc4497;
-          color: #dc4497;
+          background: #FFE6EC;
+          border-color: #D20C3C;
+          color: #D20C3C;
           transition: all .3s ease-out;
           &Message {
             margin-top: 3px;
@@ -132,7 +149,7 @@
             padding-left: 30px;
             align-self: center;
             font: 12px/20px $textFont;
-            color: #dc4497;
+            color: #D20C3C;
           }
         }
         align-self: center;
@@ -142,7 +159,7 @@
         border-radius: 3px;
         box-sizing: border-box;
         outline: none;
-        padding-left: 13px;
+        padding: 0 0 0 13px;
         font: 16px/19px $textFont;
         &:focus {
           border-color: $lightColor;
@@ -243,14 +260,16 @@
     &Link {
       display: block;
       background: $lightColor;
-      border-radius: 3px;
+      border-radius: 8px;
       width: 124px;
       height: 30px;
-      font: bold 16px/30px $textFont;
+      font: bold 16px/25px $textFont;
+      -webkit-appearance: none;
       color: #fff;
       align-self: center;
       border: none;
       outline: none;
+      margin-bottom: 20px;
       &:disabled {
         background: #9d9fb5;
       }
@@ -318,7 +337,7 @@
           }
         }
         &_secondStage {
-          background: #844f9c;
+          background: #D9016F;
           transition: all .3s ease-out;
           &::after {
             position: absolute;
@@ -328,10 +347,10 @@
             width: 20px;
             height: 20px;
             border-radius: 50%;
-            background: darken(rgb(135, 5, 195), 10%);
+            background-color:rgb(90, 6, 129);
+            opacity: 1;
             transition: left .3s ease-out;
             box-shadow: 0 1px 5px rgba(160, 155, 155, .58);
-            opacity: 1;
           }
         }
         &_thirdStage {
@@ -452,6 +471,7 @@
       border: none;
       outline: none;
       border-radius: 8px;
+      -webkit-appearance: none;
       color: #fff;
       font: bold 20px/24px $textFont;
     }
@@ -466,12 +486,13 @@
   display: none;
   flex-direction: column;
   &__header {
+    text-align: center;
     align-self: center;
     box-sizing: border-box;
     width: 320px;
     padding: 0 30px;
     margin: 20px 0;
-    font: bold 20px/24px $textFont;
+    font: bold 20px/24px $headerFont;
   }
   &__form {
     display: flex;
@@ -544,7 +565,7 @@
       margin-bottom: 43px;
       width: 260px;
       height: 48px;
-      border: 2px solid #dc4497;
+      border: 2px solid #D20C3C;
       border-radius: 8px;
       display: flex;
       justify-content: center;
@@ -555,7 +576,7 @@
         font: bold 20px/48px $textFont;
         text-decoration: none;
         text-align: center;
-        color: #dc4497;
+        color: #D20C3C;
       }
       &Image {
         display: block;
@@ -584,4 +605,5 @@
 .myProfile__formItemSelectItem_last {
   color: $lightColor;
   text-decoration: underline;
+  margin-bottom: 10px;
 }

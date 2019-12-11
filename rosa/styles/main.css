@@ -67,6 +67,7 @@ blockquote {
   line-height: 17px;
   color: #131929;
   position: relative;
+  margin: 15px 0;
 }
 
 blockquote:before {
@@ -159,6 +160,7 @@ blockquote:after {
   margin: 30px 0;
 }
 .trouble__formSubmitBtn {
+  align-self: center;
   width: 260px;
   height: 48px;
   border: none;
@@ -167,6 +169,35 @@ blockquote:after {
   background: #844F9C;
   font: bold 20px/24px "IBM Plex Mono", monospace;
   color: #FEFEFE;
+}
+
+/*--------- mask for inputs ----------*/
+.input__wrap {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.input__wrap::after {
+  content: "";
+  position: absolute;
+  width: 17px;
+  height: 46px;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+  top: 1px;
+  right: 1px;
+}
+.input__wrap_white::after {
+  content: "";
+  background: linear-gradient(270deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+}
+.input__wrap_green::after {
+  content: "";
+  background: linear-gradient(270deg, #EBFFD7 0%, rgba(235, 255, 215, 0) 100%);
+}
+.input__wrap_red::after {
+  content: "";
+  background: linear-gradient(270deg, #FFE5EC 46.86%, rgba(255, 229, 236, 0) 100%);
 }
 
 /*------------------------------------------------------QR------------------------------------------------------*/
@@ -201,6 +232,7 @@ blockquote:after {
   margin-top: 33px;
 }
 .modalQr__buttonBtn {
+  align-self: center;
   width: 260px;
   height: 48px;
   border: none;
@@ -209,6 +241,9 @@ blockquote:after {
   background: #009BE2;
   font: bold 20px/24px "IBM Plex Mono", monospace;
   color: #FEFEFE;
+}
+.modalQr__buttonBtn:disabled {
+  background: #9D9FB5;
 }
 .modalQr_active {
   top: 0 !important;
@@ -315,7 +350,7 @@ blockquote:after {
   padding: 0 20px;
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   background: #f9f9f9;
   z-index: 1000;
 }
@@ -432,14 +467,15 @@ blockquote:after {
   box-sizing: border-box;
   text-decoration: none;
   color: #68648c;
-  font: bold 12px/33px "IBM Plex Mono", monospace;
+  font: bold 12px/33px "Roboto Slab", serif;
   text-align: center;
   text-transform: uppercase;
   display: block;
   height: 33px;
-}
-.myProfile__headerButtonsItem:first-child {
   margin-right: 30px;
+}
+.myProfile__headerButtonsItem:last-child {
+  margin-right: 0;
 }
 .myProfile__headerButtonsItem_active {
   color: #000;
@@ -447,11 +483,11 @@ blockquote:after {
   border-bottom: 3px solid #009BE2;
 }
 .myProfile__headerDesc {
+  text-align: center;
   align-self: center;
-  padding: 0 0 0 30px;
   width: 320px;
   height: 24px;
-  font: bold 20px/24px "IBM Plex Mono", monospace;
+  font: bold 20px/24px "Roboto Slab", serif;
 }
 .myProfile__headerFace {
   margin-top: 30px;
@@ -499,11 +535,14 @@ blockquote:after {
   align-items: center;
 }
 .myProfile__formItem {
+  position: relative;
   margin-bottom: 25px;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 .myProfile__formItem #datepicker {
+  font-family: "Roboto Slab", serif;
   background-image: url(../img/calendarDark.svg);
   background-repeat: no-repeat;
   background-position: 95% center;
@@ -513,6 +552,8 @@ blockquote:after {
   transition: 0.2s;
 }
 .myProfile__formItemInput {
+  display: block;
+  position: relative;
   align-self: center;
   width: 260px;
   height: 48px;
@@ -520,14 +561,14 @@ blockquote:after {
   border-radius: 3px;
   box-sizing: border-box;
   outline: none;
-  padding-left: 13px;
+  padding: 0 0 0 13px;
   font: 16px/19px "IBM Plex Mono", monospace;
 }
 .myProfile__formItemInput_correct {
   box-sizing: border-box;
-  background: #c8fff4;
-  border-color: #27caaa;
-  color: #27caaa;
+  background: #EBFFD7;
+  border-color: #66C902;
+  color: #66C902;
   transition: all 0.3s ease-out;
 }
 .myProfile__formItemInput_correctMessage {
@@ -536,13 +577,13 @@ blockquote:after {
   padding-left: 30px;
   align-self: center;
   font: 12px/20px "IBM Plex Mono", monospace;
-  color: #27caaa;
+  color: #66C902;
 }
 .myProfile__formItemInput_wrong {
   box-sizing: border-box;
-  background: #ffd3e5;
-  border-color: #dc4497;
-  color: #dc4497;
+  background: #FFE6EC;
+  border-color: #D20C3C;
+  color: #D20C3C;
   transition: all 0.3s ease-out;
 }
 .myProfile__formItemInput_wrongMessage {
@@ -551,7 +592,7 @@ blockquote:after {
   padding-left: 30px;
   align-self: center;
   font: 12px/20px "IBM Plex Mono", monospace;
-  color: #dc4497;
+  color: #D20C3C;
 }
 .myProfile__formItemInput:focus {
   border-color: #009BE2;
@@ -647,14 +688,16 @@ blockquote:after {
 .myProfile__aboutLink {
   display: block;
   background: #009BE2;
-  border-radius: 3px;
+  border-radius: 8px;
   width: 124px;
   height: 30px;
-  font: bold 16px/30px "IBM Plex Mono", monospace;
+  font: bold 16px/25px "IBM Plex Mono", monospace;
+  -webkit-appearance: none;
   color: #fff;
   align-self: center;
   border: none;
   outline: none;
+  margin-bottom: 20px;
 }
 .myProfile__aboutLink:disabled {
   background: #9d9fb5;
@@ -725,7 +768,7 @@ blockquote:after {
   transition: left 0.3s ease-out;
 }
 .myProfile__aboutSocialSwitch_secondStage {
-  background: #844f9c;
+  background: #D9016F;
   transition: all 0.3s ease-out;
 }
 .myProfile__aboutSocialSwitch_secondStage::after {
@@ -736,10 +779,10 @@ blockquote:after {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background: #650491;
+  background-color: #5a0681;
+  opacity: 1;
   transition: left 0.3s ease-out;
   box-shadow: 0 1px 5px rgba(160, 155, 155, 0.58);
-  opacity: 1;
 }
 .myProfile__aboutSocialSwitch_thirdStage {
   background: #009BE2;
@@ -856,6 +899,7 @@ blockquote:after {
   border: none;
   outline: none;
   border-radius: 8px;
+  -webkit-appearance: none;
   color: #fff;
   font: bold 20px/24px "IBM Plex Mono", monospace;
 }
@@ -870,12 +914,13 @@ blockquote:after {
   display: flex;
 }
 .settings__header {
+  text-align: center;
   align-self: center;
   box-sizing: border-box;
   width: 320px;
   padding: 0 30px;
   margin: 20px 0;
-  font: bold 20px/24px "IBM Plex Mono", monospace;
+  font: bold 20px/24px "Roboto Slab", serif;
 }
 .settings__form {
   display: flex;
@@ -949,7 +994,7 @@ blockquote:after {
   margin-bottom: 43px;
   width: 260px;
   height: 48px;
-  border: 2px solid #dc4497;
+  border: 2px solid #D20C3C;
   border-radius: 8px;
   display: flex;
   justify-content: center;
@@ -961,7 +1006,7 @@ blockquote:after {
   font: bold 20px/48px "IBM Plex Mono", monospace;
   text-decoration: none;
   text-align: center;
-  color: #dc4497;
+  color: #D20C3C;
 }
 .settings__formExitImage {
   display: block;
@@ -992,6 +1037,7 @@ blockquote:after {
 .myProfile__formItemSelectItem_last {
   color: #009BE2;
   text-decoration: underline;
+  margin-bottom: 10px;
 }
 
 /*---------------------------------------------PARTNERS--FAQ--SUPPORT-------------------------------------------*/
@@ -1001,7 +1047,7 @@ blockquote:after {
   padding-top: 30px;
 }
 .tab_shop .tab__container {
-  padding: 0 50px;
+  padding: 0 30px;
 }
 .tab__container {
   min-width: 320px;
@@ -1016,7 +1062,7 @@ blockquote:after {
 .tab__btn {
   display: block;
   color: #68648C;
-  font: bold 12px/14px "IBM Plex Mono", monospace;
+  font: bold 12px/14px "Roboto Slab", serif;
   text-transform: uppercase;
   margin-right: 30px;
 }
@@ -1041,7 +1087,7 @@ blockquote:after {
 }
 .tab__btn_active_gradientTheme {
   color: #FEFEFE;
-  border-bottom: 3px solid #FEFEFE;
+  border-bottom: 3px solid #DA006E;
 }
 
 .partners {
@@ -1067,6 +1113,7 @@ blockquote:after {
 .partners__header {
   font: bold 14px/16.5px "IBM Plex Mono", monospace;
   text-align: center;
+  font-family: "Roboto Slab", serif;
 }
 .partners__item {
   margin: 20px 0;
@@ -1093,7 +1140,7 @@ blockquote:after {
   background-color: #fff;
 }
 .partners__itemHeader {
-  font: bold 16px/19px "IBM Plex Mono", monospace;
+  font: bold 16px/19px "Roboto Slab", serif;
   color: #131929;
 }
 .partners__itemDesc {
@@ -1107,9 +1154,9 @@ blockquote:after {
   width: 58px;
   height: 23px;
   border-radius: 8px;
-  font: 500 12px/23px "IBM Plex Mono", monospace;
+  font: 500 12px/23px "Roboto Slab", serif;
   text-align: center;
-  background: #DC4497;
+  background: linear-gradient(180deg, #DA006E 0%, #82509D 100%);
 }
 .partners__itemMore {
   margin-top: 13px;
@@ -1238,228 +1285,14 @@ blockquote:after {
 }
 
 .support {
+  height: 80%;
   display: none;
   flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
 .support_active {
   display: flex;
-}
-.support .createTicket {
-  width: 100%;
-}
-.support .createTicket__container {
-  min-width: 320px;
-  margin: 0 auto;
-  display: flex;
-  box-sizing: border-box;
-  align-content: center;
-  flex-direction: column;
-  padding: 0 30px 0 27px;
-}
-.support .createTicket__btn {
-  align-self: center;
-  display: block;
-  width: 260px;
-  height: 48px;
-  background: #844F9C;
-  border-radius: 8px;
-  font: bold 20px/48px "IBM Plex Mono", monospace;
-  color: #fff;
-  text-align: center;
-}
-.support .createTicket__btn_disabled {
-  display: none;
-}
-.support .createTicket__form {
-  width: 100%;
-  margin-top: 25px;
-  display: flex;
-  flex-direction: column;
-}
-.support .createTicket__form_disabled {
-  display: none;
-}
-.support .createTicket__formHeader {
-  margin-top: 25px;
-  font: bold 20px/24px "Roboto Slab", serif;
-  box-sizing: border-box;
-  text-align: center;
-}
-.support .createTicket__formPopular {
-  margin-top: 25px;
-  display: flex;
-  flex-flow: row wrap;
-}
-.support .createTicket__formPopularItem {
-  margin: 0 5px 10px 0;
-  border-radius: 8px;
-  height: 23px;
-  padding: 0 4px;
-  box-sizing: border-box;
-  background: #68648C;
-  font: 12px/23px "IBM Plex Mono", monospace;
-}
-.support .createTicket__formPopularItem_active {
-  background: #844F9C;
-}
-.support .createTicket__formInput {
-  display: flex;
-  flex-direction: column;
-}
-.support .createTicket__formInputLabel {
-  margin-top: 15px;
-  font: 14px/17px "IBM Plex Mono", monospace;
-}
-.support .createTicket__formInputTextArea {
-  margin-top: 15px;
-  width: 260px;
-  height: 48px;
-  padding-left: 11px;
-  border: 1px solid #68648C;
-  box-sizing: border-box;
-  border-radius: 3px;
-  font: 16px/38px "IBM Plex Mono", monospace;
-  color: #131929;
-}
-.support .createTicket__formSubmit {
-  margin-top: 30px;
-  display: flex;
-  justify-content: space-around;
-}
-.support .createTicket__formSubmitItem {
-  width: 123px;
-  height: 30px;
-  font: bold 16px/30px "IBM Plex Mono", monospace;
-  text-align: center;
-  background: #844F9C;
-  border: none;
-  outline: none;
-  border-radius: 3px;
-}
-.support .createTicket__formSubmitItem:nth-child(2) {
-  background: #68648C;
-}
-.support .ticketArea {
-  margin-top: 20px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-}
-.support .ticketArea__container {
-  min-width: 320px;
-  margin: 0 auto;
-  display: flex;
-  box-sizing: border-box;
-  padding: 0 10px;
-  flex-direction: column;
-}
-.support .ticketArea__item {
-  margin-top: 10px;
-  background: #fff;
-  border-radius: 5px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  color: #000;
-}
-.support .ticketArea__item:last-child {
-  margin-bottom: 10px;
-}
-.support .ticketArea__top {
-  box-sizing: border-box;
-  padding: 10px 15px 0;
-  height: 45px;
-  display: flex;
-  justify-content: space-between;
-}
-.support .ticketArea__topNumber {
-  padding: 0 10px;
-  box-sizing: border-box;
-  height: 23px;
-  border-radius: 8px;
-  background: #68648C;
-  color: #FEFEFE;
-  font: bold 16px/23px "IBM Plex Mono", monospace;
-  text-align: center;
-}
-.support .ticketArea__topStatus {
-  height: 23px;
-  box-sizing: border-box;
-  padding: 0 10px;
-  font: bold 12px/23px "IBM Plex Mono", monospace;
-  border-radius: 8px;
-  color: #FEFEFE;
-}
-.support .ticketArea__middle {
-  box-sizing: border-box;
-  padding: 15px;
-  color: #131929;
-  font: bold 20px/24px "Roboto Slab", serif;
-  box-sizing: border-box;
-  border-top: 1px solid #C4C4C4;
-}
-.support .ticketArea__bottom {
-  box-sizing: border-box;
-  padding: 15px;
-  border-top: 1px solid #C4C4C4;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: #68648C;
-}
-.support .ticketArea__bottomLeft {
-  font: bold 12px/14px "IBM Plex Mono", monospace;
-  display: flex;
-  align-items: center;
-}
-.support .ticketArea__bottomLeftImage {
-  margin-right: 5px;
-  display: block;
-  border-radius: 50%;
-}
-.support .ticketArea__bottomLeftText {
-  display: block;
-}
-.support .ticketArea__bottomRight {
-  display: flex;
-  align-items: center;
-}
-.support .ticketArea__bottomRightTask {
-  margin-right: 5px;
-  display: block;
-  font: bold 12px/14px "IBM Plex Mono", monospace;
-}
-.support .ticketArea__bottomRightNumber {
-  display: block;
-  padding: 0 10px;
-  box-sizing: border-box;
-  height: 23px;
-  border-radius: 8px;
-  background: #009BE2;
-  color: #FEFEFE;
-  font: bold 16px/23px "IBM Plex Mono", monospace;
-  text-align: center;
-}
-.support .ticketArea__item_created .ticketArea__topStatus {
-  background: #27CAAA;
-}
-.support .ticketArea__item_pending .ticketArea__topStatus {
-  background: #844F9C;
-}
-.support .ticketArea__item_closed .ticketArea__topNumber {
-  background: #9D9FB5;
-}
-.support .ticketArea__item_closed .ticketArea__topStatus {
-  background: #9D9FB5;
-}
-.support .ticketArea__item_closed .ticketArea__middle {
-  color: #9D9FB5;
-}
-.support .ticketArea__item_closed .ticketArea__bottom {
-  color: #9D9FB5;
-}
-.support .ticketArea__item_closed .ticketArea__bottomLeftImage {
-  opacity: 0.6;
 }
 
 .partnerInside {
@@ -1533,9 +1366,11 @@ blockquote:after {
 }
 .partnerInside__aboutContactsDetailsItem:first-child {
   background: url(../img/partner_inside/phone.svg) no-repeat left;
+  font-family: "Roboto Slab", serif;
 }
 .partnerInside__aboutContactsDetailsItem:nth-child(2) {
   background: url(../img/partner_inside/mail.svg) no-repeat left;
+  font-family: "Roboto Slab", serif;
 }
 .partnerInside__aboutSocial {
   display: flex;
@@ -1560,12 +1395,14 @@ blockquote:after {
 }
 .partnerInside__aboutSiteLink {
   color: #131929;
+  font-family: "Roboto Slab", serif;
 }
 .partnerInside__aboutMap {
   margin-top: 25px;
   align-self: center;
 }
 .partnerInside__aboutMapAdress {
+  font-family: "Roboto Slab", serif;
   box-sizing: border-box;
   padding-left: 30px;
   font-weight: bold;
@@ -1846,17 +1683,17 @@ blockquote:after {
 .shop__coins, .myPrizes__coins {
   display: flex;
   justify-content: center;
-  font: 20px/24px "IBM Plex Mono", monospace;
+  font: 20px/24px "Roboto Slab", serif;
 }
-.shop__coinsCount, .myPrizes__coinsCount {
+.shop__coinsCount, .shop__goodsItemDescPoints, .myPrizes__goodsItemDescPoints, .myPrizes__coinsCount {
   position: relative;
   margin-left: 15px;
   display: inline-block;
   font-weight: bold;
 }
-.shop__coinsCount::after, .myPrizes__coinsCount::after {
+.shop__coinsCount::after, .shop__goodsItemDescPoints::after, .myPrizes__goodsItemDescPoints::after, .myPrizes__coinsCount::after {
   position: absolute;
-  top: 7px;
+  top: 6px;
   right: -18px;
   content: "";
   width: 13px;
@@ -1864,7 +1701,7 @@ blockquote:after {
   background: url(../img/global/prizes/coin.svg) no-repeat center;
   background-size: cover;
 }
-.shop > .shop__coins .shop__coinsCount::after, .shop > .myPrizes__coins .shop__coinsCount::after, .myPrizes > .shop__coins .shop__coinsCount::after, .myPrizes > .myPrizes__coins .shop__coinsCount::after {
+.shop > .shop__coins .shop__coinsCount::after, .shop > .shop__coins .shop__goodsItemDescPoints::after, .shop > .shop__coins .myPrizes__goodsItemDescPoints::after, .shop > .myPrizes__coins .shop__coinsCount::after, .shop > .myPrizes__coins .shop__goodsItemDescPoints::after, .shop > .myPrizes__coins .myPrizes__goodsItemDescPoints::after, .myPrizes > .shop__coins .shop__coinsCount::after, .myPrizes > .shop__coins .shop__goodsItemDescPoints::after, .myPrizes > .shop__coins .myPrizes__goodsItemDescPoints::after, .myPrizes > .myPrizes__coins .shop__coinsCount::after, .myPrizes > .myPrizes__coins .shop__goodsItemDescPoints::after, .myPrizes > .myPrizes__coins .myPrizes__goodsItemDescPoints::after {
   position: absolute;
   top: 3px;
   right: -22px;
@@ -1945,7 +1782,7 @@ blockquote:after {
 }
 .shop__goodsItemDescCount, .myPrizes__goodsItemDescCount {
   margin-top: 10px;
-  font: bold 18px/22px "IBM Plex Mono", monospace;
+  font: bold 18px/22px "Roboto Slab", serif;
   color: #160840;
 }
 .shop__goodsItemDescCountSpan, .myPrizes__goodsItemDescCountSpan {
@@ -1965,11 +1802,27 @@ blockquote:after {
 .shop__goodsItemDescPromo, .myPrizes__goodsItemDescPromo {
   width: 170px;
   font-weight: bold;
+  font-family: "Roboto Slab", serif;
 }
-.shop__goodsItemDesc .shop__coinsCount, .myPrizes__goodsItemDesc .shop__coinsCount {
+.shop__goodsItemDesc .shop__coinsCount, .shop__goodsItemDesc .shop__goodsItemDescPoints, .shop__goodsItemDesc .myPrizes__goodsItemDescPoints, .myPrizes__goodsItemDesc .shop__coinsCount, .myPrizes__goodsItemDesc .shop__goodsItemDescPoints, .myPrizes__goodsItemDesc .myPrizes__goodsItemDescPoints {
   margin: 5px 0 0 0;
-  font: bold 20px/24px "IBM Plex Mono", monospace;
+  font: bold 20px/24px "Roboto Slab", serif;
   align-self: flex-start;
+}
+.shop__goodsItemDescMyRose, .myPrizes__goodsItemDescMyRose {
+  font-family: "Roboto Slab", serif;
+  font-weight: bold;
+}
+.shop__goodsItemDescStatus, .myPrizes__goodsItemDescStatus {
+  font: bold 8px/20px "IBM Plex Mono", monospace;
+}
+.shop__goodsItemDescPoints:after, .myPrizes__goodsItemDescPoints:after {
+  content: "";
+  top: 6px;
+  width: 14px;
+  height: 14px;
+  background: url(../img/global/prizes/rosa.svg) no-repeat center;
+  background-size: cover;
 }
 .shop__goodsItem_low .shop__goodsItemImage::before, .shop__goodsItem_issued .shop__goodsItemImage::before, .shop__goodsItem_lowPrize .shop__goodsItemImage::before, .shop__goodsItem_endedPrize .shop__goodsItemImage::before, .shop__goodsItem_changePrize .shop__goodsItemImage::before, .myPrizes__goodsItem_low .shop__goodsItemImage::before, .myPrizes__goodsItem_issued .shop__goodsItemImage::before, .myPrizes__goodsItem_lowPrize .shop__goodsItemImage::before, .myPrizes__goodsItem_endedPrize .shop__goodsItemImage::before, .myPrizes__goodsItem_changePrize .shop__goodsItemImage::before {
   content: "";
@@ -2031,10 +1884,10 @@ blockquote:after {
 .shop__goodsItem_ended .shop__goodsItemDescPromo, .shop__goodsItem_used .shop__goodsItemDescPromo, .shop__goodsItem_closed .shop__goodsItemDescPromo, .shop__goodsItem_issuedPrize .shop__goodsItemDescPromo, .myPrizes__goodsItem_ended .shop__goodsItemDescPromo, .myPrizes__goodsItem_used .shop__goodsItemDescPromo, .myPrizes__goodsItem_closed .shop__goodsItemDescPromo, .myPrizes__goodsItem_issuedPrize .shop__goodsItemDescPromo {
   color: #9D9FB5;
 }
-.shop__goodsItem_ended .shop__coinsCount, .shop__goodsItem_used .shop__coinsCount, .shop__goodsItem_closed .shop__coinsCount, .shop__goodsItem_issuedPrize .shop__coinsCount, .myPrizes__goodsItem_ended .shop__coinsCount, .myPrizes__goodsItem_used .shop__coinsCount, .myPrizes__goodsItem_closed .shop__coinsCount, .myPrizes__goodsItem_issuedPrize .shop__coinsCount {
+.shop__goodsItem_ended .shop__coinsCount, .shop__goodsItem_ended .shop__goodsItemDescPoints, .shop__goodsItem_ended .myPrizes__goodsItemDescPoints, .shop__goodsItem_used .shop__coinsCount, .shop__goodsItem_used .shop__goodsItemDescPoints, .shop__goodsItem_used .myPrizes__goodsItemDescPoints, .shop__goodsItem_closed .shop__coinsCount, .shop__goodsItem_closed .shop__goodsItemDescPoints, .shop__goodsItem_closed .myPrizes__goodsItemDescPoints, .shop__goodsItem_issuedPrize .shop__coinsCount, .shop__goodsItem_issuedPrize .shop__goodsItemDescPoints, .shop__goodsItem_issuedPrize .myPrizes__goodsItemDescPoints, .myPrizes__goodsItem_ended .shop__coinsCount, .myPrizes__goodsItem_ended .shop__goodsItemDescPoints, .myPrizes__goodsItem_ended .myPrizes__goodsItemDescPoints, .myPrizes__goodsItem_used .shop__coinsCount, .myPrizes__goodsItem_used .shop__goodsItemDescPoints, .myPrizes__goodsItem_used .myPrizes__goodsItemDescPoints, .myPrizes__goodsItem_closed .shop__coinsCount, .myPrizes__goodsItem_closed .shop__goodsItemDescPoints, .myPrizes__goodsItem_closed .myPrizes__goodsItemDescPoints, .myPrizes__goodsItem_issuedPrize .shop__coinsCount, .myPrizes__goodsItem_issuedPrize .shop__goodsItemDescPoints, .myPrizes__goodsItem_issuedPrize .myPrizes__goodsItemDescPoints {
   color: #9D9FB5;
 }
-.shop__goodsItem_ended .shop__coinsCount::after, .shop__goodsItem_used .shop__coinsCount::after, .shop__goodsItem_closed .shop__coinsCount::after, .shop__goodsItem_issuedPrize .shop__coinsCount::after, .myPrizes__goodsItem_ended .shop__coinsCount::after, .myPrizes__goodsItem_used .shop__coinsCount::after, .myPrizes__goodsItem_closed .shop__coinsCount::after, .myPrizes__goodsItem_issuedPrize .shop__coinsCount::after {
+.shop__goodsItem_ended .shop__coinsCount::after, .shop__goodsItem_ended .shop__goodsItemDescPoints::after, .shop__goodsItem_ended .myPrizes__goodsItemDescPoints::after, .shop__goodsItem_used .shop__coinsCount::after, .shop__goodsItem_used .shop__goodsItemDescPoints::after, .shop__goodsItem_used .myPrizes__goodsItemDescPoints::after, .shop__goodsItem_closed .shop__coinsCount::after, .shop__goodsItem_closed .shop__goodsItemDescPoints::after, .shop__goodsItem_closed .myPrizes__goodsItemDescPoints::after, .shop__goodsItem_issuedPrize .shop__coinsCount::after, .shop__goodsItem_issuedPrize .shop__goodsItemDescPoints::after, .shop__goodsItem_issuedPrize .myPrizes__goodsItemDescPoints::after, .myPrizes__goodsItem_ended .shop__coinsCount::after, .myPrizes__goodsItem_ended .shop__goodsItemDescPoints::after, .myPrizes__goodsItem_ended .myPrizes__goodsItemDescPoints::after, .myPrizes__goodsItem_used .shop__coinsCount::after, .myPrizes__goodsItem_used .shop__goodsItemDescPoints::after, .myPrizes__goodsItem_used .myPrizes__goodsItemDescPoints::after, .myPrizes__goodsItem_closed .shop__coinsCount::after, .myPrizes__goodsItem_closed .shop__goodsItemDescPoints::after, .myPrizes__goodsItem_closed .myPrizes__goodsItemDescPoints::after, .myPrizes__goodsItem_issuedPrize .shop__coinsCount::after, .myPrizes__goodsItem_issuedPrize .shop__goodsItemDescPoints::after, .myPrizes__goodsItem_issuedPrize .myPrizes__goodsItemDescPoints::after {
   content: "";
   filter: grayscale(100%) opacity(45%);
 }
@@ -2058,6 +1911,31 @@ blockquote:after {
 .shop__goodsItem_closed .shop__goodsItemImage::after, .myPrizes__goodsItem_closed .shop__goodsItemImage::after {
   content: "";
 }
+.shop__goodsItem_myRose, .myPrizes__goodsItem_myRose {
+  border: 2px solid #D9016F;
+}
+.shop__goodsItem_myRose-waiting .shop__goodsItemImage::before, .myPrizes__goodsItem_myRose-waiting .shop__goodsItemImage::before {
+  content: "";
+  width: 95px;
+  height: 100px;
+  background: rgba(254, 254, 254, 0.6);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.shop__goodsItem_myRose-waiting .shop__goodsItemDescStatus, .myPrizes__goodsItem_myRose-waiting .shop__goodsItemDescStatus {
+  color: #D9016F;
+}
+.shop__goodsItem_myRose-waiting .shop__goodsItemDescPoints, .myPrizes__goodsItem_myRose-waiting .shop__goodsItemDescPoints {
+  color: #9D9FB5;
+}
+.shop__goodsItem_myRose-waiting .shop__goodsItemDescPoints::after, .myPrizes__goodsItem_myRose-waiting .shop__goodsItemDescPoints::after {
+  content: "";
+  background: url(../img/global/prizes/rosa-disabled.svg) no-repeat center;
+  width: 14px;
+  height: 14px;
+  background-size: cover;
+}
 .shop__goodsFilterItems, .myPrizes__goodsFilterItems {
   flex-basis: 70%;
   margin-top: 10px;
@@ -2071,7 +1949,6 @@ blockquote:after {
 }
 .shop__goodsFilterItemsItem, .myPrizes__goodsFilterItemsItem {
   height: 16px;
-  text-align: center;
   font: 500 8px/16px "IBM Plex Mono", monospace;
   display: flex;
   align-items: center;
@@ -2081,6 +1958,10 @@ blockquote:after {
   color: #FEFEFE;
   margin-right: 10px;
   background: linear-gradient(180deg, #DA006E 0%, #82509D 100%);
+}
+.shop__goodsFilterItemsItem_myRose .shop__filterItemImage, .myPrizes__goodsFilterItemsItem_myRose .shop__filterItemImage {
+  width: 10px;
+  height: 10px;
 }
 
 /*---------------------------------------------------VOUCHER----------------------------------------------------*/
@@ -2123,11 +2004,47 @@ blockquote:after {
   margin-left: -30px;
   margin-right: -30px;
 }
+.voucher__body_rosa, .prizeByModerator__body_rosa {
+  padding: 20px 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.voucher__body_rosa .voucher__rosaStatus, .prizeByModerator__body_rosa .voucher__rosaStatus {
+  margin-left: 30px;
+}
+.voucher__body_rosa .voucher__price, .prizeByModerator__body_rosa .voucher__price {
+  margin-left: 30px;
+}
+.voucher__body_rosa .voucher__header, .prizeByModerator__body_rosa .voucher__header {
+  margin: 25px 30px;
+}
+.voucher__body_rosa .voucher__text, .prizeByModerator__body_rosa .voucher__text {
+  margin: 0 30px 15px;
+}
+.voucher__body_rosa .voucher__button, .prizeByModerator__body_rosa .voucher__button {
+  margin: 40px 0;
+  display: flex;
+  justify-content: center;
+}
+.voucher__body_rosa .voucher__buttonItem, .prizeByModerator__body_rosa .voucher__buttonItem {
+  align-self: center;
+  width: 260px;
+  height: 48px;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  background: #009BE2;
+  font: bold 20px/24px "IBM Plex Mono", monospace;
+  color: #FEFEFE;
+}
+.voucher__body_rosa .voucher__buttonItem:disabled, .prizeByModerator__body_rosa .voucher__buttonItem:disabled {
+  background: #9D9FB5;
+}
 .voucher__price, .prizeByModerator__price {
   color: #68648C;
 }
-.voucher__price .shop__coinsCount, .prizeByModerator__price .shop__coinsCount {
-  font: bold 20px/24px "IBM Plex Mono", monospace;
+.voucher__price .shop__coinsCount, .voucher__price .shop__goodsItemDescPoints, .voucher__price .myPrizes__goodsItemDescPoints, .prizeByModerator__price .shop__coinsCount, .prizeByModerator__price .shop__goodsItemDescPoints, .prizeByModerator__price .myPrizes__goodsItemDescPoints {
+  font: bold 20px/24px "Roboto Slab", serif;
   color: #131929;
 }
 .voucher__header, .prizeByModerator__header {
@@ -2150,7 +2067,7 @@ blockquote:after {
   width: 100%;
   height: 68px;
   background: #EAEBEF;
-  font: bold 30px/68px "IBM Plex Mono", monospace;
+  font: bold 30px/68px "Roboto Slab", serif;
   text-align: center;
   border-radius: 5px;
   margin-bottom: 20px;
@@ -2162,9 +2079,11 @@ blockquote:after {
   font-weight: bold;
 }
 .voucher__useListItem, .prizeByModerator__useListItem {
+  font-family: "Roboto Slab", serif;
   padding: 0 0 0 10px;
   position: relative;
   margin-bottom: 20px;
+  font-family: "Roboto Slab", serif;
 }
 .voucher__useListItemSpan, .prizeByModerator__useListItemSpan {
   display: block;
@@ -2179,6 +2098,51 @@ blockquote:after {
   background: #009BE2;
   left: -28px;
   top: 5px;
+}
+.voucher__usePoint, .prizeByModerator__usePoint {
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  padding: 20px 30px;
+  border-bottom: 2px solid #F0F0F0;
+}
+.voucher__usePointLinkInside, .prizeByModerator__usePointLinkInside {
+  margin-top: 20px;
+  height: 56px;
+  box-sizing: border-box;
+  padding: 0 10px;
+  background: #EAEBEF;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.voucher__usePointLinkInsideImage, .prizeByModerator__usePointLinkInsideImage {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+.voucher__usePointLinkInsideText, .prizeByModerator__usePointLinkInsideText {
+  font: bold 16px/56px "Roboto Slab", serif;
+  color: #131929;
+}
+.voucher__usePoint:last-child, .prizeByModerator__usePoint:last-child {
+  border: none;
+}
+.voucher__usePointNumber, .prizeByModerator__usePointNumber {
+  flex-basis: 5%;
+  font: bold 25px/30px "Roboto Slab", serif;
+  color: #009BE2;
+  margin-right: 20px;
+}
+.voucher__usePointText, .prizeByModerator__usePointText {
+  box-sizing: border-box;
+  padding-top: 4px;
+  font-weight: bold;
+  flex-basis: 86%;
+}
+.voucher__usePointLink, .prizeByModerator__usePointLink {
+  width: 100%;
 }
 .voucher__map, .prizeByModerator__map {
   align-self: center;
@@ -2209,6 +2173,7 @@ blockquote:after {
 .voucher__status, .prizeByModerator__status {
   font: bold 20px/24px "Roboto Slab", serif;
   box-sizing: border-box;
+  font-family: "IBM Plex Mono", monospace;
   display: none;
 }
 .voucher_get .voucher__status, .prizeByModerator_get .voucher__status {
@@ -2303,11 +2268,17 @@ blockquote:after {
 .voucher_off .voucher__map, .prizeByModerator_off .voucher__map {
   margin-bottom: 0;
 }
+.voucher__rosaStatus, .prizeByModerator__rosaStatus {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.voucher__rosaStatus_waiting, .prizeByModerator__rosaStatus_waiting {
+  color: #D9016F;
+}
 
 /*------------------------------------------------- task_list --------------------------------------------------*/
 /*------------------------------------------------- task_list --------------------------------------------------*/
 .task_list {
-  background: #160840;
   padding: 20px 10px;
   color: #131929;
 }
@@ -2318,7 +2289,14 @@ blockquote:after {
 
 .task_list .reward_block {
   display: flex;
-  justify-content: space-between;
+}
+
+.task_list .reward_block .item {
+  margin-right: 40px;
+}
+
+.task_list .reward_block .item:last-of-type {
+  margin: 0;
 }
 
 .task_list .reward_block .item p {
@@ -2327,6 +2305,22 @@ blockquote:after {
   font-size: 10px;
   line-height: 12px;
   color: #68648C;
+}
+
+.task_list .task.done .reward_block .item p {
+  color: #9D9FB5;
+}
+
+.task_list .task.done .reward_block .item .reward .number {
+  color: #9D9FB5;
+}
+
+.task_list .task.failed .reward_block .item p {
+  color: #9D9FB5;
+}
+
+.task_list .task.failed .reward_block .item .reward .number {
+  color: #9D9FB5;
 }
 
 .task_list .reward_block .item .reward {
@@ -2344,6 +2338,7 @@ blockquote:after {
   font-size: 14px;
   line-height: 17px;
   color: #68648C;
+  font-family: "Roboto Slab", serif;
 }
 
 .task_list .notification_block {
@@ -2374,6 +2369,7 @@ blockquote:after {
   font-size: 16px;
   line-height: 19px;
   text-align: center;
+  font-family: "Roboto Slab", serif;
 }
 
 .task_list .notification_block .text {
@@ -2387,6 +2383,7 @@ blockquote:after {
   line-height: 24px;
   text-align: center;
   color: #FFFFFF;
+  font-family: "Roboto Slab", serif;
 }
 
 .task_list .filter {
@@ -2398,7 +2395,7 @@ blockquote:after {
 .task_list .filter .item {
   border-radius: 8px;
   margin: 10px 10px 0 0;
-  padding: 3px 10px;
+  padding: 3px 14px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2420,7 +2417,8 @@ blockquote:after {
 }
 
 .task_list .filter .item.active {
-  background: #fff;
+  background: linear-gradient(180deg, #DA006E 0%, #82509D 100%);
+  border: none;
 }
 
 .task_list .filter .item.family {
@@ -2466,6 +2464,11 @@ blockquote:after {
   overflow: visible;
 }
 
+.task_list .enumeration_tasks .other_tasks {
+  margin-top: -20px;
+  padding-top: 20px;
+}
+
 .task_list .enumeration_tasks.active .other_tasks .task {
   position: relative;
   bottom: 0;
@@ -2502,10 +2505,9 @@ blockquote:after {
   font-weight: bold;
   font-size: 16px;
   line-height: 19px;
-  color: #FEFEFE;
-  background: #68648C;
+  color: #68648C;
   border-radius: 8px;
-  padding: 2px 10px;
+  font-family: "Roboto Slab", serif;
 }
 
 .task_list .enumeration_tasks .main_task .head_block .step {
@@ -2517,6 +2519,7 @@ blockquote:after {
   font-weight: bold;
   font-size: 20px;
   line-height: 24px;
+  font-family: "Roboto Slab", serif;
 }
 
 .task_list .enumeration_tasks .main_task .img_block {
@@ -2532,12 +2535,13 @@ blockquote:after {
 .task_list .enumeration_tasks .main_task .img_block .time_block {
   display: inline-flex;
   align-items: center;
-  background: #160840;
+  background: linear-gradient(180deg, #DA006E 0%, #82509D 100%);
   border-radius: 8px;
   padding: 4px 8px;
   position: absolute;
   top: -11px;
   left: 20px;
+  font-family: "Roboto Slab", serif;
 }
 
 .task_list .enumeration_tasks .main_task .img_block .time_block img {
@@ -2566,6 +2570,7 @@ blockquote:after {
   font-weight: bold;
   font-size: 20px;
   line-height: 24px;
+  font-family: "Roboto Slab", serif;
 }
 
 .task_list .enumeration_tasks .main_task .body_block .description {
@@ -2595,6 +2600,10 @@ blockquote:after {
   margin-right: 2px;
   display: flex;
   align-items: flex-end;
+}
+
+.task_list .enumeration_tasks .main_task .footer_block .quantity .nimber span {
+  font-family: "Roboto Slab", serif;
 }
 
 .task_list .enumeration_tasks .main_task .footer_block .quantity .nimber span:first-of-type {
@@ -2633,6 +2642,14 @@ blockquote:after {
 
 .task_list .enumeration_tasks .other_tasks .task .head_block {
   padding: 20px 20px 10px 20px;
+}
+
+.task_list .enumeration_tasks .other_tasks .task.failed .head_block {
+  background: #D20C3C;
+}
+
+.task_list .enumeration_tasks .other_tasks .task.done .head_block {
+  background: #66C902;
 }
 
 .task_list .enumeration_tasks .other_tasks .task:nth-of-type(1) {
@@ -2793,6 +2810,7 @@ blockquote:after {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
   border-radius: 8px;
   margin-top: 20px;
+  background: #fff;
 }
 
 .task .img_block {
@@ -2812,15 +2830,16 @@ blockquote:after {
   font-size: 16px;
   line-height: 19px;
   border-radius: 8px;
-  padding: 2px 10px;
+  font-family: "Roboto Slab", serif;
 }
 
 .task .head_block .time_block {
   display: inline-flex;
   align-items: center;
-  background: #160840;
+  background: linear-gradient(180deg, #DA006E 0%, #82509D 100%);
   border-radius: 8px;
   padding: 4px 8px;
+  font-family: "Roboto Slab", serif;
 }
 
 .task .head_block .time_block img {
@@ -2849,7 +2868,7 @@ blockquote:after {
   line-height: 14px;
   padding: 2px 6px;
   box-shadow: 0 2px 7px rgba(0, 0, 0, 0.25);
-  min-height: 24px;
+  height: auto;
 }
 
 .task .body_block .caption {
@@ -2857,6 +2876,7 @@ blockquote:after {
   font-size: 20px;
   line-height: 24px;
   margin-top: 5px;
+  font-family: "Roboto Slab", serif;
 }
 
 .task .body_block .description {
@@ -2871,17 +2891,18 @@ blockquote:after {
 }
 
 .task .body_block .btn_block .more {
-  border-radius: 3px;
+  border-radius: 8px;
   font-weight: bold;
   font-size: 16px;
   line-height: 19px;
-  padding: 6px 18px;
+  padding: 5px 21px;
   display: inline-block;
   text-decoration: none;
 }
 
 .task .footer_block {
   padding: 13px 20px;
+  border-top: 1px solid #9D9FB5;
 }
 
 .task.available {
@@ -2893,8 +2914,7 @@ blockquote:after {
 }
 
 .task.available .head_block .number {
-  color: #FEFEFE;
-  background: #68648C;
+  color: #68648C;
 }
 
 .task.available .footer_block {
@@ -2906,13 +2926,8 @@ blockquote:after {
   color: #FFFFFF;
 }
 
-.task.done {
-  background: #27CAAA;
-}
-
 .task.done .head_block .number {
-  background: #FEFEFE;
-  color: #27CAAA;
+  color: #FEFEFE;
 }
 
 .task.done .head_block .right_block .label {
@@ -2936,16 +2951,16 @@ blockquote:after {
 }
 
 .task.done .body_block .caption {
-  color: #FEFEFE;
+  color: #9D9FB5;
 }
 
 .task.done .body_block .description {
-  color: #FEFEFE;
+  color: #9D9FB5;
 }
 
 .task.done .body_block .btn_block .more {
-  border: 1px solid #FFFFFF;
-  color: #FEFEFE;
+  border: 1px solid #9D9FB5;
+  color: #9D9FB5;
 }
 
 .task.done .footer_block {
@@ -2953,19 +2968,13 @@ blockquote:after {
 }
 
 .task.done .footer_block .reward_block {
-  background: #C8FFF4;
-  border: 3px solid #27CAAA;
-  box-sizing: border-box;
-  border-radius: 8px;
   padding: 15px 19px;
-}
-
-.task.failed {
-  background: #DC4497;
 }
 
 .task.failed .head_block {
   border-bottom: 1px solid #FEFEFE;
+  background: #D20C3C;
+  border-radius: 8px 8px 0 0;
 }
 
 .task.failed .head_block .right_block .label {
@@ -2989,21 +2998,20 @@ blockquote:after {
 }
 
 .task.failed .head_block .number {
-  background: #FEFEFE;
-  color: #DC4497;
+  color: #FEFEFE;
 }
 
 .task.failed .body_block .caption {
-  color: #FEFEFE;
+  color: #9D9FB5;
 }
 
 .task.failed .body_block .description {
-  color: #FEFEFE;
+  color: #9D9FB5;
 }
 
 .task.failed .body_block .btn_block .more {
-  border: 1px solid #FFFFFF;
-  color: #FEFEFE;
+  border: 1px solid #9D9FB5;
+  color: #9D9FB5;
 }
 
 .task.failed .footer_block {
@@ -3011,44 +3019,39 @@ blockquote:after {
 }
 
 .task.failed .footer_block .reward_block {
-  background: #FFD3E5;
-  border: 3px solid #DC4497;
-  box-sizing: border-box;
-  border-radius: 8px;
   padding: 15px 19px;
 }
 
 .task.canceled {
+  background: #6A6D8E;
   border: 1px solid #8F91AA;
-  background: #160840;
 }
 
 .task.canceled .head_block .right_block .label {
   font-weight: bold;
   font-size: 12px;
   line-height: 14px;
-  color: #4E4C6A;
+  color: #fff;
   padding: 4px 14px;
-  background: #FEFEFE;
+  background: linear-gradient(180deg, #DA006E 0%, #82509D 100%);
   border-radius: 8px;
 }
 
 .task.canceled .head_block .number {
-  background: #68648C;
-  color: #FEFEFE;
+  color: #CACCE2;
 }
 
 .task.canceled .body_block .btn_block .more {
-  border: 1px solid #9D9FB5;
-  color: #9D9FB5;
+  border: 1px solid #CACCE2;
+  color: #CACCE2;
 }
 
 .task.canceled .body_block .caption {
-  color: #9D9FB5;
+  color: #CACCE2;
 }
 
 .task.canceled .body_block .description {
-  color: #9D9FB5;
+  color: #CACCE2;
 }
 
 .task.canceled .footer_block {
@@ -3056,15 +3059,15 @@ blockquote:after {
 }
 
 .task.canceled .footer_block .reward_block .item p {
-  color: #FFFFFF;
+  color: #CACCE2;
 }
 
 .task.canceled .footer_block .reward_block .item .number {
-  color: #FFFFFF;
+  color: #CACCE2;
 }
 
 .task.blocked {
-  background: #4E4C6A;
+  background: #6A6D8E;
   border: 1px solid #9D9FB5;
 }
 
@@ -3073,20 +3076,11 @@ blockquote:after {
 }
 
 .task.blocked .head_block .number {
-  background: #68648C;
-  color: #FEFEFE;
-}
-
-.task.blocked .head_block .time_block {
-  background: #FFFFFF;
-}
-
-.task.blocked .head_block .time_block .text {
-  color: #4E4C6A;
+  color: #CACCE2;
 }
 
 .task.blocked .body_block .caption {
-  color: #FEFEFE;
+  color: #CACCE2;
 }
 
 .task.blocked .body_block .condition_block {
@@ -3100,7 +3094,7 @@ blockquote:after {
 }
 
 .task.blocked .body_block .condition_block .text {
-  color: #FEFEFE;
+  color: #CACCE2;
 }
 
 .task.blocked .body_block .additional_info {
@@ -3115,13 +3109,11 @@ blockquote:after {
 }
 
 .task.blocked .body_block .additional_info .number {
+  font-family: "Roboto Slab", serif;
+  color: #CACCE2;
   font-weight: bold;
   font-size: 16px;
   line-height: 19px;
-  border-radius: 8px;
-  padding: 2px 10px;
-  background: #FFFFFF;
-  color: #131929;
 }
 
 .task.blocked .body_block .list_conditions .item {
@@ -3134,7 +3126,7 @@ blockquote:after {
 }
 
 .task.blocked .body_block .list_conditions .item.green {
-  background: #27CAAA;
+  background: #65C802;
 }
 
 .task.blocked .body_block .list_conditions .item.green .text {
@@ -3142,7 +3134,7 @@ blockquote:after {
 }
 
 .task.blocked .body_block .list_conditions .item.red {
-  background: #DC4497;
+  background: #D20C3C;
 }
 
 .task.blocked .body_block .list_conditions .item.red .text {
@@ -3214,7 +3206,7 @@ blockquote:after {
 }
 
 .one_task.failed .content_block .dropdown_block {
-  background: #DC4497;
+  background: #D20C3C;
 }
 
 .one_task.failed .content_block .dropdown_block .caption {
@@ -3222,13 +3214,13 @@ blockquote:after {
 }
 
 .one_task.failed .content_block .dropdown_block .ss-main .ss-single-selected {
-  background: #FFD3E5;
+  background: #FFE5EC;
   border: 1px solid #FEFEFE;
-  color: #DC4497;
+  color: #D20C3C;
 }
 
 .one_task.failed .content_block .dropdown_block .ss-main .ss-single-selected .ss-arrow span {
-  border: solid #DC4497;
+  border: solid #D20C3C;
   border-width: 0 2px 2px 0;
 }
 
@@ -3236,11 +3228,12 @@ blockquote:after {
   font-size: 14px;
   line-height: 17px;
   color: #FFFFFF;
-  margin-top: 20px;
+  position: static;
+  margin: 20px 0 0 0;
 }
 
 .one_task.failed .content_block .big_checkbox_block {
-  background: #DC4497;
+  background: #D20C3C;
 }
 
 .one_task.failed .content_block .big_checkbox_block .bottom_text {
@@ -3279,7 +3272,7 @@ blockquote:after {
 }
 
 .one_task.failed .content_block .stages_execution_container .body .item .text_input {
-  background: #DC4497;
+  background: #D20C3C;
 }
 
 .one_task.failed .content_block .stages_execution_container .body .item .text_input .caption {
@@ -3287,9 +3280,9 @@ blockquote:after {
 }
 
 .one_task.failed .content_block .stages_execution_container .body .item .text_input input {
-  background: #FFD3E5;
+  background: #FFE5EC;
   border: 1px solid #FEFEFE;
-  color: #DC4497;
+  color: #D20C3C;
 }
 
 .one_task.failed .content_block .stages_execution_container .body .item .text_input .bottom_text {
@@ -3300,13 +3293,16 @@ blockquote:after {
   margin-top: 20px;
 }
 
-.one_task.failed .content_block .reward_block {
-  background: #FFD3E5;
-  border: 1px solid #DC4497;
+.one_task.canceled .content_block .stages_execution_container .body .item .text_input .bottom_text {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  color: #9D9FB5;
+  margin-top: 20px;
 }
 
 .one_task.failed .content_block .task_name {
-  background: #DC4497;
+  background: #D20C3C;
 }
 
 .one_task.failed .content_block .task_name i {
@@ -3322,7 +3318,7 @@ blockquote:after {
 }
 
 .one_task.done .content_block .dropdown_block {
-  background: #27CAAA;
+  background: #66C902;
 }
 
 .one_task.done .content_block .dropdown_block .caption {
@@ -3330,18 +3326,18 @@ blockquote:after {
 }
 
 .one_task.done .content_block .dropdown_block .ss-main .ss-single-selected {
-  background: #C8FFF4;
-  border: 1px solid #27CAAA;
-  color: #27CAAA;
+  background: #EBFFD7;
+  border: 1px solid #66C902;
+  color: #66C902;
 }
 
 .one_task.done .content_block .dropdown_block .ss-main .ss-single-selected .ss-arrow span {
-  border: solid #27CAAA;
+  border: solid #66C902;
   border-width: 0 2px 2px 0;
 }
 
 .one_task.done .content_block .big_checkbox_block {
-  background: #27CAAA;
+  background: #66C902;
 }
 
 .one_task.done .content_block .big_checkbox_block .checkbox_content .checkbox_block.active .checkbox {
@@ -3373,7 +3369,7 @@ blockquote:after {
 }
 
 .one_task.done .content_block .stages_execution_container .body .item .text_input {
-  background: #27CAAA;
+  background: #66C902;
 }
 
 .one_task.done .content_block .stages_execution_container .body .item .text_input .caption {
@@ -3381,18 +3377,13 @@ blockquote:after {
 }
 
 .one_task.done .content_block .stages_execution_container .body .item .text_input input {
-  background: #C8FFF4;
-  border: 1px solid #27CAAA;
-  color: #27CAAA;
-}
-
-.one_task.done .content_block .reward_block {
-  background: #C8FFF4;
-  border: 1px solid #27CAAA;
+  background: #EBFFD7;
+  border: 1px solid #66C902;
+  color: #66C902;
 }
 
 .one_task.done .content_block .task_name {
-  background: #27CAAA;
+  background: #66C902;
 }
 
 .one_task.done .content_block .task_name i {
@@ -3475,16 +3466,20 @@ blockquote:after {
   color: #9D9FB5;
 }
 
-.one_task.disabled .content_block .stages_execution_container .body .item .caption .text .grey_text {
+.one_task.disabled .content_block .stages_execution_container .body .item .caption .text .grey_text span {
   background: #9D9FB5;
 }
 
-.one_task.disabled .content_block .stages_execution_container .body .item .caption .text .red_text {
+.one_task.disabled .content_block .stages_execution_container .body .item .caption .text .red_text span {
   background: #9D9FB5;
 }
 
-.one_task.disabled .content_block .stages_execution_container .body .item .caption .text .green_text {
+.one_task.disabled .content_block .stages_execution_container .body .item .caption .text .green_text span {
   background: #9D9FB5;
+}
+
+.one_task.disabled .content_block .stages_execution_container .body .item .caption .text .refresh {
+  background-color: #9D9FB5;
 }
 
 .one_task.disabled .content_block .stages_execution_container .body .item .content .galery_slider_2 .slick-dots li.slick-active {
@@ -3586,7 +3581,6 @@ blockquote:after {
 }
 
 .one_task.disabled .content_block .time_block {
-  margin-top: 20px;
   background: #9D9FB5;
 }
 
@@ -3698,13 +3692,11 @@ blockquote:after {
 }
 
 .one_task .main_block .top_block .number {
-  background: #68648C;
-  border-radius: 8px;
   font-weight: bold;
   font-size: 16px;
   line-height: 19px;
-  color: #FEFEFE;
-  padding: 2px 10px;
+  color: #131929;
+  font-family: "Roboto Slab", serif;
   margin-right: 10px;
 }
 
@@ -3727,6 +3719,10 @@ blockquote:after {
   margin-bottom: 10px;
   background: linear-gradient(180deg, #DA006E 0%, #82509D 100%);
   box-shadow: none;
+}
+
+.one_task .main_block .top_block .filter .item.disabled {
+  background: #9D9FB5;
 }
 
 .one_task .main_block .top_block .filter .item img {
@@ -3779,52 +3775,64 @@ blockquote:after {
   min-width: 30px;
 }
 
-.one_task .main_block .bottom_block {
-  position: absolute;
-  bottom: -10px;
-  left: 10px;
-  right: 10px;
-  z-index: 10;
+.one_task .content_block .bottom_block {
+  position: relative;
+  top: -25px;
+  margin-bottom: -25px;
 }
 
-.one_task .main_block .bottom_block .reward_block {
+.one_task .content_block .bottom_block .reward_block {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
   box-sizing: border-box;
-  padding: 15px 20px;
   border-radius: 8px;
   background: #FEFEFE;
-  display: inline-flex;
-  justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 15px;
+  margin-bottom: 30px;
 }
 
-.one_task .main_block .bottom_block .reward_block .item {
-  margin-right: 37px;
+.one_task .content_block .bottom_block .reward_block .item {
+  margin: 0 19px;
 }
 
-.one_task .main_block .bottom_block .reward_block .item:last-child {
-  margin: 0;
-}
-
-.one_task .main_block .bottom_block .reward_block .item p {
+.one_task .content_block .bottom_block .reward_block .item p {
   font-size: 10px;
   line-height: 12px;
   color: #68648C;
   margin: 0;
 }
 
-.one_task .main_block .bottom_block .reward_block .item .reward {
+.one_task.disabled .content_block .bottom_block .reward_block .item p {
+  color: #9D9FB5;
+}
+
+.one_task.disabled .content_block .bottom_block .reward_block .item .reward .number {
+  color: #9D9FB5;
+}
+
+.one_task.disabled .content_block .reward_block .item p {
+  color: #9D9FB5;
+}
+
+.one_task.disabled .content_block .reward_block .item .reward .number {
+  color: #9D9FB5;
+}
+
+.one_task .content_block .bottom_block .reward_block .item .reward {
   display: flex;
   align-items: center;
   margin-top: 10px;
 }
 
-.one_task .main_block .bottom_block .reward_block .item .reward img {
+.one_task .content_block .bottom_block .reward_block .item .reward img {
   margin-right: 10px;
 }
 
-.one_task .main_block .bottom_block .reward_block .item .reward .number {
+.one_task .content_block .bottom_block .reward_block .item .reward .number {
   color: #68648C;
   font-weight: bold;
+  font-family: "Roboto Slab", serif;
 }
 
 .one_task .task_footer {
@@ -3857,14 +3865,15 @@ blockquote:after {
 
 .one_task .validation_error textarea {
   margin-top: 25px;
-  background: #FFD3E5;
-  border: 1px solid #DC4497;
+  background: #FFE5EC;
+  border: 1px solid #D9016F;
   box-sizing: border-box;
   border-radius: 3px;
   height: 85px;
   font-size: 16px;
   line-height: 19px;
-  color: #DC4497;
+  color: #D9016F;
+  resize: none;
 }
 
 .one_task .task_verification {
@@ -3967,6 +3976,9 @@ blockquote:after {
 .support__blockPhoneNumber {
   margin-right: 10px;
 }
+.support__blockPhoneNumber a {
+  color: #000;
+}
 .support__blockLink {
   display: flex;
   word-break: break-all;
@@ -4010,9 +4022,19 @@ blockquote:after {
   font-weight: bold;
   font-size: 20px;
   line-height: 24px;
-  color: #FEFEFE;
-  padding: 0 30px;
+  color: #fff;
   margin-bottom: 30px;
+  padding: 0 30px;
+}
+
+.one_task .task_footer .task_verification .caption {
+  color: #D9016F;
+  padding: 0;
+}
+
+.one_task .task_footer .validation_error .caption {
+  color: #D9016F;
+  padding: 0;
 }
 
 .one_task .task_footer .number_attempts {
@@ -4038,7 +4060,7 @@ blockquote:after {
 .one_task .content_block {
   background: #FEFEFE;
   border-radius: 5px;
-  padding: 27px 0;
+  padding: 0 0 27px 0;
   position: relative;
   margin-top: -5px;
 }
@@ -4066,6 +4088,8 @@ blockquote:after {
 
 .one_task .content_block .dropdown_block .select_block .ss-main .ss-content {
   width: 100%;
+  border: 1px solid #9D9FB5;
+  border-top: none;
 }
 
 .one_task .content_block .number_attempts {
@@ -4098,7 +4122,7 @@ blockquote:after {
 }
 
 .one_task .content_block .big_checkbox_block .text_block .caption.error {
-  color: #DC4497;
+  color: #D20C3C;
 }
 
 .one_task .content_block .big_checkbox_block .checkbox_content {
@@ -4113,8 +4137,8 @@ blockquote:after {
 }
 
 .one_task .content_block .big_checkbox_block .checkbox_content .checkbox_block.error .checkbox {
-  background: #FFD3E5;
-  border: 2px solid #DC4497;
+  background: #FFE5EC;
+  border: 1px solid #D20C3C;
 }
 
 .one_task .content_block .big_checkbox_block .checkbox_content .checkbox_block.error .checkbox:before {
@@ -4228,16 +4252,18 @@ blockquote:after {
 }
 
 .one_task .content_block .task_name {
-  border-radius: 5px 5px 0 0;
-  height: 74px;
+  border-radius: 5px;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   font-weight: bold;
-  font-size: 20px;
-  line-height: 20px;
+  font-size: 19px;
+  line-height: 25px;
   color: #FEFEFE;
-  padding: 0 30px;
+  padding: 0 20px;
+  margin: 0 10px 25px 10px;
+  font-family: "Roboto Slab", serif;
 }
 
 .one_task .content_block .job_rating,
@@ -4312,10 +4338,11 @@ blockquote:after {
 .one_task .content_block .time_block {
   display: inline-flex;
   align-items: center;
-  background: #160840;
+  background: linear-gradient(180deg, #DA006E 0%, #82509D 100%);
   border-radius: 8px;
   padding: 4px 8px;
-  margin: 0 30px;
+  margin: 0 30px 15px 30px;
+  font-family: "Roboto Slab", serif;
 }
 
 .one_task .content_block .time_block img {
@@ -4333,8 +4360,9 @@ blockquote:after {
   font-weight: bold;
   font-size: 20px;
   line-height: 24px;
-  margin: 10px 30px 0 30px;
+  margin: 0 30px 0 30px;
   color: #131929;
+  font-family: "Roboto Slab", serif;
 }
 
 .one_task .content_block .description {
@@ -4396,6 +4424,7 @@ blockquote:after {
 .one_task .content_block b {
   font-weight: bold;
   color: #131929;
+  font-family: "Roboto Slab", serif;
 }
 
 .one_task .content_block strong {
@@ -4450,11 +4479,22 @@ blockquote:after {
 }
 
 .one_task .content_block .video_container .video_block {
-  box-shadow: 0px 0px 10px rgba(19, 25, 41, 0.24);
+  box-shadow: 0 0 10px rgba(19, 25, 41, 0.24);
   border-radius: 8px;
   overflow: hidden;
   line-height: 0;
   position: relative;
+}
+
+.one_task .content_block .video_container .video_block:after {
+  content: "";
+  height: 54.69px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 30.56%, rgba(33, 29, 73, 0) 30.56%, #211D49 100%);
+  border-radius: 8px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .one_task .content_block .video_container .video_block .btn {
@@ -4479,6 +4519,7 @@ blockquote:after {
   font-size: 12px;
   line-height: 14px;
   color: #FFFFFF;
+  z-index: 10;
 }
 
 .one_task .content_block .video_container .video_block video {
@@ -4567,6 +4608,14 @@ blockquote:after {
   margin: 0 5px;
 }
 
+.one_task .content_block .prize_block {
+  margin-top: 20px;
+}
+
+.one_task .content_block .prize_block .reward_block .item {
+  padding: 15px 20px;
+}
+
 .one_task .content_block .map_block {
   background: #F9F9F9;
   padding: 20px 30px;
@@ -4586,12 +4635,12 @@ blockquote:after {
   background: #F9F9F9;
   border-radius: 8px;
   display: flex;
-  justify-content: center;
-  margin: 20px 10px 0;
+  margin: 0 10px;
+  flex-wrap: wrap;
 }
 
 .one_task .content_block .reward_block .item {
-  padding: 15px 20px;
+  padding: 15px 0 0 0;
 }
 
 .one_task .content_block .reward_block .item p {
@@ -4614,6 +4663,7 @@ blockquote:after {
 .one_task .content_block .reward_block .item .reward .number {
   color: #68648C;
   font-weight: bold;
+  font-family: "Roboto Slab", serif;
 }
 
 .one_task .content_block .stages_execution_container {
@@ -4627,6 +4677,7 @@ blockquote:after {
   color: #FEFEFE;
   padding: 15px 30px;
   background: #009BE2;
+  font-family: "Roboto Slab", serif;
 }
 
 .one_task .content_block .stages_execution_container .body .item {
@@ -4643,7 +4694,11 @@ blockquote:after {
   font-size: 14px;
   line-height: 17px;
   color: #68648C;
-  margin: 20px 30px 15px 30px;
+  margin: 20px 30px 15px 60px;
+}
+
+.one_task.disabled .content_block .stages_execution_container .body .item .another_text {
+  color: #9D9FB5;
 }
 
 .one_task .content_block .stages_execution_container .body .item .add_img_block {
@@ -4658,7 +4713,7 @@ blockquote:after {
 }
 
 .one_task .content_block .stages_execution_container .body .item .add_img_block .img_block .one_img {
-  width: 31%;
+  width: 30%;
   margin: 10px 10px 0 0;
   position: relative;
   line-height: 0;
@@ -4739,6 +4794,7 @@ blockquote:after {
   line-height: 24px;
   color: #131929;
   padding: 0;
+  font-family: "Roboto Slab", serif;
 }
 
 .one_task .content_block .stages_execution_container .body .item .text_input input {
@@ -4751,10 +4807,11 @@ blockquote:after {
   border-radius: 3px;
   height: 48px;
   padding: 0 15px;
-  font-weight: normal;
   font-size: 16px;
   line-height: 19px;
   color: #131929;
+  font-family: "Roboto Slab", serif;
+  font-weight: bold;
 }
 
 .one_task .content_block .stages_execution_container .body .item .caption {
@@ -4768,6 +4825,7 @@ blockquote:after {
   line-height: 30px;
   color: #009BE2;
   min-width: 30px;
+  font-family: "Roboto Slab", serif;
 }
 
 .one_task .content_block .stages_execution_container .body .item .caption .text {
@@ -4776,35 +4834,61 @@ blockquote:after {
   line-height: 17px;
   color: #131929;
   padding-top: 7px;
+  font-family: "Roboto Slab", serif;
 }
 
-.one_task .content_block .stages_execution_container .body .item .caption .text .grey_text {
+.one_task .content_block .stages_execution_container .body .item .caption .text .grey_text span {
   background: #4E5163;
-  border-radius: 2px;
   color: #FEFEFE;
   padding: 1px 5px;
+  font-family: "Roboto Slab", serif;
+  border-radius: 3px 0 0 3px;
+  line-height: 22px;
+  vertical-align: top;
+}
+
+.one_task .content_block .stages_execution_container .body .item .description {
+  margin: 20px 30px 0 60px;
+}
+
+.one_task .content_block .stages_execution_container .body .item .caption .text .refresh {
+  display: inline-block;
+  width: 20px;
+  height: 21px;
+  background-color: #009BE2;
+  border-radius: 0 3px 3px 0;
+  cursor: pointer;
+  background-image: url(../img/refresh-icon.svg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .one_task .content_block .stages_execution_container .body .item .caption .text .grey_text img {
   margin-right: 3px;
 }
 
-.one_task .content_block .stages_execution_container .body .item .caption .text .red_text {
+.one_task .content_block .stages_execution_container .body .item .caption .text .red_text span {
   background: #D20C3C;
-  border-radius: 2px;
+  border-radius: 3px 0 0 3px;
+  line-height: 22px;
+  vertical-align: top;
   color: #FEFEFE;
   padding: 1px 5px;
+  font-family: "Roboto Slab", serif;
 }
 
 .one_task .content_block .stages_execution_container .body .item .caption .text .red_text img {
   margin-right: 3px;
 }
 
-.one_task .content_block .stages_execution_container .body .item .caption .text .green_text {
+.one_task .content_block .stages_execution_container .body .item .caption .text .green_text span {
   background: #66C902;
-  border-radius: 2px;
+  border-radius: 3px 0 0 3px;
+  line-height: 22px;
+  vertical-align: top;
   color: #FEFEFE;
   padding: 1px 5px;
+  font-family: "Roboto Slab", serif;
 }
 
 .one_task .content_block .stages_execution_container .body .item .caption .text .green_text img {
@@ -4876,6 +4960,17 @@ blockquote:after {
   justify-content: center;
   align-items: center;
   bottom: 15px;
+  width: auto;
+  margin: 0;
+}
+
+.one_task .content_block .stages_execution_container .body .item .content .galery_slider_2 .slick-dots li:before {
+  position: static;
+  background: #C4C4C4;
+}
+
+.one_task .content_block .stages_execution_container .body .item:first-child {
+  border: none;
 }
 
 .one_task .content_block .stages_execution_container .body .item .content .galery_slider_2 .slick-dots li {
@@ -5004,12 +5099,6 @@ blockquote:after {
 
   .registration_page .top_block .logo {
     height: 70px;
-  }
-
-  .registration_page .top_block h1 {
-    font-size: 20px;
-    line-height: 24px;
-    margin-top: 5px;
   }
 
   .blue_btn {
@@ -5155,6 +5244,7 @@ blockquote:after {
   align-items: center;
 }
 .congrats__exitBtn {
+  align-self: center;
   width: 260px;
   height: 48px;
   border: none;
@@ -5163,6 +5253,9 @@ blockquote:after {
   background: #009BE2;
   font: bold 20px/24px "IBM Plex Mono", monospace;
   color: #FEFEFE;
+}
+.congrats__exitBtn:disabled {
+  background: #9D9FB5;
 }
 
 .sorry .congrats__status {
@@ -5295,7 +5388,7 @@ blockquote:after {
 }
 .rating__itemNumber {
   width: 20%;
-  font: bold 12px/14px "IBM Plex Mono", monospace;
+  font: bold 12px/14px "Roboto Slab", serif;
 }
 .rating__itemNumber_prizePlace {
   color: #009BE2;
@@ -5340,7 +5433,7 @@ blockquote:after {
   padding-left: 5px;
   display: block;
   position: relative;
-  font: bold 14px/17px "IBM Plex Mono", monospace;
+  font: bold 14px/17px "Roboto Slab", serif;
 }
 .rating__item:last-child {
   margin-bottom: 0;
@@ -5431,7 +5524,7 @@ blockquote:after {
   background: #9D9FB5;
 }
 .public__scoresItemRating, .public__scoresItemCount {
-  font: bold 14px/17px "IBM Plex Mono", monospace;
+  font: bold 14px/17px "Roboto Slab", serif;
   color: #68648C;
 }
 .public__scoresItemImage {
@@ -5580,9 +5673,10 @@ blockquote:after {
 .task_list.admin_page .enumeration_tasks .main_task .body_block .caption {
   font-family: "Roboto Slab", serif;
 }
+
 /*------------------------------------------- moderator_task -------------------------------------------*/
 .moderator_task {
-  padding: 20px 10px;
+  padding: 20px 0;
 }
 .moderator_task h1 {
   font-weight: bold;
@@ -5593,6 +5687,8 @@ blockquote:after {
   font-family: "Roboto Slab", serif;
 }
 .moderator_task .description {
+  box-sizing: border-box;
+  padding: 0 30px;
   margin-top: 15px;
   font-weight: bold;
   font-size: 19px;
@@ -5601,6 +5697,8 @@ blockquote:after {
   font-family: "Roboto Slab", serif;
 }
 .moderator_task .btn_block {
+  box-sizing: border-box;
+  padding: 0 25px;
   margin-top: 25px;
 }
 .moderator_task .btn_block button {
@@ -5620,9 +5718,14 @@ blockquote:after {
   margin-top: 30px;
 }
 .moderator_task .moderator_task_wrapper .moderator_task_block {
-  margin-top: 20px;
+  margin: 20px 10px 0;
   background: #FEFEFE;
   border-radius: 8px;
+  transition: 0.3s all;
+}
+.moderator_task .moderator_task_wrapper .moderator_task_block.active {
+  margin-left: 0;
+  margin-right: 0;
 }
 .moderator_task .moderator_task_wrapper .moderator_task_block.active .moderator_header_block .more {
   display: none;
@@ -5631,7 +5734,7 @@ blockquote:after {
   display: block;
 }
 .moderator_task .moderator_task_wrapper .moderator_task_block .moderator_header_block {
-  padding: 20px 15px;
+  padding: 20px 30px;
 }
 .moderator_task .moderator_task_wrapper .moderator_task_block .moderator_header_block .caption {
   font-family: "Roboto Slab", serif;
@@ -5798,6 +5901,7 @@ blockquote:after {
   margin-bottom: 30px;
 }
 .givePrize__qrBtn, .givePrize__submitBtn, .approveTask__submitBtn, .approveTask__qrBtn {
+  align-self: center;
   width: 260px;
   height: 48px;
   border: none;
@@ -5806,6 +5910,9 @@ blockquote:after {
   background: #009BE2;
   font: bold 20px/24px "IBM Plex Mono", monospace;
   color: #FEFEFE;
+}
+.givePrize__qrBtn:disabled, .givePrize__submitBtn:disabled, .approveTask__submitBtn:disabled, .approveTask__qrBtn:disabled {
+  background: #9D9FB5;
 }
 .givePrize__qrBtn:disabled, .givePrize__submitBtn:disabled, .approveTask__submitBtn:disabled, .approveTask__qrBtn:disabled {
   background: #68648C;
@@ -5827,7 +5934,7 @@ blockquote:after {
   box-sizing: border-box;
   padding-left: 10px;
   border-radius: 3px;
-  font: 16px/48px "IBM Plex Mono", monospace;
+  font: 16px/48px "Roboto Slab", serif;
 }
 .givePrize__itemInput::placeholder, .approveTask__itemInput::placeholder {
   color: #68648C;
@@ -5887,6 +5994,8 @@ blockquote:after {
   margin-right: 5px;
 }
 .memberPrize__priceCount {
+  font-family: "Roboto Slab", serif;
+  line-height: 20px;
   font-weight: bold;
   color: #68648C;
 }
@@ -5917,15 +6026,13 @@ blockquote:after {
 }
 
 /*--------------------------------------------PRIZE--BY--MODERATOR----------------------------------------------*/
-.prizeByModerator {
-  /*---------MODIFERS------------*/
-}
 .prizeByModerator__buttons {
   margin-top: 30px;
   display: flex;
   flex-direction: column;
 }
 .prizeByModerator__buttonsGive, .prizeByModerator__buttonsReplace {
+  align-self: center;
   width: 260px;
   height: 48px;
   border: none;
@@ -5935,8 +6042,12 @@ blockquote:after {
   font: bold 20px/24px "IBM Plex Mono", monospace;
   color: #FEFEFE;
 }
+.prizeByModerator__buttonsGive:disabled, .prizeByModerator__buttonsReplace:disabled {
+  background: #9D9FB5;
+}
 .prizeByModerator__buttonsChange {
   margin-top: 20px;
+  align-self: center;
   width: 260px;
   height: 48px;
   border: none;
@@ -5965,6 +6076,7 @@ blockquote:after {
   padding: 25px 0 30px;
 }
 .afterThePrize__header {
+  text-align: center;
   font: bold 19px/25px "Roboto Slab", serif;
   margin: 0 32px 10px;
 }
@@ -5992,6 +6104,7 @@ blockquote:after {
 }
 .afterThePrize__buttonsGive {
   margin-top: 20px;
+  align-self: center;
   width: 260px;
   height: 48px;
   border: none;
@@ -6001,8 +6114,12 @@ blockquote:after {
   font: bold 20px/24px "IBM Plex Mono", monospace;
   color: #FEFEFE;
 }
+.afterThePrize__buttonsGive:disabled {
+  background: #9D9FB5;
+}
 .afterThePrize__buttonsNext {
   margin-top: 20px;
+  align-self: center;
   width: 260px;
   height: 48px;
   border: none;
@@ -6013,6 +6130,7 @@ blockquote:after {
   color: #FEFEFE;
 }
 .afterThePrize__buttonsToTask {
+  align-self: center;
   width: 260px;
   height: 48px;
   border: none;
@@ -6021,6 +6139,9 @@ blockquote:after {
   background: #009BE2;
   font: bold 20px/24px "IBM Plex Mono", monospace;
   color: #FEFEFE;
+}
+.afterThePrize__buttonsToTask:disabled {
+  background: #9D9FB5;
 }
 .afterThePrize__text {
   margin: 15px 0;
