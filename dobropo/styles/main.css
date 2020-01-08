@@ -1,0 +1,9 @@
+.quad {
+  margin: 200px auto;
+  width: 1000px;
+  height: 500px;
+  background: #1D1D1D;
+  clip-path: polygon(0 0, 20% 0, 38% 11%, 61% 10%, 81% 0, 100% 0, 100% 86%, 72% 87%, 61% 100%, 38% 100%, 21% 87%, 0 87%);
+}
+
+/*# sourceMappingURL=main.css.map */
