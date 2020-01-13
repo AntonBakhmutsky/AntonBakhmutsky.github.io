@@ -1,0 +1,98 @@
+.notification_block {
+  position: fixed;
+  top: 56px;
+  z-index: 50;
+  width: 100%;
+  background: #ED1C24;
+}
+
+@media screen and (max-width: 992px) {
+  .notification_block {
+    width: 94%;
+    border-radius: 8px;
+    top: 54px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.notification_block .container > div {
+  display: flex;
+}
+
+@media screen and (max-width: 992px) {
+  .notification_block .container > div {
+    display: block;
+  }
+}
+
+.notification_block .container {
+  max-width: 100%;
+  height: 56px;
+  display: flex;
+  align-items: center;
+}
+
+.notification_block .text {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  color: #FFFFFF;
+  margin-right: 40px;
+}
+
+.notification_block a {
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 14px;
+  color: #FFFFFF;
+  position: relative;
+  border-bottom: 1px dotted #fff;
+}
+
+.notification_block a:after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-image: url('~assets/images/dots.svg');
+  display: inline-block;
+}
+
+.notification_block .close {
+  display: inline-block;
+  width: 30px;
+  height: 29px;
+  background-image: url('~assets/images/close-white.svg');
+  cursor: pointer;
+  margin-left: auto;
+}
+
+@media screen and (max-width: 992px) {
+  .notification_block .text {
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  .notification_block a {
+    margin-top: 10px;
+    display: inline-block;
+  }
+
+  .notification_block .container {
+    height: auto;
+    padding: 10px 50px 10px 15px;
+    position: relative;
+  }
+
+  .notification_block .close {
+    margin-left: 0;
+    min-width: 30px;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

@@ -1,0 +1,257 @@
+@use 'variables' as *
+
+.card
+  width: 300px
+  box-shadow: 0 5px 30px rgba(19, 25, 41, .25)
+  border-radius: 10px
+  display: flex
+  flex-direction: column
+  font: bold 10px/12px $font
+  margin: 10px
+  +media()
+    flex-direction: row
+    width: 541px
+
+  &__head
+    border-radius: 10px
+    color: #fff
+    min-height: 140px
+    display: flex
+    flex-direction: column
+    background: center/cover url(../../img/event-store/card/cover_mobile.jpg) no-repeat
+    align-items: center
+    +media()
+      background: url(../../img/event-store/card/cover_desktop.jpg) no-repeat
+      width: 205px
+      border-radius: 10px 0 0 10px
+    .notifications
+      width: 100%
+      display: flex
+      box-sizing: border-box
+      padding: 10px 10px 0
+      &__item
+        position: relative
+        box-sizing: border-box
+        padding: 4px 10px
+        background: #fff
+        height: 20px
+        border-radius: 17px
+        margin-right: 6px
+        &:last-child
+          margin: 0
+        &:hover > .popUp
+          display: block
+          min-width: 111px
+          top: -50px
+          left: 0
+
+  &__city
+    margin: 16px 0
+    +media()
+      margin: 45px 0 25px
+      font: bold 12px/14px $font
+  
+  &__event
+    text-transform: uppercase
+    +media()
+      font: bold 12px/14px $font
+
+  &__header
+    margin-top: 7px
+    color: #fff
+    font: bold 16px/19px $font
+    +media()
+      font: bold 18px/21px $font
+      margin-top: 10px
+
+  &__body
+    display: flex
+    flex-direction: column
+    box-sizing: border-box
+    padding: 16px
+    +media()
+      width: 336px
+      padding: 14px 20px
+
+    .top__block     
+      .description
+        display: flex
+        margin-bottom: 10px
+        &__header
+          font: bold 14px/16px $font
+          margin-right: 15px
+        &__help
+          position: relative
+          display: flex
+          align-items: center
+          &Image
+            display: block
+            width: 16px
+            height: 16px
+            margin-right: 5px
+            +media()
+              width: 14px
+              height: 14px
+            &:hover + .popUp
+              display: block
+              min-width: 150px
+              top: -113px
+              left: -7px
+              +media()
+                min-width: 200px
+                top: -85px
+                left: -8px
+              +media(1240px)
+                min-width: 264px
+                top: -75px
+
+          &Link
+            color: $light
+            text-decoration: underline
+            +media()
+              font: 8px/9px $font
+              text-decoration: none
+    
+      .condition
+        font: 12px/20px $font
+        box-sizing: border-box
+        padding-left: 30px
+        min-height: 20px
+        margin-bottom: 10px
+        +media()
+          font-size: 10px
+          margin-bottom: 5px
+        &:last-child
+          margin-bottom: 0
+        &_certificate
+          background: url(../../img/event-store/card/heart.svg) no-repeat 0 0
+        &_insurance
+          background: url(../../img/event-store/card/shield.svg) no-repeat 2px 0
+
+    .midle__block
+      padding: 10px 0
+      border-top: 1px solid #D0D0D0 
+      border-bottom: 1px solid #D0D0D0
+      font: 12px/14px $font
+      margin: 16px 0
+      +media()
+        margin: 8px 0
+        font: 10px/12px $font
+      
+      .date
+        margin-bottom: 20px
+        +media()
+          display: flex
+          justify-content: space-between
+          margin-bottom: 8px
+        &__text
+          font-weight: bold
+          margin-bottom: 10px
+          +media()
+            margin: 0
+
+      .ticket
+        @extend .date
+        margin: 0 
+        &__text
+          @extend .date__text
+
+    .bottom__block      
+      font: 12px/14px $font
+      height: 100%
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      min-height: 133px
+      +media()
+        min-height: 75px
+
+      .nextPrice
+        display: flex
+        align-items: center
+        justify-content: space-between
+        margin-bottom: 10px
+        +media()
+          font: 10px/12px $font
+      
+      .currentPrice
+        @extend .nextPrice
+        margin-bottom: 20px
+        font: bold 14px/16px $font
+        +media()
+          margin-bottom: 8px
+        &__sum
+          font: bold 16px/19px $font
+          color: red
+          +media()
+            font: bold 18px/21px $font
+      
+      .count
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+        align-items: center
+        +media()
+          justify-content: flex-end
+          flex-wrap: nowrap
+        &__minus
+          width: 26px
+          height: 26px
+          border-radius: 50%
+          background: center/cover url(../../img/event-store/card/minus_mobile.svg) no-repeat
+          margin-right: 15px
+          cursor: pointer
+          +media()
+            background: center url(../../img/event-store/card/minus_desktop.svg) no-repeat
+            width: 18px
+            height: 18px
+            margin-right: 10px
+            font: 300 14px/14px $font
+
+        &__number
+          font: bold 16px/26px $font
+          margin-right: 15px
+          +media()
+            font: bold 14px/18px $font
+            margin-right: 10px
+
+        &__plus
+          @extend .count__minus
+          margin: 0
+          background: center/cover url(../../img/event-store/card/plus_mobile.svg) no-repeat
+          +media()
+            background: center url(../../img/event-store/card/plus_desktop.svg) no-repeat
+            margin-right: 20px
+
+        .button
+          margin-top: 16px
+          width: 100%
+          display: flex
+          justify-content: center
+          +media()       
+            width: 138px
+            margin: 0
+             
+.popUp
+  display: none
+  position: absolute
+  box-sizing: border-box
+  padding: 10px    
+  border-radius: 4px
+  background: $dark
+  color: #fff
+  font: 10px/12px $font
+  text-align: center
+  transition: .3s all
+  z-index: 1
+  &::after
+    position: absolute
+    content: ""
+    width: 10px
+    height: 10px
+    border-radius: 3px
+    transform: rotate(45deg)
+    bottom: -4px
+    left: 10px
+    background: $dark
+    z-index: 0

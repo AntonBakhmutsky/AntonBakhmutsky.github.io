@@ -1,0 +1,45 @@
+.red_btn {
+  background: #ED1C24;
+  border-radius: 5px;
+  padding: 10px 40px;
+  border: 1px solid #ED1C24;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  display: inline-block;
+  transition: all 0.3s;
+}
+
+.red_btn:hover {
+  background: transparent;
+  color: #ED1C24;
+}
+
+.black_btn {
+  background: #262C2E;
+  border-radius: 5px;
+  padding: 5px 40px;
+  border: 1px solid #262C2E;
+  font-weight: bold;
+  font-size: 10px;
+  line-height: 12px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  display: inline-block;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.black_btn:hover {
+  background: transparent;
+  color: #262C2E;
+}
+
+.black_btn.disabled {
+  background: #E5E5E7;
+  color: #8C8C8D;
+  border: 1px solid #E5E5E7;
+}

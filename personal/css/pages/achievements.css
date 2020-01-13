@@ -1,0 +1,90 @@
+.achievement_slider_container {
+  background: #262C2E;
+  height: 60px;
+}
+
+.achievement_slider_container .achievement_slider .slick-prev {
+  width: 30px;
+  height: 30px;
+  background-image: url(../../img/slider-arrow-left.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.achievement_slider_container .achievement_slider .slick-prev:before {
+  display: none;
+}
+
+.achievement_slider_container .achievement_slider .slick-next {
+  width: 30px;
+  height: 30px;
+  background-image: url(../../img/slider-arrow-right.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.achievement_slider_container .achievement_slider .slick-next:before {
+  display: none;
+}
+
+.achievement_slider_container .achievement_slider .item {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 60px;
+}
+
+.achievement_slider_container .achievement_slider .item:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+}
+
+.achievement_slider_container .achievement_slider .item img {
+  margin: auto;
+  height: 55px;
+}
+
+.achievement_slider_container .achievement_slider .item .tooltip {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: 125px;
+  background: #78818B;
+  -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  width: 150px;
+  padding: 13px 3px;
+  text-align: center;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1;
+}
+
+.achievement_slider_container .achievement_slider .item .tooltip:before {
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  -webkit-transform: translateY(-50%) rotate(45deg);
+  transform: translateY(-50%) rotate(45deg);
+  top: 50%;
+  left: -6px;
+  background: #78818B;
+  position: absolute;
+  border-radius: 4px;
+}

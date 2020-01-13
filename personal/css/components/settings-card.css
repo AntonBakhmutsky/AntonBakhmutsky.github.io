@@ -1,0 +1,55 @@
+.settings-card {
+  width: 280px;
+  margin: 24px 42px;
+}
+
+.settings-card .v-select,
+.settings-card .v-text-field {
+  margin-bottom: 12px;
+}
+
+.settings-card .btn_block{
+  margin-top: 12px;
+}
+
+.settings-card:nth-of-type(3n) .lock_block .drop_down {
+  left: auto;
+  right: 0;
+}
+
+.settings-card:nth-of-type(3n) .lock_block .tooltip {
+  right: auto;
+  left: -143px;
+}
+
+.settings-card:nth-of-type(3n) .lock_block .tooltip:before {
+  right: -4px;
+  left: auto;
+}
+
+.settings-card .caption {
+  position: relative;
+  margin-bottom: 35px;
+}
+
+@media screen and (max-width: 992px) {
+  .settings-card {
+    width: 100%;
+    margin: 10px 0 0 0;
+    padding: 15px;
+    background: #fff;
+  }
+
+  .settings-card:nth-child(2) {
+    -webkit-box-ordinal-group: 2;
+    order: 1;
+  }
+  .settings-card:nth-child(3) {
+    -webkit-box-ordinal-group: 3;
+    order: 2;
+  }
+  .settings-card:nth-child(6) {
+    -webkit-box-ordinal-group: 4;
+    order: 3;
+  }
+}

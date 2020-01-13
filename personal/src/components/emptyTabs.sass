@@ -1,0 +1,38 @@
+.tabs_item_empty
+    height: 600px
+    display: flex
+    flex-direction: column
+    align-items: center
+    align-content: flex-end
+    @media screen and (max-width: 992px)
+        background-size: 55%
+    @media screen and (max-width: 650px)
+        height: 400px
+    @media screen and (max-width: 550px)
+        height: 300px
+    @media screen and (max-width: 550px)
+        height: 250px
+
+    .text
+        display: flex
+        align-items: flex-end
+        font-weight: bold
+        font-size: 20px
+        line-height: 23px
+        color: #78818b
+        flex-basis: 90%
+        margin-bottom: 24px
+        @media screen and (max-width: 992px)
+            font-size: 14px
+            line-height: 16px
+
+    .evnts &
+        background: url('~assets/pages/EmptyEvents.svg') no-repeat top
+
+    .trainings &
+        background: url('~assets/pages/EmptyTrainings.svg') no-repeat top
+
+    .results &
+        background: url('~assets/pages/EmptyResults.svg') no-repeat top
+
+

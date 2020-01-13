@@ -1,0 +1,7 @@
+.idea
+.sass-cache
+*.css.map
+css/variables.css
+css/card.css
+css/emptyTabs.css
+css/buttons.css

@@ -1,0 +1,337 @@
+.card {
+  width: 300px;
+  box-shadow: 0 5px 30px rgba(19, 25, 41, 0.25);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  font: bold 10px/12px "Roboto", sans-serif;
+  margin: 10px;
+}
+@media screen and (min-width: 992px) {
+  .card {
+    flex-direction: row;
+    width: 541px;
+  }
+}
+.card__head {
+  border-radius: 10px;
+  color: #fff;
+  min-height: 140px;
+  display: flex;
+  flex-direction: column;
+  background: center/cover url(../../img/event-store/card/cover_mobile.jpg) no-repeat;
+  align-items: center;
+}
+@media screen and (min-width: 992px) {
+  .card__head {
+    background: url(../../img/event-store/card/cover_desktop.jpg) no-repeat;
+    width: 205px;
+    border-radius: 10px 0 0 10px;
+  }
+}
+.card__head .notifications {
+  width: 100%;
+  display: flex;
+  box-sizing: border-box;
+  padding: 10px 10px 0;
+}
+.card__head .notifications__item {
+  position: relative;
+  box-sizing: border-box;
+  padding: 4px 10px;
+  background: #fff;
+  height: 20px;
+  border-radius: 17px;
+  margin-right: 6px;
+}
+.card__head .notifications__item:last-child {
+  margin: 0;
+}
+.card__head .notifications__item:hover > .popUp {
+  display: block;
+  min-width: 111px;
+  top: -50px;
+  left: 0;
+}
+.card__city {
+  margin: 16px 0;
+}
+@media screen and (min-width: 992px) {
+  .card__city {
+    margin: 45px 0 25px;
+    font: bold 12px/14px "Roboto", sans-serif;
+  }
+}
+.card__event {
+  text-transform: uppercase;
+}
+@media screen and (min-width: 992px) {
+  .card__event {
+    font: bold 12px/14px "Roboto", sans-serif;
+  }
+}
+.card__header {
+  margin-top: 7px;
+  color: #fff;
+  font: bold 16px/19px "Roboto", sans-serif;
+}
+@media screen and (min-width: 992px) {
+  .card__header {
+    font: bold 18px/21px "Roboto", sans-serif;
+    margin-top: 10px;
+  }
+}
+.card__body {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 16px;
+}
+@media screen and (min-width: 992px) {
+  .card__body {
+    width: 336px;
+    padding: 14px 20px;
+  }
+}
+.card__body .top__block .description {
+  display: flex;
+  margin-bottom: 10px;
+}
+.card__body .top__block .description__header {
+  font: bold 14px/16px "Roboto", sans-serif;
+  margin-right: 15px;
+}
+.card__body .top__block .description__help {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.card__body .top__block .description__helpImage {
+  display: block;
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+}
+@media screen and (min-width: 992px) {
+  .card__body .top__block .description__helpImage {
+    width: 14px;
+    height: 14px;
+  }
+}
+.card__body .top__block .description__helpImage:hover + .popUp {
+  display: block;
+  min-width: 150px;
+  top: -113px;
+  left: -7px;
+}
+@media screen and (min-width: 992px) {
+  .card__body .top__block .description__helpImage:hover + .popUp {
+    min-width: 200px;
+    top: -85px;
+    left: -8px;
+  }
+}
+@media screen and (min-width: 1240px) {
+  .card__body .top__block .description__helpImage:hover + .popUp {
+    min-width: 264px;
+    top: -75px;
+  }
+}
+.card__body .top__block .description__helpLink {
+  color: #78818B;
+  text-decoration: underline;
+}
+@media screen and (min-width: 992px) {
+  .card__body .top__block .description__helpLink {
+    font: 8px/9px "Roboto", sans-serif;
+    text-decoration: none;
+  }
+}
+.card__body .top__block .condition {
+  font: 12px/20px "Roboto", sans-serif;
+  box-sizing: border-box;
+  padding-left: 30px;
+  min-height: 20px;
+  margin-bottom: 10px;
+}
+@media screen and (min-width: 992px) {
+  .card__body .top__block .condition {
+    font-size: 10px;
+    margin-bottom: 5px;
+  }
+}
+.card__body .top__block .condition:last-child {
+  margin-bottom: 0;
+}
+.card__body .top__block .condition_certificate {
+  background: url(../../img/event-store/card/heart.svg) no-repeat 0 0;
+}
+.card__body .top__block .condition_insurance {
+  background: url(../../img/event-store/card/shield.svg) no-repeat 2px 0;
+}
+.card__body .midle__block {
+  padding: 10px 0;
+  border-top: 1px solid #D0D0D0;
+  border-bottom: 1px solid #D0D0D0;
+  font: 12px/14px "Roboto", sans-serif;
+  margin: 16px 0;
+}
+@media screen and (min-width: 992px) {
+  .card__body .midle__block {
+    margin: 8px 0;
+    font: 10px/12px "Roboto", sans-serif;
+  }
+}
+.card__body .midle__block .date, .card__body .midle__block .ticket {
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 992px) {
+  .card__body .midle__block .date, .card__body .midle__block .ticket {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+  }
+}
+.card__body .midle__block .date__text, .card__body .midle__block .ticket__text {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+@media screen and (min-width: 992px) {
+  .card__body .midle__block .date__text, .card__body .midle__block .ticket__text {
+    margin: 0;
+  }
+}
+.card__body .midle__block .ticket {
+  margin: 0;
+}
+.card__body .bottom__block {
+  font: 12px/14px "Roboto", sans-serif;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 133px;
+}
+@media screen and (min-width: 992px) {
+  .card__body .bottom__block {
+    min-height: 75px;
+  }
+}
+.card__body .bottom__block .nextPrice, .card__body .bottom__block .currentPrice {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+@media screen and (min-width: 992px) {
+  .card__body .bottom__block .nextPrice, .card__body .bottom__block .currentPrice {
+    font: 10px/12px "Roboto", sans-serif;
+  }
+}
+.card__body .bottom__block .currentPrice {
+  margin-bottom: 20px;
+  font: bold 14px/16px "Roboto", sans-serif;
+}
+@media screen and (min-width: 992px) {
+  .card__body .bottom__block .currentPrice {
+    margin-bottom: 8px;
+  }
+}
+.card__body .bottom__block .currentPrice__sum {
+  font: bold 16px/19px "Roboto", sans-serif;
+  color: red;
+}
+@media screen and (min-width: 992px) {
+  .card__body .bottom__block .currentPrice__sum {
+    font: bold 18px/21px "Roboto", sans-serif;
+  }
+}
+.card__body .bottom__block .count {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (min-width: 992px) {
+  .card__body .bottom__block .count {
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+  }
+}
+.card__body .bottom__block .count__minus, .card__body .bottom__block .count__plus {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: center/cover url(../../img/event-store/card/minus_mobile.svg) no-repeat;
+  margin-right: 15px;
+  cursor: pointer;
+}
+@media screen and (min-width: 992px) {
+  .card__body .bottom__block .count__minus, .card__body .bottom__block .count__plus {
+    background: center url(../../img/event-store/card/minus_desktop.svg) no-repeat;
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+    font: 300 14px/14px "Roboto", sans-serif;
+  }
+}
+.card__body .bottom__block .count__number {
+  font: bold 16px/26px "Roboto", sans-serif;
+  margin-right: 15px;
+}
+@media screen and (min-width: 992px) {
+  .card__body .bottom__block .count__number {
+    font: bold 14px/18px "Roboto", sans-serif;
+    margin-right: 10px;
+  }
+}
+.card__body .bottom__block .count__plus {
+  margin: 0;
+  background: center/cover url(../../img/event-store/card/plus_mobile.svg) no-repeat;
+}
+@media screen and (min-width: 992px) {
+  .card__body .bottom__block .count__plus {
+    background: center url(../../img/event-store/card/plus_desktop.svg) no-repeat;
+    margin-right: 20px;
+  }
+}
+.card__body .bottom__block .count .button {
+  margin-top: 16px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+@media screen and (min-width: 992px) {
+  .card__body .bottom__block .count .button {
+    width: 138px;
+    margin: 0;
+  }
+}
+
+.popUp {
+  display: none;
+  position: absolute;
+  box-sizing: border-box;
+  padding: 10px;
+  border-radius: 4px;
+  background: #262C2E;
+  color: #fff;
+  font: 10px/12px "Roboto", sans-serif;
+  text-align: center;
+  transition: 0.3s all;
+  z-index: 1;
+}
+.popUp::after {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+  transform: rotate(45deg);
+  bottom: -4px;
+  left: 10px;
+  background: #262C2E;
+  z-index: 0;
+}
+
+/*# sourceMappingURL=card.css.map */
