@@ -134,7 +134,7 @@
             </div>
         </section>
         <section class="event__cards">
-            <div class="card">
+            <div class="card event_1">
                 <div class="card__head">
                     <div class="notifications">
                         <div class="notifications__item">
@@ -202,7 +202,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card">
+            <div class="card event_2">
                 <div class="card__head">
                     <div class="notifications">
                         <div class="notifications__item">
@@ -334,11 +334,118 @@
     </main>
 
     <!---------------------------------------------- MODAL --------------------------------------------->
-    <div class="event__modal event__modal_withoutSelect">
+    <aside class="event__modal event__modal_withoutSelect">
         <div class="modal">
-            
+            <div class="modal__head">
+                <div class="notifications">
+                    <div class="notifications__item">
+                        <img class="notifications__image" src="img/event-store/card/ocr.svg" alt="ocr">
+                        <div class="popUp">Аккредитация OCR</div>
+                    </div>
+                    <div class="notifications__item">
+                        <img class="notifications__image" src="img/event-store/card/age_rating.svg" alt="age">
+                    </div>
+                </div>
+                <div class="modal__close"></div>
+            </div>
+            <div class="modal__body">
+                <div class="modal__name">Личный зачет. Age</div>
+                <div class="modal__description">
+                    Формат, в котором участники соревнуются внутри подгрупп в рамках своего возраста (18-29, 30-39 и
+                    40+). Выбирай Age-group, если находишься на старте своей спортивной карьеры или пока не готов к
+                    соперничеству в категории PRO. Победители формата Age-group получают крутые подарки от наших
+                    спонсоров, награждаются медалями и дипломами.
+                </div>
+                <div class="condition condition_certificate">
+                    Требуется медицинская справка
+                </div>
+                <div class="condition condition_insurance">
+                    Требуется страховка
+                </div>
+                <div class="modal__buy">
+                    <div class="modal__count">
+                        Количество
+                        <span class="modal__countSum">1</span>
+                    </div>
+                    <div class="modal__price">
+                        Стоимость
+                        <span class="modal__priceSum">3000 &#8381;</span>
+                    </div>
+                    <div class="modal__button">
+                        <a class="redButton redButton_modal" href="#">купить</a>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
+    </aside>
+    <aside class="event__modal event__modal_withSelect">
+        <div class="modal">
+            <div class="modal__head">
+                <div class="notifications">
+                    <div class="notifications__item">
+                        <img class="notifications__image" src="img/event-store/card/age_rating.svg" alt="age">
+                    </div>
+                </div>
+                <div class="modal__close"></div>
+            </div>
+            <div class="modal__body">
+                <div class="modal__name">Личный зачет. Age</div>
+                <div class="modal__description">
+                    Формат, в котором участники соревнуются внутри подгрупп в рамках своего возраста (18-29, 30-39 и
+                    40+). Выбирай Age-group, если находишься на старте своей спортивной карьеры или пока не готов к
+                    соперничеству в категории PRO. Победители формата Age-group получают крутые подарки от наших
+                    спонсоров, награждаются медалями и дипломами.
+                </div>
+                <div class="condition condition_certificate">
+                    Требуется медицинская справка
+                </div>
+                <div class="condition condition_insurance">
+                    Требуется страховка
+                </div>
+                <div class="modal__select">
+                    <select class="select" name="platoon" id="platoon">
+                        <option disabled selected>Выберите взвод</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                    <select class="select" name="place" id="place">
+                        <option disabled selected>Выберите место</option>
+                        <option value="1">001</option>
+                        <option value="2">002</option>
+                        <option value="3">003</option>
+                        <option value="4">004</option>
+                        <option value="5">005</option>
+                        <option value="6">006</option>
+                        <option value="7">007</option>
+                        <option value="8">008</option>
+                        <option value="9">009</option>
+                        <option value="10">010</option>
+                    </select>
+                </div>
+                <div class="modal__buy">
+                    <div class="modal__count">
+                        Количество
+                        <span class="modal__countSum">0</span>
+                    </div>
+                    <div class="modal__price">
+                        Стоимость
+                        <span class="modal__priceSum">0 &#8381;</span>
+                    </div>
+                    <div class="modal__button">
+                        <a class="redButton redButton_modal redButton_modal_disabled" href="#">купить</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aside>
     <!--------------------------------------------- footer --------------------------------------------->
 
     <footer class="event__mainFooter">

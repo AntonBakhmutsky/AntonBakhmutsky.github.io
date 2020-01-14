@@ -99,4 +99,28 @@ window.addEventListener('load', () => {
   plus.forEach(el => el.addEventListener('click', increase));
   minus.forEach(el => el.addEventListener('click', decrease));
 
+  //buy modal
+  const buttons = document.querySelectorAll('.card .redButton');
+  const modalWithSelect = document.querySelector('.event__modal_withSelect');
+  const modalWithoutSelect = document.querySelector('.event__modal_withoutSelect');
+  const cardModals = document.querySelectorAll('.event__modal');
+
+  const showCardModal = () => {
+    event.preventDefault();
+    if (event.target.closest('.card').classList.contains('event_1')) {
+      modalWithSelect.style.display = 'flex';
+    } else if (event.target.closest('.card').classList.contains('event_2')) {
+      modalWithoutSelect.style.display = 'flex';
+    } 
+  }
+
+  const closeCardModal = () => {
+    const list = event.target.classList;
+    if (list.contains('event__modal') || list.contains('modal__close')) {
+      cardModals.forEach(el => el.removeAttribute('style'));
+    }
+  }
+
+  buttons.forEach(el => el.addEventListener('click', showCardModal));
+  cardModals.forEach(el => el.addEventListener('click', closeCardModal));
 });

@@ -24,26 +24,6 @@
       background: url(../../img/event-store/card/cover_desktop.jpg) no-repeat
       width: 205px
       border-radius: 10px 0 0 10px
-    .notifications
-      width: 100%
-      display: flex
-      box-sizing: border-box
-      padding: 10px 10px 0
-      &__item
-        position: relative
-        box-sizing: border-box
-        padding: 4px 10px
-        background: #fff
-        height: 20px
-        border-radius: 17px
-        margin-right: 6px
-        &:last-child
-          margin: 0
-        &:hover > .popUp
-          display: block
-          min-width: 111px
-          top: -50px
-          left: 0
 
   &__city
     margin: 16px 0
@@ -112,21 +92,6 @@
               font: 8px/9px $font
               text-decoration: none
     
-      .condition
-        font: 12px/20px $font
-        box-sizing: border-box
-        padding-left: 30px
-        min-height: 20px
-        margin-bottom: 10px
-        +media()
-          font-size: 10px
-          margin-bottom: 5px
-        &:last-child
-          margin-bottom: 0
-        &_certificate
-          background: url(../../img/event-store/card/heart.svg) no-repeat 0 0
-        &_insurance
-          background: url(../../img/event-store/card/shield.svg) no-repeat 2px 0
 
     .midle__block
       padding: 10px 0
@@ -232,6 +197,22 @@
             width: 138px
             margin: 0
              
+.condition
+  font: 12px/20px $font
+  box-sizing: border-box
+  padding-left: 30px
+  min-height: 20px
+  margin-bottom: 10px
+  +media()
+    font-size: 10px
+    margin-bottom: 5px
+  &:last-child
+    margin-bottom: 0
+  &_certificate
+    background: url(../../img/event-store/card/heart.svg) no-repeat 0 0
+  &_insurance
+    background: url(../../img/event-store/card/shield.svg) no-repeat 2px 0
+    
 .popUp
   display: none
   position: absolute
@@ -255,3 +236,26 @@
     left: 10px
     background: $dark
     z-index: 0
+
+.notifications
+  width: 100%
+  display: flex
+  box-sizing: border-box
+  padding: 10px 10px 0
+  &__item
+    display: flex
+    align-items: center
+    justify-content: center
+    position: relative
+    box-sizing: border-box
+    padding: 4px 10px
+    background: #fff
+    border-radius: 17px
+    margin-right: 6px
+    &:last-child
+      margin: 0
+    &:hover > .popUp
+      display: block
+      min-width: 111px
+      top: -50px
+      left: 0

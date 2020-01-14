@@ -29,30 +29,6 @@
     border-radius: 10px 0 0 10px;
   }
 }
-.card__head .notifications {
-  width: 100%;
-  display: flex;
-  box-sizing: border-box;
-  padding: 10px 10px 0;
-}
-.card__head .notifications__item {
-  position: relative;
-  box-sizing: border-box;
-  padding: 4px 10px;
-  background: #fff;
-  height: 20px;
-  border-radius: 17px;
-  margin-right: 6px;
-}
-.card__head .notifications__item:last-child {
-  margin: 0;
-}
-.card__head .notifications__item:hover > .popUp {
-  display: block;
-  min-width: 111px;
-  top: -50px;
-  left: 0;
-}
 .card__city {
   margin: 16px 0;
 }
@@ -146,28 +122,6 @@
     font: 8px/9px "Roboto", sans-serif;
     text-decoration: none;
   }
-}
-.card__body .top__block .condition {
-  font: 12px/20px "Roboto", sans-serif;
-  box-sizing: border-box;
-  padding-left: 30px;
-  min-height: 20px;
-  margin-bottom: 10px;
-}
-@media screen and (min-width: 992px) {
-  .card__body .top__block .condition {
-    font-size: 10px;
-    margin-bottom: 5px;
-  }
-}
-.card__body .top__block .condition:last-child {
-  margin-bottom: 0;
-}
-.card__body .top__block .condition_certificate {
-  background: url(../../img/event-store/card/heart.svg) no-repeat 0 0;
-}
-.card__body .top__block .condition_insurance {
-  background: url(../../img/event-store/card/shield.svg) no-repeat 2px 0;
 }
 .card__body .midle__block {
   padding: 10px 0;
@@ -308,6 +262,29 @@
   }
 }
 
+.condition {
+  font: 12px/20px "Roboto", sans-serif;
+  box-sizing: border-box;
+  padding-left: 30px;
+  min-height: 20px;
+  margin-bottom: 10px;
+}
+@media screen and (min-width: 992px) {
+  .condition {
+    font-size: 10px;
+    margin-bottom: 5px;
+  }
+}
+.condition:last-child {
+  margin-bottom: 0;
+}
+.condition_certificate {
+  background: url(../../img/event-store/card/heart.svg) no-repeat 0 0;
+}
+.condition_insurance {
+  background: url(../../img/event-store/card/shield.svg) no-repeat 2px 0;
+}
+
 .popUp {
   display: none;
   position: absolute;
@@ -332,6 +309,33 @@
   left: 10px;
   background: #262C2E;
   z-index: 0;
+}
+
+.notifications {
+  width: 100%;
+  display: flex;
+  box-sizing: border-box;
+  padding: 10px 10px 0;
+}
+.notifications__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  padding: 4px 10px;
+  background: #fff;
+  border-radius: 17px;
+  margin-right: 6px;
+}
+.notifications__item:last-child {
+  margin: 0;
+}
+.notifications__item:hover > .popUp {
+  display: block;
+  min-width: 111px;
+  top: -50px;
+  left: 0;
 }
 
 /*# sourceMappingURL=card.css.map */

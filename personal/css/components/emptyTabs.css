@@ -3,19 +3,28 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  align-content: flex-end; }
+  align-content: flex-end;
+}
 @media screen and (max-width: 992px) {
   .tabs_item_empty {
-    background-size: 55%; } }
+    background-size: 55%;
+  }
+}
 @media screen and (max-width: 650px) {
   .tabs_item_empty {
-    height: 400px; } }
+    height: 400px;
+  }
+}
 @media screen and (max-width: 550px) {
   .tabs_item_empty {
-    height: 300px; } }
+    height: 300px;
+  }
+}
 @media screen and (max-width: 550px) {
   .tabs_item_empty {
-    height: 250px; } }
+    height: 250px;
+  }
+}
 .tabs_item_empty .text {
   display: flex;
   align-items: flex-end;
@@ -24,16 +33,22 @@
   line-height: 23px;
   color: #78818b;
   flex-basis: 90%;
-  margin-bottom: 24px; }
+  margin-bottom: 24px;
+}
 @media screen and (max-width: 992px) {
   .tabs_item_empty .text {
     font-size: 14px;
-    line-height: 16px; } }
+    line-height: 16px;
+  }
+}
 .evnts .tabs_item_empty {
-  background: url("~assets/pages/EmptyEvents.svg") no-repeat top; }
+  background: url("~assets/pages/EmptyEvents.svg") no-repeat top;
+}
 .trainings .tabs_item_empty {
-  background: url("~assets/pages/EmptyTrainings.svg") no-repeat top; }
+  background: url("~assets/pages/EmptyTrainings.svg") no-repeat top;
+}
 .results .tabs_item_empty {
-  background: url("~assets/pages/EmptyResults.svg") no-repeat top; }
+  background: url("~assets/pages/EmptyResults.svg") no-repeat top;
+}
 
 /*# sourceMappingURL=emptyTabs.css.map */

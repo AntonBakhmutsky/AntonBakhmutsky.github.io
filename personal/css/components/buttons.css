@@ -14,14 +14,14 @@
   color: #ED1C24;
   border: 1px solid #ED1C24;
 }
-.redButton_big, .redButton_card {
+.redButton_big, .redButton_modal, .redButton_card {
   width: 196px;
   height: 32px;
   font-size: 14px;
   line-height: 32px;
 }
 @media screen and (min-width: 992px) {
-  .redButton_big, .redButton_card {
+  .redButton_big, .redButton_modal, .redButton_card {
     width: 160px;
     height: 34px;
     line-height: 34px;
@@ -32,6 +32,16 @@
     width: 138px;
     height: 24px;
     line-height: 24px;
+  }
+}
+.redButton_modal_disabled {
+  background: #D0D0D0;
+}
+@media screen and (min-width: 992px) {
+  .redButton_modal {
+    width: 138px;
+    height: 34px;
+    line-height: 34px;
   }
 }
 .redButton_small {

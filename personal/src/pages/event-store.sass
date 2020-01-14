@@ -3,6 +3,7 @@
 @use '../components/card'
 @use '../components/offer'
 @use '../components/eventSlider'
+@use '../components/eventModal'
 
 .event
   min-width: 320px
@@ -103,3 +104,13 @@
       text-align: center
       +media()
         font: bold 18px/21px $font
+
+  &__modal
+    position: fixed
+    display: none
+    justify-content: center
+    align-items: center
+    background: rgba(38, 44, 46, .8)
+    width: 100vw
+    height: 100vh
+    z-index: 1000
