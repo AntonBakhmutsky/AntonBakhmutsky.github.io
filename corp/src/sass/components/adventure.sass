@@ -1,0 +1,106 @@
+@use 'variables' as *
+
+.adventure
+  box-sizing: border-box
+  padding: 68px 0 0
+  display: flex
+  flex-direction: column
+  &__header
+    font: 900 32px/40px $font
+    margin: 0 30px 20px
+    text-transform: uppercase  
+  &__desc
+    font: 16px/20px $font
+    color: $gray
+    margin: 0 30px
+  &__slider
+    box-sizing: border-box
+    padding: 20px 0 40px
+    position: relative
+    width: 100%
+    display: flex
+    justify-content: center
+    overflow-x: scroll
+    &Content
+      display: flex
+      flex-direction: column
+
+    .arrows
+      display: none
+
+    .item
+      overflow: hidden
+      position: relative
+      width: 315px
+      height: 392px
+      transition: all .4s ease-out
+      margin-bottom: 30px
+      box-shadow: 0 4px 20px rgba(0, 0, 0, .25)
+      &__image
+        transition: all .4s ease-out
+        width: 315px
+        height: 210px
+        &_run
+          background: center/cover no-repeat url(../src/img/adventure/run.png)
+        &_race
+          background: center/cover no-repeat url(../src/img/adventure/hero_race.png)
+        &_arena
+          background: center/cover no-repeat url(../src/img/adventure/hero_arena.png)
+        &_games
+          background: center/cover no-repeat url(../src/img/adventure/hero_games.png) 
+
+      &:last-child
+        margin-bottom: 0
+
+      &__description
+        display: flex
+        flex-direction: column
+        position: absolute
+        width: 100%
+        height: 100%
+        box-sizing: border-box
+        padding: 20px 30px 35px
+        background: $white
+        top: 210px
+        left: 0
+        transition: all .4s ease-out
+
+      &__logo
+        margin-bottom: 30px
+        transition: all .4s ease-out
+        .arena
+          width: 52px
+          height: 44px
+        path
+          transition: all .5s ease-out
+
+      &__text
+        font: 14px/17px $font
+        color: $gray
+        margin-bottom: 100px
+        &:nth-child(2)
+          margin-bottom: 65px
+
+      .redBtn
+        width: 260px
+        height: 48px
+        font: 500 16px/48px $font
+
+      &:hover
+        .item
+          &__image
+            height: 100%
+          &__description
+            padding: 40px 27px
+            top: 0
+            background: linear-gradient(0deg, rgba(27, 25, 36, .6), rgba(27, 25, 36, .6))
+            justify-content: space-between
+          &__logo
+            path[fill="#332F43"], path[style="fill:#332F43"], .text             
+              fill: $white
+              
+
+          &__text 
+            margin-bottom: 10px
+            color: $white
+        

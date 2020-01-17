@@ -1,0 +1,288 @@
+@font-face {
+  font-family: "DIN Pro";
+  src: url("../src/fonts/din_pro/DINPro.eot");
+  src: local("DIN Pro"), local("DINPro");
+  src: url("../src/fonts/din_pro/DINPro.eot?#iefix") format("embedded-opentype");
+  src: url("../src/fonts/din_pro/DINPro.woff2") format("woff2");
+  src: url("../src/fonts/din_pro/DINPro.woff") format("woff");
+  src: url("../src/fonts/din_pro/DINPro.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "DIN Pro";
+  src: url("../src/fonts/din_pro/DINPro-Medium.eot");
+  src: local("DIN Pro Medium"), local("DINPro-Medium");
+  src: url("../src/fonts/din_pro/DINPro-Medium.eot?#iefix") format("embedded-opentype");
+  src: url("../src/fonts/din_pro/DINPro-Medium.woff2") format("woff2");
+  src: url("../src/fonts/din_pro/DINPro-Medium.woff") format("woff");
+  src: url("../src/fonts/din_pro/DINPro-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "DIN Pro";
+  src: url("../src/fonts/din_pro/DINPro-Bold.eot");
+  src: local("DIN Pro Bold"), local("DINPro-Bold");
+  src: url("../src/fonts/din_pro/DINPro-Bold.eot?#iefix") format("embedded-opentype");
+  src: url("../src/fonts/din_pro/DINPro-Bold.woff2") format("woff2");
+  src: url("../src/fonts/din_pro/DINPro-Bold.woff") format("woff");
+  src: url("../src/fonts/din_pro/DINPro-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "DIN Pro";
+  src: url("../src/fonts/din_pro/DINPro-Black.eot");
+  src: local("DIN Pro Black"), local("DINPro-Black");
+  src: url("../src/fonts/din_pro/DINPro-Black.eot?#iefix") format("embedded-opentype");
+  src: url("../src/fonts/din_pro/DINPro-Black.woff2") format("woff2");
+  src: url("../src/fonts/din_pro/DINPro-Black.woff") format("woff");
+  src: url("../src/fonts/din_pro/DINPro-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Panton";
+  src: url("../src/fonts/panton/Panton-Regular.eot");
+  src: local("Panton");
+  src: url("../src/fonts/panton/Panton-Regular.eot?#iefix") format("embedded-opentype");
+  src: url("../src/fonts/panton/Panton-Regular.woff2") format("woff2");
+  src: url("../src/fonts/panton/Panton-Regular.woff") format("woff");
+  src: url("../src/fonts/panton/Panton-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+.header {
+  display: flex;
+  flex-direction: column;
+}
+.header__main {
+  height: 67px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 0 30px;
+  align-items: center;
+  background: #fff;
+}
+.header__slider {
+  position: relative;
+  height: 600px;
+  overflow: hidden;
+}
+.header__slider .slider {
+  z-index: -1;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.4s ease-out;
+}
+.header__slider .slider img {
+  width: 100%;
+}
+.header__slider .description {
+  z-index: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+  box-sizing: border-box;
+  padding: 0 30px;
+}
+.header__slider .description__supHeader {
+  font: 500 16px/20px "DIN Pro", sans-serif;
+  margin-bottom: 15px;
+}
+.header__slider .description__header {
+  font: 900 34px/43px "DIN Pro", sans-serif;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+.header__slider .description__text {
+  font: 14px/17px "DIN Pro", sans-serif;
+  opacity: 0.8;
+  margin-bottom: 50px;
+}
+.header__slider .description .redBtn {
+  width: 315px;
+  height: 60px;
+  align-self: center;
+  font: 500 20px/60px "DIN Pro", sans-serif;
+}
+
+.arrows {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+}
+.arrows .arrow rect {
+  fill: #C42828;
+}
+.arrows .arrow path {
+  stroke: #fff;
+}
+.arrows .arrow_disabled rect {
+  fill: #F3F3F3;
+}
+
+.adventure {
+  box-sizing: border-box;
+  padding: 68px 0 0;
+  display: flex;
+  flex-direction: column;
+}
+.adventure__header {
+  font: 900 32px/40px "DIN Pro", sans-serif;
+  margin: 0 30px 20px;
+  text-transform: uppercase;
+}
+.adventure__desc {
+  font: 16px/20px "DIN Pro", sans-serif;
+  color: #8990A7;
+  margin: 0 30px;
+}
+.adventure__slider {
+  box-sizing: border-box;
+  padding: 20px 0 40px;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  overflow-x: scroll;
+}
+.adventure__sliderContent {
+  display: flex;
+  flex-direction: column;
+}
+.adventure__slider .arrows {
+  display: none;
+}
+.adventure__slider .item {
+  overflow: hidden;
+  position: relative;
+  width: 315px;
+  height: 392px;
+  transition: all 0.4s ease-out;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+}
+.adventure__slider .item__image {
+  transition: all 0.4s ease-out;
+  width: 315px;
+  height: 210px;
+}
+.adventure__slider .item__image_run {
+  background: center/cover no-repeat url(../src/img/adventure/run.png);
+}
+.adventure__slider .item__image_race {
+  background: center/cover no-repeat url(../src/img/adventure/hero_race.png);
+}
+.adventure__slider .item__image_arena {
+  background: center/cover no-repeat url(../src/img/adventure/hero_arena.png);
+}
+.adventure__slider .item__image_games {
+  background: center/cover no-repeat url(../src/img/adventure/hero_games.png);
+}
+.adventure__slider .item:last-child {
+  margin-bottom: 0;
+}
+.adventure__slider .item__description {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 20px 30px 35px;
+  background: #fff;
+  top: 210px;
+  left: 0;
+  transition: all 0.4s ease-out;
+}
+.adventure__slider .item__logo {
+  margin-bottom: 30px;
+  transition: all 0.4s ease-out;
+}
+.adventure__slider .item__logo .arena {
+  width: 52px;
+  height: 44px;
+}
+.adventure__slider .item__logo path {
+  transition: all 0.5s ease-out;
+}
+.adventure__slider .item__text {
+  font: 14px/17px "DIN Pro", sans-serif;
+  color: #8990A7;
+  margin-bottom: 100px;
+}
+.adventure__slider .item__text:nth-child(2) {
+  margin-bottom: 65px;
+}
+.adventure__slider .item .redBtn {
+  width: 260px;
+  height: 48px;
+  font: 500 16px/48px "DIN Pro", sans-serif;
+}
+.adventure__slider .item:hover .item__image {
+  height: 100%;
+}
+.adventure__slider .item:hover .item__description {
+  padding: 40px 27px;
+  top: 0;
+  background: linear-gradient(0deg, rgba(27, 25, 36, 0.6), rgba(27, 25, 36, 0.6));
+  justify-content: space-between;
+}
+.adventure__slider .item:hover .item__logo path[fill="#332F43"], .adventure__slider .item:hover .item__logo path[style="fill:#332F43"], .adventure__slider .item:hover .item__logo .text {
+  fill: #fff;
+}
+.adventure__slider .item:hover .item__text {
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.geography {
+  box-sizing: border-box;
+  padding: 0 30px;
+}
+.geography__header {
+  font: 900 32px/40px "DIN Pro", sans-serif;
+  text-transform: uppercase;
+}
+.geography__header span {
+  display: block;
+}
+.geography .progress__bar {
+  display: none;
+}
+.geography__map {
+  margin: 30px 0;
+}
+.geography__map img {
+  width: 100%;
+}
+
+body {
+  min-width: 375px;
+  color: #2D2424;
+}
+
+svg {
+  display: block;
+}
+
+.redBtn {
+  display: block;
+  color: #fff;
+  background: #E83838;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.04em;
+}
+
+/*# sourceMappingURL=main.css.map */

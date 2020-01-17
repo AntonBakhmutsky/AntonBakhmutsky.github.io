@@ -1,0 +1,78 @@
+@use 'variables' as *
+
+.header
+  display: flex
+  flex-direction: column
+
+  &__main
+    height: 67px
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .15)
+    display: flex
+    justify-content: space-between
+    box-sizing: border-box
+    padding: 0 30px
+    align-items: center
+    background: $white
+
+  &__slider
+    position: relative
+    height: 600px
+    overflow: hidden
+    
+    .slider
+      z-index: -1
+      width: 100%      
+      position: absolute
+      top: 0
+      left: 0
+      transition: all .4s ease-out
+
+      img
+        width: 100%
+
+
+    .description
+      z-index: 1
+      height: 100%
+      display: flex
+      flex-direction: column
+      justify-content: center
+      color: $white
+      box-sizing: border-box
+      padding: 0 30px
+
+      &__supHeader
+        font: 500 16px/20px $font
+        margin-bottom: 15px
+
+      &__header
+        font: 900 34px/43px $font
+        margin-bottom: 30px
+        text-transform: uppercase
+      
+      &__text
+        font: 14px/17px $font
+        opacity: .8
+        margin-bottom: 50px
+
+      .redBtn
+        width: 315px
+        height: 60px
+        align-self: center
+        font: 500 20px/60px $font
+        
+.arrows
+  position: absolute
+  bottom: 0
+  right: 0
+  display: flex
+  justify-content: center
+
+  .arrow
+    rect
+      fill: $redDark
+    path
+      stroke: $white
+    &_disabled
+      rect
+        fill: $grayLight
