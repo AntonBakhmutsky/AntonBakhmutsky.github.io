@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,9 +10,124 @@
   <link rel="stylesheet" href="styles/main.css">
   <title>Dobropo</title>
 </head>
-<body>
-  <div class="quad">
 
+<body>
+  <div class="wrapper">
+    <header class="main__header">
+      <div class="logo">
+        <img src="src/img/logo.svg" alt="logo">
+      </div>
+      <nav class="nav">
+        <a class="nav__item" href="#">Услуги</a>
+        <a class="nav__item" href="#">О нас</a>
+        <a class="nav__item" href="#">Контакты</a>
+      </nav>
+      <div class="contacts">
+        <a class="contacts__phone" href="tel:+79995259500">8(999)525-95-00</a>
+        <a class="contacts__request" href="#">Оставить заявку</a>
+      </div>
+    </header>
+    <main class="main">
+      <section class="offers">
+        <div class="offers__top">
+          <div class="left__block">
+            <h1 class="header">Ваша безопасность - наша забота</h1>
+            <p class="text">
+              Мы работаем 10 лет на рынке. При проверке надзорных органов, а также поможем законным способом сэкономить
+              на монтаже средств пожарной безопасности.
+            </p>
+            <div class="lines">
+              <div class="line active"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+            </div>
+          </div>
+          <div class="right__block">
+            <form class="leaveRequest">
+              <h2 class="header">Оставить запрос</h2>
+              <p class="text">
+                Специалист со стажем более 10 лет подберет лучшее решение для вашего бизнеса и объяснит все ньюансы
+                документации и законодательства.
+              </p>
+              <div class="leaveRequest__inputs">
+                <input class="phoneOrEmail" type="text" placeholder="Ваш телефон или E-mail">
+                <textarea class="describe" name="describe" placeholder="Опишите ваш запрос"></textarea>
+                <input class="submit" type="submit" value="отправить">
+              </div>
+              <div class="leaveRequest__checkbox">
+                <input class="checkbox" type="checkbox" id="checkbox_1">
+                <label class="label" for="checkbox_1">Я согласен с условиями <a href="#">обработки персональных
+                    данных</a></label>
+              </div>
+              <div class="leaveRequest__social">
+                <div class="leaveRequest__socialText">
+                  Или задайте вопрос специалисту через чат
+                </div>
+                <div class="leaveRequest__socialIcons">
+                  <a class="leaveRequest__socialIconsItem" href="#">
+                    <img src="src/img/social_icons/vk_dark.svg" alt="icon">
+                  </a>
+                  <a class="leaveRequest__socialIconsItem" href="#">
+                    <img src="src/img/social_icons/whatsapp_dark.svg" alt="icon">
+                  </a>
+                  <a class="leaveRequest__socialIconsItem" href="#">
+                    <img src="src/img/social_icons/telegram_dark.svg" alt="icon">
+                  </a>
+                  <a class="leaveRequest__socialIconsItem" href="#">
+                    <img src="src/img/social_icons/viber_dark.svg" alt="icon">
+                  </a>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="offers__bottom">
+          <div class="tabs">
+            <div class="tabs__buttons">
+              <div class="tabs__buttonsContainer">
+                <div class="button">Расчет пожарных рисков</div>
+                <div class="button">Планы эвакуации</div>
+                <div class="button">Расчет пожарных рисков</div>
+                <div class="button">Мероприятия по обеспечению пожарной безопасности</div>
+                <div class="button active">Мероприятия по обеспечению пожарной безопасности</div>
+              </div>
+            </div>
+            <div class="tabs__arrows">
+              <div class="tabs__arrow tabs__arrow_left">
+
+                <svg width="11" height="17" viewBox="0 0 11 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9.10906 15.0419L2.57446 8.50727L9.10906 1.97267" stroke="#1D1D1D" stroke-width="3"
+                    stroke-linecap="round" />
+                </svg>
+
+              </div>
+              <div class="tabs__arrow tabs__arrow_right">
+
+                <svg width="11" height="17" viewBox="0 0 11 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1.80726 2.08862L8.34186 8.62322L1.80726 15.1578" stroke="#1D1D1D" stroke-width="3"
+                    stroke-linecap="round" />
+                </svg>
+
+              </div>
+            </div>
+            <div class="tabs__content">
+              <div class="tabs__contentItem">Проведение проверок и испытаний пожарной безопасности</div>
+              <div class="tabs__contentItem">Пожарная и охранно-пожарная сигнализация</div>
+              <div class="tabs__contentItem">Тепловизионное обследование</div>
+              <div class="tabs__contentItem">Пожарный водопровод</div>
+              <div class="tabs__contentItem">Разработка СТУ по пожарной безопасности</div>
+              <div class="tabs__contentItem">Проведение проверок и испытаний пожарной безопасности</div>
+              <div class="tabs__contentItem">Пожарная и охранно-пожарная сигнализация</div>
+              <div class="tabs__contentItem">Тепловизионное обследование</div>
+              <div class="tabs__contentItem">Проведение проверок и испытаний пожарной безопасности</div>
+              <div class="tabs__contentItem">Пожарный водопровод</div>
+              <div class="tabs__contentItem">Разработка СТУ по пожарной безопасности</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
   </div>
 </body>
+
 </html>

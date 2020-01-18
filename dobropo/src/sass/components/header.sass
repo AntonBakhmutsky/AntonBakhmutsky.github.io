@@ -1,0 +1,37 @@
+@use 'variables' as *
+/*--------------------------------------- header ----------------------------------------------------*/
+.main__header
+  height: 52px
+  display: flex
+  align-items: center
+  justify-content: space-between
+  padding: 0 20px
+
+  .nav
+    display: flex
+    justify-content: flex-end
+    flex-basis: 50%
+    &__item
+      font: bold 14px/17px $font
+      color: $black
+      margin-right: 55px
+      &:last-child
+        margin: 0
+  
+  .contacts
+    display: flex
+    align-items: center
+    &__phone
+      font: bold 18px/22px $font
+      color: $black
+      margin-right: 60px
+    &__request
+      display: block
+      font: bold 12px/30px $font
+      text-align: center
+      text-transform: uppercase
+      height: 30px
+      width: 156px
+      border-radius: 50px
+      background: $black
+      color: $white

@@ -1,8 +1,16 @@
-@import 'components/variables'
+@use 'components/variables' as *
+@use 'components/header'
+@use 'components/offers'
 
-.quad
-  margin: 200px auto
-  width: 1000px
-  height: 500px
-  background: $black
-  clip-path: polygon(0 0, 20% 0, 38% 11%, 61% 10%, 81% 0, 100% 0, 100% 86%, 72% 87%, 61% 100%, 38% 100%, 21% 87%, 0 87%)
+/*--------------------------------------- global ----------------------------------------------------*/
+body
+  background: #E5E5E5
+
+.wrapper
+  color: $white
+  background: $lightGray
+  position: relative
+  box-sizing: border-box
+  max-width: 1280px
+  margin: 0 auto
+  overflow: hidden
