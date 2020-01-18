@@ -1,0 +1,1 @@
+sass --watch src/sass/main.sass:styles/main.css --style=expanded
