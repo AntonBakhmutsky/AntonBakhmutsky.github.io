@@ -2,11 +2,13 @@
 @use 'offersTabs'
 /*--------------------------------------- offers ----------------------------------------------------*/
 .offers
+  position: relative
   display: flex
   flex-direction: column
-  background: linear-gradient(180deg, #1D1D1D 0%, rgba(10, 15, 46, 0) 100%), center/cover no-repeat url(../src/img/slider/back.jpg)
+  background: linear-gradient(180deg, #1D1D1D 0%, rgba(10, 15, 46, 0) 100%), center/cover no-repeat url(../src/img/offers/offers_back.jpg)
   min-height: 812px
   border-radius: 0 0 65px 65px
+  z-index: 100
 
   &__top
     display: flex
@@ -173,3 +175,12 @@
   
   &__bottom
     margin-top: 58px
+  
+  &__bottomVector
+    max-width: 93%
+    margin-top: -76px
+    z-index: 99
+  &__subBottomVector
+    max-width: 93%
+    margin-top: -76px
+    z-index: 98

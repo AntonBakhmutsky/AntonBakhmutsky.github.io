@@ -1,16 +1,23 @@
 @use 'components/variables' as *
 @use 'components/header'
 @use 'components/offers'
-
+@use 'components/examination'
 /*--------------------------------------- global ----------------------------------------------------*/
 body
-  background: #E5E5E5
+  background: $lightGray
 
 .wrapper
   color: $white
-  background: $lightGray
   position: relative
   box-sizing: border-box
   max-width: 1280px
   margin: 0 auto
   overflow: hidden
+  background: $gray
+
+
+.main
+  position: relative
+  display: flex
+  flex-direction: column
+  align-items: center
