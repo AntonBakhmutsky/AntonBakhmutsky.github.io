@@ -31,7 +31,7 @@
 }
 .main__header .contacts__request {
   display: block;
-  font: bold 12px/30px "Montserrat", sans-serif;
+  font: bold 12px/30px "Roboto", sans-serif;
   text-align: center;
   text-transform: uppercase;
   height: 30px;
@@ -236,7 +236,7 @@
   height: 40px;
   border-radius: 30px;
   color: #fff;
-  font: bold 14px/16px "Montserrat", sans-serif;
+  font: bold 14px/16px "Roboto", sans-serif;
   text-transform: uppercase;
   text-align: center;
 }
@@ -331,17 +331,123 @@
   z-index: 99;
 }
 .offers__subBottomVector {
-  max-width: 93%;
-  margin-top: -76px;
+  max-width: 100%;
+  margin-top: -131px;
   z-index: 98;
 }
 
 /*------------------------------------- examination -------------------------------------------------*/
 .examination {
+  margin-top: -50px;
+  padding: 100px 199px 30px;
   z-index: 97;
   max-width: 1238px;
+  border-radius: 100px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #1D1D1D;
+}
+.examination__header {
+  font: bold 28px/34px "Montserrat", sans-serif;
+  margin-bottom: 20px;
+}
+.examination__subHeader {
+  font: bold 20px/24px "Montserrat", sans-serif;
+  margin-bottom: 45px;
+}
+.examination__tvSet {
+  border: 20px solid #DFDFDF;
+  border-radius: 70px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.examination__tvSet .tvSet__screen {
+  width: 761px;
+  height: 495px;
+  border-radius: 60px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.examination__tvSet .tvSet__slider {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+.examination__tvSet .tvSet__sliderArrow {
+  width: 26px;
+  height: 50px;
+  background: #404044;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.examination__tvSet .tvSet__sliderContent {
+  max-width: 480px;
+  display: flex;
+  overflow-x: scroll;
+}
+.examination__tvSet .tvSet__sliderContent::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+.examination__tvSet .tvSet__sliderContainer {
+  position: relative;
+  display: flex;
+}
+.examination__tvSet .tvSet__sliderItem {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-right: 10px;
+  top: 0;
+  left: 0;
+}
+.examination__description {
+  font: bold 20px/24px "Montserrat", sans-serif;
+  margin-bottom: 15px;
+  color: #8F8F8F;
+}
+.examination__text {
+  max-width: 819px;
+  font: 16px/20px "Montserrat", sans-serif;
+  margin-bottom: 20px;
+}
+.examination__orderNow {
+  margin-top: 20px;
+}
+.examination__orderNowLink {
+  display: block;
+  width: 295px;
+  height: 40px;
+  border-radius: 30px;
+  background: #1D1D1D;
+  color: #fff;
+  font: bold 14px/40px "Roboto", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.examination__social {
+  display: flex;
+  align-items: center;
+}
+.examination__socialText {
+  font: 12px/24px "Montserrat", sans-serif;
+  margin-right: 20px;
+}
+.examination__social .leaveRequest__socialIconsItem {
+  margin-right: 10px;
 }
 
+/*-------------------------------------- aboutUs ----------------------------------------------------*/
 /*--------------------------------------- global ----------------------------------------------------*/
 body {
   background: #E5E5E5;
