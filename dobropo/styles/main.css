@@ -397,18 +397,14 @@
   height: 0;
 }
 .examination__tvSet .tvSet__sliderContainer {
-  position: relative;
   display: flex;
 }
 .examination__tvSet .tvSet__sliderItem {
-  position: absolute;
   width: 50px;
   height: 50px;
   border-radius: 8px;
   overflow: hidden;
   margin-right: 10px;
-  top: 0;
-  left: 0;
 }
 .examination__description {
   font: bold 20px/24px "Montserrat", sans-serif;
@@ -446,8 +442,85 @@
 .examination__social .leaveRequest__socialIconsItem {
   margin-right: 10px;
 }
+.examination__bottomVector {
+  margin-top: -76px;
+  z-index: 96;
+}
+.examination__subBottomVector {
+  margin-top: -56px;
+  z-index: 95;
+}
 
 /*-------------------------------------- aboutUs ----------------------------------------------------*/
+.aboutUs {
+  margin-top: -141px;
+  z-index: 94;
+  width: 100%;
+  padding: 80px;
+  background: #1D1D1D;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.aboutUs__topVector {
+  z-index: 99;
+  margin-top: -178px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.aboutUs__header {
+  font: bold 28px/34px "Montserrat", sans-serif;
+  margin-bottom: 80px;
+}
+.aboutUs__content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.aboutUs__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.aboutUs__number {
+  font: bold 63px/77px "Montserrat", sans-serif;
+  margin-bottom: 25px;
+}
+.aboutUs__number span {
+  font: bold 18px/22px "Montserrat", sans-serif;
+}
+.aboutUs__separator {
+  width: 96px;
+  height: 5px;
+  background: #fff;
+  margin-bottom: 25px;
+}
+.aboutUs__text {
+  text-align: center;
+  max-width: 220px;
+  font: 18px/22px "Montserrat", sans-serif;
+}
+.aboutUs__bottomVector {
+  margin-top: -76px;
+  z-index: 94;
+}
+
+/*-------------------------------------- trustUs ----------------------------------------------------*/
+.trustUs {
+  width: 100%;
+  padding: 100px;
+  background: #fff;
+  margin-top: -141px;
+}
+.trustUs__topVector {
+  z-index: 99;
+  margin-top: -178px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
 /*--------------------------------------- global ----------------------------------------------------*/
 body {
   background: #E5E5E5;

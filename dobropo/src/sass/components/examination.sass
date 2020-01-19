@@ -59,18 +59,14 @@
             height: 0         
 
         &Container
-          position: relative
           display: flex        
 
         &Item
-          position: absolute
           width: 50px
           height: 50px
           border-radius: 8px
           overflow: hidden
           margin-right: 10px
-          top: 0
-          left: 0
     
   &__description
     font: bold 20px/24px $font
@@ -105,4 +101,9 @@
     .leaveRequest__socialIconsItem
       margin-right: 10px
 
-
+  &__bottomVector
+    margin-top: -76px
+    z-index: 96
+  &__subBottomVector
+    margin-top: -56px
+    z-index: 95
