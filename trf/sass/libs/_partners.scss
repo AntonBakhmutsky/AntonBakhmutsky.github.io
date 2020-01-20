@@ -1,0 +1,104 @@
+.partners {
+  &_active {
+    display: flex;
+  }
+
+  display: none;
+  flex: 1 0 auto;
+  width: 100%;
+  flex-direction: column;
+
+  .generalPartners, .informationPartners {
+    width: 100%;
+
+    &__container {
+      @include container;
+      flex-direction: column;
+      padding: 0 10px;
+    }
+  }
+
+  &__header {
+    font: bold 14px/16.5px $textFont;
+    text-align: center;
+    font-family: $headerFont;
+  }
+
+  &__item {
+    margin: 20px 0;
+    width: 100%;
+    box-sizing: border-box;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+
+    &Top {
+      width: 100%;
+      display: flex;
+
+      &Image {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &Bottom {
+      position: relative;
+      padding: 20px;
+      box-sizing: border-box;
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+      background-color: #fff;
+    }
+
+    &Header {
+      font: bold 16px/19px $headerFont;
+      color: #131929;
+    }
+
+    &Desc {
+      margin: 12px 0 0 0;
+      color: #131929;
+    }
+
+    &Stock {
+      position: absolute;
+      top: -11.5px;
+      left: 15px;
+      width: 58px;
+      height: 23px;
+      border-radius: 8px;
+      font: 500 12px/23px $headerFont;
+      text-align: center;
+      background: linear-gradient(180deg, #DA006E 0%, #82509D 100%);
+    }
+
+    &More {
+      margin-top: 13px;
+      display: block;
+      width: 123px;
+      height: 30px;
+      border-radius: 3px;
+      background: $lightColor;
+      font: bold 16px/30px $textFont;
+      text-align: center;
+      color: #fff;
+    }
+
+    &Link {
+      margin-top: 14px;
+      display: flex;
+
+      &Image {
+        display: block;
+        margin-right: 12px;
+      }
+
+      &Adress {
+        display: block;
+        font: bold 16px/19px $textFont;
+        color: $lightColor;
+      }
+    }
+  }
+}

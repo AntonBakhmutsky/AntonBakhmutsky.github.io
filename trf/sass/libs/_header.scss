@@ -1,0 +1,69 @@
+.main__header {
+  z-index: 1001;
+  position: fixed;
+  top: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 0 20px;
+  width: 100%;
+  height: 40px;
+  background: #2C3243;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &Arrow {
+    top: 0;
+    left: 10px;
+    position: absolute;
+    display: flex;
+    text-decoration: none;
+    width: 30px;
+    height: 40px;
+    cursor: pointer;
+
+    &Img {
+      display: block;
+      align-self: center;
+    }
+  }
+
+  &Qr {
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    width: 102px;
+    height: 30px;
+    background: #FFDD2D;
+    box-shadow: 0 10px 20px rgba(60, 96, 195, 0.24);
+    cursor: pointer;
+  }
+
+  &Right {
+    top: 0;
+    right: 10px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    height: 40px;
+  }
+
+  &Face, &Team {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    overflow: hidden;
+    &Image {
+      display: block;
+      width: 100%;
+    }
+  }
+  &Team {
+    margin-right: 10px;
+  }
+}

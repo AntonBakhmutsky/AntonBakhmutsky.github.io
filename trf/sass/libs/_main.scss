@@ -1,0 +1,30 @@
+.main {
+  overflow-x: hidden;
+  padding-top: 40px;
+  padding-bottom: 58px;
+
+  &_darkTheme {
+    background: #160840;
+    color: #FEFEFE;
+  }
+
+  &_gradientTheme {
+    color: #FEFEFE;
+
+    &:before {
+      content: "";
+      position: fixed;
+      top: 40px;
+      bottom: 46px;
+      left: 0;
+      right: 0;
+      background: linear-gradient(180deg, #009AE4 0%, #D20169 100%);
+      z-index: -10;
+    }
+  }
+
+  &_rating {
+    display: flex;
+    flex-direction: column;
+  }
+}

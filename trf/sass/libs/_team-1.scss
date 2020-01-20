@@ -1,0 +1,18 @@
+.team-1 {
+    .public__head {
+        padding-top: 20px;
+    }
+    .public__scoresItemHeader {
+        font-family: Roboto Slab;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 18px;
+        text-align: center;
+        color: $textColor;
+    }
+    .public__scoresItemRating{
+        color: $lightColor;
+        font: bold 14px/17px $headerFont;
+    }
+}

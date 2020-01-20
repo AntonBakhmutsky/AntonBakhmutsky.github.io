@@ -1,0 +1,117 @@
+.rating {
+  &__table {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    min-width: 300px;
+    height: 46px;
+    box-sizing: border-box;
+    padding: 0 10px;
+    margin: 0 10px 10px;
+    background: #FEFEFE;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #131929;
+
+    &Number {
+      width: 20%;
+      font: bold 12px/14px $headerFont;
+
+      &_prizePlace {
+        color: $lightColor;
+      }
+    }
+
+    &User {
+      width: 65%;
+      display: flex;
+      align-items: center;
+
+      &Image {
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
+        box-sizing: border-box;
+
+        &Picture {
+          min-width: 100%;
+        }
+      }
+
+      &Name {
+        font: bold 12px/20px $textFont;
+      }
+    }
+
+    &Score {
+      width: 25%;
+      display: flex;
+      align-items: flex-start;
+
+      &::before {
+        content: "";
+        top: 0;
+        left: 0;
+        width: 15px;
+        height: 15px;
+        background: url(../img/rating/blue_star.svg);
+      }
+
+      &Image {
+        margin-right: 5px;
+        fill: #FEFEFE;
+      }
+
+      &Count {
+        box-sizing: border-box;
+        padding-left: 5px;
+        display: block;
+        position: relative;
+        font: bold 14px/17px $headerFont;
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &_myPlace {
+      background: $lightColor;
+      color: #FEFEFE;
+      border: 2px solid #fff;
+
+      .rating__itemScore {
+        &::before {
+          background: url(../img/rating/white_star.svg);
+        }
+      }
+
+      .rating__itemUserImage {
+        border: 2px solid #FEFEFE;
+      }
+
+      .rating__itemNumber_prizePlace {
+        color: #FEFEFE;
+      }
+    }
+  }
+
+  &__toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 10px;
+    height: 70px;
+
+    &Arrow {
+      &_disabled {
+        display: none;
+      }
+    }
+  }
+}

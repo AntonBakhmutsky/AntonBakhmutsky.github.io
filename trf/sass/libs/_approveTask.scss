@@ -1,0 +1,58 @@
+.approveTask {
+  .givePrize__itemLabel {
+    width: 260px;
+  }
+
+  &__head {
+    width: 260px;
+    font: bold 19px/25px $headerFont;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+  }
+
+  &__number {
+    margin-left: 10px;
+  }
+
+  &__text {
+    width: 260px;
+    margin: 0 30px 25px;
+    font: bold 19px/25px $headerFont;
+  }
+
+  &__outOfRules {
+    width: 100%;
+    color: #D9016F;
+  }
+
+  &__header {
+    margin: 0;
+  }
+
+  &__message {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+
+    &Label {
+      font: 14px/20px $textFont;
+      color: #160840;
+      margin-bottom: 10px;
+    }
+
+    &Input {
+      width: 260px;
+      height: 64px;
+      border: 1px solid #68648C;
+      border-radius: 8px;
+      box-sizing: border-box;
+      padding: 10px 13px;
+      font: 14px/18px $headerFont;
+
+      &::placeholder {
+        color: lighten(#68648C, 30%);
+      }
+    }
+  }
+}

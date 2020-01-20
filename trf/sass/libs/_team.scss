@@ -1,0 +1,169 @@
+.team {
+  p {
+    color: $textColor;
+    text-align: center;
+  }
+  .myProfile__header {
+    .myProfile__aboutSocialContainer {
+      margin: 20px auto;
+
+      p {
+        text-align: center;
+        color: $textColor;
+      }
+    }
+    .myProfile__headerFace {
+      .teamFaceImage {
+        margin: 0;
+      }
+      p {
+        font-weight: bold;
+        font-size: 10px;
+        line-height: 13px;
+        color: $textColor;
+        margin: 10px 0 0;
+      }
+    }
+    .teamFace {
+      flex-direction: column;
+
+      .public__headName {
+        color: $textColor;
+      }
+    }
+  }
+  .myProfile__submit {
+    .myProfile__submitBtn {
+      margin: 0 0 30px;
+    }
+    .myProfile__aboutLink {
+      width: auto;
+      background-color: $darkColor_2;
+      padding: 0px 15px;
+    }
+    .violetBtn {
+      background-color: $darkColor_2;
+    }
+  }
+  .givePrize__body {
+    .givePrize__header {
+      margin: 0;
+    }
+    p {
+      margin: 15px 30px 20px;
+      text-align: center;
+    }
+  }
+  .givePrize__submit {
+    display: none;
+
+    &_active {
+      display: flex;
+      background: #160840;
+      padding: 30px 0 95px;
+      position: relative;
+      z-index: -1;
+      top: -30px;
+    }
+    .givePrize__submitBtn {
+      display: block;
+
+      &:disabled {
+        display: none;
+      }
+    }
+  }
+  .modalQr {
+    position: relative;
+    height: 100%;
+    margin: 20px 0 40px;
+
+    .modalQr__id {
+      width: 258px;
+      height: 69px;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      background: #eaebef;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 30px;
+      line-height: 20px;
+      margin-top: 20px;
+    }
+  }
+  &__deleteBtn {
+    @include btnViolet;
+    width: 123px;
+    height: 30px;
+    font: bold 16px/20px $textFont;
+  }
+  &__body {
+    margin: 30px auto;
+
+    .team__addPartners {
+      display: grid;
+      grid-template-columns: 115px 115px;
+      grid-template-rows: 120px 120px;
+      grid-column-gap: 30px;
+      grid-row-gap: 10px;
+      justify-content: center;
+
+      .team__addPartnersItem {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+
+        .givePrize__itemCross {
+          display: block;
+          position: absolute;
+          top: 5px;
+          right: 19px;
+          width: 19px;
+          height: 19px;
+          border-radius: 50%;
+          background: url(../img/checkbox-blue-close-2.svg) no-repeat center;
+          cursor: pointer;
+        }
+        img {
+          border-radius: 50%;
+          overflow: hidden;
+          width: 76px;
+          height: 76px;
+        }
+        p {
+          margin: 15px 0px;
+          font-weight: bold;
+          font-size: 10px;
+          line-height: 13px;
+          text-align: center;
+        }
+      }
+    }
+  }
+  &__edit {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+
+    .myProfile__aboutLink {
+      &:first-child {
+        background-color: $darkColor_2;
+      }
+    }
+  }
+  &__delete {
+    margin-bottom: 35px;
+
+    a {
+      font-weight: 600;
+      font-size: 12px;
+      border: none;
+      background-color: transparent;
+      line-height: 16px;
+      text-decoration-line: underline;
+      color: $textColor;
+    }
+  }
+}

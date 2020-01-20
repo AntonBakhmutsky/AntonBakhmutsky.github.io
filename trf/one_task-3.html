@@ -1,0 +1,536 @@
+<!DOCTYPE HTML>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <title>Главная</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap" rel="stylesheet">
+    <link href="styles/reset.css" rel="stylesheet">
+    <link href="styles/slick.css" rel="stylesheet">
+    <link href="styles/slick-theme.css" rel="stylesheet">
+    <link href="styles/main.css" rel="stylesheet">
+</head>
+
+<body>
+
+<!--------------------------------------------- header --------------------------------------------->
+<header class="main__header">
+    <a href="#" class="main__headerArrow"><img class="main__headerArrowImg" src="img/union.svg" alt="arrow"></a>
+    <div class="main__headerQr">
+        <img class="main__headerQrImage" src="img/qr.svg" alt="qr">
+    </div>
+    <div class="main__headerRight">
+        <div class="main__headerTeam">
+            <img class="main__headerTeamImage" src="img/team.png" alt="team">
+        </div>
+        <div class="main__headerFace">
+            <img class="main__headerFaceImage" src="img/face.png" alt="face">
+        </div>
+    </div>
+</header>
+<!--------------------------------------------- QR modal ------------------------------------------->
+<div class="modalQr">
+    <h2 class="modalQr__header">Ваш QR-код</h2>
+    <img class="modalQr__image" src="img/global/qr.svg" alt="qr">
+    <div class="modalQr__id">Ваш id: 385394290</div>
+    <div class="modalQr__button">
+        <button class="modalQr__buttonBtn">Свернуть</button>
+    </div>
+</div>
+<!--------------------------------------------- main --------------------------------------------->
+<main>
+    <div class="main">
+        <div class="one_task failed disabled">
+            <div class="main_block" style="background-image: url(img/one-task-img-1.jpg);">
+                <div class="top_block">
+                    <div class="number">#3456</div>
+                    <div class="filter">
+                        <div class="item disabled">
+                            <img src="img/filter-1.svg" alt="filter">
+                            <span>Семейные</span>
+                        </div>
+                        <div class="item disabled">
+                            <img src="img/filter-2.svg" alt="filter">
+                            <span>Креатив</span>
+                        </div>
+                        <div class="item disabled">
+                            <img src="img/filter-3.svg" alt="filter">
+                            <span>Тусовка</span>
+                        </div>
+                        <div class="item disabled">
+                            <img src="img/filter-4.svg" alt="filter">
+                            <span>Спорт</span>
+                        </div>
+                    </div>
+                    <div class="year">
+                        <img src="img/year-grey-2.svg" alt="year">
+                    </div>
+                </div>
+            </div>
+            <div class="content_block">
+                <div class="bottom_block">
+                    <div class="reward_block">
+                        <div class="item">
+                            <p>Монеты</p>
+                            <div class="reward">
+                                <img src="img/global/prizes/coin-disabled.svg" alt="reward">
+                                <div class="number">100</div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <p>Призы</p>
+                            <div class="reward">
+                                <img src="img/global/prizes/gift-disabled.svg" alt="reward">
+                                <div class="number">100</div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <p>Моя роза</p>
+                            <div class="reward">
+                                <img src="img/global/prizes/rosa-disabled.svg" alt="reward">
+                                <div class="number">100</div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <p>Рейтинг</p>
+                            <div class="reward">
+                                <img src="img/global/prizes/star-disabled.svg" alt="reward">
+                                <div class="number">100</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="task_name">
+                    Задание провалено
+                    <i></i>
+                </div>
+                <div class="time_block">
+                    <img src="img/task-time.svg" alt="time">
+                    <div class="text">10 января 2019 12:00-15:00</div>
+                </div>
+                <div class="main_caption">
+                    Раз, два, три ... во весь опор мчииии!
+                </div>
+                <div class="description">
+                    Доберись до трассы и мчи словно ветер! Будь внимателен, не пропусти знаки, что приведут тебя
+                    к
+                    тайнику.
+                </div>
+                <ul class="list_dots">
+                    <li>
+                        Тайник находится на одной из простых трасс
+                    </li>
+                    <li>
+                        Он расположен в месте, скрытом от глаз слишком быстрых спортсменов.
+                    </li>
+                </ul>
+                <div class="bold_text">
+                    Послушай аудиозапись - она подскажет о какой трассе идет речь
+                </div>
+                <div class="audio_block">
+                    <div class="btn_pause"></div>
+                    <div class="track">
+                        <img src="img/track-disabled.svg" alt="">
+                    </div>
+                    <div class="time">
+                        01:24
+                    </div>
+                </div>
+                <div class="bold_text">
+                    Посомтри видео - оно снято на трассе с тайником
+                </div>
+                <div class="video_container">
+                    <div class="video_block">
+                        <div class="btn">
+                            <i class="play"></i>
+                        </div>
+                        <div class="time">
+                            02:10
+                        </div>
+                        <video src="video/video.mp4"></video>
+                    </div>
+                </div>
+                <div class="bold_text">
+                    Это фотографии с трассы с тайником
+                </div>
+                <div class="galery_slider_block">
+                    <div class="galery_slider">
+                        <div class="item" style="background-image: url(img/galery-1.jpg);"></div>
+                        <div class="item" style="background-image: url(img/galery-1.jpg);"></div>
+                        <div class="item" style="background-image: url(img/galery-1.jpg);"></div>
+                        <div class="item" style="background-image: url(img/galery-1.jpg);"></div>
+                        <div class="item" style="background-image: url(img/galery-1.jpg);"></div>
+                        <div class="item" style="background-image: url(img/galery-1.jpg);"></div>
+                    </div>
+                    <div class="galery_slider_nav">
+                        <div class="item" style="background-image: url(img/galery-1.jpg);"></div>
+                        <div class="item" style="background-image: url(img/galery-1.jpg);"></div>
+                        <div class="item" style="background-image: url(img/galery-1.jpg);"></div>
+                        <div class="item" style="background-image: url(img/galery-1.jpg);"></div>
+                        <div class="item" style="background-image: url(img/galery-1.jpg);"></div>
+                        <div class="item" style="background-image: url(img/galery-1.jpg);"></div>
+                    </div>
+                </div>
+                <div class="bold_text">
+                    Внимательно рассмотри подсказку
+                </div>
+                <div class="map_block">
+                    <div class="map">
+                        <img src="img/map.jpg" alt="map">
+                    </div>
+                </div>
+                <div class="bold_text">
+                    Награды за задания:
+                </div>
+                <div class="prize_block">
+                    <div class="reward_block">
+                        <div class="item">
+                            <p>Монеты</p>
+                            <div class="reward">
+                                <img src="img/global/prizes/coin-disabled.svg" alt="reward">
+                                <div class="number">100</div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <p>Призы</p>
+                            <div class="reward">
+                                <img src="img/global/prizes/gift-disabled.svg" alt="reward">
+                                <div class="number">100</div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <p>Моя роза</p>
+                            <div class="reward">
+                                <img src="img/global/prizes/rosa-disabled.svg" alt="reward">
+                                <div class="number">100</div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <p>Рейтинг</p>
+                            <div class="reward">
+                                <img src="img/global/prizes/star-disabled.svg" alt="reward">
+                                <div class="number">100</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="stages_execution_container">
+                    <div class="head">
+                        Чтобы выполнить это задание тебе нужно:
+                    </div>
+                    <div class="body">
+                        <div class="item">
+                            <div class="caption">
+                                <div class="number">1</div>
+                                <div class="text">
+                                    Догадайся, что за место на этих фотографиях
+                                </div>
+                            </div>
+                            <div class="content">
+                                <div class="galery_slider_2">
+                                    <div class="item" style="background-image: url(img/galery-1.jpg);"></div>
+                                    <div class="item" style="background-image: url(img/galery-1.jpg);"></div>
+                                    <div class="item" style="background-image: url(img/galery-1.jpg);"></div>
+                                </div>
+                            </div>
+                            <div class="bottom_btn">
+                                <a href="#" class="btn">
+                                    Свернуть
+                                    <i></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="caption">
+                                <div class="number">2</div>
+                                <div class="text">
+                                    Посмотреть видео от нашего партнера
+                                </div>
+                            </div>
+                            <div class="content">
+                                <div class="description">
+                                    В видео есть кодовое слово. Оно пригодится тебе для выполнения следующего
+                                    задания.
+                                </div>
+                                <div class="another_text">
+                                    Внимательно посомтри видео - оно снято на трассе с тайником
+                                </div>
+                                <div class="video_container">
+                                    <div class="video_block">
+                                        <div class="btn">
+                                            <i class="play"></i>
+                                        </div>
+                                        <div class="time">
+                                            02:10
+                                        </div>
+                                        <video src="video/video.mp4"></video>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bottom_btn">
+                                <a href="#" class="btn">
+                                    Свернуть
+                                    <i></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="caption">
+                                <div class="number">3</div>
+                                <div class="text">
+                                    Внимательно посмотри на карту, это очень важно ты должен находиться в
+                                    <span class="grey_text">
+                                                <span>
+                                                    <img src="img/task-place-icon.svg" alt="icon">
+                                                    100 метрах от точки назначения
+                                                </span>
+                                                <i class="refresh"></i>
+                                            </span>
+                                    время выполнения -
+                                    <span class="grey_text">
+                                                <span>
+                                                    <img src="img/task-time-icon.svg" alt="icon">
+                                                    до 18:00
+                                                </span>
+
+                                            </span>
+                                    ,
+                                    <span class="grey_text">
+                                                <span>
+                                                    <img src="img/task-sun-icon.svg" alt="icon">
+                                                    погода должна быть солнечной
+                                                </span>
+                                                <i class="refresh"></i>
+                                            </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="caption">
+                                <div class="number">4</div>
+                                <div class="text">
+                                    Внимательно посмотри на карту, это очень важно ты должен находиться в
+                                    <span class="red_text">
+                                                <span>
+                                                    <img src="img/task-place-icon.svg" alt="icon">
+                                                    100 метрах от точки назначения
+                                                </span>
+                                                <i class="refresh"></i>
+                                            </span>
+                                    время выполнения -
+                                    <span class="red_text">
+                                                <span>
+                                                    <img src="img/task-time-icon.svg" alt="icon">
+                                                    до 18:00
+                                                </span>
+                                                <i class="refresh"></i>
+                                            </span>
+                                    ,
+                                    <span class="red_text">
+                                                <span>
+                                                    <img src="img/task-sun-icon.svg" alt="icon">
+                                                    погода должна быть солнечной
+                                                </span>
+                                                <i class="refresh"></i>
+                                            </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="caption">
+                                <div class="number">5</div>
+                                <div class="text">
+                                    Внимательно посмотри на карту, это очень важно ты должен находиться в
+                                    <span class="green_text">
+                                                <span>
+                                                    <img src="img/task-place-icon.svg" alt="icon">
+                                                    100 метрах от точки назначения
+                                                </span>
+                                                <i class="refresh"></i>
+                                            </span>
+                                    время выполнения -
+                                    <span class="green_text">
+                                                <span>
+                                                    <img src="img/task-time-icon.svg" alt="icon">
+                                                    до 18:00
+                                                </span>
+                                                <i class="refresh"></i>
+                                            </span>
+                                    ,
+                                    <span class="green_text">
+                                                <span>
+                                                    <img src="img/task-sun-icon.svg" alt="icon">
+                                                    погода должна быть солнечной
+                                                </span>
+                                                <i class="refresh"></i>
+                                            </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="caption">
+                                <div class="number">6</div>
+                                <div class="text">
+                                    Введи кодовое слово из послания
+                                </div>
+                            </div>
+                            <div class="content">
+                                <form class="text_input">
+                                    <div class="caption">
+                                        Ты ввел неправильный ответ и провалил задание
+                                    </div>
+                                    <div class="input__wrap input__wrap_red">
+                                        <input type="text" value="Рациональное мышление">
+                                    </div>
+                                    <div class="bottom_text">
+                                        Попытай удачу в других заданиях :(
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="caption">
+                                <div class="number">7</div>
+                                <div class="text">
+                                    Загрузи фото с горой
+                                </div>
+                            </div>
+                            <div class="content">
+                                <form class="add_img_block">
+                                    <div class="img_block">
+                                        <div class="one_img">
+                                            <i class="close"></i>
+                                            <img src="img/galery-1.jpg" alt="galery">
+                                        </div>
+                                        <div class="one_img">
+                                            <i class="close"></i>
+                                            <img src="img/galery-1.jpg" alt="galery">
+                                        </div>
+                                        <div class="one_img">
+                                            <i class="close"></i>
+                                            <img src="img/galery-1.jpg" alt="galery">
+                                        </div>
+                                        <div class="one_img">
+                                            <i class="close"></i>
+                                            <img src="img/galery-1.jpg" alt="galery">
+                                        </div>
+                                    </div>
+                                    <div class="btn_block">
+                                        <div class="add_btn">
+                                            <i></i>
+                                            Загрузить фотографию
+                                            <input type="file">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="caption">
+                                <div class="number">8</div>
+                                <div class="text">
+                                    Показать QR-код модератору
+                                </div>
+                            </div>
+                            <div class="content">
+                                <div class="qr_block">
+                                    <img src="img/qr-icon.svg" alt="icon">
+                                </div>
+                            </div>
+                            <div class="bottom_btn">
+                                <a href="#" class="btn">
+                                    Свернуть
+                                    <i></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="task_footer">
+                <div class="caption">
+                    Нажми кнопку “Готово!” чтобы выполнить это задание
+                </div>
+                <div class="number_attempts">
+                    <i></i>
+                    У тебя всего 3 попытки!
+                </div>
+                <div class="btn_block">
+                    <button class="blue_btn">Готово!</button>
+                </div>
+                <div class="open_btn">
+                    <a href="#">Есть проблема?</a>
+                    <i></i>
+                </div>
+                <div class="support__block">
+                    <div class="open_btn active">
+                        <a href="#">Есть проблема?</a>
+                        <i></i>
+                    </div>
+                    <div class="support__blockMessage">
+                        Если у вас возникли проблемы позвоните
+                    </div>
+                    <div class="support__blockPhone">
+                        <span class="support__blockPhoneNumber">+7 921 7564783</span>
+                        <img class="support__blockPhoneImage" src="img/global/phone.svg" alt="phone">
+                    </div>
+                    <div class="support__blockMessage">
+                        Или напишите
+                    </div>
+                    <div class="support__blockLink">
+                        <img class="support__blockLinkImage" src="img/global/whatsapp.svg" alt="whatsapp">
+                        <a class="support__blockLinkText"
+                           href="#">https://chat.whatsapp.com/FtEffc8HNRq6SjRcVMRKHw</a>
+                    </div>
+                    <div class="support__blockLink">
+                        <img class="support__blockLinkImage" src="img/global/telegram.svg" alt="telegram">
+                        <a class="support__blockLinkText"
+                           href="#">https://chat.whatsapp.com/FtEffc8HNRq6SjRcVMRKHw</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!--------------------------------------------- footer --------------------------------------------->
+<footer class="main__footer">
+    <div class="main__footerItem">
+        <div class="main__footerItemImage  main__footerItemImage_notifications">
+        </div>
+        <div class="main__footerItemDesc">Уведомления</div>
+        <i class="numberOfNotifications">23</i>
+    </div>
+    <div class="main__footerItem">
+        <div class="main__footerItemImage  main__footerItemImage_tasks">
+        </div>
+        <div class="main__footerItemDesc">Задания</div>
+    </div>
+    <div class="main__footerItem">
+        <div class="main__footerItemImage  main__footerItemImage_prizes">
+        </div>
+        <div class="main__footerItemDesc">Призы</div>
+    </div>
+    <div class="main__footerItem">
+        <div class="main__footerItemImage main__footerItemImage_rating">
+        </div>
+        <div class="main__footerItemDesc">Рейтинги</div>
+        <i class="numberOfNotifications">2</i>
+    </div>
+    <div class="main__footerItem main__footerItem_active">
+        <div class="main__footerItemImage main__footerItemImage_information ">
+        </div>
+        <div class="main__footerItemDesc">Информация</div>
+    </div>
+</footer>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src="scripts/slick.min.js"></script>
+<script src="scripts/main.js"></script>
+<script src="scripts/qr.js"></script>
+</body>
+
+</html>

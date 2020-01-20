@@ -1,0 +1,98 @@
+.givePrize, .approveTask {
+  .validation_error {
+    width: 260px;
+    margin-bottom: 20px;
+
+    .caption {
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 24px;
+      color: #DC4497;
+      padding: 0;
+    }
+
+    .text {
+      font-size: 14px;
+      line-height: 17px;
+      margin-top: 5px;
+      color: #131929;
+    }
+  }
+
+  box-sizing: border-box;
+  padding-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    color: #160840;
+    box-sizing: border-box;
+    padding: 25px 0 30px;
+  }
+
+  &__header {
+    @include blockHeader;
+    margin-bottom: 30px;
+  }
+
+  &__qrBtn {
+    @include btnBlue;
+    font: bold 18px/24px $textFont;
+
+    &:disabled {
+      background: #68648C;
+    }
+  }
+
+  &__item {
+    margin-top: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &Label {
+      margin-top: 20px;
+    }
+
+    &Input {
+      @include input;
+    }
+
+    &Cross {
+      position: absolute;
+      top: 17px;
+      right: 9px;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: url(../img/checkbox-blue-close.svg) no-repeat center;
+      display: none;
+      cursor: pointer;
+
+      &_active {
+        display: block;
+      }
+    }
+  }
+
+  &__submit {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &Btn {
+      -webkit-appearance: none;
+      @extend .givePrize__qrBtn;
+    }
+  }
+}

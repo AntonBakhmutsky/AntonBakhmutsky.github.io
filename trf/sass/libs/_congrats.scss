@@ -1,0 +1,231 @@
+.congrats {
+  display: flex;
+  flex-direction: column;
+
+  &__status {
+    height: 43px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 0 10px;
+    background: #27CAAA;
+
+    &Number {
+      box-sizing: border-box;
+      padding: 0 10px;
+      border-radius: 8px;
+      background: #FEFEFE;
+      font: bold 16px/23px $textFont;
+      color: #27CAAA;
+    }
+
+    &Text {
+      color: #FEFEFE;
+      font: bold 16px/20px $textFont;
+    }
+
+    &Check {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: url(../img/congrats/check_green.svg) no-repeat center, #FEFEFE;
+    }
+  }
+
+  &__description {
+    height: 80%;
+    box-sizing: border-box;
+    padding: 20px 0 0 0;
+    background: #FEFEFE;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &Header {
+      @include blockHeader;
+      color: #131929;
+      margin: 0 30px;
+    }
+
+    &Reward {
+      .reward_text {
+        box-sizing: border-box;
+        margin: 27px 30px 8px;
+        font: bold 14px/17px $textFont;
+        color: #68648C;
+      }
+
+      .reward_block {
+        box-sizing: border-box;
+        padding: 15px 20px;
+        margin: 0 10px;
+        display: flex;
+        justify-content: space-between;
+        color: #68648C;
+        border-radius: 8px;
+        border: 1px solid #27CAAA;
+        background: #C8FFF4;
+
+        .item {
+          display: flex;
+          flex-direction: column;
+
+          p {
+            font: 10px/12px $textFont;
+            margin: 0;
+          }
+
+          .reward {
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+
+            .number {
+              margin-left: 7px;
+            }
+          }
+        }
+      }
+    }
+
+    &Form {
+      .job_rating {
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+        margin-bottom: 0;
+      }
+
+      textarea {
+        display: block;
+        border: 1px solid #68648C;
+        box-sizing: border-box;
+        border-radius: 3px;
+        width: 260px;
+        height: 64px;
+        padding: 13px;
+        font: 16px/19px $textFont;
+        margin: 10px auto 0;
+      }
+
+      &Message {
+        @include blockHeader;
+        color: #68648C;
+        display: none;
+      }
+    }
+
+    &After {
+      display: none;
+      font: 14px/17px $textFont;
+      color: #131929;
+      margin: 27px 30px;
+
+      a.congrats__descriptionAfterLink {
+        color: #131929;
+        text-decoration: underline;
+      }
+    }
+
+    &_afterRating {
+      .congrats__descriptionReward {
+        .reward_text {
+          display: none;
+        }
+
+        .reward_block {
+          display: none;
+        }
+      }
+
+      .congrats__descriptionForm {
+        .job_rating {
+          .caption {
+            display: none;
+          }
+
+          .btn_block {
+            display: none;
+          }
+
+          .congrats__descriptionFormMessage {
+            display: block;
+          }
+        }
+      }
+
+      .congrats__descriptionAfter {
+        display: block;
+      }
+    }
+  }
+
+  &__exit {
+    margin: 20px 0;
+    text-align: center;
+
+    &Btn {
+      @include btnBlue;
+      margin: 10px 0;
+    }
+  }
+}
+
+.sorry {
+  .congrats {
+    &__status {
+      background: #DC4497;
+
+      &Number {
+        color: #DC4497;
+      }
+
+      &Cross {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        background: url(../img/congrats/cross_red.svg) no-repeat center, #FEFEFE;
+      }
+    }
+
+    &__description {
+      &Header {
+        color: #DC4497;
+      }
+
+      &Form {
+        margin-top: 22px;
+      }
+
+      &_afterRating {
+        .congrats__descriptionForm {
+          margin-top: 0;
+
+          .job_rating {
+            .caption {
+              display: none;
+            }
+
+            .btn_block {
+              display: none;
+            }
+
+            .congrats__descriptionForm {
+              margin-top: 0;
+
+              &Message {
+                display: block;
+              }
+            }
+          }
+        }
+
+        .congrats__descriptionAfter {
+          display: block;
+        }
+      }
+    }
+  }
+}

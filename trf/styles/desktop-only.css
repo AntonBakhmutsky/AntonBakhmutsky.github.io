@@ -1,0 +1,99 @@
+/*------------------------------------------- desktop_only_block -------------------------------------------*/
+.desktop_only_block {
+  min-height: 100vh;
+  background-image: url(../img/desktop-only-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 50px;
+  position: relative;
+}
+.desktop_only_block:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, rgba(20, 59, 139, 0) 0%, #143B8B 100%);
+}
+.center_block {
+  text-align: center;
+  width: 100%;
+  max-width: 630px;
+  position: relative;
+  z-index: 10;
+}
+.center_block .text_block {
+  font-weight: bold;
+  font-size: 29px;
+  line-height: 38px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  text-shadow: 1.5px 1.5px 0px #232D5D;
+  font-family: 'Roboto Slab', serif;
+  margin-top: -55px;
+}
+.center_block .mobile_block {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+}
+.center_block .mobile_block .img {
+  display: flex;
+  align-items: center;
+  min-width: 225px;
+}
+.center_block .mobile_block .text {
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 29px;
+  color: #FEFEFE;
+  text-align: left;
+}
+.center_block .scan_block {
+  margin-top: 50px;
+}
+.center_block .scan_block .scan {
+  margin-top: 20px;
+  padding: 15px;
+  background: #FEFEFE;
+  border-radius: 8px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  max-height: 250px;
+}
+.center_block .scan_block .scan img {
+  height: 100%;
+}
+.center_block p {
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 29px;
+  text-align: center;
+  color: #FEFEFE;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+@media (min-width: 1000px) {
+  .center_block {
+    max-width: 950px;
+  }
+  .center_block .logo img {
+    height: 240px;
+  }
+  .center_block .scan_block .scan {
+    width: 137px;
+    height: 137px;
+  }
+  .center_block .scan_block {
+    margin-top: 30px;
+  }
+}
+
+

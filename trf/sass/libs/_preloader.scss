@@ -1,0 +1,41 @@
+/*------------------------------------------- preloader_block -------------------------------------------*/
+.preloader_block {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, .75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+
+  .center_block {
+    position: relative;
+    line-height: 0;
+
+    .loader_logo {
+      height: 200px;
+    }
+
+    .loader_cabin {
+      position: absolute;
+      top: 30px;
+      left: 42px;
+      height: 20px;
+      animation: loader 2s infinite ease-in-out alternate;
+    }
+  }
+
+  @keyframes loader {
+    from {
+      top: 30px;
+      left: 42px;
+    }
+    to {
+      top: 17px;
+      left: 78px;
+    }
+  }
+}

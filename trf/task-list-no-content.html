@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <title>Главная</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap" rel="stylesheet">
+    <link href="styles/reset.css" rel="stylesheet">
+    <link href="styles/main.css" rel="stylesheet">
+</head>
+
+<body>
+
+<!--------------------------------------------- header --------------------------------------------->
+<header class="main__header">
+    <a href="#" class="main__headerArrow"><img class="main__headerArrowImg" src="img/union.svg" alt="arrow"></a>
+    <div class="main__headerQr">
+        <img class="main__headerQrImage" src="img/qr.svg" alt="qr">
+    </div>
+    <div class="main__headerRight">
+        <div class="main__headerTeam">
+            <img class="main__headerTeamImage" src="img/team.png" alt="team">
+        </div>
+        <div class="main__headerFace">
+            <img class="main__headerFaceImage" src="img/face.png" alt="face">
+        </div>
+    </div>
+</header>
+<!--------------------------------------------- QR modal ------------------------------------------->
+<div class="modalQr">
+    <h2 class="modalQr__header">Ваш QR-код</h2>
+    <img class="modalQr__image" src="img/global/qr.svg" alt="qr">
+    <div class="modalQr__id">Ваш id: 385394290</div>
+    <div class="modalQr__button">
+        <button class="modalQr__buttonBtn">Свернуть</button>
+    </div>
+</div>
+<!--------------------------------------------- main --------------------------------------------->
+<main>
+    <div class="main main_gradientTheme">
+        <div class="task_list">
+            <h1>Мои задания</h1>
+            <div class="filter">
+                <div class="item">
+                    <span>Все</span>
+                </div>
+                <div class="item">
+                    <img src="img/filter-1.svg" alt="filter">
+                    <span>Семейные</span>
+                </div>
+                <div class="item active">
+                    <img src="img/filter-2.svg" alt="filter">
+                    <span>Креатив</span>
+                </div>
+                <div class="item">
+                    <img src="img/filter-3.svg" alt="filter">
+                    <span>Тусовка</span>
+                </div>
+                <div class="item">
+                    <img src="img/filter-4.svg" alt="filter">
+                    <span>Спорт</span>
+                </div>
+            </div>
+            <div class="no_content_block">
+                У вас пока нет доступных заданий
+            </div>
+        </div>
+    </div>
+</main>
+
+<!--------------------------------------------- footer --------------------------------------------->
+<footer class="main__footer">
+    <div class="main__footerItem">
+        <div class="main__footerItemImage  main__footerItemImage_notifications">
+        </div>
+        <div class="main__footerItemDesc">Уведомления</div>
+        <i class="numberOfNotifications">23</i>
+    </div>
+    <div class="main__footerItem main__footerItem_active">
+        <div class="main__footerItemImage  main__footerItemImage_tasks">
+        </div>
+        <div class="main__footerItemDesc">Задания</div>
+    </div>
+    <div class="main__footerItem">
+        <div class="main__footerItemImage  main__footerItemImage_prizes">
+        </div>
+        <div class="main__footerItemDesc">Призы</div>
+    </div>
+    <div class="main__footerItem">
+        <div class="main__footerItemImage main__footerItemImage_rating">
+        </div>
+        <div class="main__footerItemDesc">Рейтинги</div>
+        <i class="numberOfNotifications">2</i>
+    </div>
+    <div class="main__footerItem">
+        <div class="main__footerItemImage main__footerItemImage_information ">
+        </div>
+        <div class="main__footerItemDesc">Информация</div>
+    </div>
+</footer>
+<script src="scripts/main.js"></script>
+<script src="scripts/qr.js"></script>
+</body>
+
+</html>

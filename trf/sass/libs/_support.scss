@@ -1,0 +1,11 @@
+.support {
+  height: 80%;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  &_active {
+    display: flex;
+  }
+}
