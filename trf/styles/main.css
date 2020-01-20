@@ -400,10 +400,11 @@ blockquote:after {
 }
 .main__footerItemImage {
   display: flex;
-  width: 20px;
-  height: 20px;
+  width: 22px;
+  height: 22px;
   background-repeat: no-repeat;
   background-position: center;
+  background-size: contain;
 }
 .main__footerItemDesc {
   margin-top: 5px;
