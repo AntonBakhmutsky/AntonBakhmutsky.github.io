@@ -3,7 +3,6 @@ window.addEventListener('load', () => {
     const inputs = document.querySelectorAll('.givePrize__itemInput');
     const cancelations = document.querySelectorAll('.givePrize__itemCross');
     const qrBtn = document.querySelector('.givePrize__qrBtn');
-    const submitDiv = document.querySelector('.givePrize__submit');
     const submitBtn = document.querySelector('.givePrize__submitBtn');
     const id = document.querySelector('#id');
     
@@ -15,14 +14,12 @@ window.addEventListener('load', () => {
             if (!cancel.classList.contains('givePrize__itemCross_active')) {
                 cancel.classList.add('givePrize__itemCross_active');
                 submitBtn.removeAttribute('disabled'); 
-                submitDiv.classList.add('givePrize__submit_active');                        
             } else if (input.id === 'id') {
                 qrBtn.setAttribute('disabled', 'disabled');
             }
         } else {
             cancel.classList.remove('givePrize__itemCross_active');
             qrBtn.removeAttribute('disabled');
-            submitDiv.classList.remove('givePrize__submit_active');
         }
     }
 
@@ -35,7 +32,6 @@ window.addEventListener('load', () => {
         if (!value) {
             qrBtn.removeAttribute('disabled');        
             submitBtn.setAttribute('disabled', 'disabled');
-            submitDiv.classList.remove('givePrize__submit_active');                       
         } else if (id.value === '') {
             qrBtn.removeAttribute('disabled');        
         }

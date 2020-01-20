@@ -166,7 +166,7 @@ blockquote:after {
   border: none;
   outline: none;
   border-radius: 8px;
-  background: #844F9C;
+  background: #418AF9;
   font: bold 20px/24px "Montserrat", sans-serif;
   color: #FEFEFE;
 }
@@ -189,7 +189,7 @@ blockquote:after {
 }
 .input__wrap_white::after {
   content: "";
-  background: linear-gradient(270deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(270deg, #EEF2F7 0%, rgba(255, 255, 255, 0) 100%);
 }
 .input__wrap_green::after {
   content: "";
@@ -240,10 +240,11 @@ blockquote:after {
   border-radius: 8px;
   background: #FFDD2D;
   font: bold 20px/24px "Montserrat", sans-serif;
-  color: #FEFEFE;
+  color: #333333;
 }
 .modalQr__buttonBtn:disabled {
   background: #9D9FB5;
+  color: #FFFFFF;
 }
 .modalQr_active {
   top: 0 !important;
@@ -316,6 +317,7 @@ blockquote:after {
   width: 100%;
 }
 .main__headerTeam {
+  background: center no-repeat url(../img/team_plus.svg), #FFDD2D;
   margin-right: 10px;
 }
 
@@ -323,10 +325,10 @@ blockquote:after {
 .main {
   overflow-x: hidden;
   padding-top: 40px;
-  padding-bottom: 58px;
+  padding-bottom: 46px;
 }
 .main_darkTheme {
-  background: #160840;
+  background: #49638E;
   color: #FEFEFE;
 }
 .main_gradientTheme {
@@ -339,7 +341,7 @@ blockquote:after {
   bottom: 46px;
   left: 0;
   right: 0;
-  background: linear-gradient(180deg, #009AE4 0%, #D20169 100%);
+  background: #49638E;
   z-index: -10;
 }
 .main_rating {
@@ -548,9 +550,9 @@ blockquote:after {
   align-self: center;
   width: 260px;
   height: 48px;
-  border: 1px solid #68648c;
+  border: none;
   border-radius: 3px;
-  background: #ffffff;
+  background-color: #EEF2F7;
   box-sizing: border-box;
   outline: none;
   padding: 13px 0 13px 13px;
@@ -911,7 +913,7 @@ blockquote:after {
   outline: none;
   border-radius: 8px;
   -webkit-appearance: none;
-  color: #fff;
+  color: #333333;
   font: bold 20px/24px "Montserrat", sans-serif;
 }
 
@@ -1090,7 +1092,7 @@ blockquote:after {
   font-size: 20px;
   line-height: 30px;
   color: #000;
-  border-bottom: 3px solid #DA006E;
+  border-bottom: 3px solid #FFDD2D;
   transition: 0.2s all;
 }
 .tab__btn_active_darkTheme {
@@ -1098,7 +1100,7 @@ blockquote:after {
 }
 .tab__btn_active_gradientTheme {
   color: #FEFEFE;
-  border-bottom: 3px solid #DA006E;
+  border-bottom: 3px solid #FFDD2D;
 }
 
 .partners {
@@ -1728,11 +1730,11 @@ blockquote:after {
 }
 .shop > .shop__coins .shop__coinsCount::after, .shop > .shop__coins .shop__goodsItemDescPoints::after, .shop > .shop__coins .myPrizes__goodsItemDescPoints::after, .shop > .myPrizes__coins .shop__coinsCount::after, .shop > .myPrizes__coins .shop__goodsItemDescPoints::after, .shop > .myPrizes__coins .myPrizes__goodsItemDescPoints::after, .myPrizes > .shop__coins .shop__coinsCount::after, .myPrizes > .shop__coins .shop__goodsItemDescPoints::after, .myPrizes > .shop__coins .myPrizes__goodsItemDescPoints::after, .myPrizes > .myPrizes__coins .shop__coinsCount::after, .myPrizes > .myPrizes__coins .shop__goodsItemDescPoints::after, .myPrizes > .myPrizes__coins .myPrizes__goodsItemDescPoints::after {
   position: absolute;
-  top: 3px;
+  top: 6px;
   right: -22px;
   content: "";
-  width: 18px;
-  height: 18px;
+  width: 13px;
+  height: 13px;
   background: url(../img/shop/coin_white.svg) no-repeat center;
   background-size: cover;
 }
@@ -1865,8 +1867,8 @@ blockquote:after {
   content: "Товар заканчивается";
   position: absolute;
   top: 2px;
-  left: 2px;
-  font: bold 8px/20px "Montserrat", sans-serif;
+  left: 5px;
+  font: bold 7px/20px "Montserrat", sans-serif;
   color: #fff;
 }
 .shop__goodsItem_changePrize .shop__goodsItemImage::after, .myPrizes__goodsItem_changePrize .shop__goodsItemImage::after {
@@ -2082,10 +2084,11 @@ blockquote:after {
   border-radius: 8px;
   background: #FFDD2D;
   font: bold 20px/24px "Montserrat", sans-serif;
-  color: #FEFEFE;
+  color: #333333;
 }
 .voucher__body_rosa .voucher__buttonItem:disabled, .prizeByModerator__body_rosa .voucher__buttonItem:disabled {
   background: #9D9FB5;
+  color: #FFFFFF;
 }
 .voucher__price, .prizeByModerator__price {
   color: #68648C;
@@ -2368,7 +2371,7 @@ blockquote:after {
   border: none;
   outline: none;
   border-radius: 8px;
-  background: #844F9C;
+  background: #418AF9;
   font: bold 20px/24px "Montserrat", sans-serif;
   color: #FEFEFE;
   width: 123px;
@@ -2432,14 +2435,14 @@ blockquote:after {
 .hint__modal .modal__buttons {
   display: flex;
 }
-.hint__modal .modal__buy, .hint__modal .modal__delete {
+.hint__modal .modal__buy, .hint__modal .modal__delete, .hint__modal .modal__deletePerson {
   align-self: center;
   width: 260px;
   height: 48px;
   border: none;
   outline: none;
   border-radius: 8px;
-  background: #844F9C;
+  background: #418AF9;
   font: bold 20px/24px "Montserrat", sans-serif;
   color: #FEFEFE;
   width: 123px;
@@ -2485,11 +2488,11 @@ blockquote:after {
   font-weight: normal;
   font-size: 10px;
   line-height: 12px;
-  color: #68648C;
+  color: #7B8998;
 }
 
 .task_list .task.done .reward_block .item p {
-  color: #9D9FB5;
+  color: #8F91AA;
 }
 
 .task_list .task.done .reward_block .item .reward .number {
@@ -2522,7 +2525,7 @@ blockquote:after {
   font-weight: bold;
   font-size: 14px;
   line-height: 17px;
-  color: #68648C;
+  color: #7B8998;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -2545,20 +2548,28 @@ blockquote:after {
   position: absolute;
   top: 10px;
   right: 10px;
-  background-image: url(../img/blue-close.svg);
+  background-image: url(../img/black-close.svg);
   cursor: pointer;
 }
 
 .task_list .notification_block .caption {
   font-weight: bold;
-  font-size: 16px;
-  line-height: 19px;
-  text-align: center;
+  font-size: 15px;
+  line-height: 18px;
   font-family: "Montserrat", sans-serif;
 }
 
 .task_list .notification_block .text {
   margin-top: 10px;
+  font-size: 13px;
+  line-height: 20px;
+  padding-right: 33px;
+}
+
+.task_list .notification_block .robot_icon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 
 .task_list .notification_block .text span {
@@ -2581,19 +2592,20 @@ blockquote:after {
 }
 
 .task_list .filter .item {
+  font-size: 12px;
+  line-height: 15px;
   border-radius: 8px;
   margin: 10px 10px 0 0;
   padding: 3px 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 17px;
+  font-weight: bold;
   height: 25px;
   color: #FEFEFE;
   transition: all 0.1s;
   box-sizing: border-box;
+  background: #7B8998;
 }
 
 .task_list .filter .item img {
@@ -2602,15 +2614,9 @@ blockquote:after {
   height: 18px;
 }
 
-.task_list .filter .item {
-  border: 1px solid #fff;
-}
-
 .task_list .filter .item.active {
-  background: linear-gradient(180deg, #DA006E 0%, #82509D 100%);
-  border: none;
-  border-left: 1px solid transparent;
-  border-right: 1px solid transparent;
+  color: #333333;
+  background: #FFDD2D;
 }
 
 .task_list .filter .item.family {
@@ -2695,10 +2701,12 @@ blockquote:after {
 
 .task_list .enumeration_tasks .main_task .head_block .nimber {
   font-weight: bold;
-  font-size: 16px;
-  line-height: 19px;
-  color: #68648C;
+  font-size: 15px;
+  line-height: 18px;
+  background: #7B8998;
   border-radius: 8px;
+  padding: 2px 5px;
+  color: #FEFEFE;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -2727,7 +2735,7 @@ blockquote:after {
 .task_list .enumeration_tasks .main_task .img_block .time_block {
   display: inline-flex;
   align-items: center;
-  background: linear-gradient(180deg, #DA006E 0%, #82509D 100%);
+  background: #96388E;
   border-radius: 8px;
   padding: 4px 8px;
   position: absolute;
@@ -2767,6 +2775,9 @@ blockquote:after {
 
 .task_list .enumeration_tasks .main_task .body_block .description {
   margin-top: 10px;
+  font-size: 13px;
+  line-height: 20px;
+  color: #333333;
 }
 
 .task_list .enumeration_tasks .main_task .footer_block {
@@ -2780,7 +2791,7 @@ blockquote:after {
 .task_list .enumeration_tasks .main_task .footer_block .quantity {
   font-size: 10px;
   line-height: 12px;
-  color: #68648C;
+  color: #7B8998;
   display: flex;
   align-items: flex-end;
 }
@@ -2798,6 +2809,10 @@ blockquote:after {
   font-family: "Montserrat", sans-serif;
 }
 
+.task_list .enumeration_tasks .main_task .footer_block .quantity .nimber span.active {
+  color: #31BDA0;
+}
+
 .task_list .enumeration_tasks .main_task .footer_block .quantity .nimber span:first-of-type {
   font-size: 18px;
 }
@@ -2811,7 +2826,7 @@ blockquote:after {
 .task_list .enumeration_tasks .main_task .footer_block .steps span {
   flex-grow: 1;
   margin: 1px;
-  background: #68648C;
+  background: #7B8998;
   border-radius: 5px;
   height: 4px;
   display: inline-block;
@@ -2836,12 +2851,8 @@ blockquote:after {
   padding: 20px 20px 10px 20px;
 }
 
-.task_list .enumeration_tasks .other_tasks .task.failed .head_block {
-  background: #D20C3C;
-}
-
-.task_list .enumeration_tasks .other_tasks .task.done .head_block {
-  background: #66C902;
+.task_list .enumeration_tasks .other_tasks .task.failed {
+  background: #D45E92;
 }
 
 .task_list .enumeration_tasks .other_tasks .task:nth-of-type(1) {
@@ -2890,7 +2901,7 @@ blockquote:after {
 }
 
 .task_list .enumeration_tasks .close_block .close_btn_top {
-  background: #009BE2;
+  background: #FFDD2D;
   border-radius: 6px 6px 0 0;
   font-weight: bold;
   font-size: 12px;
@@ -2898,7 +2909,7 @@ blockquote:after {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: #FEFEFE;
+  color: #333333;
   width: 170px;
   height: 32px;
   cursor: pointer;
@@ -2917,7 +2928,7 @@ blockquote:after {
 }
 
 .task_list .enumeration_tasks .close_block .close_btn_bottom {
-  background: #009BE2;
+  background: #FFDD2D;
   border-radius: 0 0 6px 6px;
   font-weight: bold;
   font-size: 12px;
@@ -2925,7 +2936,7 @@ blockquote:after {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: #FEFEFE;
+  color: #333333;
   width: 170px;
   height: 32px;
   cursor: pointer;
@@ -2972,7 +2983,7 @@ blockquote:after {
 }
 
 .task_list .enumeration_tasks .open_block .open_btn {
-  background: #009BE2;
+  background: #FFDD2D;
   border-radius: 0 0 6px 6px;
   font-weight: bold;
   font-size: 12px;
@@ -2980,7 +2991,7 @@ blockquote:after {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: #FEFEFE;
+  color: #333333;
   width: 170px;
   height: 32px;
   cursor: pointer;
@@ -3019,8 +3030,9 @@ blockquote:after {
 
 .task .head_block .number {
   font-weight: bold;
-  font-size: 16px;
-  line-height: 19px;
+  font-size: 15px;
+  line-height: 18px;
+  padding: 2px 5px;
   border-radius: 8px;
   font-family: "Montserrat", sans-serif;
 }
@@ -3028,10 +3040,18 @@ blockquote:after {
 .task .head_block .time_block {
   display: inline-flex;
   align-items: center;
-  background: linear-gradient(180deg, #DA006E 0%, #82509D 100%);
+  background: #96388E;
   border-radius: 8px;
   padding: 4px 8px;
   font-family: "Montserrat", sans-serif;
+}
+
+.task.blocked .head_block .time_block {
+  background: #FFFFFF;
+}
+
+.task.blocked .head_block .time_block .text {
+  color: #333333;
 }
 
 .task .head_block .time_block img {
@@ -3073,6 +3093,8 @@ blockquote:after {
 
 .task .body_block .description {
   margin-top: 10px;
+  font-size: 13px;
+  line-height: 20px;
 }
 
 .task .body_block .btn_block {
@@ -3085,7 +3107,7 @@ blockquote:after {
 .task .body_block .btn_block .more {
   border-radius: 8px;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 19px;
   padding: 5px 21px;
   display: inline-block;
@@ -3094,7 +3116,7 @@ blockquote:after {
 
 .task .footer_block {
   padding: 13px 20px;
-  border-top: 1px solid #9D9FB5;
+  border-top: 1px solid #fff;
 }
 
 .task.available {
@@ -3106,7 +3128,8 @@ blockquote:after {
 }
 
 .task.available .head_block .number {
-  color: #68648C;
+  background: #7B8998;
+  color: #FEFEFE;
 }
 
 .task.available .footer_block {
@@ -3114,22 +3137,23 @@ blockquote:after {
 }
 
 .task.available .more {
-  background: #009BE2;
-  color: #FFFFFF;
+  color: #333333;
+  background: #FFDD2D;
 }
 
-.task.done .head_block {
-  background: #66C902;
-  border-radius: 8px 8px 0 0;
+.task.done {
+  background: #31BDA0;
 }
 
 .task.done .head_block .number {
-  color: #FEFEFE;
+  background: #FFFFFF;
+  color: #31BDA0;
+  padding: 2px 5px;
 }
 
 .task.done .head_block .right_block .label {
   font-weight: bold;
-  font-size: 12px;
+  font-size: 11px;
   line-height: 20px;
   color: #FEFEFE;
   position: relative;
@@ -3148,34 +3172,42 @@ blockquote:after {
 }
 
 .task.done .body_block .caption {
-  color: #9D9FB5;
+  color: #fff;
 }
 
 .task.done .body_block .description {
-  color: #9D9FB5;
+  color: #fff;
 }
 
 .task.done .body_block .btn_block .more {
-  border: 1px solid #9D9FB5;
-  color: #9D9FB5;
+  border: 1px solid #fff;
+  color: #fff;
 }
 
 .task.done .footer_block {
   padding: 1px;
+  border: none;
 }
 
 .task.done .footer_block .reward_block {
   padding: 15px 19px;
+  background: #C8FFF4;
+  border-radius: 8px;
+  margin: 0 1px;
 }
 
 .task.failed .head_block {
-  background: #D20C3C;
   border-radius: 8px 8px 0 0;
+  border-bottom: 1px solid #FEFEFE;
+}
+
+.task.failed {
+  background: #D45E92;
 }
 
 .task.failed .head_block .right_block .label {
   font-weight: bold;
-  font-size: 12px;
+  font-size: 11px;
   line-height: 20px;
   color: #FEFEFE;
   position: relative;
@@ -3194,32 +3226,67 @@ blockquote:after {
 }
 
 .task.failed .head_block .number {
-  color: #FEFEFE;
+  color: #D45E92;
+  background: #fff;
 }
 
 .task.failed .body_block .caption {
-  color: #9D9FB5;
+  color: #fff;
 }
 
 .task.failed .body_block .description {
-  color: #9D9FB5;
+  color: #fff;
 }
 
 .task.failed .body_block .btn_block .more {
-  border: 1px solid #9D9FB5;
-  color: #9D9FB5;
+  border: 1px solid #fff;
+  color: #fff;
 }
 
 .task.failed .footer_block {
   padding: 1px;
+  border: none;
+}
+
+.advertising_block {
+  background: #FFDD2D;
+  border-radius: 10px;
+  padding: 10px 17px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.advertising_block .img_block {
+  min-width: 70px;
+  line-height: 0;
+  margin-right: 15px;
+}
+
+.advertising_block .text_block p {
+  margin: 0;
+  font-size: 10px;
+  line-height: 12px;
+  color: #333333;
+}
+
+.advertising_block .text_block a {
+  font-size: 10px;
+  line-height: 12px;
+  color: #333333;
+  font-weight: bold;
+  text-decoration: underline;
 }
 
 .task.failed .footer_block .reward_block {
   padding: 15px 19px;
+  background: #FFD3F3;
+  border-radius: 8px;
+  margin: 0 1px;
 }
 
 .task.canceled {
-  background: #6A6D8E;
+  background: #7B8998;
   border: 1px solid #8F91AA;
 }
 
@@ -3227,31 +3294,32 @@ blockquote:after {
   font-weight: bold;
   font-size: 12px;
   line-height: 14px;
-  color: #fff;
+  color: #7B8998;
   padding: 4px 14px;
-  background: linear-gradient(180deg, #DA006E 0%, #82509D 100%);
+  background: #FFFFFF;
   border-radius: 8px;
 }
 
 .task.canceled .head_block .number {
-  color: #CACCE2;
+  color: #7B8998;
+  background: #fff;
 }
 
 .task.canceled .body_block .btn_block .more {
-  border: 1px solid #CACCE2;
-  color: #CACCE2;
+  border: 1px solid #fff;
+  color: #fff;
 }
 
 .task.canceled .body_block .caption {
-  color: #CACCE2;
+  color: #fff;
 }
 
 .task.canceled .body_block .description {
-  color: #CACCE2;
+  color: #fff;
 }
 
 .task.canceled .footer_block {
-  border-top: 1px solid #8F91AA;
+  border-top: 1px solid #B7C0CB;
 }
 
 .task.canceled .footer_block .reward_block .item p {
@@ -3263,20 +3331,20 @@ blockquote:after {
 }
 
 .task.blocked {
-  background: #6A6D8E;
-  border: 1px solid #9D9FB5;
+  background: #313846;
 }
 
 .task.blocked .head_block {
-  border-bottom: 1px solid #9D9FB5;
+  border-bottom: 1px solid #B7C0CB;
 }
 
 .task.blocked .head_block .number {
-  color: #CACCE2;
+  background: #FFFFFF;
+  color: #333333;
 }
 
 .task.blocked .body_block .caption {
-  color: #CACCE2;
+  color: #fff;
 }
 
 .task.blocked .body_block .condition_block {
@@ -3290,7 +3358,7 @@ blockquote:after {
 }
 
 .task.blocked .body_block .condition_block .text {
-  color: #CACCE2;
+  color: #fff;
 }
 
 .task.blocked .body_block .additional_info {
@@ -3306,10 +3374,13 @@ blockquote:after {
 
 .task.blocked .body_block .additional_info .number {
   font-family: "Montserrat", sans-serif;
-  color: #CACCE2;
+  color: #333333;
   font-weight: bold;
   font-size: 16px;
   line-height: 19px;
+  background: #FFDD2D;
+  padding: 2px 5px;
+  border-radius: 8px;
 }
 
 .task.blocked .body_block .list_conditions .item {
@@ -3322,7 +3393,7 @@ blockquote:after {
 }
 
 .task.blocked .body_block .list_conditions .item.green {
-  background: #65C802;
+  background: #31BDA0;
 }
 
 .task.blocked .body_block .list_conditions .item.green .text {
@@ -3330,7 +3401,7 @@ blockquote:after {
 }
 
 .task.blocked .body_block .list_conditions .item.red {
-  background: #D20C3C;
+  background: #D45E92;
 }
 
 .task.blocked .body_block .list_conditions .item.red .text {
@@ -5543,11 +5614,12 @@ blockquote:after {
   border-radius: 8px;
   background: #FFDD2D;
   font: bold 20px/24px "Montserrat", sans-serif;
-  color: #FEFEFE;
+  color: #333333;
   margin: 10px 0;
 }
 .congrats__exitBtn:disabled {
   background: #9D9FB5;
+  color: #FFFFFF;
 }
 
 .sorry .congrats__status {
@@ -5690,7 +5762,7 @@ blockquote:after {
   box-sizing: border-box;
   padding: 0 10px;
   margin: 0 10px 10px;
-  background: #FEFEFE;
+  background: #fefefe;
   border-radius: 8px;
   display: flex;
   align-items: center;
@@ -5698,11 +5770,29 @@ blockquote:after {
   color: #131929;
 }
 .rating__itemNumber {
-  width: 20%;
+  position: relative;
+  width: 16%;
   font: bold 12px/14px "Montserrat", sans-serif;
 }
-.rating__itemNumber_prizePlace {
-  color: #FFDD2D;
+.rating__itemNumber_prizePlace::before {
+  position: absolute;
+  content: "";
+  width: 21px;
+  height: 22px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  top: -5px;
+  right: 12%;
+}
+.rating__itemNumber_gold::before {
+  background-image: url(../img/rating/gold.svg);
+}
+.rating__itemNumber_silver::before {
+  background-image: url(../img/rating/silver.svg);
+}
+.rating__itemNumber_bronze::before {
+  background-image: url(../img/rating/bronze.svg);
 }
 .rating__itemUser {
   width: 65%;
@@ -5710,10 +5800,12 @@ blockquote:after {
   align-items: center;
 }
 .rating__itemUserImage {
+  border: 2px solid #c4c4c4;
   border-radius: 50%;
   width: 20px;
   height: 20px;
   margin-right: 5px;
+  overflow: hidden;
   box-sizing: border-box;
 }
 .rating__itemUserImagePicture {
@@ -5723,7 +5815,7 @@ blockquote:after {
   font: bold 12px/20px "Montserrat", sans-serif;
 }
 .rating__itemScore {
-  width: 25%;
+  width: 30%;
   display: flex;
   align-items: flex-start;
 }
@@ -5733,15 +5825,15 @@ blockquote:after {
   left: 0;
   width: 15px;
   height: 15px;
-  background: url(../img/rating/blue_star.svg);
+  background: url(../img/global/prizes/star.svg);
 }
 .rating__itemScoreImage {
   margin-right: 5px;
-  fill: #FEFEFE;
+  fill: #fefefe;
 }
 .rating__itemScoreCount {
   box-sizing: border-box;
-  padding-left: 5px;
+  padding-left: 13px;
   display: block;
   position: relative;
   font: bold 14px/17px "Montserrat", sans-serif;
@@ -5751,17 +5843,6 @@ blockquote:after {
 }
 .rating__item_myPlace {
   background: #FFDD2D;
-  color: #FEFEFE;
-  border: 2px solid #fff;
-}
-.rating__item_myPlace .rating__itemScore::before {
-  background: url(../img/rating/white_star.svg);
-}
-.rating__item_myPlace .rating__itemUserImage {
-  border: 2px solid #FEFEFE;
-}
-.rating__item_myPlace .rating__itemNumber_prizePlace {
-  color: #FEFEFE;
 }
 .rating__toggle {
   display: flex;
@@ -5791,7 +5872,7 @@ blockquote:after {
   border-radius: 50%;
   overflow: hidden;
   box-sizing: border-box;
-  border: 2px solid #D9016F;
+  border: 2px solid #FFDD2D;
 }
 .public__headFacePicture {
   min-width: 100%;
@@ -6235,14 +6316,15 @@ blockquote:after {
   border-radius: 8px;
   background: #FFDD2D;
   font: bold 20px/24px "Montserrat", sans-serif;
-  color: #FEFEFE;
+  color: #333333;
   font: bold 18px/24px "Montserrat", sans-serif;
 }
 .givePrize__qrBtn:disabled, .givePrize__submitBtn:disabled, .approveTask__submitBtn:disabled, .approveTask__qrBtn:disabled {
   background: #9D9FB5;
+  color: #FFFFFF;
 }
 .givePrize__qrBtn:disabled, .givePrize__submitBtn:disabled, .approveTask__submitBtn:disabled, .approveTask__qrBtn:disabled {
-  background: #68648C;
+  background: #B7C0CB;
 }
 .givePrize__item, .approveTask__item {
   margin-top: 10px;
@@ -6257,7 +6339,8 @@ blockquote:after {
 .givePrize__itemInput, .approveTask__itemInput {
   width: 260px;
   height: 48px;
-  border: 1px solid #68648C;
+  border: none;
+  background-color: #EEF2F7;
   box-sizing: border-box;
   padding-left: 10px;
   border-radius: 3px;
@@ -6371,10 +6454,11 @@ blockquote:after {
   border-radius: 8px;
   background: #FFDD2D;
   font: bold 20px/24px "Montserrat", sans-serif;
-  color: #FEFEFE;
+  color: #333333;
 }
 .prizeByModerator__buttonsGive:disabled, .prizeByModerator__buttonsReplace:disabled {
   background: #9D9FB5;
+  color: #FFFFFF;
 }
 .prizeByModerator__buttonsChange {
   margin-top: 20px;
@@ -6384,7 +6468,7 @@ blockquote:after {
   border: none;
   outline: none;
   border-radius: 8px;
-  background: #844F9C;
+  background: #418AF9;
   font: bold 20px/24px "Montserrat", sans-serif;
   color: #FEFEFE;
 }
@@ -6443,10 +6527,11 @@ blockquote:after {
   border-radius: 8px;
   background: #FFDD2D;
   font: bold 20px/24px "Montserrat", sans-serif;
-  color: #FEFEFE;
+  color: #333333;
 }
 .afterThePrize__buttonsGive:disabled {
   background: #9D9FB5;
+  color: #FFFFFF;
 }
 .afterThePrize__buttonsNext {
   margin-top: 20px;
@@ -6456,7 +6541,7 @@ blockquote:after {
   border: none;
   outline: none;
   border-radius: 8px;
-  background: #844F9C;
+  background: #418AF9;
   font: bold 20px/24px "Montserrat", sans-serif;
   color: #FEFEFE;
 }
@@ -6469,10 +6554,11 @@ blockquote:after {
   border-radius: 8px;
   background: #FFDD2D;
   font: bold 20px/24px "Montserrat", sans-serif;
-  color: #FEFEFE;
+  color: #333333;
 }
 .afterThePrize__buttonsToTask:disabled {
   background: #9D9FB5;
+  color: #FFFFFF;
 }
 .afterThePrize__text {
   margin: 15px 0;
@@ -6797,15 +6883,16 @@ blockquote:after {
 
 /*-----------------------------------------------team------------------------------------------------*/
 .team p {
-  color: #131929;
+  color: #333333;
+  font-family: "Montserrat", sans-serif;
   text-align: center;
 }
 .team .myProfile__header .myProfile__aboutSocialContainer {
   margin: 20px auto;
 }
 .team .myProfile__header .myProfile__aboutSocialContainer p {
-  text-align: center;
-  color: #131929;
+  font-size: 13px;
+  line-height: 20px;
 }
 .team .myProfile__header .myProfile__headerFace .teamFaceImage {
   margin: 0;
@@ -6814,25 +6901,31 @@ blockquote:after {
   font-weight: bold;
   font-size: 10px;
   line-height: 13px;
-  color: #131929;
   margin: 10px 0 0;
+}
+.team .myProfile__header .avatarEdit {
+  margin: 10px 0 30px;
 }
 .team .myProfile__header .teamFace {
   flex-direction: column;
 }
 .team .myProfile__header .teamFace .public__headName {
-  color: #131929;
+  color: #333333;
+}
+.team .myProfile__form {
+  margin: 0;
 }
 .team .myProfile__submit .myProfile__submitBtn {
   margin: 0 0 30px;
 }
 .team .myProfile__submit .myProfile__aboutLink {
   width: auto;
-  background-color: #844F9C;
+  background-color: #418AF9;
   padding: 0px 15px;
 }
-.team .myProfile__submit .violetBtn {
-  background-color: #844F9C;
+.team .myProfile__submit .blueBtn {
+  background-color: #418AF9;
+  color: #FFFFFF;
 }
 .team .givePrize__body .givePrize__header {
   margin: 0;
@@ -6841,27 +6934,11 @@ blockquote:after {
   margin: 15px 30px 20px;
   text-align: center;
 }
-.team .givePrize__submit {
-  display: none;
-}
-.team .givePrize__submit_active {
-  display: flex;
-  background: #160840;
-  padding: 30px 0 95px;
-  position: relative;
-  z-index: -1;
-  top: -30px;
-}
-.team .givePrize__submit .givePrize__submitBtn {
-  display: block;
-}
-.team .givePrize__submit .givePrize__submitBtn:disabled {
-  display: none;
-}
 .team .modalQr {
   position: relative;
   height: 100%;
   margin: 20px 0 40px;
+  z-index: 1;
 }
 .team .modalQr .modalQr__id {
   width: 258px;
@@ -6883,7 +6960,7 @@ blockquote:after {
   border: none;
   outline: none;
   border-radius: 8px;
-  background: #844F9C;
+  background: #418AF9;
   font: bold 20px/24px "Montserrat", sans-serif;
   color: #FEFEFE;
   width: 123px;
@@ -6891,12 +6968,12 @@ blockquote:after {
   font: bold 16px/20px "Montserrat", sans-serif;
 }
 .team__body {
-  margin: 30px auto;
+  margin: 30px auto 0;
 }
 .team__body .team__addPartners {
   display: grid;
   grid-template-columns: 115px 115px;
-  grid-template-rows: 120px 120px;
+  grid-template-rows: 135px 135px;
   grid-column-gap: 30px;
   grid-row-gap: 10px;
   justify-content: center;
@@ -6924,6 +7001,9 @@ blockquote:after {
   width: 76px;
   height: 76px;
 }
+.team__body .team__addPartners .team__addPartnersItem .foto {
+  border: 2px solid #FFDD2D;
+}
 .team__body .team__addPartners .team__addPartnersItem p {
   margin: 15px 0px;
   font-weight: bold;
@@ -6937,7 +7017,7 @@ blockquote:after {
   justify-content: space-evenly;
 }
 .team__edit .myProfile__aboutLink:first-child {
-  background-color: #844F9C;
+  background-color: #418AF9;
 }
 .team__delete {
   margin-bottom: 35px;
@@ -6949,7 +7029,24 @@ blockquote:after {
   background-color: transparent;
   line-height: 16px;
   text-decoration-line: underline;
-  color: #131929;
+  color: #333333;
+}
+
+.teamModal {
+  align-items: flex-end;
+}
+.teamModal .modal {
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  padding: 60px 20px 40px;
+}
+.teamModal .modal__header {
+  margin: 0 20px 25px;
+}
+.teamModal .modal .deletePerson,
+.teamModal .modal .deleteTeam {
+  flex-direction: column;
+  align-items: center;
 }
 
 .team-1 .public__head {
@@ -6962,11 +7059,56 @@ blockquote:after {
   font-size: 14px;
   line-height: 18px;
   text-align: center;
-  color: #131929;
+  color: #333333;
 }
 .team-1 .public__scoresItemRating {
-  color: #FFDD2D;
   font: bold 14px/17px "Montserrat", sans-serif;
+  background: #FFDD2D;
+  padding: 2px 7px;
+  border-radius: 8px;
+  color: #333333;
+}
+.team-1 .rating__itemNumber_prizePlace {
+  width: auto;
+}
+.team-1__addPartners {
+  display: grid;
+  grid-template-columns: 115px 115px;
+  grid-template-rows: 135px 135px;
+  grid-column-gap: 30px;
+  justify-content: center;
+  margin-top: 33px;
+}
+.team-1__addPartners .team-1__addPartnersItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.team-1__addPartners .team-1__addPartnersItem .givePrize__itemCross {
+  display: block;
+  position: absolute;
+  top: 5px;
+  right: 19px;
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  background: url(../img/checkbox-blue-close-2.svg) no-repeat center;
+  cursor: pointer;
+}
+.team-1__addPartners .team-1__addPartnersItem img {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 76px;
+  height: 76px;
+  border: 2px solid #FFDD2D;
+}
+.team-1__addPartners .team-1__addPartnersItem p {
+  margin: 15px 0px;
+  font-weight: bold;
+  font-size: 10px;
+  line-height: 13px;
+  text-align: center;
 }
 
 /*# sourceMappingURL=main.css.map */

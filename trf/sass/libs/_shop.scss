@@ -36,11 +36,11 @@
     .shop__coinsCount {
       &::after {
         position: absolute;
-        top: 3px;
+        top: 6px;
         right: -22px;
         content: "";
-        width: 18px;
-        height: 18px;
+        width: 13px;
+        height: 13px;
         background: url(../img/shop/coin_white.svg) no-repeat center;
         background-size: cover;
       }
@@ -204,8 +204,8 @@
             content: "Товар заканчивается";
             position: absolute;
             top: 2px;
-            left: 2px;
-            font: bold 8px/20px $textFont;
+            left: 5px;
+            font: bold 7px/20px $textFont;
             color: #fff;
           }
         }

@@ -10,7 +10,7 @@
     box-sizing: border-box;
     padding: 0 10px;
     margin: 0 10px 10px;
-    background: #FEFEFE;
+    background: #fefefe;
     border-radius: 8px;
     display: flex;
     align-items: center;
@@ -18,11 +18,37 @@
     color: #131929;
 
     &Number {
-      width: 20%;
+      position: relative;
+      width: 16%;
       font: bold 12px/14px $headerFont;
 
       &_prizePlace {
-        color: $lightColor;
+        &::before {
+          position: absolute;
+          content: "";
+          width: 21px;
+          height: 22px;
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat;
+          top: -5px;
+          right: 12%;
+        }
+      }
+      &_gold {
+        &::before {
+          background-image: url(../img/rating/gold.svg);
+        }
+      }
+      &_silver {
+        &::before {
+          background-image: url(../img/rating/silver.svg);
+        }
+      }
+      &_bronze {
+        &::before {
+          background-image: url(../img/rating/bronze.svg);
+        }
       }
     }
 
@@ -32,10 +58,12 @@
       align-items: center;
 
       &Image {
+        border: 2px solid #c4c4c4;
         border-radius: 50%;
         width: 20px;
         height: 20px;
         margin-right: 5px;
+        overflow: hidden;
         box-sizing: border-box;
 
         &Picture {
@@ -49,7 +77,7 @@
     }
 
     &Score {
-      width: 25%;
+      width: 30%;
       display: flex;
       align-items: flex-start;
 
@@ -59,17 +87,17 @@
         left: 0;
         width: 15px;
         height: 15px;
-        background: url(../img/rating/blue_star.svg);
+        background: url(../img/global/prizes/star.svg);
       }
 
       &Image {
         margin-right: 5px;
-        fill: #FEFEFE;
+        fill: #fefefe;
       }
 
       &Count {
         box-sizing: border-box;
-        padding-left: 5px;
+        padding-left: 13px;
         display: block;
         position: relative;
         font: bold 14px/17px $headerFont;
@@ -82,22 +110,6 @@
 
     &_myPlace {
       background: $lightColor;
-      color: #FEFEFE;
-      border: 2px solid #fff;
-
-      .rating__itemScore {
-        &::before {
-          background: url(../img/rating/white_star.svg);
-        }
-      }
-
-      .rating__itemUserImage {
-        border: 2px solid #FEFEFE;
-      }
-
-      .rating__itemNumber_prizePlace {
-        color: #FEFEFE;
-      }
     }
   }
 

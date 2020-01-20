@@ -1,10 +1,10 @@
 .main {
   overflow-x: hidden;
   padding-top: 40px;
-  padding-bottom: 58px;
+  padding-bottom: 46px;
 
   &_darkTheme {
-    background: #160840;
+    background: #49638E;
     color: #FEFEFE;
   }
 
@@ -18,7 +18,7 @@
       bottom: 46px;
       left: 0;
       right: 0;
-      background: linear-gradient(180deg, #009AE4 0%, #D20169 100%);
+      background: #49638E;
       z-index: -10;
     }
   }

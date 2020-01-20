@@ -177,9 +177,9 @@
         align-self: center;
         width: 260px;
         height: 48px;
-        border: 1px solid #68648c;
+        border: none;
         border-radius: 3px;
-        background: #ffffff;
+        background-color: #EEF2F7;
         box-sizing: border-box;
         outline: none;
         padding: 13px 0 13px 13px;
@@ -565,7 +565,7 @@
       outline: none;
       border-radius: 8px;
       -webkit-appearance: none;
-      color: #fff;
+      color: $textColor;
       font: bold 20px/24px $textFont;
     }
   }

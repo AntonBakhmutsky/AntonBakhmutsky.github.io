@@ -97,7 +97,8 @@
       display: flex;
     }
     &__buy,
-    &__delete {
+    &__delete,
+    &__deletePerson {
       @include btnViolet;
       width: 123px;
       height: 30px;

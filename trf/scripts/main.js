@@ -38,12 +38,23 @@ window.addEventListener('load', () => {
 });
 
 window.addEventListener('load', () => {
-    //team modal
+    //delete team modal
     const hintModal = document.querySelector('.hint__modal');
-    const deleteBtn = document.querySelector('.team__delete');
+    const team = document.querySelector('.deleteTeam');
+    const person = document.querySelector('.deletePerson');
 
-    const showHintModal = () => {
+    const deleteTeam = document.querySelector('.team__delete');
+    const deletePerson = document.querySelector('.team__deletePerson');
+
+    const showHintModalP = () => {
         hintModal.style.display = 'flex';
+        team.style.display = 'none';
+        person.style.display = 'flex';
+    }
+    const showHintModalT = () => {
+        hintModal.style.display = 'flex';
+        person.style.display = 'none';
+        team.style.display = 'flex';
     }
     const closeHintModal = () => {
         const list = event.target.classList;
@@ -52,7 +63,10 @@ window.addEventListener('load', () => {
         }
     }
 
-    deleteBtn.addEventListener('click', showHintModal);
+
+
+    deletePerson.addEventListener('click', showHintModalP);
+    deleteTeam.addEventListener('click', showHintModalT);
     hintModal.addEventListener('click', closeHintModal);
 });
 

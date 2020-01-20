@@ -3,9 +3,9 @@ $headerFont: 'Montserrat', sans-serif;
 $numberFont: 'Montserrat', sans-serif;
 $lightColor: #FFDD2D;
 $darkColor: #3D3868;
-$darkColor_2: #844F9C;
+$darkColor_2: #418AF9;
 $grey: #6A6D8E;
-$textColor:#131929;
+$textColor:#333333;
 $svgFill: #211D49;
 $svgFillActive: #fff;
 
@@ -42,9 +42,26 @@ $svgFillActive: #fff;
   border-radius: 8px;
   background: $lightColor;
   font: bold 20px/24px $textFont;
-  color: #FEFEFE;
+  color: $textColor;
   &:disabled {
     background: #9D9FB5;
+    color: #FFFFFF;
+  }
+}
+
+@mixin btnYellow {
+  align-self: center;
+  width: 260px;
+  height: 48px;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  background: $lightColor;
+  font: bold 20px/24px $textFont;
+  color: $textColor;
+  &:disabled {
+    background: #9D9FB5;
+    color: #FFFFFF;
   }
 }
 
@@ -55,7 +72,7 @@ $svgFillActive: #fff;
   border: none;
   outline: none;
   border-radius: 8px;
-  background: #844F9C;
+  background: $darkColor_2;
   font: bold 20px/24px $textFont;
   color: #FEFEFE;
 }
@@ -90,7 +107,8 @@ $svgFillActive: #fff;
 @mixin input {
   width: 260px;
   height: 48px;
-  border: 1px solid #68648C;
+  border: none;
+  background-color: #EEF2F7;
   box-sizing: border-box;
   padding-left: 10px;
   border-radius: 3px;
