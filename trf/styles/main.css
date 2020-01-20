@@ -5795,7 +5795,7 @@ blockquote:after {
   background-image: url(../img/rating/bronze.svg);
 }
 .rating__itemUser {
-  width: 65%;
+  width: 50%;
   display: flex;
   align-items: center;
 }
