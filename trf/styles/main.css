@@ -1751,15 +1751,16 @@ blockquote:after {
   border-radius: 8px;
   font: 14px/27px "Montserrat", sans-serif;
   box-sizing: border-box;
+  border: 1px solid #7B8998;
   padding: 0 10px;
-  border: 1px solid #FEFEFE;
   transition: all 0.1s;
+  background: #7B8998;
 }
 .shop__filterItemImage, .myPrizes__filterItemImage {
   margin-right: 9px;
 }
 .shop__filterItem_active, .myPrizes__filterItem_active {
-  background: linear-gradient(180deg, #DA006E 0%, #82509D 100%);
+  background: #FFDD2D;
   border: none;
   border-left: 1px solid transparent;
   border-right: 1px solid transparent;
@@ -5802,8 +5803,8 @@ blockquote:after {
 .rating__itemUserImage {
   border: 2px solid #c4c4c4;
   border-radius: 50%;
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   margin-right: 5px;
   overflow: hidden;
   box-sizing: border-box;

@@ -60,16 +60,17 @@
       border-radius: 8px;
       font: 14px/27px $textFont;
       box-sizing: border-box;
+      border: 1px solid #7B8998;
       padding: 0 10px;
-      border: 1px solid #FEFEFE;
       transition: all .1s;
+      background: #7B8998;
 
       &Image {
         margin-right: 9px;
       }
 
       &_active {
-        background: linear-gradient(180deg, #DA006E 0%, #82509D 100%);
+        background: $lightColor;
         border: none;
         border-left: 1px solid transparent;
         border-right: 1px solid transparent;
