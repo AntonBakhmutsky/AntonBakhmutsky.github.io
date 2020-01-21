@@ -1716,7 +1716,7 @@ blockquote:after {
 }
 .shop__coinsCount, .shop__goodsItemDescPoints, .myPrizes__goodsItemDescPoints, .myPrizes__coinsCount {
   position: relative;
-  margin-left: 15px;
+  margin: 0 22px 0 15px;
   display: inline-block;
   font-weight: bold;
 }
