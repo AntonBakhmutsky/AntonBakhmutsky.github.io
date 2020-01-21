@@ -421,7 +421,6 @@ blockquote:after {
   position: absolute;
   right: 10px;
   top: 5px;
-  display: block;
   width: 10px;
   height: 10px;
   border-radius: 50%;
@@ -1291,7 +1290,7 @@ blockquote:after {
 }
 .faq .popularQuestions__answerMore {
   margin: 20px 0 20px 0;
-  width: 106px;
+  width: 119px;
   height: 23px;
   padding: 0 10px;
   box-sizing: border-box;
@@ -2420,7 +2419,7 @@ blockquote:after {
 .hint__modal .modal {
   position: relative;
   background: #FEFEFE;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
   border-radius: 8px;
   width: 300px;
   box-sizing: border-box;
@@ -2696,7 +2695,7 @@ blockquote:after {
 
 .task_list .enumeration_tasks .main_task {
   background: #FEFEFE;
-  box-shadow: 0 0px 10px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
   border-radius: 15px;
   position: relative;
   z-index: 100;
@@ -5678,7 +5677,7 @@ blockquote:after {
 
 /*------------------------------------------------NOTIFICATIONS-------------------------------------------------*/
 .notifications__wrapper {
-  box-sizing: border-box;
+  padding-bottom: 66px;
 }
 .notifications__header {
   font: bold 20px/24px "Montserrat", sans-serif;
@@ -5690,7 +5689,7 @@ blockquote:after {
   background: #fff;
   color: #131929;
   box-sizing: border-box;
-  border-radius: 5px 5px 0 0;
+  border-radius: 15px;
 }
 .notifications__bodyItem {
   box-sizing: border-box;
@@ -5703,13 +5702,13 @@ blockquote:after {
 .notifications__bodyItemDate {
   display: inline-block;
   border-radius: 8px;
-  background: #68648C;
+  background: #7B8998;
   height: 23px;
   box-sizing: border-box;
   padding: 0 10px;
   margin: 0 30px;
   color: #FEFEFE;
-  font: bold 16px/22px "Montserrat", sans-serif;
+  font: bold 15px/22px "Montserrat", sans-serif;
 }
 .notifications__bodyItemHeader {
   font: bold 20px/24px "Montserrat", sans-serif;
@@ -5748,7 +5747,7 @@ blockquote:after {
 }
 .notifications__bodyItemMore, .hint__block .hint__more {
   margin: 20px 0 20px 0;
-  width: 106px;
+  width: 119px;
   height: 23px;
   padding: 0 10px;
   box-sizing: border-box;
@@ -5760,6 +5759,23 @@ blockquote:after {
   align-items: center;
   cursor: pointer;
   margin: 0 30px;
+}
+.notifications__bodyItemMore .detailed, .hint__block .hint__more .detailed {
+  margin-right: 10px;
+  display: none;
+}
+.notifications__bodyItemMore .collapsed, .hint__block .hint__more .collapsed {
+  margin-right: 10px;
+}
+.notifications__bodyItemMore_active {
+  width: 106px;
+  background: #B7C0CB;
+}
+.notifications__bodyItemMore_active .detailed {
+  display: block;
+}
+.notifications__bodyItemMore_active .collapsed {
+  display: none;
 }
 .notifications__bodyItemMore_active .notifications__bodyItemMoreArrow {
   transform: rotate(180deg);
@@ -6942,7 +6958,7 @@ blockquote:after {
 .team .myProfile__aboutLink {
   width: auto;
   background-color: #418AF9;
-  padding: 0px 15px;
+  padding: 0 15px;
 }
 .team .givePrize__header {
   margin: 0;
@@ -7025,7 +7041,7 @@ blockquote:after {
   border: 2px solid #FFDD2D;
 }
 .team__body .team__addPartners .team__addPartnersItem p {
-  margin: 15px 0px;
+  margin: 15px 0;
   font-weight: bold;
   font-size: 10px;
   line-height: 13px;
@@ -7124,7 +7140,7 @@ blockquote:after {
   border: 2px solid #FFDD2D;
 }
 .team-1__addPartners .team-1__addPartnersItem p {
-  margin: 15px 0px;
+  margin: 15px 0;
   font-weight: bold;
   font-size: 10px;
   line-height: 13px;

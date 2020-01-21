@@ -1,6 +1,6 @@
 .notifications {
   &__wrapper {
-    box-sizing: border-box;
+    padding-bottom: 66px;
   }
 
   &__header {
@@ -13,7 +13,7 @@
     background: #fff;
     color: #131929;
     box-sizing: border-box;
-    border-radius: 5px 5px 0 0;
+    border-radius: 15px;
 
     &Item {
       box-sizing: border-box;
@@ -27,13 +27,13 @@
       &Date {
         display: inline-block;
         border-radius: 8px;
-        background: #68648C;
+        background: #7B8998;
         height: 23px;
         box-sizing: border-box;
         padding: 0 10px;
         margin: 0 30px;
         color: #FEFEFE;
-        font: bold 16px/22px $headerFont;
+        font: bold 15px/22px $headerFont;
       }
 
       &Header {
@@ -79,7 +79,22 @@
       }
 
       &More {
+        .detailed {
+          margin-right: 10px;
+          display: none;
+        }
+        .collapsed {
+          margin-right: 10px;
+        }
         &_active {
+          width: 106px;
+          .detailed {
+            display: block;
+          }
+          .collapsed {
+            display: none;
+          }
+          background: #B7C0CB;
           .notifications__bodyItemMoreArrow {
             transform: rotate(180deg);
           }
