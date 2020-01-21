@@ -195,14 +195,14 @@ blockquote:after {
   &_green {
     &::after {
       content: "";
-      background: linear-gradient(270deg, #EBFFD7 0%, rgba(235, 255, 215, 0) 100%);
+      background: linear-gradient(270deg, #C8FFF4 0%, rgba(235, 255, 215, 0) 100%);
     }
   }
 
   &_red {
     &::after {
       content: "";
-      background: linear-gradient(270deg, #FFE5EC 46.86%, rgba(255, 229, 236, 0) 100%);
+      background: linear-gradient(270deg, #FFFFFF 46.86%, rgba(255, 229, 236, 0) 100%);
     }
   }
 }

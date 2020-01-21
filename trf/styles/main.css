@@ -193,11 +193,11 @@ blockquote:after {
 }
 .input__wrap_green::after {
   content: "";
-  background: linear-gradient(270deg, #EBFFD7 0%, rgba(235, 255, 215, 0) 100%);
+  background: linear-gradient(270deg, #C8FFF4 0%, rgba(235, 255, 215, 0) 100%);
 }
 .input__wrap_red::after {
   content: "";
-  background: linear-gradient(270deg, #FFE5EC 46.86%, rgba(255, 229, 236, 0) 100%);
+  background: linear-gradient(270deg, #FFFFFF 46.86%, rgba(255, 229, 236, 0) 100%);
 }
 
 /*------------------------------------------------------QR------------------------------------------------------*/
@@ -241,6 +241,7 @@ blockquote:after {
   background: #FFDD2D;
   font: bold 20px/24px "Montserrat", sans-serif;
   color: #333333;
+  color: #FFFFFF;
 }
 .modalQr__buttonBtn:disabled {
   background: #9D9FB5;
@@ -564,9 +565,9 @@ blockquote:after {
 }
 .myProfile__formItemInput_correct {
   box-sizing: border-box;
-  background: #EBFFD7;
-  border-color: #66C902;
-  color: #66C902;
+  color: #31BDA0;
+  background: #C8FFF4;
+  border: 1px solid #31BDA0;
   transition: all 0.3s ease-out;
 }
 .myProfile__formItemInput_correctMessage {
@@ -575,13 +576,12 @@ blockquote:after {
   padding-left: 30px;
   align-self: center;
   font: 12px/20px "Montserrat", sans-serif;
-  color: #66C902;
+  color: #31BDA0;
 }
 .myProfile__formItemInput_wrong {
-  box-sizing: border-box;
-  background: #FFE6EC;
-  border-color: #D20C3C;
-  color: #D20C3C;
+  background: #FFF;
+  border: 1px solid #D45E92;
+  color: #D45E92;
   transition: all 0.3s ease-out;
 }
 .myProfile__formItemInput_wrongMessage {
@@ -590,11 +590,13 @@ blockquote:after {
   padding-left: 30px;
   align-self: center;
   font: 12px/20px "Montserrat", sans-serif;
-  color: #D20C3C;
+  color: #D45E92;
 }
 .myProfile__formItemInput:focus {
-  border-color: #FFDD2D;
+  background-color: #FFF;
+  border: 1px solid #DDDFE0;
   transition: border-color 0.3s ease-out;
+  z-index: 100;
 }
 .myProfile__formItemInputLabel {
   align-self: center;
@@ -823,7 +825,7 @@ blockquote:after {
 .myProfile__aboutTab {
   box-sizing: border-box;
   width: 100%;
-  background: #f9f9f9;
+  background: #f6f6f6;
   border-bottom: 2px solid #f0f0f0;
 }
 .myProfile__aboutTabHeader {
@@ -885,7 +887,7 @@ blockquote:after {
   display: none;
 }
 .myProfile__aboutTabContentItem_active {
-  background-color: #fff;
+  background-color: #FFDD2D;
 }
 .myProfile__aboutTabContentItem_active::after {
   content: "";
@@ -905,6 +907,7 @@ blockquote:after {
 }
 .myProfile__aboutTabContentItemDesc {
   font: bold 10px/13px "Montserrat", sans-serif;
+  text-align: center;
 }
 .myProfile__submitBtn {
   margin: 30px 0;

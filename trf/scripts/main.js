@@ -58,7 +58,7 @@ window.addEventListener('load', () => {
     }
     const closeHintModal = () => {
         const list = event.target.classList;
-        if (list.contains('hint__modal') || list.contains('modal__cancel')) {
+        if (list.contains('hint__modal') || list.contains('modal__close') || list.contains('modal__cancel')) {
             hintModal.removeAttribute('style');
         }
     }

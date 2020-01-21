@@ -142,27 +142,26 @@
 
         &_correct {
           box-sizing: border-box;
-          background: #EBFFD7;
-          border-color: #66C902;
-          color: #66C902;
+          color: #31BDA0;
+          background: #C8FFF4;
+          border: 1px solid #31BDA0;
           transition: all .3s ease-out;
-
+          
           &Message {
             margin-top: 3px;
             width: 320px;
             padding-left: 30px;
             align-self: center;
             font: 12px/20px $textFont;
-            color: #66C902;
+            color: #31BDA0;
           }
         }
 
         &_wrong {
-          box-sizing: border-box;
-          background: #FFE6EC;
-          border-color: #D20C3C;
-          color: #D20C3C;
-          transition: all .3s ease-out;
+          background: #FFF;
+          border: 1px solid #D45E92;
+          color: #D45E92;
+          transition: all 0.3s ease-out;
 
           &Message {
             margin-top: 3px;
@@ -170,7 +169,7 @@
             padding-left: 30px;
             align-self: center;
             font: 12px/20px $textFont;
-            color: #D20C3C;
+            color: #D45E92;
           }
         }
 
@@ -188,8 +187,11 @@
         -moz-appearance: textfield;
 
         &:focus {
-          border-color: $lightColor;
+          background-color: #FFF;
+          border: 1px solid #DDDFE0;
           transition: border-color .3s ease-out;
+          z-index: 100;
+                    
         }
 
         &Label {
@@ -457,7 +459,7 @@
     &Tab {
       box-sizing: border-box;
       width: 100%;
-      background: #f9f9f9;
+      background: #f6f6f6;
       border-bottom: 2px solid #f0f0f0;
 
       &Header {
@@ -526,7 +528,7 @@
           }
 
           &_active {
-            background-color: #fff;
+            background-color: $lightColor;
 
             &::after {
               content: "";
@@ -549,6 +551,7 @@
 
           &Desc {
             font: bold 10px/13px $textFont;
+            text-align: center;
           }
         }
       }
