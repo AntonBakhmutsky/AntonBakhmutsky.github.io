@@ -54,10 +54,12 @@
         width: auto;
         background-color: $darkColor_2;
         padding: 0 15px;
+        color: #FFFFFF;
 
         &:disabled {
           background-color:  #9D9FB5;
           margin: 0 10px 20px;
+          color: #FFFFFF;
         }
       }
     }

@@ -6,6 +6,9 @@
   &__head {
     width: 100%;
     position: relative;
+    &_disabled {
+      opacity: .6;
+    }
 
     &Image {
       width: 100%;
@@ -29,6 +32,7 @@
     box-shadow: 0 -5px 10px rgba(0, 0, 0, .25);
     padding: 20px 30px 60px;
     z-index: 10;
+    color: $textColor;
 
     p, ul, ol {
       margin: 0 0 20px 0;
@@ -131,7 +135,7 @@
     background: #EAEBEF;
     font: bold 30px/68px $headerFont;
     text-align: center;
-    border-radius: 5px;
+    border-radius: 15px;
     margin-bottom: 20px;
   }
 
@@ -178,7 +182,7 @@
           box-sizing: border-box;
           padding: 20px 20px 20px 15px;
           background: #EAEBEF;
-          border-radius: 8px;
+          border-radius: 15px;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -229,13 +233,15 @@
     display: flex;
     justify-content: center;
     margin: 20px auto 25px;
+    border-radius: 15px;
+    overflow: hidden;
   }
 
   &__button {
     align-self: center;
 
     &Btn {
-      background: $lightColor url(../img/shop/buy.svg) no-repeat center;
+      background: $lightColor url(../img/shop/buy_black.svg) no-repeat center;
     }
   }
 
@@ -262,6 +268,35 @@
     display: none;
   }
 
+  &__eshop {
+    &Text {
+      font: bold 13px/16px $textFont;
+      margin-bottom: 20px;
+    }
+    &Link {
+      min-width: 265px;
+      height: 56px;
+      border-radius: 15px;
+      background: #EAEBEF;
+      display: flex;
+      align-items: center;
+      padding-left: 16px;
+      margin-bottom: 30px;
+      
+      &Image {
+        &Gray {
+          display: none;
+        }
+        margin-right: 10px
+      }
+      &Text {
+        font: bold 15px/18px $textFont;
+      }
+    }
+    .voucher__price {
+      margin-bottom: 0;
+    }
+  }
   /*--------------modifiers---------------------*/
   &_get {
     .voucher__status {
@@ -342,7 +377,7 @@
         top: 0;
         width: 100%;
         height: 100%;
-        background: rgba(254, 254, 254, 0.6);;
+        background: rgba(255, 255, 255, .6);
       }
 
       .shop__goodsFilterItemsItem {
@@ -368,6 +403,17 @@
       filter: grayscale(100%) opacity(40%);
     }
 
+    .voucher__eshop {
+      margin-top: 20px;
+      .voucher__eshopLinkImage {
+        display: none;
+      }
+      .voucher__eshopLinkImageGray {
+        margin-right: 10px;
+        display: block;
+      }
+    }
+
     .voucher__button {
       display: none;
     }
@@ -380,10 +426,6 @@
     }
 
     .voucher__map_first {
-      display: none;
-    }
-
-    .voucher__toGet {
       display: none;
     }
 
@@ -419,6 +461,9 @@
         display: none;
       }
       &_disabled {
+        .voucher__head {
+          opacity: .6;
+        }
         .voucher__tinkoffStatus {
           .expect {
             display: none;
@@ -432,7 +477,7 @@
           .shop__goodsItemDescPoints {
             color: #B7C0CB;
             &::after {
-              background-image: url(../img/global/prizes/mile-disabled.svg);
+              background-image: url(../img/global/prizes/miles-disabled.svg);
             }
           }
         }
