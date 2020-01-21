@@ -1,5 +1,4 @@
 .voucher, .prizeByModerator {
-  color: #131929;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,7 +27,7 @@
     border-radius: 5px 5px 0 0;
     background: #FEFEFE;
     box-shadow: 0 -5px 10px rgba(0, 0, 0, .25);
-    padding: 20px 30px 20px;
+    padding: 20px 30px 60px;
     z-index: 10;
 
     p, ul, ol {
@@ -42,11 +41,10 @@
 
     h1, h2, h3 {
        margin: 0 0 20px 0;
-       font-family: "Roboto Slab", serif;
+       font-family: $textFont;
        font-weight: bold;
        font-size: 20px;
        line-height: 24px;
-       color: #131929;
      }
 
     h2 {
@@ -98,7 +96,7 @@
 
     .shop__coinsCount {
       font: bold 20px/24px $headerFont;
-      color: #131929;
+      color: $textColor;
     }
   }
 
@@ -171,16 +169,14 @@
     &Point {
       display: flex;
       flex-wrap: wrap;
-      box-sizing: border-box;
       padding: 20px 30px;
       border-bottom: 2px solid #F0F0F0;
 
       &Link {
         &Inside {
           margin-top: 20px;
-          height: 56px;
           box-sizing: border-box;
-          padding: 0 10px;
+          padding: 20px 20px 20px 15px;
           background: #EAEBEF;
           border-radius: 8px;
           display: flex;
@@ -194,8 +190,9 @@
           }
 
           &Text {
-            font: bold 16px/56px $headerFont;
-            color: #131929;
+            word-break: break-all;
+            font: bold 15px/18px $headerFont;
+            color: $textColor;
           }
         }
       }
@@ -401,6 +398,56 @@
 
     &_waiting {
       color: #D9016F;
+    }
+  }
+  &__tinkoffStatus {
+    font: bold 12px/15px $textFont;
+    color: #96388E;
+    margin-bottom: 20px;
+    .accrued {
+      display: none;
+    }
+  }
+  &__body {
+    &_tinkoff {
+      .voucher__tinkoffStatus {
+        .accrued {
+          display: none;
+        }
+      }
+      .voucher__usePointLinkInsideImageGray {
+        display: none;
+      }
+      &_disabled {
+        .voucher__tinkoffStatus {
+          .expect {
+            display: none;
+          }
+          .accrued {
+            display: block;
+          }
+        }
+        .voucher__price {
+          color: #B7C0CB;
+          .shop__goodsItemDescPoints {
+            color: #B7C0CB;
+            &::after {
+              background-image: url(../img/global/prizes/mile-disabled.svg);
+            }
+          }
+        }
+        color: #B7C0CB;
+        .voucher__usePointLinkInsideImage {
+          display: none;
+        }
+        .voucher__usePointLinkInsideImageGray {
+          margin-right: 10px;
+          display: block;
+        }
+        .voucher__usePointLinkInsideText {
+          color: #B7C0CB;
+        }
+      }
     }
   }
 }

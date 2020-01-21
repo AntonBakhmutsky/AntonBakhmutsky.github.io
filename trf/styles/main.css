@@ -2013,7 +2013,6 @@ blockquote:after {
 
 /*---------------------------------------------------VOUCHER----------------------------------------------------*/
 .voucher, .prizeByModerator {
-  color: #131929;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -2040,7 +2039,7 @@ blockquote:after {
   border-radius: 5px 5px 0 0;
   background: #FEFEFE;
   box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.25);
-  padding: 20px 30px 20px;
+  padding: 20px 30px 60px;
   z-index: 10;
 }
 .voucher__body p, .voucher__body ul, .voucher__body ol, .prizeByModerator__body p, .prizeByModerator__body ul, .prizeByModerator__body ol {
@@ -2052,11 +2051,10 @@ blockquote:after {
 }
 .voucher__body h1, .voucher__body h2, .voucher__body h3, .prizeByModerator__body h1, .prizeByModerator__body h2, .prizeByModerator__body h3 {
   margin: 0 0 20px 0;
-  font-family: "Roboto Slab", serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: bold;
   font-size: 20px;
   line-height: 24px;
-  color: #131929;
 }
 .voucher__body h2, .prizeByModerator__body h2 {
   font-size: 18px;
@@ -2109,7 +2107,7 @@ blockquote:after {
 }
 .voucher__price .shop__coinsCount, .voucher__price .shop__goodsItemDescPoints, .voucher__price .myPrizes__goodsItemDescPoints, .prizeByModerator__price .shop__coinsCount, .prizeByModerator__price .shop__goodsItemDescPoints, .prizeByModerator__price .myPrizes__goodsItemDescPoints {
   font: bold 20px/24px "Montserrat", sans-serif;
-  color: #131929;
+  color: #333333;
 }
 .voucher__errorMessage, .prizeByModerator__errorMessage {
   margin-top: 20px;
@@ -2170,15 +2168,13 @@ blockquote:after {
 .voucher__usePoint, .prizeByModerator__usePoint {
   display: flex;
   flex-wrap: wrap;
-  box-sizing: border-box;
   padding: 20px 30px;
   border-bottom: 2px solid #F0F0F0;
 }
 .voucher__usePointLinkInside, .prizeByModerator__usePointLinkInside {
   margin-top: 20px;
-  height: 56px;
   box-sizing: border-box;
-  padding: 0 10px;
+  padding: 20px 20px 20px 15px;
   background: #EAEBEF;
   border-radius: 8px;
   display: flex;
@@ -2191,8 +2187,9 @@ blockquote:after {
   margin-right: 10px;
 }
 .voucher__usePointLinkInsideText, .prizeByModerator__usePointLinkInsideText {
-  font: bold 16px/56px "Montserrat", sans-serif;
-  color: #131929;
+  word-break: break-all;
+  font: bold 15px/18px "Montserrat", sans-serif;
+  color: #333333;
 }
 .voucher__usePoint:last-child, .prizeByModerator__usePoint:last-child {
   border: none;
@@ -2343,6 +2340,48 @@ blockquote:after {
 }
 .voucher__rosaStatus_waiting, .prizeByModerator__rosaStatus_waiting {
   color: #D9016F;
+}
+.voucher__tinkoffStatus, .prizeByModerator__tinkoffStatus {
+  font: bold 12px/15px "Montserrat", sans-serif;
+  color: #96388E;
+  margin-bottom: 20px;
+}
+.voucher__tinkoffStatus .accrued, .prizeByModerator__tinkoffStatus .accrued {
+  display: none;
+}
+.voucher__body_tinkoff .voucher__tinkoffStatus .accrued, .prizeByModerator__body_tinkoff .voucher__tinkoffStatus .accrued {
+  display: none;
+}
+.voucher__body_tinkoff .voucher__usePointLinkInsideImageGray, .prizeByModerator__body_tinkoff .voucher__usePointLinkInsideImageGray {
+  display: none;
+}
+.voucher__body_tinkoff_disabled, .prizeByModerator__body_tinkoff_disabled {
+  color: #B7C0CB;
+}
+.voucher__body_tinkoff_disabled .voucher__tinkoffStatus .expect, .prizeByModerator__body_tinkoff_disabled .voucher__tinkoffStatus .expect {
+  display: none;
+}
+.voucher__body_tinkoff_disabled .voucher__tinkoffStatus .accrued, .prizeByModerator__body_tinkoff_disabled .voucher__tinkoffStatus .accrued {
+  display: block;
+}
+.voucher__body_tinkoff_disabled .voucher__price, .prizeByModerator__body_tinkoff_disabled .voucher__price {
+  color: #B7C0CB;
+}
+.voucher__body_tinkoff_disabled .voucher__price .shop__goodsItemDescPoints, .prizeByModerator__body_tinkoff_disabled .voucher__price .shop__goodsItemDescPoints {
+  color: #B7C0CB;
+}
+.voucher__body_tinkoff_disabled .voucher__price .shop__goodsItemDescPoints::after, .prizeByModerator__body_tinkoff_disabled .voucher__price .shop__goodsItemDescPoints::after {
+  background-image: url(../img/global/prizes/mile-disabled.svg);
+}
+.voucher__body_tinkoff_disabled .voucher__usePointLinkInsideImage, .prizeByModerator__body_tinkoff_disabled .voucher__usePointLinkInsideImage {
+  display: none;
+}
+.voucher__body_tinkoff_disabled .voucher__usePointLinkInsideImageGray, .prizeByModerator__body_tinkoff_disabled .voucher__usePointLinkInsideImageGray {
+  margin-right: 10px;
+  display: block;
+}
+.voucher__body_tinkoff_disabled .voucher__usePointLinkInsideText, .prizeByModerator__body_tinkoff_disabled .voucher__usePointLinkInsideText {
+  color: #B7C0CB;
 }
 
 /*------------------------------------------------- task_list --------------------------------------------------*/
@@ -4731,7 +4770,7 @@ blockquote:after {
   font-weight: bold;
   font-size: 20px;
   line-height: 24px;
-  color: #131929;
+  color: #333333;
 }
 .one_task .content_block h2 {
   font-size: 18px;
@@ -5732,7 +5771,6 @@ blockquote:after {
   font-weight: bold;
   font-size: 20px;
   line-height: 24px;
-  color: #131929;
 }
 .notifications__bodyItemContent h2 {
   font-size: 18px;
