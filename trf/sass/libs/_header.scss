@@ -66,7 +66,13 @@
     }
   }
   &Team {
-    background: $lightColor;
+    background: #31BDA0;
     margin-right: 10px;
+  }
+  &Face {
+    background: $lightColor;
+  }
+  .avatar_no_team {
+    background: $lightColor;
   }
 }

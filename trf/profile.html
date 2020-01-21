@@ -23,10 +23,10 @@
     </div>
     <div class="main__headerRight">
         <div class="main__headerTeam">
-            <img class="main__headerTeamImage" src="img/team.png" alt="team">
+            <img class="main__headerTeamImage" src="img/team.svg" alt="team">
         </div>
         <div class="main__headerFace">
-            <img class="main__headerFaceImage" src="img/face.png" alt="face">
+            <img class="main__headerFaceImage" src="img/face.svg" alt="face">
         </div>
     </div>
 </header>
@@ -85,11 +85,12 @@
                     <label class="myProfile__formItemInputLabel" for="userPatronymic">Отчество</label>
                 </div>
                 <div class="myProfile__formItem">
-                    <div class="input__wrap input__wrap_white">
-                        <input class="myProfile__formItemInput" type="text" name="userNickname"
+                    <div class="input__wrap input__wrap_red">
+                        <input class="myProfile__formItemInput myProfile__formItemInput_wrong" type="text" name="userNickname"
                                id="userNickname" placeholder="Введите прозвище" required>
                     </div>
                     <label class="myProfile__formItemInputLabel" for="userNickname">Прозвище</label>
+                    <div class="myProfile__formItemInput_wrongMessage">Поле не может быть пустым</div>
                 </div>
                 <div class="myProfile__formItemWrap">
                     <div class="myProfile__formItemRadio">

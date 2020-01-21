@@ -29,13 +29,15 @@
 .ss-main .ss-single-selected.ss-open-above {
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
-  border-color: #009BE2;
+  border: 1px solid #DDDFE0;
+  background: #FFFFFF;
 }
 
 .ss-main .ss-single-selected.ss-open-below {
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
-  border-color: #009BE2;
+  border: 1px solid #DDDFE0;
+  background: #FFFFFF;
 }
 
 .ss-main .ss-single-selected .placeholder {
@@ -250,7 +252,7 @@
   width: 260px;
   margin: 47px 0 0 0;
   box-sizing: border-box;
-  border: solid 1px #009BE2;
+  border: solid 1px #dcdee2;
   z-index: 1010;
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;

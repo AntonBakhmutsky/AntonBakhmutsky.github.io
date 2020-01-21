@@ -38,7 +38,7 @@
   }  
   .myProfile {
     &__form {
-      margin: 0;
+      margin: 0 0 35px;
     }
     &__submit {
       &Btn {
@@ -82,7 +82,7 @@
     margin: 20px 0 40px;
     z-index: 1;
 
-    .modalQr__id {
+    &__id {
       width: 258px;
       height: 69px;
       align-items: center;
@@ -94,6 +94,9 @@
       font-size: 30px;
       line-height: 20px;
       margin-top: 20px;
+    }
+    &__buttonBtn {
+      color: $textColor;
     }
   }
   &__deleteBtn {
@@ -138,13 +141,13 @@
         }
         .foto {
           border: 2px solid $lightColor;
+          background-color: $lightColor;
         }
         p {
           margin: 15px 0;
           font-weight: bold;
           font-size: 10px;
           line-height: 13px;
-          text-align: center;
         }
       }
     }
@@ -176,6 +179,7 @@
 }
 .teamModal {
   align-items: flex-end;
+  background: rgba(51, 51, 51, 0.9);
 
   .modal {
     width: 100%;

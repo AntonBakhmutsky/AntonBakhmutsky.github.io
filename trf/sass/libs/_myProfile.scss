@@ -82,6 +82,7 @@
         width: 100px;
         height: 100px;
         border-radius: 50%;
+        background-color: $lightColor;
         border: 2px solid $lightColor;
         overflow: hidden;
 
@@ -720,7 +721,8 @@
 }
 
 .myProfile__formItemSelectItem_last {
-  color: $lightColor;
+  color: #418AF9;
   text-decoration: underline;
+  text-decoration-style: dashed;
   margin-bottom: 10px;
 }
