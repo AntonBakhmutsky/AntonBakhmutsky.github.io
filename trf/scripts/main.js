@@ -63,8 +63,6 @@ window.addEventListener('load', () => {
         }
     }
 
-
-
     deletePerson.addEventListener('click', showHintModalP);
     deleteTeam.addEventListener('click', showHintModalT);
     hintModal.addEventListener('click', closeHintModal);

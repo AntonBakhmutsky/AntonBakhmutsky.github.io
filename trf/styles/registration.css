@@ -1,6 +1,6 @@
 /*------------------------------------------- base -------------------------------------------*/
 body {
-  font-family: "IBM Plex Mono", monospace;
+  font-family: "Montserrat", sans-serif;
   font-weight: normal;
   font-size: 14px;
   line-height: 20px;
@@ -10,20 +10,21 @@ body {
 .blue_btn {
   display: block;
   width: 100%;
-  background: #009BE2;
+  background: #FFDD2D;
   border-radius: 8px;
   border: none;
   padding: 13px 19px;
   font-weight: bold;
   font-size: 18px;
   line-height: 22px;
-  color: #fff;
+  color: #333333;
   text-align: center;
   cursor: pointer;
 }
 
 .blue_btn[disabled] {
   background: #9D9FB5;
+  color: #fff;
 }
 
 /*------------------------------------------- registration_page -------------------------------------------*/
@@ -31,15 +32,12 @@ body {
   min-height: 100vh;
   height: auto;
   color: #FFFFFF;
-  background-image: url(../img/reg-bg.jpg);
-  -webkit-background-size: cover;
-  background-size: cover;
-  background-position: center;
+  background: #49638E;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 25px 60px 25px;
+  padding: 20px 20px 60px 20px;
   position: relative;
 }
 
@@ -56,12 +54,10 @@ body {
 
 .registration_page .top_block h1 {
   margin-top: 10px;
-  text-align: center;
   font-weight: bold;
-  font-size: 24px;
-  line-height: 29px;
-  text-shadow: 2px 2px 0 #232D5E;
-  font-family: 'Roboto Slab', serif;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
 }
 
 .registration_page .content_block .waiting_code {
@@ -69,6 +65,8 @@ body {
   margin-top: 30px;
   display: flex;
   justify-content: center;
+  font-size: 13px;
+  line-height: 16px;
 }
 
 .registration_page .content_block .waiting_code .icon {
@@ -90,10 +88,6 @@ body {
 
 .registration_page .content_block .waiting_code .text {
   margin: 0 10px;
-}
-
-.registration_page .content_block .waiting_code .time {
-  font-family: 'Roboto Slab', serif;
 }
 
 .registration_page .content_block .code_repeat {
@@ -120,6 +114,9 @@ body {
 }
 
 .registration_page .content_block .description {
+  font-size: 13px;
+  line-height: 20px;
+  margin-top: 10px;
   text-align: center;
 }
 
@@ -138,17 +135,18 @@ body {
   position: relative;
   font-weight: normal;
   font-size: 12px;
-  line-height: 20px;
-  color: #ffffff;
+  line-height: 15px;
+  color: #D45E92;
   width: 230px;
   text-align: left;
+  margin-top: 2px;
 }
 
 .registration_page .content_block .input_block input {
   height: 45px;
   border: none;
   background: none;
-  border-bottom: 2px solid #D81F68;
+  border-bottom: 2px solid #FFDD2D;
   width: 230px;
   font-weight: normal;
   font-size: 22px;
@@ -158,7 +156,6 @@ body {
 }
 
 .registration_page .content_block .input_block ::-webkit-input-placeholder {
-  font-family: "IBM Plex Mono", monospace;
   font-weight: normal;
   font-size: 14px;
   line-height: 20px;
@@ -166,7 +163,6 @@ body {
 }
 
 .registration_page .content_block .input_block ::-moz-placeholder {
-  font-family: "IBM Plex Mono", monospace;
   font-weight: normal;
   font-size: 14px;
   line-height: 20px;
@@ -174,7 +170,6 @@ body {
 }
 
 .registration_page .content_block .input_block :-moz-placeholder {
-  font-family: "IBM Plex Mono", monospace;
   font-weight: normal;
   font-size: 14px;
   line-height: 20px;
@@ -182,7 +177,6 @@ body {
 }
 
 .registration_page .content_block .input_block :-ms-input-placeholder {
-  font-family: "IBM Plex Mono", monospace;
   font-weight: normal;
   font-size: 14px;
   line-height: 20px;
@@ -243,7 +237,7 @@ body {
 }
 
 .registration_page .content_block .checkbox_block input:checked + .checkbox {
-  background: #D81F68;
+  background: #FFDD2D;
 }
 
 .registration_page .content_block .checkbox_block input:checked + .checkbox:before {
@@ -251,28 +245,66 @@ body {
 }
 
 .registration_page .content_block .checkbox_block .checkbox {
-  border: 2px solid #D81F68;
-  min-width: 22px;
-  width: 22px;
-  height: 22px;
+  border: 2px solid #FFDD2D;
+  min-width: 16px;
+  width: 16px;
+  height: 16px;
   border-radius: 3px;
   display: inline-block;
-  margin-right: 20px;
+  margin-right: 10px;
   transition: all 0.3s;
   position: relative;
+  top: 5px;
 }
 
 .registration_page .content_block .checkbox_block .checkbox:before {
   content: "";
-  width: 14px;
-  height: 11px;
+  width: 10px;
+  height: 9px;
   display: inline-block;
   position: absolute;
-  top: 3px;
-  left: 2px;
+  top: 2px;
+  left: 1px;
   background-image: url(../img/checked-reg.svg);
   opacity: 0;
   transition: all 0.3s;
+}
+
+.advertising_block {
+  height: 25px;
+}
+
+.advertising_block .advertising {
+  background: #FFDD2D;
+  border-radius: 10px 10px 0 0;
+  padding: 10px 17px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.advertising_block .advertising .img_block {
+  min-width: 70px;
+  line-height: 0;
+  margin-right: 15px;
+}
+
+.advertising_block .advertising .text_block p {
+  margin: 0;
+  font-size: 10px;
+  line-height: 12px;
+  color: #333333;
+}
+
+.advertising_block .advertising .text_block a {
+  font-size: 10px;
+  line-height: 12px;
+  color: #333333;
+  font-weight: bold;
+  text-decoration: underline;
 }
 
 .registration_page .content_block .checkbox_block .text {
@@ -341,35 +373,6 @@ body {
   left: 0;
 }
 
-/*------------------------------------------- com -------------------------------------------*/
-@media (max-width: 321px) {
-  .registration_page {
-    padding: 20px 25px 40px 25px;
-  }
-
-  .registration_page .content_block .input_block {
-    margin-top: 0;
-  }
-
-  .registration_page .content_block .checkbox_block {
-    margin: 12px auto 0 auto;
-  }
-
-  .registration_page .top_block .logo {
-    height: 70px;
-  }
-
-  .registration_page .top_block h1 {
-    font-size: 20px;
-    line-height: 24px;
-    margin-top: 5px;
-  }
-
-  .blue_btn {
-    padding: 11px 19px;
-  }
-}
-
 /*-----------------------------------------------anotherBrowser------------------------------------------------*/
 /*------------------------------------------- another_browser -------------------------------------------*/
 .another_browser {
@@ -428,7 +431,6 @@ body {
   font-size: 20px;
   line-height: 24px;
   color: #131929;
-  font-family: "Roboto Slab", serif;
 }
 
 .message_block .content .message_caption a {

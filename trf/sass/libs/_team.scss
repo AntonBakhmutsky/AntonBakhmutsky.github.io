@@ -38,28 +38,37 @@
   .myProfile__form {
     margin: 0;
   }
-  .myProfile__submit {
-    .myProfile__submitBtn {
-      margin: 0 0 30px;
+  .myProfile {
+    &__submit {
+      &Btn {
+        margin: 0 0 30px;
+      }
+      .blueBtn {
+        background-color: $darkColor_2;
+        color: #FFFFFF;
+      }
     }
-    .myProfile__aboutLink {
-      width: auto;
-      background-color: $darkColor_2;
-      padding: 0px 15px;
-    }
-    .blueBtn {
-      background-color: $darkColor_2;
-      color: #FFFFFF;
+    &__about {
+      &Link {
+        width: auto;
+        background-color: $darkColor_2;
+        padding: 0px 15px;
+      }
     }
   }
-  .givePrize__body {
-    .givePrize__header {
+  .givePrize {        
+    &__header {
       margin: 0;
     }
-    p {
-      margin: 15px 30px 20px;
-      text-align: center;
-    }
+    &__body {
+      p {
+        margin: 15px 30px 20px;
+        text-align: center;
+      }   
+    }  
+    &__submit {
+      padding-bottom: 40px;
+    }   
   }
   .modalQr {
     position: relative;

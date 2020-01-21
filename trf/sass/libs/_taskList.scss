@@ -191,7 +191,7 @@
   position: relative;
   overflow: hidden;
   margin-top: 20px;
-  border-radius: 8px 8px 0 0;
+  border-radius: 15px 15px 0 0;
 }
 
 .task_list .enumeration_tasks.active {
@@ -218,8 +218,8 @@
 
 .task_list .enumeration_tasks .main_task {
   background: #FEFEFE;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
-  border-radius: 8px;
+  box-shadow: 0 0px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
   position: relative;
   z-index: 100;
 }
@@ -378,7 +378,8 @@
 }
 
 .task_list .enumeration_tasks .other_tasks .task {
-  margin-top: -10px;
+  margin-top: -23px;
+  padding-top: 12px;
   position: absolute;
   bottom: 100px;
 }
@@ -456,7 +457,7 @@
 }
 
 .task_list .enumeration_tasks .close_block .close_btn_top i {
-  width: 12px;
+  width: 11px;
   height: 11px;
   display: inline-block;
   background-image: url(../img/open-arrow.svg);
@@ -483,7 +484,7 @@
 }
 
 .task_list .enumeration_tasks .close_block .close_btn_bottom i {
-  width: 12px;
+  width: 11px;
   height: 11px;
   display: inline-block;
   background-image: url(../img/open-arrow.svg);
@@ -494,6 +495,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  top: -5px;
 }
 
 .task_list .enumeration_tasks .open_block .one_card {
@@ -538,7 +541,7 @@
 }
 
 .task_list .enumeration_tasks .open_block .open_btn i {
-  width: 12px;
+  width: 11px;
   height: 11px;
   display: inline-block;
   background-image: url(../img/open-arrow.svg);
@@ -547,7 +550,7 @@
 /*------------------------------------------- task -------------------------------------------*/
 .task {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
-  border-radius: 8px;
+  border-radius: 15px;
   margin-top: 20px;
   background: #fff;
 }
@@ -641,7 +644,7 @@
 }
 
 .task .body_block .btn_block .more {
-  border-radius: 8px;
+  border-radius: 10px;
   font-weight: bold;
   font-size: 15px;
   line-height: 19px;
@@ -728,7 +731,7 @@
 .task.done .footer_block .reward_block {
   padding: 15px 19px;
   background: #C8FFF4;
-  border-radius: 8px;
+  border-radius: 15px;
   margin: 0 1px;
 }
 
@@ -817,7 +820,7 @@
 .task.failed .footer_block .reward_block {
   padding: 15px 19px;
   background: #FFD3F3;
-  border-radius: 8px;
+  border-radius: 15px;
   margin: 0 1px;
 }
 

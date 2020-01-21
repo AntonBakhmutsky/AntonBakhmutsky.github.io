@@ -311,13 +311,15 @@ blockquote:after {
   height: 30px;
   border-radius: 50%;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .main__headerFaceImage, .main__headerTeamImage {
-  display: block;
-  width: 100%;
+  max-width: 100%;
 }
 .main__headerTeam {
-  background: center no-repeat url(../img/team_plus.svg), #FFDD2D;
+  background: #FFDD2D;
   margin-right: 10px;
 }
 
@@ -415,6 +417,7 @@ blockquote:after {
   font: bold 8px/10px "Montserrat", sans-serif;
 }
 .main__footerItem .numberOfNotifications {
+  border: 1px solid #EEF2F7;
   position: absolute;
   right: 10px;
   top: 5px;
@@ -1772,27 +1775,18 @@ blockquote:after {
 }
 .shop__goodsItem, .myPrizes__goodsItem {
   min-width: 300px;
-  min-height: 120px;
   background: #fff;
-  border-radius: 8px;
-  box-sizing: border-box;
-  padding: 13px 10px;
-  color: #131929;
+  border-radius: 15px;
+  color: #333333;
   margin-bottom: 10px;
   display: flex;
-  flex-flow: row wrap;
-}
-.shop__goodsItem_second .shop__goodsFilterItems, .myPrizes__goodsItem_second .shop__goodsFilterItems {
-  flex-basis: 100%;
 }
 .shop__goodsItemImage, .myPrizes__goodsItemImage {
   position: relative;
-  width: 95px;
-  height: 95px;
   justify-content: center;
-  margin-right: 15px;
-  border-radius: 5px;
+  border-radius: 15px 0 0 15px;
   overflow: hidden;
+  flex-basis: 33%;
 }
 .shop__goodsItemImage > img, .myPrizes__goodsItemImage > img {
   width: 100%;
@@ -1809,16 +1803,15 @@ blockquote:after {
   align-self: stretch;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  flex-basis: 67%;
+  padding: 10px 10px 20px 15px;
 }
 .shop__goodsItemDescCount, .myPrizes__goodsItemDescCount {
-  margin-top: 10px;
-  font: bold 18px/22px "Montserrat", sans-serif;
-  color: #160840;
-}
-.shop__goodsItemDescCountSpan, .myPrizes__goodsItemDescCountSpan {
-  font-size: 14px;
-  line-height: 17px;
-  color: #80839f;
+  height: 10px;
+  font: bold 7px/9px "Montserrat", sans-serif;
+  color: #96388E;
+  margin-bottom: 5px;
 }
 .shop__goodsItemDescCountText, .myPrizes__goodsItemDescCountText {
   font-size: 13px;
@@ -1830,14 +1823,37 @@ blockquote:after {
   display: none;
 }
 .shop__goodsItemDescPromo, .myPrizes__goodsItemDescPromo {
-  width: 170px;
-  font-weight: bold;
-  font-family: "Montserrat", sans-serif;
+  font: bold 13px/16px "Montserrat", sans-serif;
+  margin-bottom: 5px;
+  flex-basis: 24%;
+}
+.shop__goodsItemDesc .shop__price, .myPrizes__goodsItemDesc .shop__price {
+  min-height: 37px;
+  display: flex;
+  align-items: flex-end;
+}
+.shop__goodsItemDesc .shop__priceItem, .myPrizes__goodsItemDesc .shop__priceItem {
+  margin-right: 50px;
+}
+.shop__goodsItemDesc .shop__priceItem:last-child, .myPrizes__goodsItemDesc .shop__priceItem:last-child {
+  margin-right: 0;
+}
+.shop__goodsItemDesc .shop__coinsCountText, .myPrizes__goodsItemDesc .shop__coinsCountText {
+  max-width: 77px;
+  font: bold 6px/7px "Montserrat", sans-serif;
+  color: #74A3C7;
 }
 .shop__goodsItemDesc .shop__coinsCount, .shop__goodsItemDesc .shop__goodsItemDescPoints, .shop__goodsItemDesc .myPrizes__goodsItemDescPoints, .myPrizes__goodsItemDesc .shop__coinsCount, .myPrizes__goodsItemDesc .shop__goodsItemDescPoints, .myPrizes__goodsItemDesc .myPrizes__goodsItemDescPoints {
   margin: 5px 0 0 0;
-  font: bold 20px/24px "Montserrat", sans-serif;
+  font: bold 15px/18px "Montserrat", sans-serif;
   align-self: flex-start;
+}
+.shop__goodsItemDesc .shop__coinsCount::after, .shop__goodsItemDesc .shop__goodsItemDescPoints::after, .shop__goodsItemDesc .myPrizes__goodsItemDescPoints::after, .myPrizes__goodsItemDesc .shop__coinsCount::after, .myPrizes__goodsItemDesc .shop__goodsItemDescPoints::after, .myPrizes__goodsItemDesc .myPrizes__goodsItemDescPoints::after {
+  top: 2px;
+  right: -15px;
+}
+.shop__goodsItemDesc .shop__coinsCount_forOwners, .myPrizes__goodsItemDesc .shop__coinsCount_forOwners {
+  color: #74A3C7;
 }
 .shop__goodsItemDescMyRose, .myPrizes__goodsItemDescMyRose {
   font-family: "Montserrat", sans-serif;
@@ -1848,29 +1864,11 @@ blockquote:after {
 }
 .shop__goodsItemDescPoints:after, .myPrizes__goodsItemDescPoints:after {
   content: "";
-  top: 6px;
+  right: -18px !important;
   width: 14px;
   height: 14px;
-  background: url(../img/global/prizes/rosa.svg) no-repeat center;
+  background: url(../img/global/prizes/mile.svg) no-repeat center;
   background-size: cover;
-}
-.shop__goodsItem_low .shop__goodsItemImage::before, .shop__goodsItem_issued .shop__goodsItemImage::before, .shop__goodsItem_lowPrize .shop__goodsItemImage::before, .shop__goodsItem_endedPrize .shop__goodsItemImage::before, .shop__goodsItem_changePrize .shop__goodsItemImage::before, .myPrizes__goodsItem_low .shop__goodsItemImage::before, .myPrizes__goodsItem_issued .shop__goodsItemImage::before, .myPrizes__goodsItem_lowPrize .shop__goodsItemImage::before, .myPrizes__goodsItem_endedPrize .shop__goodsItemImage::before, .myPrizes__goodsItem_changePrize .shop__goodsItemImage::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 95px;
-  height: 100px;
-  background: linear-gradient(180deg, #2a0b4c 0%, rgba(42, 11, 76, 0.5) 100%);
-  border-radius: 5px;
-}
-.shop__goodsItem_low .shop__goodsItemImage::after, .shop__goodsItem_issued .shop__goodsItemImage::after, .shop__goodsItem_lowPrize .shop__goodsItemImage::after, .shop__goodsItem_endedPrize .shop__goodsItemImage::after, .shop__goodsItem_changePrize .shop__goodsItemImage::after, .myPrizes__goodsItem_low .shop__goodsItemImage::after, .myPrizes__goodsItem_issued .shop__goodsItemImage::after, .myPrizes__goodsItem_lowPrize .shop__goodsItemImage::after, .myPrizes__goodsItem_endedPrize .shop__goodsItemImage::after, .myPrizes__goodsItem_changePrize .shop__goodsItemImage::after {
-  content: "Товар заканчивается";
-  position: absolute;
-  top: 2px;
-  left: 5px;
-  font: bold 7px/20px "Montserrat", sans-serif;
-  color: #fff;
 }
 .shop__goodsItem_changePrize .shop__goodsItemImage::after, .myPrizes__goodsItem_changePrize .shop__goodsItemImage::after {
   content: "Призы закончились";
@@ -1889,59 +1887,40 @@ blockquote:after {
 .shop__goodsItem_lowPrize .shop__goodsItemImage::after, .myPrizes__goodsItem_lowPrize .shop__goodsItemImage::after {
   content: "Призы заканчиваются";
 }
-.shop__goodsItem_issued .shop__goodsItemImage::after, .myPrizes__goodsItem_issued .shop__goodsItemImage::after {
-  content: "Промокод выдан";
-  left: 16px;
+.shop__goodsItem_issued, .myPrizes__goodsItem_issued {
+  height: 86px;
 }
-.shop__goodsItem_ended .shop__goodsItemImage::before, .shop__goodsItem_buyed .shop__goodsItemImage::before, .shop__goodsItem_used .shop__goodsItemImage::before, .shop__goodsItem_closed .shop__goodsItemImage::before, .shop__goodsItem_issuedPrize .shop__goodsItemImage::before, .myPrizes__goodsItem_ended .shop__goodsItemImage::before, .myPrizes__goodsItem_buyed .shop__goodsItemImage::before, .myPrizes__goodsItem_used .shop__goodsItemImage::before, .myPrizes__goodsItem_closed .shop__goodsItemImage::before, .myPrizes__goodsItem_issuedPrize .shop__goodsItemImage::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 95px;
-  height: 100px;
-  background: linear-gradient(180deg, white 0%, rgba(255, 255, 255, 0.5) 100%);
-  border-radius: 5px;
-}
-.shop__goodsItem_ended .shop__goodsItemImage::after, .shop__goodsItem_buyed .shop__goodsItemImage::after, .shop__goodsItem_used .shop__goodsItemImage::after, .shop__goodsItem_closed .shop__goodsItemImage::after, .shop__goodsItem_issuedPrize .shop__goodsItemImage::after, .myPrizes__goodsItem_ended .shop__goodsItemImage::after, .myPrizes__goodsItem_buyed .shop__goodsItemImage::after, .myPrizes__goodsItem_used .shop__goodsItemImage::after, .myPrizes__goodsItem_closed .shop__goodsItemImage::after, .myPrizes__goodsItem_issuedPrize .shop__goodsItemImage::after {
-  content: "Товар закончился";
-  position: absolute;
-  top: 2px;
-  left: 9px;
-  font: bold 8px/20px "Montserrat", sans-serif;
-  color: #9D9FB5;
+.shop__goodsItem_ended .shop__goodsItemImage, .shop__goodsItem_buyed .shop__goodsItemImage, .shop__goodsItem_used .shop__goodsItemImage, .shop__goodsItem_closed .shop__goodsItemImage, .shop__goodsItem_issuedPrize .shop__goodsItemImage, .myPrizes__goodsItem_ended .shop__goodsItemImage, .myPrizes__goodsItem_buyed .shop__goodsItemImage, .myPrizes__goodsItem_used .shop__goodsItemImage, .myPrizes__goodsItem_closed .shop__goodsItemImage, .myPrizes__goodsItem_issuedPrize .shop__goodsItemImage {
+  opacity: 0.6;
 }
 .shop__goodsItem_ended .shop__goodsItemDescPromo, .shop__goodsItem_buyed .shop__goodsItemDescPromo, .shop__goodsItem_used .shop__goodsItemDescPromo, .shop__goodsItem_closed .shop__goodsItemDescPromo, .shop__goodsItem_issuedPrize .shop__goodsItemDescPromo, .myPrizes__goodsItem_ended .shop__goodsItemDescPromo, .myPrizes__goodsItem_buyed .shop__goodsItemDescPromo, .myPrizes__goodsItem_used .shop__goodsItemDescPromo, .myPrizes__goodsItem_closed .shop__goodsItemDescPromo, .myPrizes__goodsItem_issuedPrize .shop__goodsItemDescPromo {
-  color: #9D9FB5;
+  color: #B7C0CB;
 }
 .shop__goodsItem_ended .shop__coinsCount, .shop__goodsItem_ended .shop__goodsItemDescPoints, .shop__goodsItem_ended .myPrizes__goodsItemDescPoints, .shop__goodsItem_buyed .shop__coinsCount, .shop__goodsItem_buyed .shop__goodsItemDescPoints, .shop__goodsItem_buyed .myPrizes__goodsItemDescPoints, .shop__goodsItem_used .shop__coinsCount, .shop__goodsItem_used .shop__goodsItemDescPoints, .shop__goodsItem_used .myPrizes__goodsItemDescPoints, .shop__goodsItem_closed .shop__coinsCount, .shop__goodsItem_closed .shop__goodsItemDescPoints, .shop__goodsItem_closed .myPrizes__goodsItemDescPoints, .shop__goodsItem_issuedPrize .shop__coinsCount, .shop__goodsItem_issuedPrize .shop__goodsItemDescPoints, .shop__goodsItem_issuedPrize .myPrizes__goodsItemDescPoints, .myPrizes__goodsItem_ended .shop__coinsCount, .myPrizes__goodsItem_ended .shop__goodsItemDescPoints, .myPrizes__goodsItem_ended .myPrizes__goodsItemDescPoints, .myPrizes__goodsItem_buyed .shop__coinsCount, .myPrizes__goodsItem_buyed .shop__goodsItemDescPoints, .myPrizes__goodsItem_buyed .myPrizes__goodsItemDescPoints, .myPrizes__goodsItem_used .shop__coinsCount, .myPrizes__goodsItem_used .shop__goodsItemDescPoints, .myPrizes__goodsItem_used .myPrizes__goodsItemDescPoints, .myPrizes__goodsItem_closed .shop__coinsCount, .myPrizes__goodsItem_closed .shop__goodsItemDescPoints, .myPrizes__goodsItem_closed .myPrizes__goodsItemDescPoints, .myPrizes__goodsItem_issuedPrize .shop__coinsCount, .myPrizes__goodsItem_issuedPrize .shop__goodsItemDescPoints, .myPrizes__goodsItem_issuedPrize .myPrizes__goodsItemDescPoints {
-  color: #9D9FB5;
+  color: #B7C0CB;
 }
 .shop__goodsItem_ended .shop__coinsCount::after, .shop__goodsItem_ended .shop__goodsItemDescPoints::after, .shop__goodsItem_ended .myPrizes__goodsItemDescPoints::after, .shop__goodsItem_buyed .shop__coinsCount::after, .shop__goodsItem_buyed .shop__goodsItemDescPoints::after, .shop__goodsItem_buyed .myPrizes__goodsItemDescPoints::after, .shop__goodsItem_used .shop__coinsCount::after, .shop__goodsItem_used .shop__goodsItemDescPoints::after, .shop__goodsItem_used .myPrizes__goodsItemDescPoints::after, .shop__goodsItem_closed .shop__coinsCount::after, .shop__goodsItem_closed .shop__goodsItemDescPoints::after, .shop__goodsItem_closed .myPrizes__goodsItemDescPoints::after, .shop__goodsItem_issuedPrize .shop__coinsCount::after, .shop__goodsItem_issuedPrize .shop__goodsItemDescPoints::after, .shop__goodsItem_issuedPrize .myPrizes__goodsItemDescPoints::after, .myPrizes__goodsItem_ended .shop__coinsCount::after, .myPrizes__goodsItem_ended .shop__goodsItemDescPoints::after, .myPrizes__goodsItem_ended .myPrizes__goodsItemDescPoints::after, .myPrizes__goodsItem_buyed .shop__coinsCount::after, .myPrizes__goodsItem_buyed .shop__goodsItemDescPoints::after, .myPrizes__goodsItem_buyed .myPrizes__goodsItemDescPoints::after, .myPrizes__goodsItem_used .shop__coinsCount::after, .myPrizes__goodsItem_used .shop__goodsItemDescPoints::after, .myPrizes__goodsItem_used .myPrizes__goodsItemDescPoints::after, .myPrizes__goodsItem_closed .shop__coinsCount::after, .myPrizes__goodsItem_closed .shop__goodsItemDescPoints::after, .myPrizes__goodsItem_closed .myPrizes__goodsItemDescPoints::after, .myPrizes__goodsItem_issuedPrize .shop__coinsCount::after, .myPrizes__goodsItem_issuedPrize .shop__goodsItemDescPoints::after, .myPrizes__goodsItem_issuedPrize .myPrizes__goodsItemDescPoints::after {
   content: "";
   filter: grayscale(100%) opacity(45%);
 }
+.shop__goodsItem_ended .shop__coinsCountText, .shop__goodsItem_buyed .shop__coinsCountText, .shop__goodsItem_used .shop__coinsCountText, .shop__goodsItem_closed .shop__coinsCountText, .shop__goodsItem_issuedPrize .shop__coinsCountText, .myPrizes__goodsItem_ended .shop__coinsCountText, .myPrizes__goodsItem_buyed .shop__coinsCountText, .myPrizes__goodsItem_used .shop__coinsCountText, .myPrizes__goodsItem_closed .shop__coinsCountText, .myPrizes__goodsItem_issuedPrize .shop__coinsCountText {
+  color: #B7C0CB;
+}
 .shop__goodsItem_ended .shop__goodsFilterItemsItem, .shop__goodsItem_buyed .shop__goodsFilterItemsItem, .shop__goodsItem_used .shop__goodsFilterItemsItem, .shop__goodsItem_closed .shop__goodsFilterItemsItem, .shop__goodsItem_issuedPrize .shop__goodsFilterItemsItem, .myPrizes__goodsItem_ended .shop__goodsFilterItemsItem, .myPrizes__goodsItem_buyed .shop__goodsFilterItemsItem, .myPrizes__goodsItem_used .shop__goodsFilterItemsItem, .myPrizes__goodsItem_closed .shop__goodsFilterItemsItem, .myPrizes__goodsItem_issuedPrize .shop__goodsFilterItemsItem {
-  background: #9D9FB5;
+  background: #B7C0CB;
 }
 .shop__goodsItem_buyed .shop__goodsItemImage::after, .myPrizes__goodsItem_buyed .shop__goodsItemImage::after {
   content: "Приз уже куплен";
   left: 16px;
   color: #717494;
 }
-.shop__goodsItem_issuedPrize .shop__goodsItemImage::after, .myPrizes__goodsItem_issuedPrize .shop__goodsItemImage::after {
-  content: "Приз выдан";
-  left: 22px;
-  color: #717494;
+.shop__goodsItem_used .shop__goodsItemDesc, .myPrizes__goodsItem_used .shop__goodsItemDesc {
+  justify-content: flex-start;
 }
-.shop__goodsItem_issuedPrize .memberPrize__priceImage, .myPrizes__goodsItem_issuedPrize .memberPrize__priceImage {
-  filter: grayscale(80%);
-}
-.shop__goodsItem_issuedPrize .memberPrize__priceCount, .myPrizes__goodsItem_issuedPrize .memberPrize__priceCount {
-  color: #9D9FB5;
-}
-.shop__goodsItem_used .shop__goodsItemImage::after, .myPrizes__goodsItem_used .shop__goodsItemImage::after {
-  content: "Приз использован";
+.shop__goodsItem_used .shop__goodsItemDescPromo, .myPrizes__goodsItem_used .shop__goodsItemDescPromo {
+  flex-basis: 79%;
+  display: flex;
+  align-items: center;
 }
 .shop__goodsItem_closed .shop__goodsItemImage::after, .myPrizes__goodsItem_closed .shop__goodsItemImage::after {
   content: "";
@@ -1970,6 +1949,40 @@ blockquote:after {
   width: 14px;
   height: 14px;
   background-size: cover;
+}
+.shop__goodsItem_withoutImage, .myPrizes__goodsItem_withoutImage {
+  padding: 8px 18px 8px 21px;
+}
+.shop__goodsItem_withoutImage .shop__goodsItemDesc, .myPrizes__goodsItem_withoutImage .shop__goodsItemDesc {
+  flex-basis: 100%;
+}
+.shop__goodsItem_miles_accrued .shop__goodsItemImage, .myPrizes__goodsItem_miles_accrued .shop__goodsItemImage {
+  opacity: 0.5;
+}
+.shop__goodsItem_miles_accrued .shop__goodsItemDescPromo, .myPrizes__goodsItem_miles_accrued .shop__goodsItemDescPromo {
+  color: #B7C0CB;
+}
+.shop__goodsItem_miles_accrued .shop__goodsItemDescPoints, .myPrizes__goodsItem_miles_accrued .shop__goodsItemDescPoints {
+  color: #B7C0CB;
+}
+.shop__goodsItem_miles_accrued .shop__goodsItemDescPoints::after, .myPrizes__goodsItem_miles_accrued .shop__goodsItemDescPoints::after {
+  background-image: url(../img/global/prizes/mile-disabled.svg);
+}
+.shop__goodsItem_promoOnly, .myPrizes__goodsItem_promoOnly {
+  padding: 26px 21px 27px;
+}
+.shop__goodsItem_promoOnly .shop__goodsItemDesc, .myPrizes__goodsItem_promoOnly .shop__goodsItemDesc {
+  flex-basis: 100%;
+  padding: 0;
+}
+.shop__goodsItem_promoAndImage, .myPrizes__goodsItem_promoAndImage {
+  height: 106px;
+}
+.shop__goodsItem_promoAndImage .shop__goodsItemDesc, .myPrizes__goodsItem_promoAndImage .shop__goodsItemDesc {
+  justify-content: center;
+}
+.shop__goodsItem_promoAndImage .shop__goodsItemDescPromo, .myPrizes__goodsItem_promoAndImage .shop__goodsItemDescPromo {
+  margin: 0;
 }
 .shop__goodsFilterItems, .myPrizes__goodsFilterItems {
   flex-basis: 70%;
@@ -2656,7 +2669,7 @@ blockquote:after {
   position: relative;
   overflow: hidden;
   margin-top: 20px;
-  border-radius: 8px 8px 0 0;
+  border-radius: 15px 15px 0 0;
 }
 
 .task_list .enumeration_tasks.active {
@@ -2683,8 +2696,8 @@ blockquote:after {
 
 .task_list .enumeration_tasks .main_task {
   background: #FEFEFE;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
-  border-radius: 8px;
+  box-shadow: 0 0px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
   position: relative;
   z-index: 100;
 }
@@ -2843,7 +2856,8 @@ blockquote:after {
 }
 
 .task_list .enumeration_tasks .other_tasks .task {
-  margin-top: -10px;
+  margin-top: -23px;
+  padding-top: 12px;
   position: absolute;
   bottom: 100px;
 }
@@ -2921,7 +2935,7 @@ blockquote:after {
 }
 
 .task_list .enumeration_tasks .close_block .close_btn_top i {
-  width: 12px;
+  width: 11px;
   height: 11px;
   display: inline-block;
   background-image: url(../img/open-arrow.svg);
@@ -2948,7 +2962,7 @@ blockquote:after {
 }
 
 .task_list .enumeration_tasks .close_block .close_btn_bottom i {
-  width: 12px;
+  width: 11px;
   height: 11px;
   display: inline-block;
   background-image: url(../img/open-arrow.svg);
@@ -2959,6 +2973,8 @@ blockquote:after {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  top: -5px;
 }
 
 .task_list .enumeration_tasks .open_block .one_card {
@@ -3003,7 +3019,7 @@ blockquote:after {
 }
 
 .task_list .enumeration_tasks .open_block .open_btn i {
-  width: 12px;
+  width: 11px;
   height: 11px;
   display: inline-block;
   background-image: url(../img/open-arrow.svg);
@@ -3012,7 +3028,7 @@ blockquote:after {
 /*------------------------------------------- task -------------------------------------------*/
 .task {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
-  border-radius: 8px;
+  border-radius: 15px;
   margin-top: 20px;
   background: #fff;
 }
@@ -3106,7 +3122,7 @@ blockquote:after {
 }
 
 .task .body_block .btn_block .more {
-  border-radius: 8px;
+  border-radius: 10px;
   font-weight: bold;
   font-size: 15px;
   line-height: 19px;
@@ -3193,7 +3209,7 @@ blockquote:after {
 .task.done .footer_block .reward_block {
   padding: 15px 19px;
   background: #C8FFF4;
-  border-radius: 8px;
+  border-radius: 15px;
   margin: 0 1px;
 }
 
@@ -3282,7 +3298,7 @@ blockquote:after {
 .task.failed .footer_block .reward_block {
   padding: 15px 19px;
   background: #FFD3F3;
-  border-radius: 8px;
+  border-radius: 15px;
   margin: 0 1px;
 }
 
@@ -6916,24 +6932,27 @@ blockquote:after {
 .team .myProfile__form {
   margin: 0;
 }
-.team .myProfile__submit .myProfile__submitBtn {
+.team .myProfile__submitBtn {
   margin: 0 0 30px;
-}
-.team .myProfile__submit .myProfile__aboutLink {
-  width: auto;
-  background-color: #418AF9;
-  padding: 0px 15px;
 }
 .team .myProfile__submit .blueBtn {
   background-color: #418AF9;
   color: #FFFFFF;
 }
-.team .givePrize__body .givePrize__header {
+.team .myProfile__aboutLink {
+  width: auto;
+  background-color: #418AF9;
+  padding: 0px 15px;
+}
+.team .givePrize__header {
   margin: 0;
 }
 .team .givePrize__body p {
   margin: 15px 30px 20px;
   text-align: center;
+}
+.team .givePrize__submit {
+  padding-bottom: 40px;
 }
 .team .modalQr {
   position: relative;

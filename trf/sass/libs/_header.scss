@@ -58,13 +58,15 @@
     height: 30px;
     border-radius: 50%;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     &Image {
-      display: block;
-      width: 100%;
+      max-width: 100%;
     }
   }
   &Team {
-    background: center no-repeat url(../img/team_plus.svg) , $lightColor;
+    background: $lightColor;
     margin-right: 10px;
   }
 }
