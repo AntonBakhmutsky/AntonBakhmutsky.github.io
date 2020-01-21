@@ -1762,7 +1762,7 @@ blockquote:after {
   justify-content: space-between;
   height: 27px;
   border-radius: 8px;
-  font: 14px/27px "Montserrat", sans-serif;
+  font: bold 12px/27px "Montserrat", sans-serif;
   box-sizing: border-box;
   border: 1px solid #7B8998;
   padding: 0 10px;
@@ -1773,6 +1773,7 @@ blockquote:after {
   margin-right: 9px;
 }
 .shop__filterItem_active, .myPrizes__filterItem_active {
+  color: #333333;
   background: #FFDD2D;
   border: none;
   border-left: 1px solid transparent;
@@ -2045,7 +2046,7 @@ blockquote:after {
 .voucher__body, .prizeByModerator__body {
   height: 100%;
   width: 100%;
-  margin-top: -10px;
+  margin-top: -20px;
   box-sizing: border-box;
   border-radius: 15px;
   background: #FEFEFE;

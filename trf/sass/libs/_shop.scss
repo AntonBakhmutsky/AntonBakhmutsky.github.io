@@ -58,7 +58,7 @@
       justify-content: space-between;
       height: 27px;
       border-radius: 8px;
-      font: 14px/27px $textFont;
+      font: bold 12px/27px $textFont;
       box-sizing: border-box;
       border: 1px solid #7B8998;
       padding: 0 10px;
@@ -70,6 +70,7 @@
       }
 
       &_active {
+        color: $textColor;
         background: $lightColor;
         border: none;
         border-left: 1px solid transparent;
