@@ -324,6 +324,10 @@ body {
   text-align: center;
 }
 
+.registration_page .bottom_block button {
+  font-family: "Montserrat", sans-serif;
+}
+
 .registration_page .bottom_block .back {
   color: #fff;
   font-weight: bold;

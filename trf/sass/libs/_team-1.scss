@@ -2,21 +2,31 @@
     .public__head {
         padding-top: 20px;
     }
-    .public__scoresItemHeader {
-        font-family: Roboto Slab;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 14px;
-        line-height: 18px;
-        text-align: center;
-        color: $textColor;
-    }
-    .public__scoresItemRating{
-        font: bold 14px/17px $headerFont;
-        background: $lightColor;
-        padding: 2px 7px;
-        border-radius: 8px;
-        color: #333333;
+    .public {
+        &__scores {
+            justify-content: center;
+            
+            &Item { 
+                margin: 0 10px;
+
+                &Header {
+                    font-family: $textFont;
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 14px;
+                    line-height: 18px;
+                    text-align: center;
+                    color: $textColor;
+                }
+                &Rating{
+                    font: bold 14px/17px $headerFont;
+                    background: $lightColor;
+                    padding: 2px 7px;
+                    border-radius: 8px;
+                    color: #333333;
+                }
+            }
+         }
     }
     .rating__itemNumber_prizePlace {
         width: auto;

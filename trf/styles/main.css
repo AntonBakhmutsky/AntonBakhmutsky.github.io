@@ -1262,7 +1262,7 @@ blockquote:after {
 }
 .faq .popularQuestions__answerContainer h1, .faq .popularQuestions__answerContainer h2, .faq .popularQuestions__answerContainer h3 {
   margin: 0 0 20px 0;
-  font-family: "Roboto Slab", serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: bold;
   font-size: 20px;
   line-height: 24px;
@@ -1296,7 +1296,7 @@ blockquote:after {
   box-sizing: border-box;
   border-radius: 8px;
   background-color: #FFDD2D;
-  color: #fff;
+  color: #333333;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -4727,7 +4727,7 @@ blockquote:after {
 
 .one_task .content_block h1, .one_task .content_block h2, .one_task .content_block h3 {
   margin: 20px 30px 0 30px;
-  font-family: "Roboto Slab", serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: bold;
   font-size: 20px;
   line-height: 24px;
@@ -5727,8 +5727,8 @@ blockquote:after {
   margin: 0 30px 20px 30px;
 }
 .notifications__bodyItemContent h1, .notifications__bodyItemContent h2, .notifications__bodyItemContent h3 {
-  margin: 20px 30px 0 30px;
-  font-family: "Roboto Slab", serif;
+  margin: 0 30px 20px 30px;
+  font-family: "Montserrat", sans-serif;
   font-weight: bold;
   font-size: 20px;
   line-height: 24px;
@@ -5753,7 +5753,7 @@ blockquote:after {
   box-sizing: border-box;
   border-radius: 8px;
   background-color: #FFDD2D;
-  color: #fff;
+  color: #333333;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -5769,7 +5769,6 @@ blockquote:after {
 }
 .notifications__bodyItemMore_active {
   width: 106px;
-  background: #B7C0CB;
 }
 .notifications__bodyItemMore_active .detailed {
   display: block;
@@ -6922,6 +6921,7 @@ blockquote:after {
 }
 .team .myProfile__header .myProfile__aboutSocialContainer {
   margin: 20px auto;
+  width: auto;
 }
 .team .myProfile__header .myProfile__aboutSocialContainer p {
   font-size: 13px;
@@ -6959,6 +6959,10 @@ blockquote:after {
   width: auto;
   background-color: #418AF9;
   padding: 0 15px;
+}
+.team .myProfile__aboutLink:disabled {
+  background-color: #9D9FB5;
+  margin: 0 10px 20px;
 }
 .team .givePrize__header {
   margin: 0;
@@ -7050,7 +7054,7 @@ blockquote:after {
 .team__edit {
   display: flex;
   width: 100%;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 .team__edit .myProfile__aboutLink:first-child {
   background-color: #418AF9;
@@ -7073,6 +7077,7 @@ blockquote:after {
 }
 .teamModal .modal {
   width: 100%;
+  height: 40vh;
   border-radius: 8px 8px 0 0;
   padding: 60px 20px 40px;
 }
@@ -7088,8 +7093,14 @@ blockquote:after {
 .team-1 .public__head {
   padding-top: 20px;
 }
+.team-1 .public__scores {
+  justify-content: center;
+}
+.team-1 .public__scoresItem {
+  margin: 0 10px;
+}
 .team-1 .public__scoresItemHeader {
-  font-family: Roboto Slab;
+  font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 14px;

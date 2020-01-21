@@ -55,13 +55,13 @@
         }
 
         h1, h2, h3 {
-             margin: 20px 30px 0 30px;
-             font-family: "Roboto Slab", serif;
-             font-weight: bold;
-             font-size: 20px;
-             line-height: 24px;
-             color: #131929;
-           }
+          margin: 0 30px 20px 30px;
+          font-family: $textFont;
+          font-weight: bold;
+          font-size: 20px;
+          line-height: 24px;
+          color: #131929;
+        }
 
         h2 {
           font-size: 18px;
@@ -94,7 +94,6 @@
           .collapsed {
             display: none;
           }
-          background: #B7C0CB;
           .notifications__bodyItemMoreArrow {
             transform: rotate(180deg);
           }
