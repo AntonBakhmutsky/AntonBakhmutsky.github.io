@@ -1,0 +1,186 @@
+/*---------------------------------------------- reset -------------------------------------------*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
+body {
+  line-height: 1;
+  color: black;
+  background: white;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a:link, a:visited, a:active {
+  outline: none;
+  text-decoration: none;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+:focus {
+  outline: 0;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+}
+
+blockquote:before, blockquote:after {
+  content: "";
+}
+
+q:before, q:after {
+  content: "";
+}
+
+blockquote, q {
+  quotes: "" "";
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+* {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+*::before, *::after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+/*---------------------------------------------- fonts -------------------------------------------*/
+@font-face {
+  font-family: "Cera Pro";
+  src: url("../src/fonts/cera_pro/CeraPro.eot");
+  src: local("Cera Pro"), local("CeraPro");
+  src: url("../src/fonts/cera_pro/CeraPro.eot?#iefix") format("embedded-opentype");
+  src: url("../src/fonts/cera_pro/CeraPro.woff2") format("woff2");
+  src: url("../src/fonts/cera_pro/CeraPro.woff") format("woff");
+  src: url("../src/fonts/cera_pro/CeraPro.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Cera Pro";
+  src: url("../src/fonts/cera_pro/CeraPro-Medium.eot");
+  src: local("Cera Pro Medium"), local("CeraPro-Medium");
+  src: url("../src/fonts/cera_pro/CeraPro-Medium.eot?#iefix") format("embedded-opentype");
+  src: url("../src/fonts/cera_pro/CeraPro-Medium.woff2") format("woff2");
+  src: url("../src/fonts/cera_pro/CeraPro-Medium.woff") format("woff");
+  src: url("../src/fonts/cera_pro/CeraPro-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Cera Pro";
+  src: url("../src/fonts/cera_pro/CeraPro-Bold.eot");
+  src: local("Cera Pro Bold"), local("CeraPro-Bold");
+  src: url("../src/fonts/cera_pro/CeraPro-Bold.eot?#iefix") format("embedded-opentype");
+  src: url("../src/fonts/cera_pro/CeraPro-Bold.woff2") format("woff2");
+  src: url("../src/fonts/cera_pro/CeraPro-Bold.woff") format("woff");
+  src: url("../src/fonts/cera_pro/CeraPro-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Cera Pro";
+  src: url("../src/fonts/cera_pro/CeraPro-Black.eot");
+  src: local("Cera Pro Black"), local("CeraPro-Black");
+  src: url("../src/fonts/cera_pro/CeraPro-Black.eot?#iefix") format("embedded-opentype");
+  src: url("../src/fonts/cera_pro/CeraPro-Black.woff2") format("woff2");
+  src: url("../src/fonts/cera_pro/CeraPro-Black.woff") format("woff");
+  src: url("../src/fonts/cera_pro/CeraPro-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #101824;
+  height: 87px;
+  padding: 0 10px;
+}
+.header__menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 36px;
+  height: 27px;
+}
+.header__menuLine {
+  width: 36px;
+  height: 5px;
+  border-radius: 5px;
+  background: #fff;
+}
+.header__nav {
+  display: none;
+}
+.header__social {
+  display: flex;
+}
+.header__social svg {
+  transition: all 0.2s ease-out;
+  fill: #fff;
+}
+.header__social svg:hover {
+  fill: #D6050A;
+}
+.header__socialItem svg {
+  width: 44px;
+  height: 44px;
+}
+.header__socialItem:not(:first-child) {
+  display: none;
+}
+.header__address {
+  display: none;
+}
+
+body {
+  min-width: 375px;
+  color: #fff;
+  position: relative;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 1600px;
+}
+
+.mobile__menu {
+  position: absolute;
+  top: 0;
+  left: -100vw;
+}
+
+svg {
+  display: block;
+}
+
+/*# sourceMappingURL=main.css.map */

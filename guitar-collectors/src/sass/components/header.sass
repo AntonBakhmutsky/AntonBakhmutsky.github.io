@@ -1,0 +1,43 @@
+@use 'variables' as *
+
+.header
+  display: flex
+  align-items: center
+  justify-content: space-between
+  background: $darkBlue
+  height: 87px
+  padding: 0 10px
+
+  &__menu
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    width: 36px
+    height: 27px
+    &Line
+      width: 36px
+      height: 5px
+      border-radius: 5px
+      background: #fff
+
+  &__nav
+    display: none
+
+  &__social
+    display: flex
+
+  &__social
+    svg
+      transition: all .2s ease-out
+      fill: $white
+      &:hover
+        fill: $red
+    &Item
+      svg
+        width: 44px
+        height: 44px
+      &:not(:first-child)
+        display: none
+
+  &__address
+   display: none  
