@@ -1,0 +1,51 @@
+@use 'variables' as *
+
+.faq
+  &__top
+    padding: 100px 10px 70px
+    text-align: center
+  
+  &__header
+    font: 500 30px/35px $font
+    margin-bottom: 20px 
+
+  &__subHeader
+    font: 14px/25px $font
+    opacity: .8
+    span
+      display: none
+  
+  &__popular
+    .question
+      margin-bottom: 10px
+      padding: 0 10px
+      &:last-child
+        margin: 0
+
+      &__head
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding: 30px 10px
+        background: $lightBlue
+
+      &__text
+        font: 500 14px/19px $font
+        max-width: 220px
+
+      &__btn
+        width: 50px
+        height: 50px
+        border-radius: 50%
+        background: $black
+        display: flex
+        justify-content: center
+        align-items: center
+
+      &__content
+        padding: 0 10px
+        max-height: 0
+        overflow: hidden
+        transition: max-height .6s
+        font: 12px/22px $font
+        opacity: .8

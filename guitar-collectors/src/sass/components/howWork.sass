@@ -1,0 +1,54 @@
+@use 'variables' as *
+
+.howWork
+  &__top
+    padding: 50px 10px 30px
+    min-height: 160px
+    background: $blue
+    display: flex
+    flex-direction: column
+    align-items: center
+
+  &__header
+    +header
+    margin-bottom: 20px
+
+  &__subHeader
+    font: 14px/25px $font
+    opacity: .8
+    span
+      display: none
+  
+  &__middle
+    .howWork__desc
+      display: flex
+      flex-direction: column
+      align-items: center
+      margin-top: 50px
+      .item
+        width: 330px
+        min-height: 374px
+        display: flex
+        flex-direction: column
+        align-items: center
+        margin: 0 0 30px 0
+        &:last-child
+          margin: 0
+        &__image
+          z-index: 10
+        &__description
+          background: $lightBlue
+          text-align: center
+          padding: 60px 0 40px
+          margin-top: -62px          
+          border-radius: 5px
+        &__header
+          font: bold 20px/65px $font
+          text-transform: uppercase
+          &_red
+            color: $red
+        &__text
+          font: 14px/25px $font
+          padding: 0 15px
+          opacity: .8
+

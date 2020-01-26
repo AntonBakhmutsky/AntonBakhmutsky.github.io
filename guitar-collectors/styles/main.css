@@ -171,6 +171,11 @@ html {
 .best__right {
   margin-bottom: 55px;
 }
+.best__left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .best__header {
   font: 500 28px/35px "Cera Pro", sans-serif;
   margin-bottom: 10px;
@@ -190,7 +195,213 @@ html {
 .best__text {
   font: 15px/25px "Cera Pro", sans-serif;
   text-align: center;
-  padding-bottom: 80px;
+  padding-bottom: 70px;
+}
+.best__btn {
+  width: 144px;
+  height: 43px;
+  background: #D6050A;
+  font: 500 16px/21px "Cera Pro", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.howWork__top {
+  padding: 50px 10px 30px;
+  min-height: 160px;
+  background: #0F1624;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.howWork__header {
+  font: 500 30px/40px "Cera Pro", sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.howWork__subHeader {
+  font: 14px/25px "Cera Pro", sans-serif;
+  opacity: 0.8;
+}
+.howWork__subHeader span {
+  display: none;
+}
+.howWork__middle .howWork__desc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+.howWork__middle .howWork__desc .item {
+  width: 330px;
+  min-height: 374px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 0 30px 0;
+}
+.howWork__middle .howWork__desc .item:last-child {
+  margin: 0;
+}
+.howWork__middle .howWork__desc .item__image {
+  z-index: 10;
+}
+.howWork__middle .howWork__desc .item__description {
+  background: #1B2745;
+  text-align: center;
+  padding: 60px 0 40px;
+  margin-top: -62px;
+  border-radius: 5px;
+}
+.howWork__middle .howWork__desc .item__header {
+  font: bold 20px/65px "Cera Pro", sans-serif;
+  text-transform: uppercase;
+}
+.howWork__middle .howWork__desc .item__header_red {
+  color: #D6050A;
+}
+.howWork__middle .howWork__desc .item__text {
+  font: 14px/25px "Cera Pro", sans-serif;
+  padding: 0 15px;
+  opacity: 0.8;
+}
+
+.showroom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #0F1624;
+  padding: 0 10px;
+}
+.showroom__top {
+  padding: 50px 0;
+  text-align: center;
+}
+.showroom__header {
+  font: 500 30px/40px "Cera Pro", sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.showroom__subHeader {
+  font: 14px/25px "Cera Pro", sans-serif;
+  opacity: 0.8;
+}
+.showroom__gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.showroom__gallery .gallery__left, .showroom__gallery .gallery__right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.showroom__gallery .gallery__left .row, .showroom__gallery .gallery__right .row {
+  width: 355px;
+  height: 236px;
+  margin-bottom: 10px;
+}
+.showroom__gallery .gallery__left .row_first, .showroom__gallery .gallery__right .row_first {
+  border-radius: 5px;
+  overflow: hidden;
+}
+.showroom__gallery .gallery__left .row_second, .showroom__gallery .gallery__right .row_second {
+  display: flex;
+  justify-content: space-between;
+}
+.showroom__gallery .gallery__left .row_second div, .showroom__gallery .gallery__right .row_second div {
+  overflow: hidden;
+  border-radius: 5px;
+  width: 173px;
+}
+
+.faq__top {
+  padding: 100px 10px 70px;
+  text-align: center;
+}
+.faq__header {
+  font: 500 30px/35px "Cera Pro", sans-serif;
+  margin-bottom: 20px;
+}
+.faq__subHeader {
+  font: 14px/25px "Cera Pro", sans-serif;
+  opacity: 0.8;
+}
+.faq__subHeader span {
+  display: none;
+}
+.faq__popular .question {
+  margin-bottom: 10px;
+  padding: 0 10px;
+}
+.faq__popular .question:last-child {
+  margin: 0;
+}
+.faq__popular .question__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10px;
+  background: #1B2745;
+}
+.faq__popular .question__text {
+  font: 500 14px/19px "Cera Pro", sans-serif;
+  max-width: 220px;
+}
+.faq__popular .question__btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #0E1524;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.faq__popular .question__content {
+  padding: 0 10px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.6s;
+  font: 12px/22px "Cera Pro", sans-serif;
+  opacity: 0.8;
+}
+
+.interior {
+  height: 192px;
+  padding: 60px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background: #0F1624;
+}
+.interior__container {
+  width: 100%;
+  height: 132px;
+  background: center/cover no-repeat url(../src/img/interior/back_desktop.png);
+}
+
+.footer {
+  min-height: 100px;
+  background: #0F1624;
+  padding: 30px 10px;
+}
+.footer__nav {
+  display: none;
+}
+.footer__contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer__social svg {
+  transition: all 0.2s ease-out;
+  fill: #fff;
+}
+.footer__social svg:hover {
+  fill: #D6050A;
 }
 
 body {
@@ -202,6 +413,10 @@ body {
 .wrapper {
   margin: 0 auto;
   max-width: 1600px;
+}
+
+.main {
+  background: 20% 16% repeat-y url(../src/img/global/cat_back_mobile.svg), #0F1624;
 }
 
 .mobile__menu {

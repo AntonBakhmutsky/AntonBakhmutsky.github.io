@@ -3,6 +3,11 @@
 @use 'components/variables' as *
 @use 'components/header'
 @use 'components/best'
+@use 'components/howWork'
+@use 'components/showroom'
+@use 'components/faq'
+@use 'components/interior'
+@use 'components/footer'
 
 body 
   min-width: 375px
@@ -13,10 +18,13 @@ body
   margin: 0 auto
   max-width: 1600px
 
+.main
+  background: 20% 16% repeat-y url(../src/img/global/cat_back_mobile.svg), $blue
+
 .mobile__menu
   position: absolute
   top: 0
-  left: - 100vw
+  left: -100vw
 
 svg
   display: block
