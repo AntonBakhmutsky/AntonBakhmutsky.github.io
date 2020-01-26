@@ -162,6 +162,37 @@ html {
   display: none;
 }
 
+.best {
+  display: flex;
+  flex-direction: column-reverse;
+  background: center/cover no-repeat url(../src/img/best/best_back.jpg);
+  padding: 50px 20px 60px;
+}
+.best__right {
+  margin-bottom: 55px;
+}
+.best__header {
+  font: 500 28px/35px "Cera Pro", sans-serif;
+  margin-bottom: 10px;
+}
+.best__header.desktop {
+  display: none;
+}
+.best__header.mobile {
+  text-align: center;
+  text-transform: uppercase;
+}
+.best__subHeader {
+  text-align: center;
+  font: 500 16px/21px "Cera Pro", sans-serif;
+  margin-bottom: 40px;
+}
+.best__text {
+  font: 15px/25px "Cera Pro", sans-serif;
+  text-align: center;
+  padding-bottom: 80px;
+}
+
 body {
   min-width: 375px;
   color: #fff;

@@ -1,3 +1,32 @@
 @use 'variables' as *
 
+.best
+  display: flex
+  flex-direction: column-reverse
+  background: center/cover no-repeat url(../src/img/best/best_back.jpg)
+  padding: 50px 20px 60px
+
+  &__right
+    margin-bottom: 55px
+
+  &__header
+    font: 500 28px/35px $font
+    margin-bottom: 10px
+    &.desktop
+      display: none
+    &.mobile
+      text-align: center
+      text-transform: uppercase
+
+  &__subHeader
+    text-align: center
+    font: 500 16px/21px $font
+    margin-bottom: 40px
+  
+  &__text
+    font: 15px/25px $font
+    text-align: center
+    padding-bottom: 80px
+
+
 
