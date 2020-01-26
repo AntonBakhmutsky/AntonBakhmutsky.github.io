@@ -151,6 +151,9 @@ html {
 .header__social svg:hover {
   fill: #D6050A;
 }
+.header__socialItem {
+  display: block;
+}
 .header__socialItem svg {
   width: 44px;
   height: 44px;
@@ -387,6 +390,16 @@ html {
   min-height: 100px;
   background: #0F1624;
   padding: 30px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer__logo {
+  width: 290px;
+  margin-bottom: 30px;
+}
+.footer__logo img {
+  min-width: 100%;
 }
 .footer__nav {
   display: none;
@@ -396,12 +409,39 @@ html {
   flex-direction: column;
   align-items: center;
 }
-.footer__social svg {
+.footer__social {
+  display: flex;
+  margin-bottom: 30px;
+}
+.footer__socialItem {
+  width: 24px;
+  height: 24px;
+  display: block;
+  margin-right: 15px;
+}
+.footer__socialItem:last-child {
+  margin: 0;
+}
+.footer__socialItem svg {
   transition: all 0.2s ease-out;
   fill: #fff;
 }
-.footer__social svg:hover {
+.footer__socialItem svg:hover {
   fill: #D6050A;
+}
+.footer__address {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.footer__addressText {
+  font: 20px/22px "Cera Pro", sans-serif;
+  margin-bottom: 10px;
+}
+.footer__addressPhone {
+  font: bold 26px/28px "Cera Pro", sans-serif;
+}
+.footer__addressPhoneLink {
+  color: #fff;
 }
 
 body {
