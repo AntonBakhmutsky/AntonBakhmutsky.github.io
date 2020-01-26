@@ -22,6 +22,14 @@
 
   &__nav
     display: none
+    &Item
+      font: 500 16px/24px $font
+      color: $white
+      margin-right: 20px
+      &:last-child
+        margin: 0
+    +media
+      display: flex
 
   &__social
     display: flex

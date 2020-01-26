@@ -141,6 +141,19 @@ html {
 .header__nav {
   display: none;
 }
+.header__navItem {
+  font: 500 16px/24px "Cera Pro", sans-serif;
+  color: #fff;
+  margin-right: 20px;
+}
+.header__navItem:last-child {
+  margin: 0;
+}
+@media screen and (min-width: 992px) {
+  .header__nav {
+    display: flex;
+  }
+}
 .header__social {
   display: flex;
 }
