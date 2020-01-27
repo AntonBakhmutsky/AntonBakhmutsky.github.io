@@ -1,6 +1,8 @@
 @use 'variables' as *
 
 .howWork
+  +media
+    padding: 0 100px
   &__top
     padding: 50px 10px 30px
     min-height: 160px
@@ -8,6 +10,9 @@
     display: flex
     flex-direction: column
     align-items: center
+    +media
+      padding: 50px 0 30px
+      background: transparent
 
   &__header
     +header
@@ -18,13 +23,19 @@
     opacity: .8
     span
       display: none
+      +media  
+        display: inline
   
   &__middle
     .howWork__desc
       display: flex
-      flex-direction: column
-      align-items: center
+      flex-flow: row wrap
+      justify-content: center
       margin-top: 50px
+      +media(1550px)
+        justify-content: space-between
+        height: 435px
+        align-items: flex-start
       .item
         width: 330px
         min-height: 374px
@@ -32,6 +43,16 @@
         flex-direction: column
         align-items: center
         margin: 0 0 30px 0
+        +media(660px)
+          &:not(:nth-child(2n))
+            margin-right: 25px
+        +media(1040px)
+          &:not(:nth-child(2n))
+            margin-right: 200px
+        +media(1550px)
+          &:not(:nth-child(2n))
+            margin: 0
+            align-self: flex-end        
         &:last-child
           margin: 0
         &__image
@@ -51,4 +72,3 @@
           font: 14px/25px $font
           padding: 0 15px
           opacity: .8
-

@@ -5,34 +5,53 @@
   flex-direction: column-reverse
   background: center/cover no-repeat url(../src/img/best/best_back.jpg)
   padding: 50px 20px 60px
+  +media
+    flex-direction: row
+    padding: 125px 100px
+    justify-content: space-between
 
   &__right
     margin-bottom: 55px
-
+    +media
+      width: 629px
+      height: 412px
+      margin: 0
   &__left
     display: flex
     flex-direction: column
     align-items: center
+    text-align: center
+    +media
+      text-align: left
+      align-items: flex-start
+    +media(1280px)
+      margin-top: 50px
 
   &__header
     font: 500 28px/35px $font
-    margin-bottom: 10px
-    &.desktop
-      display: none
-    &.mobile
-      text-align: center
-      text-transform: uppercase
+    text-transform: uppercase
+    +media
+      text-transform: none
+      font-size: 50px
+      line-height: 60px
+      span
+        display: none
 
   &__subHeader
-    text-align: center
     font: 500 16px/21px $font
     margin-bottom: 40px
+    +media  
+      font-size: 20px
+      line-height: 27px
   
   &__text
     font: 15px/25px $font
-    text-align: center
     padding-bottom: 70px
-  
+    +media
+      max-width: 544px
+      padding-bottom: 40px
+      font-size: 16px
+      line-height: 26px
   &__btn
     width: 144px
     height: 43px

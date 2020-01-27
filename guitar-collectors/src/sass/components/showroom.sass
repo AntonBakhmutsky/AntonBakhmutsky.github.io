@@ -6,6 +6,9 @@
   align-items: center
   background: $blue
   padding: 0 10px
+  +media
+    background: transparent
+    padding: 0 100px
   
   &__top
     padding: 50px 0
@@ -22,7 +25,16 @@
   &__gallery
     display: flex
     flex-direction: column
+    flex-wrap: wrap
+    justify-content: center
     align-items: center
+    +media(730px)
+      flex-direction: row
+    +media
+      flex-direction: column
+    +media(1600px)
+      flex-direction: row
+
     .gallery
       &__left, &__right
         display: flex
@@ -32,6 +44,10 @@
           width: 355px
           height: 236px
           margin-bottom: 10px
+          +media
+            width: 690px
+            height: 458px
+            margin-bottom: 20px
           &_first
             border-radius: 5px
             overflow: hidden
@@ -42,5 +58,12 @@
               overflow: hidden
               border-radius: 5px
               width: 173px
-
-
+              +media
+                width: 335px
+      &__left
+        +media(730px)
+          margin-right: 10px
+        +media
+          margin-right: 0
+        +media(1600px)
+          margin-right: 20px

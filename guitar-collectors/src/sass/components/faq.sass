@@ -7,31 +7,71 @@
   
   &__header
     font: 500 30px/35px $font
-    margin-bottom: 20px 
+    margin-bottom: 20px
+    text-transform: uppercase 
 
   &__subHeader
     font: 14px/25px $font
     opacity: .8
     span
       display: none
+    +media
+      display: inline
   
-  &__popular
+  &__popular 
     .question
       margin-bottom: 10px
       padding: 0 10px
       &:last-child
         margin: 0
+      +media  
+        margin-bottom: 20px
+        padding: 0 100px
+      
+      &_active
+        .question__text
+          transition: all .5s ease-out
+          color: $red
+        .question__btn
+          transition: all .5s ease-out
+          transform: rotate(180deg)
+          path
+            fill: $red
 
       &__head
+        min-width: 100px
         display: flex
         justify-content: space-between
         align-items: center
-        padding: 30px 10px
+        padding: 25px 10px
         background: $lightBlue
+        cursor: pointer
+        transition: all .5s ease-out
+        +media
+          padding: 25px 30px
+        &:hover
+          .question__text
+            transition: all .5s ease-out
+            color: $red
+          .question__btn
+            transition: all .5s ease-out
+            path
+              fill: $red
 
       &__text
+        color: $white
         font: 500 14px/19px $font
         max-width: 220px
+        text-transform: uppercase
+        transition: all .5s ease-out
+        +media(500px)
+          font-size: 18px
+          line-height: 20px
+        +media(650px)
+          max-width: inherit
+        +media 
+          font-size: 22px
+          line-height: 24px
 
       &__btn
         width: 50px
@@ -41,11 +81,20 @@
         display: flex
         justify-content: center
         align-items: center
+        cursor: pointer
+        transition: all .5s ease-out
 
       &__content
-        padding: 0 10px
+        background: $lightBlue
+        border-top: 1px solid rgba(255, 255, 255, .1)
         max-height: 0
         overflow: hidden
-        transition: max-height .6s
-        font: 12px/22px $font
-        opacity: .8
+        transition: max-height .5s
+        color: rgba(255, 255, 255, .8)
+        &Container
+          padding: 30px 10px
+          font: 16px/22px $font
+          +media
+            padding: 30px
+            font-size: 20px
+          

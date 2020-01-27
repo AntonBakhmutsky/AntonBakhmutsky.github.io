@@ -19,7 +19,9 @@ body
   max-width: 1600px
 
 .main
-  background: 20% 16% repeat-y url(../src/img/global/cat_back_mobile.svg), $blue
+  background: 20% 15% repeat-y url(../src/img/global/cat_back_mobile.svg), $blue
+  +media
+    background-image: url(../src/img/global/cat_back_desktop.svg)
 
 .mobile__menu
   position: absolute
