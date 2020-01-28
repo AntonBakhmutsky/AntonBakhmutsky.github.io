@@ -10,57 +10,84 @@
 </head>
 
 <body>
-  <!-- ----------------------------------------- mobile menu ---------------------------------------- -->
-  <div class="mobile__menu">
-    <nav class="header__nav">
-      <a class="header__navItem" href="https://vk.com/album-32544455_212156787">Гитары</a>
-      <a class="header__navItem" href="https://vk.com/album-32544455_237863413">Бас-гитары</a>
-      <a class="header__navItem" href="https://vk.com/album-32544455_237744514">Педали</a>
-      <a class="header__navItem" href="https://vk.com/album-32544455_244725032">Звучки и тд</a>
-      <a class="header__navItem" href="https://vk.com/album-32544455_243035579">Комбики</a>
-      <a class="header__navItem" href="https://vk.com/album-32544455_237744541">Прочие штуки</a>
-    </nav>
-    <div class="header__contactsMobile">
-      <div class="header__social">
-        <a class="header__socialItem" href="https://vk.com/guitarcollectors">
-
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-
-            <path
-              d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.344 16.163h-1.867c-1.055 0-1.232-.601-2.102-1.469-.785-.785-1.22-.183-1.202.935.006.297-.141.534-.495.534-1.105 0-2.694.156-4.304-1.58-1.647-1.779-3.374-5.348-3.374-5.699 0-.208.172-.301.459-.301h1.898c.503 0 .545.249.686.568.584 1.331 1.981 4.002 2.354 2.511.214-.856.301-2.839-.615-3.01-.52-.096.396-.652 1.722-.652.33 0 .688.035 1.054.12.673.156.676.458.666.898-.034 1.666-.235 2.786.204 3.069.419.271 1.521-1.502 2.104-2.871.159-.378.191-.632.643-.632h2.322c1.216 0-.159 1.748-1.21 3.112-.847 1.099-.802 1.12.183 2.034.701.651 1.53 1.54 1.53 2.043 0 .238-.186.39-.656.39z" />
-          </svg>
-
-        </a>
-        <a class="header__socialItem" href="https://www.youtube.com/channel/UCu_r2YH8SYwe0myiKYSSahA">
-
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-            <path
-              d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm4.441 16.892c-2.102.144-6.784.144-8.883 0-2.276-.156-2.541-1.27-2.558-4.892.017-3.629.285-4.736 2.558-4.892 2.099-.144 6.782-.144 8.883 0 2.277.156 2.541 1.27 2.559 4.892-.018 3.629-.285 4.736-2.559 4.892zm-6.441-7.234l4.917 2.338-4.917 2.346v-4.684z" />
-          </svg>
-
-        </a>
-        <a class="header__socialItem" href="https://www.instagram.com/guitarcollectors_/">
-
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-            <path
-              d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-          </svg>
-
-        </a>
-      </div>
-      <div class="header__address">
-        <div class="header__addressText">
-          СПБ, Звенигородская 9-11
+  <div class="wrapper">
+    <!-- -----------------------------------------  modal  ------------------------------------------- -->
+    <!-- <div class="modal">
+      <div class="modal__body">
+        <div class="modal__close">
+          <span class="modal__closeLeft"></span>
+          <span class="modal__closeRight"></span>
         </div>
-        <div class="header__addressPhone">
-          <a href="tel:+79626839416">+7962-683-94-16</a>
+        <div class="modal__arrow modal__arrow_left"></div>
+        <div class="modal__screen">
+        </div>
+        <div class="modal__arrow modal__arrow_right"></div>
+      </div>
+    </div> -->
+    <!-- ----------------------------------------- mobile menu ---------------------------------------- -->
+    <div class="mobile__menu">
+      <nav class="mobile__nav">
+        <a class="mobile__navItem" href="https://vk.com/album-32544455_212156787">Гитары</a>
+        <a class="mobile__navItem" href="https://vk.com/album-32544455_237863413">Басы</a>
+        <a class="mobile__navItem" href="https://vk.com/album-32544455_237744514">Эффекты</a>
+        <a class="mobile__navItem" href="https://vk.com/album-32544455_243035579">Усиление</a>
+        <a class="mobile__navItem" href="https://vk.com/album-32544455_244725032">Электроника</a>
+        <a class="mobile__navItem" href="https://vk.com/album-32544455_237744541">Прочее</a>
+        <a class="mobile__navItem" href="https://vk.com/album-32544455_267705678">Расходники/аксессуары</a>
+        <a class="mobile__navItem" href="https://vk.com/topic-32544455_34661842">Отзывы</a>
+      </nav>
+      <div class="mobile__contacts">
+        <div class="mobile__address">
+          <div class="mobile__addressText">
+            СПБ, Звенигородская 9-11
+          </div>
+          <div class="mobile__addressPhone">
+            <a class="mobile__addressPhoneLink" href="tel:+79626839416">+7962-683-94-16</a>
+          </div>
+        </div>
+        <div class="mobile__social">
+          <a class="mobile__socialItem" href="https://vk.com/guitarcollectors">
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+
+              <path
+                d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.344 16.163h-1.867c-1.055 0-1.232-.601-2.102-1.469-.785-.785-1.22-.183-1.202.935.006.297-.141.534-.495.534-1.105 0-2.694.156-4.304-1.58-1.647-1.779-3.374-5.348-3.374-5.699 0-.208.172-.301.459-.301h1.898c.503 0 .545.249.686.568.584 1.331 1.981 4.002 2.354 2.511.214-.856.301-2.839-.615-3.01-.52-.096.396-.652 1.722-.652.33 0 .688.035 1.054.12.673.156.676.458.666.898-.034 1.666-.235 2.786.204 3.069.419.271 1.521-1.502 2.104-2.871.159-.378.191-.632.643-.632h2.322c1.216 0-.159 1.748-1.21 3.112-.847 1.099-.802 1.12.183 2.034.701.651 1.53 1.54 1.53 2.043 0 .238-.186.39-.656.39z" />
+            </svg>
+
+          </a>
+          <a class="mobile__socialItem" href="https://www.youtube.com/channel/UCu_r2YH8SYwe0myiKYSSahA">
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <path
+                d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm4.441 16.892c-2.102.144-6.784.144-8.883 0-2.276-.156-2.541-1.27-2.558-4.892.017-3.629.285-4.736 2.558-4.892 2.099-.144 6.782-.144 8.883 0 2.277.156 2.541 1.27 2.559 4.892-.018 3.629-.285 4.736-2.559 4.892zm-6.441-7.234l4.917 2.338-4.917 2.346v-4.684z" />
+            </svg>
+
+          </a>
+          <a class="mobile__socialItem" href="https://www.instagram.com/guitarcollectors_/">
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <path
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+            </svg>
+
+          </a>
+          <a class="mobile__socialItem mobile__socialItem_avito"
+            href="https://www.avito.ru/user/7783dc9ee31b78e6899a28d5b38ca765/profile?id=968056749&src=item">
+
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 83.1 83.1">
+              <g>
+                <circle cx="60.65" cy="60.65" r="22.45" style="fill:#98c332" />
+                <circle cx="18.45" cy="60.65" r="10.45" style="fill:#7e6bae" />
+                <circle cx="60.65" cy="18.45" r="14.45" style="fill:#ec6266" />
+                <circle cx="18.45" cy="18.45" r="18.45" style="fill:#47a2db" />
+              </g>
+            </svg>
+
+          </a>
         </div>
       </div>
     </div>
-  </div>
-
-  <div class="wrapper">
-    <!------------------------------------------------------ header ------------------------------------------------------>
+    <!------------------------------------------- header ----------------------------------------------->
     <header class="header">
       <div class="header__menu">
         <div class="header__menuLine"></div>
@@ -68,21 +95,24 @@
         <div class="header__menuLine"></div>
       </div>
       <div class="header__left">
-        <div class="header__logo" class="logo">
+        <div class="header__logo">
           <img src="src/img/global/logo.svg" alt="logo">
         </div>
         <nav class="header__nav">
-          <a class="header__navItem" href="https://vk.com/album-32544455_212156787">Гитары</a>
-          <a class="header__navItem" href="https://vk.com/album-32544455_237863413">Бас-гитары</a>
-          <a class="header__navItem" href="https://vk.com/album-32544455_237744514">Педали</a>
-          <a class="header__navItem" href="https://vk.com/album-32544455_244725032">Звучки и тд</a>
-          <a class="header__navItem" href="https://vk.com/album-32544455_243035579">Комбики</a>
-          <a class="header__navItem" href="https://vk.com/album-32544455_237744541">Прочие штуки</a>
+          <a class="header__navItem" href="https://vk.com/album-32544455_212156787" target="_blank">Гитары</a>
+          <a class="header__navItem" href="https://vk.com/album-32544455_237863413" target="_blank">Басы</a>
+          <a class="header__navItem" href="https://vk.com/album-32544455_237744514" target="_blank">Эффекты</a>
+          <a class="header__navItem" href="https://vk.com/album-32544455_243035579" target="_blank">Усиление</a>
+          <a class="header__navItem" href="https://vk.com/album-32544455_244725032" target="_blank">Электроника</a>
+          <a class="header__navItem" href="https://vk.com/album-32544455_237744541" target="_blank">Прочее</a>
+          <a class="header__navItem" href="https://vk.com/album-32544455_267705678"
+            target="_blank">Расходники/аксессуары</a>
+          <a class="header__navItem" href="https://vk.com/topic-32544455_34661842" target="_blank">Отзывы</a>
         </nav>
       </div>
       <div class="header__contacts">
         <div class="header__social">
-          <a class="header__socialItem" href="https://vk.com/guitarcollectors">
+          <a class="header__socialItem" href="https://vk.com/guitarcollectors" target="_blank">
 
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 
@@ -91,7 +121,7 @@
             </svg>
 
           </a>
-          <a class="header__socialItem" href="https://www.youtube.com/channel/UCu_r2YH8SYwe0myiKYSSahA">
+          <a class="header__socialItem" href="https://www.youtube.com/channel/UCu_r2YH8SYwe0myiKYSSahA" target="_blank">
 
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
               <path
@@ -99,11 +129,25 @@
             </svg>
 
           </a>
-          <a class="header__socialItem" href="https://www.instagram.com/guitarcollectors_/">
+          <a class="header__socialItem" href="https://www.instagram.com/guitarcollectors_/" target="_blank">
 
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
               <path
                 d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+            </svg>
+
+          </a>
+          <a class="header__socialItem header__socialItem_avito"
+            href="https://www.avito.ru/user/7783dc9ee31b78e6899a28d5b38ca765/profile?id=968056749&src=item"
+            target="_blank">
+
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 83.1 83.1">
+              <g>
+                <circle cx="60.65" cy="60.65" r="22.45" style="fill:#98c332" />
+                <circle cx="18.45" cy="60.65" r="10.45" style="fill:#7e6bae" />
+                <circle cx="60.65" cy="18.45" r="14.45" style="fill:#ec6266" />
+                <circle cx="18.45" cy="18.45" r="18.45" style="fill:#47a2db" />
+              </g>
             </svg>
 
           </a>
@@ -129,7 +173,7 @@
             Форма продолжает ритмоформульный фьюжн, потому что современная музыка не запоминается. Детройтское техно
             дает композиционный динамический эллипсис.
           </p>
-          <a class="best__btn" href="https://vk.com/guitarcollectors">Смотреть все</a>
+          <a class="best__btn" href="https://vk.com/guitarcollectors" target="_blank">Смотреть все</a>
         </div>
         <div class="best__right">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 630.008 413.651">
@@ -238,51 +282,51 @@
         <div class="showroom__gallery">
           <div class="gallery__left">
             <div class="row row_first">
-              <img src="src/img/guitars/1.png" alt="guitar">
+              <img src="src/img/guitars/1.jpg" alt="guitar">
             </div>
             <div class="row row_second">
               <div>
-                <img src="src/img/guitars/2.png" alt="guitar">
+                <img src="src/img/guitars/2.jpg" alt="guitar">
               </div>
               <div>
-                <img src="src/img/guitars/3.png" alt="guitar">
+                <img src="src/img/guitars/3.jpg" alt="guitar">
               </div>
             </div>
             <div class="row row_first">
-              <img src="src/img/guitars/4.png" alt="guitar">
+              <img src="src/img/guitars/4.jpg" alt="guitar">
             </div>
             <div class="row row_second">
               <div>
-                <img src="src/img/guitars/5.png" alt="guitar">
+                <img src="src/img/guitars/5.jpg" alt="guitar">
               </div>
               <div>
-                <img src="src/img/guitars/6.png" alt="guitar">
+                <img src="src/img/guitars/6.jpg" alt="guitar">
               </div>
             </div>
             <div class="row row_first">
-              <img src="src/img/guitars/7.png" alt="guitar">
+              <img src="src/img/guitars/7.jpg" alt="guitar">
             </div>
           </div>
           <div class="gallery__right">
             <div class="row row_first">
-              <img src="src/img/guitars/8.png" alt="guitar">
+              <img src="src/img/guitars/8.jpg" alt="guitar">
             </div>
             <div class="row row_first">
-              <img src="src/img/guitars/9.png" alt="guitar">
+              <img src="src/img/guitars/9.jpg" alt="guitar">
             </div>
             <div class="row row_second">
               <div>
-                <img src="src/img/guitars/10.png" alt="guitar">
+                <img src="src/img/guitars/10.jpg" alt="guitar">
               </div>
               <div>
-                <img src="src/img/guitars/11.png" alt="guitar">
+                <img src="src/img/guitars/11.jpg" alt="guitar">
               </div>
             </div>
             <div class="row row_first">
-              <img src="src/img/guitars/12.png" alt="guitar">
+              <img src="src/img/guitars/12.jpg" alt="guitar">
             </div>
             <div class="row row_first">
-              <img src="src/img/guitars/13.png" alt="guitar">
+              <img src="src/img/guitars/13.jpg" alt="guitar">
             </div>
           </div>
         </div>
@@ -309,10 +353,10 @@
               <div class="question__btn">
 
                 <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
-                  <g id="Group_1075" data-name="Group 1075" transform="translate(-929 -3690)">
-                    <circle id="Ellipse_28" data-name="Ellipse 28" cx="25" cy="25" r="25"
-                      transform="translate(929 3690)" fill="#0e1524" />
-                    <path id="Polygon_2" data-name="Polygon 2"
+                  <g data-name="Group 1075" transform="translate(-929 -3690)">
+                    <circle data-name="Ellipse 28" cx="25" cy="25" r="25" transform="translate(929 3690)"
+                      fill="#0e1524" />
+                    <path data-name="Polygon 2"
                       d="M9.892,4.591a3,3,0,0,1,5.217,0l7.345,12.927A3,3,0,0,1,19.845,22H5.155a3,3,0,0,1-2.608-4.482Z"
                       transform="translate(942 3702)" fill="#fff" />
                   </g>
@@ -346,10 +390,10 @@
               <div class="question__btn">
 
                 <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
-                  <g id="Group_1075" data-name="Group 1075" transform="translate(-929 -3690)">
-                    <circle id="Ellipse_28" data-name="Ellipse 28" cx="25" cy="25" r="25"
-                      transform="translate(929 3690)" fill="#0e1524" />
-                    <path id="Polygon_2" data-name="Polygon 2"
+                  <g data-name="Group 1075" transform="translate(-929 -3690)">
+                    <circle data-name="Ellipse 28" cx="25" cy="25" r="25" transform="translate(929 3690)"
+                      fill="#0e1524" />
+                    <path data-name="Polygon 2"
                       d="M9.892,4.591a3,3,0,0,1,5.217,0l7.345,12.927A3,3,0,0,1,19.845,22H5.155a3,3,0,0,1-2.608-4.482Z"
                       transform="translate(942 3702)" fill="#fff" />
                   </g>
@@ -375,10 +419,10 @@
               <div class="question__btn">
 
                 <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
-                  <g id="Group_1075" data-name="Group 1075" transform="translate(-929 -3690)">
-                    <circle id="Ellipse_28" data-name="Ellipse 28" cx="25" cy="25" r="25"
-                      transform="translate(929 3690)" fill="#0e1524" />
-                    <path id="Polygon_2" data-name="Polygon 2"
+                  <g data-name="Group 1075" transform="translate(-929 -3690)">
+                    <circle data-name="Ellipse 28" cx="25" cy="25" r="25" transform="translate(929 3690)"
+                      fill="#0e1524" />
+                    <path data-name="Polygon 2"
                       d="M9.892,4.591a3,3,0,0,1,5.217,0l7.345,12.927A3,3,0,0,1,19.845,22H5.155a3,3,0,0,1-2.608-4.482Z"
                       transform="translate(942 3702)" fill="#fff" />
                   </g>
@@ -404,10 +448,10 @@
               <div class="question__btn">
 
                 <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
-                  <g id="Group_1075" data-name="Group 1075" transform="translate(-929 -3690)">
-                    <circle id="Ellipse_28" data-name="Ellipse 28" cx="25" cy="25" r="25"
-                      transform="translate(929 3690)" fill="#0e1524" />
-                    <path id="Polygon_2" data-name="Polygon 2"
+                  <g data-name="Group 1075" transform="translate(-929 -3690)">
+                    <circle data-name="Ellipse 28" cx="25" cy="25" r="25" transform="translate(929 3690)"
+                      fill="#0e1524" />
+                    <path data-name="Polygon 2"
                       d="M9.892,4.591a3,3,0,0,1,5.217,0l7.345,12.927A3,3,0,0,1,19.845,22H5.155a3,3,0,0,1-2.608-4.482Z"
                       transform="translate(942 3702)" fill="#fff" />
                   </g>
@@ -437,10 +481,10 @@
               <div class="question__btn">
 
                 <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
-                  <g id="Group_1075" data-name="Group 1075" transform="translate(-929 -3690)">
-                    <circle id="Ellipse_28" data-name="Ellipse 28" cx="25" cy="25" r="25"
-                      transform="translate(929 3690)" fill="#0e1524" />
-                    <path id="Polygon_2" data-name="Polygon 2"
+                  <g data-name="Group 1075" transform="translate(-929 -3690)">
+                    <circle data-name="Ellipse 28" cx="25" cy="25" r="25" transform="translate(929 3690)"
+                      fill="#0e1524" />
+                    <path data-name="Polygon 2"
                       d="M9.892,4.591a3,3,0,0,1,5.217,0l7.345,12.927A3,3,0,0,1,19.845,22H5.155a3,3,0,0,1-2.608-4.482Z"
                       transform="translate(942 3702)" fill="#fff" />
                   </g>
@@ -467,10 +511,10 @@
               <div class="question__btn">
 
                 <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
-                  <g id="Group_1075" data-name="Group 1075" transform="translate(-929 -3690)">
-                    <circle id="Ellipse_28" data-name="Ellipse 28" cx="25" cy="25" r="25"
-                      transform="translate(929 3690)" fill="#0e1524" />
-                    <path id="Polygon_2" data-name="Polygon 2"
+                  <g data-name="Group 1075" transform="translate(-929 -3690)">
+                    <circle data-name="Ellipse 28" cx="25" cy="25" r="25" transform="translate(929 3690)"
+                      fill="#0e1524" />
+                    <path data-name="Polygon 2"
                       d="M9.892,4.591a3,3,0,0,1,5.217,0l7.345,12.927A3,3,0,0,1,19.845,22H5.155a3,3,0,0,1-2.608-4.482Z"
                       transform="translate(942 3702)" fill="#fff" />
                   </g>
@@ -499,10 +543,10 @@
               <div class="question__btn">
 
                 <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
-                  <g id="Group_1075" data-name="Group 1075" transform="translate(-929 -3690)">
-                    <circle id="Ellipse_28" data-name="Ellipse 28" cx="25" cy="25" r="25"
-                      transform="translate(929 3690)" fill="#0e1524" />
-                    <path id="Polygon_2" data-name="Polygon 2"
+                  <g data-name="Group 1075" transform="translate(-929 -3690)">
+                    <circle data-name="Ellipse 28" cx="25" cy="25" r="25" transform="translate(929 3690)"
+                      fill="#0e1524" />
+                    <path data-name="Polygon 2"
                       d="M9.892,4.591a3,3,0,0,1,5.217,0l7.345,12.927A3,3,0,0,1,19.845,22H5.155a3,3,0,0,1-2.608-4.482Z"
                       transform="translate(942 3702)" fill="#fff" />
                   </g>
@@ -524,15 +568,15 @@
           <div class="question">
             <div class="question__head">
               <div class="question__text">
-                Гарантии, манибэк, возврат.
+                Гарантии, манибэк, возврат
               </div>
               <div class="question__btn">
 
                 <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
-                  <g id="Group_1075" data-name="Group 1075" transform="translate(-929 -3690)">
-                    <circle id="Ellipse_28" data-name="Ellipse 28" cx="25" cy="25" r="25"
-                      transform="translate(929 3690)" fill="#0e1524" />
-                    <path id="Polygon_2" data-name="Polygon 2"
+                  <g data-name="Group 1075" transform="translate(-929 -3690)">
+                    <circle data-name="Ellipse 28" cx="25" cy="25" r="25" transform="translate(929 3690)"
+                      fill="#0e1524" />
+                    <path data-name="Polygon 2"
                       d="M9.892,4.591a3,3,0,0,1,5.217,0l7.345,12.927A3,3,0,0,1,19.845,22H5.155a3,3,0,0,1-2.608-4.482Z"
                       transform="translate(942 3702)" fill="#fff" />
                   </g>
@@ -556,53 +600,80 @@
         </div>
       </aside>
       <aside class="map">
-        <script type="text/javascript" charset="utf-8" async
-          src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af368cd9a335b0278ee8b4719ca49ceac39dbf5b24b6e0df568d67eb9a4ce5f8a&amp;width=100%25&amp;height=520&amp;lang=ru_RU&amp;scroll=true">
-          </script>
+        <div class="map__container">
+          <script type="text/javascript" charset="utf-8" async
+            src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af368cd9a335b0278ee8b4719ca49ceac39dbf5b24b6e0df568d67eb9a4ce5f8a&amp;width=100%25&amp;height=520&amp;lang=ru_RU&amp;scroll=true">
+            </script>
+        </div>
+        <div class="map__links">
+          <div class="map__linksItem">
+            <a href="https://yandex.ru/maps/org/guitarcollectors/208898645018/?ll=30.342362%2C59.917156&z=18"
+              target="_blank">
+              <img src="src/img/map/yandex.svg" alt="image">
+            </a>
+          </div>
+          <div class="map__linksItem">
+            <a href="https://www.google.com/maps/place/Guitarcollectors/@59.9171202,30.3400382,17z/data=!3m1!4b1!4m5!3m4!1s0x4696312629598375:0xe562b8399bee973e!8m2!3d59.9171202!4d30.3422269"
+              target="_blank">
+              <img src="src/img/map/google.svg" alt="image">
+            </a>
+          </div>
+          <div class="map__linksItem">
+            <a href="https://2gis.ru/spb/firm/70000001038453585" target="_blank">
+              <img src="src/img/map/2gis.svg" alt="image">
+            </a>
+          </div>
+        </div>
       </aside>
     </main>
     <footer class="footer">
       <div class="footer__left">
-        <div class="footer__logo" class="logo">
+        <div class="footer__logo">
           <img src="src/img/global/logo.svg" alt="logo">
         </div>
-        <nav class="footer__nav">
-          <a class="footer__navItem" href="https://vk.com/album-32544455_212156787">Гитары</a>
-          <a class="footer__navItem" href="https://vk.com/album-32544455_237863413">Бас-гитары</a>
-          <a class="footer__navItem" href="https://vk.com/album-32544455_237744514">Педали</a>
-          <a class="footer__navItem" href="https://vk.com/album-32544455_244725032">Звучки и тд</a>
-          <a class="footer__navItem" href="https://vk.com/album-32544455_243035579">Комбики</a>
-          <a class="footer__navItem" href="https://vk.com/album-32544455_237744541">Прочие штуки</a>
-        </nav>
       </div>
-      <a class="footer__contacts">
-        <div class="footer__social">
-          <a class="footer__socialItem" href="https://vk.com/guitarcollectors">
+      <div class="footer__social">
+        <a class="footer__socialItem" href="https://vk.com/guitarcollectors" target="_blank">
 
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 
-              <path
-                d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.344 16.163h-1.867c-1.055 0-1.232-.601-2.102-1.469-.785-.785-1.22-.183-1.202.935.006.297-.141.534-.495.534-1.105 0-2.694.156-4.304-1.58-1.647-1.779-3.374-5.348-3.374-5.699 0-.208.172-.301.459-.301h1.898c.503 0 .545.249.686.568.584 1.331 1.981 4.002 2.354 2.511.214-.856.301-2.839-.615-3.01-.52-.096.396-.652 1.722-.652.33 0 .688.035 1.054.12.673.156.676.458.666.898-.034 1.666-.235 2.786.204 3.069.419.271 1.521-1.502 2.104-2.871.159-.378.191-.632.643-.632h2.322c1.216 0-.159 1.748-1.21 3.112-.847 1.099-.802 1.12.183 2.034.701.651 1.53 1.54 1.53 2.043 0 .238-.186.39-.656.39z" />
-            </svg>
+            <path
+              d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.344 16.163h-1.867c-1.055 0-1.232-.601-2.102-1.469-.785-.785-1.22-.183-1.202.935.006.297-.141.534-.495.534-1.105 0-2.694.156-4.304-1.58-1.647-1.779-3.374-5.348-3.374-5.699 0-.208.172-.301.459-.301h1.898c.503 0 .545.249.686.568.584 1.331 1.981 4.002 2.354 2.511.214-.856.301-2.839-.615-3.01-.52-.096.396-.652 1.722-.652.33 0 .688.035 1.054.12.673.156.676.458.666.898-.034 1.666-.235 2.786.204 3.069.419.271 1.521-1.502 2.104-2.871.159-.378.191-.632.643-.632h2.322c1.216 0-.159 1.748-1.21 3.112-.847 1.099-.802 1.12.183 2.034.701.651 1.53 1.54 1.53 2.043 0 .238-.186.39-.656.39z" />
+          </svg>
 
-          </a>
-          <a class="footer__socialItem" href="https://www.youtube.com/channel/UCu_r2YH8SYwe0myiKYSSahA">
+        </a>
+        <a class="footer__socialItem" href="https://www.youtube.com/channel/UCu_r2YH8SYwe0myiKYSSahA" target="_blank">
 
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <path
-                d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm4.441 16.892c-2.102.144-6.784.144-8.883 0-2.276-.156-2.541-1.27-2.558-4.892.017-3.629.285-4.736 2.558-4.892 2.099-.144 6.782-.144 8.883 0 2.277.156 2.541 1.27 2.559 4.892-.018 3.629-.285 4.736-2.559 4.892zm-6.441-7.234l4.917 2.338-4.917 2.346v-4.684z" />
-            </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path
+              d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm4.441 16.892c-2.102.144-6.784.144-8.883 0-2.276-.156-2.541-1.27-2.558-4.892.017-3.629.285-4.736 2.558-4.892 2.099-.144 6.782-.144 8.883 0 2.277.156 2.541 1.27 2.559 4.892-.018 3.629-.285 4.736-2.559 4.892zm-6.441-7.234l4.917 2.338-4.917 2.346v-4.684z" />
+          </svg>
 
-          </a>
-          <a class="footer__socialItem" href="https://www.instagram.com/guitarcollectors_/">
+        </a>
+        <a class="footer__socialItem" href="https://www.instagram.com/guitarcollectors_/" target="_blank">
 
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <path
-                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-            </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path
+              d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+          </svg>
 
-          </a>
-        </div>
+        </a>
+        <a class="footer__socialItem footer__socialItem_avito"
+          href="https://www.avito.ru/user/7783dc9ee31b78e6899a28d5b38ca765/profile?id=968056749&src=item"
+          target="_blank">
+
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 83.1 83.1">
+            <g>
+              <circle cx="60.65" cy="60.65" r="22.45" style="fill:#98c332" />
+              <circle cx="18.45" cy="60.65" r="10.45" style="fill:#7e6bae" />
+              <circle cx="60.65" cy="18.45" r="14.45" style="fill:#ec6266" />
+              <circle cx="18.45" cy="18.45" r="18.45" style="fill:#47a2db" />
+            </g>
+          </svg>
+
+        </a>
+      </div>
+      <div class="footer__contacts">
         <div class="footer__address">
           <div class="footer__addressText">
             СПБ, Звенигородская 9-11
@@ -614,8 +685,8 @@
         <a href="#" class="footer__upLink">
           <img src="src/img/footer/up_link.svg" alt="link">
         </a>
-  </div>
-  </footer>
+      </div>
+    </footer>
   </div>
   <script src="scripts/main.js"></script>
 </body>

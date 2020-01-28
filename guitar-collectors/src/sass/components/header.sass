@@ -5,16 +5,20 @@
   align-items: center
   justify-content: space-between
   background: $darkBlue
+  width: 100%
   height: 87px
   padding: 0 10px
+  position: fixed
+  z-index: 100
+  margin-top: -87px
   +media
     height: 100px  
     padding: 0 50px
-  +media(1400px)
-    padding: 0 100px
+    position: inherit
+    margin: 0
 
   &__logo
-    margin-right: 40px
+    margin-right: 20px
 
   &__left
     display: flex
@@ -26,26 +30,37 @@
     justify-content: space-between
     width: 36px
     height: 27px
+    &_active
+      .header__menuLine      
+        background: $red
+        &:nth-child(2)
+          width: 21px
     &Line
+      transition: all .5s ease-out
       width: 36px
       height: 5px
       border-radius: 5px
       background: #fff
-    +media
+
+
+    +media(1150px)
       display: none
 
   &__nav
     display: none
     &Item
-      font: 500 16px/24px $font
+      font: 500 14px/22px $font
       color: $white
       margin-right: 20px
       transition: all .3s ease-out
+      +media(1530px)
+        font-size: 16px
+        line-height: 24px
       &:last-child
         margin: 0
       &:hover
         color: $red
-    +media
+    +media(1150px)
       display: flex
 
   &__social
@@ -59,6 +74,14 @@
         fill: $red
     &Item
       display: block
+      transition: all .3s ease-out
+      &_avito
+        width: 24px
+        height: 24px
+        border-radius: 50%
+        background: $white
+        &:hover
+          background: $red
       svg
         width: 44px
         height: 44px
@@ -78,12 +101,16 @@
 
   &__address
     display: none
-    +media(1300px)
+    +media(1350px)
       display: flex 
       flex-direction: column
     &Text
-      font: 20px/24px $font
+      font: 12px/16px $font
+      +media(1500px)
+        font: 20px/24px $font
     &PhoneLink
-      font: bold 26px/35px $font
+      font: bold 18px/26px $font
       color: $white
+      +media(1500px)
+        font: bold 26px/34px $font
        

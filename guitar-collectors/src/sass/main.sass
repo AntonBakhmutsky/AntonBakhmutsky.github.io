@@ -2,31 +2,35 @@
 @use 'components/fonts'
 @use 'components/variables' as *
 @use 'components/header'
+@use 'components/mobileMenu'
 @use 'components/best'
 @use 'components/howWork'
 @use 'components/showroom'
 @use 'components/faq'
 @use 'components/interior'
+@use 'components/map'
 @use 'components/footer'
+@use 'components/modal'
 
 body 
   min-width: 375px
   color: $white
   position: relative
+  background: #E5E5E5
+
 
 .wrapper
+  padding-top: 87px
+  position: relative
   margin: 0 auto
   max-width: 1600px
+  +media
+    padding-top: 0
 
 .main
   background: 20% 15% repeat-y url(../src/img/global/cat_back_mobile.svg), $blue
   +media
     background-image: url(../src/img/global/cat_back_desktop.svg)
-
-.mobile__menu
-  position: absolute
-  top: 0
-  left: -100vw
 
 svg
   display: block

@@ -1,0 +1,75 @@
+@use 'variables' as *
+
+.mobile
+  &__menu
+    width: 100%
+    height: 100%
+    position: fixed
+    z-index: 100
+    background: #0B121C
+    display: flex
+    flex-direction: column
+    align-items: center
+    padding: 0 0 50px
+    left: -100%
+    transition: all .5s ease-out
+    &_active
+      left: 0
+
+  &__nav
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: space-between
+    padding: 10px 0
+    height: 55%
+    &Item
+      display: block
+      font: 500 28px/36px $font
+      color: $white
+      &:active
+        color: $red
+      &:hover
+        color: $red
+  
+  &__contacts
+    margin-top: 10px
+    height: 30%
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+
+  &__address
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 20px
+    &Text
+      font: 20px/26px $font
+      color: $white
+    &PhoneLink
+      font: bold 26px/30px $font
+      color: $white
+  
+  &__social
+    display: flex
+    &Item
+      display: block
+      width: 35px
+      height: 35px
+      &:not(:last-child)
+        margin-right: 20px
+      &_avito
+        border-radius: 50%
+        background: $white
+        &:hover, &:active
+          background: $red
+      svg
+        width: 100%
+        height: 100%
+        fill: $white
+        &:hover, &:active
+          fill: $red
+        
