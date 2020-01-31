@@ -33,4 +33,7 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 
   upBtn.addEventListener('click', toTop);
+
+  //photo modal
+  
 });
