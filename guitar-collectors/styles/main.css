@@ -487,7 +487,7 @@ html {
   font: 500 28px/35px "Cera Pro", sans-serif;
   text-transform: uppercase;
   width: 100%;
-  word-wrap: none;
+  word-wrap: normal;
 }
 @media screen and (min-width: 1025px) {
   .best__header {
@@ -503,7 +503,7 @@ html {
   font: 500 16px/21px "Cera Pro", sans-serif;
   margin-bottom: 40px;
   width: 100%;
-  word-wrap: none;
+  word-wrap: normal;
 }
 @media screen and (min-width: 1025px) {
   .best__subHeader {
