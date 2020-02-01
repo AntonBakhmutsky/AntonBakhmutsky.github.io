@@ -164,7 +164,7 @@ html {
   border-radius: 5px;
   background: #fff;
 }
-@media screen and (min-width: 1150px) {
+@media screen and (min-width: 1200px) {
   .header__menu {
     display: none;
   }
@@ -178,7 +178,7 @@ html {
   margin-right: 20px;
   transition: all 0.3s ease-out;
 }
-@media screen and (min-width: 1530px) {
+@media screen and (min-width: 1580px) {
   .header__navItem {
     font-size: 16px;
     line-height: 24px;
@@ -190,9 +190,10 @@ html {
 .header__navItem:hover {
   color: #D6050A;
 }
-@media screen and (min-width: 1150px) {
+@media screen and (min-width: 1200px) {
   .header__nav {
     display: flex;
+    align-items: center;
   }
 }
 .header__social {
@@ -251,7 +252,7 @@ html {
 .header__address {
   display: none;
 }
-@media screen and (min-width: 1350px) {
+@media screen and (min-width: 1400px) {
   .header__address {
     display: flex;
     flex-direction: column;
@@ -309,6 +310,12 @@ html {
 }
 .mobile__navItem:hover {
   color: #D6050A;
+}
+@media screen and (max-height: 480px) {
+  .mobile__navItem {
+    font-size: 24px;
+    line-height: 32px;
+  }
 }
 .mobile__contacts {
   margin-top: 10px;
@@ -446,6 +453,13 @@ html {
   align-items: center;
   color: #fff;
   border-radius: 5px;
+  border: 1px solid #D6050A;
+  transition: all 0.3s ease-out;
+  text-transform: uppercase;
+}
+.best__btn:hover {
+  background: transparent;
+  color: red;
 }
 
 @media screen and (min-width: 1025px) {
@@ -528,6 +542,9 @@ html {
   z-index: 10;
 }
 .howWork__middle .howWork__desc .item__description {
+  width: 100%;
+  min-height: 265px;
+  position: relative;
   background: #1B2745;
   text-align: center;
   padding: 60px 0 40px;
@@ -545,6 +562,29 @@ html {
   font: 14px/25px "Cera Pro", sans-serif;
   padding: 0 15px;
   opacity: 0.8;
+  text-align: left;
+}
+.howWork__middle .howWork__desc .item__more {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  color: rgba(255, 255, 255, 0.8);
+  display: block;
+  background: #D6050A;
+  font: 12px/14px "Cera Pro", sans-serif;
+  width: 100px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  text-transform: uppercase;
+  border: 1px solid #D6050A;
+  transition: all 0.3s ease-out;
+}
+.howWork__middle .howWork__desc .item__more:hover {
+  background: transparent;
+  color: red;
 }
 
 .showroom {
@@ -685,12 +725,22 @@ html {
   }
 }
 .faq__popular .question_active .question__text {
-  transition: all 0.5s ease-out;
+  transition: all 0.2s ease-out;
   color: #D6050A;
 }
+@media screen and (min-width: 1025px) {
+  .faq__popular .question_active .question__text {
+    transition: all 0.5s ease-out !important;
+  }
+}
 .faq__popular .question_active .question__btn {
-  transition: all 0.5s ease-out;
+  transition: all 0.2s ease-out;
   transform: rotate(180deg);
+}
+@media screen and (min-width: 1025px) {
+  .faq__popular .question_active .question__btn {
+    transition: all 0.5s ease-out !important;
+  }
 }
 .faq__popular .question_active .question__btn path {
   fill: #D6050A;
@@ -703,29 +753,30 @@ html {
   padding: 25px 10px;
   background: #1B2745;
   cursor: pointer;
-  transition: all 0.5s ease-out;
+  transition: all 0.2s ease-out;
 }
 @media screen and (min-width: 1025px) {
   .faq__popular .question__head {
+    transition: all 0.5s ease-out !important;
     padding: 25px 30px;
   }
-}
-.faq__popular .question__head:hover .question__text {
-  transition: all 0.5s ease-out;
-  color: #D6050A;
-}
-.faq__popular .question__head:hover .question__btn {
-  transition: all 0.5s ease-out;
-}
-.faq__popular .question__head:hover .question__btn path {
-  fill: #D6050A;
+  .faq__popular .question__head:hover .question__text {
+    transition: all 0.2s ease-out;
+    color: #D6050A;
+  }
+  .faq__popular .question__head:hover .question__btn {
+    transition: all 0.2s ease-out;
+  }
+  .faq__popular .question__head:hover .question__btn path {
+    fill: #D6050A;
+  }
 }
 .faq__popular .question__text {
   color: #fff;
   font: 500 14px/19px "Cera Pro", sans-serif;
   max-width: 220px;
   text-transform: uppercase;
-  transition: all 0.5s ease-out;
+  transition: all 0.2s ease-out;
 }
 @media screen and (min-width: 500px) {
   .faq__popular .question__text {
@@ -740,6 +791,7 @@ html {
 }
 @media screen and (min-width: 1025px) {
   .faq__popular .question__text {
+    transition: all 0.5s ease-out !important;
     font-size: 22px;
     line-height: 24px;
   }
@@ -753,15 +805,25 @@ html {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  transition: all 0.5s ease-out;
+  transition: all 0.2s ease-out;
+}
+@media screen and (min-width: 1025px) {
+  .faq__popular .question__btn {
+    transition: all 0.5s ease-out !important;
+  }
 }
 .faq__popular .question__content {
   background: #1B2745;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.5s;
+  transition: max-height 0.2s;
   color: rgba(255, 255, 255, 0.8);
+}
+@media screen and (min-width: 1025px) {
+  .faq__popular .question__content {
+    transition: max-height 0.5s !important;
+  }
 }
 .faq__popular .question__contentContainer {
   padding: 30px 10px;

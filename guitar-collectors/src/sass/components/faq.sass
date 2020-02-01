@@ -30,11 +30,15 @@
       
       &_active
         .question__text
-          transition: all .5s ease-out
+          transition: all .2s ease-out
           color: $red
+          +media
+            transition: all .5s ease-out !important
         .question__btn
-          transition: all .5s ease-out
+          transition: all .2s ease-out
           transform: rotate(180deg)
+          +media
+            transition: all .5s ease-out !important
           path
             fill: $red
 
@@ -46,30 +50,32 @@
         padding: 25px 10px
         background: $lightBlue
         cursor: pointer
-        transition: all .5s ease-out
+        transition: all .2s ease-out
         +media
+          transition: all .5s ease-out !important     
           padding: 25px 30px
-        &:hover
-          .question__text
-            transition: all .5s ease-out
-            color: $red
-          .question__btn
-            transition: all .5s ease-out
-            path
-              fill: $red
+          &:hover
+            .question__text
+              transition: all .2s ease-out
+              color: $red
+            .question__btn
+              transition: all .2s ease-out
+              path
+                fill: $red
 
       &__text
         color: $white
         font: 500 14px/19px $font
         max-width: 220px
         text-transform: uppercase
-        transition: all .5s ease-out
+        transition: all .2s ease-out
         +media(500px)
           font-size: 18px
           line-height: 20px
         +media(650px)
           max-width: inherit
-        +media 
+        +media
+          transition: all .5s ease-out !important
           font-size: 22px
           line-height: 24px
 
@@ -82,15 +88,19 @@
         justify-content: center
         align-items: center
         cursor: pointer
-        transition: all .5s ease-out
+        transition: all .2s ease-out
+        +media
+          transition: all .5s ease-out !important
 
       &__content
         background: $lightBlue
         border-top: 1px solid rgba(255, 255, 255, .1)
         max-height: 0
         overflow: hidden
-        transition: max-height .5s
+        transition: max-height .2s
         color: rgba(255, 255, 255, .8)
+        +media
+          transition: max-height .5s !important
         &Container
           padding: 30px 10px
           font: 16px/22px $font

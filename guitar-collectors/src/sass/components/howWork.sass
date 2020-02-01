@@ -58,6 +58,9 @@
         &__image
           z-index: 10
         &__description
+          width: 100%
+          min-height: 265px
+          position: relative
           background: $lightBlue
           text-align: center
           padding: 60px 0 40px
@@ -72,3 +75,25 @@
           font: 14px/25px $font
           padding: 0 15px
           opacity: .8
+          text-align: left
+        &__more
+          position: absolute
+          right: 10px
+          bottom: 10px
+          color: rgba(255, 255, 255, .8)
+          display: block
+          background: $red
+          font: 12px/14px $font
+          width: 100px
+          height: 20px
+          display: flex
+          align-items: center
+          justify-content: center
+          border-radius: 5px
+          text-transform: uppercase
+          border: 1px solid $red
+          transition: all .3s ease-out
+          &:hover
+            background: transparent
+            color: red
+

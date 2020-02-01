@@ -11,6 +11,10 @@ $font: 'Cera Pro', sans-serif
   @media screen and (min-width: $minWidth) 
     @content
 
+=mediaHeight($maxHeight)
+  @media screen and (max-height: $maxHeight) 
+    @content
+
 =header
   font: 500 30px/40px $font
   text-transform: uppercase

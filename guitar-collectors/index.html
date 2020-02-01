@@ -35,6 +35,7 @@
         <a class="mobile__navItem" href="https://vk.com/album-32544455_237744541">Прочее</a>
         <a class="mobile__navItem" href="https://vk.com/album-32544455_267705678">Расходники/аксессуары</a>
         <a class="mobile__navItem" href="https://vk.com/topic-32544455_34661842">Отзывы</a>
+        <a class="mobile__navItem" href="#faq">FAQ</a>
       </nav>
       <div class="mobile__contacts">
         <div class="mobile__address">
@@ -108,11 +109,12 @@
           <a class="header__navItem" href="https://vk.com/album-32544455_267705678"
             target="_blank">Расходники/аксессуары</a>
           <a class="header__navItem" href="https://vk.com/topic-32544455_34661842" target="_blank">Отзывы</a>
+          <a class="header__navItem" href="#faq">FAQ</a>
         </nav>
       </div>
       <div class="header__contacts">
         <div class="header__social">
-          <a class="header__socialItem" href="https://vk.com/guitarcollectors" target="_blank">
+          <a class="header__socialItem" id="vk" href="https://vk.com/guitarcollectors" target="_blank">
 
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 
@@ -166,12 +168,10 @@
     <main class="main">
       <section class="best">
         <div class="best__left">
-          <h2 class="best__header">Лучшие гитары <span>специально</span> для вас!</h2>
-          <div class="best__subHeader">Профессиональный отбор инструментов</div>
+          <h2 class="best__header">Коллекция гитар</h2>
+          <div class="best__subHeader">Из разных стран, времен и стилей</div>
           <p class="best__text">
-            Панладовая система свободна. Ритмоединица имитирует флажолет. <br>
-            Форма продолжает ритмоформульный фьюжн, потому что современная музыка не запоминается. Детройтское техно
-            дает композиционный динамический эллипсис.
+            В нашей регулярно пополняющейся коллекции всегда много гитар (около 100) педалей (150+) усиления и прочего окологитарного. У нас большой опыт работы с музыкальным оборудованием, и мы всегда рады помочь в выборе, продаже или обмене. Наш шоурум находится в центре Санкт-Петербурга, а преодолевать расстояния нам помогают транспортные компании.
           </p>
           <a class="best__btn" href="https://vk.com/guitarcollectors" target="_blank">Смотреть все</a>
         </div>
@@ -192,14 +192,7 @@
       </section>
       <section class="howWork">
         <div class="howWork__top">
-          <h2 class="howWork__header">Как мы работаем?</h2>
-          <h3 class="howWork__subHeader">
-            Политическое учение Руссо иллюстрирует
-            <span>
-              функциональный бихевиоризм. Политическая культура
-              означает постиндустриализм, последнее особенно
-            </span>
-          </h3>
+          <h2 class="howWork__header">Что мы предлагаем</h2>
         </div>
         <div class="howWork__middle">
           <div class="howWork__desc">
@@ -208,14 +201,12 @@
                 <img src="src/img/how_work/cat_1.svg" alt="cat">
               </div>
               <div class="item__description">
+                <a class="item__more" href="#" id="to_buy">Подробнее</a>
                 <h3 class="item__header item__header_red">
                   ВЫКУП Оборудования
                 </h3>
                 <p class="item__text">
-                  Нормаль к поверхности, не вдаваясь в
-                  подробности, традиционно создает
-                  максимум, при этом, вместо 13 можно взять
-                  любую другую константу. График функции
+                  Просто предложите нам вещи, которые стали вам не нужны, и мы назовем цену, за которую сможем их выкупить.
                 </p>
               </div>
             </div>
@@ -224,14 +215,12 @@
                 <img src="src/img/how_work/cat_2.svg" alt="cat">
               </div>
               <div class="item__description">
+                <a class="item__more" href="#" id="to_change">Подробнее</a>
                 <h3 class="item__header">
-                  ОБМЕН гитар и примочек
+                  ОБМЕН
                 </h3>
                 <p class="item__text">
-                  Нормаль к поверхности, не вдаваясь в
-                  подробности, традиционно создает
-                  максимум, при этом, вместо 13 можно взять
-                  любую другую константу. График функции
+                  Мы всегда готовы обменять ваши инструменты и оборудование на что-то из нашей коллекции, где бы вы ни находились. Обмен возможен с доплатой в обе стороны.
                 </p>
               </div>
             </div>
@@ -240,14 +229,12 @@
                 <img src="src/img/how_work/cat_3.svg" alt="cat">
               </div>
               <div class="item__description">
+                <a class="item__more" href="#" id="to_sell">Подробнее</a>
                 <h3 class="item__header item__header_red">
-                  ПРОДАЖА Оборудования
+                  ПРОДАЖА
                 </h3>
                 <p class="item__text">
-                  Нормаль к поверхности, не вдаваясь в
-                  подробности, традиционно создает
-                  максимум, при этом, вместо 13 можно взять
-                  любую другую константу. График функции
+                  Мы поможем сделать даже самый сложный выбор и отговорим, в случае необдуманной покупки.
                 </p>
               </div>
             </div>
@@ -256,14 +243,12 @@
                 <img src="src/img/how_work/cat_4.svg" alt="cat">
               </div>
               <div class="item__description">
+                <a class="item__more" href="#" id="to_send">Подробнее</a>
                 <h3 class="item__header">
                   ПЕРЕСЫЛ гитарного добра
                 </h3>
                 <p class="item__text">
-                  Нормаль к поверхности, не вдаваясь в
-                  подробности, традиционно создает
-                  максимум, при этом, вместо 13 можно взять
-                  любую другую константу. График функции
+                  Расстояния для нас не проблема. Доставим инструмент в любую точку мира и поможем с отправкой вашего. Выкуп и обмен также возможны с пересылом.
                 </p>
               </div>
             </div>
@@ -273,10 +258,10 @@
       <section class="showroom">
         <div class="showroom__top">
           <h2 class="showroom__header">
-            НАШ ШОУРУМ
+            ШОУРУМ
           </h2>
           <h3 class="showroom__subHeader">
-            Только качественные гитары и оборудование Более 250 МОДЕЛЕЙ!
+            В любой день можно зайти, послушать, посмотреть, сравнить и выбрать. Приходите в гости
           </h3>
         </div>
         <div class="showroom__gallery">
@@ -331,18 +316,11 @@
           </div>
         </div>
       </section>
-      <section class="faq">
+      <section class="faq" id="faq">
         <div class="faq__top">
           <h2 class="faq__header">
-            Ответы на популярные вопросы
+            Ответы на вопросы
           </h2>
-          <div class="faq__subHeader">
-            Политическое учение Руссо иллюстрирует
-            <span>
-              функциональный бихевиоризм. Политическая культура
-              означает постиндустриализм, последнее особенно ярко выражено в ранних работах.
-            </span>
-          </div>
         </div>
         <div class="faq__popular">
           <div class="question">
@@ -382,7 +360,7 @@
               </div>
             </div>
           </div>
-          <div class="question">
+          <div class="question" id="buy">
             <div class="question__head">
               <div class="question__text">
                 Купить у нас?
@@ -411,7 +389,7 @@
               </div>
             </div>
           </div>
-          <div class="question">
+          <div class="question" id="sell">
             <div class="question__head">
               <div class="question__text">
                 Продать нам?
@@ -440,7 +418,7 @@
               </div>
             </div>
           </div>
-          <div class="question">
+          <div class="question" id="change">
             <div class="question__head">
               <div class="question__text">
                 Обмен с нами?
@@ -473,7 +451,7 @@
               </div>
             </div>
           </div>
-          <div class="question">
+          <div class="question" id="send">
             <div class="question__head">
               <div class="question__text">
                 Вы в другом городе?
