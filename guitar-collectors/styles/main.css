@@ -909,7 +909,7 @@ html {
 }
 .map__links {
   width: 25%;
-  padding: 0 20px;
+  padding: 0 25px;
   background: rgba(16, 24, 36, 0.6);
   display: flex;
   flex-direction: column;
@@ -922,8 +922,8 @@ html {
   }
 }
 .map__linksItem {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -931,6 +931,12 @@ html {
 }
 .map__linksItem:not(:last-child) {
   margin-bottom: 70px;
+}
+@media screen and (min-width: 550px) {
+  .map__linksItem {
+    width: 70px;
+    height: 70px;
+  }
 }
 @media screen and (min-width: 1025px) {
   .map__linksItem {
