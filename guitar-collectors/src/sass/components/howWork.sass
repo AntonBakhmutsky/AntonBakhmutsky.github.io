@@ -93,7 +93,11 @@
           text-transform: uppercase
           border: 1px solid $red
           transition: all .3s ease-out
-          &:hover
+          &:active
             background: transparent
-            color: red
+            color: $red
+          +media
+            &:hover
+              background: transparent
+              color: $red
 

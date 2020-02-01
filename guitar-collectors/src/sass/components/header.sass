@@ -71,8 +71,11 @@
     svg
       transition: all .3s ease-out
       fill: $white
-      &:hover
+      &:active
         fill: $red
+      +media
+        &:hover
+          fill: $red
     &Item
       display: block
       transition: all .3s ease-out
@@ -81,8 +84,11 @@
         height: 24px
         border-radius: 50%
         background: $white
-        &:hover
+        &:active
           background: $red
+        +media
+          &:hover
+            background: $red
       svg
         width: 44px
         height: 44px

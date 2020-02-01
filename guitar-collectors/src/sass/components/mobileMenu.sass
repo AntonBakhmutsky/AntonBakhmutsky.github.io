@@ -23,6 +23,11 @@
     justify-content: space-between
     padding: 10px 0
     height: 55%
+    +landscape
+      flex-flow: row wrap
+      height: 40%
+      width: 80%
+      justify-content: center
     &Item
       display: block
       font: 500 28px/36px $font
@@ -32,8 +37,11 @@
       &:hover
         color: $red
       +mediaHeight(480px)
-        font-size: 24px
-        line-height: 32px
+        font-size: 20px
+        line-height: 24px
+      +landscape
+        &:not(:last-child)
+          margin-right: 20px
   
   &__contacts
     margin-top: 10px

@@ -208,8 +208,13 @@ html {
   transition: all 0.3s ease-out;
   fill: #fff;
 }
-.header__social svg:hover {
+.header__social svg:active {
   fill: #D6050A;
+}
+@media screen and (min-width: 1025px) {
+  .header__social svg:hover {
+    fill: #D6050A;
+  }
 }
 .header__socialItem {
   display: block;
@@ -221,8 +226,13 @@ html {
   border-radius: 50%;
   background: #fff;
 }
-.header__socialItem_avito:hover {
+.header__socialItem_avito:active {
   background: #D6050A;
+}
+@media screen and (min-width: 1025px) {
+  .header__socialItem_avito:hover {
+    background: #D6050A;
+  }
 }
 .header__socialItem svg {
   width: 44px;
@@ -300,6 +310,14 @@ html {
   padding: 10px 0;
   height: 55%;
 }
+@media screen and (orientation: landscape) {
+  .mobile__nav {
+    flex-flow: row wrap;
+    height: 40%;
+    width: 80%;
+    justify-content: center;
+  }
+}
 .mobile__navItem {
   display: block;
   font: 500 28px/36px "Cera Pro", sans-serif;
@@ -313,8 +331,13 @@ html {
 }
 @media screen and (max-height: 480px) {
   .mobile__navItem {
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+@media screen and (orientation: landscape) {
+  .mobile__navItem:not(:last-child) {
+    margin-right: 20px;
   }
 }
 .mobile__contacts {
@@ -457,9 +480,15 @@ html {
   transition: all 0.3s ease-out;
   text-transform: uppercase;
 }
-.best__btn:hover {
+.best__btn:active {
   background: transparent;
-  color: red;
+  color: #D6050A;
+}
+@media screen and (min-width: 1025px) {
+  .best__btn:hover {
+    background: transparent;
+    color: #D6050A;
+  }
 }
 
 @media screen and (min-width: 1025px) {
@@ -582,9 +611,15 @@ html {
   border: 1px solid #D6050A;
   transition: all 0.3s ease-out;
 }
-.howWork__middle .howWork__desc .item__more:hover {
+.howWork__middle .howWork__desc .item__more:active {
   background: transparent;
-  color: red;
+  color: #D6050A;
+}
+@media screen and (min-width: 1025px) {
+  .howWork__middle .howWork__desc .item__more:hover {
+    background: transparent;
+    color: #D6050A;
+  }
 }
 
 .showroom {
