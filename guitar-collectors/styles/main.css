@@ -900,33 +900,42 @@ html {
   display: flex;
 }
 .map__container {
-  width: 70%;
+  width: 85%;
 }
 @media screen and (min-width: 1025px) {
   .map__container {
-    width: 80%;
+    width: 90%;
   }
 }
 .map__links {
-  width: 30%;
+  width: 15%;
   background: rgba(16, 24, 36, 0.6);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
 }
 @media screen and (min-width: 1025px) {
   .map__links {
-    width: 20%;
+    width: 10%;
   }
 }
 .map__linksItem {
-  width: 100px;
-  height: 100px;
+  width: 40px;
+  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
+}
+.map__linksItem:not(:last-child) {
+  margin-bottom: 70px;
+}
+@media screen and (min-width: 1025px) {
+  .map__linksItem {
+    width: 100px;
+    height: 100px;
+  }
 }
 .map__linksItem a {
   display: flex;
