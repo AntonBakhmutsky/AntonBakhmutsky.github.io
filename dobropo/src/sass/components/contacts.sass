@@ -2,8 +2,37 @@
 /*------------------------------------- contacts ----------------------------------------------------*/
 
 .contacts
-  padding: 180px 125px
+  padding: 180px 125px 50px 
   background: $black
   width: 100%
   margin-top: -140px
   z-index: 89
+
+  &__header
+    font: bold 25px/30px $font
+    text-align: center
+    margin-bottom: 40px
+
+  &__content
+    display: flex
+    justify-content: space-between
+
+  &__head
+    font: 12px/15px $font
+    color: $gray
+    margin-bottom: 10px
+
+  &__text
+    color: $white
+    font: bold 16px/20px $font
+    max-width: 237px
+
+  .social__items
+    display: flex
+    .item
+      &:not(:last-child)
+        margin-right: 12px
+
+  &__bottomVector
+    margin-top: -76px
+    z-index: 88

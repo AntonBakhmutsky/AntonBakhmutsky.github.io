@@ -572,11 +572,40 @@
 
 /*------------------------------------- contacts ----------------------------------------------------*/
 .contacts {
-  padding: 180px 125px;
+  padding: 180px 125px 50px;
   background: #1D1D1D;
   width: 100%;
   margin-top: -140px;
   z-index: 89;
+}
+.contacts__header {
+  font: bold 25px/30px "Montserrat", sans-serif;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.contacts__content {
+  display: flex;
+  justify-content: space-between;
+}
+.contacts__head {
+  font: 12px/15px "Montserrat", sans-serif;
+  color: #DFDFDF;
+  margin-bottom: 10px;
+}
+.contacts__text {
+  color: #fff;
+  font: bold 16px/20px "Montserrat", sans-serif;
+  max-width: 237px;
+}
+.contacts .social__items {
+  display: flex;
+}
+.contacts .social__items .item:not(:last-child) {
+  margin-right: 12px;
+}
+.contacts__bottomVector {
+  margin-top: -76px;
+  z-index: 88;
 }
 
 /*--------------------------------------- global ----------------------------------------------------*/
