@@ -548,9 +548,15 @@ html {
   align-items: center;
   margin: 0 0 30px 0;
 }
+.howWork__middle .howWork__desc .item:not(:nth-child(2n)) .item__header {
+  color: #D6050A;
+}
 @media screen and (min-width: 660px) {
   .howWork__middle .howWork__desc .item:not(:nth-child(2n)) {
     margin-right: 25px;
+  }
+  .howWork__middle .howWork__desc .item:not(:nth-child(2n)) .item__header {
+    color: #fff;
   }
 }
 @media screen and (min-width: 1040px) {
@@ -562,6 +568,9 @@ html {
   .howWork__middle .howWork__desc .item:not(:nth-child(2n)) {
     margin: 0;
     align-self: flex-end;
+  }
+  .howWork__middle .howWork__desc .item:not(:nth-child(2n)) .item__header {
+    color: #D6050A;
   }
 }
 .howWork__middle .howWork__desc .item:last-child {
@@ -583,9 +592,6 @@ html {
 .howWork__middle .howWork__desc .item__header {
   font: bold 20px/65px "Cera Pro", sans-serif;
   text-transform: uppercase;
-}
-.howWork__middle .howWork__desc .item__header_red {
-  color: #D6050A;
 }
 .howWork__middle .howWork__desc .item__text {
   font: 14px/25px "Cera Pro", sans-serif;

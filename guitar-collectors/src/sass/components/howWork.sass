@@ -43,16 +43,23 @@
         flex-direction: column
         align-items: center
         margin: 0 0 30px 0
+        &:not(:nth-child(2n))
+          .item__header
+            color: $red
         +media(660px)
           &:not(:nth-child(2n))
             margin-right: 25px
+            .item__header
+              color: $white
         +media(1040px)
           &:not(:nth-child(2n))
             margin-right: 200px
         +media(1550px)
           &:not(:nth-child(2n))
             margin: 0
-            align-self: flex-end        
+            align-self: flex-end
+            .item__header
+              color: $red        
         &:last-child
           margin: 0
         &__image
@@ -69,8 +76,7 @@
         &__header
           font: bold 20px/65px $font
           text-transform: uppercase
-          &_red
-            color: $red
+
         &__text
           font: 14px/25px $font
           padding: 0 15px
