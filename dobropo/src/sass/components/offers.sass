@@ -2,6 +2,7 @@
 @use 'offersTabs'
 /*--------------------------------------- offers ----------------------------------------------------*/
 .offers
+  width: 100%
   position: relative
   display: flex
   flex-direction: column
@@ -97,61 +98,6 @@
             text-transform: uppercase
             text-align: center
         
-        &__checkbox
-          margin-bottom: 20px
-          .label
-            font: 9px/11px $font
-            a
-              color: $black
-              display: inline-block
-              border-bottom: .5px solid $black
-              height: 16px
-
-          input[type="checkbox"]:checked, input[type="checkbox"]:not(:checked)
-            position: absolute
-            left: -9999px
-
-          input[type="checkbox"]:checked + label, input[type="checkbox"]:not(:checked) + label 
-              display: inline-block
-              position: relative
-              padding-left: 16px
-              line-height: 20px
-              cursor: pointer
-          
-          input[type="checkbox"]:checked + label:before, input[type="checkbox"]:not(:checked) + label:before
-            content: ''
-            position: absolute
-            left: 1px
-            top: 5px
-            width: 9px
-            height: 9px
-            border: 1px solid $black
-            background-color: #fff
-
-          input[type="checkbox"]:checked + label:before, input[type="checkbox"]:not(:checked) + label:before
-            border-radius: 2px
-
-          input[type="checkbox"]:checked + label:after, input[type="checkbox"]:not(:checked) + label:after 
-            content: ''
-            position: absolute
-            -webkit-transition: all 0.2s ease
-            -moz-transition: all 0.2s ease
-            -o-transition: all 0.2s ease
-            transition: all 0.2s ease
-
-          input[type="checkbox"]:checked + label:after, input[type="checkbox"]:not(:checked) + label:after
-            left: 1px
-            top: 5px
-            width: 9px
-            height: 9px
-            border-radius: 2px
-            background: center no-repeat url(../src/img/checkmark_white.svg), $black
-
-          input[type="checkbox"]:not(:checked) + label:after
-            opacity: 0
-
-          input[type="checkbox"]:checked + label:after
-            opacity: 1
 
         &__social
           display: flex
@@ -184,3 +130,59 @@
     max-width: 100%
     margin-top: -131px
     z-index: 98
+
+.leaveRequest__checkbox
+  margin-bottom: 20px
+  .label
+    font: 9px/11px $font
+    a
+      color: $black
+      display: inline-block
+      border-bottom: .5px solid $black
+      height: 16px
+
+  input[type="checkbox"]:checked, input[type="checkbox"]:not(:checked)
+    position: absolute
+    left: -9999px
+
+  input[type="checkbox"]:checked + label, input[type="checkbox"]:not(:checked) + label 
+      display: inline-block
+      position: relative
+      padding-left: 16px
+      line-height: 20px
+      cursor: pointer
+  
+  input[type="checkbox"]:checked + label:before, input[type="checkbox"]:not(:checked) + label:before
+    content: ''
+    position: absolute
+    left: 1px
+    top: 5px
+    width: 9px
+    height: 9px
+    border: 1px solid $black
+    background-color: #fff
+
+  input[type="checkbox"]:checked + label:before, input[type="checkbox"]:not(:checked) + label:before
+    border-radius: 2px
+
+  input[type="checkbox"]:checked + label:after, input[type="checkbox"]:not(:checked) + label:after 
+    content: ''
+    position: absolute
+    -webkit-transition: all 0.2s ease
+    -moz-transition: all 0.2s ease
+    -o-transition: all 0.2s ease
+    transition: all 0.2s ease
+
+  input[type="checkbox"]:checked + label:after, input[type="checkbox"]:not(:checked) + label:after
+    left: 1px
+    top: 5px
+    width: 9px
+    height: 9px
+    border-radius: 2px
+    background: center no-repeat url(../src/img/checkmark_white.svg), $black
+
+  input[type="checkbox"]:not(:checked) + label:after
+    opacity: 0
+
+  input[type="checkbox"]:checked + label:after
+    opacity: 1

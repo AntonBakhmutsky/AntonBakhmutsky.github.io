@@ -20,16 +20,16 @@
 .main__header .nav__item:last-child {
   margin: 0;
 }
-.main__header .contacts {
+.main__header .header__contacts {
   display: flex;
   align-items: center;
 }
-.main__header .contacts__phone {
+.main__header .header__contacts .contacts__phone {
   font: bold 18px/22px "Montserrat", sans-serif;
   color: #1D1D1D;
   margin-right: 60px;
 }
-.main__header .contacts__request {
+.main__header .header__contacts .contacts__request {
   display: block;
   font: bold 12px/30px "Roboto", sans-serif;
   text-align: center;
@@ -54,8 +54,8 @@
   height: 48px;
 }
 .tabs__buttonsContainer {
+  position: relative;
   display: flex;
-  justify-content: flex-end;
   overflow-x: scroll;
 }
 .tabs__buttonsContainer::-webkit-scrollbar {
@@ -129,12 +129,14 @@
   height: 86px;
   background: url(../src/img/tabs/tab_active.svg);
   top: -58px;
-  right: 74px;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: -1;
 }
 
 /*--------------------------------------- offers ----------------------------------------------------*/
 .offers {
+  width: 100%;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -240,64 +242,6 @@
   text-transform: uppercase;
   text-align: center;
 }
-.offers__top .right__block .leaveRequest__checkbox {
-  margin-bottom: 20px;
-}
-.offers__top .right__block .leaveRequest__checkbox .label {
-  font: 9px/11px "Montserrat", sans-serif;
-}
-.offers__top .right__block .leaveRequest__checkbox .label a {
-  color: #1D1D1D;
-  display: inline-block;
-  border-bottom: 0.5px solid #1D1D1D;
-  height: 16px;
-}
-.offers__top .right__block .leaveRequest__checkbox input[type=checkbox]:checked, .offers__top .right__block .leaveRequest__checkbox input[type=checkbox]:not(:checked) {
-  position: absolute;
-  left: -9999px;
-}
-.offers__top .right__block .leaveRequest__checkbox input[type=checkbox]:checked + label, .offers__top .right__block .leaveRequest__checkbox input[type=checkbox]:not(:checked) + label {
-  display: inline-block;
-  position: relative;
-  padding-left: 16px;
-  line-height: 20px;
-  cursor: pointer;
-}
-.offers__top .right__block .leaveRequest__checkbox input[type=checkbox]:checked + label:before, .offers__top .right__block .leaveRequest__checkbox input[type=checkbox]:not(:checked) + label:before {
-  content: "";
-  position: absolute;
-  left: 1px;
-  top: 5px;
-  width: 9px;
-  height: 9px;
-  border: 1px solid #1D1D1D;
-  background-color: #fff;
-}
-.offers__top .right__block .leaveRequest__checkbox input[type=checkbox]:checked + label:before, .offers__top .right__block .leaveRequest__checkbox input[type=checkbox]:not(:checked) + label:before {
-  border-radius: 2px;
-}
-.offers__top .right__block .leaveRequest__checkbox input[type=checkbox]:checked + label:after, .offers__top .right__block .leaveRequest__checkbox input[type=checkbox]:not(:checked) + label:after {
-  content: "";
-  position: absolute;
-  -webkit-transition: all 0.2s ease;
-  -moz-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-}
-.offers__top .right__block .leaveRequest__checkbox input[type=checkbox]:checked + label:after, .offers__top .right__block .leaveRequest__checkbox input[type=checkbox]:not(:checked) + label:after {
-  left: 1px;
-  top: 5px;
-  width: 9px;
-  height: 9px;
-  border-radius: 2px;
-  background: center no-repeat url(../src/img/checkmark_white.svg), #1D1D1D;
-}
-.offers__top .right__block .leaveRequest__checkbox input[type=checkbox]:not(:checked) + label:after {
-  opacity: 0;
-}
-.offers__top .right__block .leaveRequest__checkbox input[type=checkbox]:checked + label:after {
-  opacity: 1;
-}
 .offers__top .right__block .leaveRequest__social {
   display: flex;
 }
@@ -334,6 +278,65 @@
   max-width: 100%;
   margin-top: -131px;
   z-index: 98;
+}
+
+.leaveRequest__checkbox {
+  margin-bottom: 20px;
+}
+.leaveRequest__checkbox .label {
+  font: 9px/11px "Montserrat", sans-serif;
+}
+.leaveRequest__checkbox .label a {
+  color: #1D1D1D;
+  display: inline-block;
+  border-bottom: 0.5px solid #1D1D1D;
+  height: 16px;
+}
+.leaveRequest__checkbox input[type=checkbox]:checked, .leaveRequest__checkbox input[type=checkbox]:not(:checked) {
+  position: absolute;
+  left: -9999px;
+}
+.leaveRequest__checkbox input[type=checkbox]:checked + label, .leaveRequest__checkbox input[type=checkbox]:not(:checked) + label {
+  display: inline-block;
+  position: relative;
+  padding-left: 16px;
+  line-height: 20px;
+  cursor: pointer;
+}
+.leaveRequest__checkbox input[type=checkbox]:checked + label:before, .leaveRequest__checkbox input[type=checkbox]:not(:checked) + label:before {
+  content: "";
+  position: absolute;
+  left: 1px;
+  top: 5px;
+  width: 9px;
+  height: 9px;
+  border: 1px solid #1D1D1D;
+  background-color: #fff;
+}
+.leaveRequest__checkbox input[type=checkbox]:checked + label:before, .leaveRequest__checkbox input[type=checkbox]:not(:checked) + label:before {
+  border-radius: 2px;
+}
+.leaveRequest__checkbox input[type=checkbox]:checked + label:after, .leaveRequest__checkbox input[type=checkbox]:not(:checked) + label:after {
+  content: "";
+  position: absolute;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.leaveRequest__checkbox input[type=checkbox]:checked + label:after, .leaveRequest__checkbox input[type=checkbox]:not(:checked) + label:after {
+  left: 1px;
+  top: 5px;
+  width: 9px;
+  height: 9px;
+  border-radius: 2px;
+  background: center no-repeat url(../src/img/checkmark_white.svg), #1D1D1D;
+}
+.leaveRequest__checkbox input[type=checkbox]:not(:checked) + label:after {
+  opacity: 0;
+}
+.leaveRequest__checkbox input[type=checkbox]:checked + label:after {
+  opacity: 1;
 }
 
 /*------------------------------------- examination -------------------------------------------------*/
@@ -511,7 +514,7 @@
   width: 100%;
   padding: 100px;
   background: #fff;
-  margin-top: -54px;
+  margin-top: -144px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -570,7 +573,7 @@
   z-index: 90;
 }
 
-/*------------------------------------- contacts ----------------------------------------------------*/
+/*------------------------------------- contacts ------------------------------------------------*/
 .contacts {
   padding: 180px 125px 50px;
   background: #1D1D1D;
@@ -608,6 +611,144 @@
   z-index: 88;
 }
 
+/*------------------------------------- request -------------------------------------------------*/
+.request {
+  width: 100%;
+  padding: 100px 100px 50px;
+  background: #7B7B7B;
+  z-index: 87;
+  margin-top: -56px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.request__header {
+  font: bold 25px/30px "Montserrat", sans-serif;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.request__desc {
+  font: 500 16px/20px "Montserrat", sans-serif;
+  text-align: center;
+  max-width: 496px;
+  margin-bottom: 20px;
+}
+.request__form {
+  max-width: 505px;
+}
+.request__inputs {
+  display: flex;
+  flex-wrap: wrap;
+}
+.request__inputs input {
+  display: block;
+  width: 240px;
+  height: 40px;
+  border-radius: 5px;
+  padding: 11px 15px;
+  margin-bottom: 20px;
+}
+.request__inputs input:first-child {
+  margin-right: 20px;
+}
+.request__inputs input::placeholder {
+  font: bold 12px/15px "Montserrat", sans-serif;
+  color: #8F8F8F;
+}
+.request__inputs textarea {
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  padding: 11px 15px;
+  margin-bottom: 30px;
+}
+.request__inputs textarea::placeholder {
+  font: bold 12px/15px "Montserrat", sans-serif;
+  color: #8F8F8F;
+}
+.request .leaveRequest__checkbox {
+  width: 505px;
+}
+.request .leaveRequest__checkbox label a {
+  color: #fff;
+  border-bottom: 0.5px solid #fff;
+}
+.request .leaveRequest__checkbox input[type=checkbox]:checked + label:after, .request .leaveRequest__checkbox input[type=checkbox]:not(:checked) + label:after {
+  background: center no-repeat url(../src/img/checkmark_black.svg);
+}
+.request .leaveRequest__checkbox input[type=checkbox]:checked + label:before, .request .leaveRequest__checkbox input[type=checkbox]:not(:checked) + label:before {
+  border: 1px solid #fff;
+}
+.request__send {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font: bold 14px/16px "Roboto", sans-serif;
+  background: #1D1D1D;
+  width: 198px;
+  height: 37px;
+  color: #fff;
+  border-radius: 30px;
+}
+.request__bottomVector {
+  margin-top: -76px;
+  z-index: 80;
+}
+
+#upload-widget {
+  position: relative;
+  border: 2px dashed #fff;
+  width: 505px;
+  background: transparent;
+  font: bold 12px/15px "Montserrat", sans-serif;
+  color: #CCCCCC;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+#upload-widget .dz-default.dz-message {
+  padding-left: 30px;
+  position: absolute;
+  width: 298px;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+}
+#upload-widget .dz-default.dz-message::before {
+  content: "";
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  top: -4px;
+  left: 0;
+  background: center/cover no-repeat url(../src/img/upload.svg);
+}
+
+/*--------------------------------------- map ----------------------------------------------------*/
+.map {
+  width: 100%;
+  margin-top: -76px;
+  z-index: 70;
+}
+
+/*------------------------------------- footer -------------------------------------------------*/
+.main__footer {
+  margin-top: -146px;
+  z-index: 100000;
+}
+.main__footer .offers__bottom .tabs__buttons {
+  z-index: 101;
+}
+.main__footer .offers__bottom .tabs__content {
+  z-index: 100;
+  border-radius: 0;
+}
+.main__footer .offers__bottom .tabs__arrows {
+  z-index: 100;
+}
+
 /*--------------------------------------- global ----------------------------------------------------*/
 body {
   background: #E5E5E5;
@@ -628,6 +769,14 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.gradient {
+  width: 100%;
+  height: 227px;
+  background: linear-gradient(180deg, rgba(29, 29, 29, 0) 0%, #1D1D1D 100%);
+  margin-top: -200px;
+  z-index: 99;
 }
 
 /*# sourceMappingURL=main.css.map */
