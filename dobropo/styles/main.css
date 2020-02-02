@@ -7,6 +7,9 @@
   padding: 0 20px;
   background: #fff;
 }
+.main__header .menu {
+  display: none;
+}
 .main__header .nav {
   display: flex;
   justify-content: flex-end;
