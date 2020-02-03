@@ -4,13 +4,17 @@
   margin-top: -50px
   padding: 100px 199px 30px 
   z-index: 97
-  max-width: 1238px
+  max-width: 100%
   border-radius: 100px
   background: $white
   display: flex
   flex-direction: column
   align-items: center
   color: $black
+  +media(1220px)
+    max-width: 98%
+
+
 
   &__header
     font: bold 28px/34px $font
@@ -102,8 +106,19 @@
       margin-right: 10px
 
   &__bottomVector
+    display: flex 
+    justify-content: center
     margin-top: -76px
     z-index: 96
+    +media(1150px)
+      width: 84%
+      margin-top: -72px
+    +media(1120px)
+      margin-top: -70px
   &__subBottomVector
     margin-top: -56px
     z-index: 95
+    +media(1150px)
+      margin-top: -52px
+    +media(1120px)
+      margin-top: - 51px

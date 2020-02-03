@@ -10,11 +10,33 @@
 
   .menu
     display: none
+    +media
+      display: flex
+      flex-direction: column
+      align-items: flex-end
+      &__line
+        width: 25px
+        height: 3px
+        border-radius: 3px
+        background: #404044
+        &:last-child
+          width: 19px
+        &:not(:last-child)
+          margin-bottom: 3px
+
+  .logo
+    +media
+      width: 75px
+      height: 23px
 
   .nav
     display: flex
     justify-content: flex-end
     flex-basis: 50%
+    +media(1150px)
+      flex-basis: 40%
+    +media
+      display: none
     &__item
       font: bold 14px/17px $font
       color: $black
@@ -29,6 +51,8 @@
       font: bold 18px/22px $font
       color: $black
       margin-right: 60px
+      +media
+        display: none
     .contacts__request
       display: block
       font: bold 12px/30px $btnFont
@@ -39,3 +63,7 @@
       border-radius: 50px
       background: $black
       color: $white
+      +media
+        width: 96px
+        height: 18px
+        font: bold 8px/18px $btnFont

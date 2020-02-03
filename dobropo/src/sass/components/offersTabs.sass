@@ -9,6 +9,10 @@
     max-width: 1100px 
     margin-right: 40px
     height: 48px
+    +media(1209px)
+      max-width: 950px
+    +media(1150px)
+      max-width: 850px
     &Container
       position: relative
       display: flex
@@ -59,13 +63,13 @@
     background: $black
     border-radius: 65px
     display: flex
-    flex-flow: column wrap
-    height: 202px
+    flex-flow: row wrap
+    min-height: 202px
     z-index: 0
     &Item
       font: 14px/17px $font
-      margin-bottom: 20px
-      max-width: 267px
+      margin: 0 20px 20px 0
+      width: 267px
       color: $white
       &:last-child
         margin: 0
