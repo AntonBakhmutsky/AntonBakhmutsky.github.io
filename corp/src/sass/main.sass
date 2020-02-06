@@ -1,20 +1,31 @@
+@use 'components/reset'
 @use 'components/fonts'
 @use 'components/variables' as *
 @use 'components/header'
 @use 'components/adventure'
-@use 'components/geography' 
+@use 'components/geography'
+@use 'components/yourTeam' 
+@use 'components/format' 
+@use 'components/checked' 
+@use 'components/anyLevel' 
+@use 'components/legendary' 
+@use 'components/declare' 
+@use 'components/emotions' 
+@use 'components/company' 
+@use 'components/request' 
+@use 'components/footer' 
 
 body 
   min-width: 375px
   color: $black
-  
+  background:  #E5E5E5
+
+  .wrapper
+    max-width: 1440px
+    margin: 0 auto
+    overflow: hidden
+
+    
+
 svg
   display: block
-
-.redBtn
-  display: block
-  color: $white
-  background: $red
-  text-transform: uppercase
-  text-align: center
-  letter-spacing: .04em

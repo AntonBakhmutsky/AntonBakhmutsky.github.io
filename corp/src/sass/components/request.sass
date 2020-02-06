@@ -1,0 +1,178 @@
+@use 'variables' as *
+/*-------------------------------------------- request -------------------------------------------*/
+
+.request
+  display: flex
+  flex-direction: column
+  align-items: center
+  padding: 45px 30px 0
+  background: center/cover no-repeat url(../src/img/request/back.png), $blue
+  color: $white
+  +media
+    padding-bottom: 36px
+  +media(1350px)
+    padding-top: 100px
+    flex-flow: row wrap
+    justify-content: space-around
+
+  &__top
+    +media(1350px)
+      width: 100%
+      display: flex
+      align-items: center
+      margin-bottom: 40px
+    +media(1440px)
+      margin-left: 87px
+
+  &__header
+    font: 900 32px/36px $font
+    text-transform: uppercase
+    margin-bottom: 40px
+    +media
+      +fontSize(37px, 42px)
+    +media(1350px)
+      margin: 0 40px 0 0
+
+  &__steps
+    margin-bottom: 40px
+    display: flex
+    flex-direction: column
+    align-items: center
+    +media(1350px)
+      flex-direction: row
+      align-items: center
+      margin: 0
+    .step
+      width: 315px
+      min-height: 100px
+      background: $red
+      display: flex
+      align-items: center
+      padding: 10px 25px
+      +media(1350px)
+        width: 322px
+        min-height: 145px
+        flex-direction: column
+      &:not(:last-child)
+        margin-bottom: 30px
+        +media(1350px)
+          margin: 0 30px 0 0
+      &__number
+        font: 900 42px/53px $font
+        margin-right: 30px
+        +media(1350px)
+          margin: 0 0 20px 0
+          align-self: flex-start
+      &__text
+        font: 500 14px/17px $font
+        letter-spacing: 0.04em
+
+  &__left
+    margin-bottom: 40px
+    max-width: 450px
+    &Header
+      font: 900 54px/68px $font
+      margin-bottom: 20px
+      text-transform: uppercase
+      +media(1350px)
+        +fontSize(85px, 107px)
+  &__text
+    font: 16px/20px $font
+    +media
+      +fontSize(18px, 22px)
+    +media(1350px)
+      max-width: 360px
+
+  &__right
+    display: flex
+    flex-direction: column
+
+  &__input
+    width: 315px
+    height: 60px
+    padding: 19px 25px
+    margin-bottom: 20px
+    font: 18px/22px $font
+    &::placeholder
+      color: #C4C4C4
+    +media
+      width: 440px
+  &__textarea
+    width: 315px
+    height: 230px
+    margin-bottom: 20px
+    padding: 19px 25px
+    font: 18px/22px $font
+    resize: none
+    &::placeholder
+      color: #C4C4C4
+    +media
+      width: 440px
+  &__submit
+    +redBtn(315px, 50px, 500 16px/20px)
+    margin-bottom: 16px
+    +media
+      width: 440px
+    +media(1350px)
+      width: 266px
+
+
+  &__permission
+    .label
+      font: 14px/20px $footerFont
+      a
+        color: $white
+        display: inline-block
+        border-bottom: .5px solid $white
+
+  input[type="checkbox"]:checked, input[type="checkbox"]:not(:checked)
+    position: absolute
+    left: -9999px
+
+  input[type="checkbox"]:checked + label, input[type="checkbox"]:not(:checked) + label 
+      display: inline-block
+      position: relative
+      padding-left: 60px
+      line-height: 20px
+      cursor: pointer
+  
+  input[type="checkbox"]:checked + label:before, input[type="checkbox"]:not(:checked) + label:before
+    content: ''
+    position: absolute
+    left: 0
+    top: 0
+    width: 40px
+    height: 40px
+    background-color: $white
+
+  input[type="checkbox"]:checked + label:after, input[type="checkbox"]:not(:checked) + label:after 
+    content: ''
+    position: absolute
+    -webkit-transition: all 0.2s ease
+    -moz-transition: all 0.2s ease
+    -o-transition: all 0.2s ease
+    transition: all 0.2s ease
+
+  input[type="checkbox"]:checked + label:after, input[type="checkbox"]:not(:checked) + label:after
+    left: 6px
+    top: 7px
+    width: 30px
+    height: 15px
+    border-radius: 2px
+    border-bottom: 4px solid $blue
+    border-left: 4px solid $blue
+    transform: rotate(-50deg)
+
+  input[type="checkbox"]:not(:checked) + label:after
+    opacity: 0
+
+  input[type="checkbox"]:checked + label:after
+    opacity: 1
+  
+
+
+
+      
+      
+
+  

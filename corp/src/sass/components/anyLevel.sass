@@ -1,0 +1,116 @@
+@use 'variables' as *
+/*--------------------------------------------- anyLevel -----------------------------------------*/
+
+.anyLevel
+  padding: 40px 0 50px
+  display: flex
+  flex-direction: column
+  align-items: center
+  background: $white
+  +media
+    flex-flow: row wrap
+    justify-content: space-between
+  +media(1383px)
+    padding: 50px 0 80px 148px
+
+  &__top
+    padding: 0 30px
+    margin-bottom: 30px
+    +media
+      max-width: 438px
+      padding: 0 0 0 30px
+    +media(1383px)
+      padding: 0
+
+  &__header
+    +header
+    margin-bottom: 10px
+
+  &__desc
+    font: 16px/20px $font
+    color: $gray
+    +media
+      font-size: 18px
+
+  &__list
+    padding: 0 30px
+    +media(1264px)
+      display: flex
+      flex-wrap: wrap
+    div
+      &:first-child
+        margin: 0 0 30px 0
+        +media(1264px)
+          margin: 0 20px 0 0
+        +media(1405px)
+          margin: 0 40px 0 0
+
+    .item
+      position: relative
+      font: bold 18px/20px $font
+      padding-left: 46px
+      &::before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: 20px
+        height: 20px
+        background: $redLight
+      &:not(:last-child)
+        margin-bottom: 30px
+  
+  &__image
+    width: 100%
+    height: 471px
+    background: center/cover no-repeat url(../src/img/anyLevel/back.png)
+    margin: 23px 0 30px
+
+  &__info
+    padding: 0 30px
+    display: flex
+    flex-direction: column
+    align-items: center
+    width: 100%
+    +media(1150px)
+      flex-direction: row
+      padding: 0 0 0 30px
+      margin-top: -83px
+    +media(1383px)
+      padding: 0
+    .item
+      width: 315px
+      height: 109px
+      background: $blue
+      color: $white
+      font: 900 48px/50px $font
+      padding-left: 30px
+      text-transform: uppercase
+      display: flex
+      justify-content: center      
+      flex-direction: column
+      align-self: center
+      +media(1276px)
+        width: 360px
+      &:not(:last-child)
+        margin-bottom: 30px
+        +media(1150px)
+          margin: 0 20px 0 0
+      span
+        width: 100%
+        display: block
+        font-size: 20px
+        line-height: 22px
+
+  &__year
+    width: 315px
+    font: bold 18px/23px $font
+    margin-bottom: 25px
+    +media(1150px)
+      width: auto
+      height: 109px
+      margin: 0 25px 0 0
+      display: flex
+      align-items: flex-end
+      padding-bottom: 15px
+    

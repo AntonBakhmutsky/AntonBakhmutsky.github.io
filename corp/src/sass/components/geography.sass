@@ -1,21 +1,45 @@
 @use 'variables' as *
-
+/*-------------------------------------------- geography -----------------------------------------*/
 .geography
-  box-sizing: border-box
-  padding: 0 30px
+  padding: 0 30px 40px
+  background: $white
+  +media
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    align-items: center
+    padding: 20px 148px 170px 
   &__header
-    font: 900 32px/40px $font
-    text-transform: uppercase
+    +header
     span
       display: block
+      +media
+        display: inline
 
-  .progress__bar
-    display: none
+  .progress
+    &__bar
+      display: none
+      +media
+        position: relative
+        display: flex
+        align-items: center
+        padding: 0 13px
+        width: 383px
+        height: 57px
+        background: #C4C4C4
+    &__handle
+      +media
+        width: 39px
+        height: 36px
+        background: $white
 
   &__map
-    margin: 30px 0
+    margin: 30px 0 0
+    +media
+      width: 100%
+      margin-top: 40px 
     img
-      width: 100% 
+      width: 100%
 
 
   

@@ -1,34 +1,91 @@
 @use 'variables' as *
-
+/*---------------------------------------------- header ------------------------------------------*/
 .header
   display: flex
   flex-direction: column
+  +media
+    flex-direction: row
+  
+  &__menu
+    +media
+      width: 30px
+
+  &__logo
+    +media
+      width: 68px
+
+  &__phone
+    display: block
+    cursor: pointer
+    +media
+      position: relative
+      svg
+        width: 32px
+        height: 32px
+        path
+          fill: $gray
+          stroke: transparent
+      &::before
+        position: absolute
+        content: 'Обратный звонок'
+        color: $gray
+        top: -80px
+        left: -39px
+        width: 111px
+        height: 17px
+        font: 14px/17px $font
+        transform: rotate(-90deg)
 
   &__main
     height: 67px
     box-shadow: 0 4px 10px rgba(0, 0, 0, .15)
     display: flex
     justify-content: space-between
-    box-sizing: border-box
     padding: 0 30px
     align-items: center
     background: $white
+    position: relative
+    +media
+      box-shadow: none
+      width: 148px
+      height: 1023px
+      flex-direction: column
+      align-items: center
+      padding: 40px 0 125px 
+    .arrows
+      display: none
+      +media
+        display: flex
+        .arrow
+          width: 53px
+          height: 53px
 
   &__slider
+    flex-grow: 1
     position: relative
     height: 600px
     overflow: hidden
+    +media
+      height: 1023px
+      .arrows
+        display: none
     
     .slider
       z-index: -1
-      width: 100%      
+      width: 100%
+      height: 100%      
       position: absolute
       top: 0
       left: 0
-      transition: all .4s ease-out
+      transition: all .5s ease-out
 
-      img
+      .slide
         width: 100%
+        height: 100%
+        display: block
+        position: absolute
+        top: 0 
+        left: 0
 
 
     .description
@@ -38,28 +95,36 @@
       flex-direction: column
       justify-content: center
       color: $white
-      box-sizing: border-box
       padding: 0 30px
+      +media
+       padding: 0 0 0 95px
 
       &__supHeader
         font: 500 16px/20px $font
         margin-bottom: 15px
+        +media
+          +fontSize(18px, 22px)
 
       &__header
         font: 900 34px/43px $font
         margin-bottom: 30px
         text-transform: uppercase
-      
+        +media
+          max-width: 684px
+          +fontSize(72px, 91px)
+
       &__text
         font: 14px/17px $font
         opacity: .8
         margin-bottom: 50px
+        +media
+          max-width: 580px
+          +fontSize(18px, 22px)
 
-      .redBtn
-        width: 315px
-        height: 60px
-        align-self: center
-        font: 500 20px/60px $font
+      &__btn
+       +redBtn(315px, 60px, 20px/25px $font)
+       +media
+        width: 322px
         
 .arrows
   position: absolute
@@ -69,10 +134,25 @@
   justify-content: center
 
   .arrow
+    border: 2px solid $redDark
+    cursor: pointer
     rect
+      transition: all .2s ease-out
       fill: $redDark
     path
+      transition: all .2s ease-out
       stroke: $white
+    &:active
+      rect
+        fill: transparent
+      path
+        stroke: $redDark      
     &_disabled
+      border: none
       rect
         fill: $grayLight
+      &:active
+        rect
+          fill: $grayLight
+        path
+          stroke: $white

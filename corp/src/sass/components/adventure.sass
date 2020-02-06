@@ -1,32 +1,70 @@
 @use 'variables' as *
-
+/*-------------------------------------------- adventure -----------------------------------------*/
 .adventure
-  box-sizing: border-box
   padding: 68px 0 0
   display: flex
   flex-direction: column
+  background: $white
+
+  &__btn
+    +redBtn(260px, 48px, 500 16px/48px $font)
+
   &__header
-    font: 900 32px/40px $font
+    +header
     margin: 0 30px 20px
-    text-transform: uppercase  
+    +media
+      margin-left: 148px 
   &__desc
     font: 16px/20px $font
     color: $gray
     margin: 0 30px
+    +media
+      margin-left: 148px
+      +fontSize(18px, 22px) 
+
   &__slider
-    box-sizing: border-box
     padding: 20px 0 40px
     position: relative
     width: 100%
     display: flex
     justify-content: center
-    overflow-x: scroll
+
     &Content
+      position: relative
+      +media
+        padding-left: 148px
+        width: 100%
+        height: 450px
+        display: flex
+        align-items: center     
+        overflow-x: scroll
+        &::-webkit-scrollbar
+          width: 0
+          height: 0
+    &Container
       display: flex
       flex-direction: column
+      align-items: center
+      height: 100%
+      +media
+        flex-direction: row
+        
+    &Left
+      display: none
+      +media
+        position: relative
+        display: block
+        width: 148px
+        height: 450px
 
     .arrows
       display: none
+      +media
+        display: flex
+        left: 41px
+        bottom: 69px
+        right: inherit
+        z-index: 100
 
     .item
       overflow: hidden
@@ -36,10 +74,17 @@
       transition: all .4s ease-out
       margin-bottom: 30px
       box-shadow: 0 4px 20px rgba(0, 0, 0, .25)
+      +media(600px)
+        width: 323px
+      +media
+        margin: 0 30px 0 0
+
       &__image
         transition: all .4s ease-out
         width: 315px
         height: 210px
+        +media(600px)
+          width: 323px
         &_run
           background: center/cover no-repeat url(../src/img/adventure/run.png)
         &_race
@@ -58,7 +103,6 @@
         position: absolute
         width: 100%
         height: 100%
-        box-sizing: border-box
         padding: 20px 30px 35px
         background: $white
         top: 210px
@@ -80,11 +124,6 @@
         margin-bottom: 100px
         &:nth-child(2)
           margin-bottom: 65px
-
-      .redBtn
-        width: 260px
-        height: 48px
-        font: 500 16px/48px $font
 
       &:hover
         .item

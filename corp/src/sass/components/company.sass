@@ -1,0 +1,47 @@
+@use 'variables' as *
+/*-------------------------------------------- company -------------------------------------------*/
+
+.company
+  padding: 40px 0 60px
+  width: 100%
+  background: $white
+  +media
+    padding: 110px 0 30px
+    display: flex
+    flex-direction: column 
+
+  &__header
+    +header
+    margin: 0 30px 40px
+    +media
+      margin: 0 0 80px 148px
+
+  &__slider
+    position: relative
+    width: 100%
+    
+    .arrows
+      bottom: 0
+      width: 100%
+      justify-content: space-between
+      z-index: 100
+      +media
+        padding: 0 30px 0
+
+    &Content
+      position: relative
+      height: 70px
+      img
+        position: absolute
+        bottom: 0
+        left: 50%
+        transform: translateX(-50%)
+        display: block
+  
+  &__btn
+    display: none
+    +media
+      +redBtn(266px, 50px, 500 16px/20px $font)
+      margin-top: 60px
+      align-self: center
+
