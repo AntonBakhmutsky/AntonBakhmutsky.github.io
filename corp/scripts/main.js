@@ -12,8 +12,8 @@ window.addEventListener('load', () => {
   moreBtn.forEach(el => el.addEventListener('click', showHidden))
 });
 
-//limit slider
-window.addEventListener('load', () => {
+window.addEventListener('DOMContentLoaded', () => {
+  //limit slider
   const limitSlider = (section) => {
     const slider = document.querySelector(`.${section} .slider`);
     const slides = [...slider.children];
@@ -133,7 +133,7 @@ window.addEventListener('load', () => {
     //resize window
     windowWidth = window.innerWidth;
     window.addEventListener('resize', () => {
-      if (window.innerWidth < windowWidth || window.innerWidth > windowWidth) {
+      if (window.innerWidth !== windowWidth) {
         startPosition();
         if (slides[0].hasAttribute('src') && /(mobile)|(desktop)/.test(slides[0].getAttribute('src'))) {
           pathToSlides();

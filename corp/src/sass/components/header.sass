@@ -135,6 +135,7 @@
 
   .arrow
     border: 2px solid $redDark
+    background: $redDark
     cursor: pointer
     rect
       transition: all .2s ease-out
@@ -143,6 +144,7 @@
       transition: all .2s ease-out
       stroke: $white
     &:active
+      background: transparent
       rect
         fill: transparent
       path
@@ -152,6 +154,7 @@
       rect
         fill: $grayLight
       &:active
+        background: $grayLight
         rect
           fill: $grayLight
         path

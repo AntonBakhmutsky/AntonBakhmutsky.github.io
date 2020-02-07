@@ -328,6 +328,7 @@ html {
 }
 .arrows .arrow {
   border: 2px solid #C42828;
+  background: #C42828;
   cursor: pointer;
 }
 .arrows .arrow rect {
@@ -337,6 +338,9 @@ html {
 .arrows .arrow path {
   transition: all 0.2s ease-out;
   stroke: #fff;
+}
+.arrows .arrow:active {
+  background: transparent;
 }
 .arrows .arrow:active rect {
   fill: transparent;
@@ -349,6 +353,9 @@ html {
 }
 .arrows .arrow_disabled rect {
   fill: #F3F3F3;
+}
+.arrows .arrow_disabled:active {
+  background: #F3F3F3;
 }
 .arrows .arrow_disabled:active rect {
   fill: #F3F3F3;
