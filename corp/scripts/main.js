@@ -15,12 +15,12 @@ window.addEventListener('load', () => {
 //limit slider
 window.addEventListener('load', () => {
   const limitSlider = (section) => {
-    const slider = document.querySelector(`.${section}__slider .slider`);
+    const slider = document.querySelector(`.${section} .slider`);
     const slides = [...slider.children];
     const arrowsLeft = document.querySelectorAll(`.${section} .arrow_left`);
     const arrowsRight = document.querySelectorAll(`.${section} .arrow_right`);
     
-    let left, step, position, width, quantity, maxLeft;
+    let left, step, position, width, quantity, maxLeft, windowWidth;
     
     //path to img slides 
     const pathToSlides = () => {
@@ -82,6 +82,10 @@ window.addEventListener('load', () => {
     //slider position
     const getPosition = () => position = Number(slider.getAttribute('style').match(/\-{0,1}\d+/));
 
+    const changePosition = () => {
+
+    }
+
     //onload and resize position    
     const startPosition = () => {              
       getSlideWidth();
@@ -126,12 +130,17 @@ window.addEventListener('load', () => {
 
 
     startPosition();
-
+    //resize window
+    windowWidth = window.innerWidth;
     window.addEventListener('resize', () => {
-      startPosition();
-      if (slides[0].hasAttribute('src') && /(mobile)|(desktop)/.test(slides[0].getAttribute('src'))) {
-        pathToSlides();
+      if (window.innerWidth < windowWidth || window.innerWidth > windowWidth) {
+        startPosition();
+        if (slides[0].hasAttribute('src') && /(mobile)|(desktop)/.test(slides[0].getAttribute('src'))) {
+          pathToSlides();
+        }
+        console.log(window.innerWidth);
       }
+      windowWidth = window.innerWidth;
     });
   }
   limitSlider(`header`);
