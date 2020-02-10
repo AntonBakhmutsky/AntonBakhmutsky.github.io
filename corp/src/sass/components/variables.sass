@@ -10,8 +10,14 @@ $grayLight: #F3F3F3
 $font: 'DIN Pro', sans-serif
 $footerFont: 'Panton', sans-serif
 
-  
+=landscape
+  @media screen and (orientation: landscape) 
+    @content  
 
+=mediaHeight($maxHeight)
+  @media screen and (max-height: $maxHeight) 
+    @content
+    
 =media($minWidth: 1025px)
   @media screen and (min-width: $minWidth) 
     @content 

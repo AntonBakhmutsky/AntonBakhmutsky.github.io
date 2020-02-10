@@ -110,4 +110,66 @@
         +redBtn(266px, 50px, 500 16px/20px $font)
         align-self: flex-start
 
+  &__modal
+    position: fixed
+    width: 100vw
+    height: 100vh
+    z-index: 102
+    top: 0
+    left: 0
+    background: rgba(0, 0, 0, .5)
+    padding: 65px 40px
+    display: flex
+    align-items: center
+    justify-content: center
+
+    .modal
+      position: relative
+      max-width: 673px
+      max-height: 664px
+      padding: 30px 30px 25px
+      display: flex
+      flex-direction: column
+      &__close
+        position: absolute
+        top: -40px
+        right: 0
+        display: flex
+        justify-content: center
+        align-items: center
+        border: 2px solid $red
+        transition: all .4s ease-out
+        width: 40px
+        height: 40px
+        background: center/cover no-repeat url(../src/img/legendary/modal_close.svg)
+        +media
+          top: 0
+  
+      &__header
+        font: 900 32px/40px $font
+        margin-bottom: 20px
+        text-transform: uppercase
+        +media
+          margin-bottom: 65px
+      &__text
+        font: 500 16px/20px $font
+        margin-bottom: 15px
+        +media
+          +fontSize(22px, 27px)
+          margin-bottom: 25px
+      &__btn
+        +redBtn(255px, 50px, 500 16px/20px $font)
+        align-self: center
+        +media
+          align-self: flex-start
+        
+#banks
+  display: none
+  .modal
+    background: center/cover no-repeat url(../src/img/legendary/banks_modal.png), $white
+#mic
+  display: none
+  .modal
+    background: center/cover no-repeat url(../src/img/legendary/mic_modal.png), $white
+
 

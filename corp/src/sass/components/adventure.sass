@@ -1,7 +1,7 @@
 @use 'variables' as *
 /*-------------------------------------------- adventure -----------------------------------------*/
 .adventure
-  padding: 68px 0 0
+  padding: 68px 0 40px
   display: flex
   flex-direction: column
   background: $white
@@ -31,53 +31,55 @@
 
     &Content
       position: relative
+      overflow-x: scroll
+      display: flex
+      align-items: center     
+      width: 100%
+      height: 450px
+      &::-webkit-scrollbar
+        width: 0
+        height: 0
       +media
         padding-left: 148px
-        width: 100%
-        height: 450px
-        display: flex
-        align-items: center     
-        overflow-x: scroll
-        &::-webkit-scrollbar
-          width: 0
-          height: 0
-    &Container
+    .slider
+      overflow: hidden
+      position: relative
       display: flex
-      flex-direction: column
       align-items: center
       height: 100%
-      +media
-        flex-direction: row
-        
-    &Left
-      display: none
-      +media
-        position: relative
-        display: block
-        width: 148px
-        height: 450px
-
+      width: 100%
+      transition: all .4s ease-out
+    
     .arrows
-      display: none
+      left: 50%
+      transform: translateX(-50%)
+      bottom: 16px
       +media
+        transform: none
+        position: absolute
         display: flex
-        left: 41px
+        left: 42px
         bottom: 69px
         right: inherit
         z-index: 100
 
-    .item
+    .previous-slide
+      left: -100%
+    .current-slide
+      left: 50%
+      transform: translateX(-50%)
+    .next-slide
+      left: 100%
+    .slide
       overflow: hidden
-      position: relative
+      position: absolute
       width: 315px
       height: 392px
       transition: all .4s ease-out
-      margin-bottom: 30px
       box-shadow: 0 4px 20px rgba(0, 0, 0, .25)
+      margin: 0 30px 0 0
       +media(600px)
         width: 323px
-      +media
-        margin: 0 30px 0 0
 
       &__image
         transition: all .4s ease-out
@@ -126,7 +128,7 @@
           margin-bottom: 65px
 
       &:hover
-        .item
+        .slide
           &__image
             height: 100%
           &__description

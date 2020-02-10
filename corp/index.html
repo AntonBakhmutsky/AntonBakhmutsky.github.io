@@ -13,14 +13,41 @@
   <div class="wrapper">
     <!------------------------------------------------------ header ------------------------------------------------------>
     <header class="header">
+      <div class="header__links">
+        <div class="header__linksTop">
+          <a href="#adventure" class="link">ПРОЕКТЫ</a>
+          <a href="#geography" class="link">ГЕОГРАФИЯ ПРОЕКТОВ</a>
+          <a href="#format" class="link">Форматы</a>
+          <a href="#anyLevel" class="link">Для кого</a>
+          <a href="#legendary" class="link">СОРЕВНОВАНИЯ</a>
+          <a href="#company" class="link">НАШИ КЛИЕНТЫ</a>
+          <a href="#request" class="link">КОНТАКТЫ</a>
+        </div>
+        <div class="header__linksBtn">
+          <a href="#">ПРИНЯТЬ УЧАСТИЕ</a>
+        </div>
+        <div class="header__linksDocs">
+          <a href="#">Форма согласия</a>
+          <a href="#">Положение</a>
+        </div>
+      </div>
       <div class="header__main">
+        <div class="header__menu">
+          <svg class="menu-image" width="25" height="23" viewBox="0 0 25 23" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <rect width="25" height="3" fill="#232C4C" />
+            <rect y="10" width="25" height="3" fill="#232C4C" />
+            <rect y="20" width="25" height="3" fill="#232C4C" />
+          </svg>
 
-        <svg class="header__menu" width="25" height="23" viewBox="0 0 25 23" fill="none"
-          xmlns="http://www.w3.org/2000/svg">
-          <rect width="25" height="3" fill="#232C4C" />
-          <rect y="10" width="25" height="3" fill="#232C4C" />
-          <rect y="20" width="25" height="3" fill="#232C4C" />
-        </svg>
+          <svg class="close-image" width="24" height="25" viewBox="0 0 24 25" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <rect x="2.4541" y="0.832733" width="30" height="3" transform="rotate(45 2.4541 0.832733)" fill="#232C4C" />
+            <rect x="0.333008" y="22.0459" width="30" height="3" transform="rotate(-45 0.333008 22.0459)"
+              fill="#232C4C" />
+          </svg>
+
+        </div>
 
         <svg class="header__logo" width="69" height="44" viewBox="0 0 69 44" fill="none"
           xmlns="http://www.w3.org/2000/svg">
@@ -124,35 +151,18 @@
     </header>
     <!------------------------------------------------- main ------------------------------------------------------->
     <main class="main">
-      <section class="adventure">
+      <section class="adventure" id="adventure">
         <h2 class="adventure__header">ВЫБЕРИ ЛУЧШЕЕ ПРИКЛЮЧЕНИЕ</h2>
         <p class="adventure__desc">
           Лига Героев — крупнейший организатор спортивных событий в сфере любительского спорта
         </p>
         <div class="adventure__slider">
-
-          <div class="arrows">
-
-            <svg class="arrow arrow_left" width="53" height="53" viewBox="0 0 53 53" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <rect width="53" height="53" />
-              <path d="M30.5 34L24 27.5L30.5 21" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-
-            <svg class="arrow arrow_right" width="53" height="53" viewBox="0 0 53 53" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <rect width="53" height="53" />
-              <path d="M24 21L30.5 27.5L24 34" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-
-          </div>
-
           <div class="adventure__sliderContent">
-            <div class="adventure__sliderContainer">
-              <div class="item">
-                <div class="item__image item__image_run"></div>
-                <div class="item__description">
-                  <div class="item__logo">
+            <div class="slider">
+              <div class="slide">
+                <div class="slide__image slide__image_run"></div>
+                <div class="slide__description">
+                  <div class="slide__logo">
 
                     <svg class="run" width="83" height="39" viewBox="0 0 83 39" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
@@ -196,17 +206,17 @@
 
                   </div>
                   <div>
-                    <p class="item__text">
+                    <p class="slide__text">
                       31 мая 2020 года крупнейший полумарафон с синхронным стартом впервые пройдет в 85 городах России.
                     </p>
                   </div>
                   <a class="adventure__btn" href="#">ПРИНЯТЬ УЧАСТИЕ</a>
                 </div>
               </div>
-              <div class="item">
-                <div class="item__image item__image_race"></div>
-                <div class="item__description">
-                  <div class="item__logo">
+              <div class="slide">
+                <div class="slide__image slide__image_race"></div>
+                <div class="slide__description">
+                  <div class="slide__logo">
 
                     <svg class="race" width="87" height="45" viewBox="0 0 87 45" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
@@ -245,20 +255,20 @@
 
                   </div>
                   <div>
-                    <p class="item__text">
+                    <p class="slide__text">
                       Драйв, азарт, эмоции и настоящее испытание на прочность.
                     </p>
-                    <p class="item__text">
+                    <p class="slide__text">
                       Единое противостояние трассе испытаний сделает вашу команду крепче!
                     </p>
                   </div>
                   <a class="adventure__btn" href="#">ПРИНЯТЬ УЧАСТИЕ</a>
                 </div>
               </div>
-              <div class="item">
-                <div class="item__image item__image_arena"></div>
-                <div class="item__description">
-                  <div class="item__logo">
+              <div class="slide">
+                <div class="slide__image slide__image_arena"></div>
+                <div class="slide__description">
+                  <div class="slide__logo">
 
                     <svg class="arena" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 368.17 333.25">
                       <defs>
@@ -293,17 +303,17 @@
 
                   </div>
                   <div>
-                    <p class="item__text">
+                    <p class="slide__text">
                       Почувствуй себя звездой телешоу. Испытания для настоящих смельчаков в самом центре города.
                     </p>
                   </div>
                   <a class="adventure__btn" href="#">ПРИНЯТЬ УЧАСТИЕ</a>
                 </div>
               </div>
-              <div class="item">
-                <div class="item__image item__image_games"></div>
-                <div class="item__description">
-                  <div class="item__logo">
+              <div class="slide">
+                <div class="slide__image slide__image_games"></div>
+                <div class="slide__description">
+                  <div class="slide__logo">
 
                     <svg class="games" width="47" height="44" viewBox="0 0 47 44" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
@@ -364,7 +374,7 @@
 
                   </div>
                   <div>
-                    <p class="item__text">
+                    <p class="slide__text">
                       Почувствуй себя звездой телешоу. Испытания для настоящих смельчаков в самом центре города.
                     </p>
                   </div>
@@ -373,18 +383,42 @@
               </div>
             </div>
           </div>
+          <div class="arrows">
+
+            <svg class="arrow arrow_left" width="53" height="53" viewBox="0 0 53 53" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <rect width="53" height="53" />
+              <path d="M30.5 34L24 27.5L30.5 21" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+
+            <svg class="arrow arrow_right" width="53" height="53" viewBox="0 0 53 53" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <rect width="53" height="53" />
+              <path d="M24 21L30.5 27.5L24 34" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+
+          </div>
         </div>
       </section>
-      <section class="geography">
+      <section class="geography" id="geography">
         <h2 class="geography__header">География <span>проектов</span></h2>
-        <div class="progress__bar">
-          <div class="progress__handle"></div>
-        </div>
         <div class="geography__map">
           <img src="src/img/geography/map.svg" alt="map">
         </div>
+        <div class="geography__bottom">
+          <div class="geography__desc">
+            <div class="geography__desc-header">
+              Проекты Лиги Героев проходят в 85 городах России <br> и даже за её пределами.
+            </div>
+            <div class="geography__desc-text">
+              Хочешь бежать с нами? Оставь заявку и уже завтра в твоем городе для твоей команды пройдут самые крутые
+              спортивные события года.
+            </div>
+          </div>
+          <a class="geography__btn" href="#">Хочу бежать в своем городе</a>
+        </div>
       </section>
-      <section class="yourTeam">
+      <section class="yourTeam" id="yourTeam">
         <h2 class="yourTeam__header">Твоя команда</h2>
         <div class="yourTeam__desc">
           За 6 лет мы организовали более 200 корпоративных забегов по всей стране
@@ -400,7 +434,7 @@
           </div>
         </div>
       </section>
-      <section class="format">
+      <section class="format" id="format">
         <h2 class="format__header">Какой формат подойдет тебе?</h2>
         <div class="format__items">
           <div class="item item_small">
@@ -409,6 +443,14 @@
               <a class="item__btn" href="#">узнать больше</a>
             </div>
             <div class="item__hidden">
+              <div class="item__close">
+
+                <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="2.12134" width="20" height="3" rx="1.5" transform="rotate(45 2.12134 0)" fill="white" />
+                  <rect y="14.1421" width="20" height="3" rx="1.5" transform="rotate(-45 0 14.1421)" fill="white" />
+                </svg>
+
+              </div>
               <div class="item__hiddenFormat">
                 МАЛЫЙ И СРЕДНИЙ БИЗНЕС
               </div>
@@ -434,6 +476,14 @@
               <a class="item__btn" href="#">узнать больше</a>
             </div>
             <div class="item__hidden">
+              <div class="item__close">
+
+                <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="2.12134" width="20" height="3" rx="1.5" transform="rotate(45 2.12134 0)" fill="white" />
+                  <rect y="14.1421" width="20" height="3" rx="1.5" transform="rotate(-45 0 14.1421)" fill="white" />
+                </svg>
+
+              </div>
               <div class="item__hiddenFormat">
                 КРУПНЫЙ И МЕЖДУНАРОДНЫЙ БИЗНЕС
               </div>
@@ -455,7 +505,7 @@
           </div>
         </div>
       </section>
-      <section class="checked">
+      <section class="checked" id="checked">
         <h2 class="checked__header">Проверено участниками</h2>
         <div class="checked__items">
           <div class="item">
@@ -497,7 +547,7 @@
         </div>
         <a class="checked__btn">МЫ С ВАМИ!</a>
       </section>
-      <section class="anyLevel">
+      <section class="anyLevel" id="anyLevel">
         <div class="anyLevel__top">
           <h2 class="anyLevel__header">ЛЮБОЙ УРОВЕНь СЛОЖНОСТИ</h2>
           <p class="anyLevel__desc">
@@ -522,7 +572,7 @@
           <div class="item">50 <span>мероприятий за год</span></div>
         </div>
       </section>
-      <section class="legendary">
+      <section class="legendary" id="legendary">
         <div class="legendary__body">
           <div class="legendary__bodyContainer">
             <h2 class="legendary__header">Легендарные отраслевые соревнования</h2>
@@ -538,15 +588,15 @@
         <div class="legendary__items">
           <div class="item">
             <h3 class="item__header">ГОНКА ГЕРОЕВ БАНКИ</h3>
-            <a class="item__btn" href="#">УЗНАТЬ БОЛЬШЕ</a>
+            <a class="item__btn" id="to_banks" href="#">УЗНАТЬ БОЛЬШЕ</a>
           </div>
           <div class="item">
             <h3 class="item__header">ГОНКА ГЕРОЕВ ВПК</h3>
-            <a class="item__btn" href="#">УЗНАТЬ БОЛЬШЕ</a>
+            <a class="item__btn" id="to_mic" href="#">УЗНАТЬ БОЛЬШЕ</a>
           </div>
         </div>
       </section>
-      <section class="declare">
+      <section class="declare" id="declare">
         <h2 class="declare__header">ЗАЯВИ О СВОЕЙ КОМАНДЕ!</h2>
         <div class="declare__desc">Опции, которые подойдут именно твоей команде</div>
         <div class="declare__options">
@@ -612,7 +662,7 @@
           </div>
         </div>
       </section>
-      <section class="emotions">
+      <section class="emotions" id="emotions">
         <h2 class="emotions__header">ТВОИ ЭМОЦИИ</h2>
         <div class="emotions__slider">
           <div class="arrows">
@@ -630,19 +680,19 @@
             </svg>
 
           </div>
-          <div class="emotions__sliderContent">
-            <img src="src/img/emotions/1.jpg" alt="image">
-            <img src="src/img/emotions/2.jpg" alt="image">
-            <img src="src/img/emotions/3.jpg" alt="image">
-            <img src="src/img/emotions/4.jpg" alt="image">
-            <img src="src/img/emotions/4.jpg" alt="image">
-            <img src="src/img/emotions/5.jpg" alt="image">
-            <img src="src/img/emotions/3.jpg" alt="image">
-            <img src="src/img/emotions/2.jpg" alt="image">
+          <div class="emotions__sliderContent slider">
+            <img class="slide" src="src/img/emotions/1.jpg" alt="image">
+            <img class="slide" src="src/img/emotions/2.jpg" alt="image">
+            <img class="slide" src="src/img/emotions/3.jpg" alt="image">
+            <img class="slide" src="src/img/emotions/4.jpg" alt="image">
+            <img class="slide" src="src/img/emotions/4.jpg" alt="image">
+            <img class="slide" src="src/img/emotions/5.jpg" alt="image">
+            <img class="slide" src="src/img/emotions/3.jpg" alt="image">
+            <img class="slide" src="src/img/emotions/2.jpg" alt="image">
           </div>
         </div>
       </section>
-      <section class="company">
+      <section class="company" id="company">
         <h2 class="company__header">КОМПАНИИ, СТАВШИЕ ГЕРОЯМИ</h2>
         <div class="company__slider">
           <div class="arrows">
@@ -660,16 +710,16 @@
             </svg>
 
           </div>
-          <div class="company__sliderContent">
-            <img src="src/img/company/gazprom.svg" alt="logo">
-            <img src="src/img/company/psb.svg" alt="logo">
-            <img src="src/img/company/yandex.svg" alt="logo">
-            <img src="src/img/company/med.svg" alt="logo">
+          <div class="company__sliderContent slider">
+            <img class="slide" src="src/img/company/gazprom.svg" alt="logo">
+            <img class="slide" src="src/img/company/psb.svg" alt="logo">
+            <img class="slide" src="src/img/company/yandex.svg" alt="logo">
+            <img class="slide" src="src/img/company/med.svg" alt="logo">
           </div>
         </div>
         <a class="company__btn" href="#">СОБРАТЬ КОМАНДУ</a>
       </section>
-      <section class="request">
+      <section class="request" id="request">
         <div class="request__top">
           <h2 class="request__header">От заявки <br> до забега</h2>
           <div class="request__steps">
@@ -716,6 +766,51 @@
         </form>
       </section>
     </main>
+    <!------------------------------------------------- modals ------------------------------------------------------->
+    <aside class="legendary__modal" id="banks">
+      <div class="modal">
+        <div class="modal__close">
+        </div>
+        <h2 class="modal__header">ГОНКА ГЕРОЕВ БАНКИ</h2>
+        <p class="modal__text">
+          Идеальная команда ближе, чем ты думаешь: это твои коллеги. Бери всю компанию на «Гонку Героев» — сложностей
+          хватит на всех!
+        </p>
+        <p class="modal__text">
+          На «Гонке Героев» твоя команда проверит собственные силы и свою сплоченность и сможет побороться за звание
+          лучших в своей отрасли.
+        </p>
+        <p class="modal__text">
+          Докажите, что вместе вы достойны носить гордое звание Чемпионов.
+        </p>
+        <p class="modal__text">
+          Крупнейшие компании из десятков регионов России и только 1 раз в году — время пришло!
+        </p>
+        <a class="modal__btn" href="#">УЧАСТВОВАТЬ</a>
+      </div>
+    </aside>
+    <aside class="legendary__modal" id="mic">
+      <div class="modal">
+        <div class="modal__close">
+        </div>
+        <h2 class="modal__header">ГОНКА ГЕРОЕВ ВПК</h2>
+        <p class="modal__text">
+          Идеальная команда ближе, чем ты думаешь: это твои коллеги. Бери всю компанию на «Гонку Героев» — сложностей
+          хватит на всех!
+        </p>
+        <p class="modal__text">
+          На «Гонке Героев» твоя команда проверит собственные силы и свою сплоченность и сможет побороться за звание
+          лучших в своей отрасли.
+        </p>
+        <p class="modal__text">
+          Докажите, что вместе вы достойны носить гордое звание Чемпионов.
+        </p>
+        <p class="modal__text">
+          Крупнейшие компании из десятков регионов России и только 1 раз в году — время пришло!
+        </p>
+        <a class="modal__btn" href="#">УЧАСТВОВАТЬ</a>
+      </div>
+    </aside>
 
     <footer class="footer">
       <div class="concept">

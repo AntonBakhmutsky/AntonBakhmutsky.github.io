@@ -19,24 +19,29 @@
   &__slider
     position: relative
     width: 100%
+    overflow: hidden
     
     .arrows
       bottom: 0
       width: 100%
       justify-content: space-between
-      z-index: 100
+      z-index: 99
       +media
         padding: 0 30px 0
 
     &Content
+      margin: 0 auto
+      width: 80%
       position: relative
       height: 70px
+      transition: all .2s ease-out
+      display: flex
+      align-items: center
+      overflow: hidden
       img
+        transition: all .2s ease-out
         position: absolute
-        bottom: 0
-        left: 50%
-        transform: translateX(-50%)
-        display: block
+
   
   &__btn
     display: none

@@ -23,9 +23,11 @@
     .item
       position: relative
       width: 315px
-      height: 350px
+      min-height: 350px
       overflow: hidden
+      transition: all .5s ease-out
       &_active
+        min-height: 695px
         .item__default
           top: -100%
         .item__hidden
@@ -40,6 +42,28 @@
       +media(1264px)
         width: 614px
         height: 677px
+
+      &__close
+        position: absolute
+        top: 0
+        right: 0
+        background: $red
+        display: flex
+        justify-content: center
+        align-items: center
+        border: 2px solid $red
+        transition: all .4s ease-out
+        width: 40px
+        height: 40px
+        &:active
+          background: transparent
+          svg
+            rect
+              transition: all .4s ease-out
+              fill: red
+        +media
+          display: none
+
 
       &__default
         position: absolute
@@ -80,40 +104,37 @@
         flex-direction: column
         justify-content: space-between
         transition: all .5s ease-out
-        padding: 10px
+        padding: 30px
         +media
           padding: 35px 30px 35px
         +media(1264px)
           padding: 55px 50px 35px
         &Format
-          font: 900 8px/12px $font
-          +media
-            +fontSize(14px, 18px)
+          font: 900 14px/18px $font
         &Header
-          margin-bottom: 15px
-          font: 900 24px/32px $font
-          +media
-            +fontSize(32px, 40px)
+          margin-bottom: 20px
+          font: 900 32px/40px $font
+          +media            
             margin-bottom: 25px
         &Text
-          font: 12px/14px $font
+          font: 16px/20px $font
           color: rgba(255, 255, 255, 0.8)
-          margin-bottom: 18px
+          margin-bottom: 20px
           +media
             margin-bottom: 36px
             +fontSize(18px, 22px)
         &List
-          font: bold 12px/15px $font
+          font: bold 16px/20px $font
           +media
             +fontSize(18px, 23px)
           &Point
             position: relative
-            padding-left: 26px 
+            padding-left: 34px 
             +media
               padding-left: 46px
 
             &:not(:last-child)
-              margin-bottom: 12px
+              margin-bottom: 25px
               +media
                 margin-bottom: 25px
             &::before
@@ -121,16 +142,17 @@
               position: absolute
               top: 0
               left: 0
-              width: 15px
-              height: 15px
+              width: 20px
+              height: 20px
               background: $redLight
               +media
                 width: 20px
                 height: 20px
         &Btn
-          +redBtn(266px, 50px, 500 16px/20px $font)
-        +media(1264px)
-          padding: 54px 50px 30px
+          +redBtn(255px, 50px, 500 16px/20px $font)
+          +media(1264px)
+            width: 266px
+            
       +media
         &:hover
           .item__default

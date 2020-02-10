@@ -24,8 +24,19 @@ body
     max-width: 1440px
     margin: 0 auto
     overflow: hidden
+    padding-top: 67px
+    +media
+      padding: 0
 
     
 
 svg
   display: block
+
+.previous-slide
+  left: -100%
+.current-slide
+  left: 50%
+  transform: translateX(-50%)
+.next-slide
+  left: 100%
