@@ -1,5 +1,19 @@
 'use strict'
 
+//adventure slides
+window.addEventListener('DOMContentLoaded', () => {
+  const slides = document.querySelectorAll('.adventure .slide');
+
+  const toggleHidden = () => {
+    if (window.innerWidth < 1025) {
+      event.target.closest('.slide').classList.toggle('slide_active');
+    }
+  }
+
+  slides.forEach(el => el.addEventListener('click', toggleHidden));
+});
+
+
 //format more
 window.addEventListener('load', () => {
   const moreBtn = document.querySelectorAll('.format .item__btn');
