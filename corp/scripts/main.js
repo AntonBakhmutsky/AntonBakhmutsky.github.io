@@ -260,7 +260,7 @@ window.addEventListener('DOMContentLoaded',  () => {
       left = sliderWidth;
     }
 
-    const moveLeftMobile = () => {
+    const moveRightMobile = () => {
       prevSlide.remove();
       prevSlide.classList.remove('previous-slide');
       currSlide.classList.remove('current-slide')
@@ -275,7 +275,7 @@ window.addEventListener('DOMContentLoaded',  () => {
       console.log(slides);
     }
 
-    const moveRightMobile = () => {
+    const moveLeftMobile = () => {
       nextSlide.classList.remove('next-slide');
       nextSlide.remove();
       currSlide.classList.remove('current-slide')
