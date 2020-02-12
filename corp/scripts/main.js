@@ -211,7 +211,7 @@ window.addEventListener('DOMContentLoaded',  () => {
     const arrowLeft = document.querySelector(`.${section} .arrow_left`);
     const arrowRight = document.querySelector(`.${section} .arrow_right`);
 
-    let prevSlide, currSlide, nextSlide, maxLeft, maxRight, left, slideWidth, sliderWidth, windowWidth, step, position;
+    let prevSlide, currSlide, nextSlide, maxLeft, counter, left, slideWidth, sliderWidth, windowWidth, step, position;
 
     const getSlidesMobile = () => {
       prevSlide = slides[length - 1];
@@ -236,6 +236,27 @@ window.addEventListener('DOMContentLoaded',  () => {
 
 
     const getPosition = (el) => position =  Number(el.getAttribute('style').match(/\-{0,1}\d+/));
+
+    const disableLeft = () => {
+      (window.innerWidth > 1024) ? arrowLeft.removeEventListener('click', moveLeftDesktop) : arrowLeft.removeEventListener('click', moveLeftMobile);
+      arrowLeft.classList.add('arrow_disabled');
+    }
+
+    const activateLeft = () => {
+      (window.innerWidth > 1024) ? arrowLeft.addEventListener('click', moveLeftDesktop) : arrowLeft.addEventListener('click', moveLeftMobile);
+      arrowLeft.classList.remove('arrow_disabled');
+    }
+
+    const disableRight = () => {
+      (window.innerWidth > 1024) ? arrowRight.removeEventListener('click', moveRightDesktop) : arrowRight.removeEventListener('click', moveRightMobile);
+      arrowRight.classList.add('arrow_disabled');
+    }
+
+    const activateRight = () => {
+      (window.innerWidth > 1024) ? arrowRight.addEventListener('click', moveRightDesktop) : arrowRight.addEventListener('click', moveRightMobile);
+      arrowRight.classList.remove('arrow_disabled');
+    }
+
     
     const initialMobileSlider = () => {
       getSlidesMobile();
@@ -249,10 +270,10 @@ window.addEventListener('DOMContentLoaded',  () => {
       slider.insertAdjacentElement('afterbegin', nextSlide);
       arrowLeft.removeEventListener('click', moveLeftDesktop);
       arrowRight.removeEventListener('click', moveRightDesktop);
-      arrowLeft.addEventListener('click', moveLeftMobile);
       arrowRight.addEventListener('click', moveRightMobile);
       arrowRight.classList.remove('arrow_disabled');
-      arrowLeft.classList.remove('arrow_disabled');
+      disableLeft();
+      counter = 0;
     }
 
     const initialDesktopSlider = () => {
@@ -275,39 +296,55 @@ window.addEventListener('DOMContentLoaded',  () => {
     }
 
     const moveRightMobile = () => {
-      prevSlide.remove();
-      prevSlide.classList.remove('previous-slide');
-      currSlide.classList.remove('current-slide')
-      currSlide.classList.add('previous-slide');
-      nextSlide.classList.remove('next-slide');      
-      nextSlide.classList.add('current-slide');
-      slides[2].classList.add('next-slide');
-      slides.push(slides[0]);
-      slides.shift();
-      getSlidesMobile();
-      slider.insertAdjacentElement('beforeend', nextSlide);
-      console.log(slides);
+      if (counter !== length - 1) {
+        if (counter === 0) {
+          activateLeft();
+        }
+        prevSlide.remove();
+        prevSlide.classList.remove('previous-slide');
+        currSlide.classList.remove('current-slide')
+        currSlide.classList.add('previous-slide');
+        nextSlide.classList.remove('next-slide');      
+        nextSlide.classList.add('current-slide');
+        slides[2].classList.add('next-slide');
+        slides.push(slides[0]);
+        slides.shift();
+        getSlidesMobile();
+        slider.insertAdjacentElement('beforeend', nextSlide);        
+        counter++;
+        if (counter === length - 1) {
+          disableRight();
+        }
+      }
     }
 
     const moveLeftMobile = () => {
-      nextSlide.classList.remove('next-slide');
-      nextSlide.remove();
-      currSlide.classList.remove('current-slide')
-      currSlide.classList.add('next-slide');
-      prevSlide.classList.remove('previous-slide');      
-      prevSlide.classList.add('current-slide');
-      slides[length - 2].classList.add('previous-slide');
-      slides.unshift(slides[length - 1]);
-      slides.pop();
-      getSlidesMobile();
-      slider.insertAdjacentElement('afterbegin', prevSlide);
+      if (counter >= 0) {
+        if (counter === length - 1) {
+          activateRight();
+        }
+        nextSlide.classList.remove('next-slide');
+        nextSlide.remove();
+        currSlide.classList.remove('current-slide')
+        currSlide.classList.add('next-slide');
+        prevSlide.classList.remove('previous-slide');      
+        prevSlide.classList.add('current-slide');
+        slides[length - 2].classList.add('previous-slide');
+        slides.unshift(slides[length - 1]);
+        slides.pop();
+        getSlidesMobile();
+        slider.insertAdjacentElement('afterbegin', prevSlide);
+        counter--;
+        if (counter === 0) {
+          disableLeft();
+        }
+      }
     }
 
     const moveLeftDesktop = () => {  
       getPosition(slides[0]);
       if (left > maxLeft || position !== 0) {
-        arrowRight.addEventListener('click', moveRightDesktop);
-        arrowRight.classList.remove('arrow_disabled');
+        activateRight();
       }
       if (left > sliderWidth) {
         slides.forEach(el => {
@@ -316,8 +353,7 @@ window.addEventListener('DOMContentLoaded',  () => {
         });
         left -=step;
         if (left === sliderWidth) {
-          arrowLeft.removeEventListener('click', moveLeftDesktop);
-          arrowLeft.classList.add('arrow_disabled');
+          disableLeft();
         }
       }
     }
@@ -330,14 +366,12 @@ window.addEventListener('DOMContentLoaded',  () => {
         });
         left += step;
         if (left > maxLeft) {
-          arrowRight.removeEventListener('click', moveRightDesktop);
-          arrowRight.classList.add('arrow_disabled');
+          disableRight();
         }
       } 
       getPosition(slides[0]);
       if (position !== 0 && arrowLeft.classList.contains('arrow_disabled')) {
-        arrowLeft.addEventListener('click', moveLeftDesktop);
-        arrowLeft.classList.remove('arrow_disabled');
+        activateLeft();
       }
     }
 

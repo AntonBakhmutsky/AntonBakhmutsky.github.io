@@ -23,6 +23,18 @@
       z-index: 99
       +media
         display: none
+      .arrow_disabled
+        background: $white
+        border: none
+        rect
+          fill: $white
+        path
+          stroke: $red
+        &:active
+          rect
+            fill: white
+          path
+            stroke: $red
     &Content
       position: relative
       width: 100%

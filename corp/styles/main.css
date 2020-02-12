@@ -1981,6 +1981,22 @@ html {
     display: none;
   }
 }
+.emotions__slider .arrows .arrow_disabled {
+  background: #fff;
+  border: none;
+}
+.emotions__slider .arrows .arrow_disabled rect {
+  fill: #fff;
+}
+.emotions__slider .arrows .arrow_disabled path {
+  stroke: #E83838;
+}
+.emotions__slider .arrows .arrow_disabled:active rect {
+  fill: white;
+}
+.emotions__slider .arrows .arrow_disabled:active path {
+  stroke: #E83838;
+}
 .emotions__sliderContent {
   position: relative;
   width: 100%;
