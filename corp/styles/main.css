@@ -511,6 +511,18 @@ html {
   transition: all 0.2s ease-out;
   stroke: #fff;
 }
+@media screen and (min-width: 1025px) {
+  .arrows .arrow:hover {
+    background: transparent;
+  }
+  .arrows .arrow:hover rect {
+    transition: all 0.2s ease-out;
+    fill: transparent;
+  }
+  .arrows .arrow:hover path {
+    stroke: #C42828;
+  }
+}
 .arrows .arrow:active {
   background: transparent;
 }
@@ -532,6 +544,18 @@ html {
 }
 .arrows .arrow_disabled:active path {
   stroke: #fff;
+}
+@media screen and (min-width: 1025px) {
+  .arrows .arrow_disabled:hover {
+    background: #cdcdcd;
+    border: none;
+  }
+  .arrows .arrow_disabled:hover rect {
+    fill: #cdcdcd;
+  }
+  .arrows .arrow_disabled:hover path {
+    stroke: #fff;
+  }
 }
 
 /*-------------------------------------------- adventure -----------------------------------------*/
