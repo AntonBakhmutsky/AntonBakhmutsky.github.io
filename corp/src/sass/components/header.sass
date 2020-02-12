@@ -84,17 +84,17 @@
       font: 500 22px/27px $font
       text-transform: uppercase
       color: #4B4646
+      &:not(:last-child)
+        margin-bottom: 10%
       +landscape
         &:not(:last-child)
-          margin-right: 30px
+          margin: 0 30px 20px 0
       +media
         +fontSize(32px, 40px)
       &[href="#geography"]
         display: none
         +media
           display: block
-      &:not(:last-child)
-        margin-bottom: 10%
       &:active
         color: $red
       +media

@@ -278,9 +278,12 @@ html {
   text-transform: uppercase;
   color: #4B4646;
 }
+.header__links .link:not(:last-child) {
+  margin-bottom: 10%;
+}
 @media screen and (orientation: landscape) {
   .header__links .link:not(:last-child) {
-    margin-right: 30px;
+    margin: 0 30px 20px 0;
   }
 }
 @media screen and (min-width: 1025px) {
@@ -296,9 +299,6 @@ html {
   .header__links .link[href="#geography"] {
     display: block;
   }
-}
-.header__links .link:not(:last-child) {
-  margin-bottom: 10%;
 }
 .header__links .link:active {
   color: #E83838;
