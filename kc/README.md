@@ -1,2 +1,0 @@
-# heroleague-frontend-KS
-

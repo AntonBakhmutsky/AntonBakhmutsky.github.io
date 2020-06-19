@@ -1,8 +1,0 @@
-.idea
-.sass-cache
-*.css.map
-css/components/variables.css
-css/components/card.css
-css/components/emptyTabs.css
-css/components/buttons.css
-css/components/nice-select2.css
