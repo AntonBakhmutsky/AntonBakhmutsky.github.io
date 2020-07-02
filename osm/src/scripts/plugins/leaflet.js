@@ -15,14 +15,15 @@ L.Icon.Default.mergeOptions({
 const accessToken = process.env.MAPBOX_ACCESS_TOKEN
 
 // first map
-
 const mapBoxUrlFirst = `https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=${accessToken}`
+
 
 const mapFirst = L.map('map-first').setView([51.505, -0.09], 13)
 
 L.tileLayer(mapBoxUrlFirst, {
   id: 'mapbox/streets-v11',
   tileSize: 512,
+  style: '//styles/n-tano/ckblxrg2c0vzd1iph279xsw8m/draft',
   zoomOffset: -1
 }).addTo(mapFirst)
 
