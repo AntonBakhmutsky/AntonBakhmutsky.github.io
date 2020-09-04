@@ -1,0 +1,145 @@
+@use '../abstracts/variables' as *
+@use '../abstracts/mixins' as *
+
+.head
+  display: flex
+  flex-direction: column
+  align-items: center
+  box-sizing: border-box
+  padding: 30px 0
+  position: relative
+  width: 100%
+  +screen($mobile)
+    padding: 20px 0
+
+  &__phone
+    display: block
+    position: absolute
+    display: flex
+    top: 30px
+    right: 10px
+    color: $white
+    transition: .3s
+    +font(32px, 32px, 700)
+    +screen($tablet)
+      +font(24px, 24px, 500)
+    +screen($mobile)
+      position: relative
+      left: inherit
+      top: inherit
+      transform: none
+      margin: 0 0 30px 38px
+
+    svg
+      position: absolute
+      top: 52%
+      transform: translateY(-47%)
+      left: -35px
+      width: 28px
+      height: 28px
+      +screen($tablet)
+        width: 20px
+        height: 20px
+        left: -25px 
+
+      path
+        transition: .3s
+        fill: $white
+
+    &:hover
+      opacity: .80
+
+    &::after
+      content: ''
+      position: absolute
+      bottom: -3px
+      left: 0
+      width: 100%
+      height: 3px
+      border-radius: 10px
+      background: $white
+
+  &__logo
+    max-width: 300px
+    max-height: 300px
+    +screen($tablet)
+      max-width: 220px
+      max-height: 220px
+
+    img
+      width: 100%
+      height: 100%
+    
+  &__header
+    +font(80px, 80px)
+    width: 100%
+    text-align: center
+    color: $white
+    text-transform: uppercase
+    margin: 10px 0 0
+    +screen($tablet)
+      +font(40px, 40px)
+
+.slider
+  width: 100%
+  height: 600px
+  +screen($tablet)
+    height: 500px
+  +screen($mobile)
+    height: 400px
+  +screen($mobile-sm)
+    height: 260px 
+
+  &__content
+    box-sizing: border-box
+    border-radius: 25px
+    border: 5px solid $white
+    width: 100%
+    height: 100% 
+    overflow: hidden
+
+  &__item
+    width: 100%
+    height: 100%
+    background: center/cover no-repeat url(../assets/img/slide_1.jpg)
+
+.info
+  text-align: center
+  color: white
+
+  &__main
+    +font(46px, 46px, 700)
+    text-transform: uppercase
+    margin-top: 30px
+    position: relative
+    box-sizing: border-box
+    padding: 0 0 20px 0
+    +screen($mobile)
+      +font(24px, 24px, 700)
+
+    &::after
+      content: ''
+      position: absolute
+      bottom: 0
+      left: 50%
+      transform: translateX(-50%)
+      width: 680px
+      height: 6px
+      border-radius: 25px
+      background: $white
+      +screen($mobile)
+        height: 3px
+        width: 120px
+
+  &__desc
+    margin-top: 30px
+    p
+      +font(34px, 34px)
+      margin: 10px 0
+      padding: 10px
+      box-sizing: border-box
+      border: 2px solid $white
+      border-radius: 25px
+      background: rgba(25, 54, 147, .8)
+      +screen($mobile)
+        +font(18px, 18px)
