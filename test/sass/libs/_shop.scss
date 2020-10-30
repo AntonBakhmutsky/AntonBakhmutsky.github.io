@@ -1,0 +1,421 @@
+.shop {
+  &__coins {
+    &Count {
+      &::after {
+        background: url(../img/shop/coin.svg) no-repeat center;
+      }
+    }
+  }
+}
+
+.myPrizes {
+  &__coins {
+    &Count {
+      &::after {
+        background: url(../img/global/prizes/coin.svg) no-repeat center;
+      }
+    }
+  }
+}
+
+.shop, .myPrizes {
+  &_disabled {
+    display: none;
+  }
+
+  box-sizing: border-box;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+
+  &__coins {
+    display: flex;
+    justify-content: center;
+    font: 20px/24px $headerFont;
+
+    &Count {
+      position: relative;
+      margin: 0 22px 0 15px;
+      display: inline-block;
+      font-weight: bold;
+
+      &::after {
+        position: absolute;
+        top: 6px;
+        right: -18px;
+        content: "";
+        width: 13px;
+        height: 13px;
+        background-size: cover;
+      }
+    }
+  }
+
+  & > &__coins {
+    .shop__coinsCount {
+      &::after {
+        position: absolute;
+        top: 6px;
+        right: -22px;
+        content: "";
+        width: 13px;
+        height: 13px;
+        background: url(../img/shop/coin_white.svg) no-repeat center;
+        background-size: cover;
+      }
+    }
+  }
+
+  &__filter {
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 25px;
+
+    &Item {
+      margin: 0 10px 10px 0;
+      display: flex;
+      justify-content: space-between;
+      height: 27px;
+      border-radius: 8px;
+      font: bold 12px/27px $textFont;
+      box-sizing: border-box;
+      border: 1px solid #7B8998;
+      padding: 0 10px;
+      transition: all .1s;
+      background: #7B8998;
+
+      &Image {
+        margin-right: 9px;
+      }
+
+      &_active {
+        color: $textColor;
+        background: $lightColor;
+        border: none;
+        border-left: 1px solid transparent;
+        border-right: 1px solid transparent;
+      }
+    }
+  }
+
+  &__goods {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+
+    &Item {
+      min-width: 300px;
+      background: #fff;
+      border-radius: 15px;
+      color: #333;
+      margin-bottom: 10px;
+      display: flex;
+
+      &Image {
+        position: relative;
+        justify-content: center;
+        border-radius: 15px 0 0 15px;
+        overflow: hidden;
+        flex-basis: 33%;
+
+        & > img {
+          width: 100%;
+          height: 100%;
+        }
+
+        &_rosaLogo {
+          background: url(../img/shop/logo_back.jpg);
+
+          .shop__goodsItemImage > img {
+            width: 70%;
+            height: 70%;
+          }
+        }
+      }
+
+      &Desc {
+        align-self: stretch;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-basis: 67%;
+        padding: 10px;
+
+        &Count {
+          height: 10px;
+          font: bold 7px/9px $headerFont;
+          color: #96388E;
+          margin-bottom: 5px;
+
+          &Text {
+            font-size: 13px;
+            color: #68648C;
+          }
+        }
+
+        &Ended {
+          font-weight: bold;
+          color: #68648C;
+          display: none;
+        }
+
+        &Promo {
+          font: bold 13px/16px $textFont;
+          margin-bottom: 5px;
+          flex-basis: 24%;
+        }
+
+        .shop__price {
+          min-height: 37px;
+          display: flex;
+          align-items: flex-end;
+        }
+        .shop__priceItem {
+          margin-right: 50px;
+          &:last-child {
+            margin-right: 0
+          }
+        }
+        .shop__coinsCountText {
+          max-width: 77px;
+          font: bold 6px/7px $textFont;
+          color: #74A3C7;
+        }
+
+        .shop__coinsCount {
+          margin: 5px 0 0 0;
+          font: bold 15px/18px $headerFont;
+          align-self: flex-start;
+          &::after {
+            top: 2px;
+            right: -15px;
+          }
+          &_forOwners {
+            color: #74A3C7;
+          }
+        }
+
+        &MyRose {
+          font-family: $headerFont;
+          font-weight: bold;
+        }
+
+        &Status {
+          font: bold 8px/20px $textFont;
+        }
+
+        &Points {
+          @extend .shop__coinsCount;
+
+          &:after {
+            content: "";
+            right: -18px !important;
+            width: 14px;
+            height: 14px;
+            background: url(../img/global/prizes/mile.svg) no-repeat center;
+            background-size: cover;
+          }
+        }
+      }
+
+      &_changePrize {
+        .shop__goodsItemImage {
+          &::after {
+            content: "Призы закончились";
+            left: 7px;
+          }
+        }
+
+        .shop__goodsItemDesc {
+          color: #131929;
+        }
+      }
+
+      &_endedPrize {
+        .shop__goodsItemImage {
+          &::after {
+            content: "Призы закончились";
+            left: 7px;
+          }
+        }
+
+        .shop__goodsItemDesc {
+          color: #9D9FB5;
+        }
+      }
+
+      &_lowPrize {
+        .shop__goodsItemImage {
+          &::after {
+            content: "Призы заканчиваются";
+          }
+        }
+      }
+
+      &_issued {
+        height: 86px;
+      }
+
+      &_ended, &_buyed, &_used, &_closed, &_issuedPrize {
+        .shop__goodsItemImage {
+          opacity: .6;
+        }
+
+        .shop__goodsItemDescPromo {
+          color: #B7C0CB;
+        }
+
+        .shop__coinsCount {
+          color: #B7C0CB;
+
+          &::after {
+            content: "";
+            filter: grayscale(100%) opacity(45%);
+          }
+          &Text {
+            color: #B7C0CB;
+          }
+        }
+
+        .shop__goodsFilterItemsItem {
+          background: #B7C0CB;
+        }
+      }
+
+      &_buyed {
+        .shop__goodsItemImage {
+          &::after {
+            content: "Приз уже куплен";
+            left: 16px;
+            color: darken(#9D9FB5, 15%);
+          }
+        }
+      }
+
+      &_used {
+        .shop__goodsItemDesc {
+          justify-content: flex-start;
+        }
+        .shop__goodsItemDescPromo {
+          flex-basis: 79%;
+          display: flex;
+          align-items: center;
+        }
+      }
+
+      &_closed {
+        .shop__goodsItemImage {
+          &::after {
+            content: "";
+          }
+        }
+      }
+
+      &_myRose {
+        border: 2px solid #DB383F;
+      }
+
+      &_myRose-waiting {
+        .shop__goodsItemImage {
+          &::before {
+            content: "";
+            width: 95px;
+            height: 100px;
+            background: rgba(254, 254, 254, 0.6);
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+        }
+
+        .shop__goodsItemDescStatus {
+          color: #DB383F;
+        }
+
+        .shop__goodsItemDescPoints {
+          color: #9D9FB5;
+
+          &::after {
+            content: "";
+            background: url(../img/global/prizes/rosa-disabled.svg) no-repeat center;
+            width: 14px;
+            height: 14px;
+            background-size: cover;
+          }
+        }
+      }
+      &_withoutImage {
+        padding: 8px 18px 8px 21px;
+        .shop__goodsItemDesc {
+          flex-basis: 100%;
+        }
+      }
+      &_miles {
+        &_accrued {
+          .shop__goodsItemImage {
+            opacity: .5;
+          }
+          .shop__goodsItemDescPromo {
+            color: #B7C0CB;
+          }
+          .shop__goodsItemDescPoints {
+            color: #B7C0CB;
+            &::after {
+              background-image: url(../img/global/prizes/mile-disabled.svg);
+            }
+          }
+        }
+      }
+      &_promoOnly {
+        padding: 26px 21px 27px;
+        .shop__goodsItemDesc {
+          flex-basis: 100%;
+          padding: 0;
+        }
+      }
+      &_promoAndImage {
+        height: 106px;
+        .shop__goodsItemDesc {
+          justify-content: center;
+        }
+        .shop__goodsItemDescPromo {
+          margin: 0;
+        }
+      }
+    }
+
+
+    &FilterItems {
+      .shop__filterItemImage {
+        margin-right: 4px;
+        width: 70%;
+        height: 70%;
+      }
+
+      flex-basis: 70%;
+      margin-top: 10px;
+      display: flex;
+      align-items: flex-end;
+
+      &Item {
+        height: 16px;
+        font: 500 8px/16px $textFont;
+        display: flex;
+        align-items: center;
+        border-radius: 8px;
+        box-sizing: border-box;
+        padding: 0 6px;
+        color: #FEFEFE;
+        margin-right: 10px;
+        background: #85217B;
+
+        &_myRose {
+          .shop__filterItemImage {
+            width: 10px;
+            height: 10px;
+          }
+        }
+      }
+    }
+  }
+}

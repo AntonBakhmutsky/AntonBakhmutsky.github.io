@@ -1,0 +1,732 @@
+.myProfile {
+  &_disabled {
+    display: none;
+  }
+
+  flex: 1 0 auto;
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    &Buttons {
+      margin: 24px 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &Item {
+        transition: all .2s;
+        box-sizing: border-box;
+        text-decoration: none;
+        color: #68648c;
+        font: bold 12px/33px $headerFont;
+        text-align: center;
+        text-transform: uppercase;
+        display: block;
+        height: 33px;
+        margin-right: 30px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        &_active {
+          color: #000;
+          font-size: 20px;
+          border-bottom: 3px solid $lightColor;
+        }
+      }
+    }
+
+    &Desc {
+      text-align: center;
+      align-self: center;
+      width: 320px;
+      height: 24px;
+      font: bold 20px/24px $headerFont;
+    }
+
+    &Face {
+      margin-top: 30px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &Cross,
+      &Edit {
+        width: 27px;
+        height: 27px;
+        border-radius: 50%;
+        background-color: #61637e;
+        cursor: pointer;
+      }
+
+      &Cross {
+        background-image: url(../img/cross_l.svg), url(../img/cross_r.svg);
+        background-repeat: no-repeat, no-repeat;
+        background-position: center, center;
+        margin-right: 25px;
+      }
+
+      &Image {
+        margin-right: 25px;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: $lightColor;
+        border: 2px solid $lightColor;
+        overflow: hidden;
+
+        & > img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      &Edit {
+        background-image: url(../img/Edit.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+  }
+
+  &__form {
+    width: 100%;
+    margin: 32px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &Item {
+      position: relative;
+      margin-bottom: 25px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      // &::after {
+      //   content: "";
+      //   position: absolute;
+      //   border-top-right-radius: 3px;
+      //   border-bottom-right-radius: 3px;
+      //   width: 17px;
+      //   height: 46px;
+      //   top: 29px;
+      //   right: 31px;
+      //   background: linear-gradient(270deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+      // }
+      #datepicker {
+        font-family: $headerFont;
+        background-image: url(../img/calendarDark.svg);
+        background-repeat: no-repeat;
+        background-position: 95% center;
+
+        &:focus {
+          background-image: url(../img/calendarLight.svg);
+          transition: .2s;
+        }
+      }
+
+      &Input {
+        display: block;
+        position: relative;
+
+        &_correct {
+          box-sizing: border-box;
+          color: #03A497;
+          background: #C8FFF4;
+          border: 1px solid #03A497;
+          transition: all .3s ease-out;
+
+          &Message {
+            margin-top: 3px;
+            width: 320px;
+            padding-left: 30px;
+            align-self: center;
+            font: 12px/20px $textFont;
+            color: #03A497;
+          }
+        }
+
+        &_wrong {
+          background: #FFF;
+          border: 1px solid #DB383F;
+          color: #DB383F;
+          transition: all 0.3s ease-out;
+
+          &Message {
+            margin-top: 3px;
+            width: 320px;
+            padding-left: 30px;
+            align-self: center;
+            font: 12px/20px $textFont;
+            color: #DB383F;
+          }
+        }
+
+        align-self: center;
+        width: 260px;
+        height: 48px;
+        border: none;
+        border-radius: 3px;
+        background-color: #EEF2F7;
+        box-sizing: border-box;
+        outline: none;
+        padding: 13px 0 13px 13px;
+        font: 16px/19px $textFont;
+        -webkit-appearance: textfield;
+        -moz-appearance: textfield;
+
+        &:focus {
+          background-color: #FFF;
+          border: 1px solid #DDDFE0;
+          transition: border-color .3s ease-out;
+          z-index: 9;
+
+        }
+
+        &Label {
+          align-self: center;
+          width: 320px;
+          box-sizing: border-box;
+          padding-left: 30px;
+          color: #68648c;
+          margin-bottom: 11px;
+          order: -1;
+        }
+      }
+
+      &Wrap {
+        max-width: 100%;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      &Radio {
+        width: 130px;
+        position: relative;
+        margin: 30px 0;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &Btn {
+          &:checked + .myProfile__formItemRadioLabel:after {
+            opacity: 1;
+          }
+
+          &:not(:checked) + .myProfile__formItemRadioLabel:after {
+            opacity: 0;
+          }
+
+          &:checked,
+          &:not(:checked) {
+            position: absolute;
+            left: -9999px;
+
+            & + .myProfile__formItemRadioLabel {
+              display: inline-block;
+              position: relative;
+              padding-left: 40px;
+              line-height: 20px;
+              cursor: pointer;
+
+              &:nth-child(2) {
+                margin-right: 23px;
+              }
+
+              &:before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: -6px;
+                width: 25px;
+                height: 25px;
+                border: 1px solid #9d9fb5;
+                background-color: #fff;
+                border-radius: 3px;
+              }
+
+              &:after {
+                content: "";
+                position: absolute;
+                transition: all .2s ease;
+                left: 4%;
+                top: -1.55px;
+                width: 17px;
+                height: 17px;
+                border-radius: 3px;
+                background-color: $lightColor;
+              }
+            }
+          }
+
+          &:checked + .myProfile__formItemRadioLabel:before {
+            border: 1px solid $lightColor;
+            transition: border .2s ease-out;
+          }
+        }
+
+        &Label {
+          align-self: center;
+          font: 16px/19px $textFont;
+        }
+
+        .myProfile__formGender {
+          position: absolute;
+          left: 0;
+          top: -20px;
+          font: 14px/20px $textFont;
+          color: #68648C;
+        }
+      }
+    }
+  }
+
+  &__about {
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &Link {
+      display: block;
+      background: $lightColor;
+      border-radius: 8px;
+      width: 124px;
+      height: 30px;
+      font: bold 16px/25px $textFont;
+      -webkit-appearance: none;
+      color: $textColor;
+      align-self: center;
+      border: none;
+      outline: none;
+      margin-bottom: 20px;
+
+      &:disabled {
+        background: #9d9fb5;
+        color: #FFF;
+      }
+    }
+
+    &Header {
+      box-sizing: border-box;
+      width: 100%;
+      padding: 0 30px;
+      @include blockHeader;
+    }
+
+    &SubHeader {
+      box-sizing: border-box;
+      width: 100%;
+      padding: 0 30px;
+      color: #68648c;
+    }
+
+    &Social {
+      box-sizing: border-box;
+      padding: 0 30px;
+      width: 100%;
+      margin: 25px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      &Container {
+        margin: 0 auto;
+        width: 320px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        &Form {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+
+          &Label {
+            position: relative;
+
+            input {
+              padding-left: 40px;
+            }
+
+            &:before {
+              content: attr(data-label);
+              display: block;
+              position: absolute;
+              left: 15px;
+              transform: translateY(-50%);
+              top: 50%;
+              z-index: 10;
+              font-size: 18px;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+
+      &Image {
+        display: block;
+      }
+
+      &Desc {
+        flex-basis: 45%;
+        font: 14px/17px $textFont;
+        &_firstStage {
+          color: #B7C0CB;
+        }
+      }
+
+      &Switch {
+        position: relative;
+        width: 73px;
+        height: 12px;
+        border-radius: 10px;
+        opacity: .4;
+
+        &_firstStage {
+          background-color: rgba(183, 192, 203, 0.4);
+          transition: all .3s ease-out;
+
+          &::after {
+            opacity: 1;
+            position: absolute;
+            content: "";
+            top: -4px;
+            left: 0;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: rgb(183, 192, 203);
+            box-shadow: 0 1px 5px rgba(160, 155, 155, .58);
+            transition: left .3s ease-out;
+          }
+        }
+
+        &_secondStage {
+          background-color: rgba(123, 137, 152, 0.4);
+          transition: all .3s ease-out;
+
+          &::after {
+            position: absolute;
+            content: "";
+            top: -4px;
+            left: 26.5px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: rgb(123, 137, 152);
+            opacity: 1;
+            transition: left .3s ease-out;
+            box-shadow: 0 1px 5px rgba(160, 155, 155, .58);
+          }
+        }
+
+        &_thirdStage {
+          background-color: rgba(65, 138, 249, 0.4);
+          opacity: .8;
+          transition: all .3s ease-out;
+
+          &::after {
+            position: absolute;
+            content: "";
+            top: -4px;
+            left: 53.5px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: rgb(65, 138, 249);
+            transition: left .3s ease-out;
+            box-shadow: 0 1px 5px rgba(160, 155, 155, .58);
+          }
+        }
+      }
+    }
+
+    &Container {
+      width: 100%;
+      background: #f9f9f9;
+    }
+
+    &Tab {
+      box-sizing: border-box;
+      width: 100%;
+      background: #f6f6f6;
+      border-bottom: 2px solid #f0f0f0;
+
+      &Header {
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &Text {
+          @include blockHeader;
+        }
+      }
+
+      &Arrow {
+        display: block;
+
+        &_active {
+          transform: rotate(180deg);
+          transition: .2s;
+        }
+      }
+
+      &Container {
+        width: 62px;
+        height: 62px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      &Content {
+        display: none;
+        justify-content: center;
+
+        &Container {
+          padding: 20px;
+          width: 320px;
+          display: flex;
+          box-sizing: border-box;
+          flex-flow: row wrap;
+          justify-content: space-around;
+        }
+
+        &_active {
+          display: flex;
+        }
+
+        &Item {
+          position: relative;
+          background-color: #f0f0f0;
+          box-sizing: border-box;
+          border: 2px solid $lightColor;
+          margin-bottom: 8px;
+          padding: 5px 0;
+          border-radius: 8px;
+          width: 90px;
+          height: 90px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+          align-content: center;
+
+          &Check {
+            display: none;
+          }
+
+          &_active {
+            background-color: $lightColor;
+
+            &::after {
+              content: "";
+              position: absolute;
+              top: -7px;
+              right: -7px;
+              width: 20px;
+              height: 20px;
+              border-radius: 50%;
+              background-color: $lightColor;
+              background-image: url(../img/checkMark.png);
+              background-repeat: no-repeat;
+              background-position: center;
+            }
+          }
+
+          &Image {
+            display: block;
+          }
+
+          &Desc {
+            font: bold 10px/13px $textFont;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+
+  &__submit {
+    &Btn {
+      margin: 30px 0 35px;
+      width: 260px;
+      height: 48px;
+      background-color: $lightColor;
+      border: none;
+      outline: none;
+      border-radius: 15px;
+      -webkit-appearance: none;
+      color: $textColor;
+      font: bold 20px/24px $textFont;
+    }
+  }
+}
+
+.settings {
+  &_active {
+    display: flex;
+  }
+
+  flex: 1 0 auto;
+  margin: 0 auto;
+  display: none;
+  flex-direction: column;
+
+  &__header {
+    text-align: center;
+    align-self: center;
+    box-sizing: border-box;
+    width: 320px;
+    padding: 0 30px;
+    margin: 20px 0;
+    font: bold 20px/24px $headerFont;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    &Container {
+      box-sizing: border-box;
+      width: 100%;
+      background-color: #f9f9f9;
+      padding: 20px 30px 0;
+      margin-bottom: 16px;
+    }
+
+    &Switch {
+      height: 34px;
+      width: 320px;
+      padding: 0 30px;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &Input {
+        display: none;
+
+        & + .settings__formSwitchLabel {
+          display: block;
+          position: relative;
+          cursor: pointer;
+
+          &::before {
+            content: "";
+            position: absolute;
+            top: 5px;
+            right: 0;
+            width: 50px;
+            height: 12px;
+            border-radius: 10px;
+            background: #9d9fb5;
+            opacity: .4;
+            transition: .2s;
+          }
+
+          &::after {
+            content: "";
+            position: absolute;
+            top: 1px;
+            right: 30px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: darken(#9d9fb5, 5%);
+            box-shadow: 0 1px 5px rgba(160, 155, 155, .58);
+            transition: .3s;
+          }
+        }
+
+        &:checked + .settings__formSwitchLabel::before {
+          background: $lightColor;
+        }
+
+        &:checked + .settings__formSwitchLabel::after {
+          right: 0;
+          background: darken($lightColor, 5%);
+          transition: .3s;
+        }
+      }
+
+      &Label {
+        width: 100%;
+        font: 16px/19px $textFont;
+        color: #68648c;
+      }
+    }
+
+    &Exit {
+      margin-bottom: 43px;
+      width: 260px;
+      height: 48px;
+      border: 2px solid #DB383F;
+      border-radius: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &Btn {
+        margin: 0 20px 0 0;
+        display: block;
+        font: bold 20px/48px $textFont;
+        text-decoration: none;
+        text-align: center;
+        color: #DB383F;
+      }
+
+      &Image {
+        display: block;
+      }
+    }
+  }
+}
+
+.settings_changePassword {
+  flex: 1 0 auto;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/*-------------------------------------------------MULTI-SELECT------------------------------------------------*/
+.ss-single-selected {
+  width: 280px;
+  height: 48px;
+}
+
+.ss-option.ss-disabled.ss-option-selected {
+  display: none;
+}
+
+.myProfile__formItemSelectItem {
+  font: 16px/19px $textFont;
+  color: #000;
+}
+
+.myProfile__formItemSelectItem_last {
+  color: #418AF9;
+  text-decoration: underline;
+  text-decoration-style: dashed;
+  margin-bottom: 10px;
+}

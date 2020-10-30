@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <title>Главная</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap" rel="stylesheet">
+    <link href="styles/reset.css" rel="stylesheet">
+    <link href="styles/slick.css" rel="stylesheet">
+    <link href="styles/slick-theme.css" rel="stylesheet">
+    <link href="styles/main.css" rel="stylesheet">
+</head>
+
+<body>
+
+<!--------------------------------------------- header --------------------------------------------->
+<header class="main__header">
+    <a href="#" class="main__headerArrow"><img class="main__headerArrowImg" src="img/union.svg" alt="arrow"></a>
+    <div class="main__headerQr">
+        <img class="main__headerQrImage" src="img/qr.svg" alt="qr">
+    </div>
+    <div class="main__headerRight">
+        <div class="main__headerTeam">
+            <img class="main__headerTeamImage" src="img/team.svg" alt="team">
+        </div>
+        <div class="main__headerFace">
+            <img class="main__headerFaceImage" src="img/face.svg" alt="face">
+        </div>
+    </div>
+</header>
+<!--------------------------------------------- QR modal ------------------------------------------->
+<div class="modalQr">
+    <h2 class="modalQr__header">Ваш QR-код</h2>
+    <img class="modalQr__image" src="img/global/qr.svg" alt="qr">
+    <div class="modalQr__id">Ваш id: 385394290</div>
+    <div class="modalQr__button">
+        <button class="modalQr__buttonBtn">Свернуть</button>
+    </div>
+</div>
+<!--------------------------------------------- main --------------------------------------------->
+<main>
+    <div class="main main_darkTheme">
+        <div class="one_task">
+            <div class="main_block" style="background-image: url(img/one-task-img-1.jpg);">
+                <div class="top_block">
+                    <div class="year">
+                        <img src="img/year-gradient.svg" alt="year">
+                    </div>
+                </div>
+            </div>
+            <div class="task_footer">
+                <div class="task_verification">
+                    <div class="caption">Проверяем выполнение....</div>
+                    <div class="text">Робот пошел смотреть, подождите немного.</div>
+                </div>
+                <div class="validation_error">
+                    <div class="caption">Мы не нашли пост :(</div>
+                    <div class="text">
+                        Убедись что выполнил все условия и нажми кнопку “Проверить еще раз”, или вставь ссылку в
+                        поле
+                        ниже
+                    </div>
+                    <textarea></textarea>
+                </div>
+                <div class="support__block">
+                    <div class="open_btn active">
+                        <a href="#">Есть проблема?</a>
+                        <i></i>
+                    </div>
+                    <div class="support__blockMessage">
+                        Если у вас возникли проблемы позвоните
+                    </div>
+                    <div class="support__blockPhone">
+                        <span class="support__blockPhoneNumber">+7 921 7564783</span>
+                        <img class="support__blockPhoneImage" src="img/global/phone.svg" alt="phone">
+                    </div>
+                    <div class="support__blockMessage">
+                        Или напишите
+                    </div>
+                    <div class="support__blockLink">
+                        <img class="support__blockLinkImage" src="img/global/whatsapp.svg" alt="whatsapp">
+                        <a class="support__blockLinkText" href="#">https://chat.whatsapp.com/FtEffc8HNRq6SjRcVMRKHw</a>
+                    </div>
+                    <div class="support__blockLink">
+                        <img class="support__blockLinkImage" src="img/global/telegram.svg" alt="telegram">
+                        <a class="support__blockLinkText" href="#">https://chat.whatsapp.com/FtEffc8HNRq6SjRcVMRKHw</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright_block">
+            <div class="text_block">
+                <p>Powered by</p>
+            </div>
+            <div class="img_block">
+                <img src="img/card-icon-v.svg" alt="card">
+            </div>
+        </div>
+    </div>
+</main>
+
+<!--------------------------------------------- footer --------------------------------------------->
+<footer class="main__footer">
+    <div class="main__footerItem">
+        <div class="main__footerItemImage  main__footerItemImage_notifications">
+        </div>
+        <div class="main__footerItemDesc">Уведомления</div>
+        <i class="numberOfNotifications">23</i>
+    </div>
+    <div class="main__footerItem">
+        <div class="main__footerItemImage  main__footerItemImage_tasks">
+        </div>
+        <div class="main__footerItemDesc">Задания</div>
+    </div>
+    <div class="main__footerItem">
+        <div class="main__footerItemImage  main__footerItemImage_prizes">
+        </div>
+        <div class="main__footerItemDesc">Призы</div>
+    </div>
+    <div class="main__footerItem">
+        <div class="main__footerItemImage main__footerItemImage_rating">
+        </div>
+        <div class="main__footerItemDesc">Рейтинги</div>
+        <i class="numberOfNotifications">2</i>
+    </div>
+    <div class="main__footerItem main__footerItem_active">
+        <div class="main__footerItemImage main__footerItemImage_information ">
+        </div>
+        <div class="main__footerItemDesc">Информация</div>
+    </div>
+</footer>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src="scripts/slick.min.js"></script>
+<script src="scripts/main.js"></script>
+<script src="scripts/qr.js"></script>
+</body>
+
+</html>
