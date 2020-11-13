@@ -90,7 +90,7 @@
     &:not(:nth-last-child(2)) {
       margin-right: 6px;
       @include screen($mobile) {
-        margin-right: 15px;
+        margin-right: 5px;
       }
     }
 
