@@ -1,0 +1,151 @@
+.public {
+  box-sizing: border-box;
+  padding: 20px 0 20px;
+  color: #131929;
+
+  &__head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &Face {
+      width: 98px;
+      height: 98px;
+      border-radius: 50%;
+      overflow: hidden;
+      box-sizing: border-box;
+      border: 2px solid $lightColor;
+
+      &Picture {
+        min-width: 100%;
+        background: #ffffff;
+      }
+    }
+
+    &Name {
+      font: bold 18px/20px $textFont;
+      color: #fff;
+      margin-top: 20px;
+    }
+
+    &__body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
+&__body {
+  .reward_block {
+    min-width: 300px;
+    margin: 30px 10px 0;
+    padding: 17px 30px;
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+    border-radius: 8px;
+    color: #7B8998;
+    .item {
+      p {
+        font: 10px/12px $textFont;
+        margin: 0;
+      }
+      .reward {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+        .number {
+          font: bold 14px/20px $textFont;
+        }
+        img {
+          margin-right: 8px;
+        }
+      }
+    }
+  }
+}
+  &__scores {
+    display: flex;
+    justify-content: space-around;
+    margin: 25px 10px 0;
+
+    &Item {
+      min-width: 130px;
+      height: 160px;
+      background: #FEFEFE;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      box-sizing: border-box;
+      padding: 16px 0;
+
+      &Header {
+        @include blockHeader;
+      }
+
+      &Line {
+        width: 100%;
+        height: 1px;
+        background: #9D9FB5;
+      }
+
+      &Rating {
+        font: bold 16px/19px $headerFont;
+        color: #68648C;
+        text-align: center;
+      }
+
+      &Image {
+        width: 20px;
+        height: 20px;
+
+        &Picture {
+          min-width: 100%;
+        }
+      }
+
+      &Count {
+        font: bold 12px/17px $headerFont;
+        text-align: center;
+      }
+    }
+  }
+
+  &__hobbies {
+    &Header {
+      font: bold 18px/22px $textFont;
+      color: #fff;
+      text-align: center;
+      margin: 20px 0
+    }
+
+    &Variants {
+      box-sizing: border-box;
+      padding-left: 10px;
+      display: flex;
+      overflow-y: scroll;
+
+      &::-webkit-scrollbar {
+        width: 0;
+      }
+
+      &Item {
+        min-width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        background: #FEFEFE;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 22px;
+
+        &Picture {
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
+  }
+}
