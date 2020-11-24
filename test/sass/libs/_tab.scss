@@ -1,4 +1,4 @@
-.tab {
+.tab {  
   &_shop {
     .tab__container {
       padding: 0 30px;
@@ -50,6 +50,8 @@
     padding: 0 10px;
     justify-content: center;
     align-items: center;
+    transition: .3s;
+    scroll-behavior: smooth;
   }
 
   &__btn {
@@ -58,6 +60,7 @@
     font: bold 12px/14px $headerFont;
     text-transform: uppercase;
     margin-right: 30px;
+    transition: .3s;
 
     &:last-child {
       margin-right: 0;
@@ -76,7 +79,6 @@
       line-height: 30px;
       color: #000;
       border-bottom: 3px solid $lightColor;
-      transition: .2s all;
 
       &_darkTheme {
         @extend .tab__btn_active;

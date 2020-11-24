@@ -11,6 +11,10 @@ body {
 }
 
 /*-----------------------------------------------GLOBAL---ELEMENTS----------------------------------------------*/
+html {
+  scroll-behavior: smooth;
+}
+
 a {
   color: #009be2;
 }
@@ -1207,6 +1211,8 @@ blockquote:after {
   padding: 0 10px;
   justify-content: center;
   align-items: center;
+  transition: 0.3s;
+  scroll-behavior: smooth;
 }
 .tab__btn {
   display: block;
@@ -1214,6 +1220,7 @@ blockquote:after {
   font: bold 12px/14px "Montserrat", sans-serif;
   text-transform: uppercase;
   margin-right: 30px;
+  transition: 0.3s;
 }
 .tab__btn:last-child {
   margin-right: 0;
@@ -1229,7 +1236,6 @@ blockquote:after {
   line-height: 30px;
   color: #000;
   border-bottom: 3px solid #FFB701;
-  transition: 0.2s all;
 }
 .tab__btn_active_darkTheme {
   color: #fff;
