@@ -32,7 +32,15 @@ window.addEventListener('load', () => {
         const rightX = leftX + width
       
         if (rightX > winWidth) {
-          tabsContainer.scrollLeft = left + rightX - winWidth + 10
+          let shift = left + rightX - winWidth + 10
+          let shiftAnimation = setInterval(() => {
+            tabsContainer.scrollLeft += 10
+
+            if (tabsContainer.scrollLeft >= shift) {
+              tabsContainer.scrollLeft = shift
+              clearInterval(shiftAnimation)
+            }
+          }, 10)
         } else if (leftX < 0) {
           tabsContainer.scrollLeft = left + leftX - 10
         }    

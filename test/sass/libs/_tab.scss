@@ -1,5 +1,6 @@
 .tab {  
   scroll-behavior: smooth;
+  transition: .3s;
   &_shop {
     .tab__container {
       padding: 0 30px;
@@ -18,6 +19,7 @@
         max-width: fit-content;
         scrollbar-width: none;
         scroll-behavior: smooth;
+        transition: .3s;
 
         &::-webkit-scrollbar {
           width: 0 !important;
