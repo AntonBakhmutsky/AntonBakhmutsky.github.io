@@ -40,7 +40,6 @@ window.addEventListener('load', () => {
     
     setTimeout(() => {
         const rect = tab.getBoundingClientRect()
-        console.log(rect)
         winWidth = window.innerWidth
       
         const leftX = getRounding(rect.x) 
