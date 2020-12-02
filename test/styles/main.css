@@ -1167,6 +1167,8 @@ blockquote:after {
 
 /*---------------------------------------------PARTNERS--FAQ--SUPPORT-------------------------------------------*/
 .tab {
+  scroll-behavior: smooth;
+  transition: 0.3s;
   width: 100%;
   margin-bottom: 20px;
   padding-top: 20px;
@@ -1185,6 +1187,9 @@ blockquote:after {
   justify-content: flex-start;
   max-width: fit-content;
   scrollbar-width: none;
+  scroll-behavior: smooth;
+  transition: 0.3s;
+  -webkit-overflow-scrolling: touch;
 }
 .tab_timetable .tab__container::-webkit-scrollbar {
   width: 0 !important;
