@@ -17,6 +17,7 @@
         justify-content: flex-start;
         max-width: fit-content;
         scrollbar-width: none;
+        scroll-behavior: smooth;
 
         &::-webkit-scrollbar {
           width: 0 !important;
