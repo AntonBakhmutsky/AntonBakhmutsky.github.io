@@ -3,6 +3,8 @@ window.addEventListener('load', () => {
   const tabs = document.querySelectorAll('.tab__btn')
   const tabsContainer = document.querySelector('.tab__container')
   const activeClass = (document.querySelector('.tab__btn').classList.contains('tab__btn_gradientTheme')) ? 'tab__btn_active_gradientTheme' : 'tab__btn_active'
+  const isIpad = navigator.userAgent.match(/iPad/i) != null
+  const isIphone = navigator.userAgent.match(/iPhone/i) != null
   let winWidth
   let left
   
@@ -48,17 +50,17 @@ window.addEventListener('load', () => {
       
         if (rightX > winWidth) {
           shift = left + rightX - winWidth + 10
-          if (winWidth > 1024) {
-            tabsContainer.scrollLeft = shift
-          } else {
+          if (isIpad || isIphone) {
             shiftAnimation('right', shift)
+          } else {
+            tabsContainer.scrollLeft = shift
           }
         } else if (leftX < 0) {
           shift = left + leftX - 10
-          if (winWidth > 1024) {
-            tabsContainer.scrollLeft = shift
-          } else {
+          if (isIpad || isIphone) {
             shiftAnimation('left', shift)
+          } else {
+            tabsContainer.scrollLeft = shift
           }
         }    
       }, 300)
