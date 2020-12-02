@@ -30,6 +30,7 @@ window.addEventListener('load', () => {
   function chooseTab(event) {
     const tab = event.currentTarget
     left = tabsContainer.scrollLeft
+    alert(left)
 
     if (tab.classList.contains(activeClass)) {
       return false
