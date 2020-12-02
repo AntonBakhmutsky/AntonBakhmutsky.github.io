@@ -11,6 +11,10 @@ body {
 }
 
 /*-----------------------------------------------GLOBAL---ELEMENTS----------------------------------------------*/
+* {
+  scroll-behavior: smooth;
+}
+
 html {
   scroll-behavior: smooth;
 }
