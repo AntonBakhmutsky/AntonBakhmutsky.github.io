@@ -1,0 +1,134 @@
+.rating {
+  &__table {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    min-width: 300px;
+    height: 46px;
+    box-sizing: border-box;
+    padding: 0 10px;
+    margin: 0 10px 10px;
+    background: #fefefe;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #131929;
+
+    &Number {
+      position: relative;
+      width: 16%;
+      font: bold 12px/14px $headerFont;
+
+      &_prizePlace {
+        &::before {
+          position: absolute;
+          content: "";
+          width: 21px;
+          height: 22px;
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat;
+          top: -5px;
+          right: 12%;
+        }
+      }
+      &_gold {
+        &::before {
+          background-image: url(../img/rating/gold.svg);
+        }
+      }
+      &_silver {
+        &::before {
+          background-image: url(../img/rating/silver.svg);
+        }
+      }
+      &_bronze {
+        &::before {
+          background-image: url(../img/rating/bronze.svg);
+        }
+      }
+    }
+
+    &User {
+      width: 50%;
+      display: flex;
+      align-items: center;
+
+      &Image {
+        border: 2px solid #c4c4c4;
+        border-radius: 50%;
+        width: 24px;
+        height: 24px;
+        margin-right: 5px;
+        overflow: hidden;
+        box-sizing: border-box;
+
+        &Picture {
+          min-width: 100%;
+        }
+      }
+
+      &Name {
+        font: bold 12px/20px $textFont;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        max-width: 70%;
+        padding: 0 5px;
+      }
+    }
+
+    &Score {
+      width: 30%;
+      display: flex;
+      align-items: flex-start;
+
+      &::before {
+        content: "";
+        top: 0;
+        left: 0;
+        width: 16px;
+        height: 15px;
+        background: url(../img/shop/star-black.svg) center/cover;
+      }
+
+      &Image {
+        margin-right: 5px;
+        fill: #fefefe;
+      }
+
+      &Count {
+        box-sizing: border-box;
+        padding-left: 13px;
+        display: block;
+        position: relative;
+        font: bold 14px/17px $headerFont;
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &_myPlace {
+      background: $lightColor;
+    }
+  }
+
+  &__toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 10px;
+    height: 70px;
+
+    &Arrow {
+      &_disabled {
+        display: none;
+      }
+    }
+  }
+}
