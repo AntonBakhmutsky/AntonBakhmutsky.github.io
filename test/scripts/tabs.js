@@ -45,7 +45,6 @@ window.addEventListener('load', () => {
         const leftX = getRounding(rect.x) 
         const width = getRounding(rect.width)
         const rightX = leftX + width
-        alert(navigator.userAgent)
       
         if (rightX > winWidth) {
           shift = left + rightX - winWidth + 10
