@@ -1,0 +1,212 @@
+.team {
+  p {
+    color: $textColor;
+    font-family: $textFont;
+    text-align: center;
+  }
+  .myProfile {       
+    &__header {
+      &Face {
+        .teamFaceImage {
+          margin: 0;
+          background-color: #03A497;
+          border: 2px solid #FF9302;
+        }
+        p {
+            font-weight: bold;
+            font-size: 10px;
+            line-height: 13px;
+            color: $textColor;
+            margin: 10px 0 0;
+        }
+      }
+      .avatarEdit {
+        margin: 10px 0 30px;
+      }
+      .teamFace {
+        flex-direction: column;
+
+        .public__headName {
+            color: $textColor;
+        }
+      }       
+    }
+    &__aboutSocialContainer {
+      margin: 20px auto;
+      width: auto;        
+        p { 
+          font-size: 13px;
+          line-height: 20px;
+        }
+    }         
+    &__form {
+      margin: 0 0 35px;
+    }
+    &__submit {
+      &Btn {
+        margin: 0 0 30px;
+      }
+      .blueBtn {
+        background-color: $darkColor_2;
+        color: #FFFFFF;
+      }
+    }
+    &__about {
+      &Link {
+        width: auto;
+        background-color: $darkColor_2;
+        padding: 0 15px;
+        color: #FFFFFF;
+        margin: 0 10px 20px;
+
+        &:disabled {
+          background-color:  #9D9FB5;
+          color: #FFFFFF;
+        }
+      }
+    }         
+  }  
+  &__headerFaceImage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    object-position: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  .givePrize {
+    &__header {
+      margin: 0;
+    }
+    &__body {
+      p {
+        margin: 15px 30px 20px;
+        text-align: center;
+      }
+    }
+    &__submit {
+      padding-bottom: 40px;
+    }
+  }
+  .modalQr {
+    z-index: 9;
+    height: auto;
+    position: relative;
+    margin: 20px 0;
+
+    &__id {
+      width: 258px;
+      height: 69px;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      background: #eaebef;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 30px;
+      line-height: 20px;
+    }
+    &__buttonBtn {
+      color: $textColor;
+    }
+  }
+  &__deleteBtn {
+    @include btnViolet;
+    width: 123px;
+    height: 30px;
+    font: bold 16px/20px $textFont;
+  }
+  &__body {
+    margin: 30px auto 0;
+
+    .team__addPartners {
+      display: grid;
+      grid-template-columns: 115px 115px;
+      grid-template-rows: 135px 135px;
+      grid-column-gap: 30px;
+      grid-row-gap: 10px;
+      justify-content: center;
+
+      .team__addPartnersItem {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+
+        .givePrize__itemCross {
+          display: block;
+          position: absolute;
+          top: 5px;
+          right: 19px;
+          width: 19px;
+          height: 19px;
+          border-radius: 50%;
+          background: url(../img/checkbox-blue-close-2.svg) no-repeat center;
+          cursor: pointer;
+        }
+        img {
+          border-radius: 50%;
+          overflow: hidden;
+          width: 76px;
+          height: 76px;
+        }
+        .foto {
+          border: 2px solid $lightColor;
+          background-color: $lightColor;
+        }
+        p {
+          margin: 15px 0;
+          font-weight: bold;
+          font-size: 10px;
+          line-height: 13px;
+        }
+      }
+    }
+  }
+  &__edit {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+
+    .myProfile__aboutLink {
+      &:first-child {
+        background-color: $darkColor_2;
+      }
+    }
+  }
+  &__delete {
+    margin-bottom: 35px;
+
+    a {
+      font-weight: 600;
+      font-size: 12px;
+      border: none;
+      background-color: transparent;
+      line-height: 16px;
+      text-decoration-line: underline;
+      color: $textColor;
+    }
+  }
+}
+.teamModal {
+  align-items: flex-end;
+  background: rgba(51, 51, 51, 0.9);
+
+  .modal {
+    width: 100%;
+    height: 40vh;
+    border-radius: 8px 8px 0 0;
+    padding: 60px 20px 40px;
+
+    &__header {
+      margin: 0 20px 25px;
+    }
+    .deletePerson,
+    .deleteTeam {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
