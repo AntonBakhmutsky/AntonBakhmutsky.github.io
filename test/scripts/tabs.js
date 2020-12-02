@@ -19,7 +19,7 @@ window.addEventListener('load', () => {
       } else if (direction === 'left') {
         tabsContainer.scrollLeft -= 10
 
-        if (tabsContainer.scrollLeft - left <= x) {
+        if (tabsContainer.scrollLeft <= x) {
           clearInterval(draw)
         }
       }
