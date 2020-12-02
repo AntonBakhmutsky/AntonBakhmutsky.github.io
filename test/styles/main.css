@@ -11,10 +11,6 @@ body {
 }
 
 /*-----------------------------------------------GLOBAL---ELEMENTS----------------------------------------------*/
-* {
-  scroll-behavior: smooth;
-}
-
 html {
   scroll-behavior: smooth;
 }
@@ -1171,9 +1167,6 @@ blockquote:after {
 
 /*---------------------------------------------PARTNERS--FAQ--SUPPORT-------------------------------------------*/
 .tab {
-  scroll-behavior: smooth;
-  transition: 0.3s;
-  -webkit-overflow-scrolling: touch;
   width: 100%;
   margin-bottom: 20px;
   padding-top: 20px;
@@ -1194,7 +1187,6 @@ blockquote:after {
   scrollbar-width: none;
   scroll-behavior: smooth;
   transition: 0.3s;
-  -webkit-overflow-scrolling: touch;
 }
 .tab_timetable .tab__container::-webkit-scrollbar {
   width: 0 !important;

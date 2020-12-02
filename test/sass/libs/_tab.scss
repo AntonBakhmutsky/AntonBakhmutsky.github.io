@@ -1,8 +1,4 @@
 .tab {  
-  scroll-behavior: smooth;
-  transition: .3s;
-  -webkit-overflow-scrolling: touch;
-
   &_shop {
     .tab__container {
       padding: 0 30px;
@@ -22,13 +18,12 @@
         scrollbar-width: none;
         scroll-behavior: smooth;
         transition: .3s;
-        -webkit-overflow-scrolling: touch;
 
         &::-webkit-scrollbar {
           width: 0 !important;
           height: 0 !important;
         }
-        
+
         &::-webkit-scrollbar-thumb {
           width: 0 !important;
           height: 0 !important;
