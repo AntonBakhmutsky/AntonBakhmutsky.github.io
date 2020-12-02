@@ -7,6 +7,27 @@ window.addEventListener('load', () => {
   let left
   
   const getRounding = (num) => Math.ceil(num)
+
+  function shiftAnimation(direction, x) {
+    let draw = setInterval(() => {
+      if (direction === 'right') {
+        tabsContainer.scrollLeft += 10
+
+        if ((tabsContainer.scrollLeft + 10) - left >= x) {
+          tabsContainer.scrollLeft = x
+          clearInterval(draw)
+        }
+      } else if (direction === 'left') {
+        tabsContainer.scrollLeft -= 10
+
+        if ((tabsContainer.scrollLeft - 10) - left <= x) {
+          tabsContainer.scrollLeft = x
+          clearInterval(draw)
+        }
+      }
+
+    }, 10)
+  }
   
   function chooseTab(event) {
     const tab = event.currentTarget
@@ -29,9 +50,19 @@ window.addEventListener('load', () => {
         const rightX = leftX + width
       
         if (rightX > winWidth) {
-          tabsContainer.scrollLeft = left + rightX - winWidth + 10
+          shift = left + rightX - winWidth + 10
+          if (winWidth > 1024) {
+            tabsContainer.scrollLeft = shift
+          } else {
+            shiftAnimation('right', shift)
+          }
         } else if (leftX < 0) {
-          tabsContainer.scrollLeft = left + leftX - 10
+          shift = left + leftX - 10
+          if (winWidth > 1024) {
+            tabsContainer.scrollLeft = shift
+          } else {
+            shiftAnimation('left', shift)
+          }
         }    
       }, 300)
   }
