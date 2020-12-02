@@ -28,6 +28,11 @@
           width: 0 !important;
           height: 0 !important;
         }
+        
+        &::-webkit-scrollbar-thumb {
+          width: 0 !important;
+          height: 0 !important;
+        }
       }
   
       &__btn {

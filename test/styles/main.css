@@ -1196,6 +1196,10 @@ blockquote:after {
   width: 0 !important;
   height: 0 !important;
 }
+.tab_timetable .tab__container::-webkit-scrollbar-thumb {
+  width: 0 !important;
+  height: 0 !important;
+}
 .tab_timetable .tab__btn {
   white-space: nowrap;
   margin: 0;
