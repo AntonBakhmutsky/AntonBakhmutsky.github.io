@@ -1169,6 +1169,7 @@ blockquote:after {
 .tab {
   scroll-behavior: smooth;
   transition: 0.3s;
+  -webkit-overflow-scrolling: touch;
   width: 100%;
   margin-bottom: 20px;
   padding-top: 20px;
