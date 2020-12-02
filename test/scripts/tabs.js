@@ -14,14 +14,12 @@ window.addEventListener('load', () => {
         tabsContainer.scrollLeft += 10
 
         if ((tabsContainer.scrollLeft + 10) - left >= x) {
-          tabsContainer.scrollLeft = x
           clearInterval(draw)
         }
       } else if (direction === 'left') {
         tabsContainer.scrollLeft -= 10
 
         if ((tabsContainer.scrollLeft - 10) - left <= x) {
-          tabsContainer.scrollLeft = x
           clearInterval(draw)
         }
       }
@@ -31,6 +29,7 @@ window.addEventListener('load', () => {
   
   function chooseTab(event) {
     const tab = event.currentTarget
+    left = tabsContainer.scrollLeft
 
     if (tab.classList.contains(activeClass)) {
       return false
@@ -43,7 +42,6 @@ window.addEventListener('load', () => {
         const rect = tab.getBoundingClientRect()
         console.log(rect)
         winWidth = window.innerWidth
-        left = tabsContainer.scrollLeft
       
         const leftX = getRounding(rect.x) 
         const width = getRounding(rect.width)
