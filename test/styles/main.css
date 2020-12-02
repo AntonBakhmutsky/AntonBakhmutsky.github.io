@@ -11,10 +11,6 @@ body {
 }
 
 /*-----------------------------------------------GLOBAL---ELEMENTS----------------------------------------------*/
-html {
-  scroll-behavior: smooth;
-}
-
 a {
   color: #009be2;
 }
@@ -1185,16 +1181,11 @@ blockquote:after {
   justify-content: flex-start;
   max-width: fit-content;
   scrollbar-width: none;
-  scroll-behavior: smooth;
   transition: 0.3s;
 }
 .tab_timetable .tab__container::-webkit-scrollbar {
-  width: 0 !important;
-  height: 0 !important;
-}
-.tab_timetable .tab__container::-webkit-scrollbar-thumb {
-  width: 0 !important;
-  height: 0 !important;
+  width: 0;
+  height: 0;
 }
 .tab_timetable .tab__btn {
   white-space: nowrap;
