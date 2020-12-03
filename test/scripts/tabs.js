@@ -7,26 +7,36 @@ window.addEventListener('load', () => {
   const activeClass = (document.querySelector('.tab__btn').classList.contains('tab__btn_gradientTheme')) ? 'tab__btn_active_gradientTheme' : 'tab__btn_active'
   let winWidth
   let left
+  let shift
   
-  const getRounding = (num) => Math.ceil(num)
-
-  function shiftAnimation(direction, x) {
+  function shiftAppleAnimation(direction, x) {
     let draw = setInterval(() => {
       if (direction === 'right') {
-        tabsContainer.scrollLeft += 10
-
         if (tabsContainer.scrollLeft >= x) {
+          tabsContainer.scrollLeft = x
           clearInterval(draw)
+        } else {
+          tabsContainer.scrollLeft += 10
         }
-      } else if (direction === 'left') {
-        tabsContainer.scrollLeft -= 10
 
+      } else if (direction === 'left') {
         if (tabsContainer.scrollLeft <= x) {
+          tabsContainer.scrollLeft = x
           clearInterval(draw)
+        } else {
+          tabsContainer.scrollLeft -= 10
         }
       }
 
     }, 20)
+  }
+
+  function setShift(direction, shift) {    
+    if (['mobile', 'tablet'].includes(result.device.type) && result.os.name === 'iOS') {
+      shiftAppleAnimation(direction, shift)
+    } else {
+      tabsContainer.scrollLeft = shift
+    }
   }
   
   function chooseTab(event) {
@@ -50,23 +60,10 @@ window.addEventListener('load', () => {
       
         if (rightX > winWidth) {
           shift = left + rightX - winWidth + winWidth / 2 - width / 2
-
-          if (['mobile', 'tablet'].includes(result.device.type) && result.os.name === 'iOS') {
-            alert('true')
-            shiftAnimation('right', shift)
-          } else {
-            tabsContainer.scrollLeft = shift
-          }
-
+          setShift('right', shift)
         } else if (leftX < 0) {
           shift = left + leftX - winWidth / 2 + width / 2
-
-          if (['mobile', 'tablet'].includes(result.device.type) && result.os.name === 'iOS') {
-            alert('true')
-            shiftAnimation('left', shift)
-          } else {
-            tabsContainer.scrollLeft = shift
-          }
+          setShift('left', shift)  
         }    
       }, 300)
   }
