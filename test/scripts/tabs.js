@@ -1,70 +1,72 @@
 window.addEventListener('load', () => {
   // tabs
-  const tabs = document.querySelectorAll('.tab__btn')
-  const tabsContainer = document.querySelector('.tab__container')
-  const activeClass = (document.querySelector('.tab__btn').classList.contains('tab__btn_gradientTheme')) ? 'tab__btn_active_gradientTheme' : 'tab__btn_active'
-  const isIpad = navigator.userAgent.match(/iPad/i) != null
-  const isIphone = navigator.userAgent.match(/iPhone/i) != null
-  let winWidth
-  let left
+  const result = new UAParser().getResult()
+
+  alert(result.os.name)
+
+  // const tabs = document.querySelectorAll('.tab__btn')
+  // const tabsContainer = document.querySelector('.tab__container')
+  // const activeClass = (document.querySelector('.tab__btn').classList.contains('tab__btn_gradientTheme')) ? 'tab__btn_active_gradientTheme' : 'tab__btn_active'
+  // let winWidth
+  // let left
   
-  const getRounding = (num) => Math.ceil(num)
+  // const getRounding = (num) => Math.ceil(num)
 
-  function shiftAnimation(direction, x) {
-    let draw = setInterval(() => {
-      if (direction === 'right') {
-        tabsContainer.scrollLeft += 10
+  // function shiftAnimation(direction, x) {
+  //   let draw = setInterval(() => {
+  //     if (direction === 'right') {
+  //       tabsContainer.scrollLeft += 10
 
-        if (tabsContainer.scrollLeft >= x) {
-          clearInterval(draw)
-        }
-      } else if (direction === 'left') {
-        tabsContainer.scrollLeft -= 10
+  //       if (tabsContainer.scrollLeft >= x) {
+  //         clearInterval(draw)
+  //       }
+  //     } else if (direction === 'left') {
+  //       tabsContainer.scrollLeft -= 10
 
-        if (tabsContainer.scrollLeft <= x) {
-          clearInterval(draw)
-        }
-      }
+  //       if (tabsContainer.scrollLeft <= x) {
+  //         clearInterval(draw)
+  //       }
+  //     }
 
-    }, 10)
-  }
+  //   }, 20)
+  // }
   
-  function chooseTab(event) {
-    const tab = event.currentTarget
-    left = tabsContainer.scrollLeft
+  // function chooseTab(event) {
+  //   const tab = event.currentTarget
+  //   left = tabsContainer.scrollLeft
 
-    if (tab.classList.contains(activeClass)) {
-      return false
-    }
+  //   if (tab.classList.contains(activeClass)) {
+  //     return false
+  //   }
 
-    tabs.forEach(el => el.classList.remove(activeClass))
-    tab.classList.add(activeClass)    
+  //   tabs.forEach(el => el.classList.remove(activeClass))
+  //   tab.classList.add(activeClass)    
     
-    setTimeout(() => {
-        const rect = tab.getBoundingClientRect()
-        winWidth = window.innerWidth
+  //   setTimeout(() => {
+  //       const rect = tab.getBoundingClientRect()
+  //       winWidth = window.innerWidth
       
-        const leftX = getRounding(rect.x) 
-        const width = getRounding(rect.width)
-        const rightX = leftX + width
+  //       const leftX = getRounding(rect.x) 
+  //       const width = getRounding(rect.width)
+  //       const rightX = leftX + width
       
-        if (rightX > winWidth) {
-          shift = left + rightX - winWidth + 10
-          if (isIpad || isIphone) {
-            shiftAnimation('right', shift)
-          } else {
-            tabsContainer.scrollLeft = shift
-          }
-        } else if (leftX < 0) {
-          shift = left + leftX - 10
-          if (isIpad || isIphone) {
-            shiftAnimation('left', shift)
-          } else {
-            tabsContainer.scrollLeft = shift
-          }
-        }    
-      }, 300)
-  }
+  //       if (rightX > winWidth) {
+  //         shift = left + rightX - winWidth + 10
+  //         if (['mobile', 'tablet'].includes(result.device.type) &&) {
+  //           shiftAnimation('right', shift)
+  //         } else {
+  //           tabsContainer.scrollLeft = shift
+  //         }
+  //       } else if (leftX < 0) {
+  //         shift = left + leftX - 10
+  //         if (isIpad || isIphone) {
+  //           shiftAnimation('left', shift)
+  //         } else {
+  //           tabsContainer.scrollLeft = shift
+  //         }
+  //       }    
+  //     }, 300)
+  // }
 
-  tabs.forEach(el => el.addEventListener('click', chooseTab))
+  // tabs.forEach(el => el.addEventListener('click', chooseTab))
 });
