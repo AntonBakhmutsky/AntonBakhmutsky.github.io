@@ -59,7 +59,7 @@ window.addEventListener('load', () => {
           }
 
         } else if (leftX < 0) {
-          shift = left + leftX - 10 - winWidth / 2 + width / 2
+          shift = left + leftX - winWidth / 2 + width / 2
 
           if (['mobile', 'tablet'].includes(result.device.type) && result.os.name === 'iOS') {
             alert('true')
