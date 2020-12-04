@@ -13,6 +13,7 @@ window.addEventListener('load', () => {
     let draw = setInterval(() => {
       if (direction === 'right') {
         tabsContainer.scrollLeft += 10
+        alert(`scrollLeft: ${tabsContainer.scrollLeft} :: scrollWidth: ${tabsContainer.scrollWidth}`)
 
         if (tabsContainer.scrollLeft >= x || tabsContainer.scrollLeft >= tabsContainer.scrollWidth) {
           clearInterval(draw)
