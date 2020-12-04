@@ -1,6 +1,7 @@
 window.addEventListener('load', () => {
   // tabs
   const result = new UAParser().getResult()
+  alert('new')
 
   const tabs = document.querySelectorAll('.tab__btn')
   const tabsContainer = document.querySelector('.tab__container')
@@ -12,21 +13,21 @@ window.addEventListener('load', () => {
   function shiftAppleAnimation(direction, x) {
     let draw = setInterval(() => {
       if (direction === 'right') {
-        tabsContainer.scrollLeft += 5
+        tabsContainer.scrollLeft += 10
 
         if (tabsContainer.scrollLeft >= x) {
           clearInterval(draw)
         }
 
       } else if (direction === 'left') {
-          tabsContainer.scrollLeft -= 5
+          tabsContainer.scrollLeft -= 10
 
         if (tabsContainer.scrollLeft <= x) {
           clearInterval(draw)
         }
       }
 
-    }, 40)
+    }, 20)
   }
 
   function setShift(direction, shift) {    
