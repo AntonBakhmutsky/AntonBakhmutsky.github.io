@@ -1,24 +1,22 @@
 window.addEventListener('load', () => {
   // tabs
   const result = new UAParser().getResult()
-  console.log('new')
 
   const tabs = document.querySelectorAll('.tab__btn')
   const tabsContainer = document.querySelector('.tab__container')
   const activeClass = (document.querySelector('.tab__btn').classList.contains('tab__btn_gradientTheme')) ? 'tab__btn_active_gradientTheme' : 'tab__btn_active'
   let winWidth
-  let scrollWidth
+  let scrollProgress
   let left
   let shift
   
   function shiftAppleAnimation(direction, x) {
     let draw = setInterval(() => {
       if (direction === 'right') {
+        scrollProgress = tabsContainer.scrollLeft
         tabsContainer.scrollLeft += 10
-        scrollWidth = tabsContainer.scrollWidth
-        alert(`scrollLeft: ${tabsContainer.scrollLeft} :: scrollWidth: ${tabsContainer.scrollWidth}`)
 
-        if (tabsContainer.scrollLeft >= x || tabsContainer.scrollLeft >= tabsContainer.scrollWidth) {
+        if (tabsContainer.scrollLeft >= x || tabsContainer.scrollLeft === scrollProgress) {
           clearInterval(draw)
         }
 
