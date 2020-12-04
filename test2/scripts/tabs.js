@@ -15,14 +15,14 @@ window.addEventListener('load', () => {
     let draw = setInterval(() => {
       if (direction === 'right') {
         scrollProgress = tabsContainer.scrollLeft
-        tabsContainer.scrollLeft++
+        tabsContainer.scrollLeft += 3
 
         if (tabsContainer.scrollLeft >= x || tabsContainer.scrollLeft === scrollProgress) {
           clearInterval(draw)
         }
 
       } else if (direction === 'left') {
-          tabsContainer.scrollLeft--
+          tabsContainer.scrollLeft -= 3
 
         if (tabsContainer.scrollLeft <= x || tabsContainer.scrollLeft <= 0) {
           clearInterval(draw)
