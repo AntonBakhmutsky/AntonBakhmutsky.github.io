@@ -1,6 +1,7 @@
 window.addEventListener('load', () => {
   // tabs
   const result = new UAParser().getResult()
+  console.log('!!!!!!!!!!!!!!')
 
   const tabs = document.querySelectorAll('.tab__btn')
   const tabsContainer = document.querySelector('.tab__container')
@@ -14,21 +15,21 @@ window.addEventListener('load', () => {
     let draw = setInterval(() => {
       if (direction === 'right') {
         scrollProgress = tabsContainer.scrollLeft
-        tabsContainer.scrollLeft += 3
+        tabsContainer.scrollLeft += 2
 
         if (tabsContainer.scrollLeft >= x || tabsContainer.scrollLeft === scrollProgress) {
           clearInterval(draw)
         }
 
       } else if (direction === 'left') {
-          tabsContainer.scrollLeft -= 3
+          tabsContainer.scrollLeft -= 2
 
         if (tabsContainer.scrollLeft <= x || tabsContainer.scrollLeft <= 0) {
           clearInterval(draw)
         }
       }
 
-    }, 1)
+    }, 5)
   }
 
   function setShift(direction, shift) {    
