@@ -1,6 +1,6 @@
 window.addEventListener('load', () => {
   // tabs
-  const result = new UAParser().getResult()
+  const userAgent = new UAParser().getResult()
 
   const tabs = document.querySelectorAll('.tab__btn')
   const tabsContainer = document.querySelector('.tab__container')
@@ -27,12 +27,11 @@ window.addEventListener('load', () => {
           clearInterval(draw)
         }
       }
-
     }, 2)
   }
 
   function setShift(direction, shift) {    
-    if (['mobile', 'tablet'].includes(result.device.type) && result.os.name === 'iOS') {
+    if (['mobile', 'tablet'].includes(userAgent.device.type) && userAgent.os.name === 'iOS') {
       shiftAppleAnimation(direction, shift)
     } else {
       tabsContainer.scrollLeft = shift
@@ -69,4 +68,4 @@ window.addEventListener('load', () => {
   }
 
   tabs.forEach(el => el.addEventListener('click', chooseTab))
-});
+})
