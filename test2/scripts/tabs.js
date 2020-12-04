@@ -1,6 +1,7 @@
 window.addEventListener('load', () => {
   // tabs
   const result = new UAParser().getResult()
+  console.log('new')
 
   const tabs = document.querySelectorAll('.tab__btn')
   const tabsContainer = document.querySelector('.tab__container')
@@ -28,7 +29,7 @@ window.addEventListener('load', () => {
         }
       }
 
-    }, 0.00001)
+    }, 1)
   }
 
   function setShift(direction, shift) {    
