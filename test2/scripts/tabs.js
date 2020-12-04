@@ -1,6 +1,7 @@
 window.addEventListener('load', () => {
   // tabs
   const userAgent = new UAParser().getResult()
+  console.log('!!!')
 
   const tabs = document.querySelectorAll('.tab__btn')
   const tabsContainer = document.querySelector('.tab__container')
