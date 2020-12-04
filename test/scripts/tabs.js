@@ -33,6 +33,7 @@ window.addEventListener('load', () => {
 
   function setShift(direction, shift) {    
     if (['mobile', 'tablet'].includes(result.device.type) && result.os.name === 'iOS') {
+      alert('true')
       shiftAppleAnimation(direction, shift)
     } else {
       tabsContainer.scrollLeft = shift
