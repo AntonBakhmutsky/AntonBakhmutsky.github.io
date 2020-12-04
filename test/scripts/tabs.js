@@ -58,10 +58,10 @@ window.addEventListener('load', () => {
         const width = rect.width
         const rightX = leftX + width
       
-        if (rightX > winWidth) {
+        if (leftX + width / 2 < winWidth / 2) {
           shift = left + rightX - winWidth + winWidth / 2 - width / 2
           setShift('right', shift)
-        } else if (leftX < 0) {
+        } else {
           shift = left + leftX - winWidth / 2 + width / 2
           setShift('left', shift)  
         }    
