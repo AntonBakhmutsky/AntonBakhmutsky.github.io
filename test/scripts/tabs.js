@@ -11,15 +11,16 @@ window.addEventListener('load', () => {
   
   function shiftAppleAnimation(direction, x) {
     let draw = setInterval(() => {
-      if (direction === 'left') {
+      if (direction === 'right') {
         tabsContainer.scrollLeft += 10
 
         if (tabsContainer.scrollLeft >= x) {
           clearInterval(draw)
         }
 
-      } else if (direction === 'right') {
+      } else if (direction === 'left') {
           tabsContainer.scrollLeft -= 10
+          
         if (tabsContainer.scrollLeft <= x) {
           clearInterval(draw)
         }
