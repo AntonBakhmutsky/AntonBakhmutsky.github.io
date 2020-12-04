@@ -17,21 +17,6 @@
         max-width: fit-content;
         scrollbar-width: none;
         transition: .3s;
-
-        &::-webkit-scrollbar {
-          width: 0 !important;
-          height: 0 !important;
-        }
-
-        &::-webkit-scrollbar-thumb {
-          width: 0 !important;
-          height: 0 !important;
-        }
-        
-        &::-webkit-scrollbar-track {
-          width: 0 !important;
-          height: 0 !important;
-        }
       }
   
       &__btn {
@@ -63,6 +48,15 @@
     align-items: center;
     transition: .3s;
     scroll-behavior: smooth;
+
+    
+    &::-webkit-scrollbar {
+      display: none;
+      width: 0 !important;
+      height: 0 !important;
+      background: transparent;
+      appearance: none;
+    }
   }
 
   &__btn {

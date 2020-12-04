@@ -1187,10 +1187,6 @@ blockquote:after {
   scrollbar-width: none;
   transition: 0.3s;
 }
-.tab_timetable .tab__container::-webkit-scrollbar {
-  width: 0;
-  height: 0;
-}
 .tab_timetable .tab__btn {
   white-space: nowrap;
   margin: 0;
@@ -1214,6 +1210,13 @@ blockquote:after {
   align-items: center;
   transition: 0.3s;
   scroll-behavior: smooth;
+}
+.tab__container::-webkit-scrollbar {
+  display: none;
+  width: 0 !important;
+  height: 0 !important;
+  background: transparent;
+  appearance: none;
 }
 .tab__btn {
   display: block;
