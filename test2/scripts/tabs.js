@@ -22,7 +22,7 @@ window.addEventListener('load', () => {
       } else if (direction === 'left') {
           tabsContainer.scrollLeft -= 10
 
-        if (tabsContainer.scrollLeft <= x || tabsq.scrollLeft <= 0) {
+        if (tabsContainer.scrollLeft <= x || tabsContainer.scrollLeft <= 0) {
           clearInterval(draw)
         }
       }
