@@ -1,0 +1,130 @@
+$textFont: 'Montserrat', sans-serif;
+$headerFont: 'Montserrat', sans-serif;
+$numberFont: 'Montserrat', sans-serif;
+$lightColor: #FFB701;
+$darkColor: #3D3868;
+$darkColor_2: #0090BC;
+$grey: #6A6D8E;
+$textColor:#333333;
+$svgFill: #211D49;
+$svgFillActive: #fff;
+
+$mobile: '(max-width: 414px)';
+
+@mixin customRespondTo($_minWidth, $_maxWidth) {
+  @media (min-width: $_minWidth) and (max-width: $_maxWidth) {
+    @content;
+  }
+}
+
+
+@mixin screen($size) {
+    @media only screen and #{$size} {
+      @content;
+  }
+}
+
+
+@mixin customRespondMobile($_minWidth) {
+  @media (min-width: $_minWidth) {
+    @content;
+  }
+}
+
+@mixin container {
+  min-width: 320px;
+  margin: 0 auto;
+  display: flex;
+  box-sizing: border-box;
+}
+
+@mixin blockHeader {
+  font: bold 20px/24px $headerFont;
+  box-sizing: border-box;
+}
+
+@mixin btnBlue {
+  align-self: center;
+  width: 260px;
+  height: 48px;
+  border: none;
+  outline: none;
+  border-radius: 15px;
+  background: $lightColor;
+  font: bold 20px/24px $textFont;
+  color: $textColor;
+  white-space: nowrap;
+  &:disabled {
+    background: #9D9FB5;
+    color: #FFFFFF;
+  }
+}
+
+@mixin btnYellow {
+  align-self: center;
+  width: 260px;
+  height: 48px;
+  border: none;
+  outline: none;
+  border-radius: 15px;
+  background: $lightColor;
+  font: bold 20px/24px $textFont;
+  color: $textColor;
+  &:disabled {
+    background: #9D9FB5;
+    color: #FFFFFF;
+  }
+}
+
+@mixin btnViolet {
+  align-self: center;
+  width: 260px;
+  height: 48px;
+  border: none;
+  outline: none;
+  border-radius: 15px;
+  background: $darkColor_2;
+  font: bold 20px/24px $textFont;
+  color: #FEFEFE;
+}
+
+@mixin btnGray {
+  align-self: center;
+  width: 260px;
+  height: 48px;
+  border: none;
+  outline: none;
+  border-radius: 15px;
+  background: #68648C;
+  font: bold 20px/24px $textFont;
+  color: #FEFEFE;
+}
+
+@mixin more {
+  margin: 20px 0 20px 0;
+  width: 119px;
+  height: 23px;
+  padding: 0 10px;
+  box-sizing: border-box;
+  border-radius: 15px;
+  background-color: $lightColor;
+  color: #333333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+@mixin input {
+  width: 260px;
+  height: 48px;
+  border: none;
+  background-color: #EEF2F7;
+  box-sizing: border-box;
+  padding-left: 10px;
+  border-radius: 3px;
+  font: 16px/48px $headerFont;
+  &::placeholder {
+    color: #68648C;
+  }
+}
