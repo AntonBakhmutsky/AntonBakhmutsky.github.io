@@ -1,6 +1,7 @@
 window.addEventListener('load', () => {
   // tabs
   const result = new UAParser().getResult()
+  console.log('new')
 
   const tabs = document.querySelectorAll('.tab__btn')
   const tabsContainer = document.querySelector('.tab__container')
@@ -14,14 +15,14 @@ window.addEventListener('load', () => {
       if (direction === 'right') {
         tabsContainer.scrollLeft += 10
 
-        if (tabsContainer.scrollLeft >= x || tabsContainer.scrollLeft === tabsContainer.scrollWidth) {
+        if (tabsContainer.scrollLeft >= x || tabsContainer.scrollLeft >= tabsContainer.scrollWidth) {
           clearInterval(draw)
         }
 
       } else if (direction === 'left') {
           tabsContainer.scrollLeft -= 10
 
-        if (tabsContainer.scrollLeft <= x || tabsq.scrollLeft === 0) {
+        if (tabsContainer.scrollLeft <= x || tabsq.scrollLeft <= 0) {
           clearInterval(draw)
         }
       }
