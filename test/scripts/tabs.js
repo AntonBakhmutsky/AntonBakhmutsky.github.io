@@ -12,19 +12,17 @@ window.addEventListener('load', () => {
   function shiftAppleAnimation(direction, x) {
     let draw = setInterval(() => {
       if (direction === 'right') {
-        if (tabsContainer.scrollLeft >= x) {
-          tabsContainer.scrollLeft += x - tabsContainer.scrollLeft
-          clearInterval(draw)
-        } else {
+        if (tabsContainer.scrollLeft < x) {
           tabsContainer.scrollLeft += 10
+        } else {
+          clearInterval(draw)
         }
 
       } else if (direction === 'left') {
-        if (tabsContainer.scrollLeft <= x) {
-          tabsContainer.scrollLeft -= x + tabsContainer.scrollLeft
-          clearInterval(draw)
-        } else {
+        if (tabsContainer.scrollLeft > x) {
           tabsContainer.scrollLeft -= 10
+        } else {
+          clearInterval(draw)
         }
       }
 
@@ -32,12 +30,12 @@ window.addEventListener('load', () => {
   }
 
   function setShift(direction, shift) {    
-    // if (['mobile', 'tablet'].includes(result.device.type) && result.os.name === 'iOS') {
-    //   alert('true')
-    //   shiftAppleAnimation(direction, shift)
-    // } else {
+    if (['mobile', 'tablet'].includes(result.device.type) && result.os.name === 'iOS') {
+      alert('true')
+      shiftAppleAnimation(direction, shift)
+    } else {
       tabsContainer.scrollLeft = shift
-    // }
+    }
   }
   
   function chooseTab(event) {
