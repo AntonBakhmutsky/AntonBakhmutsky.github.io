@@ -1,6 +1,7 @@
 window.addEventListener('load', () => {
   // tabs
   const result = new UAParser().getResult()
+  console.log('new')
 
   const tabs = document.querySelectorAll('.tab__btn')
   const tabsContainer = document.querySelector('.tab__container')
@@ -58,10 +59,10 @@ window.addEventListener('load', () => {
       
         if (leftX + width / 2 < winWidth / 2) {
           shift = left + rightX - winWidth + winWidth / 2 - width / 2
-          setShift('right', shift)
+          setShift('left', shift)
         } else {
           shift = left + leftX - winWidth / 2 + width / 2
-          setShift('left', shift)  
+          setShift('right', shift)  
         }    
       }, 300)
   }
