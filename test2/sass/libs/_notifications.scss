@@ -1,0 +1,110 @@
+.notifications {
+  &__wrapper {
+    padding-bottom: 66px;
+  }
+
+  &__header {
+    @include blockHeader;
+    text-align: center;
+    padding: 17px 0 20px;
+  }
+
+  &__body {
+    background: #fff;
+    color: #131929;
+    box-sizing: border-box;
+    border-radius: 15px;
+
+    &Item {
+      box-sizing: border-box;
+      padding: 20px 0;
+      border-bottom: 2px solid #F0F0F0;
+
+      &:last-child {
+        border-bottom: 0;
+      }
+
+      &Date {
+        display: inline-block;
+        border-radius: 8px;
+        background: #7B8998;
+        height: 23px;
+        box-sizing: border-box;
+        padding: 0 10px;
+        margin: 0 30px;
+        color: #FEFEFE;
+        font: bold 15px/22px $headerFont;
+      }
+
+      &Header {
+        @include blockHeader;
+        margin: 20px 30px;
+      }
+
+      &Content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height .6s;
+
+        a {
+          text-decoration: underline;
+        }
+
+        p, ul, ol {
+          margin: 0 30px 20px 30px;
+        }
+
+        h1, h2, h3 {
+          margin: 0 30px 20px 30px;
+          font-family: $textFont;
+          font-weight: bold;
+          font-size: 20px;
+          line-height: 24px;
+        }
+
+        h2 {
+          font-size: 18px;
+          line-height: 22px;
+        }
+
+        h3 {
+          font-size: 16px;
+          line-height: 20px;
+        }
+
+        &Text {
+          margin-bottom: 20px;
+        }
+      }
+
+      &More {
+        .detailed {
+          margin-right: 10px;
+          display: none;
+        }
+        .collapsed {
+          margin-right: 10px;
+        }
+        &_active {
+          width: 106px;
+          .detailed {
+            display: block;
+          }
+          .collapsed {
+            display: none;
+          }
+          .notifications__bodyItemMoreArrow {
+            transform: rotate(180deg);
+          }
+        }
+
+        @include more;
+        margin: 0 30px;
+
+        &Text {
+          font: bold 12px/16px $textFont;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <title>give out a prize</title>
+</head>
+
+<body>
+<!--------------------------------------------- header --------------------------------------------->
+<header class="main__header">
+    <a href="#" class="main__headerArrow"><img class="main__headerArrowImg" src="img/union.svg" alt="arrow"></a>
+    <div class="main__headerRight">
+        <div class="main__headerTeam">
+            <img class="main__headerTeamImage" src="img/team.svg" alt="team">
+        </div>
+        <div class="main__headerFace">
+            <img class="main__headerFaceImage" src="img/face.svg" alt="face">
+        </div>
+    </div>
+</header>
+<!--------------------------------------------- main --------------------------------------------->
+<main>
+    <div class="main main_darkTheme">
+        <form class="givePrize">
+            <div class="givePrize__body">
+                <h2 class="givePrize__header">Выдать призы участнику</h2>
+                <button class="givePrize__qrBtn">Отсканировать QR-код</button>
+                <div class="givePrize__itemLabel">Или введите ID участника вручную</div>
+                <div class="givePrize__item">
+                    <input class="givePrize__itemInput" id="id" type="text" placeholder="ID участника">
+                    <div class="givePrize__itemCross"></div>
+                </div>
+                <div class="givePrize__itemLabel">Найти все призы по номеру телефона</div>
+                <div class="givePrize__item">
+                    <input class="givePrize__itemInput" type="tel" id="phone" placeholder="+_(___)___ - __ - __">
+                    <div class="givePrize__itemCross"></div>
+                </div>
+            </div>
+            <div class="givePrize__submit">
+                <input class="givePrize__submitBtn" type="submit" value="Отправить" disabled>
+            </div>
+        </form>
+        <div class="copyright_block">
+            <div class="text_block">
+                <p>Powered by</p>
+            </div>
+            <div class="img_block">
+                <img src="img/card-icon-v.svg" alt="card">
+            </div>
+        </div>
+    </div>
+</main>
+<!--------------------------------------------- footer --------------------------------------------->
+<footer class="main__footer">
+    <div class="main__footerItem">
+        <div class="main__footerItemImage  main__footerItemImage_tasks">
+        </div>
+        <div class="main__footerItemDesc">Прием заданий</div>
+    </div>
+    <div class="main__footerItem main__footerItem_active">
+        <div class="main__footerItemImage  main__footerItemImage_prizes">
+        </div>
+        <div class="main__footerItemDesc">Выдача призов</div>
+    </div>
+</footer>
+<script src="scripts/givePrize.js"></script>
+</body>
+
+</html>
