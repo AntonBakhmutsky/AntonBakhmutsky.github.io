@@ -1,0 +1,14 @@
+block variables
+  include ../../abstracts/variables
+
+//- mixins
+
+doctype html
+html(lang=lang)
+  head
+    include head
+  body
+    include header
+    block content
+    include footer
+    block modals
