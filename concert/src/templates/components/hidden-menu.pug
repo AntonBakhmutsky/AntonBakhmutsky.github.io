@@ -1,0 +1,10 @@
+.hidden-menu  
+  .navigation
+    each el in navMenu
+      a.navigation__link(href=el.href) #{el.name}
+    .socials
+      each el in socials
+        a.socials__link(href=el.href)
+          | !{el.src}
+    a.phone(href='tel:88002000666') 8 800 2000 666
+    a.mail.gray-link(href='mailto:nomercymusic@bk.ru') nomercymusic@bk.ru
