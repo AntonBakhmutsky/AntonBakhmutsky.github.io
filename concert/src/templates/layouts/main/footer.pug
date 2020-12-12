@@ -1,1 +1,24 @@
 footer.footer
+  .container
+    .flex-block
+      .header__menu-btn
+      a.logo(href="index.html")
+        | !{ require('!svg-inline-loader!@/assets/img/svg/global/logo.svg') }
+      .navigation
+        each el in navMenu
+          a.navigation__link(href=el.href) #{el.name}
+    .flex-block
+      .socials
+        each el in socials
+          a.socials__link(href=el.href)
+            | !{el.src}
+      a.phone(href='tel:88002000666') 8 800 2000 666
+      a.mail.gray-link(href='mailto:nomercymusic@bk.ru') nomercymusic@bk.ru
+      button.to-top
+        | !{ require('!svg-inline-loader!@/assets/img/svg/global/arrow.svg') }
+  .footer__copyright
+    .container
+      .footer__design Сайт разработан MironoF 2020 ©
+      .footer__links
+        each el in footerLinks
+          a.footer__links-item.gray-link(href=el.href) #{el.name}

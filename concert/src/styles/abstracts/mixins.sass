@@ -1,7 +1,7 @@
 @use './variables' as *
   
-=font($fontSize, $lineHeight, $fontFamily: $font, $weight: 400)
-  font: $weight #{$fontSize}/#{$lineHeight} $fontFamily
+=font($fontSize, $lineHeight, $weight: 400)
+  font: $weight #{$fontSize}/#{$lineHeight} $font
 
 =screen($size)
   @if $size == $tablet
