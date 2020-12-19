@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7e205e72-a0f9-48e8-9e55-e1b9b96d65e9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/learning/.editconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/learning/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/learning/src/registerServiceWorker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/learning/src/store.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning/babel.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/learning/babel.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/learning/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/learning/src/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -58,7 +53,7 @@
       <updated>1608293914094</updated>
       <workItem from="1608293915416" duration="1920000" />
       <workItem from="1608298887260" duration="5535000" />
-      <workItem from="1608305374217" duration="73000" />
+      <workItem from="1608305374217" duration="2220000" />
     </task>
     <task id="LOCAL-00001" summary="edits">
       <created>1608294495178</created>
@@ -88,7 +83,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608304243585</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="edits">
+      <created>1608305614705</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1608305614705</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
