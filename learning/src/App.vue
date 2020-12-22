@@ -1,14 +1,10 @@
-<template>
-  <div id="app">
-    Hello world!!!
-  </div>
+<template lang="pug">
+  #app Hello world!!!
 </template>
 
 <script>
-
 export default {
   name: 'App',
-  components: {
-  }
+  components: {}
 }
 </script>
