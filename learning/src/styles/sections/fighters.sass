@@ -1,0 +1,101 @@
+@use '../abstracts/variables' as *
+@use '../abstracts/mixins' as *
+
+.fighters
+  height: 1650px
+  margin-top: -150px
+  z-index: 4
+  position: relative
+  pointer-events: none
+  overflow: hidden
+  +screen($tablet)
+    box-sizing: border-box
+    padding: 30px 0
+    margin: 0
+    height: auto
+
+  &.lazyloaded
+    background: url(../assets/img/fighters/fighters_bg.png) no-repeat scroll 49.999% 0
+    +screen($tablet)
+      background: url(../assets/img/riders/mobile/riders_bg.jpg) repeat center 0
+
+  &__title
+    top: 65px
+    height: auto
+    +screen($tablet)
+      +cancel-position
+
+    &-text
+      +font(18px, 22px, $font-intro)
+      text-transform: none
+      +screen($tablet)
+        display: none
+
+  &__promo
+    pointer-events: auto
+    position: absolute
+    top: 248px
+    left: 50%
+    transform: translateX(-50%)
+    width: 100%
+    display: flex
+    box-sizing: border-box
+    padding: 0 30px
+    +screen($desktop-sm)
+      transform: translateX(-50%) scale(.85)
+    +screen($tablet)
+      display: none
+
+    &-image
+      width: 400px
+      height: 460px
+      flex-shrink: 0
+      transition: .2s
+      background-position: 50% 0
+      margin-right: 150px
+
+      &.lazyloaded
+        background-image: url(../assets/img/fighters/cards/khabib.png)
+
+        &:hover
+          background-image: url(../assets/img/fighters/cards/khabib_hover.png)
+
+    &-info
+      display: flex
+      flex-direction: column
+      text-transform: uppercase
+      color: $black
+
+    &-header
+      +font(40px, 45px, $font-dirty)
+      margin-top: 70px
+      max-width: 391px
+      position: relative
+
+      &::after
+        content: ''
+        position: absolute
+        bottom: 5px
+        right: 60px
+        width: 100%
+        height: 65px
+        z-index: -1
+
+      &.lazyloaded
+        &::after
+          background: url(../assets/img/global/feedback_title_stroke.png) center/contain no-repeat
+
+      span
+        +font(22px, 24px, $font-dirty)
+
+    &-discipline
+      +font(28px, 28px)
+      margin-top: 40px
+
+    &-more
+      margin-top: 40px
+
+  .human-slider
+    top: 720px
+    +screen($tablet)
+      top: inherit
