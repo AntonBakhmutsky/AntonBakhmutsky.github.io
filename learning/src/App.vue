@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    Hello world!!!
   </div>
 </template>
 
@@ -11,7 +12,3 @@ export default {
   }
 }
 </script>
-
-<style>
-
-</style>
