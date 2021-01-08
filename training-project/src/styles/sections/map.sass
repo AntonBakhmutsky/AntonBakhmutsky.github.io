@@ -1,0 +1,188 @@
+@use '../abstracts/variables' as *
+@use '../abstracts/mixins' as *
+
+.map
+  height: 900px
+  margin-top: -1050px
+  position: relative
+  overflow: hidden
+  +screen($desktop-sm)
+    margin-top: -900px
+  +screen($tablet)
+    margin: 0
+    box-sizing: border-box
+    background-color: $black
+    height: 1100px
+
+  .container
+    pointer-events: none
+    max-width: none
+    +screen($tablet)
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+
+  &__container
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    +screen($tablet)
+      top: 20%
+      height: 80%
+    +screen($tablet-sm)
+      top: 23%
+      height: 77%
+    +screen($mobile)
+      top: 28%
+      height: 72%
+
+    &::after
+      content: ''
+      width: 100%
+      height: 100%
+      position: absolute
+      top: 0
+      left: 0
+      pointer-events: none
+
+  &__title
+    top: 110px
+    +screen($tablet)
+      top: 20px
+
+    &_hide
+      display: none
+
+  &__controls
+    height: 134px
+    position: absolute
+    top: 390px
+    left: 40px
+    pointer-events: auto
+    +screen($tablet)
+      top: calc(100% - 250px)
+      z-index: 16
+
+    &-item
+      display: block
+      margin-bottom: 20px
+      width: 63px
+      height: 57px
+
+      &:hover:not(.map__controls-item_disabled)
+        background-position: 0 -57px
+
+      &_disabled
+        &.lazyloaded
+          background-position: 0 -114px !important
+
+      &_plus
+        &.lazyloaded
+          background: url(../assets/img/map/sellpoints_map_plus.png)
+
+      &_minus
+        &.lazyloaded
+          background: url(../assets/img/map/sellpoints_map_minus.png)
+
+  &__selects
+    position: absolute
+    top: 290px
+    left: 50%
+    transform: translateX(-50%)
+    width: 612px
+    height: 58px
+    display: flex
+    justify-content: space-between
+    pointer-events: auto
+    +screen($tablet)
+      width: 600px
+      top: 90px
+    +screen($tablet-sm)
+      width: 286px
+      flex-direction: column
+      height: auto
+    +screen($mobile)
+      top: 160px
+
+    &_hide
+      display: none
+
+    .select
+      &__filter
+        opacity: .95
+        display: block
+        width: 286px
+        height: 100%
+        +screen($tablet)
+          opacity: 1
+          height: 58px
+
+        &_countries
+          +screen($tablet-sm)
+            z-index: 15
+
+        &_cities
+          +screen($tablet-sm)
+            z-index: 14
+            margin-top: 10px
+
+      &__container
+        height: 100%
+
+      &__input
+        padding: 17px 25px 17px 0
+        box-sizing: border-box
+
+        .select__text
+          color: $black
+
+        &.lazyloaded
+          background: url(../assets/img/map/sellpoints_map_select.png) no-repeat 0 0 / 100% 58px
+
+      &__item
+        padding-left: 25px
+
+      &__text
+        position: inherit
+
+        &::before
+          display: none
+
+        &.lazyloaded
+          &::after
+            background: url(../assets/img/global/dropdown-arr.png) no-repeat center
+            right: 20px
+            left: inherit
+            z-index: 15
+
+      &__options
+        top: -4px
+        left: 0
+        width: 100%
+        +screen($tablet)
+          transform: none
+
+        &_active
+          height: 300px
+
+        &::before
+          width: 100%
+          height: 300px
+          box-shadow: none
+
+        &-wrap
+          width: 100%
+          height: 300px
+
+          &.lazyloaded
+            background: url(../assets/img/map/sellpoints_map_select_bg.png) no-repeat center bottom / 100% 305px
+
+        &-content
+          height: 300px
+
+        &-head
+          display: none

@@ -1,12 +1,16 @@
 <template lang="pug">
-  #app Hello world!!!
+  #app
+    Preloader
 </template>
 
 <script>
 import '@/styles/app.sass'
+import Preloader from '@/components/Preloader'
 
 export default {
   name: 'App',
-  components: {}
+  components: {
+    Preloader
+  }
 }
 </script>
