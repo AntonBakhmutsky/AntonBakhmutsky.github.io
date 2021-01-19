@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "animejs": "^3.2.0",
+    "body-scroll-lock": "^3.1.5",
     "core-js": "^2.6.5",
     "rellax": "^1.12.1",
     "viewport-units-buggyfill": "^0.6.2",
