@@ -8,8 +8,8 @@
 <script>
 import '@/styles/app.sass'
 import Preloader from '@/components/Preloader'
-import HeaderTop from '@/components/header/HeaderTop'
 import Header from '@/components/header/Header'
+import HeaderTop from '@/components/header/HeaderTop'
 
 export default {
   name: 'App',

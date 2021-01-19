@@ -1,24 +1,28 @@
 <template lang="pug">
   header.header.rellax#header
     HeaderVideo
-    HeaderTitle
-    HeaderCollection
+    .container
+      HeaderTitle
+      HeaderSocials
+      HeaderCollection
 </template>
 
 <script>
 import Rellax from 'rellax'
 import anime from 'animejs'
 
-import HeaderVideo from '@/components/header/HeaderVideo'
-import HeaderTitle from '@/components/header/HeaderTitle'
-import HeaderCollection from '@/components/header/HeaderCollection'
+import HeaderSocials from './HeaderSocials'
+import HeaderTitle from './HeaderTitle'
+import HeaderCollection from './HeaderCollection'
+import HeaderVideo from './HeaderVideo'
 
 export default {
   name: 'Header',
   components: {
+    HeaderVideo,
     HeaderCollection,
     HeaderTitle,
-    HeaderVideo
+    HeaderSocials
   },
   mounted () {
     this.$nextTick(() => {
@@ -36,7 +40,7 @@ export default {
       const headerTop = document.querySelector('.header__top.animated')
       const headerSocialsLink = document.querySelectorAll('.header .header__socials-link.animated')
       const headerCollection = document.querySelector('.header .header__collection.animated')
-      const headerTitle = document.querySelector('.header .header__title-stroke.animated')
+      const headerTitle = document.querySelector('.header .header__title.animated')
       const headerTitleStroke = document.querySelector('.header .header__title-stroke.animated')
 
       anime.timeline()
@@ -50,6 +54,7 @@ export default {
         .add({
           targets: headerSocialsLink,
           opacity: [0, 1],
+          scale: [3, 1],
           translateX: ['50%', 0],
           translateY: ['50%', 0],
           duration: 400,

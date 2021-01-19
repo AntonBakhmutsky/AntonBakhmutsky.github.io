@@ -1,5 +1,5 @@
 <template lang="pug">
-  .preloder(:class="{'preloader-hidden': !active}")
+  .preloader(:class="{ 'preloader-hidden': !active }")
     img(src="@/assets/img/global/preloader.gif" alt="")
 </template>
 

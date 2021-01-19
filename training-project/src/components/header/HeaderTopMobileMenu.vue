@@ -10,7 +10,7 @@
         a.hidden-menu__item.hidden-menu__item_fighter(href="javascript:")
           | Khabib
           br
-          | Nurmagamedov
+          | Nurmagomedov
           span
             | Gorilla Energy
             br

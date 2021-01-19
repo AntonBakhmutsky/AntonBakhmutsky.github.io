@@ -1,10 +1,11 @@
 <template lang="pug">
   .header__socials
-    a.header__socials-link(
+    a.header__socials-link.animated(
       v-for="item in socials"
       :key="item.code"
       :class="[ `header__socials-link_${item.code}` ]"
       :href="item.href"
+      target="_blank"
       rel="noopener noreferrer"
     )
       img(:src="item.img" alt="")

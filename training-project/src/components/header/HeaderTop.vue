@@ -8,16 +8,16 @@
 </template>
 
 <script>
-import HeaderTopMobileMenu from '@/components/header/HeaderTopMobileMenu'
-import HeaderTopLanguage from '@/components/header/HeaderTopLanguage'
-import HeaderTopMenu from '@/components/header/HeaderTopMenu'
+import HeaderTopLanguage from './HeaderTopLanguage'
+import HeaderTopMenu from './HeaderTopMenu'
+import HeaderTopMobileMenu from './HeaderTopMobileMenu'
 
 export default {
   name: 'HeaderTop',
   components: {
+    HeaderTopMobileMenu,
     HeaderTopMenu,
-    HeaderTopLanguage,
-    HeaderTopMobileMenu
+    HeaderTopLanguage
   }
 }
 </script>
