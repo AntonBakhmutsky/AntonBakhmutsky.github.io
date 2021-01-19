@@ -2,6 +2,7 @@
   .header__socials
     a.header__socials-link.animated(
       v-for="item in socials"
+      ref="links"
       :key="item.code"
       :class="[ `header__socials-link_${item.code}` ]"
       :href="item.href"
@@ -12,6 +13,8 @@
 </template>
 
 <script>
+import anime from 'animejs'
+
 export default {
   name: 'HeaderSocials',
   data: () => ({
@@ -37,6 +40,20 @@ export default {
         href: 'https://youtube.com/gorillaenergy'
       }
     ]
-  })
+  }),
+  mounted () {
+    this.$nextTick(() => {
+      anime({
+        targets: this.$refs.links,
+        opacity: [0, 1],
+        scale: [3, 1],
+        translateX: ['50%', 0],
+        translateY: ['50%', 0],
+        duration: 400,
+        delay: anime.stagger(200, { start: 800 }),
+        easing: 'easeOutQuad'
+      })
+    })
+  }
 }
 </script>
