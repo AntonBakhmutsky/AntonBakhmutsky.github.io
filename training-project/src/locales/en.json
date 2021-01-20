@@ -1,5 +1,27 @@
 {
   "header": {
-
+    "title": "Gorilla Energy",
+    "tagline": "Unleash your limitless power",
+    "collection": "Coming soon<br>Gorilla wear<br><span>on shop.gorillaenergy.com</span>",
+    "feedback": "Send message",
+    "ambassador": "Khabib<br>Nurmagomedov<span>Gorilla Energy<br>Ambassador</span>"
+  },
+  "products": {
+    "title": "Products"
+  },
+  "riders": {
+    "title": "Gorilla Riders"
+  },
+  "fighters": {
+    "title": "Fighters"
+  },
+  "news": {
+    "title": "News | Events"
+  },
+  "contacts": {
+    "title": "Contact us"
+  },
+  "map": {
+    "title": "Where to buy"
   }
 }

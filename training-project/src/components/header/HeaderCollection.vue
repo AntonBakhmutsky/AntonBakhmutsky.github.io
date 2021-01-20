@@ -1,11 +1,6 @@
 <template lang="pug">
   .header__collection.animated
-    .header__collection-text
-      | Coming soon
-      br
-      | Gorilla wear
-      br
-      span on shop.gorillaenergy.com
+    .header__collection-text(v-html="$t('header.collection')")
 </template>
 
 <script>

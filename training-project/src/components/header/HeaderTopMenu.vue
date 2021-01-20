@@ -20,17 +20,17 @@
 <script>
 export default {
   name: 'HeaderTopMenu',
-  data: () => ({
+  data: vm => ({
     leftMenu: [
-      { title: 'Products', href: '#products' },
-      { title: 'Gorilla Riders', href: '#riders' },
-      { title: 'Fighters', href: '#fighters' },
-      { title: 'News | Events', href: '#news' }
+      { title: vm.$t('products.title'), href: '#products' },
+      { title: vm.$t('riders.title'), href: '#riders' },
+      { title: vm.$t('fighters.title'), href: '#fighters' },
+      { title: vm.$t('news.title'), href: '#news' }
     ],
     rightMenu: [
-      { title: 'Contact us', href: '#contacts' },
-      { title: 'Where to buy', href: '#map' },
-      { title: 'Send message', href: 'javascript:', modifier: 'feedback' }
+      { title: vm.$t('contacts.title'), href: '#contacts' },
+      { title: vm.$t('map.title'), href: '#map' },
+      { title: vm.$t('header.feedback'), href: 'javascript:', modifier: 'feedback' }
     ]
   })
 }

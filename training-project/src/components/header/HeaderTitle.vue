@@ -2,8 +2,8 @@
   .header__title.animated
     .header__title-stroke-container
       .header__title-stroke.animated(ref="stroke")
-    h1 Gorilla Energy
-    p Unleash your limitless power
+    h1 {{ $t('header.title') }}
+    p {{ $t('header.tagline') }}
 </template>
 
 <script>

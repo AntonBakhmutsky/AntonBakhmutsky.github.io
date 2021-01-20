@@ -18,14 +18,10 @@
             :key="item.href"
             :href="item.href"
           ) {{ item.title }}
-          a.hidden-menu__item.hidden-menu__item_fighter(href="javascript:")
-            | Khabib
-            br
-            | Nurmagomedov
-            span
-              | Gorilla Energy
-              br
-              | Ambassador
+          a.hidden-menu__item.hidden-menu__item_fighter(
+            v-html="$t('header.ambassador')"
+            href="javascript:"
+          )
 </template>
 
 <script>
@@ -33,16 +29,16 @@ import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock'
 
 export default {
   name: 'HeaderTopMobileMenu',
-  data: () => ({
+  data: vm => ({
     active: false,
     links: [
-      { title: 'Products', href: '#products' },
-      { title: 'Gorilla Riders', href: '#riders' },
-      { title: 'Fighters', href: '#fighters' },
-      { title: 'News | Events', href: '#news' },
-      { title: 'Contact us', href: '#contacts' },
-      { title: 'Where to buy', href: '#map' },
-      { title: 'Send message', href: 'javascript:' }
+      { title: vm.$t('products.title'), href: '#products' },
+      { title: vm.$t('riders.title'), href: '#riders' },
+      { title: vm.$t('fighters.title'), href: '#fighters' },
+      { title: vm.$t('news.title'), href: '#news' },
+      { title: vm.$t('contacts.title'), href: '#contacts' },
+      { title: vm.$t('map.title'), href: '#map' },
+      { title: vm.$t('header.feedback'), href: 'javascript:' }
     ]
   }),
   watch: {
