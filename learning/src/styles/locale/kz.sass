@@ -1,0 +1,46 @@
+@use '../abstracts/variables' as *
+@use '../abstracts/mixins' as *
+
+.locale-kz
+  .header__menu-item
+    +font(16px, 25px, $font-rubik)
+    padding: 0 10px
+
+  .hidden-menu__item
+    +font(15px, 30px, $font-rubik)
+
+  .hidden-header__menu-item
+    +font(18px, 27px, $font-rubik)
+
+  .header__title p,
+  .section-title,
+  .product__choosen-name,
+  .modal__product .modal__product-header,
+  .modal__message .form__header
+      font-family: $font-rubik
+      font-weight: 700
+
+  .header__title p
+    text-transform: uppercase
+
+  .products__choosen-info-top p,
+  .modal__product .modal__product-text p
+    +font(20px, 22px, $font-rubik)
+
+  .products__choosen-info-list
+    +font(14px, 24px, $font-rubik)
+
+  .modal__product .modal__product-list
+    +font(16px, 24px, $font-rubik)
+
+  .modal__message .form__text,
+  .form__item-label,
+  .form__item-error,
+  .form__item-message,
+  .form__item-input
+    font-family: $font-rubik
+
+  .map__title.section-title
+    +screen($mobile)
+      font-size: 25px
+
