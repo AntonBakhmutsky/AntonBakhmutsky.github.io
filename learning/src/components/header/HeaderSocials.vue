@@ -4,23 +4,43 @@
       ref="links"
       v-for="item in socials"
       :key="item.code"
-      :class="`header__socials-link_${item.code}`"
+      :class="[ `header__socials-link_${item.code}` ]"
       :href="item.href"
       target="_blank"
       rel="noopener noreferrer"
     )
-      img(:src="require(`@/assets/img/header/socials/header-${item.code}.png`)" alt="")
+      img(:src="item.img" alt="")
 </template>
 
 <script>
 import anime from 'animejs'
-import { mapState } from 'vuex'
 
 export default {
   name: 'HeaderSocials',
-  computed: {
-    ...mapState('main', ['socials'])
-  },
+  data: () => ({
+    socials: [
+      {
+        code: 'vk',
+        img: require('@/assets/img/header/socials/header-vk.png'),
+        href: 'https://vk.com/gorillaenergy'
+      },
+      {
+        code: 'fb',
+        img: require('@/assets/img/header/socials/header-fb.png'),
+        href: 'https://facebook.com/gorillaenergy'
+      },
+      {
+        code: 'ig',
+        img: require('@/assets/img/header/socials/header-ig.png'),
+        href: 'https://instagram.com/gorillaenergy'
+      },
+      {
+        code: 'yt',
+        img: require('@/assets/img/header/socials/header-yt.png'),
+        href: 'https://youtube.com/gorillaenergy'
+      }
+    ]
+  }),
   mounted () {
     this.$nextTick(() => {
       anime({

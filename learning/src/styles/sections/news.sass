@@ -16,21 +16,13 @@
     height: auto
     padding: 30px 0
 
-  &[data-lazyloaded]
+  &.lazyloaded
     background: url(../assets/img/news/news_bg.png) no-repeat scroll 49.999% 15px
-
-  &__preloader
-    position: absolute
-    left: 50%
-    top: 50%
-    transform: translate(-50%, -50%)
 
   .container
     display: flex
     flex-direction: column
     align-items: center
-    +screen($tablet)
-      min-height: 800px
 
   &__bg-color
     position: absolute
@@ -49,7 +41,7 @@
     +screen($tablet)
       display: none
 
-    &[data-lazyloaded]
+    &.lazyloaded
       background: url(../assets/img/news/news_bg_overlay.png) repeat scroll 49.999% 0
 
   &__bottom
@@ -65,7 +57,7 @@
       width: 100%
       height: 864px
 
-      &[data-lazyloaded]
+      &.lazyloaded
         background: url(../assets/img/news/news_bg_left.png) no-repeat scroll 49.999% 0
 
     &-right
@@ -74,7 +66,7 @@
       width: 100%
       height: 822px
 
-      &[data-lazyloaded]
+      &.lazyloaded
         background: url(../assets/img/news/news_bg_right.png) no-repeat scroll 49.999% 0
 
   &__title
@@ -116,7 +108,7 @@
           align-items: center
           +font(18px, 18px)
 
-          &[data-lazyloaded]
+          &.lazyloaded
             background: url(../assets/img/news/mobile/news_filter_bg.png) no-repeat center 0 / 173px 45px
 
           .select__item
@@ -126,7 +118,7 @@
           .select__text
             margin-top: -3px
 
-            &[data-lazyloaded]
+            &.lazyloaded
               &::before
                 background-image: url(../assets/img/news/mobile/news_filter_underline.png)
 
@@ -135,7 +127,7 @@
 
         &__options
           top: calc(100% + 20px)
-          max-height: 250px
+          max-height: 150px
           overflow: hidden
 
     &-item
@@ -147,33 +139,32 @@
       color: $white
       text-transform: uppercase
       transition: color .2s
-      cursor: pointer
 
       &:hover:not(.news__filter-item_active)
         color: $orange
 
-      &[data-lazyloaded]
+      &.lazyloaded
         background: url(../assets/img/news/news_filter.png) repeat scroll 0 0
 
       &_all
         width: 193px
 
-        &[data-lazyloaded]
+        &.lazyloaded
           background: url(../assets/img/news/news_filter_all.png) repeat scroll 0 0
 
       &_active
-        &[data-lazyloaded]
+        &.lazyloaded
           background: url(../assets/img/news/news_filter_selected.png) repeat scroll 0 0
 
       &_active.news__filter-item_all
-        &[data-lazyloaded]
+        &.lazyloaded
           background: url(../assets/img/news/news_filter_all_selected.png) repeat scroll 0 0
 
     &-delimiter
       width: 24px
       height: 45px
 
-      &[data-lazyloaded]
+      &.lazyloaded
         background: url(../assets/img/news/news_filter_delimiter.png) repeat scroll 0 0
 
   &-slider
@@ -194,6 +185,7 @@
     &__content
       display: flex
       flex-wrap: wrap
+      max-height: 920px
       overflow: hidden
       +screen($tablet)
         position: absolute
@@ -226,14 +218,14 @@
       &_left
         left: 0
 
-        &[data-lazyloaded]
+        &.lazyloaded
           +screen($tablet)
             background: url(../assets/img/riders/mobile/riders_gallery_arr_left.png) no-repeat center/contain !important
 
       &_right
         right: 0
 
-        &[data-lazyloaded]
+        &.lazyloaded
           +screen($tablet)
             background: url(../assets/img/riders/mobile/riders_gallery_arr_right.png) no-repeat center/contain !important
 

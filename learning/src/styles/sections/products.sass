@@ -16,20 +16,10 @@
     pointer-events: auto
     padding: 30px 0 60px 0
 
-  &[data-lazyloaded]
+  &.lazyloaded
     background: url("../assets/img/products/products_bg.png") no-repeat center
     +screen($tablet)
       background: url("../assets/img/products/products_mobile_bg.jpg") no-repeat center top
-
-  &__preloader
-    position: absolute
-    left: 50%
-    top: 50%
-    transform: translate(-50%, -50%)
-
-  .container
-    +screen($tablet)
-      min-height: 400px
 
   &__broken-ground
     position: absolute
@@ -40,7 +30,7 @@
     +screen($tablet)
       display: none
 
-    &[data-lazyloaded]
+    &.lazyloaded
       background: url(../assets/img/products/products_broken_ground.png) no-repeat center -30px
 
   &__title
@@ -50,23 +40,27 @@
 
   &__choose
     position: absolute
-    top: 220px
+    top: 358px
     left: 40px
     +font(35px, 45px)
     text-transform: uppercase
-    z-index: 2
+    +screen($desktop-sm)
+      top: 220px
     +screen($tablet)
       display: none
 
   &__list
     position: absolute
+    right: 40px
     top: 310px
     height: 203px
     display: flex
     pointer-events: auto
     z-index: 1
-    left: 50%
-    transform: translateX(-50%)
+    +screen($desktop-sm)
+      right: inherit
+      left: 50%
+      transform: translateX(-50%)
     +screen($tablet)
       display: none
 
@@ -82,7 +76,6 @@
       color: $white
       text-align: center
       transition: color .2s ease-out
-      cursor: pointer
       +screen($desktop-sm)
         margin-left: 0
 
@@ -102,7 +95,7 @@
         pointer-events: none
         z-index: -1
 
-      &[data-lazyloaded]
+      &.lazyloaded
         &::before
           background: url(../assets/img/products/products_product_hover.png) no-repeat
 
@@ -116,7 +109,7 @@
           color: $green
 
         &_orange
-          color: $yellow-light
+          color: $orange
 
         &_ice
           color: $blue
@@ -124,49 +117,39 @@
         &_pomegranate
           color: $red
 
-        &_pepper
+        &_california
           color: $pink
 
-        &_mango
-          color: $mango
-
-      &_mango
-        &[data-lazyloaded]
-          background: url(../assets/img/products/products_mango.png) no-repeat center top
-
-        &:hover
-          color: $mango
-
       &_original
-        &[data-lazyloaded]
+        &.lazyloaded
           background: url(../assets/img/products/products_original.png) no-repeat center top
 
         &:hover
           color: $green
 
       &_orange
-        &[data-lazyloaded]
+        &.lazyloaded
           background: url(../assets/img/products/products_orange.png) no-repeat center top
 
         &:hover
-          color: $yellow-light
+          color: $orange
 
       &_ice
-        &[data-lazyloaded]
+        &.lazyloaded
           background: url(../assets/img/products/products_ice.png) no-repeat center top
 
         &:hover
           color: $blue
 
       &_pomegranate
-        &[data-lazyloaded]
+        &.lazyloaded
           background: url(../assets/img/products/products_pomegranate.png) no-repeat center top
 
         &:hover
           color: $red
 
-      &_pepper
-        &[data-lazyloaded]
+      &_california
+        &.lazyloaded
           background: url(../assets/img/products/products_pepper.png) no-repeat center top
 
         &:hover
@@ -189,9 +172,6 @@
       width: 255px
       height: 660px
       pointer-events: none
-      background-position: center
-      background-size: cover
-      background-repeat: no-repeat
 
       &-hole-back
         position: absolute
@@ -311,83 +291,11 @@
               left: 0
               top: 0
 
-    &_mango
+    &_original
       .products__choosen
         &-can
-          &[data-lazyloaded]
-            background-image: url(../assets/img/products/products_big_can_mango.png)
-
-          &-splash
-            &_1
-              top: -111px
-              left: -376px
-              width: 677px
-              height: 782px
-
-              &[data-lazyloaded]
-                background: url(../assets/img/products/products_splash1_mango.png) no-repeat
-
-            &_2
-              top: -87px
-              left: -126px
-              width: 677px
-              height: 684px
-
-              &[data-lazyloaded]
-                background: url(../assets/img/products/products_splash2_mango.png) no-repeat scroll right center
-
-          &-sublight
-            &[data-lazyloaded]
-              background: url(../assets/img/products/products_sublight_mango.png) no-repeat scroll 0 0
-
-        &-splatter
-          &_1
-            &[data-lazyloaded]
-              background: url(../assets/img/products/products_splatter1_mango.png) no-repeat scroll 0 0
-          &_2
-            &[data-lazyloaded]
-              background: url(../assets/img/products/products_splatter2_mango.png) no-repeat scroll 0 0
-          &_3
-            &[data-lazyloaded]
-              background: url(../assets/img/products/products_splatter3_mango.png) no-repeat scroll 0 0
-          &_4
-            &[data-lazyloaded]
-              background: url(../assets/img/products/products_splatter4_mango.png) no-repeat scroll 0 0
-          &_5
-            &[data-lazyloaded]
-              background: url(../assets/img/products/products_splatter5_mango.png) no-repeat scroll 0 0
-
-        &-human
-          &_1
-            left: -230px
-            top: -70px
-
-          &_2
-            left: -240px
-            top: 360px
-
-          &_3
-            left: 300px
-            top: -30px
-
-        &-info
-          &-content
-            position: relative
-
-            &[data-lazyloaded]
-              background: url("../assets/img/products/products_info_panel_mango.png") no-repeat scroll 0 0
-
-            &_mango
-              display: block
-
-    &_original        
-      .product__bottle_original
-        display: block
-
-      .products__choosen
-        &-can
-          &[data-lazyloaded]
-            background-image: url(../assets/img/products/products_big_can_original.png)
+          &.lazyloaded
+            background: url(../assets/img/products/products_big_can_original.png) no-repeat
 
           &-splash
             &_1
@@ -396,7 +304,7 @@
               width: 658px
               height: 573px
 
-              &[data-lazyloaded]
+              &.lazyloaded
                 background: url(../assets/img/products/products_splash1.png) no-repeat
 
             &_2
@@ -405,33 +313,33 @@
               width: 574px
               height: 540px
 
-              &[data-lazyloaded]
+              &.lazyloaded
                 background: url(../assets/img/products/products_splash2.png) no-repeat scroll right center
 
           &-sublight
-            &[data-lazyloaded]
+            &.lazyloaded
               background: url(../assets/img/products/products_sublight_original.png) no-repeat scroll 0 0
 
         &-splatter
           &_1
-            &[data-lazyloaded]
+            &.lazyloaded
               background: url(../assets/img/products/products_splatter1_original.png) no-repeat scroll 0 0
           &_2
-            &[data-lazyloaded]
+            &.lazyloaded
               background: url(../assets/img/products/products_splatter2_original.png) no-repeat scroll 0 0
           &_3
-            &[data-lazyloaded]
+            &.lazyloaded
               background: url(../assets/img/products/products_splatter3_original.png) no-repeat scroll 0 0
           &_4
-            &[data-lazyloaded]
+            &.lazyloaded
               background: url(../assets/img/products/products_splatter4_original.png) no-repeat scroll 0 0
           &_5
-            &[data-lazyloaded]
+            &.lazyloaded
               background: url(../assets/img/products/products_splatter5_original.png) no-repeat scroll 0 0
 
         &-human
           &_1
-            left: -340px
+            left: -240px
             top: 234px
 
           &_2
@@ -446,7 +354,7 @@
           &-content
             position: relative
 
-            &[data-lazyloaded]
+            &.lazyloaded
               background: url("../assets/img/products/products_info_panel_original.png") no-repeat scroll 0 0
 
             &_original
@@ -457,14 +365,10 @@
               width: 300px
 
     &_orange
-      .product__bottle_orange
-        display: block
-        left: 360px
-
       .products__choosen
         &-can
-          &[data-lazyloaded]
-            background-image: url(../assets/img/products/products_big_can_orange.png)
+          &.lazyloaded
+            background: url(../assets/img/products/products_big_can_orange.png) no-repeat
 
           &-splash
             &_1
@@ -473,7 +377,7 @@
               width: 655px
               height: 628px
 
-              &[data-lazyloaded]
+              &.lazyloaded
                 background: url(../assets/img/products/products_splash1_orange.png) no-repeat
 
             &_2
@@ -482,28 +386,28 @@
               width: 706px
               height: 765px
 
-              &[data-lazyloaded]
+              &.lazyloaded
                 background: url(../assets/img/products/products_splash2_orange.png) no-repeat
 
           &-sublight
-            &[data-lazyloaded]
+            &.lazyloaded
               background: url(../assets/img/products/products_sublight_orange.png) no-repeat scroll 0 0
 
         &-splatter
           &_1
-            &[data-lazyloaded]
+            &.lazyloaded
               background: url(../assets/img/products/products_splatter1_orange.png) no-repeat
           &_2
-            &[data-lazyloaded]
+            &.lazyloaded
               background: url(../assets/img/products/products_splatter2_orange.png) no-repeat scroll 0 0
           &_3
-            &[data-lazyloaded]
+            &.lazyloaded
               background: url(../assets/img/products/products_splatter3_orange.png) no-repeat scroll 0 0
           &_4
-            &[data-lazyloaded]
+            &.lazyloaded
               background: url(../assets/img/products/products_splatter4_orange.png) no-repeat scroll 0 0
           &_5
-            &[data-lazyloaded]
+            &.lazyloaded
               background: url(../assets/img/products/products_splatter5_orange.png) no-repeat scroll 0 0
 
         &-human
@@ -523,7 +427,7 @@
 
         &-info
           &-content
-            &[data-lazyloaded]
+            &.lazyloaded
               background: url("../assets/img/products/products_info_panel_orange.png") no-repeat scroll 0 0
 
             &_orange
@@ -532,8 +436,8 @@
     &_ice
       .products__choosen
         &-can
-          &[data-lazyloaded]
-            background-image: url(../assets/img/products/products_big_can_ice.png)
+          &.lazyloaded
+            background: url(../assets/img/products/products_big_can_ice.png) no-repeat
 
           &-splash
             &_1
@@ -542,7 +446,7 @@
               width: 707px
               height: 650px
 
-              &[data-lazyloaded]
+              &.lazyloaded
                 background: url(../assets/img/products/products_splash1_ice.png) no-repeat
 
             &_2
@@ -551,28 +455,28 @@
               width: 818px
               height: 654px
 
-              &[data-lazyloaded]
+              &.lazyloaded
                 background: url(../assets/img/products/products_splash2_ice.png) no-repeat
 
           &-sublight
-            &[data-lazyloaded]
+            &.lazyloaded
               background: url(../assets/img/products/products_sublight_ice.png) no-repeat scroll 0 0
 
         &-splatter
           &_1
-            &[data-lazyloaded]
+            &.lazyloaded
               background: url(../assets/img/products/products_splatter1_ice.png) no-repeat
           &_2
-            &[data-lazyloaded]
+            &.lazyloaded
               background: url(../assets/img/products/products_splatter2_ice.png) no-repeat scroll 0 0
           &_3
-            &[data-lazyloaded]
+            &.lazyloaded
               background: url(../assets/img/products/products_splatter3_ice.png) no-repeat scroll 0 0
           &_4
-            &[data-lazyloaded]
+            &.lazyloaded
               background: url(../assets/img/products/products_splatter4_ice.png) no-repeat scroll 0 0
           &_5
-            &[data-lazyloaded]
+            &.lazyloaded
               background: url(../assets/img/products/products_splatter5_ice.png) no-repeat scroll 0 0
 
         &-human
@@ -592,7 +496,7 @@
 
         &-info
           &-content
-            &[data-lazyloaded]
+            &.lazyloaded
               background: url("../assets/img/products/products_info_panel_ice.png") no-repeat scroll 0 0
 
             &_ice
@@ -601,8 +505,8 @@
     &_pomegranate
       .products__choosen
         &-can
-          &[data-lazyloaded]
-            background-image: url(../assets/img/products/products_big_can_pomegranate.png)
+          &.lazyloaded
+            background: url(../assets/img/products/products_big_can_pomegranate.png) no-repeat
 
           &-splash
             &_1
@@ -611,7 +515,7 @@
               width: 659px
               height: 609px
 
-              &[data-lazyloaded]
+              &.lazyloaded
                 background: url(../assets/img/products/products_splash1_pomegranate.png) no-repeat
 
             &_2
@@ -620,28 +524,28 @@
               width: 692px
               height: 782px
 
-              &[data-lazyloaded]
+              &.lazyloaded
                 background: url(../assets/img/products/products_splash2_pomegranate.png) no-repeat
 
           &-sublight
-            &[data-lazyloaded]
+            &.lazyloaded
               background: url(../assets/img/products/products_sublight_pomegranate.png) no-repeat scroll 0 0
 
         &-splatter
           &_1
-            &[data-lazyloaded]
+            &.lazyloaded
               background: url(../assets/img/products/products_splatter1_pomegranate.png) no-repeat
           &_2
-            &[data-lazyloaded]
+            &.lazyloaded
               background: url(../assets/img/products/products_splatter2_pomegranate.png) no-repeat scroll 0 0
           &_3
-            &[data-lazyloaded]
+            &.lazyloaded
               background: url(../assets/img/products/products_splatter3_pomegranate.png) no-repeat scroll 0 0
           &_4
-            &[data-lazyloaded]
+            &.lazyloaded
               background: url(../assets/img/products/products_splatter4_pomegranate.png) no-repeat scroll 0 0
           &_5
-            &[data-lazyloaded]
+            &.lazyloaded
               background: url(../assets/img/products/products_splatter5_pomegranate.png) no-repeat scroll 0 0
 
         &-human
@@ -661,17 +565,17 @@
 
         &-info
           &-content
-            &[data-lazyloaded]
+            &.lazyloaded
               background: url("../assets/img/products/products_info_panel_pomegranate.png") no-repeat scroll 0 0
 
             &_pomegranate
               display: block
 
-    &_pepper
+    &_california
       .products__choosen
         &-can
-          &[data-lazyloaded]
-            background-image: url(../assets/img/products/products_big_can_pepper.png)
+          &.lazyloaded
+            background: url(../assets/img/products/products_big_can_pepper.png) no-repeat
 
           &-splash
             &_1
@@ -680,7 +584,7 @@
               width: 677px
               height: 782px
 
-              &[data-lazyloaded]
+              &.lazyloaded
                 background: url(../assets/img/products/products_splash1_pepper.png) no-repeat
 
             &_2
@@ -689,28 +593,28 @@
               width: 677px
               height: 684px
 
-              &[data-lazyloaded]
+              &.lazyloaded
                 background: url(../assets/img/products/products_splash2_pepper.png) no-repeat
 
           &-sublight
-            &[data-lazyloaded]
+            &.lazyloaded
               background: url(../assets/img/products/products_sublight_pepper.png) no-repeat scroll 0 0
 
         &-splatter
           &_1
-            &[data-lazyloaded]
+            &.lazyloaded
               background: url(../assets/img/products/products_splatter1_pepper.png) no-repeat
           &_2
-            &[data-lazyloaded]
+            &.lazyloaded
               background: url(../assets/img/products/products_splatter2_pepper.png) no-repeat scroll 0 0
           &_3
-            &[data-lazyloaded]
+            &.lazyloaded
               background: url(../assets/img/products/products_splatter3_pepper.png) no-repeat scroll 0 0
           &_4
-            &[data-lazyloaded]
+            &.lazyloaded
               background: url(../assets/img/products/products_splatter4_pepper.png) no-repeat scroll 0 0
           &_5
-            &[data-lazyloaded]
+            &.lazyloaded
               background: url(../assets/img/products/products_splatter5_pepper.png) no-repeat scroll 0 0
 
         &-human
@@ -730,8 +634,8 @@
 
         &-info
           &-content
-            &[data-lazyloaded]
+            &.lazyloaded
               background: url("../assets/img/products/products_info_panel_pepper.png") no-repeat scroll 0 0
 
-            &_pepper
+            &_california
               display: block

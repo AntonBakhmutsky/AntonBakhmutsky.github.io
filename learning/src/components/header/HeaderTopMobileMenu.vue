@@ -1,58 +1,54 @@
 <template lang="pug">
   div
-    .header__mobile-menu-btn(v-tap="show")
+    .header__mobile-menu-btn(
+      @click="active = true"
+    )
     .header__mobile-overlay(
       :class="{ 'header__mobile-overlay_active': active }"
-      v-tap="hide"
+      @click="active = false"
     )
-    .hidden-menu(:class="{ 'hidden-menu_active': active }")
-      .hidden-menu__inner(ref="menuInner")
+    .hidden-menu(
+      ref="menu"
+      :class="{ 'hidden-menu_active': active }"
+    )
+      .hidden-menu__inner
         .hidden-menu__content
-          RouterLink.hidden-menu__item(
-            v-tap="hide"
-            v-for="item in menu"
-            :key="item.title"
-            :to="item.to"
+          a.hidden-menu__item(
+            @click="active = false"
+            v-for="item in links"
+            :key="item.href"
+            :href="item.href"
           ) {{ item.title }}
-          .hidden-menu__item(v-tap="showModal")
-            | {{ $t('header.feedback') }}
-          RouterLink.hidden-menu__item.hidden-menu__item_fighter(
-            v-tap="hide"
-            :to="{ name: 'fighter', params: { code: 'khabib-nurmagomedov' } }"
+          a.hidden-menu__item.hidden-menu__item_fighter(
             v-html="$t('header.ambassador')"
+            href="javascript:"
           )
 </template>
 
 <script>
-import { mapState } from 'vuex'
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock'
 
 export default {
   name: 'HeaderTopMobileMenu',
-  data: () => ({
-    active: false
+  data: vm => ({
+    active: false,
+    links: [
+      { title: vm.$t('products.title'), href: '#products' },
+      { title: vm.$t('riders.title'), href: '#riders' },
+      { title: vm.$t('fighters.title'), href: '#fighters' },
+      { title: vm.$t('news.title'), href: '#news' },
+      { title: vm.$t('contacts.title'), href: '#contacts' },
+      { title: vm.$t('map.title'), href: '#map' },
+      { title: vm.$t('header.feedback'), href: 'javascript:' }
+    ]
   }),
-  computed: {
-    ...mapState('main', ['menu'])
-  },
   watch: {
     active (value) {
       if (value) {
-        disableBodyScroll(this.$refs.menuInner)
+        disableBodyScroll(this.$refs.menu)
       } else {
-        enableBodyScroll(this.$refs.menuInner)
+        enableBodyScroll(this.$refs.menu)
       }
-    }
-  },
-  methods: {
-    show () {
-      this.active = true
-    },
-    hide () {
-      this.active = false
-    },
-    showModal () {
-      this.$modal.show('ModalFeedback')
     }
   }
 }

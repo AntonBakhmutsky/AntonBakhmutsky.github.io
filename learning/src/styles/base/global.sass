@@ -5,7 +5,6 @@
 html
   background: $black
   scroll-behavior: smooth
-  min-height: 100%
 
 a
   text-decoration: none
@@ -73,11 +72,11 @@ body
     color: $white
 
     .section-title__link
-      &[data-lazyloaded]
+      &.lazyloaded
         +screen($mobile)
           background: url(../assets/img/global/white_logo_mobile.png) no-repeat scroll center/contain
 
-    &[data-lazyloaded]
+    &.lazyloaded
       background: url(../assets/img/global/white_logo.png) no-repeat scroll center top
       +screen($tablet)
         background: none
@@ -86,17 +85,16 @@ body
     color: $black
 
     .section-title__link
-      &[data-lazyloaded]
+      &.lazyloaded
         +screen($mobile)
           background: url(../assets/img/global/black_logo_mobile.png) no-repeat scroll center/contain
 
-    &[data-lazyloaded]
+    &.lazyloaded
       background: url(../assets/img/global/black_logo.png) no-repeat scroll center top
       +screen($tablet)
         background: none
 
 .product__bottle
-  display: none
   width: 257px
   height: 263px
   position: absolute
@@ -108,21 +106,21 @@ body
 
   &-volume
     position: absolute
-    top: 193px
+    top: 182px
     left: 46px
     width: 45px
     transform: rotate(-15deg)
     text-align: center
-    +font(18px, 24px)
+    +font(20px, 24px)
     color: $green
 
   &-text
     position: absolute
-    top: 210px
-    left: 94px
+    top: 197px
+    left: 88px
     transform: rotate(-15deg)
-    +font(21px, 26px)
-    color: $white
+    font-size: 21px
+    line-height: 26px
 
 .more-btn
   width: 220px
@@ -133,11 +131,8 @@ body
   transition: .2s
   text-transform: uppercase
   display: block
-  border: none
-  cursor: pointer
-  outline: none
 
-  &[data-lazyloaded]
+  &.lazyloaded
     background: url(../assets/img/products/mobile/products_original_btn.png) center 0 no-repeat
 
     &:hover
@@ -177,7 +172,7 @@ body
       z-index: -1
 
     &_vk
-      &[data-lazyloaded]
+      &.lazyloaded
         background: url(../assets/img/header/hidden/fixed_menu_vk.png) no-repeat scroll 0 0
 
       &:hover
@@ -188,8 +183,8 @@ body
           opacity: 1
           background: url(../assets/img/header/hidden/fixed_menu_social_vk_hover.png) no-repeat
 
-    &_facebook
-      &[data-lazyloaded]
+    &_fb
+      &.lazyloaded
         background: url(../assets/img/header/hidden/fixed_menu_fb.png) no-repeat scroll 0 0
 
       &:hover
@@ -200,8 +195,8 @@ body
           opacity: 1
           background: url(../assets/img/header/hidden/fixed_menu_social_fb_hover.png) no-repeat
 
-    &_instagram
-      &[data-lazyloaded]
+    &_ig
+      &.lazyloaded
         background: url(../assets/img/header/hidden/fixed_menu_ig.png) no-repeat scroll 0 0
 
       &:hover
@@ -212,8 +207,8 @@ body
           opacity: 1
           background: url(../assets/img/header/hidden/fixed_menu_social_ig_hover.png) no-repeat
 
-    &_youtube
-      &[data-lazyloaded]
+    &_yt
+      &.lazyloaded
         background: url(../assets/img/header/hidden/fixed_menu_yt.png) no-repeat scroll 0 0
 
       &:hover

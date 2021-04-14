@@ -6,8 +6,6 @@
     &__body
       max-width: 480px
       padding: 30px 0 60px
-      background-image: url(../assets/img/products/mobile/products_original_info.png), url(../assets/img/products/mobile/products_orange_info.png), url(../assets/img/products/mobile/products_ice_info.png), url(../assets/img/products/mobile/products_pomegranate_info.png), url(../assets/img/products/mobile/products_pepper_info.png)
-      min-height: 600px
 
     &__close
       position: absolute
@@ -38,11 +36,10 @@
         display: none
 
       &-bottle
-        display: block
         +cancel-position
         margin: 10px auto
         width: 264px
-        height: 258px
+        height: 234px
         transform: rotate(-9deg) translateX(-10px)
 
       &-list
@@ -67,19 +64,6 @@
               position: absolute
               left: 0
               top: 0
-
-  &_mango
-    .modal
-      &__body
-        background: url(../assets/img/products/mobile/products_mango_info.png) no-repeat 0 0 / 100% 100%
-
-      &__product
-        &-list
-          background: url(../assets/img/products/mobile/products_mango_composition.png) no-repeat 0 0 / 100% 100%
-
-        &-content_mango
-          display: block
-          
 
   &_original
     .modal
@@ -129,7 +113,7 @@
         &-content_pomegranate
           display: block
 
-  &_pepper
+  &_california
     .modal
       &__body
         background: url(../assets/img/products/mobile/products_pepper_info.png) no-repeat 0 0 / 100% 100%
@@ -138,6 +122,6 @@
         &-list
           background: url(../assets/img/products/mobile/products_pepper_composition.png) no-repeat 0 0 / 100% 100%
 
-        &-content_pepper
+        &-content_california
           display: block
 

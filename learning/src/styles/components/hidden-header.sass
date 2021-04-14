@@ -26,7 +26,7 @@
     transform: translate(-50%, 0)
     opacity: 1
 
-  &[data-lazyloaded]
+  &.lazyloaded
     background: url(../assets/img/header/hidden/fixed_menu_bg.png) no-repeat center
 
   &__logo
@@ -61,7 +61,7 @@
         opacity: 0
         transition: .2s
 
-        &[data-lazyloaded]
+        &.lazyloaded
           background: url(../assets/img/header/hidden/fixed_menu_current.png) no-repeat
 
       &_active

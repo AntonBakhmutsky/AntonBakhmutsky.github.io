@@ -3,27 +3,22 @@
 
 .footer
   width: 100%
-  height: 780px
+  height: 680px
   margin-top: -580px
   +font(18px, 22px)
   position: relative
-  z-index: 10
+  z-index: 15
   pointer-events: none
   box-sizing: border-box
   overflow: hidden
   +screen($desktop-sm)
     padding-bottom: 40px
-  +screen($tablet)
-    height: 750px
 
   .container
     display: flex
     align-items: flex-end
-    height: 88%
-    +screen($tablet)
-      height: 93%
 
-  &[data-lazyloaded]
+  &.lazyloaded
     background: url(../assets/img/footer/footer_bg.png) no-repeat 49.999% 0
 
   &__content
@@ -67,25 +62,3 @@
   &__copyright
     +screen($desktop-sm)
       +font(15px, 17px)
-
-  &__create
-    pointer-events: auto
-    position: relative
-    display: block
-    z-index: 9
-    text-align: center
-    text-transform: uppercase
-    +font(18px, 18px)
-    margin-top: 40px
-    +screen($tablet)
-      +font(16px, 16px)
-
-    a
-      color: $white
-
-      span
-        transition: .3s
-
-      &:hover
-        span
-          color: $green

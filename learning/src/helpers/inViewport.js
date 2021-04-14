@@ -19,7 +19,7 @@ export default function (element, callback, position = 'top') {
         inViewport = (top + bottom) / 2 <= window.innerHeight
         break
       case 'offset':
-        inViewport = top <= window.innerHeight * 1.5
+        inViewport = top <= window.innerHeight * 2
         break
     }
 

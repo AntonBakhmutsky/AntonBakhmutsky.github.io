@@ -1,106 +1,27 @@
 {
   "header": {
     "title": "Gorilla Energy",
-    "tagline": "Make some noise",
-    "collection": "Promo Gorilla &<br>World Of Tanks<span>Guaranteed prize<br>under every pull tab!</span>",
+    "tagline": "Unleash your limitless power",
+    "collection": "Coming soon<br>Gorilla wear<br><span>on shop.gorillaenergy.com</span>",
     "feedback": "Send message",
     "ambassador": "Khabib<br>Nurmagomedov<span>Gorilla Energy<br>Ambassador</span>"
   },
   "products": {
-    "title": "Products",
-    "choose": "Choose<br>your energy",
-    "bottle": {
-      "original": {
-        "volume": "0,275L",
-        "text": "Original"
-      },
-      "orange": {
-        "volume": "0,275L",
-        "text": "Orange"
-      }
-    },
-    "more": "Read More"
+    "title": "Products"
   },
   "riders": {
-    "title": "Gorilla Riders",
-    "become": "Got Skills? Become<br><span>a Gorilla Rider</span>",
-    "placeholder": "All Disciplines",
-    "more": "Read More",
-    "born": "Born",
-    "city": "City",
-    "language": "Language",
-    "discipline": "Discipline",
-    "riding": "Riding",
-    "since": "Since %{year}"
+    "title": "Gorilla Riders"
   },
   "fighters": {
-    "title": "Fighters",
-    "more": "Read More",
-    "cm": "cm",
-    "kg": "kg",
-    "years": "no years | one years | {count} years",
-    "statistics": "Fight Statistics",
-    "wins": "Wins",
-    "draws": "Draws",
-    "losses": "Losses"
+    "title": "Fighters"
   },
   "news": {
-    "title": "News / Events",
-    "placeholder": "All News",
-    "more": "Read More"
-  },
-  "socials": {
-    "title": "<span class='green-text'>Follow Us</span> <span>@gorillaenergy</span>",
-    "vk": {
-      "href": "https://vk.com/gorillaenergy",
-      "text": "Join Community",
-      "counter": "80 800"
-    },
-    "facebook": {
-      "href": "https://facebook.com/gorillaenergy",
-      "text": "Like Our Page",
-      "counter": "30 700"
-    },
-    "instagram": {
-      "href": "https://instagram.com/gorillaenergy",
-      "text": "@gorillaenergy On Instagram",
-      "counter": "154 000"
-    },
-    "youtube": {
-      "href": "https://youtube.com/gorillaenergy",
-      "text": "GorillaEnergy <br> On Youtube"
-    }
+    "title": "News | Events"
   },
   "contacts": {
-    "title": "Contact us",
-    "text": "For all questions/ suggestions/ countries, please contact the International Office, outlining the reason for the contact in the subject line."
+    "title": "Contact us"
   },
   "map": {
-    "title": "Where to buy",
-    "countries": "All Countries",
-    "cities": "All Cities"
-  },
-  "feedback": {
-    "title": "Send Your Request",
-    "text": "All fields are required",
-    "success": "Your request has been sent. We will contact You shortly.",
-    "file": "Choose your file",
-    "fields": {
-      "full_name": "Full Name",
-      "company_name": "Company Name",
-      "profile": "Profile",
-      "email": "E-mail",
-      "phone": "Phone",
-      "file": "Upload File (< 2MB)",
-      "message": "Message",
-      "send": "Submit"
-    }
-  },
-  "404": {
-    "title": "Page Not Found"
-  },
-  "create": {
-    "text": "Developed By <span>IT League</span>",
-    "link": "https://itleague.ru/en"
+    "title": "Where to buy"
   }
 }

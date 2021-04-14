@@ -1,11 +1,6 @@
 const plugins = [
-  'filters',
-  'hammer',
   'lazyload',
-  'meta',
-  'modals',
-  'veeValidate',
-  'ym'
+  'viewportUnitsBuggyfill'
 ]
 
 plugins.forEach((file) => {

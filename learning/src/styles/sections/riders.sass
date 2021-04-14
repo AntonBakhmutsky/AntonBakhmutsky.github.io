@@ -14,20 +14,13 @@
     box-sizing: border-box
     padding: 30px 0
 
-  &[data-lazyloaded]
+  &.lazyloaded
     background: url(../assets/img/riders/riders_bg.png) no-repeat scroll
     +screen($tablet)
       background: url(../assets/img/riders/mobile/riders_bg.jpg) repeat center 0
 
-  &__preloader
-    position: absolute
-    left: 50%
-    top: 50%
-    transform: translate(-50%, -50%)
-
   .container
     +screen($tablet)
-      min-height: 400px
       padding: 0
 
   &__bottom-text
@@ -39,7 +32,7 @@
     +screen($tablet)
       display: none
 
-    &[data-lazyloaded]
+    &.lazyloaded
       background: url(../assets/img/riders/riders_riders.png) no-repeat scroll 49.999% 0
 
   &__jump
@@ -52,7 +45,7 @@
       +screen($tablet)
         display: none
 
-      &[data-lazyloaded]
+      &.lazyloaded
         background: url(../assets/img/riders/riders_jump1.png) repeat scroll 0 0
 
     &-2
@@ -64,7 +57,7 @@
       +screen($tablet)
         display: none
 
-      &[data-lazyloaded]
+      &.lazyloaded
         background: url(../assets/img/riders/riders_jump2.png) repeat scroll 0 0
 
   &__title
@@ -100,29 +93,25 @@
         color: $black
         text-transform: uppercase
         transition: color .2s
-        cursor: pointer
         +screen($tablet)
           +font(18px, 40px)
           width: 129px
           height: 39px
 
-        &[data-lazyloaded]
+        &.lazyloaded
           background: url(../assets/img/riders/riders_filter.png) repeat scroll 0 0
           +screen($tablet)
             background: url(../assets/img/riders/mobile/riders_filter.png) no-repeat 0 0 / 100% 100%
 
-        &:hover
-          color: $orange
-
         &_selected
-          &[data-lazyloaded]
+          &.lazyloaded
             background: url(../assets/img/riders/riders_filter_selected.png) repeat scroll 0 0
             color: $white
             +screen($tablet)
               background: url(../assets/img/riders/mobile/riders_filter_selected.png) no-repeat 0 0 / 100% 100%
 
-          &:hover
-            color: $white
+        &:hover
+          color: $orange
 
       &-delimiter
         width: 24px
@@ -131,7 +120,7 @@
           width: 22px
           height: 39px
 
-        &[data-lazyloaded]
+        &.lazyloaded
           background: url(../assets/img/riders/riders_filter_delimiter.png) no-repeat scroll center/contain
 
     .select__filter
@@ -146,7 +135,6 @@
     width: 606px
     height: 309px
     transform-origin: 90% 60% 0
-    cursor: pointer
     +screen($tablet)
       display: none
 
@@ -164,7 +152,7 @@
       span
         color: $black
 
-    &[data-lazyloaded]
+    &.lazyloaded
       &::before
         background: url(../assets/img/riders/riders_teaser.png) repeat scroll 0 0
 

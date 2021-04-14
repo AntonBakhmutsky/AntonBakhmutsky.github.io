@@ -1,30 +1,32 @@
 <template lang="pug">
   .header__language(
     :class="{ 'header__language_open': active }"
-    v-tap="toggle"
-    v-tap-outside="hide"
+    @click="active = !active"
   )
     .header__language-arrow
-    .header__language-link(
+    a.header__language-link(
       v-for="lang in sortLanguages"
       :key="lang.locale"
-      v-tap="() => changeLocale(lang.locale)"
+      @click.prevent="changeLocale(lang.locale)"
+      href="javascript:"
     )
       .header__language-link-image
-        img(:src="require(`@/assets/img/header/lang/${lang.locale}.png`)" alt="")
+        img(:src="lang.img" alt="")
       .header__language-link-lang {{ lang.title }}
 </template>
 
 <script>
-import { mapState } from 'vuex'
-
 export default {
   name: 'HeaderTopLanguage',
   data: () => ({
-    active: false
+    active: false,
+    languages: [
+      { locale: 'en', title: 'eng', img: require('@/assets/img/header/lang/eng.png') },
+      { locale: 'ru', title: 'рус', img: require('@/assets/img/header/lang/rus.png') },
+      { locale: 'kz', title: 'каз', img: require('@/assets/img/header/lang/kaz.png') }
+    ]
   }),
   computed: {
-    ...mapState('main', ['languages']),
     sortLanguages: vm => vm.languages.sort(a => a.locale === vm.$i18n.locale ? -1 : 1)
   },
   methods: {
@@ -33,12 +35,6 @@ export default {
         localStorage.setItem('locale', locale)
         location.reload()
       }
-    },
-    hide () {
-      this.active = false
-    },
-    toggle () {
-      this.active = !this.active
     }
   }
 }

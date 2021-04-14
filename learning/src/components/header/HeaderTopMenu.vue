@@ -1,38 +1,37 @@
 <template lang="pug">
   .header__menu
     .header__menu-left
-      RouterLink.header__menu-item(
-        v-for="item in left"
-        v-show="!item.hide"
-        :key="item.title"
-        :to="item.to"
+      a.header__menu-item(
+        v-for="item in leftMenu"
+        :key="item.href"
+        :class="[ `header__menu-item_${item.modifier}` ]"
+        :href="item.href"
       ) {{ item.title }}
-    RouterLink.header__menu-logo(:to="{ name: 'home' }")
+    .header__menu-logo
     .header__menu-right
-      RouterLink.header__menu-item(
-        v-for="item in right"
-        v-show="!item.hide"
-        :key="item.title"
-        :to="item.to"
+      a.header__menu-item(
+        v-for="item in rightMenu"
+        :key="item.href"
+        :class="[ `header__menu-item_${item.modifier}` ]"
+        :href="item.href"
       ) {{ item.title }}
-      .header__menu-item.header__menu-item_feedback(v-tap="showModal")
-        | {{ $t('header.feedback') }}
 </template>
 
 <script>
-import { mapState } from 'vuex'
-
 export default {
   name: 'HeaderTopMenu',
-  computed: {
-    ...mapState('main', ['menu']),
-    left: vm => vm.menu.slice(0, 4),
-    right: vm => vm.menu.slice(4)
-  },
-  methods: {
-    showModal () {
-      this.$modal.show('ModalFeedback')
-    }
-  }
+  data: vm => ({
+    leftMenu: [
+      { title: vm.$t('products.title'), href: '#products' },
+      { title: vm.$t('riders.title'), href: '#riders' },
+      { title: vm.$t('fighters.title'), href: '#fighters' },
+      { title: vm.$t('news.title'), href: '#news' }
+    ],
+    rightMenu: [
+      { title: vm.$t('contacts.title'), href: '#contacts' },
+      { title: vm.$t('map.title'), href: '#map' },
+      { title: vm.$t('header.feedback'), href: 'javascript:', modifier: 'feedback' }
+    ]
+  })
 }
 </script>

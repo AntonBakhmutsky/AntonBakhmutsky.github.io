@@ -1,5 +1,5 @@
 <template lang="pug">
-  .header__top.animated(:class="classList")
+  .header__top.animated
     HeaderTopMobileMenu
     HeaderTopLanguage
     HeaderTopMenu
@@ -18,11 +18,6 @@ export default {
     HeaderTopMobileMenu,
     HeaderTopMenu,
     HeaderTopLanguage
-  },
-  computed: {
-    classList: vm => ({
-      'header__top_black': ['fighter'].includes(vm.$route.name)
-    })
   },
   mounted () {
     this.$nextTick(() => {

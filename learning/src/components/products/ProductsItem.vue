@@ -1,111 +1,65 @@
 <template lang="pug">
-  .products__choosen(:class="`products__choosen_${item.code}`")
-    .products__choosen-can-splash.products__choosen-can-splash_1.animated(ref="splash_1" v-lazyload)
-    .products__choosen-can-splash.products__choosen-can-splash_2.animated(ref="splash_2" v-lazyload)
-    img.products__choosen-human.products__choosen-human_1.animated(
+  .products__choosen.products__choosen_original
+    .products__choosen-can-splash.products__choosen-can-splash_1.lazyload.animated(ref="splash_1")
+    .products__choosen-can-splash.products__choosen-can-splash_2.lazyload.animated(ref="splash_2")
+    img.products__choosen-human.products__choosen-human_1.lazyload.animated(
       ref="human_1"
-      v-lazyload
       :data-src="require('@/assets/img/products/products_human1.svg')"
       alt=""
     )
-    img.products__choosen-human.products__choosen-human_2.animated(
+    img.products__choosen-human.products__choosen-human_2.lazyload.animated(
       ref="human_2"
-      v-lazyload
       :data-src="require('@/assets/img/products/products_human2.svg')"
       alt=""
     )
-    img.products__choosen-human.products__choosen-human_3.animated(
+    img.products__choosen-human.products__choosen-human_3.lazyload.animated(
       ref="human_3"
-      v-lazyload
       :data-src="require('@/assets/img/products/products_human3.svg')"
       alt=""
     )
-    img.products__choosen-can-hole-back(
+    img.products__choosen-can-hole-back.lazyload(
       ref="hole_back"
-      v-lazyload
       :data-src="require('@/assets/img/products/products_hole_back.png')"
       alt=""
     )
-    .products__choosen-can.animated(ref="image" v-lazyload)
-    img.products__choosen-can-hole-front(
+    .products__choosen-can.lazyload.animated(ref="image")
+    img.products__choosen-can-hole-front.lazyload(
       ref="hole_front"
-      v-lazyload
       :data-src="require('@/assets/img/products/products_hole_front.png')"
       alt=""
     )
-    .products__choosen-splatter.products__choosen-splatter_1.animated(ref="splatter_1" v-lazyload)
-    .products__choosen-splatter.products__choosen-splatter_2.animated(ref="splatter_2" v-lazyload)
-    .products__choosen-splatter.products__choosen-splatter_3.animated(ref="splatter_3" v-lazyload)
-    .products__choosen-splatter.products__choosen-splatter_4.animated(ref="splatter_4" v-lazyload)
-    .products__choosen-splatter.products__choosen-splatter_5.animated(ref="splatter_5" v-lazyload)
-    .products__choosen-can-sublight.animated(ref="sublight" v-lazyload)
+    .products__choosen-splatter.products__choosen-splatter_1.lazyload.animated(ref="splatter_1")
+    .products__choosen-splatter.products__choosen-splatter_2.lazyload.animated(ref="splatter_2")
+    .products__choosen-splatter.products__choosen-splatter_3.lazyload.animated(ref="splatter_3")
+    .products__choosen-splatter.products__choosen-splatter_4.lazyload.animated(ref="splatter_4")
+    .products__choosen-splatter.products__choosen-splatter_5.lazyload.animated(ref="splatter_5")
+    .products__choosen-can-sublight.lazyload.animated(ref="sublight")
     .products__choosen-info.animated(ref="info")
-      .products__choosen-bottle.product__bottle(
-        v-lazyload
-        :class="`product__bottle_${item.code}`"
-      )
-        .product__bottle-volume {{ $t(`products.bottle.${item.code}.volume`) }}
-        .product__bottle-text {{ $t(`products.bottle.${item.code}.text`) }}
-      .products__choosen-info-content(v-lazyload :class="`products__choosen-info-content_${item.code}`")
-        .products__choosen-info-top(v-lazyload)
-          h2.product__choosen-name {{ item.name }}
-          div(v-html="item.description")
-        .products__choosen-info-list(v-html="item.composition")
+      .products__choosen-bottle.product__bottle.lazyload
+        .product__bottle-volume 0,3L
+        .product__bottle-text New Bottle
+      .products__choosen-info-content.products__choosen-info-content_original.lazyload
+        .products__choosen-info-top.lazyload
+          h2.product__choosen-name Original
+          p Our technologists stirred up a ridiculous energy formula. There is twice as much relentless «GORILLA ENERGY» power in one can.
+          p It does not matter who you are and where you are from, what matters is the power within you.
+        .products__choosen-info-list
+          ul
+            li Vitamins C, B3, B5, B6, B7, B12
+            li Guarana and Ginseng extract
+            li Caffeine, Taurine, L-carnitine
+            li No artificail colors
 </template>
 
 <script>
 import inViewport from '@/helpers/inViewport'
 import anime from 'animejs'
 
-import { mapState } from 'vuex'
-
 const humanAnimationOptions = {
-  mango: [
-    {
-      opacity: { value: [0, 1], duration: 400 },
-      scale: { value: [0.6, 1], duration: 400 },
-      rotate: { value: [0.1, 0.1], duration: 400 },
-      translateX: [
-        { value: [220, 45], duration: 400 },
-        { value: [45, 0], duration: 2600 }
-      ],
-      translateY: [
-        { value: [100, 20], duration: 400 },
-        { value: [20, 0], duration: 2600 }
-      ]
-    },
-    {
-      opacity: { value: [0, 1], duration: 400 },
-      scaleX: { value: [-0.6, -1], duration: 400 },
-      scaley: { value: [0, 1], duration: 400 },
-      rotate: { value: [0.1, 0.1], duration: 400 },
-      translateX: [
-        { value: [-190, -40], duration: 400 },
-        { value: [-40, 0], duration: 2600 }
-      ],
-      translateY: [
-        { value: [-20, -4], duration: 400 },
-        { value: [-4, 0], duration: 2600 }
-      ]
-    },
-    {
-      opacity: { value: [0, 1], duration: 400 },
-      scale: { value: [0.6, 1], duration: 400 },
-      rotate: { value: [-15, -15], duration: 400 },
-      translateX: [
-        { value: [-100, -20], duration: 400 },
-        { value: [-20, 0], duration: 2600 }
-      ],
-      translateY: [
-        { value: [50, 10], duration: 400 },
-        { value: [10, 0], duration: 2600 }
-      ]
-    }
-  ],
   original: [
     {
-      opacity: { value: [0, 1], duration: 600 },
-      scale: { value: [0.6, 1], duration: 0 },
+      opacity: { value: [0, 1], duration: 400 },
+      scale: { value: [0.6, 1], duration: 400 },
       rotate: { value: [0.1, 0.1], duration: 400 },
       translateX: [
         { value: [190, 40], duration: 400 },
@@ -114,7 +68,7 @@ const humanAnimationOptions = {
     },
     {
       opacity: { value: [0, 1], duration: 400 },
-      scaleX: { value: 1, duration: 0 },
+      scale: { value: [0.6, 1], duration: 400 },
       rotate: { value: [0.1, 0.1], duration: 400 },
       translateX: [
         { value: [-190, -40], duration: 400 },
@@ -155,12 +109,11 @@ const humanAnimationOptions = {
     },
     {
       opacity: { value: [0, 1], duration: 400 },
-      scaleX: { value: [-0.6, -1], duration: 400 },
-      scaley: { value: [0, 1], duration: 400 },
+      scale: { value: [0.6, 1], duration: 400 },
       rotate: { value: [0.1, 0.1], duration: 400 },
       translateX: [
-        { value: [-190, -40], duration: 400 },
-        { value: [-40, 0], duration: 2600 }
+        { value: [190, 40], duration: 400 },
+        { value: [40, 0], duration: 2600 }
       ],
       translateY: [
         { value: [-20, -4], duration: 400 },
@@ -169,7 +122,7 @@ const humanAnimationOptions = {
     },
     {
       opacity: { value: [0, 1], duration: 400 },
-      scaleX: { value: [0.6, 1], duration: 400 },
+      scale: { value: [0.6, 1], duration: 400 },
       rotate: { value: [-15, -15], duration: 400 },
       translateX: [
         { value: [-152, -32], duration: 400 },
@@ -197,12 +150,11 @@ const humanAnimationOptions = {
     },
     {
       opacity: { value: [0, 1], duration: 400 },
-      scaleX: { value: [-0.6, -1], duration: 400 },
-      scaley: { value: [0, 1], duration: 400 },
+      scale: { value: [0.6, 1], duration: 400 },
       rotate: { value: [0.1, 0.1], duration: 400 },
       translateX: [
-        { value: [-190, -40], duration: 400 },
-        { value: [-40, 0], duration: 2600 }
+        { value: [190, 40], duration: 400 },
+        { value: [40, 0], duration: 2600 }
       ],
       translateY: [
         { value: [20, 4], duration: 400 },
@@ -239,12 +191,11 @@ const humanAnimationOptions = {
     },
     {
       opacity: { value: [0, 1], duration: 400 },
-      scaleX: { value: [-0.6, -1], duration: 400 },
-      scaleY: { value: [0, 1], duration: 400 },
+      scale: { value: [0.6, 1], duration: 400 },
       rotate: { value: [0.1, 0.1], duration: 400 },
       translateX: [
-        { value: [-190, -40], duration: 400 },
-        { value: [-40, 0], duration: 2600 }
+        { value: [190, 40], duration: 400 },
+        { value: [40, 0], duration: 2600 }
       ],
       translateY: [
         { value: [-20, -4], duration: 400 },
@@ -265,7 +216,7 @@ const humanAnimationOptions = {
       ]
     }
   ],
-  pepper: [
+  california: [
     {
       opacity: { value: [0, 1], duration: 400 },
       scale: { value: [0.6, 1], duration: 400 },
@@ -281,12 +232,11 @@ const humanAnimationOptions = {
     },
     {
       opacity: { value: [0, 1], duration: 400 },
-      scaleX: { value: [-0.6, -1], duration: 400 },
-      scaleY: { value: [0, 1], duration: 400 },
+      scale: { value: [0.6, 1], duration: 400 },
       rotate: { value: [0.1, 0.1], duration: 400 },
       translateX: [
-        { value: [-190, -40], duration: 400 },
-        { value: [-40, 0], duration: 2600 }
+        { value: [190, 40], duration: 400 },
+        { value: [40, 0], duration: 2600 }
       ],
       translateY: [
         { value: [-50, -10], duration: 400 },
@@ -309,30 +259,14 @@ const humanAnimationOptions = {
   ]
 }
 
+const currentCode = 'original'
+
 export default {
   name: 'ProductsItem',
-  data: () => ({
-    timeline: null
-  }),
-  computed: {
-    ...mapState('products', ['item'])
-  },
-  watch: {
-    item () {
-      this.initAnimation()
-    }
-  },
   mounted () {
-    inViewport(this.$el, this.initAnimation, 'half')
-  },
-  methods: {
-    initAnimation () {
-      this.$nextTick(() => {
-        if (this.timeline instanceof Object) {
-          this.timeline.pause()
-        }
-
-        this.timeline = anime.timeline()
+    this.$nextTick(() => {
+      inViewport(this.$el, () => {
+        anime.timeline()
           .add({
             targets: this.$refs.image,
             opacity: [0, 1],
@@ -356,19 +290,19 @@ export default {
           }, 300)
           .add({
             targets: this.$refs.human_1,
-            ...humanAnimationOptions[this.item.code][0],
+            ...humanAnimationOptions[currentCode][0],
             duration: 3000,
             easing: 'linear'
           }, 0)
           .add({
             targets: this.$refs.human_2,
-            ...humanAnimationOptions[this.item.code][1],
+            ...humanAnimationOptions[currentCode][1],
             duration: 3000,
             easing: 'linear'
           }, 200)
           .add({
             targets: this.$refs.human_3,
-            ...humanAnimationOptions[this.item.code][2],
+            ...humanAnimationOptions[currentCode][2],
             duration: 3000,
             easing: 'linear'
           }, 400)
@@ -424,8 +358,8 @@ export default {
             duration: 400,
             easing: 'easeOutQuad'
           }, 400)
-      })
-    }
+      }, 'half')
+    })
   }
 }
 </script>

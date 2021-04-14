@@ -14,27 +14,22 @@
     margin: 0
     height: auto
 
-  &[data-lazyloaded]
+  &.lazyloaded
     background: url(../assets/img/fighters/fighters_bg.png) no-repeat scroll 49.999% 0
     +screen($tablet)
       background: url(../assets/img/riders/mobile/riders_bg.jpg) repeat center 0
-
-  &__preloader
-    position: absolute
-    left: 50%
-    top: 50%
-    transform: translate(-50%, -50%)
-
-  .container
-    +screen($tablet)
-      min-height: 400px
-      padding: 0
 
   &__title
     top: 65px
     height: auto
     +screen($tablet)
       +cancel-position
+
+    &-text
+      +font(18px, 22px, $font-intro)
+      text-transform: none
+      +screen($tablet)
+        display: none
 
   &__promo
     pointer-events: auto
@@ -43,6 +38,7 @@
     left: 50%
     transform: translateX(-50%)
     width: 100%
+    display: flex
     box-sizing: border-box
     padding: 0 30px
     +screen($desktop-sm)
@@ -50,28 +46,25 @@
     +screen($tablet)
       display: none
 
-    &-image,
-    &-image_hover
-      position: absolute
+    &-image
       width: 400px
       height: 460px
+      flex-shrink: 0
+      transition: .2s
       background-position: 50% 0
-      cursor: pointer
+      margin-right: 150px
 
-    &-image_hover
-      opacity: 0
+      &.lazyloaded
+        background-image: url(../assets/img/fighters/cards/khabib.png)
 
-    &:hover
-      .fighters__promo-image
-        opacity: 0
-
-      .fighters__promo-image_hover
-        opacity: 1
+        &:hover
+          background-image: url(../assets/img/fighters/cards/khabib_hover.png)
 
     &-info
+      display: flex
+      flex-direction: column
       text-transform: uppercase
       color: $black
-      padding-left: 550px
 
     &-header
       +font(40px, 45px, $font-dirty)
@@ -88,11 +81,11 @@
         height: 65px
         z-index: -1
 
-      &[data-lazyloaded]
+      &.lazyloaded
         &::after
           background: url(../assets/img/global/feedback_title_stroke.png) center/contain no-repeat
 
-      i
+      span
         +font(22px, 24px, $font-dirty)
 
     &-discipline

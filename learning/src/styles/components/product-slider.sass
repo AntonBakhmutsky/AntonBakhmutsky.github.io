@@ -16,6 +16,7 @@
       position: absolute
       left: 0
       top: 0
+      width: 1800px
       height: 100%
       display: flex
 
@@ -35,21 +36,21 @@
         left: 20px
 
       &_disabled
-        &[data-lazyloaded]
+        &.lazyloaded
           &::before
             background-position: 0 -16px !important
 
       &_left
         left: 0
 
-        &[data-lazyloaded]
+        &.lazyloaded
           &::before
             background: url(../assets/img/products/mobile/products_gallery_arr_left.png) no-repeat 0 0 / 21px 32px
 
       &_right
         right: 0
 
-        &[data-lazyloaded]
+        &.lazyloaded
           &::before
             background: url(../assets/img/products/mobile/products_gallery_arr_right.png) no-repeat 0 0 / 21px 32px
 
@@ -92,90 +93,74 @@
         flex-shrink: 0
         color: $white
 
-        &[data-lazyloaded]
+        &.lazyloaded
           &:active
             background-position: 0 -60px !important
             color: $black
-
-      &_mango
-        .products__slider
-          &-item
-            &-image
-              &[data-lazyloaded]
-                background: url(../assets/img/products/mobile/products_mango.png) no-repeat 0 0 / 100% 100%
-
-            &-more
-              &[data-lazyloaded]
-                background: url(../assets/img/products/mobile/products_mango_btn.png) no-repeat
-
 
       &_original
         .products__slider
           &-item
             &-image
-              &[data-lazyloaded]
+              &.lazyloaded
                 background: url(../assets/img/products/mobile/products_original.png) no-repeat 0 0 / 100% 100%
 
             &-more
-              &[data-lazyloaded]
+              &.lazyloaded
                 background: url(../assets/img/products/mobile/products_original_btn.png) no-repeat
 
       &_orange
         .products__slider
           &-item
             &-image
-              &[data-lazyloaded]
+              &.lazyloaded
                 background: url(../assets/img/products/mobile/products_orange.png) no-repeat 0 0 / 100% 100%
 
             &-more
-              &[data-lazyloaded]
+              &.lazyloaded
                 background: url(../assets/img/products/mobile/products_orange_btn.png) no-repeat
 
       &_ice
         .products__slider
           &-item
             &-image
-              &[data-lazyloaded]
+              &.lazyloaded
                 background: url(../assets/img/products/mobile/products_ice.png) no-repeat 0 0 / 100% 100%
 
             &-more
-              &[data-lazyloaded]
+              &.lazyloaded
                 background: url(../assets/img/products/mobile/products_ice_btn.png) no-repeat
 
       &_pomegranate
         .products__slider
           &-item
             &-image
-              &[data-lazyloaded]
+              &.lazyloaded
                 background: url(../assets/img/products/mobile/products_pomegranate.png) no-repeat 0 0 / 100% 100%
 
             &-more
-              &[data-lazyloaded]
+              &.lazyloaded
                 background: url(../assets/img/products/mobile/products_pomegranate_btn.png) no-repeat
 
-      &_pepper
+      &_california
         .products__slider
           &-item
             &-image
-              &[data-lazyloaded]
+              &.lazyloaded
                 background: url(../assets/img/products/mobile/products_pepper.png) no-repeat 0 0 / 100% 100%
 
             &-more
-              &[data-lazyloaded]
+              &.lazyloaded
                 background: url(../assets/img/products/mobile/products_pepper_btn.png) no-repeat
 
       &_active.products__slider-item
-        &_mango
-          .products__slider-item-name
-            color: $mango
-
         &_original
           .products__slider-item-name
             color: $green
 
         &_orange
           .products__slider-item-name
-            color: $yellow-light
+            color: $orange
 
         &_ice
           .products__slider-item-name
@@ -185,7 +170,7 @@
           .products__slider-item-name
             color: $red
 
-        &_pepper
+        &_california
           .products__slider-item-name
             color: $pink
 

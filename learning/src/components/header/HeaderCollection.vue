@@ -1,5 +1,5 @@
 <template lang="pug">
-  a.header__collection.animated(href="#news" v-if="$t('header.collection')")
+  .header__collection.animated
     .header__collection-text(v-html="$t('header.collection')")
 </template>
 

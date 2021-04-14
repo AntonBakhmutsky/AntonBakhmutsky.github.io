@@ -1,7 +1,7 @@
 <template lang="pug">
-  h2.products__title.section-title.section-title_white.animated(v-lazyload)
-    .section-title__link(v-lazyload)
-    span {{ $t('products.title') }}
+  h2.products__title.section-title.section-title_white.lazyload.animated
+    a.section-title__link.lazyload
+    span Products
 </template>
 
 <script>

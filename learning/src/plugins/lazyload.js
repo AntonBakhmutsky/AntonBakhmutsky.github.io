@@ -1,9 +1,9 @@
-import Vue from 'vue'
-
 import inViewport from '../helpers/inViewport'
 
-Vue.directive('lazyload', {
-  bind: (element) => {
+window.addEventListener('load', () => {
+  const lazyload = document.querySelectorAll('.lazyload')
+
+  lazyload.forEach((element) => {
     inViewport(element, () => {
       const src = element.dataset.src
       const backImg = element.dataset.back
@@ -16,7 +16,8 @@ Vue.directive('lazyload', {
         element.removeAttribute('data-back')
       }
 
-      element.dataset.lazyloaded = 'true'
+      element.classList.add('lazyloaded')
+      element.classList.remove('lazyload')
     }, 'offset')
-  }
+  })
 })

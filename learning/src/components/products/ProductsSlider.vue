@@ -1,31 +1,39 @@
 <template lang="pug">
   .products__slider
-    .products__slider-arrow.products__slider-arrow_left(v-lazyload)
-    .products__slider-arrow.products__slider-arrow_right(v-lazyload)
+    .products__slider-arrow.products__slider-arrow_left.lazyload
+    .products__slider-arrow.products__slider-arrow_right.lazyload
     .products__slider-content
       .products__slider-item(
         v-for="item in items"
         :key="item.code"
-        :class="`products__slider-item_${item.code}`"
-        v-tap="() => showModal(item)"
+        :class="[ `products__slider-item_${item.code}` ]"
       )
-        .products__slider-item-name {{ item.name }}
-        .products__slider-item-image(v-lazyload)
-        .products__slider-item-more(v-lazyload) {{ $t('products.more') }}
+        a.products__slider-item-name(
+          href="javascript:"
+        ) {{ item.name }}
+        a.products__slider-item-image.lazyload(
+          href="javascript:"
+        )
+        a.products__slider-item-more.lazyload(
+          href="javascript:"
+        ) Read More
 </template>
 
 <script>
-import { mapState, mapMutations } from 'vuex'
-
 import Swiper, { Navigation } from 'swiper'
-
 Swiper.use([Navigation])
 
 export default {
   name: 'ProductsSlider',
-  computed: {
-    ...mapState('products', ['items'])
-  },
+  data: () => ({
+    items: [
+      { name: 'original', code: 'original' },
+      { name: 'orange', code: 'orange' },
+      { name: 'ice', code: 'ice' },
+      { name: 'pomegranate', code: 'pomegranate' },
+      { name: 'california', code: 'california' }
+    ]
+  }),
   mounted () {
     this.$nextTick(() => {
       new Swiper('.products__slider', {
@@ -41,13 +49,6 @@ export default {
         }
       })
     })
-  },
-  methods: {
-    ...mapMutations('products', ['SET_ITEM']),
-    showModal (item) {
-      this.SET_ITEM(item)
-      this.$modal.show('ProductsModal')
-    }
   }
 }
 </script>

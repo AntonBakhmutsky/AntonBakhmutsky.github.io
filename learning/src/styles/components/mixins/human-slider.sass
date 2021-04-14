@@ -35,7 +35,7 @@
       bottom: 3px
 
     &_disabled
-      &[data-lazyloaded]
+      &.lazyloaded
         background-position: 0 -148px !important
         +screen($tablet)
           background-position: 0 0 !important
@@ -49,7 +49,7 @@
     &_left
       left: 20px
 
-      &[data-lazyloaded]
+      &.lazyloaded
         background: url(../assets/img/riders/riders_gallery_arr_left.png) no-repeat 0 0
         +screen($tablet)
           background: url(../assets/img/riders/mobile/riders_gallery_arr_left.png) no-repeat center/contain !important
@@ -57,7 +57,7 @@
     &_right
       right: 20px
 
-      &[data-lazyloaded]
+      &.lazyloaded
         background: url(../assets/img/riders/riders_gallery_arr_right.png) no-repeat 0 0
         +screen($tablet)
           background: url(../assets/img/riders/mobile/riders_gallery_arr_right.png) no-repeat center/contain !important

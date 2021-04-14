@@ -20,7 +20,7 @@
     background-size: 100% 100%
     cursor: pointer
 
-    &[data-lazyloaded]
+    &.lazyloaded
       background: url(../assets/img/map/sellpoints_popup_close.png) no-repeat center top
 
     &:hover
@@ -39,7 +39,7 @@
     padding: 0 0 12px 25px
     box-sizing: border-box
 
-    &[data-lazyloaded]
+    &.lazyloaded
       background: url(../assets/img/map/sellpoints_map_popup_bg.png) no-repeat left bottom
 
   &__city
@@ -49,24 +49,23 @@
     +font(26px, 36px)
     text-transform: uppercase
 
-  &__message
-    margin-top: 18px
+  &__list
+    width: 100%
+    max-height: 280px
+    display: flex
+    flex-direction: column
+    flex-wrap: wrap
+    padding: 0
+    margin-bottom: 0
 
-    ul
-      width: 100%
-      max-height: 280px
-      display: flex
-      flex-direction: column
-      flex-wrap: wrap
-      padding: 0
-      margin-bottom: 0
+    li
+      width: 130.5px
+      list-style: none
+      box-sizing: border-box
+      padding: 0 0 8px 22px
+      position: relative
 
-      li
-        width: 130.5px
-        list-style: none
-        box-sizing: border-box
-        padding: 0 0 8px 22px
-        position: relative
+      &.lazyloaded
         background: url(../assets/img/global/li.png) 1px 7px no-repeat
 
   &__pointer

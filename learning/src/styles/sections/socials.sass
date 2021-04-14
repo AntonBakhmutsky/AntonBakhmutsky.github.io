@@ -11,14 +11,8 @@
   +screen($tablet)
     display: none
 
-  &[data-lazyloaded]
+  &.lazyloaded
     background: url(../assets/img/socials/social_bg.png) no-repeat scroll 49.999% 0
-
-  &__preloader
-    position: absolute
-    left: 50%
-    top: 50%
-    transform: translate(-50%, -50%)
 
   &__bg
     position: absolute
@@ -35,7 +29,7 @@
         right: 525px
         top: 191px
 
-        &[data-lazyloaded]
+        &.lazyloaded
           background: url(../assets/img/socials/social_bg_left_back.png) repeat scroll 0 0
 
       &-front
@@ -46,7 +40,7 @@
         right: 317px
         top: 502px
 
-        &[data-lazyloaded]
+        &.lazyloaded
           background: url(../assets/img/socials/social_bg_left_front.png) repeat scroll 0 0
 
     &-right
@@ -56,7 +50,7 @@
       left: 23px
       top: 100px
 
-      &[data-lazyloaded]
+      &.lazyloaded
         background: url(../assets/img/socials/social_bg_right.png) repeat scroll 0 0
 
     &-splatter
@@ -67,7 +61,7 @@
         bottom: 90px
         right: -980px
 
-        &[data-lazyloaded]
+        &.lazyloaded
           background: url(../assets/img/socials/social_bg_splatter1.png) repeat scroll 0 0
 
       &-2
@@ -77,13 +71,13 @@
         bottom: 60px
         left: -960px
 
-        &[data-lazyloaded]
+        &.lazyloaded
           background: url(../assets/img/socials/social_bg_splatter2.png) repeat scroll 0 0
 
   &__title
     top: 180px
 
-    &[data-lazyloaded]
+    &.lazyloaded
       background: none
 
   &__list
@@ -139,23 +133,23 @@
         margin-right: 15px
 
       &_vk
-        &[data-lazyloaded]
+        &.lazyloaded
           background-image: url(../assets/img/socials/social_network_vk.png)
 
           &:hover
             background-image: url(../assets/img/socials/social_network_vk_hover.png)
 
-      &_facebook
-        &[data-lazyloaded]
+      &_fb
+        &.lazyloaded
           background-image: url(../assets/img/socials/social_network_fb.png)
 
           &:hover
             background-image: url(../assets/img/socials/social_network_fb_hover.png)
 
-      &_instagram
+      &_ig
         padding-top: 135px
 
-        &[data-lazyloaded]
+        &.lazyloaded
           background-image: url(../assets/img/socials/social_network_ig.png)
 
           &:hover
@@ -169,10 +163,10 @@
             &-counter
               margin: 12px 0 0 27px
 
-      &_youtube
+      &_yt
         padding-top: 135px
 
-        &[data-lazyloaded]
+        &.lazyloaded
           background-image: url(../assets/img/socials/social_network_yt.png)
 
           &:hover

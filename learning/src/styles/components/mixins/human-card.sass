@@ -7,15 +7,13 @@
   height: 600px
   position: relative
   flex-shrink: 0
-  cursor: pointer
-    
+
   &__image,
   &__image-hover
     height: 440px
     position: absolute
     top: 0
-    left: 50%
-    transform: translateX(-50%)
+    left: -10px
 
   &__image-hover
     opacity: 0
@@ -28,7 +26,7 @@
       opacity: 1
 
     .human-card__info-more
-      &[data-lazyloaded]
+      &.lazyloaded
         background: url(../assets/img/products/mobile/products_orange_btn.png) center 0 no-repeat !important
 
   &__info
@@ -38,14 +36,11 @@
     width: 380px
     height: 196px
     text-align: center
-    left: 50%
-    transform: translateX(-50%)
     text-transform: uppercase
 
     &-shadow
       position: absolute
-      left: 50%
-      transform: translateX(-50%)
+      left: 39px
       top: 27px
       width: 300px
       height: 140px
@@ -62,7 +57,7 @@
       top: -25px
       width: 100%
 
-      &[data-lazyloaded]
+      &.lazyloaded
         background: url(../assets/img/riders/riders_rider_name.png) no-repeat scroll center center
 
       span
@@ -81,7 +76,7 @@
       line-height: 38px
       box-sizing: border-box
 
-      &[data-lazyloaded]
+      &.lazyloaded
         background: url(../assets/img/riders/riders_rider_stroke.png) no-repeat scroll center center / 100% 100%
 
     &-more
