@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test</title>
+    <link href="app.css" rel="stylesheet">
+</head>
+<body>
+<header></header>
+<main>
+    <div class="container">
+        <div class="search">
+            <div class="search__top">
+                <div class="search__input"><input type="search"
+                                                  placeholder="Введите ЖК / корпус / № квартиры / № паркинга"></div>
+                <div class="select" id="status">
+                    <div class="select__container">
+                        <div class="select__arrow"></div>
+                        <div class="select__input"></div>
+                        <div class="select__options">
+                            <div class="select__item select__item_active" data-id="0">
+                                <div class="select__text">Забронированно</div>
+                            </div>
+                            <div class="select__item select__item_active" data-id="1">
+                                <div class="select__text">Проданно</div>
+                            </div>
+                            <div class="select__item select__item_active" data-id="2">
+                                <div class="select__text">Активно</div>
+                            </div>
+                        </div>
+                    </div>
+                    <select class="select__hidden" name="status" multiple="multiple">
+                        <option data-id="0" value="Забронированно" selected="selected">Забронированно</option>
+                        <option data-id="1" value="Проданно" selected="selected">Проданно</option>
+                        <option data-id="2" value="Активно" selected="selected">Активно</option>
+                    </select></div>
+                <button class="search__clear-basket">Очистить корзину
+                    <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L13 13M1 13L13 1" stroke="black"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="search__bottom">
+                <div class="search__actions">
+                    <div class="search__item search__item_main"><label class="checkbox"><input type="checkbox"
+                                                                                               name="allActions">
+                        <div class="checkbox__img"></div>
+                    </label>все
+                    </div>
+                    <div class="search__item">Сохранить<img src="assets/img/icons/save.svg" alt=""></div>
+                    <div class="search__item">Отправить<img src="assets/img/icons/tg.svg" alt=""></div>
+                    <div class="search__item">Удалить<img src="assets/img/icons/trash.svg" alt=""></div>
+                </div>
+            </div>
+        </div>
+        <div class="flats">
+            <div class="flat">
+                <div class="flat__check"><label class="checkbox"><input type="checkbox" name="flat">
+                    <div class="checkbox__img"></div>
+                </label></div>
+                <div class="flat__desc">
+                    <div class="flat__price">7 733 300 руб.</div>
+                    <div class="flat__about"><img class="flat__about-image" src="assets/img/icons/flat.svg" alt="">
+                        <div class="flat__about-text">Квартира</div>
+                    </div>
+                    <div class="flat__name"><span>Чистое Небо,</span> корпус 10, III кв. 2022 г.</div>
+                    <div class="flat__info">
+                        <div class="flat__info-left">
+                            <div class="flat__info-item">кв. 62</div>
+                            <div class="flat__info-item">1 комн. кв.</div>
+                        </div>
+                        <div class="flat__info-right">
+                            <div class="flat__info-item">234.38 м²</div>
+                            <div class="flat__info-item">7 этаж</div>
+                        </div>
+                    </div>
+                    <div class="flat__address">Лен. область, Всеволожский район, д. Кудрово, ул. Столичная, д. 5, к. 1
+                    </div>
+                </div>
+                <div class="flat__scheme">
+                    <div class="flat__status flat__status_entity">Уступка от юр. лица</div>
+                    <div class="flat__image"><img src="assets/img/layout.png" alt=""></div>
+                    <div class="flat__date">Добавлено 21/11/2020</div>
+                </div>
+            </div>
+            <div class="flat">
+                <div class="flat__check"><label class="checkbox"><input type="checkbox" name="flat">
+                    <div class="checkbox__img"></div>
+                </label></div>
+                <div class="flat__desc">
+                    <div class="flat__price">7 733 300 руб.</div>
+                    <div class="flat__name"><span>Зеленый квартал на Пулковских высотах,</span> корпус 10, III кв. 2022
+                        г.
+                    </div>
+                    <div class="flat__info">
+                        <div class="flat__info-left">
+                            <div class="flat__info-item">кв. 62</div>
+                            <div class="flat__info-item">1 комн. кв.</div>
+                        </div>
+                        <div class="flat__info-right">
+                            <div class="flat__info-item">234.38 м²</div>
+                            <div class="flat__info-item">7 этаж</div>
+                        </div>
+                    </div>
+                    <div class="flat__address">Комендантский пр., уч. 1 Каменка</div>
+                </div>
+                <div class="flat__scheme">
+                    <div class="flat__status flat__status_person">Уступка от физ. лица</div>
+                    <div class="flat__image"><img src="assets/img/layout.png" alt=""></div>
+                    <div class="flat__date">Добавлено 21/11/2020</div>
+                </div>
+            </div>
+            <div class="flat">
+                <div class="flat__check"><label class="checkbox"><input type="checkbox" name="flat">
+                    <div class="checkbox__img"></div>
+                </label></div>
+                <div class="flat__desc">
+                    <div class="flat__price">7 733 300 руб.</div>
+                    <div class="flat__about"><img class="flat__about-image" src="assets/img/icons/car.svg" alt="">
+                        <div class="flat__about-text">Паркинг</div>
+                        <div class="flat__about-popup">Подземная встроенно-пристроенная</div>
+                    </div>
+                    <div class="flat__name"><span>Зеленый квартал на Пулковских высотах,</span> корпус 10, III кв. 2022
+                        г.
+                    </div>
+                    <div class="flat__info">
+                        <div class="flat__info-left">
+                            <div class="flat__info-item">№ 7-10-2 (ПИБ №68)</div>
+                        </div>
+                        <div class="flat__info-right">
+                            <div class="flat__info-item">15 м²</div>
+                        </div>
+                    </div>
+                    <div class="flat__address">Ленинградская область, Всеволожский район, д. Кудрово, ул. Столичная, д.
+                        5, к. 1
+                    </div>
+                </div>
+                <div class="flat__scheme">
+                    <div class="flat__status flat__status_booked">Забронировано</div>
+                    <div class="flat__image"><img src="assets/img/layout.png" alt=""></div>
+                    <div class="flat__date">Добавлено 21/11/2020</div>
+                </div>
+            </div>
+            <div class="flat">
+                <div class="flat__check"><label class="checkbox"><input type="checkbox" name="flat">
+                    <div class="checkbox__img"></div>
+                </label></div>
+                <div class="flat__desc">
+                    <div class="flat__price">7 733 300 руб.</div>
+                    <div class="flat__about"><img class="flat__about-image" src="assets/img/icons/car.svg" alt="">
+                        <div class="flat__about-text">Паркинг</div>
+                        <div class="flat__about-popup">Подземная встроенно-пристроенная</div>
+                    </div>
+                    <div class="flat__name"><span>Зеленый квартал на Пулковских высотах,</span> корпус 10, III кв. 2022
+                        г.
+                    </div>
+                    <div class="flat__info">
+                        <div class="flat__info-left">
+                            <div class="flat__info-item">№ 7-10-2 (ПИБ №68)</div>
+                        </div>
+                        <div class="flat__info-right">
+                            <div class="flat__info-item">15 м²</div>
+                        </div>
+                    </div>
+                    <div class="flat__address">Лен. область, Всеволожский район, д. Кудрово, ул. Столичная, д. 5, к. 1
+                    </div>
+                </div>
+                <div class="flat__scheme">
+                    <div class="flat__status flat__status_sold">Продано</div>
+                    <div class="flat__image"><img src="assets/img/layout.png" alt=""></div>
+                    <div class="flat__date">Добавлено 21/11/2020</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<footer></footer>
+<script src="app.js"></script>
+</body>
+</html>
