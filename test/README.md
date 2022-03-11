@@ -3,7 +3,7 @@
 **Installation**
 
 ```
-yarn
+yarn install
 ```
 
 **Start Dev Server**

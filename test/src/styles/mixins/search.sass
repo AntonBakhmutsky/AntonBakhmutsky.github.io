@@ -1,0 +1,101 @@
+@use '../abstracts/variables' as *
+@use '../abstracts/mixins' as *
+
+.search
+  .select
+    margin-right: 10px
+
+  &__top
+    display: flex
+
+  &__input
+    max-width: 637px
+    width: 100%
+    height: 38px
+    border: 1px solid $gray-dark
+    position: relative
+    margin-right: 10px
+    box-sizing: border-box
+
+    &::before
+      content: ''
+      position: absolute
+      left: 12px
+      top: 50%
+      transform: translateY(-50%)
+      width: 14px
+      height: 14px
+      background: url(../assets/img/icons/loupe.svg) no-repeat center/cover
+
+    input
+      width: 100%
+      height: 100%
+      padding: 10px 10px 10px 46px
+      box-sizing: border-box
+
+  &__clear-basket
+    width: 154px
+    height: 38px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    background: $gray-dark
+    box-sizing: border-box
+    padding: 0 12px
+    white-space: nowrap
+    +font(13px, 13px)
+
+    svg
+      width: 12px
+      height: 12px
+
+  &__bottom
+    box-sizing: border-box
+    padding: 0 20px
+    height: 38px
+    margin-top: 32px
+
+  &__actions
+    display: flex
+    align-items: center
+
+  &__item
+    display: flex
+    align-items: center
+    margin-left: 12px
+    position: relative
+    cursor: pointer
+
+    &:not(.search__item_main)
+      box-sizing: border-box
+      padding: 9px 13px
+      background-color: $gray-dark
+
+    &_main
+      padding: 0 0 0 26px
+
+      &_active
+        &:before
+          background: url(../assets/img/icons/check.svg) no-repeat center/85% 80%, $yellow
+
+      &:before
+        content: ''
+        position: absolute
+        width: 16px
+        height: 16px
+        box-sizing: border-box
+        border: 1px solid $gray-darkest
+        top: 50%
+        transform: translateY(-50%)
+        left: 0
+
+    &_main
+      &:before
+        content: ''
+        width: 16px
+        height: 16px
+
+
+    img
+      display: block
+      margin-left: 12px

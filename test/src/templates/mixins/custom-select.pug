@@ -1,0 +1,22 @@
+mixin select(params)
+  .select(id=params.id)
+    .select__container
+      .select__arrow
+      .select__input
+      .select__options
+        each el, index in params.options
+          .select__item(
+            data-id=index
+            class="select__item_active"
+            )
+            .select__text #{el}
+    select.select__hidden(
+      name=params.name
+      multiple
+    )
+      each el, index in params.options
+        option(
+          data-id=index
+          value=el
+          selected
+        ) #{el}
