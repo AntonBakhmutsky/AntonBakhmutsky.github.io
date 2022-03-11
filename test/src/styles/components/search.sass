@@ -62,9 +62,12 @@
   &__item
     display: flex
     align-items: center
-    margin-left: 12px
+    margin-right: 10px
     position: relative
     cursor: pointer
+
+    .checkbox
+      margin-right: 10px
 
     &:not(.search__item_main)
       box-sizing: border-box
@@ -72,29 +75,7 @@
       background-color: $gray-dark
 
     &_main
-      padding: 0 0 0 26px
-
-      &_active
-        &:before
-          background: url(../assets/img/icons/check.svg) no-repeat center/85% 80%, $yellow
-
-      &:before
-        content: ''
-        position: absolute
-        width: 16px
-        height: 16px
-        box-sizing: border-box
-        border: 1px solid $gray-darkest
-        top: 50%
-        transform: translateY(-50%)
-        left: 0
-
-    &_main
-      &:before
-        content: ''
-        width: 16px
-        height: 16px
-
+      margin-right: 13px
 
     img
       display: block

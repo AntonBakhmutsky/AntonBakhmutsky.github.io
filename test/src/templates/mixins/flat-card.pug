@@ -6,30 +6,29 @@ mixin flat-card(params)
       .flat__price #{params.price}
       if (params.about)
         .flat__about
-          .flat__about-image
-            img(src=params.about.img alt="")
+          img.flat__about-image(src=params.about.img alt="")
           .flat__about-text #{params.about.text}
-        if (params.about.popup)
-          .flat__about-pop-up #{params.about.popup}
-        .flat__name !{params.name}
-        .flat__info
-          .flat__info-left
-            if (params.number)
-              .flat__info-item !{params.number}
-            if (params.count)
-              .flat__info-item !{params.count}
-          .flat__info-right
-            if (params.meters)
-              .flat__info-item #{params.meters}
-            if (params.floor)
-              .flat__info-item #{params.floor}
-          .flat__address #{params.address}
-      .flat__scheme
-        .flat__status(
-          class=params.status.modifier ? `flat__status_${params.status.modifier}` : ''
-        ) #{params.status.text}
-        .flat__image
-          img(src=params.img alt="")
-        .flat__date #{params.date}
+          if (params.about.popup)
+            .flat__about-popup #{params.about.popup}
+      .flat__name !{params.name}
+      .flat__info
+        .flat__info-left
+          if (params.number)
+            .flat__info-item !{params.number}
+          if (params.count)
+            .flat__info-item !{params.count}
+        .flat__info-right
+          if (params.meters)
+            .flat__info-item #{params.meters}
+          if (params.floor)
+            .flat__info-item #{params.floor}
+      .flat__address #{params.address}
+    .flat__scheme
+      .flat__status(
+        class=params.status.modifier ? `flat__status_${params.status.modifier}` : ''
+      ) #{params.status.text}
+      .flat__image
+        img(src=params.img alt="")
+      .flat__date #{params.date}
 
 

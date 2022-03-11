@@ -15,6 +15,9 @@ block content
           | !{ require('!svg-inline-loader!@/assets/img/icons/cross.svg') }
       .search__bottom
         .search__actions
+          .search__item.search__item_main
+            +check({name: 'allActions'})
+            | все
           each el in searchActions
             .search__item(class=el.modifier ? `search__item_${el.modifier}` : '')
               | #{el.text}
