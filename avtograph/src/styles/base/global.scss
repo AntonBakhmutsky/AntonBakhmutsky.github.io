@@ -1,5 +1,60 @@
 @use '../abstracts/variables' as *;
 @use '../abstracts/mixins' as *;
 
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  background: $body;
+  color: $black;
+  position: relative;
+}
+
+.main {
+  padding-top: 46px;
+}
+
+.body-fixed {
+  overflow: hidden;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: $black;
+}
+
+button {
+  appearance: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  background: transparent;
+}
+
+.container {
+  max-width: 768px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 0 22px;
+
+  &_flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+svg {
+  max-width: 100%;
+
+  path {
+    transition: .4s;
+  }
+}
+
 
 

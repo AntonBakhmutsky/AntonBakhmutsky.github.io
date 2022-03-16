@@ -1,6 +1,6 @@
 @use './variables' as *;
 
-@mixin font($_fontSize, $_lineHeight, $_fontWeight: 400, $_fontFamily: $noto) {
+@mixin font($_fontSize, $_lineHeight, $_fontFamily: $noto,  $_fontWeight: 400) {
   font: $_fontWeight #{$_fontSize}/#{$_lineHeight} $_fontFamily;
 }
 

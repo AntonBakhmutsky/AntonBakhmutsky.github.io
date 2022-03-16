@@ -3,3 +3,14 @@
 @use 'abstracts/fonts';
 @use 'abstracts/variables';
 @use 'abstracts/mixins';
+
+@use  'base/global';
+
+@use  'components/header';
+@use  'components/filter';
+@use  'components/list';
+
+@use  'modals/user-modal';
+
+@use  'mixins/list-item';
+
