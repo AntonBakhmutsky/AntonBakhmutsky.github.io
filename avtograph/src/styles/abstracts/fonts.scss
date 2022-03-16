@@ -9,7 +9,7 @@
 
 @font-face {
   font-family: 'Spartan';
-  src: local('Spartan-Bold');
+  src: local('Spartan-Regular');
   src: url('../assets/fonts/Spartan-Regular.woff2') format('woff2');
   src: url('../assets/fonts/Spartan-Regular.woff') format('woff');
   font-weight: 400;
@@ -22,5 +22,23 @@
   src: url('../assets/fonts/Spartan-Bold.woff2') format('woff2');
   src: url('../assets/fonts/Spartan-Bold.woff') format('woff');
   font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto-Medium');
+  src: url('../assets/fonts/Roboto-Medium.woff2') format('woff2');
+  src: url('../assets/fonts/Roboto-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto-Black');
+  src: url('../assets/fonts/Roboto-Black.woff2') format('woff2');
+  src: url('../assets/fonts/Roboto-Black.woff') format('woff');
+  font-weight: 900;
   font-style: normal;
 }

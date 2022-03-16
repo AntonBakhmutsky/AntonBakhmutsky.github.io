@@ -1,8 +1,90 @@
 @use '../abstracts/variables' as *;
 @use '../abstracts/mixins' as *;
+@use '../abstracts/extends' as *;
 
 .filter {
+  padding: 35px 0 26px;
 
   &__title {
+    @include font(13px, 13px, $spartan, 700);
+    margin: 0;
+  }
+
+  &__dropdown {
+    position: relative;
+
+    &_open {
+      .filter {
+        &__value {
+          &:after {
+            transform: rotate(180deg);
+          }
+        }
+
+        &__options {
+          @extend %show;
+        }
+      }
+    }
+  }
+
+  &__value {
+    position: relative;
+    padding-right: 16px;
+    @include font(13px, 13px, $roboto, 900);
+    cursor: pointer;
+
+    &:after {
+      content: '';
+      width: 9px;
+      height: 6px;
+      background: url(../assets/img/arrow-down.svg) no-repeat center/cover;
+      position: absolute;
+      right: 0;
+      top: 4px;
+      transition: .4s;
+    }
+  }
+
+  &__options {
+    min-width: 125px;
+    box-sizing: border-box;
+    padding: 20px 15px;
+    background: $white;
+    position: absolute;
+    top: calc(100% + 4px);
+    right: 0;
+    @include font(11px, 13px, $roboto, 500);
+    transition: .4s;
+    @extend %hide;
+
+    &-item {
+      position: relative;
+      cursor: pointer;
+      transition: .4s;
+
+      &:hover:not(.filter__options-item_active) {
+        color: $blue;
+      }
+
+      &:not(:first-child) {
+        margin-top: 15px;
+      }
+
+      &_active {
+        font-weight: 900;
+        position: relative;
+
+        &:after {
+          content: '';
+          width: 10px;
+          height: 8px;
+          background: url(../assets/img/check.svg) no-repeat center/cover;
+          position: absolute;
+          right: 0;
+          top: 2px;
+        }
+      }
+    }
   }
 }

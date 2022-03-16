@@ -1,5 +1,6 @@
 @use '../abstracts/variables' as *;
 @use '../abstracts/mixins' as *;
+@use '../abstracts/extends' as *;
 
 .user-modal {
   position: fixed;
@@ -13,14 +14,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  visibility: hidden;
-  opacity: 0;
-  pointer-events: none;
+  @extend %hide;
+
 
   &_active {
-    visibility: visible;
-    opacity: 1;
-    pointer-events: auto;
+    @extend %show;
   }
 
   &__avatar {

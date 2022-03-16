@@ -1,2 +1,8 @@
 .filter
-  .filter__title
+  .container.container_flex
+    h1.filter__title Avtograph TODO list
+    .filter__dropdown
+      .filter__value Все
+      .filter__options
+        each el in filterOptions
+          .filter__options-item(class=el.modifier ? `filter__options-item_${el.modifier}` : '') #{el.txt}
