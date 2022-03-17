@@ -51,7 +51,7 @@ button {
 svg {
   max-width: 100%;
 
-  path {
+  path, rect {
     transition: .4s;
   }
 }

@@ -31,7 +31,7 @@
   &__value {
     position: relative;
     padding-right: 16px;
-    @include font(13px, 13px, $roboto, 900);
+    @include font(13px, 13px, $noto, 900);
     cursor: pointer;
 
     &:after {
@@ -54,17 +54,19 @@
     position: absolute;
     top: calc(100% + 4px);
     right: 0;
-    @include font(11px, 13px, $roboto, 500);
+    @include font(11px, 13px);
     transition: .4s;
     @extend %hide;
+    z-index: 5;
+    box-shadow: 0 20px 25px -5px rgba(26, 32, 44, 0.1), 0px 10px 10px -5px rgba(26, 32, 44, 0.04);
 
     &-item {
       position: relative;
       cursor: pointer;
-      transition: .4s;
 
       &:hover:not(.filter__options-item_active) {
         color: $blue;
+        font-weight: 700;
       }
 
       &:not(:first-child) {
@@ -72,7 +74,7 @@
       }
 
       &_active {
-        font-weight: 900;
+        font-weight: 700;
         position: relative;
 
         &:after {
