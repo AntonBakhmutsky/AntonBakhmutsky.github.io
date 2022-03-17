@@ -1,5 +1,4 @@
 window.addEventListener('load', () => {
-  // add list item
   const list = document.querySelector('.list__block');
   const input = document.querySelector('.list__input input');
   const inputBtn = document.querySelector('.list__input button');
@@ -13,7 +12,6 @@ window.addEventListener('load', () => {
     const innerClasses = ['list__item-check', 'list__item-title', 'list__item-remove'];
 
     li.classList.add('list__item');
-
     innerItems.forEach((el, i) => el.classList.add(innerClasses[i]));
     title.textContent = itemTitle;
 
@@ -26,9 +24,6 @@ window.addEventListener('load', () => {
     });
 
     innerItems.forEach(el => li.insertAdjacentElement('beforeend', el));
-
-    console.log(li)
-
     list.insertAdjacentElement('beforeend', li);
   }
 
@@ -41,7 +36,7 @@ window.addEventListener('load', () => {
     const value = event.currentTarget.previousElementSibling.value.trim();
 
     if (value) {
-      createListItem(value);
+      addListItem(value);
     }
   })
 
@@ -53,10 +48,11 @@ window.addEventListener('load', () => {
     }
   })
 
-  // get list items
-  fetch('https://jsonplaceholder.typicode.com/todos/1', {
-    mode: 'no-cors'
-  })
+  fetch('https://jsonplaceholder.typicode.com/todos')
     .then(response => response.json())
-    .then(json => console.log(json));
+    .then(json => {
+      for (let i = 0; i < 5; i++) {
+        createListItem(json[i].title);
+      }
+    });
 })
