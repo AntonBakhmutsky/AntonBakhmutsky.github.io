@@ -4,5 +4,8 @@
     .filter__dropdown
       .filter__value Все
       .filter__options
-        each el in filterOptions
-          .filter__options-item(class=el.modifier ? `filter__options-item_${el.modifier}` : '') #{el.txt}
+        each el, index in filterOptions
+          .filter__options-item(
+            class=el.modifier ? `filter__options-item_${el.modifier}` : ''
+            data-id=index
+          ) #{el.txt}
