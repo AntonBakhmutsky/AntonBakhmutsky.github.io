@@ -4,13 +4,10 @@ window.addEventListener('load', () => {
   const inputBtn = document.querySelector('.list__input button');
   const savedTokens = localStorage.getItem('tokens');
   let tokens = {};
-  console.log(savedTokens)
 
   if (savedTokens !== null) {
     tokens = JSON.parse(savedTokens);
-    console.log(tokens)
     for (let key in tokens) {
-      console.log(tokens[key])
       createListItem(tokens[key].title, false, key, tokens[key].closed)
     }
   }
@@ -66,7 +63,6 @@ window.addEventListener('load', () => {
       }
 
       tokens[token] = itemData
-      console.log(tokens)
       updateTokens()
     }
 
