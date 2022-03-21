@@ -1,0 +1,27 @@
+.news
+  .container.container_flex
+    h2.news__title Новости
+    .news__grid
+      each el in newsGridItems
+        .news__item
+          .news__item-image
+            img(src=el.img alt="")
+          .news__item-desc #{el.desc}
+          .news__item-date #{el.date}
+      .news__btn
+        button.news__all-news все новости
+    .news__list
+      ul
+        li.news__list-title Учись в «Сириусе»
+        each el in newsListItems
+          li(
+            class = el.class ? el.class : ''
+          )
+            span.news__list-text !{el.txt}
+            if (el.date)
+              span.news__list-date #{el.date}
+      .news__btn
+        button.news__all-programs все программы
+
+
+

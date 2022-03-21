@@ -1,0 +1,163 @@
+@use '../abstracts/variables' as *
+@use '../abstracts/mixins' as *
+
+.news
+  display: flex
+  background: $white
+  box-sizing: border-box
+  padding: 120px 0
+  +screen($tablet)
+    padding: 50px 0
+
+  &__title
+    width: 100%
+
+  &__btn
+    width: 100%
+    margin-top: 33px
+    +screen(1459)
+      display: flex
+      justify-content: center
+
+    button
+      appearance: none
+      border: none
+      outline: none
+      background: $green-dark
+      border-radius: 24px
+      height: 48px
+      text-transform: uppercase
+      cursor: pointer
+      color: $white
+      box-sizing: border-box
+      padding: 0 38px
+      display: flex
+      align-items: center
+      justify-content: center
+      +font(15px, 15px, 700)
+
+  &__grid
+    max-width: 1080px
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    +screen(1459)
+      margin: 0 auto
+      max-width: 100%
+      width: 100%
+    +screen(1280)
+      justify-content: center
+    +screen(699)
+      flex-wrap: nowrap
+      flex-direction: column
+
+  &__item
+    max-width: 340px
+    display: flex
+    flex-direction: column
+    +screen(1459)
+      width: 300px
+      max-width: 100%
+    +screen(1280)
+      margin: 15px
+    +screen(699)
+      margin: 0
+      width: 100%
+
+    &:nth-child(n + 3)
+      margin-top: 30px
+      +screen(1459)
+        margin-top: 0
+
+    &:nth-child(n + 5)
+      +screen(1495)
+        margin-top: 30px
+      +screen(1280)
+        margin-top: 0
+
+    &:not(:last-child)
+      +screen(1280)
+        margin-top: 30px
+
+    &:first-child, &:nth-child(2)
+      max-width: 525px
+      width: 100%
+      +screen(1459)
+        width: 300px
+        max-width: 100%
+      +screen(699)
+        width: 100%
+
+    &-desc
+      margin: 22px 0 10px
+      +font(18px, 24px, 500)
+
+    &-image
+      max-height: 208px
+
+      img
+        width: 100%
+        height: 100%
+        object-fit: cover
+        object-position: center
+
+    &-date
+      +font(14px, 14px, 500)
+      color: $green-dark
+      margin-top: auto
+
+  &__list
+    max-width: 340px
+    box-sizing: border-box
+    margin: 0
+    padding: 0 0 0 30px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    +screen(1459)
+      max-width: 100%
+      width: 100%
+      padding: 0
+      margin-top: 100px
+
+    ul
+      margin: 0
+      padding: 0
+      list-style-type: none
+      +font(18px, 22px, 500)
+
+    &-text
+      min-height: 67px
+
+    &-date
+      color: $green
+      display: block
+      +font(14px, 22px, 500)
+      margin-top: 9px
+
+    &-title
+      +font(28px, 28px, 700)
+      margin-bottom: 25px
+
+    li.active
+      padding: 0 0 17px 15px
+      position: relative
+      +font(16px, 22px)
+
+      &:before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: 6px
+        height: 75%
+        background: $green-dark
+
+    li
+      &:not(:first-child)
+        padding-bottom: 17px
+        border-bottom: 1px solid $gray
+        margin-top: 15px
+
+      &:last-child
+        border-bottom: none

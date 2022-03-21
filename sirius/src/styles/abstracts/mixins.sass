@@ -1,8 +1,8 @@
 @use './variables' as *
 
-=font($_fontSize, $_lineHeight, $_fontFamily: $font,  $_fontWeight: 400)
+=font($_fontSize, $_lineHeight,  $_fontWeight: 400, $_fontFamily: $font)
   font: $_fontWeight #{$_fontSize}/#{$_lineHeight} $_fontFamily
 
 =screen($size)
-  @media only screen and (min-width: #{$size}px)
+  @media only screen and (max-width: #{$size}px)
     @content
