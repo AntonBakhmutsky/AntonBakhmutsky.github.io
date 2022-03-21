@@ -1,9 +1,8 @@
 @use './variables' as *
 
-@mixin font($_fontSize, $_lineHeight, $_fontFamily: $font,  $_fontWeight: 400)
+=font($_fontSize, $_lineHeight, $_fontFamily: $font,  $_fontWeight: 400)
   font: $_fontWeight #{$_fontSize}/#{$_lineHeight} $_fontFamily
 
-
-@mixin screen($size)
+=screen($size)
   @media only screen and (min-width: #{$size}px)
     @content
