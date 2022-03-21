@@ -2,23 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cccfbe47-0a45-4ec6-b90a-e109c9da3d67" name="Default Changelist" comment="Revert &quot;Revert &quot;complete project&quot;&quot;&#10;&#10;This reverts commit 7ea4dd82">
-      <change afterPath="$PROJECT_DIR$/avtograph/src/scripts/components/list-block.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/avtograph/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/avtograph/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/avtograph/src/assets/fonts/Roboto-Black.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/avtograph/src/assets/fonts/Roboto-Black.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/avtograph/src/assets/fonts/Roboto-Medium.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/avtograph/src/assets/fonts/Roboto-Medium.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/avtograph/src/scripts/components/dropdown.js" beforeDir="false" afterPath="$PROJECT_DIR$/avtograph/src/scripts/components/dropdown.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/avtograph/src/scripts/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/avtograph/src/scripts/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/avtograph/src/styles/abstracts/fonts.scss" beforeDir="false" afterPath="$PROJECT_DIR$/avtograph/src/styles/abstracts/fonts.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/avtograph/src/styles/abstracts/variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/avtograph/src/styles/abstracts/variables.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/avtograph/src/styles/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/avtograph/src/styles/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/avtograph/src/styles/base/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/avtograph/src/styles/base/global.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/avtograph/src/styles/components/filter.scss" beforeDir="false" afterPath="$PROJECT_DIR$/avtograph/src/styles/components/filter.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/avtograph/src/styles/components/list.scss" beforeDir="false" afterPath="$PROJECT_DIR$/avtograph/src/styles/components/list.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/avtograph/src/styles/mixins/list-item.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/avtograph/src/templates/components/list.pug" beforeDir="false" afterPath="$PROJECT_DIR$/avtograph/src/templates/components/list.pug" afterDir="false" />
     </list>
     <list id="1ec5337b-5fcd-4e01-847b-161d9471ecc5" name="Revert &quot;Revert &quot;Revert &quot;complete project&quot;&quot;&quot;" comment="Revert &quot;Revert &quot;Revert &quot;complete project&quot;&quot;&quot;&#10;&#10;This reverts commit fdd0d1d6" />
     <option name="SHOW_DIALOG" value="false" />
@@ -44,8 +29,12 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="yarn" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -58,6 +47,9 @@
       <updated>1647428035280</updated>
       <workItem from="1647428036926" duration="378000" />
       <workItem from="1647473186678" duration="1206000" />
+      <workItem from="1647797611621" duration="1244000" />
+      <workItem from="1647842852680" duration="2043000" />
+      <workItem from="1647848139471" duration="28000" />
     </task>
     <task id="LOCAL-00001" summary="Revert &quot;complete project&quot;&#10;&#10;This reverts commit 30a04d2da6f04d41fd527815f23b37b7230158a1.">
       <created>1647428065177</created>
