@@ -39,7 +39,6 @@ window.addEventListener('load', () => {
     check.addEventListener('click', (event) => {
       const item = event.target.closest('.list__item');
       const token = item.dataset.token;
-      console.log(tokens[token])
 
       item.classList.toggle('list__item_closed');
 
