@@ -7,7 +7,7 @@
   box-sizing: border-box
   padding: 120px 0
   +screen($tablet)
-    padding: 50px 0
+    padding: 64px 0 113px
 
   &__title
     width: 100%
@@ -15,54 +15,66 @@
   &__btn
     width: 100%
     margin-top: 33px
-    +screen(1459)
+    display: flex
+    align-items: flex-end
+    +screen(1469)
       display: flex
       justify-content: center
 
     button
+      transition: .4s
       appearance: none
-      border: none
       outline: none
       background: $green-dark
       border-radius: 24px
-      height: 48px
       text-transform: uppercase
       cursor: pointer
       color: $white
       box-sizing: border-box
-      padding: 0 38px
+      border: 2px solid $green-dark
+      padding: 15px 38px
       display: flex
       align-items: center
       justify-content: center
       +font(15px, 15px, 700)
+      +screen($tablet)
+        +font(13px, 16px, 700)
+
+      &:hover
+        background-color: transparent
+        color: $green-dark
 
   &__grid
     max-width: 1080px
     display: flex
     flex-wrap: wrap
     justify-content: space-between
-    +screen(1459)
+    +screen(1469)
       margin: 0 auto
       max-width: 100%
       width: 100%
-    +screen(1280)
-      justify-content: center
-    +screen(699)
+    +screen($tablet)
       flex-wrap: nowrap
       flex-direction: column
 
   &__item
-    max-width: 340px
+    max-width: calc(33% - 15px)
     display: flex
     flex-direction: column
+    color: $black
+    text-decoration: none
+    flex-shrink: 0
+    transition: .4s
     +screen(1459)
-      width: 300px
+      max-width: calc(25% - 15px)
+    +screen($tablet)
       max-width: 100%
-    +screen(1280)
-      margin: 15px
-    +screen(699)
       margin: 0
       width: 100%
+
+    &:hover
+      transform: translateY(-10px)
+      box-shadow: 0 20px 25px 0 rgba(26, 32, 44, 0.1), 0 10px 10px -5px rgba(26, 32, 44, .04)
 
     &:nth-child(n + 3)
       margin-top: 30px
@@ -80,20 +92,25 @@
         margin-top: 30px
 
     &:first-child, &:nth-child(2)
-      max-width: 525px
+      max-width: calc(50% - 15px)
       width: 100%
       +screen(1459)
-        width: 300px
+        max-width: calc(25% - 15px)
+      +screen($tablet)
         max-width: 100%
-      +screen(699)
-        width: 100%
+
+      .news__item-image
+        max-height: 260px
+        height: 100%
+        +screen(1459)
+          height: 208px
 
     &-desc
       margin: 22px 0 10px
       +font(18px, 24px, 500)
 
     &-image
-      max-height: 208px
+      height: 208px
 
       img
         width: 100%
@@ -114,7 +131,7 @@
     display: flex
     flex-direction: column
     justify-content: space-between
-    +screen(1459)
+    +screen(1469)
       max-width: 100%
       width: 100%
       padding: 0
@@ -125,6 +142,14 @@
       padding: 0
       list-style-type: none
       +font(18px, 22px, 500)
+
+      a
+        color: $black
+        text-decoration: none
+        transition: .4s
+
+        &:hover:not(.active)
+          color: $green-dark
 
     &-text
       min-height: 67px
@@ -137,12 +162,15 @@
 
     &-title
       +font(28px, 28px, 700)
-      margin-bottom: 25px
+      margin: 0 0 25px 0
 
     li.active
       padding: 0 0 17px 15px
       position: relative
       +font(16px, 22px)
+
+      a
+        color: $green-dark
 
       &:before
         content: ''

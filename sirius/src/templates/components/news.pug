@@ -1,9 +1,10 @@
 .news
   .container.container_flex
+
     h2.news__title Новости
     .news__grid
       each el in newsGridItems
-        .news__item
+        a.news__item(href=el.href)
           .news__item-image
             img(src=el.img alt="")
           .news__item-desc #{el.desc}
@@ -11,15 +12,16 @@
       .news__btn
         button.news__all-news все новости
     .news__list
+      h3.news__list-title Учись в «Сириусе»
       ul
-        li.news__list-title Учись в «Сириусе»
         each el in newsListItems
           li(
             class = el.class ? el.class : ''
           )
-            span.news__list-text !{el.txt}
-            if (el.date)
-              span.news__list-date #{el.date}
+            a(href=el.href)
+              span.news__list-text !{el.txt}
+              if (el.date)
+                span.news__list-date #{el.date}
       .news__btn
         button.news__all-programs все программы
 
