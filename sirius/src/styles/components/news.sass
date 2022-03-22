@@ -73,7 +73,6 @@
       width: 100%
 
     &:hover
-      transform: translateY(-10px)
       box-shadow: 0 20px 25px 0 rgba(26, 32, 44, 0.1), 0 10px 10px -5px rgba(26, 32, 44, .04)
 
     &:nth-child(n + 3)
@@ -99,18 +98,20 @@
       +screen($tablet)
         max-width: 100%
 
-      .news__item-image
-        max-height: 260px
-        height: 100%
-        +screen(1459)
-          height: 208px
-
     &-desc
       margin: 22px 0 10px
       +font(18px, 24px, 500)
+      box-sizing: border-box
+      padding: 0 10px
 
     &-image
-      height: 208px
+      height: 100%
+      width: 100%
+      flex-basis: 54%
+      flex-shrink: 0
+      +screen($tablet)
+        flex-basis: auto
+        flex-shrink: 1
 
       img
         width: 100%
@@ -122,6 +123,8 @@
       +font(14px, 14px, 500)
       color: $green-dark
       margin-top: auto
+      box-sizing: border-box
+      padding: 10px
 
   &__list
     max-width: 340px
