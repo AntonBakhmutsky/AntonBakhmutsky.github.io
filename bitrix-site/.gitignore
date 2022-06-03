@@ -1,0 +1,16 @@
+/node_modules
+/.idea
+/docker
+/bitrix
+/upload
+/.top.menu.php
+/.bottom.menu.php
+/include
+*.min.js
+*.min.css
+yarn.lock
+composer.lock
+package-lock.json
+/robots.txt
+/sitemap.xml
+/sitemap-*.xml

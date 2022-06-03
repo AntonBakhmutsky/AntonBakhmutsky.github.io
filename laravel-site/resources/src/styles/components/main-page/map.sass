@@ -1,0 +1,16 @@
+@use '../../abstracts/variables' as *
+@use '../../abstracts/mixins' as *
+
+.map
+  height: 644px
+  position: relative
+  z-index: 1
+  +screen($tablet-sm)
+    height: 255px
+
+  .leaflet-pane.leaflet-tile-pane
+    -webkit-filter: grayscale(100%)
+    filter: grayscale(100%)
+
+  .leaflet-right
+    display: none

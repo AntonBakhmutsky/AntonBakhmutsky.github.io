@@ -1,0 +1,169 @@
+@use '../abstracts/variables' as *
+@use '../abstracts/mixins' as *
+
+.col-tile
+  .container
+    padding: 0
+    +screen($container)
+      padding: 0 30px
+
+  &__title
+    text-transform: uppercase
+    +font(18px, 24px)
+    text-align: center
+    margin: 20px 0
+    +screen($mobile-sm)
+      +font(16px, 22px)
+
+  &__wrap
+    padding: 55px 0
+
+    &_horizontal
+      .col-tile__item-image
+        max-height: none
+        min-height: auto
+        height: 190px
+        +screen($mobile)
+          height: 165px
+
+        img
+          object-fit: cover
+
+    &_vertical
+      .col-tile__item-image
+        max-height: none
+        min-height: auto
+        height: 432px
+
+        img
+          object-fit: cover
+
+    &_square
+      .col-tile__item-image
+        max-height: none
+        min-height: auto
+        height: 295px
+        +screen($mobile)
+          height: 260px
+
+        img
+          object-fit: cover
+
+  &__grid
+    display: flex
+    flex-wrap: wrap
+
+    &_three
+      justify-content: center
+      +screen($mobile)
+        flex-direction: column
+        flex-wrap: nowrap
+        align-items: center
+        justify-content: flex-start
+
+      .col-tile__item
+        margin: 20px 0
+        +screen($container)
+          margin: 20px 10px !important
+        +screen($mobile)
+          margin: 20px 0 !important
+
+        &:not(:nth-child(3n))
+          margin-right: 19px
+          +screen($container)
+            margin-right: 0
+
+        &:last-child
+          margin-right: 0
+
+    &_two
+      justify-content: center
+      flex-wrap: wrap
+      max-width: 610px
+      margin: 0 auto
+      +screen(669)
+        flex-direction: column
+        flex-wrap: nowrap
+        align-items: center
+
+      .col-tile__item
+        margin: 20px 0
+
+        &:nth-child(odd)
+          margin-right: 20px
+          +screen(669)
+            margin-right: 0
+
+        &:last-child
+          margin-right: 0
+
+  &__item
+    display: flex
+    flex-direction: column
+    align-items: center
+    width: 295px
+    color: $black
+    +screen($mobile)
+      width: 260px
+
+    &-image
+      overflow: hidden
+      width: 100%
+      max-height: 295px
+      min-height: 200px
+      +screen($mobile)
+        min-height: 165px
+        max-height: 260px
+
+      img
+        width: 100%
+        height: 100%
+        object-fit: contain
+        object-position: center
+
+    &-name
+      +font(16px, 22px)
+      margin-top: 15px
+
+    &-price
+      margin-top: 5px
+
+    &-absent
+      margin-top: 15px
+      color: var(--color)
+      text-transform: uppercase
+
+    &-btn
+      padding: 1px
+      box-sizing: border-box
+      background: var(--color)
+      width: 121px
+      height: 37px
+      transition: .3s
+      margin-top: 9px
+
+      button
+        display: flex
+        width: 100%
+        height: 100%
+        align-items: center
+        justify-content: center
+        text-transform: uppercase
+
+      &_transparent
+        button
+          background: $white
+          color: var(--color)
+
+      &_fill
+        button
+          color: $white
+
+      &:hover
+        opacity: .5
+
+      &:active
+        opacity: 1
+
+
+

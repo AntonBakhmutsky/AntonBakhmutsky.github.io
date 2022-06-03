@@ -1,0 +1,194 @@
+@use '../abstracts/variables' as *
+@use '../abstracts/mixins' as *
+
+.socials
+  height: 1200px
+  margin-top: -230px
+  z-index: 6
+  position: relative
+  overflow: hidden
+  pointer-events: none
+  +screen($tablet)
+    display: none
+
+  &[data-lazyloaded]
+    background: url(../assets/img/socials/social_bg.png) no-repeat scroll 49.999% 0
+
+  &__preloader
+    position: absolute
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+
+  &__bg
+    position: absolute
+    top: 0
+    left: 50%
+    height: 1200px
+
+    &-left
+      &-back
+        width: 435px
+        height: 619px
+        opacity: 0.45
+        position: absolute
+        right: 525px
+        top: 191px
+
+        &[data-lazyloaded]
+          background: url(../assets/img/socials/social_bg_left_back.png) repeat scroll 0 0
+
+      &-front
+        width: 643px
+        height: 640px
+        opacity: 0.55
+        position: absolute
+        right: 317px
+        top: 502px
+
+        &[data-lazyloaded]
+          background: url(../assets/img/socials/social_bg_left_front.png) repeat scroll 0 0
+
+    &-right
+      width: 937px
+      height: 1128px
+      position: absolute
+      left: 23px
+      top: 100px
+
+      &[data-lazyloaded]
+        background: url(../assets/img/socials/social_bg_right.png) repeat scroll 0 0
+
+    &-splatter
+      &-1
+        width: 1846px
+        height: 697px
+        position: absolute
+        bottom: 90px
+        right: -980px
+
+        &[data-lazyloaded]
+          background: url(../assets/img/socials/social_bg_splatter1.png) repeat scroll 0 0
+
+      &-2
+        width: 1920px
+        height: 788px
+        position: absolute
+        bottom: 60px
+        left: -960px
+
+        &[data-lazyloaded]
+          background: url(../assets/img/socials/social_bg_splatter2.png) repeat scroll 0 0
+
+  &__title
+    top: 180px
+
+    &[data-lazyloaded]
+      background: none
+
+  &__list
+    position: absolute
+    top: 400px
+    left: 50%
+    transform: translateX(-50%)
+    width: 100%
+    height: 380px
+    display: grid
+    grid: 180px 180px / 180px 180px 180px 180px 180px 180px
+    grid-gap: 20px
+    justify-content: center
+    pointer-events: auto
+    +screen($desktop-sm)
+      transform: translateX(-50%) scale(.85)
+      top: 350px
+
+    .social-card
+      &:first-child
+        grid-row: 1 / 3
+        grid-column: 1 / 3
+
+  &__links
+    pointer-events: auto
+    height: 232px
+    width: 100%
+    position: absolute
+    top: 850px
+    left: 50%
+    transform: translateX(-50%)
+    display: flex
+    justify-content: center
+    +screen($desktop-sm)
+      transform: translateX(-50%) scale(.85)
+      top: 770px
+
+    &-item
+      display: flex
+      flex-direction: column
+      align-items: center
+      position: relative
+      width: 285px
+      height: 232px
+      background: no-repeat 0 0
+      flex-shrink: 0
+      +font(18px, 22px)
+      box-sizing: border-box
+      padding-top: 123px
+      transition: background-image .2s
+
+      &:not(:last-child)
+        margin-right: 15px
+
+      &_vk
+        &[data-lazyloaded]
+          background-image: url(../assets/img/socials/social_network_vk.png)
+
+          &:hover
+            background-image: url(../assets/img/socials/social_network_vk_hover.png)
+
+      &_telegram
+        display: none
+        &[data-lazyloaded]
+          background-image: url(../assets/img/socials/social_network_fb.png)
+
+          &:hover
+            background-image: url(../assets/img/socials/social_network_fb_hover.png)
+
+      &_instagram
+        display: none
+        padding-top: 135px
+
+        &[data-lazyloaded]
+          background-image: url(../assets/img/socials/social_network_ig.png)
+
+          &:hover
+            background-image: url(../assets/img/socials/social_network_ig_hover.png)
+
+        .socials
+          &__links-item
+            &-text
+              color: $white
+
+            &-counter
+              margin: 12px 0 0 27px
+
+      &_youtube
+        padding-top: 135px
+
+        &[data-lazyloaded]
+          background-image: url(../assets/img/socials/social_network_yt.png)
+
+          &:hover
+            background-image: url(../assets/img/socials/social_network_yt_hover.png)
+
+        .socials
+          &__links-item
+            &-text
+              color: $red-light
+
+      &-text
+        color: $blue-dark
+        text-align: center
+
+      &-counter
+        margin: 23px 0 0 20px
+        color: $white

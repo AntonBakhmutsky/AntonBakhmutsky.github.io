@@ -1,0 +1,18 @@
+{
+    "items": [
+        {
+            "MODULE_ID": "security",
+            "NAME": "ipcheck_disable_file",
+            "VALUE": "\/bitrix\/modules\/ipcheck_disable_07df9da44cb22e0238e5f7f38d891353",
+            "DESCRIPTION": null,
+            "SITE_ID": null
+        },
+        {
+            "MODULE_ID": "security",
+            "NAME": "redirect_sid",
+            "VALUE": "2h4v6jdimoeq3ru62th5133uqn6a9w7k",
+            "DESCRIPTION": null,
+            "SITE_ID": null
+        }
+    ]
+}

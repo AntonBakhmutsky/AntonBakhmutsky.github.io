@@ -1,0 +1,125 @@
+{
+  "header": {
+    "title": "Gorilla Energy",
+    "tagline": "Дайте шума",
+    "collection": "Чай с максимальным<br>зарядом энергии!",
+    "feedback": "Обратная связь",
+    "ambassador": "Хабиб<br>Нурмагомедов<span>Амбассадор<br>Gorilla Energy</span>"
+  },
+  "products": {
+    "title": "Продукция",
+    "choose": "Выбери<br>свой вкус",
+    "bottle": {
+      "original": {
+        "volume": "0,275Л",
+        "text": "Оригинал"
+      },
+      "orange": {
+        "volume": "0,275Л",
+        "text": "Апельсин"
+      },
+      "mango": {
+        "volume": "0,275Л",
+        "text": "Манго-Кокос"
+      }
+    },
+    "more": "Подробнее",
+    "info": {
+      "expand": "Развернуть",
+      "collapse": "Свернуть"
+    }
+  },
+  "riders": {
+    "title": "Райдеры",
+    "become": "Хочешь стать райдером<br><span>Gorilla Energy</span>",
+    "placeholder": "Все дисциплины",
+    "more": "Посмотреть",
+    "born": "Дата Рождения",
+    "city": "Город",
+    "language": "Язык",
+    "discipline": "Дисциплина",
+    "riding": "Стаж Катания",
+    "since": "С %{year} года"
+  },
+  "fighters": {
+    "title": "Бойцы",
+    "more": "Посмотреть",
+    "cm": "см",
+    "kg": "кг",
+    "years": "0 лет | {n} год | {n} года | {n} лет",
+    "statistics": "Статистика бойца",
+    "wins": "Победа",
+    "draws": "Ничья",
+    "losses": "Поражение"
+  },
+  "news": {
+    "title": "Новости",
+    "placeholder": "Все новости",
+    "more": "Показать ещё"
+  },
+  "socials": {
+    "title": "<span class='green-text'>Вступай</span> <span>в сообщество сильных</span>",
+    "vk": {
+      "href": "https://vk.com/gorillaenergy",
+      "text": "Вступить в группу",
+      "counter": "80 800"
+    },
+    "facebook": {
+      "href": "https://facebook.com/gorillaenergy",
+      "text": "Мне нравится",
+      "counter": "30 700"
+    },
+    "instagram": {
+      "href": "https://instagram.com/gorillaenergy",
+      "text": "@gorillaenergy в Instagram",
+      "counter": "154 000"
+    },
+    "telegram": {
+      "href": "https://t.me/gorillaenergyofficial",
+      "text": "@gorillaenergy в Telegram",
+      "counter": "154 000"
+    },
+    "youtube": {
+      "href": "https://youtube.com/gorillaenergy",
+      "text": "GorillaEnergy <br> на Youtube"
+    }
+  },
+  "contacts": {
+    "title": "Контакты",
+    "text": "По всем вопросам/предложениям/странам обращаться в International Office с пометкой о причине обращения в теме письма"
+  },
+  "map": {
+    "title": "Где купить",
+    "countries": "Все страны",
+    "cities": "Все города"
+  },
+  "feedback": {
+    "title": "Обратная связь",
+    "text": "Все поля обязательны для заполнения",
+    "success": "Ваш запрос отправлен. Мы свяжемся с Вами в ближайшее время.",
+    "file": "Выберите файл",
+    "fields": {
+      "full_name": "Имя и Фамилия",
+      "company_name": "Компания",
+      "profile": "Профиль",
+      "email": "E-mail",
+      "phone": "Телефон",
+      "file": "Фотография (до 2МБ)",
+      "message": "Сообщение",
+      "send": "Отправить"
+    }
+  },
+  "404": {
+    "title": "Страница Не Найдена"
+  },
+  "create": {
+    "text": "Создано в IT League",
+    "link": "https://itleague.ru"
+  },
+  "country": {
+    "your": "Ваша краіна",
+    "approve": "Да",
+    "change": "змяніць",
+    "txt": "Выбрать локацию"
+  }
+}

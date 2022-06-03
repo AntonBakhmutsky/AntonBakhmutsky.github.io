@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<items hlblockUid="ProductSizes" exchangeVersion="2">
+    <item>
+        <field name="UF_NAME">
+            <value>XS</value>
+        </field>
+        <field name="UF_SORT">
+            <value>100</value>
+        </field>
+        <field name="UF_XML_ID">
+            <value>xs</value>
+        </field>
+        <field name="UF_DEF"/>
+        <field name="UF_FILE">
+            <value name="xs.svg">uf/c61/1d7m0cqvthzg10lnqxe69m312l2os0ar/xs.svg</value>
+        </field>
+    </item>
+    <item>
+        <field name="UF_NAME">
+            <value>S</value>
+        </field>
+        <field name="UF_SORT">
+            <value>200</value>
+        </field>
+        <field name="UF_XML_ID">
+            <value>s</value>
+        </field>
+        <field name="UF_DEF"/>
+        <field name="UF_FILE">
+            <value name="s.svg">uf/0e7/qz3ffa06brva4rnde7v6su4n7pc871ip/s.svg</value>
+        </field>
+    </item>
+    <item>
+        <field name="UF_NAME">
+            <value>M</value>
+        </field>
+        <field name="UF_SORT">
+            <value>300</value>
+        </field>
+        <field name="UF_XML_ID">
+            <value>m</value>
+        </field>
+        <field name="UF_DEF"/>
+        <field name="UF_FILE">
+            <value name="m.svg">uf/b26/7bwg2dd7puof1p3sei028nawsuvu3w2y/m.svg</value>
+        </field>
+    </item>
+    <item>
+        <field name="UF_NAME">
+            <value>L</value>
+        </field>
+        <field name="UF_SORT">
+            <value>400</value>
+        </field>
+        <field name="UF_XML_ID">
+            <value>l</value>
+        </field>
+        <field name="UF_DEF"/>
+        <field name="UF_FILE">
+            <value name="l.svg">uf/13c/7hvqu97en31yx1ztuouwgw1qz2320d1f/l.svg</value>
+        </field>
+    </item>
+    <item>
+        <field name="UF_NAME">
+            <value>XL</value>
+        </field>
+        <field name="UF_SORT">
+            <value>500</value>
+        </field>
+        <field name="UF_XML_ID">
+            <value>xl</value>
+        </field>
+        <field name="UF_DEF"/>
+        <field name="UF_FILE">
+            <value name="xl.svg">uf/002/5c6trk287jdysglng0woaop0mklvcgl5/xl.svg</value>
+        </field>
+    </item>
+</items>

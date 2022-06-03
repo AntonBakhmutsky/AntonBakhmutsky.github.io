@@ -1,0 +1,78 @@
+@use '../../abstracts/variables' as *
+@use '../../abstracts/mixins' as *
+
+.product-slider
+  width: 100%
+  overflow: hidden
+  +screen($tablet-sm)
+    overflow: visible
+
+  .swiper
+    &-slide
+      width: 130px
+      height: 130px
+      +screen($tablet-sm)
+        width: 80px
+        height: 80px
+
+      img
+        width: 100%
+        height: 100%
+        object-fit: cover
+        object-position: center
+
+    &-button
+      +screen($tablet-xs)
+        display: none
+
+      &:after
+        display: none
+
+      &_disabled
+        display: none
+
+      &-prev,
+      &-next
+        position: absolute
+        top: 55%
+        width: 30px
+        height: 30px
+        cursor: pointer
+        +screen($tablet-sm)
+          display: none
+
+        svg
+          path,
+          rect
+            transition: .3s ease-out
+            stroke: $red
+
+        &:hover:not(.swiper-button-disabled)
+          svg
+            path,
+            rect
+              stroke: lighten($red, 30%)
+
+        &:active:not(.swiper-button-disabled)
+          svg
+            path,
+            rect
+              transition: .1s
+              stroke: $red
+
+      &-disabled
+        svg
+          path,
+          rect
+            stroke: $gray-second
+
+      &-prev
+        left: 30px
+
+      &-next
+        right: 30px
+
+
+
+
+

@@ -1,0 +1,145 @@
+@use '../abstracts/variables' as *
+@use '../abstracts/mixins' as *
+
+.contacts
+  z-index: 10
+  //padding-bottom: 868px
+  //min-height: 610px
+  position: relative
+  margin-top: 50px
+  pointer-events: none
+  +screen($desktop-sm)
+    margin-top: -50px
+    min-height: 460px
+  +screen($tablet)
+    min-height: 0
+    pointer-events: auto
+    margin: 0
+    box-sizing: border-box
+    padding: 0
+
+  &[data-lazyloaded]
+    //&::after
+    //  background: url(../assets/img/contacts/contacts_bg_bottom.png) no-repeat 49.999% 0
+
+    &::before
+      background: url(../assets/img/contacts/contacts_bg_top.png) no-repeat 49.999% 0
+
+  &__preloader
+    position: absolute
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+
+  &::before
+    content: ''
+    position: absolute
+    width: 100%
+    min-height: 860px
+    bottom: 100%
+    left: 0
+    pointer-events: none
+    z-index: 13
+    +screen($tablet)
+      display: none
+
+  &::after
+    content: ''
+    position: absolute
+    bottom: 150px
+    left: 0
+    width: 100%
+    min-height: 868px
+    pointer-events: none
+    z-index: 13
+    +screen($desktop-sm)
+      bottom: 0
+    +screen($tablet)
+      display: none
+
+  &__bg-wrapper
+    position: relative
+    z-index: 12
+    height: 100%
+    width: 100%
+    overflow: hidden
+    +screen($tablet)
+      box-sizing: border-box
+      padding: 40px 0 50px
+
+    &[data-lazyloaded]
+      background: url(../assets/img/contacts/contacts_bg.png) repeat-y 49.999% 0
+
+  &__title
+    top: 0
+    +screen($tablet)
+      +cancel-position
+
+  &__content
+    display: flex
+    flex-direction: column
+    align-items: center
+    padding-top: 175px
+    box-sizing: border-box
+    position: relative
+    pointer-events: auto
+    min-height: 460px
+    +screen($desktop-sm)
+      max-width: 861px
+      width: 100%
+      margin: 0 auto
+    +screen($tablet)
+      min-height: 0
+      width: 100%
+      padding: 50px 0 0
+      max-width: 480px
+    +screen($mobile)
+      padding-top: 30px
+
+    &-text
+      +font(44px, 56px, $font-intro)
+      text-align: center
+      color: $black
+      +screen($desktop-sm)
+        +font(34px, 38px, $font-intro)
+      +screen($tablet)
+        +font(24px, 28px, $font-intro)
+      +screen($mobile)
+        +font(20px, 22px, $font-intro)
+
+    &-link
+      +font(45px, 45px, $font-dirty)
+      display: block
+      color: $black
+      transition: .2s
+      text-decoration: underline
+      text-transform: uppercase
+      margin-top: 40px
+      +screen($desktop-sm)
+        +font(36px, 36px, $font-dirty)
+      +screen($tablet)
+        +font(26px, 26px, $font-dirty)
+      +screen($mobile)
+        +font(22px, 22px, $font-dirty)
+
+      &:hover
+        color: lighten($black, 40%)
+
+      &:active
+        color: $black
+
+    &-image
+      position: absolute
+      top: 100px
+      left: -250px
+      width: 441px
+      height: 226px
+      z-index: -1
+      +screen($tablet)
+        top: 0
+        left: -200px
+
+      &[data-lazyloaded]
+        background: url(../assets/img/contacts/contacts_stroke.png)
+        +screen($tablet)
+          background: url(../assets/img/contacts/contacts_stroke_mobile.png) center/contain

@@ -1,0 +1,57 @@
+@use '../abstracts/variables' as *
+@use '../abstracts/mixins' as *
+
+.basket
+  &__header
+    margin: 0
+
+  &__empty
+    &-image
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 150px
+      height: 150px
+      margin: 50px auto 30px
+      +screen($mobile)
+        width: 85px
+        height: 85px
+
+      svg
+        width: 100%
+
+    &-text
+      text-align: center
+
+    &-btns
+      display: flex
+      margin-top: 45px
+      justify-content: center
+      +screen($mobile)
+        flex-direction: column
+
+      a
+        width: 226px
+        height: 36px
+        display: flex
+        align-items: center
+        justify-content: center
+        color: $black
+        text-transform: uppercase
+        transition: opacity .3s
+        border: 1px solid $black
+        +screen($mobile)
+          width: 100%
+
+        &:not(:first-child)
+          +screen($mobile)
+            margin-top: 10px
+
+        &:hover
+          opacity: .5
+
+        &:active
+          opacity: 1
+
+        &:not(:last-child)
+          margin-right: 40px

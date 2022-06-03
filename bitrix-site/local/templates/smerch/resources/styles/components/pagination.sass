@@ -1,0 +1,54 @@
+@use '../abstracts/variables' as *
+@use '../abstracts/mixins' as *
+
+.pagination
+  display: flex
+  width: fit-content
+  margin: 60px auto 0
+  height: 27px
+  justify-content: space-between
+  align-items: center
+
+  &__container
+    display: flex
+
+  &__item,
+  &__arrow
+    width: 27px
+    height: 27px
+    border: 1px solid $black
+    box-sizing: border-box
+    display: flex
+    align-items: center
+    justify-content: center
+    cursor: pointer
+    transition: opacity .3s
+    -webkit-tap-highlight-color: transparent
+
+    &:hover:not(.active):not(.pagination__item_dots)
+      opacity: .5
+
+    &:active:not(.active):not(.pagination__item_dots)
+      opacity: 1
+
+  &__item
+    color: $black
+
+    &_dots
+      border: none
+      cursor: default
+      border-right: 1px solid $black
+
+    &:not(:first-child)
+      border-left: none
+
+    &.active
+      background: $black
+      color: $white
+
+  &__arrow
+    &_prev
+      margin-right: 20px
+
+    &_next
+      margin-left: 20px

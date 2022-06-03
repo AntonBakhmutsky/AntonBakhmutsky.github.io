@@ -1,0 +1,494 @@
+{
+    "items": [
+        {
+            "ENTITY_ID": "PRODUCT",
+            "FIELD_NAME": "UF_PRODUCT_GROUP",
+            "USER_TYPE_ID": "hlblock",
+            "XML_ID": "MARKING_CODE_GROUP",
+            "SORT": "100",
+            "MULTIPLE": "N",
+            "MANDATORY": "N",
+            "SHOW_FILTER": "S",
+            "SHOW_IN_LIST": "Y",
+            "EDIT_IN_LIST": "Y",
+            "IS_SEARCHABLE": "N",
+            "SETTINGS": {
+                "DISPLAY": "LIST",
+                "LIST_HEIGHT": 1,
+                "HLBLOCK_ID": "ProductMarkingCodeGroup",
+                "HLFIELD_ID": "UF_NAME",
+                "DEFAULT_VALUE": 0
+            },
+            "EDIT_FORM_LABEL": {
+                "en": "Product group",
+                "ru": "Группа товаров"
+            },
+            "LIST_COLUMN_LABEL": {
+                "en": "Product group",
+                "ru": "Группа товаров"
+            },
+            "LIST_FILTER_LABEL": {
+                "en": "Product group",
+                "ru": "Группа товаров"
+            },
+            "ERROR_MESSAGE": {
+                "en": null,
+                "ru": null
+            },
+            "HELP_MESSAGE": {
+                "en": null,
+                "ru": null
+            }
+        },
+        {
+            "ENTITY_ID": "ASD_IBLOCK",
+            "FIELD_NAME": "UF_COLOR",
+            "USER_TYPE_ID": "string",
+            "XML_ID": "",
+            "SORT": "100",
+            "MULTIPLE": "N",
+            "MANDATORY": "N",
+            "SHOW_FILTER": "N",
+            "SHOW_IN_LIST": "Y",
+            "EDIT_IN_LIST": "Y",
+            "IS_SEARCHABLE": "N",
+            "SETTINGS": {
+                "SIZE": 6,
+                "ROWS": 1,
+                "REGEXP": "",
+                "MIN_LENGTH": 0,
+                "MAX_LENGTH": 0,
+                "DEFAULT_VALUE": ""
+            },
+            "EDIT_FORM_LABEL": {
+                "en": "",
+                "ru": "Цвет"
+            },
+            "LIST_COLUMN_LABEL": {
+                "en": "",
+                "ru": "Цвет"
+            },
+            "LIST_FILTER_LABEL": {
+                "en": "",
+                "ru": "Цвет"
+            },
+            "ERROR_MESSAGE": {
+                "en": "",
+                "ru": ""
+            },
+            "HELP_MESSAGE": {
+                "en": "",
+                "ru": "#000000"
+            }
+        },
+        {
+            "ENTITY_ID": "IBLOCK_catalog:collabs_SECTION",
+            "FIELD_NAME": "UF_COLOR",
+            "USER_TYPE_ID": "string",
+            "XML_ID": "",
+            "SORT": "100",
+            "MULTIPLE": "N",
+            "MANDATORY": "N",
+            "SHOW_FILTER": "I",
+            "SHOW_IN_LIST": "Y",
+            "EDIT_IN_LIST": "Y",
+            "IS_SEARCHABLE": "N",
+            "SETTINGS": {
+                "SIZE": 6,
+                "ROWS": 1,
+                "REGEXP": "\/^#?([a-f\\d]{3}|[a-f\\d]{6})$\/",
+                "MIN_LENGTH": 1,
+                "MAX_LENGTH": 7,
+                "DEFAULT_VALUE": ""
+            },
+            "EDIT_FORM_LABEL": {
+                "en": "",
+                "ru": "Цвет"
+            },
+            "LIST_COLUMN_LABEL": {
+                "en": "",
+                "ru": "Цвет"
+            },
+            "LIST_FILTER_LABEL": {
+                "en": "",
+                "ru": "Цвет"
+            },
+            "ERROR_MESSAGE": {
+                "en": "",
+                "ru": ""
+            },
+            "HELP_MESSAGE": {
+                "en": "",
+                "ru": "#000000"
+            }
+        },
+        {
+            "ENTITY_ID": "IBLOCK_catalog:collabs_SECTION",
+            "FIELD_NAME": "UF_ARCHIVED",
+            "USER_TYPE_ID": "boolean",
+            "XML_ID": "",
+            "SORT": "100",
+            "MULTIPLE": "N",
+            "MANDATORY": "N",
+            "SHOW_FILTER": "I",
+            "SHOW_IN_LIST": "Y",
+            "EDIT_IN_LIST": "Y",
+            "IS_SEARCHABLE": "N",
+            "SETTINGS": {
+                "DEFAULT_VALUE": 0,
+                "DISPLAY": "CHECKBOX",
+                "LABEL": [
+                    "",
+                    ""
+                ],
+                "LABEL_CHECKBOX": " "
+            },
+            "EDIT_FORM_LABEL": {
+                "en": "",
+                "ru": "Архив"
+            },
+            "LIST_COLUMN_LABEL": {
+                "en": "",
+                "ru": "Архив"
+            },
+            "LIST_FILTER_LABEL": {
+                "en": "",
+                "ru": "Архив"
+            },
+            "ERROR_MESSAGE": {
+                "en": "",
+                "ru": ""
+            },
+            "HELP_MESSAGE": {
+                "en": "",
+                "ru": ""
+            }
+        },
+        {
+            "ENTITY_ID": "IBLOCK_catalog:collabs_SECTION",
+            "FIELD_NAME": "UF_LOGO_1",
+            "USER_TYPE_ID": "file",
+            "XML_ID": "",
+            "SORT": "100",
+            "MULTIPLE": "N",
+            "MANDATORY": "N",
+            "SHOW_FILTER": "N",
+            "SHOW_IN_LIST": "Y",
+            "EDIT_IN_LIST": "Y",
+            "IS_SEARCHABLE": "N",
+            "SETTINGS": {
+                "SIZE": 20,
+                "LIST_WIDTH": 200,
+                "LIST_HEIGHT": 200,
+                "MAX_SHOW_SIZE": 0,
+                "MAX_ALLOWED_SIZE": 0,
+                "EXTENSIONS": {
+                    "jpg": true,
+                    "png": true,
+                    "jpeg": true,
+                    "svg": true
+                },
+                "TARGET_BLANK": "Y"
+            },
+            "EDIT_FORM_LABEL": {
+                "en": "",
+                "ru": "Лого 1"
+            },
+            "LIST_COLUMN_LABEL": {
+                "en": "",
+                "ru": "Лого 1"
+            },
+            "LIST_FILTER_LABEL": {
+                "en": "",
+                "ru": "Лого 1"
+            },
+            "ERROR_MESSAGE": {
+                "en": "",
+                "ru": ""
+            },
+            "HELP_MESSAGE": {
+                "en": "",
+                "ru": ""
+            }
+        },
+        {
+            "ENTITY_ID": "IBLOCK_catalog:collabs_SECTION",
+            "FIELD_NAME": "UF_LOGO_2",
+            "USER_TYPE_ID": "file",
+            "XML_ID": "",
+            "SORT": "100",
+            "MULTIPLE": "N",
+            "MANDATORY": "N",
+            "SHOW_FILTER": "N",
+            "SHOW_IN_LIST": "Y",
+            "EDIT_IN_LIST": "Y",
+            "IS_SEARCHABLE": "N",
+            "SETTINGS": {
+                "SIZE": 20,
+                "LIST_WIDTH": 200,
+                "LIST_HEIGHT": 200,
+                "MAX_SHOW_SIZE": 0,
+                "MAX_ALLOWED_SIZE": 0,
+                "EXTENSIONS": {
+                    "jpg": true,
+                    "png": true,
+                    "jpeg": true,
+                    "svg": true
+                },
+                "TARGET_BLANK": "Y"
+            },
+            "EDIT_FORM_LABEL": {
+                "en": "",
+                "ru": "Лого 2"
+            },
+            "LIST_COLUMN_LABEL": {
+                "en": "",
+                "ru": "Лого 2"
+            },
+            "LIST_FILTER_LABEL": {
+                "en": "",
+                "ru": "Лого 2"
+            },
+            "ERROR_MESSAGE": {
+                "en": "",
+                "ru": ""
+            },
+            "HELP_MESSAGE": {
+                "en": "",
+                "ru": ""
+            }
+        },
+        {
+            "ENTITY_ID": "IBLOCK_catalog:collabs_SECTION",
+            "FIELD_NAME": "UF_ITEMS_IN_RAW",
+            "USER_TYPE_ID": "enumeration",
+            "XML_ID": "",
+            "SORT": "100",
+            "MULTIPLE": "N",
+            "MANDATORY": "Y",
+            "SHOW_FILTER": "I",
+            "SHOW_IN_LIST": "Y",
+            "EDIT_IN_LIST": "Y",
+            "IS_SEARCHABLE": "N",
+            "SETTINGS": {
+                "DISPLAY": "CHECKBOX",
+                "LIST_HEIGHT": 1,
+                "CAPTION_NO_VALUE": "",
+                "SHOW_NO_VALUE": "N"
+            },
+            "EDIT_FORM_LABEL": {
+                "en": "",
+                "ru": "Элементов в ряду"
+            },
+            "LIST_COLUMN_LABEL": {
+                "en": "",
+                "ru": "Элементов в ряду"
+            },
+            "LIST_FILTER_LABEL": {
+                "en": "",
+                "ru": "Элементов в ряду"
+            },
+            "ERROR_MESSAGE": {
+                "en": "",
+                "ru": ""
+            },
+            "HELP_MESSAGE": {
+                "en": "",
+                "ru": ""
+            },
+            "ENUM_VALUES": [
+                {
+                    "VALUE": "2",
+                    "DEF": "N",
+                    "SORT": "500",
+                    "XML_ID": "2"
+                },
+                {
+                    "VALUE": "3",
+                    "DEF": "Y",
+                    "SORT": "500",
+                    "XML_ID": "3"
+                }
+            ]
+        },
+        {
+            "ENTITY_ID": "IBLOCK_catalog:collabs_SECTION",
+            "FIELD_NAME": "UF_LINK_1",
+            "USER_TYPE_ID": "url",
+            "XML_ID": "",
+            "SORT": "100",
+            "MULTIPLE": "N",
+            "MANDATORY": "N",
+            "SHOW_FILTER": "N",
+            "SHOW_IN_LIST": "Y",
+            "EDIT_IN_LIST": "Y",
+            "IS_SEARCHABLE": "N",
+            "SETTINGS": {
+                "POPUP": "Y",
+                "SIZE": 20,
+                "MIN_LENGTH": 0,
+                "MAX_LENGTH": 0,
+                "DEFAULT_VALUE": ""
+            },
+            "EDIT_FORM_LABEL": {
+                "en": "",
+                "ru": "Ссылка лого 1"
+            },
+            "LIST_COLUMN_LABEL": {
+                "en": "",
+                "ru": "Ссылка лого 1"
+            },
+            "LIST_FILTER_LABEL": {
+                "en": "",
+                "ru": "Ссылка лого 1"
+            },
+            "ERROR_MESSAGE": {
+                "en": "",
+                "ru": ""
+            },
+            "HELP_MESSAGE": {
+                "en": "",
+                "ru": ""
+            }
+        },
+        {
+            "ENTITY_ID": "IBLOCK_catalog:collabs_SECTION",
+            "FIELD_NAME": "UF_LINK_2",
+            "USER_TYPE_ID": "url",
+            "XML_ID": "",
+            "SORT": "100",
+            "MULTIPLE": "N",
+            "MANDATORY": "N",
+            "SHOW_FILTER": "N",
+            "SHOW_IN_LIST": "Y",
+            "EDIT_IN_LIST": "Y",
+            "IS_SEARCHABLE": "N",
+            "SETTINGS": {
+                "POPUP": "Y",
+                "SIZE": 20,
+                "MIN_LENGTH": 0,
+                "MAX_LENGTH": 0,
+                "DEFAULT_VALUE": ""
+            },
+            "EDIT_FORM_LABEL": {
+                "en": "",
+                "ru": "Ссылка лого 2"
+            },
+            "LIST_COLUMN_LABEL": {
+                "en": "",
+                "ru": "Ссылка лого 2"
+            },
+            "LIST_FILTER_LABEL": {
+                "en": "",
+                "ru": "Ссылка лого 2"
+            },
+            "ERROR_MESSAGE": {
+                "en": "",
+                "ru": ""
+            },
+            "HELP_MESSAGE": {
+                "en": "",
+                "ru": ""
+            }
+        },
+        {
+            "ENTITY_ID": "IBLOCK_catalog:collabs_SECTION",
+            "FIELD_NAME": "UF_LINK",
+            "USER_TYPE_ID": "url",
+            "XML_ID": "",
+            "SORT": "100",
+            "MULTIPLE": "N",
+            "MANDATORY": "N",
+            "SHOW_FILTER": "N",
+            "SHOW_IN_LIST": "Y",
+            "EDIT_IN_LIST": "N",
+            "IS_SEARCHABLE": "N",
+            "SETTINGS": {
+                "POPUP": "Y",
+                "SIZE": 20,
+                "MIN_LENGTH": 0,
+                "MAX_LENGTH": 0,
+                "DEFAULT_VALUE": "http:\/\/smerch.local\/bitrix\/admin\/"
+            },
+            "EDIT_FORM_LABEL": {
+                "en": "",
+                "ru": ""
+            },
+            "LIST_COLUMN_LABEL": {
+                "en": "",
+                "ru": ""
+            },
+            "LIST_FILTER_LABEL": {
+                "en": "",
+                "ru": ""
+            },
+            "ERROR_MESSAGE": {
+                "en": "",
+                "ru": ""
+            },
+            "HELP_MESSAGE": {
+                "en": "",
+                "ru": ""
+            }
+        },
+        {
+            "ENTITY_ID": "IBLOCK_catalog:collabs_SECTION",
+            "FIELD_NAME": "UF_SHAPE_TYPE",
+            "USER_TYPE_ID": "enumeration",
+            "XML_ID": "",
+            "SORT": "100",
+            "MULTIPLE": "N",
+            "MANDATORY": "Y",
+            "SHOW_FILTER": "I",
+            "SHOW_IN_LIST": "Y",
+            "EDIT_IN_LIST": "Y",
+            "IS_SEARCHABLE": "N",
+            "SETTINGS": {
+                "DISPLAY": "CHECKBOX",
+                "LIST_HEIGHT": 3,
+                "CAPTION_NO_VALUE": "",
+                "SHOW_NO_VALUE": "N"
+            },
+            "EDIT_FORM_LABEL": {
+                "en": "",
+                "ru": "Тип изображений раздела"
+            },
+            "LIST_COLUMN_LABEL": {
+                "en": "",
+                "ru": "Тип изображений раздела"
+            },
+            "LIST_FILTER_LABEL": {
+                "en": "",
+                "ru": "Тип изображений раздела"
+            },
+            "ERROR_MESSAGE": {
+                "en": "",
+                "ru": ""
+            },
+            "HELP_MESSAGE": {
+                "en": "",
+                "ru": ""
+            },
+            "ENUM_VALUES": [
+                {
+                    "VALUE": "Горизонтальные",
+                    "DEF": "N",
+                    "SORT": "500",
+                    "XML_ID": "horizontal"
+                },
+                {
+                    "VALUE": "Квадратные",
+                    "DEF": "Y",
+                    "SORT": "500",
+                    "XML_ID": "square"
+                },
+                {
+                    "VALUE": "Вертикальные",
+                    "DEF": "N",
+                    "SORT": "500",
+                    "XML_ID": "vertical"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,128 @@
+{
+  "header": {
+    "title": "Gorilla Energy",
+    "tagline": "Шу беріңіз",
+    "collection": "Попробуй новинку! Gorilla <br> Без Сахара!",
+    "feedback": "Кері байланыс",
+    "ambassador": "Хабиб<br>Нурмагомедов<span>Амбассадор<br>Gorilla Energy</span>"
+  },
+  "products": {
+    "title": "Өнім",
+    "choose": "Талғамыңа<br> сай таңда",
+    "bottle": {
+      "original": {
+        "volume": "0,275Л",
+        "text": "ТҮПНҰСҚА"
+      },
+      "mango": {
+        "volume": "0,275Л",
+        "text": "Манго-Кокос"
+      }
+    },
+    "more": "Толық Ақпарат",
+    "info": {
+      "expand": "Развернуть",
+      "collapse": "Свернуть"
+    }
+  },
+  "rappers": {
+    "title": "RAP TEAM",
+    "more": "Қарау",
+    "born": "Түған күні",
+    "city": "Қаласы",
+    "style": "Стилі"
+  },
+  "riders": {
+    "title": "Райдерлер",
+    "become": "Райдер болғың келеді ме<br><span>Gorilla Energy</span>",
+    "placeholder": "Барлық спорт түрлері",
+    "more": "Қарау",
+    "born": "Түған күні",
+    "city": "Қаласы",
+    "language": "Язык",
+    "discipline": "Пәні",
+    "riding": "Сырғанау өтілі",
+    "since": "%{year} ЖЫЛДАН БАСТАП"
+  },
+  "fighters": {
+    "title": "Жауынгерлер",
+    "more": "Қарау",
+    "cm": "см",
+    "kg": "кг",
+    "years": "0 лет | {n} год | {n} года | {n} лет",
+    "statistics": "Статистика бойца",
+    "wins": "Победа",
+    "draws": "Ничья",
+    "losses": "Поражение"
+  },
+  "news": {
+    "title": "жаңалықтар",
+    "placeholder": "жаңалықтар",
+    "more": "Тағы көрсету"
+  },
+  "socials": {
+    "title": "<span class='green-text'>Мықтылар</span> <span>қауымдастығына түс</span>",
+    "vk": {
+      "href": "https://vk.com/gorillaenergykz",
+      "text": "Вступить в группу",
+      "counter": "9 400"
+    },
+    "facebook": {
+      "href": "https://facebook.com/gorillaenergy",
+      "text": "Мне нравится",
+      "counter": "30 700"
+    },
+    "instagram": {
+      "href": "https://instagram.com/gorillaenergy.kz",
+      "text": "@gorillaenergy в Instagram",
+      "counter": "8 400"
+    },
+    "youtube": {
+      "href": "https://youtube.com/gorillaenergy",
+      "text": "GorillaEnergy <br> на Youtube"
+    },
+    "telegram": {
+      "href": "https://t.me/gorillaenergyofficial",
+      "text": "@gorillaenergy в Telegram",
+      "counter": "154 000"
+    }
+  },
+  "contacts": {
+    "title": "Байланыстар",
+    "text": "Барлық сұрақтар/ұсыныстар/елдер бойынша хатта жүгіну себебін көрсете отырып, International Office-ке жүгіну қажет"
+  },
+  "map": {
+    "title": "Қайдан сатып алу",
+    "countries": "Все страны",
+    "cities": "Все города"
+  },
+  "feedback": {
+    "title": "Кері байланыс",
+    "text": "Барлық жолдарды толтыру міндетті",
+    "success": "Ваш запрос отправлен. Мы свяжемся с Вами в ближайшее время.",
+    "file": "Файлды таңдаңыз",
+    "fields": {
+      "full_name": "Аты-жөні",
+      "company_name": "Компания",
+      "profile": "Профиль",
+      "email": "E-mail",
+      "phone": "Телефон",
+      "file": "Фотосурет (до 2МБ)",
+      "message": "Хабарлама",
+      "send": "Жіберу"
+    }
+  },
+  "404": {
+    "title": "Страница Не Найдена"
+  },
+  "create": {
+    "text": "Создано в <span>IT League</span>",
+    "link": "https://itleague.ru"
+  },
+  "country": {
+    "your": "Сіздің ел",
+    "approve": "Иә",
+    "change": "өзгерту",
+    "txt": "Елді таңдаңыз"
+  }
+}

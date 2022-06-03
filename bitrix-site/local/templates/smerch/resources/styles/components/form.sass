@@ -1,0 +1,153 @@
+@use '../abstracts/variables' as *
+@use '../abstracts/mixins' as *
+
+.form
+  box-sizing: border-box
+  border: 1px solid $gray
+
+  h2
+    margin: 0
+    +font(18px, 24px)
+
+  &__header
+    display: flex
+    height: 48px
+    align-items: center
+    justify-content: center
+    text-transform: uppercase
+    border-bottom: 1px solid $gray
+
+  &__container
+    max-width: 280px
+    width: 100%
+    +screen($tablet-sm)
+      max-width: 100%
+
+  &__content
+    display: flex
+    +screen($tablet-sm)
+      flex-direction: column
+
+  &__block
+    width: 50%
+    display: flex
+    flex-direction: column
+    align-items: center
+    +screen($tablet-sm)
+      width: 100%
+
+    &:first-child
+      border-right: 1px solid $gray
+      +screen($tablet-sm)
+        border-right: none
+
+  &__fields
+    box-sizing: border-box
+    padding: 22px 0 57px
+    +screen($tablet-sm)
+      padding: 22px 15px 57px
+      width: 100%
+
+  &__title
+    +font(14px, 19px)
+    margin-bottom: 15px
+
+  &__btn
+    width: 280px
+    height: 36px
+    padding: 0
+    box-sizing: border-box
+    border: 1px solid $black
+    transition: opacity .3s
+    text-transform: uppercase
+    display: flex
+    align-items: center
+    justify-content: center
+    color: $black
+    cursor: pointer
+    +screen($tablet-sm)
+      width: 100%
+
+    &_black
+      color: $white
+      background: $black
+
+    &:hover
+      opacity: .5
+
+    &:active
+      opacity: 1
+
+  &__socials,
+  &__message
+    width: 100%
+    display: flex
+    flex-direction: column
+    align-items: center
+    +screen($tablet-sm)
+      align-items: flex-start
+      box-sizing: border-box
+      padding: 0 15px
+
+  &__message
+    box-sizing: border-box
+    padding: 22px 0 0
+    +screen($tablet-sm)
+      width: 100%
+      padding: 30px 15px
+
+    .form__btn
+      margin-top: 40px
+
+    p
+      margin: 30px 0
+      +font(10px, 14px, 300)
+      text-align: left
+      +screen($tablet-sm)
+        margin: 20px 0
+
+  &__socials
+    box-sizing: border-box
+    padding: 22px 0 33px
+    border-bottom: 1px solid $gray
+    +screen($tablet-sm)
+      border-top: 1px solid $gray
+      padding: 30px 15px
+
+    &-links
+      display: flex
+
+      a
+        width: 35px
+        height: 35px
+        border: 1px solid $black
+        display: flex
+        align-items: center
+        justify-content: center
+        transition: opacity .3s
+
+        &:hover
+          opacity: .5
+
+        &:active
+          opacity: 1
+
+        &:not(:last-child)
+          margin-right: 13px
+
+  &__check
+    width: 280px
+    display: flex
+    justify-content: space-between
+    margin: 30px 0 28px
+    +screen($tablet-sm)
+      width: 100%
+
+    .form__checkbox
+      max-width: 100%
+
+  &__recovery-link
+    color: $black
+    +font(12px, 16px)
+    flex-shrink: 0
+    text-decoration: underline

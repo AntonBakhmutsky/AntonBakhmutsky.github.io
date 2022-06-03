@@ -1,0 +1,177 @@
+{
+    "hlblock": {
+        "NAME": "SizeTables",
+        "TABLE_NAME": "hl_size_tables",
+        "LANG": {
+            "ru": {
+                "NAME": "Таблицы для выбора размера"
+            }
+        }
+    },
+    "fields": [
+        {
+            "FIELD_NAME": "UF_XML_ID",
+            "USER_TYPE_ID": "string",
+            "XML_ID": "",
+            "SORT": "100",
+            "MULTIPLE": "N",
+            "MANDATORY": "Y",
+            "SHOW_FILTER": "I",
+            "SHOW_IN_LIST": "Y",
+            "EDIT_IN_LIST": "Y",
+            "IS_SEARCHABLE": "N",
+            "SETTINGS": {
+                "SIZE": 20,
+                "ROWS": 1,
+                "REGEXP": "",
+                "MIN_LENGTH": 0,
+                "MAX_LENGTH": 0,
+                "DEFAULT_VALUE": ""
+            },
+            "EDIT_FORM_LABEL": {
+                "en": "",
+                "ru": "Символьный код"
+            },
+            "LIST_COLUMN_LABEL": {
+                "en": "",
+                "ru": "Символьный код"
+            },
+            "LIST_FILTER_LABEL": {
+                "en": "",
+                "ru": "Символьный код"
+            },
+            "ERROR_MESSAGE": {
+                "en": "",
+                "ru": ""
+            },
+            "HELP_MESSAGE": {
+                "en": "",
+                "ru": ""
+            }
+        },
+        {
+            "FIELD_NAME": "UF_HEIGHT",
+            "USER_TYPE_ID": "string",
+            "XML_ID": "",
+            "SORT": "100",
+            "MULTIPLE": "N",
+            "MANDATORY": "Y",
+            "SHOW_FILTER": "S",
+            "SHOW_IN_LIST": "Y",
+            "EDIT_IN_LIST": "Y",
+            "IS_SEARCHABLE": "N",
+            "SETTINGS": {
+                "SIZE": 20,
+                "ROWS": 1,
+                "REGEXP": "",
+                "MIN_LENGTH": 0,
+                "MAX_LENGTH": 0,
+                "DEFAULT_VALUE": ""
+            },
+            "EDIT_FORM_LABEL": {
+                "en": "",
+                "ru": "Рост"
+            },
+            "LIST_COLUMN_LABEL": {
+                "en": "",
+                "ru": "Рост"
+            },
+            "LIST_FILTER_LABEL": {
+                "en": "",
+                "ru": "Рост"
+            },
+            "ERROR_MESSAGE": {
+                "en": "",
+                "ru": ""
+            },
+            "HELP_MESSAGE": {
+                "en": "",
+                "ru": ""
+            }
+        },
+        {
+            "FIELD_NAME": "UF_SIZES_FILE",
+            "USER_TYPE_ID": "file",
+            "XML_ID": "",
+            "SORT": "100",
+            "MULTIPLE": "N",
+            "MANDATORY": "N",
+            "SHOW_FILTER": "N",
+            "SHOW_IN_LIST": "Y",
+            "EDIT_IN_LIST": "Y",
+            "IS_SEARCHABLE": "N",
+            "SETTINGS": {
+                "SIZE": 20,
+                "LIST_WIDTH": 100,
+                "LIST_HEIGHT": 100,
+                "MAX_SHOW_SIZE": 0,
+                "MAX_ALLOWED_SIZE": 0,
+                "EXTENSIONS": {
+                    "svg": true,
+                    "png": true
+                },
+                "TARGET_BLANK": "Y"
+            },
+            "EDIT_FORM_LABEL": {
+                "en": "",
+                "ru": "Размеры (картинка)"
+            },
+            "LIST_COLUMN_LABEL": {
+                "en": "",
+                "ru": "Размеры (картинка)"
+            },
+            "LIST_FILTER_LABEL": {
+                "en": "",
+                "ru": "Размеры (картинка)"
+            },
+            "ERROR_MESSAGE": {
+                "en": "",
+                "ru": ""
+            },
+            "HELP_MESSAGE": {
+                "en": "",
+                "ru": ""
+            }
+        },
+        {
+            "FIELD_NAME": "UF_SIZES_STRING",
+            "USER_TYPE_ID": "string",
+            "XML_ID": "",
+            "SORT": "100",
+            "MULTIPLE": "N",
+            "MANDATORY": "N",
+            "SHOW_FILTER": "N",
+            "SHOW_IN_LIST": "Y",
+            "EDIT_IN_LIST": "Y",
+            "IS_SEARCHABLE": "N",
+            "SETTINGS": {
+                "SIZE": 20,
+                "ROWS": 1,
+                "REGEXP": "",
+                "MIN_LENGTH": 0,
+                "MAX_LENGTH": 0,
+                "DEFAULT_VALUE": ""
+            },
+            "EDIT_FORM_LABEL": {
+                "en": "",
+                "ru": "Размеры (строка)"
+            },
+            "LIST_COLUMN_LABEL": {
+                "en": "",
+                "ru": "Размеры (строка)"
+            },
+            "LIST_FILTER_LABEL": {
+                "en": "",
+                "ru": "Размеры (строка)"
+            },
+            "ERROR_MESSAGE": {
+                "en": "",
+                "ru": ""
+            },
+            "HELP_MESSAGE": {
+                "en": "",
+                "ru": ""
+            }
+        }
+    ]
+}

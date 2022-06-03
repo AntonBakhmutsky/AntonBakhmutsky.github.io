@@ -1,0 +1,381 @@
+@use '../abstracts/variables' as *
+@use '../abstracts/mixins' as *
+
+.preload *
+  -webkit-transition: none !important
+  -moz-transition: none !important
+  -ms-transition: none !important
+  -o-transition: none !important
+  transition: none !important
+
+html
+  scroll-behavior: smooth
+  min-height: 100vh
+
+body
+  +font(14px, 20px)
+  margin: 0 auto
+  position: relative
+  overflow-x: hidden
+  display: flex
+  flex-direction: column
+  min-height: 100vh
+  color: $black-base
+
+  .header
+    flex: 0 0 auto
+
+  .main
+    flex: 1 0 auto
+
+    &_homepage
+      .content-wrap
+        padding: 0
+
+    &_static
+      .content-wrap
+        padding-bottom: 0
+        +screen($tablet)
+
+    &_contacts
+      .content-wrap
+        display: flex
+        flex-direction: column
+        +screen($tablet-sm)
+          padding-bottom: 0
+
+      .contacts
+        padding-top: 60px
+        +screen($tablet)
+          padding-top: 25px
+
+  .footer
+    flex: 0 0 auto
+
+li
+  list-style-type: none
+
+a
+  text-decoration: none
+  display: block
+
+button
+  appearance: none
+  border: none
+  cursor: pointer
+  outline: none
+  padding: 0
+
+.container
+  width: 100%
+  max-width: 1170px
+  margin: 0 auto
+  position: relative
+  +screen($desktop-m)
+    max-width: 970px
+  +screen($tablet)
+    max-width: 750px
+
+  &_tabs
+    transition: .4s
+
+  &_flex
+    display: flex
+    flex-direction: column
+
+.button
+  height: 42px
+  box-shadow: 0 0 5px rgb(0 0 0 / 20%)
+  display: flex
+  align-items: center
+  justify-content: center
+  box-sizing: border-box
+  outline: none
+  padding: 0 40px
+  border: 2px solid $black
+  +font(14px, 14px, 700)
+  text-transform: uppercase
+  position: relative
+  background-color: transparent
+  overflow: hidden
+  color: $black-base
+  z-index: 1
+  transition: .4s ease-out
+  +screen($tablet-xs)
+    transition: none
+    padding: 0 15px
+
+  &:hover
+    box-shadow: 0 5px 20px rgb(0 0 0 / 50%)
+    background-color: $black-base
+    color: $white
+
+  &_black
+    background-color: $black-base
+    color: $white
+
+    &:active
+      +screen($tablet)
+        background-color: $white
+        color: $black-base
+
+    &:hover
+      background: $white
+      color: $black-base
+
+.main__back
+  position: absolute
+  left: 50%
+  top: -20%
+  transform: translateX(-50%)
+  background-image: url(/images/grid.jpg)
+  background-position: center
+  background-size: contain
+  display: block
+  width: 1980px
+  max-height: 1772px
+  height: 100%
+  z-index: -1
+  +screen($tablet)
+    width: 100%
+
+.title
+  position: relative
+  margin-bottom: 10px
+  +font(50px, 50px, 800)
+  box-sizing: border-box
+  color: $black
+  text-transform: uppercase
+  z-index: 1
+  width: 100%
+  +screen($tablet)
+    +font(45px, 45px, 800)
+  +screen($tablet-sm)
+    +font(35px, 35px, 800)
+  +screen($tablet-xs)
+    +font(20px, 25px, 800)
+
+  &_section
+    margin: 0 0 50px
+    padding-left: 21px
+    +screen($tablet-sm)
+      padding-left: 18px
+    +screen($tablet-xs)
+      padding-left: 11px
+      margin: 0 0 30px
+
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    top: -15px
+    width: 50px
+    height: 50px
+    display: block
+    z-index: -1
+    +screen($tablet-sm)
+      top: -13px
+      width: 40px
+      height: 40px
+    +screen($tablet-xs)
+      top: -8px
+      width: 28px
+      height: 28px
+
+  &[data-lazyloaded]
+    &:before
+      background: url(../../assets/img/title-decor.svg) no-repeat center/contain
+
+.red-text
+  color: $red
+
+.content-wrap
+  box-sizing: border-box
+  padding: 175px 0 50px
+  overflow: hidden
+  +screen($tablet)
+    padding: 100px 0 50px
+
+  &_cemetery
+    padding-bottom: 0
+
+    .container_cemetery
+      display: flex
+
+  &_product
+    padding: 250px 0 0
+    +screen($tablet)
+      padding: 100px 0 0
+
+      .mobile-request
+        padding-bottom: 50px
+
+      .content
+        +screen($tablet-xs)
+        padding: 0 20px
+
+  h1:not(.title)
+    +font(50px, 60px, 900)
+    padding-left: 19px
+    box-sizing: border-box
+    position: relative
+    text-transform: uppercase
+    margin: 0
+    +screen($tablet-sm)
+      margin-left: 20px
+    +screen($tablet-xs)
+      +font(20px, 24px, 900)
+      padding-left: 15px
+
+    &:before
+      content: ''
+      width: 48px
+      height: 48px
+      display: block
+      position: absolute
+      top: -12px
+      left: 0
+      background: url(../../assets/img/title-decor.svg) center/contain no-repeat
+      +screen($tablet-xs)
+        width: 28px
+        height: 28px
+        top: -9px
+
+.breadcrumbs
+  display: flex
+  flex-wrap: wrap
+  +font(16px, 22px)
+  box-sizing: border-box
+  padding-left: 19px
+  margin: 16px 0 30px
+  +screen($tablet-sm)
+    padding-left: 23px
+  +screen($tablet-xs)
+    padding: 0 20px
+    +font(12px, 22px)
+
+  &__item
+    position: relative
+    color: $gray-second
+
+    a
+      color: $gray-second
+      position: relative
+      white-space: nowrap
+
+      &:after
+        content: ''
+        width: 100%
+        height: 1px
+        background: $black-base
+        position: absolute
+        bottom: 0
+        left: 0
+        opacity: 0
+        transition: .3s
+
+      &:hover
+        transition: .3s
+        color: black
+
+        &:after
+          opacity: 1
+
+    &:not(:last-child):after
+      content: ''
+      display: block
+      width: 5px
+      height: 1px
+      background: $gray-second
+      position: absolute
+      top: 50%
+      right: -12px
+      transform: translateY(-50%)
+
+    &:not(:last-child)
+      margin-right: 20px
+
+.product-form
+  position: relative
+  overflow: hidden
+  box-shadow: 0 4px 25px rgb(0 0 0 / 25%)
+  +screen($tablet)
+    display: none
+
+  &[data-lazyloaded]
+    background: url(../../assets/img/product-form-bg.png) 50% 0 no-repeat
+
+  .container
+    height: 482px
+    position: absolute
+    top: 0
+    left: 50%
+    transform: translateX(-50%)
+
+  &__decor
+    position: absolute
+    z-index: -1
+
+    &_left
+      top: 13%
+      left: -100px
+      width: 310px
+      height: 475px
+
+      &[data-lazyloaded]
+        background: url(../../assets/img/offer-decor-l.png) center/contain no-repeat
+
+    &_right
+      top: 50%
+      right: -300px
+      width: 509px
+      height: 780px
+
+      &[data-lazyloaded]
+        background: url(../../assets/img/offer-decor.png) center/contain no-repeat
+
+.mobile-request
+  display: none
+  +screen($tablet)
+    display: flex
+    justify-content: center
+    box-sizing: border-box
+    padding: 30px 20px
+
+    .request
+      display: block
+
+      &__offer
+        &-text
+          margin: 0
+
+  .request__mobile-btn
+    width: 100%
+    +font(16px, 22px, 700)
+
+.grecaptcha-badge
+  display: none
+
+.form-footer
+  .form
+    &__title
+      width: auto
+
+.article
+  +screen($tablet-sm)
+    box-sizing: border-box
+    padding: 0 20px
+  &-preview
+    +font(24px, 30px, 700)
+    text-transform: uppercase
+
+  &-date
+    +font(16px, 16px)
+    color: $gray-second
+    margin: 15px 0 30px
+
+.clearfix
+  &:after
+    content: ''
+    clear: both
+    display: table

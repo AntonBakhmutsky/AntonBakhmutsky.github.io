@@ -1,0 +1,113 @@
+@use '../../abstracts/variables' as *
+@use '../../abstracts/mixins' as *
+
+.catalog-card,
+.product-card
+  width: 262px
+  height: 364px
+  position: relative
+  flex-shrink: 0
+  background: $white
+  color: $black-base
+  +screen($tablet-xs)
+    width: 300px
+    height: 140px
+    display: flex
+
+  &__image
+    width: 100%
+    height: 262px
+    border: 1px solid $gray-second
+    box-sizing: border-box
+    +screen($tablet-xs)
+      width: 45%
+      height: 100%
+      flex-shrink: 0
+
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+      object-position: center
+
+  &__bottom
+    height: 102px
+    border: 1px solid $gray-second
+    border-top: none
+    box-sizing: border-box
+    padding: 19px 15px
+    +screen($tablet-xs)
+      border-top: 1px solid $gray-second
+      height: 100%
+      width: 55%
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      padding: 19px 19px 30px 19px
+
+  &__name
+    +font(16px, 22px, 700)
+    margin-top: 6px
+    text-transform: uppercase
+    max-height: 22px
+    overflow: hidden
+    text-overflow: ellipsis
+    text-align: center
+    +screen($tablet-xs)
+      text-align: left
+      +font(10px, 14px, 700)
+      max-height: 28px
+      margin-top: 0
+
+  &__link
+    max-width: 158px
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)
+    bottom: -21px
+    +screen($tablet-xs)
+      transform: none
+      position: relative
+      left: auto
+      bottom: auto
+      height: 40px
+      padding: 0 16px
+
+  &__price
+    +font(16px, 22px, 700)
+    margin-top: 6px
+    text-transform: uppercase
+    text-align: center
+    +screen($tablet-xs)
+      text-align: left
+      +font(10px, 14px, 700)
+
+.product-card,
+.material-card
+  &__image
+    position: relative
+
+    &:after
+      content: ''
+      position: absolute
+      top: 0
+      bottom: 0
+      right: 0
+      left: 0
+      opacity: 0
+      transition: opacity .3s
+      background: url(../../../assets/img/zoom.svg) no-repeat center/44px rgba(0, 0, 0, 0.5)
+      +screen($tablet)
+        bottom: auto
+        left: auto
+        width: 30px
+        height: 30px
+        border-bottom-left-radius: 50%
+        background-size: 14px
+        opacity: 1
+
+    &:hover
+      cursor: pointer
+
+      &:after
+        opacity: 1

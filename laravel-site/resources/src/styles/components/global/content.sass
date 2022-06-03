@@ -1,0 +1,182 @@
+@use '../../abstracts/variables' as *
+@use '../../abstracts/mixins' as *
+
+.content
+  box-sizing: border-box
+  padding: 35px 0
+  display: flex
+  justify-content: space-between
+  +font(16px, 21px)
+  +screen($tablet-sm)
+    padding: 30px 20px
+
+  &_static
+    .content
+      padding: 0
+
+  &_vertical
+    padding: 0
+
+    .content__aside
+      .request
+        margin-top: -60px
+
+  a:not(.material-card__link)
+    color: $black-base
+    transition: color .4s
+
+    &:hover
+      color: $red
+
+  &__aside
+    max-width: 253px
+    width: 100%
+    flex-shrink: 0
+    margin-left: 30px
+    +screen($tablet)
+      display: none
+
+    &_article
+      max-width: 262px
+      +screen($tablet)
+        display: none
+
+    .request
+      margin-top: -43px
+
+  &__container
+    max-width: 887px
+    width: 100%
+    box-sizing: border-box
+    +screen($tablet)
+      max-width: 100%
+
+    &:after
+      content: ''
+      clear: both
+      display: block
+
+    &_article,
+    &_vertical
+      max-width: none
+      width: 100%
+      display: flex
+
+      .request
+        margin-top: 0 !important
+
+  &__text
+    &_hidden
+      max-height: 374px
+      overflow: hidden
+      transition: max-height .4s ease-out
+
+    &:after
+      content: ''
+      clear: both
+      display: block
+
+  &__more
+    width: 100%
+    box-sizing: border-box
+    padding-left: 285px
+    display: none
+    justify-content: center
+    margin-top: 30px
+    +screen($tablet)
+      padding: 0
+
+    &_active
+      display: flex
+
+    &-btn
+      background: transparent
+      +font(14px, 22px, 700)
+      text-transform: uppercase
+      border-bottom: 1px dashed $black-base
+      transition: .4s
+
+      &:hover
+        color: lighten($black-base, 50%)
+        border-color: lighten($black-base, 50%)
+
+      &:active
+        color: $black-base
+        border-color: $black-base
+
+  &__slider
+    width: 100%
+    height: 130px
+    box-sizing: border-box
+    padding: 0 78px
+    position: relative
+    margin-top: 30px
+    +screen($tablet-sm)
+      padding: 0
+      height: 80px
+
+  img
+    +screen($tablet-xs)
+      &:not(.swiper-slide img):not(.material-card__image img):not(.action-page img)
+        width: 84px !important
+        height: 113px !important
+        margin-bottom: 5px !important
+        display: block
+        position: relative
+        object-fit: cover
+        object-position: center
+
+  .action-page
+    img
+      height: auto
+      object-fit: contain
+      max-width: 100%
+
+  img[style="float:left"]
+    margin: 20px 20px 20px 0
+    +screen($tablet)
+      margin-right: 18px
+
+  img[style="float:right"]
+    margin: 20px 0 20px 20px
+    +screen($tablet)
+      margin-left: 18px
+
+  p
+    margin: 20px 0
+    +font(16px, 21px)
+    +screen($tablet)
+      line-height: 24px
+
+    &:first-child
+      img[style="float:left"],
+      img[style="float:right"]
+        margin-top: 0
+
+  p[style="text-align:center"]
+    overflow: hidden
+    display: flex
+    align-items: center
+    justify-content: center
+    img
+      margin: 0 !important
+
+  h1, h2, h3, h4, h5, h6
+    +font(20px, 22px, 700)
+    margin: 30px 0
+
+  ul, ol
+    padding-left: 1px
+    padding-right: 1em
+
+    li
+      box-sizing: border-box
+      list-style-type: disc
+      transform: translateX(1em)
+      animation: fixlists 1s
+
+  @keyframes fixlist
+    0%
+      text-indent: -0.001em
+    100%
+      text-indent: 0

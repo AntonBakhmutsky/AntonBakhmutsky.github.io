@@ -1,0 +1,113 @@
+@use '../../abstracts/variables' as *
+@use '../../abstracts/mixins' as *
+
+.news-card
+  display: block
+  position: relative
+  width: 280px
+  height: 430px
+  flex-shrink: 0
+  cursor: pointer
+  transition: opacity .5s ease-out
+  +screen($tablet)
+    opacity: .3
+
+  &:hover
+    .news-card__header
+      color: $orange
+      +screen($tablet)
+        color: $black
+
+  &:active
+    .news-card__header
+      +screen($tablet)
+        color: $orange
+
+  &_active
+    opacity: 1
+
+  &__image
+    width: 100%
+    height: 220px
+    background: no-repeat center top/cover
+
+  &__details
+    width: 288px
+    height: 227px
+    position: absolute
+    top: 203px
+    left: -4px
+    box-sizing: border-box
+    padding: 0 20px
+
+    &[data-lazyloaded]
+      background: url(../assets/img/news/news_article_details.png) no-repeat scroll 0 0
+
+      &::after
+        background: url(../assets/img/news/news_article_details_bottom.png) no-repeat scroll right 0
+
+    &::after
+      content: ''
+      position: absolute
+      left: 0
+      bottom: 49px
+      width: 100%
+      height: 22px
+
+  &_poster
+    .news-card__details
+      &[data-lazyloaded]
+        background: url(../assets/img/news/news_article_details_poster.png) no-repeat scroll 0 0
+
+        &::after
+          background: url(../assets/img/news/news_article_details_poster_bottom.png) no-repeat scroll right 0
+
+  &__video
+    height: 55px
+    position: absolute
+    top: -20px
+    right: 23px
+    width: 45px
+
+    &[data-lazyloaded]
+      background: url(../assets/img/news/news_article_video.png) no-repeat scroll 0 0
+
+  &__type
+    min-width: 79px
+    height: 26px
+    position: absolute
+    left: 21px
+    top: 0
+    box-sizing: border-box
+    padding: 0 16px
+    +font(16px, 26px)
+    text-transform: uppercase
+    color: $white
+
+    &_events
+      &[data-lazyloaded]
+        background: url(../assets/img/news/news_article_events.png) no-repeat center / 100% 100%
+
+    &_report
+      &[data-lazyloaded]
+        background: url(../assets/img/news/news_article_report.png) no-repeat center / 100% 100%
+
+    &_life
+      &[data-lazyloaded]
+        background: url(../assets/img/news/news_article_life.png) no-repeat center / 100% 100%
+
+  &__details
+    color: $black
+
+  &__content
+    margin: 0 16px 0 24px
+    height: 178px
+    overflow: hidden
+
+  &__header
+    text-transform: uppercase
+    margin: 51px 0 12px
+    transition: color .2s
+
+  &__text
+    +font(18px, 22px, $font-intro)

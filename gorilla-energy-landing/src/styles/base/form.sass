@@ -1,0 +1,178 @@
+@use '../abstracts/variables' as *
+@use '../abstracts/mixins' as *
+
+.form
+  margin: 0 auto
+  text-transform: uppercase
+
+  &__item
+    +font(20px, 24px)
+    position: relative
+    width: 387px
+    height: 58px
+    z-index: 1
+    +screen($tablet)
+      width: 100%
+
+    &_file
+      width: 100%
+      height: 80px
+      background: url(../assets/img/modals/feedback_file_wrap.png)
+      +screen($tablet)
+        background: url(../assets/img/modals/feedback_file_wrap_mobile.png) no-repeat 0 0 / 100% 100%
+
+      .form__item
+        &-input
+          opacity: 0
+          cursor: pointer
+
+          &:focus~.form__item-label,
+          &:optional:invalid~.form__item-label,
+          &:required:valid~.form__item-label
+            transform: none
+            font-size: 20px
+            color: $gray-dark
+
+        &-label
+          left: 30%
+          width: 60%
+          line-height: 20px
+          color: $gray-dark
+          cursor: pointer
+          display: block !important
+          white-space: nowrap
+          overflow: hidden
+          text-overflow: ellipsis
+          +screen($tablet)
+            left: 10px
+            width: 90%
+
+          strong
+            border-bottom: 2px solid $gray-dark
+            box-sizing: border-box
+            padding-bottom: 1px
+            +screen($tablet)
+              border: none
+              padding: 0
+              white-space: nowrap
+
+    &_captcha
+      width: 208px
+
+      .form__item-input
+        background-image: url(../assets/img/modals/feedback_input_short_bg.png)
+
+    &_area
+      width: 100%
+      height: 161px
+
+    &_submit
+      width: 220px
+      height: 60px
+      text-align: center
+      color: #fff
+      +font(21px, 60px)
+      transition: .2s
+      text-transform: uppercase
+
+      .form__item-input
+        cursor: pointer
+        background: url(../assets/img/products/mobile/products_original_btn.png) center 0 no-repeat
+
+        &:hover,
+        &:focus
+          background: url(../assets/img/products/mobile/products_orange_btn.png) center 0 no-repeat
+
+        &:disabled
+          filter: grayscale(1)
+
+    &-error,
+    &-message
+      position: absolute
+      bottom: calc(100% + 2px)
+      left: 13px
+      +font(14px, 18px)
+      color: $error
+      z-index: 0
+      transform: translateY(43px)
+      transition: .2s
+
+    &-message
+      color: $black
+      transform: none
+
+      .form__item_invalid &
+        color: $red
+
+    &-label
+      display: block
+      +font(20px, 24px)
+      position: absolute
+      left: 10px
+      top: 50%
+      margin-top: -9px
+      padding-left: 5px
+      padding-right: 5px
+      background-color: transparent
+      color: $white
+      transition: .2s
+      cursor: text
+      text-transform: uppercase
+
+    &-input
+      background: url(../assets/img/modals/feedback_input_bg.png) no-repeat 0 0 / 100% 174px
+
+      &:focus
+        background-position: 0  -116px
+
+    &-input,
+    &-textarea
+      position: relative
+      width: 100%
+      height: 100%
+      border: none
+      box-sizing: border-box
+      padding: 17px 20px
+      outline: none
+      color: $white
+      text-transform: uppercase
+
+      &:focus~.form__item-label,
+      &:optional:invalid~.form__item-label,
+      &:required:valid~.form__item-label,
+      &_active~.form__item-label
+        font-size: 14px
+        transform: translateY(-40px)
+        color: $black
+
+    &-textarea ~ label
+      top: 20px
+
+    &-textarea
+      resize: none
+      background: url(../assets/img/modals/feedback_textarea_bg.png) no-repeat 0 0 / 100% 483px
+      +screen($tablet)
+        background-image: url(../assets/img/modals/feedback_textarea_bg_mobile.png)
+
+      &:focus
+        background-position: 0  -322px
+
+    &_invalid
+      .form__item
+        &-label
+          display: none
+
+        &-error
+          transform: translateY(0)
+
+        &-input
+          background-position: 0 -58px
+
+        &-textarea
+          background-position: 0 -161px
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active
+  transition: background-color 5000s ease-in-out 0s

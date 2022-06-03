@@ -1,0 +1,23 @@
+@use '../../abstracts/variables' as *
+@use '../../abstracts/mixins' as *
+
+.modal .form
+  +screen($tablet)
+    height: 100%
+
+  &__container
+    +screen($tablet)
+      justify-content: center
+
+  &__title
+    text-align: left
+
+    &:before
+      left: -14px
+
+  &__text
+    display: none
+
+  &__image
+    margin-right: 50px
+

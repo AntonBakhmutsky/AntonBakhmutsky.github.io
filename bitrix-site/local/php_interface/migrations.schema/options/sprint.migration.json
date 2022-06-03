@@ -1,0 +1,46 @@
+{
+    "items": [
+        {
+            "MODULE_ID": "sprint.migration",
+            "NAME": "schema_hlblockschema",
+            "VALUE": "99fe18741741a22ff1933280c9b53376",
+            "DESCRIPTION": null,
+            "SITE_ID": null
+        },
+        {
+            "MODULE_ID": "sprint.migration",
+            "NAME": "schema_iblockschema",
+            "VALUE": "fde7b2595ea8ab9f3c1cc2368866af6d",
+            "DESCRIPTION": null,
+            "SITE_ID": null
+        },
+        {
+            "MODULE_ID": "sprint.migration",
+            "NAME": "schema_optionschema",
+            "VALUE": "748a2c7036ab4a8091a376776b299f32",
+            "DESCRIPTION": null,
+            "SITE_ID": null
+        },
+        {
+            "MODULE_ID": "sprint.migration",
+            "NAME": "schema_usertypeentitiesschema",
+            "VALUE": "a15ec2803b0d0165d5d564cd587b3ffd",
+            "DESCRIPTION": null,
+            "SITE_ID": null
+        },
+        {
+            "MODULE_ID": "sprint.migration",
+            "NAME": "upgrade3_0cb1fbfb39557866ff1875c8228ecb05",
+            "VALUE": "1",
+            "DESCRIPTION": null,
+            "SITE_ID": null
+        },
+        {
+            "MODULE_ID": "sprint.migration",
+            "NAME": "upgrade3_0e3044041414874d3d40476d9be2c13e",
+            "VALUE": "1",
+            "DESCRIPTION": null,
+            "SITE_ID": null
+        }
+    ]
+}

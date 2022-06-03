@@ -1,0 +1,25 @@
+{
+    "items": [
+        {
+            "MODULE_ID": "subscribe",
+            "NAME": "attach_images",
+            "VALUE": "Y",
+            "DESCRIPTION": null,
+            "SITE_ID": null
+        },
+        {
+            "MODULE_ID": "subscribe",
+            "NAME": "posting_use_editor",
+            "VALUE": "Y",
+            "DESCRIPTION": null,
+            "SITE_ID": null
+        },
+        {
+            "MODULE_ID": "subscribe",
+            "NAME": "subscribe_section",
+            "VALUE": "#SITE_DIR#personal\/subscribe\/",
+            "DESCRIPTION": null,
+            "SITE_ID": null
+        }
+    ]
+}

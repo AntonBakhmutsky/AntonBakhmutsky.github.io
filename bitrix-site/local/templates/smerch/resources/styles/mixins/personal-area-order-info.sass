@@ -1,0 +1,41 @@
+@use '../abstracts/variables' as *
+@use '../abstracts/mixins' as *
+
+.pa
+  &__order-info
+    margin: 20px 0 0
+    box-sizing: border-box
+    padding: 25px 40px
+    display: flex
+    justify-content: space-between
+    border: 1px solid $gray
+    +font(12px, 16px)
+    +screen($tablet-sm)
+      flex-direction: column
+      padding: 0
+
+    &-item
+      +screen($tablet-sm)
+        box-sizing: border-box
+        padding: 15px
+
+        &:not(:last-child)
+          border-bottom: 1px solid $gray
+
+      &-title
+        color: $gray
+
+      &-text
+        margin-top: 11px
+
+      &_address
+        flex-basis: 40%
+
+      &_recipient
+        flex-basis: 15%
+
+      &_mail
+        flex-basis: 10%
+
+      &_phone
+        flex-basis: 10%

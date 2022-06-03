@@ -1,0 +1,129 @@
+@use '../../abstracts/variables' as *
+@use '../../abstracts/mixins' as *
+
+.articles
+  min-height: 800px
+  box-sizing: border-box
+  padding: 100px 0 50px
+  +screen($desktop-m)
+    padding-top: 100px
+  +screen($tablet)
+    background-position: 0
+    min-height: 620px
+
+  &[data-lazyloaded]
+    background: url(../../../assets/img/grey-bg.png) center/cover
+
+  .container
+    +screen($tablet)
+      padding: 0 20px
+      box-sizing: border-box
+
+  .title
+    margin-bottom: 0
+    +screen($tablet)
+      margin-bottom: 50px
+    +screen($tablet-xs)
+      margin-bottom: 30px
+
+  &__decor
+    width: 361px
+    height: 548px
+    position: absolute
+    left: -80px
+    top: 230%
+    +screen($tablet)
+      display: none
+
+    img
+      width: 100%
+      height: 100%
+
+  .swiper
+    &-container
+      width: 850px
+      padding-bottom: 45px
+      margin: 0 0 0 auto
+      +screen($tablet)
+        max-width: 100%
+        padding: 0 0 45px
+
+    &-wrapper
+      margin-top: 160px
+      +screen($tablet)
+        margin-top: 0
+
+    &-button
+      &-next,
+      &-prev
+        width: 40px
+        height: 40px
+        top: 110px
+        +screen($tablet)
+          display: none
+
+        &:after
+          display: none
+
+        &:hover:not(.swiper-button-disabled)
+          svg
+            path, rect
+              stroke: lighten($red, 25%)
+
+        &:active:not(.swiper-button-disabled)
+          svg
+            path, rect
+              stroke: $red
+          path, rect
+            transition: .3s
+
+      &-next
+        right: 0
+
+      &-prev
+        right: 60px
+        left: auto
+
+      &-disabled
+        opacity: 1
+
+        svg
+          path, rect
+            stroke: $gray-second
+
+    &-slide
+      +screen($tablet)
+        margin-bottom: 55px
+        display: flex
+
+      .article-card
+        +screen($tablet)
+          width: 280px
+
+    &-pagination
+      display: none
+      margin: 0 auto
+      justify-content: center
+      align-items: center
+      width: 100%
+      +screen($tablet)
+        display: flex
+
+      &-bullet
+        background: $gray
+
+        &-active
+          width: 18px
+          height: 18px
+          background: #FFFFFF
+          border: 1px solid $red
+
+  &__link
+    margin-top: 122px
+    align-self: center
+    padding: 0 48px
+    +font(18px, 22px, 700)
+    height: 60px
+    +screen($tablet)
+      margin-top: 10px
+

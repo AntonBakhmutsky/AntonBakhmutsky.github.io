@@ -1,0 +1,201 @@
+@use '../../abstracts/variables' as *
+@use '../../abstracts/mixins' as *
+
+.offer
+  min-height: 950px
+  position: relative
+  box-sizing: border-box
+  padding-top: 300px
+  +screen($tablet)
+    padding-top: 250px
+  +screen($tablet-sm)
+    padding-top: 150px
+    min-height: 630px
+  +screen($tablet-xs)
+    padding-top: 80px
+    min-height: 500px
+
+  .container
+    display: flex
+    justify-content: flex-end
+
+  &__bg
+    position: absolute
+    left: 50%
+    top: 0
+    transform: translateX(-50%)
+    display: block
+    width: 1980px
+    height: 1173px
+    background-repeat: no-repeat
+    background-position: center
+    background-image: url(../../../assets/img/bg-offer.jpg)
+    background-image: image-set(url("../../../assets/img/bg-offer.jpg") 1x, url("../../../assets/img/bg-offer.webp") 1x)
+    z-index: -1
+    pointer-events: none
+    +screen($tablet)
+      left: 42%
+      background-size: contain
+    +screen($tablet-sm)
+      width: 150%
+    +screen($tablet-xs)
+      height: 875px
+    +screen($tablet-xs)
+      width: 210%
+      height: 740px
+      left: 55%
+
+  .title
+    +font(50px, 50px, 800)
+    padding-right: 15px
+    padding-left: 70px
+    +screen($desktop-m)
+      +font(45px, 45px, 800)
+    +screen($tablet)
+      +font(38px, 38px, 800)
+      margin: 20px 0 10px
+    +screen($tablet-xs)
+      +font(20px, 24px, 800)
+      padding-left: 40px
+
+    &:before
+      left: 0
+      top: -65px
+      width: 196px
+      height: 196px
+      background-image: url(../../../assets/img/main-title-decor.svg)
+      +screen($tablet)
+        left: 15px
+        top: -40px
+        width: 145px
+        height: 145px
+        background-size: contain
+      +screen($tablet-xs)
+        left: 15px
+        top: -18px
+        width: 60px
+        height: 60px
+
+    &__sub
+      margin-bottom: 20px
+      padding-left: 70px
+      box-sizing: border-box
+      +font(20px, 28px)
+      color: $black
+      text-transform: uppercase
+      +screen($tablet-xs)
+        +font(12px, 22px)
+        text-align: left
+        padding: 0
+        margin-left: 40px
+
+  &__content
+    position: relative
+    z-index: 1
+    max-width: 700px
+    width: 100%
+    display: flex
+    flex-direction: column
+    +screen($desktop-m)
+      max-width: 646px
+    +screen($tablet)
+      max-width: 562px
+    +screen($tablet-sm)
+      max-width: 100%
+
+  &__decor
+    position: absolute
+    top: -155px
+    right: -200px
+    width: 509px
+    height: 780px
+    z-index: -1
+    background: url(../../../assets/img/offer-decor.png) no-repeat center
+    +screen($tablet-sm)
+      display: none
+
+  &__list
+    display: flex
+    box-sizing: border-box
+    padding: 35px 0 15px
+    margin: 0
+    +font(14px, 16px)
+    color: $gray-dark
+    +screen($tablet-sm)
+      flex-direction: column
+      align-items: flex-end
+      padding: 0
+    +screen($tablet-xs)
+      +font(12px, 17px)
+
+    &-item
+      display: block
+      width: 25%
+      box-sizing: border-box
+      padding-left: 55px
+      margin: 10px 0
+      position: relative
+      +screen($tablet)
+        padding-left: 25px
+      +screen($tablet-sm)
+        width: 60%
+        margin: 10px 0 15px
+      +screen($tablet-xs)
+        width: calc(50% + 10px)
+
+      &:nth-child(3)
+        padding-right: 36px
+        +screen($tablet-sm)
+          padding-right: 0
+
+      &:before
+        content: ''
+        position: absolute
+        left: 42px
+        bottom: -9px
+        width: 34px
+        height: 34px
+        background: url(../../../assets/img/utp.svg) no-repeat center/contain
+        +screen($tablet)
+          left: 10px
+        +screen($tablet-xs)
+          left: 18px
+          bottom: -3px
+          width: 19px
+          height: 18px
+
+  &__special
+    max-width: 585px
+    width: 100%
+    box-sizing: border-box
+    padding: 0 15px 0 85px
+    margin-top: 55px
+    align-self: flex-end
+    +screen($tablet)
+      max-width: 545px
+      margin-top: 45px
+    +screen($tablet-sm)
+      padding: 0 15px
+      max-width: 60%
+      margin-top: 55px
+    +screen($tablet-xs)
+      margin-top: 210px
+      max-width: 100%
+
+    &-text
+      +font(16px, 22px)
+      +screen($tablet-sm)
+        font-size: 15px
+      +screen($tablet-xs)
+        +font(16px, 26px)
+
+      span
+        font-weight: 700
+
+    &-btn
+      margin-top: 15px
+      +screen($tablet-xs)
+        height: 60px
+        width: 100%
+        +font(16px, 22px, bold)
+

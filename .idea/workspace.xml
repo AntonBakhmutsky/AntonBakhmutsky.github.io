@@ -1,10 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cccfbe47-0a45-4ec6-b90a-e109c9da3d67" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="deab9f1f-cf4f-483e-91c5-3adeb4004cc8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/sirius/.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sirius/.env" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sirius/.env.example" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sirius/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sirius/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sirius/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sirius/postcss.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sirius/src/app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sirius/src/assets/fonts/Gilroy-Bold.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sirius/src/assets/fonts/Gilroy-Medium.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sirius/src/assets/fonts/Gilroy-Regular.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sirius/src/assets/img/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sirius/src/assets/img/2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sirius/src/assets/img/3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sirius/src/assets/img/4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sirius/src/assets/img/5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sirius/src/assets/img/favicon.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sirius/src/scripts/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sirius/src/styles/abstracts/fonts.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sirius/src/styles/abstracts/mixins.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sirius/src/styles/abstracts/variables.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sirius/src/styles/app.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sirius/src/styles/base/global.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sirius/src/styles/components/news.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sirius/src/templates/abstracts/variables.pug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sirius/src/templates/components/news.pug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sirius/src/templates/layouts/main/head.pug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sirius/src/templates/layouts/main/layout.pug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sirius/src/templates/pages/index.pug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sirius/webpack.config.js" beforeDir="false" />
     </list>
-    <list id="1ec5337b-5fcd-4e01-847b-161d9471ecc5" name="Revert &quot;Revert &quot;Revert &quot;complete project&quot;&quot;&quot;" comment="Revert &quot;Revert &quot;Revert &quot;complete project&quot;&quot;&quot;&#10;&#10;This reverts commit fdd0d1d6" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

@@ -1,0 +1,228 @@
+@use '../abstracts/variables' as *
+@use '../abstracts/mixins' as *
+
+html
+  min-height: 100%
+  position: relative
+  scroll-behavior: smooth
+
+  &:root
+    --color: #9E17CA
+
+button
+  border: none
+  appearance: none
+  background: transparent
+  cursor: pointer
+  outline: none
+  -webkit-tap-highlight-color: transparent
+
+a
+  text-decoration: none
+  display: block
+  -webkit-tap-highlight-color: transparent
+
+p
+  font-weight: 300
+  text-align: center
+  margin: 30px 0
+
+  a
+    display: inline
+    color: $black
+    text-decoration: underline
+    transition: .3s
+
+    &:hover
+      opacity: .5
+
+    &:active
+      opacity: 1
+
+body
+  +font(14px, 20px)
+  position: relative
+  display: flex
+  flex-direction: column
+  min-height: calc(var(--vh, 1vh) * 100)
+  overflow-x: hidden
+
+.main
+  flex: 1 0 auto
+  padding: 40px 0 80px
+  +screen($mobile)
+    padding: 30px 0
+
+  &_static
+    .static
+      max-width: 602px
+      text-align: center
+      margin: 0 auto
+      box-sizing: border-box
+      padding: 20px 0
+
+      h3
+        +font(18px, 24px)
+        text-transform: uppercase
+
+      p
+        text-align: left
+
+      span
+        width: 100%
+        display: block
+        text-align: center
+
+  &_collabs
+    .faq__item-more
+
+      &:hover
+        .faq__item-more-spot
+          opacity: 1
+          +screen($tablet)
+            opacity: 0
+
+      &.active
+        .faq__item-more
+          &-spot
+            opacity: 1
+
+.header,
+.footer,
+.footer__main
+  flex: 0 0 auto
+
+.header,
+.footer
+  &__main
+    justify-content: center
+
+.container
+  max-width: 924px
+  width: 100%
+  height: 100%
+  margin: 0 auto
+  padding: 0 50px
+  box-sizing: border-box
+  +screen($mobile)
+    padding: 0 30px
+
+  &_s
+    max-width: 602px
+    padding: 0
+    +screen($tablet-sm)
+      padding: 0 30px
+
+  &_md
+    padding: 0
+    +screen($tablet)
+      padding: 0 15px
+
+  &_sm
+    max-width: 763px
+    padding: 0 30px
+
+  &_bg
+    padding: 0
+    +screen($tablet)
+      padding: 0 30px
+
+.tile__more
+  margin: 50px auto 0
+  width: 126px
+  height: 36px
+  box-sizing: border-box
+  padding: 1px
+  background: var(--color)
+  +screen($mobile)
+    margin-top: 40px
+
+  button
+    width: 100%
+    height: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    text-transform: uppercase
+    background-color: $white
+    transition: .3s
+
+  &:hover
+    opacity: .5
+
+  &:active
+    opacity: 1
+
+.grecaptcha-badge
+  z-index: 100
+
+.black-btn
+  transition: opacity .3s
+  width: 186px
+  height: 36px
+  background: $black
+  color: $white
+  text-transform: uppercase
+  display: flex
+  justify-content: center
+  align-items: center
+  +screen($tablet-sm)
+    width: 100%
+    +font(12px, 16px)
+
+  &:hover
+    opacity: .6
+
+  &:active
+    opacity: 1
+
+.white-btn
+  transition: opacity .3s
+  width: 186px
+  height: 36px
+  background: $white
+  color: $black
+  border: 1px solid $black
+  text-transform: uppercase
+  display: flex
+  justify-content: center
+  align-items: center
+  +screen($tablet-sm)
+    width: 100%
+    +font(12px, 16px)
+
+  &:hover
+    opacity: .5
+
+  &:active
+    opacity: 1
+
+.pay-form
+  +screen($tablet-sm)
+    margin-top: 15px
+    width: 100%
+
+  button
+    padding: 0
+    width: 186px
+    height: 36px
+    background-color: $black
+    color: $white
+    display: flex
+    justify-content: center
+    align-items: center
+    text-transform: uppercase
+    transition: opacity .3s
+    margin-left: auto
+    +screen($tablet-sm)
+      width: 100%
+      +font(12px, 16px)
+
+    &:hover
+      opacity: .6
+
+    &:active
+      opacity: 1
+
+.bx-session-message
+  max-width: 100vw !important

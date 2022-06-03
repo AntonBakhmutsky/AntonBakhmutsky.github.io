@@ -1,0 +1,22 @@
+{
+  "require": {
+    "wikimedia/composer-merge-plugin": "dev-master",
+    "ext-ctype": "*",
+    "intervention/image": "^2.7.1"
+  },
+  "config": {
+    "vendor-dir": "bitrix/vendor"
+  },
+  "extra": {
+    "merge-plugin": {
+      "require": [
+        "bitrix/composer-bx.json"
+      ]
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "ITLeague\\": "local/php_interface/classes/"
+    }
+  }
+}

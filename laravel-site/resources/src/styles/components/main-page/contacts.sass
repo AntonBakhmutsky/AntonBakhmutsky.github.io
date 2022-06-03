@@ -1,0 +1,217 @@
+@use '../../abstracts/variables' as *
+@use '../../abstracts/mixins' as *
+
+.contacts
+  box-sizing: border-box
+  position: relative
+  z-index: 2
+  padding: 50px 0 60px
+  +screen($tablet)
+    overflow: hidden
+    width: 100%
+  +screen($tablet-sm)
+    margin-bottom: -42px
+    padding-bottom: 80px
+    padding-top: 20px
+
+  &:after
+    position: absolute
+    bottom: 1px
+    width: 100%
+    height: 43px
+    background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%)
+    +screen($tablet-sm)
+      content: ''
+
+  .container
+    display: flex
+    flex-wrap: wrap
+    align-items: flex-start
+    justify-content: space-between
+    +screen($tablet)
+      padding: 0 40px
+      max-width: 750px
+      flex-direction: column
+    +screen($tablet-sm)
+      padding: 0 20px
+
+  &__items
+    display: flex
+    flex-wrap: wrap
+    max-width: 38%
+    justify-content: space-between
+    z-index: 3
+    +screen($tablet)
+      flex-direction: column
+      max-width: 93%
+      width: 100%
+      margin-bottom: 45px
+    +screen($tablet-sm)
+      margin-bottom: 25px
+
+  &__item
+    margin-bottom: 33px
+    max-width: 278px
+    +screen($tablet)
+      max-width: 100%
+      width: 100%
+
+    &-title
+      +font(16px, 20px, 700)
+      text-transform: uppercase
+      position: relative
+      margin-bottom: 23px
+
+      &:before
+        content: ''
+        width: 40px
+        height: 3px
+        background: $red
+        position: absolute
+        bottom: -5px
+        left: 0
+        display: block
+
+    &-text
+      +font(16px, 22px)
+
+      a
+        color: $black-base
+        transition: .4s
+        font-weight: 700
+
+        &:hover
+          color: lighten($black-base, 50%)
+
+
+  &__message
+    max-width: 47%
+    z-index: 1
+    width: 100%
+    position: relative
+    +screen($tablet)
+      max-width: 80%
+      margin-left: auto
+      align-items: flex-start
+      position: relative
+    +screen($tablet-sm)
+      margin: 0 auto
+      width: fit-content
+      padding-right: 55px
+    +screen($tablet-xs)
+      margin: 0
+
+    img
+      width: 100%
+
+    &-decor
+      position: absolute
+      left: 0
+      top: 0
+      z-index: -1
+
+      &:before
+        content: ''
+        position: absolute
+        z-index: 0
+        width: 276px
+        height: 353px
+        top: -75px
+        left: 200px
+        +screen($tablet-sm)
+          width: 163px
+          top: -110px
+          left: 100px
+
+      &[data-lazyloaded]
+        &:before
+          background: url(../../../assets/img/contacts-bg.png) no-repeat center/contain
+
+      &-border,
+      &-branch,
+      &-bg
+        position: absolute
+
+      &-border
+        width: 458px
+        z-index: 1
+        +screen($tablet-sm)
+          width: 268px
+
+      &-branch
+        width: 289px
+        z-index: 2
+        left: -180px
+        top: 80px
+        +screen($tablet-sm)
+          width: 201px
+          left: 25px
+          top: 65px
+          transform: rotate(-30deg)
+
+      &-bg
+        width: 416px
+        z-index: 3
+        top: 18px
+        left: 20px
+        +screen($tablet-sm)
+          width: 247px
+          top: 10px
+          left: 10px
+
+    &-angel
+      position: absolute
+      left: 72%
+      top: 30%
+      transform: translateY(-50%)
+      z-index: 0
+      width: 146px
+      +screen($tablet)
+        left: 61%
+        top: 55%
+      +screen($tablet-sm)
+        width: 86px
+        left: 72%
+
+  &__text
+    text-transform: uppercase
+    +font(20px, 30px)
+    color: $white
+    position: relative
+    margin: 40px 65px
+    +screen($tablet-sm)
+      +font(12px, 20px)
+      margin: 20px 25px
+
+    span
+      font-weight: 900
+
+  &__socials
+    display: flex
+    margin-top: 15px
+
+  &__whatsap,
+  &__insta
+    width: 25px
+    height: 25px
+    transition: .3s
+
+    &:hover
+      opacity: .6
+
+    &:active
+      opacity: 1
+
+  &__whatsap
+    background: url(../../../assets/img/whatsap.svg) left center/contain no-repeat
+    margin-right: 15px
+
+    &_txt
+      width: auto
+      padding-left: 30px
+      +font(14px, 14px, 700)
+      display: flex
+      align-items: center
+
+  &__insta
+    background: url(../../../assets/img/insta-black.svg) center/cover no-repeat

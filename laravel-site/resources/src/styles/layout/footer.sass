@@ -1,0 +1,156 @@
+@use '../abstracts/variables' as *
+@use '../abstracts/mixins' as *
+
+.footer
+  box-sizing: border-box
+  padding: 75px 0 15px
+  background-color: $black-base
+  color: $white
+  +font(14px, 20px)
+  z-index: 1
+
+  .container
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    +screen($tablet-sm)
+      flex-flow: column nowrap
+
+
+  &__socials
+    display: flex
+
+    &-whatsap,
+    &-insta
+      width: 25px
+      height: 25px
+      transition: .3s
+
+      &:hover
+        opacity: .6
+
+      &:active
+        opacity: 1
+
+    &-whatsap
+      margin-right: 15px !important
+      background: url(../../assets/img/whats-white.svg) center/cover no-repeat
+
+    &-insta
+      background: url(../../assets/img/insta.svg) center/cover no-repeat
+
+  &__item
+    max-width: 25%
+    box-sizing: border-box
+    padding: 0 15px
+    width: 100%
+    +screen($tablet)
+      max-width: 50%
+    +screen($tablet-sm)
+      max-width: 100%
+      text-align: center
+      display: flex
+      align-items: center
+      justify-content: center
+      flex-direction: column
+
+    a,
+    .footer__contact
+      margin: 5px 0
+      color: $white-dark
+
+    a
+      &:hover
+        transition: color .4s
+        color: $white
+
+    &_navigation
+      +screen($tablet-sm)
+        display: none
+
+  &__text
+    color: $gray-lightest
+    margin-top: 15px
+    font-size: 13px
+    max-width: 165px
+    +screen($tablet)
+      max-width: 100%
+    +screen($tablet-sm)
+      margin: 15px 0
+
+  &__list
+    margin: 15px 0 0 0
+    padding: 0
+    +screen($tablet-sm)
+      display: none
+
+    li
+      color: $gray-lightest
+      position: relative
+      box-sizing: border-box
+      padding-left: 7px
+
+      &:before
+        content: '•'
+        position: absolute
+        left: 0
+        top: 0
+        display: inline
+        color: $red-light
+        +font(9px, 20px)
+
+  &__title
+    position: relative
+    margin-bottom: 25px
+    +font(16px, 28px, 700)
+    text-transform: uppercase
+
+    &:after
+      content: ""
+      position: absolute
+      left: 0
+      bottom: -12px
+      display: block
+      width: 35px
+      height: 2px
+      background-color: $red
+      +screen($tablet-sm)
+        left: 50%
+        transform: translateX(-50%)
+
+  &__bottom
+    display: flex
+    flex-direction: column
+    align-items: center
+    width: 100%
+
+  &__create
+    color: $white-darkest
+    transition: color .3s
+    +font(14px, 20px)
+
+    &:hover
+      color: $white
+
+    &:active
+      color: $white-darkest
+
+  &__copyright
+    width: 100%
+    margin-top: 25px
+    box-sizing: border-box
+    padding: 15px 0
+    min-height: 70px
+    +font(12px, 17px)
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: column
+    color: $white-darkest
+
+    a
+      color: $white-darkest
+
+      &:hover
+        transition: color .4s
+        color: $white

@@ -1,0 +1,44 @@
+@use '../abstracts/variables' as *
+@use '../abstracts/mixins' as *
+
+.body-aside-page
+  background: center/cover url(../assets/img/contacts/contacts_bg.png)
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  min-height: 100vh
+  color: $black
+
+  .header
+    &__top
+      flex: 0 0 auto
+      +cancel-position
+
+  .main
+    flex: 1 0 auto
+
+  .footer
+    padding-bottom: 40px
+    flex: 0 0 auto
+    pointer-events: auto
+    background: url(../assets/img/footer/footer_bg_nocsspointerevents.png) no-repeat 49.999% 0
+    margin-top: 0
+    height: 167px
+    transform: none !important   
+    color: $white 
+
+  &_404
+    background: url(../assets/img/404/404_bg.png) no-repeat scroll 49.999% 0
+    +screen($tablet)
+      background: url(../assets/img/404/404_bg_mobile.png) no-repeat scroll center/cover
+
+    .section-title
+      +cancel-position
+      padding-top: 0
+      margin-top: 20px
+      height: auto
+      +screen($tablet)
+        margin-top: 10px
+
+        span
+          margin-top: 0
