@@ -6,7 +6,22 @@ html {
   min-height: 100%;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
 a {
   text-decoration:  none;
   color: inherit;
+}
+
+.header,
+.footer {
+  flex: 0 0 auto;
+}
+
+.main {
+  flex: 1 0 auto;
 }
