@@ -1,0 +1,12 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+html {
+  scroll-behavior: smooth;
+  min-height: 100%;
+}
+
+a {
+  text-decoration:  none;
+  color: inherit;
+}
