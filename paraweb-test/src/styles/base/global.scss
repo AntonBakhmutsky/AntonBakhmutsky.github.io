@@ -17,6 +17,14 @@ a {
   color: inherit;
 }
 
+button {
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  border: none;
+  box-sizing: border-box;
+}
+
 .header,
 .footer {
   flex: 0 0 auto;
