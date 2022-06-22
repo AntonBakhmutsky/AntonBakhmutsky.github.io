@@ -1,10 +1,10 @@
 @use './variables' as *;
 
-=font($fontSize, $lineHeight, $weight: 400) {
+@mixin font($fontSize, $lineHeight, $weight: 400) {
   font: $weight #{$fontSize}/#{$lineHeight} $font;
 }
 
-=screen($size) {
+@mixin screen($size) {
   @media only screen and (max-width: #{$size}px) {
     @content;
   }
