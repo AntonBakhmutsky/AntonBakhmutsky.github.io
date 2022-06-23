@@ -1,6 +1,6 @@
 {
   "name": "markup-boilerplate",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Boilerplate for markup",
   "private": true,
   "scripts": {
@@ -12,7 +12,7 @@
   "browserslist": [
     "defaults"
   ],
-  "author": "Alexander Tarkhanov <starhanov@gmail.com>",
+  "author": "Anton Bakhmutskiy <anton_bakh@mail.ru>",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.8.4",

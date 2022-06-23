@@ -1,0 +1,55 @@
+@use '../../abstracts/variables' as *;
+@use '../../abstracts/mixins' as *;
+
+.header {
+  box-sizing: border-box;
+  padding: 29px 0;
+
+  &__logo {
+    width: 96px;
+    height: 24px;
+
+    @include screen($tablet) {
+      width: 138px;
+      height: 30px;
+    }
+  }
+
+  &__contacts {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    a {
+      color: $gray;
+
+      &:active {
+        svg {
+          path {
+            stroke: $blue;
+          }
+        }
+      }
+
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
+
+      svg {
+        @include screen($tablet) {
+          display: none;
+        }
+      }
+
+      span {
+        display: none;
+
+        @include screen($tablet) {
+          display: inline;
+        }
+      }
+    }
+  }
+}
+
