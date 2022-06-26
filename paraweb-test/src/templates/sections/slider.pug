@@ -1,0 +1,13 @@
+section.slider
+  .swiper
+    .swiper-wrapper
+      each el in sliderItems
+        .swiper-slide
+          .container
+            h2.swiper-slide__title !{el.title}
+            p.swiper-slide__desc #{el.desc}
+            a.swiper-slide__btn(href=el.btnHref) #{el.btn}
+            .swiper-slide__image
+              img(src=el.image alt="")
+    .container
+      .swiper-pagination

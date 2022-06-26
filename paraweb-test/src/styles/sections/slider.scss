@@ -1,0 +1,100 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.slider {
+  .swiper {
+    width: 100%;
+    height: 100%;
+    color: $white;
+    box-sizing: border-box;
+
+    &-wrapper {
+      height: 365px;
+
+      @include screen($tablet) {
+        height: 546px;
+      }
+    }
+
+    &-slide {
+      background: linear-gradient(100.68deg, #5991FF 13.6%, #0050EF 94.69%);
+      box-sizing: border-box;
+      padding: 20px 0;
+      position: relative;
+      width: 100%;
+      height: 100%;
+
+      &__image {
+        position: absolute;
+        right: 0;
+        bottom: -20px;
+        width: 120%;
+        height: 60%;
+        pointer-events: none;
+
+        @include screen($tablet-xs) {
+          width: 120%;
+          height: 80%;
+        }
+
+        @include screen($tablet-sm) {
+          width: 110%;
+          height: 90%;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      &__title {
+        @include font(20px, 24px, 600);
+
+        @include screen($tablet) {
+          @include font(40px, 56px, 600);
+        }
+      }
+
+      &__desc {
+        @include font(12px, 22px);
+        margin-top: 16px;
+        max-width: 480px;
+
+        @include screen($tablet) {
+          margin-top: 24px;
+          @include font(16px, 24px);
+        }
+      }
+
+      &__btn {
+        display: block;
+        padding: 16px 24px;
+        @include font(14px, 14px, 600);
+        background-color: $white;
+        border-radius: 10px;
+        margin-top: 24px;
+        width: fit-content;
+        color: $blue;
+
+        @include screen($tablet) {
+          @include font(16px, 16px, 600);
+        }
+      }
+    }
+
+    &-pagination {
+      width: fit-content;
+      height: 3px;
+      left: 12px;
+      bottom: 33px;
+
+      &-bullet {
+        height: 3px;
+        width: 20px;
+        border-radius: 2px;
+        background-color: $white;
+      }
+    }
+  }
+}
