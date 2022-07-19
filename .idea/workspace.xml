@@ -1,70 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="deab9f1f-cf4f-483e-91c5-3adeb4004cc8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/paraweb-test/.editorconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/paraweb-test/.env.example" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/paraweb-test/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/paraweb-test/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/paraweb-test/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/paraweb-test/postcss.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/paraweb-test/src/app.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/paraweb-test/src/assets/fonts/Montserrat-Medium.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/paraweb-test/src/assets/fonts/Montserrat-Medium.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/paraweb-test/src/assets/fonts/Montserrat-Regular.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/paraweb-test/src/assets/fonts/Montserrat-Regular.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/paraweb-test/src/assets/fonts/Montserrat-SemiBold.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/paraweb-test/src/assets/fonts/Montserrat-SemiBold.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/paraweb-test/src/assets/img/footer/logo-footer.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/paraweb-test/src/assets/img/header/logo-header.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/paraweb-test/src/assets/img/header/mail.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/paraweb-test/src/assets/img/header/phone.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/paraweb-test/src/assets/img/socials/t.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/paraweb-test/src/assets/img/socials/tg.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/paraweb-test/src/assets/img/socials/vk.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/paraweb-test/src/assets/img/socials/y.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/paraweb-test/src/scripts/components/slider.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/paraweb-test/src/scripts/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/paraweb-test/src/styles/abstracts/font.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/paraweb-test/src/styles/abstracts/mixins.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/paraweb-test/src/styles/abstracts/variables.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/paraweb-test/src/styles/app.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/paraweb-test/src/styles/base/global.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/paraweb-test/src/styles/layouts/main/footer.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/paraweb-test/src/styles/layouts/main/header.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/paraweb-test/src/styles/sections/articles.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/paraweb-test/src/styles/sections/filter.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/paraweb-test/src/styles/sections/slider.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/paraweb-test/src/templates/abstracts/variables.pug" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/paraweb-test/src/templates/layouts/main/footer.pug" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/paraweb-test/src/templates/layouts/main/head.pug" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/paraweb-test/src/templates/layouts/main/header.pug" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/paraweb-test/src/templates/layouts/main/layout.pug" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/paraweb-test/src/templates/pages/index.pug" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/paraweb-test/src/templates/sections/slider.pug" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/paraweb-test/webpack.config.js" beforeDir="false" />
-    </list>
-    <list id="07e4c27b-1824-4ccb-97ef-ae35891ed966" name="Revert &quot;added slider&quot;" comment="Revert &quot;added slider&quot;&#10;&#10;This reverts commit fe77bc07" />
+    <list default="true" id="7c4a1d67-fc80-4dae-bb52-57116103a785" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
-    <pharConfigPath>$PROJECT_DIR$/bitrix-site/composer.json</pharConfigPath>
+  <component name="ComposerSettings">
     <execution />
   </component>
-  <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="fe77bc0778f111d65b484748cb7a4e3d7de81d2d" />
-      </map>
-    </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="RESET_MODE" value="MIXED" />
-    <option name="UPDATE_TYPE" value="REBASE" />
-  </component>
-  <component name="ProjectId" id="26SrsDcaAOZJgrjUqwQ1wAWTkAA" />
+  <component name="ProjectId" id="2CA2b64M8OpTOFUbBdXDI84sYk3" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="autoscrollToSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -74,119 +21,21 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.path.for.package.tslint" value="project" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="nodejs_package_manager_path" value="yarn" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="deab9f1f-cf4f-483e-91c5-3adeb4004cc8" name="Default Changelist" comment="" />
-      <created>1647428035280</created>
+      <changelist id="7c4a1d67-fc80-4dae-bb52-57116103a785" name="Default Changelist" comment="" />
+      <created>1658231136377</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1647428035280</updated>
-      <workItem from="1647428036926" duration="378000" />
-      <workItem from="1647473186678" duration="1206000" />
-      <workItem from="1647797611621" duration="1244000" />
-      <workItem from="1647842852680" duration="2043000" />
-      <workItem from="1647848139471" duration="3095000" />
-      <workItem from="1654245788450" duration="728000" />
-      <workItem from="1656412956454" duration="1155000" />
+      <updated>1658231136377</updated>
+      <workItem from="1658231137534" duration="109000" />
     </task>
-    <task id="LOCAL-00001" summary="Revert &quot;complete project&quot;&#10;&#10;This reverts commit 30a04d2da6f04d41fd527815f23b37b7230158a1.">
-      <created>1647428065177</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1647428065177</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Revert &quot;Revert &quot;complete project&quot;&quot;&#10;&#10;This reverts commit 7ea4dd82">
-      <created>1647428096657</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1647428096657</updated>
-    </task>
-    <task id="LOCAL-00003" summary="added avtograph json">
-      <created>1647473580132</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1647473580132</updated>
-    </task>
-    <task id="LOCAL-00004" summary="fix">
-      <created>1647473738336</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1647473738336</updated>
-    </task>
-    <task id="LOCAL-00005" summary="fix">
-      <created>1647848210295</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1647848210295</updated>
-    </task>
-    <task id="LOCAL-00006" summary="fix">
-      <created>1647851853563</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1647851853563</updated>
-    </task>
-    <task id="LOCAL-00007" summary="fix">
-      <created>1647851903459</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1647851903459</updated>
-    </task>
-    <task id="LOCAL-00008" summary="add projects">
-      <created>1654245919897</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1654245919897</updated>
-    </task>
-    <task id="LOCAL-00009" summary="reset">
-      <created>1656414056290</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1656414056290</updated>
-    </task>
-    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Revert &quot;complete project&quot;&#10;&#10;This reverts commit 30a04d2da6f04d41fd527815f23b37b7230158a1." />
-    <MESSAGE value="Revert &quot;Revert &quot;complete project&quot;&quot;&#10;&#10;This reverts commit 7ea4dd82" />
-    <MESSAGE value="added avtograph json" />
-    <MESSAGE value="fix" />
-    <MESSAGE value="add projects" />
-    <MESSAGE value="reset" />
-    <option name="LAST_COMMIT_MESSAGE" value="reset" />
   </component>
 </project>
