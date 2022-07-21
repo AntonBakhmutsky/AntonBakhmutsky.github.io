@@ -1,6 +1,6 @@
 .filter
   .filter__search
-    input(type='text' name='search' placeholder="Поиск Имени")
+    input(type="text" name="search" placeholder="Поиск Имени")
   .filter__sort
     .filter__sort-txt Сортировать по:
     .filter__sort-select
@@ -8,5 +8,8 @@
         img(src=require("@/assets/img/arrow-down.svg") alt="")
       .filter__sort-select-value Дата
       .filter__sort-select-options
-        .filter__sort-select-item(data-value='date') Дата
-        .filter__sort-select-item(data-value='status') Статус
+        each el in filterSelectOptions
+          .filter__sort-select-item(
+            data-value=el.value
+            class=el.modifier ? `filter__sort-select-item_${el.modifier}` : ''
+          ) #{el.text}

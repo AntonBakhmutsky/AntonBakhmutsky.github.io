@@ -1,0 +1,14 @@
+.list__table
+  .list__table-head
+    each el, index in tableHeadItems
+      .list__table-head-item #{el}
+  .list__table-body
+    each  el in listItems
+      .list__item(class=el.modifier ? `list__item_${el.modifier}` : '')
+        .list__item-check
+          button
+        .list__item-text #{el.text}
+        .list__item-status #{el.status}
+        .list__item-date #{el.date}
+
+
