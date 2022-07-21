@@ -1,12 +1,12 @@
 .filter
   .filter__search
-    input(type='text' name='search')
+    input(type='text' name='search' placeholder="Поиск Имени")
   .filter__sort
     .filter__sort-txt Сортировать по:
     .filter__sort-select
       .filter__sort-select-arrow
         img(src=require("@/assets/img/arrow-down.svg") alt="")
-      .filter__sort-select-value
+      .filter__sort-select-value Дата
       .filter__sort-select-options
-        .filter__sort-item.filter__sort-item_date(data-value='date') Дата
-        .filter__sort-item.filter__sort-item_status(data-value='status') Статус
+        .filter__sort-select-item(data-value='date') Дата
+        .filter__sort-select-item(data-value='status') Статус
