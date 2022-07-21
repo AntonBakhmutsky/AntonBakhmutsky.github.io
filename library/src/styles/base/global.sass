@@ -1,0 +1,19 @@
+@use '../abstracts/variables' as *
+@use '../abstracts/mixins' as *
+
+html, body
+  min-height: 100vh
+
+body
+  box-sizing: border-box
+  padding: 100px 20px
+  +font(14px, 18px)
+
+.list
+  max-width: 1300px
+  width: 100%
+  margin: 0 auto
+
+svg
+  path, rect, circle
+    transition: .4s
