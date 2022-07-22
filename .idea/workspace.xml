@@ -1,7 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7c4a1d67-fc80-4dae-bb52-57116103a785" name="Default Changelist" comment="" />
+    <list default="true" id="7c4a1d67-fc80-4dae-bb52-57116103a785" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/library/src/scripts/components/list-items.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/library/src/styles/modals/add-modal.sass" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/library/src/templates/modals/add-modal.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/src/scripts/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/scripts/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/src/styles/abstracts/mixins.sass" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/styles/abstracts/mixins.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/src/styles/abstracts/variables.sass" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/styles/abstracts/variables.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/src/styles/app.sass" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/styles/app.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/src/styles/base/global.sass" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/styles/base/global.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/src/styles/components/filter.sass" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/styles/components/filter.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/src/styles/components/list-table.sass" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/styles/components/list-table.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/src/styles/components/list-title.sass" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/styles/components/list-title.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/src/templates/abstracts/variables.pug" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/templates/abstracts/variables.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/src/templates/pages/index.pug" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/templates/pages/index.pug" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,6 +50,7 @@
       <updated>1658231136377</updated>
       <workItem from="1658231137534" duration="109000" />
       <workItem from="1658231256219" duration="325000" />
+      <workItem from="1658504560197" duration="80000" />
     </task>
     <task id="LOCAL-00001" summary="clear work tree">
       <created>1658231286677</created>
@@ -44,7 +59,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658231286677</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="added items json">
+      <created>1658504595560</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1658504595560</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -60,9 +82,11 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="clear work tree" />
-    <option name="LAST_COMMIT_MESSAGE" value="clear work tree" />
+    <MESSAGE value="added items json" />
+    <option name="LAST_COMMIT_MESSAGE" value="added items json" />
   </component>
 </project>
