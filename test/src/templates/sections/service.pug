@@ -1,0 +1,28 @@
+.service
+  .container
+    .service__block
+      h1.service__title Сервисный центр
+      p.service__description
+        | Ремонт планшетов в Челябинске. Бесплатно продиагностируем и быстро починим любую поломку
+        span Гарантия 3 месяца
+      a.service__link(href="javascript:")
+        span
+          img(src=require("@/assets/img/svg/service/arrow-right.svg") alt="")
+          | Записаться на диагностику
+        img.service__link-bg(src=require("@/assets/img/svg/service/mes.svg") alt="")
+      .service__grid
+        each el in serviceItems
+          .service__item
+            .service__item-image
+              img(src=el.svg alt="")
+            .service__item-text !{el.text}
+    .service__block
+       .service__counter
+        .service__counter-num 12 585
+        .service__counter-image
+          img(src=require("@/assets/img/service/emoji.png") alt="")
+        .service__counter-text Выполненных #[br] ремонтов
+
+
+
+

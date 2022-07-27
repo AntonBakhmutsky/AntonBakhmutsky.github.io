@@ -1,0 +1,93 @@
+@use '../abstracts/variables' as *
+@use '../abstracts/mixins' as *
+
+.address
+  &__grid
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    padding-bottom: 120px
+    +screen($tablet)
+      padding-bottom: 80px
+    +screen($tablet-xs)
+      flex-wrap: nowrap
+      flex-direction: column
+
+  &__item
+    flex-basis: 49%
+    +screen($tablet)
+      flex-basis: 31%
+    +screen($tablet-xs)
+      flex-basis: 100%
+
+    &:nth-child(n + 3)
+      margin-top: 30px
+      +screen($tablet)
+        margin: 0
+
+    &:nth-child(2)
+      +screen($tablet)
+        order: -1
+        flex-basis: 100%
+        margin-bottom: 40px
+      +screen($tablet-xs)
+        margin-bottom: 32px
+
+    &:last-child, &:nth-child(3)
+      +screen($tablet-xs)
+        margin-top: 24px
+
+
+    img
+      width: 100%
+      height: 100%
+      object-position: center
+      object-fit: cover
+
+    h2
+      +font(60px, 60px, 800)
+      margin-bottom: 60px
+      +screen($desktop-sm)
+        +font(50px, 50px, 800)
+      +screen($tablet)
+        +font(40px, 40px, 800)
+      +screen($tablet-xs)
+        +font(26px, 26px, 800)
+        text-align: center
+
+    p
+      +font(20px, 28px)
+      +screen($desktop-sm)
+        +font(18px, 25px)
+      +screen($tablet)
+        +font(14px, 20px)
+
+      &:not(:first-of-type)
+        margin-top: 32px
+
+    a
+      margin-top: 40px
+      border-radius: 100px
+      padding: 19px 40px
+      box-sizing: border-box
+      border: 2px solid $black
+      transition: .3s
+      width: fit-content
+      +font(18px, 18px, 700)
+      +screen($desktop-sm)
+        +font(15px, 18px, 700)
+      +screen($tablet)
+        +font(14px, 16px, 700)
+      +screen($tablet-xs)
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 100%
+
+      &:hover
+        background: $black
+        color: $white
+
+      &:active
+        background: $white
+        color: $black

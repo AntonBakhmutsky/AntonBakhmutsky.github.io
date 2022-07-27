@@ -1,0 +1,21 @@
+.team
+  .container
+    h2.team__title Ремонт осуществляется первоклассными специалистами
+    .team__subtitle Средний опыт работы наших мастеров 4 года
+    .team__slider.swiper
+      .swiper-wrapper
+        each el in teamItems
+          .swiper-slide
+            .swiper-slide__image
+              img(src=el.img alt="")
+            .swiper-slide__name #{el.name}
+            .swiper-slide__desc #{el.desc}
+            .swiper-slide__working
+              img(src=require("@/assets/img/svg/team/check.svg") alt="")
+              |#{el.working}
+            .swiper-slide__mes #{el.mes}
+      .swiper-pagination
+      .swiper-button-prev
+      .swiper-button-next
+
+
