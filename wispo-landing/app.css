@@ -1966,6 +1966,18 @@ svg path, svg circle, svg rect {
   box-shadow: 0 6px 30px rgba(0, 0, 0, 0.05);
   background: white;
 }
+@media only screen and (max-width: 1024px) {
+  .team .swiper-button-prev, .team .swiper-button-next {
+    width: 56px;
+    height: 56px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .team .swiper-button-prev, .team .swiper-button-next {
+    width: 47px;
+    height: 47px;
+  }
+}
 .team .swiper-button-prev:after, .team .swiper-button-next:after {
   display: none;
 }
