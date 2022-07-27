@@ -58,6 +58,12 @@
         border-radius: 50%
         box-shadow: 0 6px 30px rgba(0, 0, 0, 0.05)
         background: white
+        +screen($tablet)
+          width: 56px
+          height: 56px
+        +screen($tablet-xs)
+          width: 47px
+          height: 47px
 
         &:after
           display: none
