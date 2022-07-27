@@ -1,8 +1,0 @@
-@use './variables' as *
-
-=font($fontSize, $lineHeight, $weight: 400)
-  font: $weight #{$fontSize}/#{$lineHeight} $font
-
-=screen($size)
-  @media only screen and (min-width: #{$size}px)
-    @content
