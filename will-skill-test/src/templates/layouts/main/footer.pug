@@ -1,3 +1,14 @@
 footer.footer
   .container.container_sm
     .footer__title ПОЛУЧИ ЗАЩИТУ ИММУНИТЕТА #[br] #[span СО СКИДКОЙ -15% ПЕРВЫМ!]
+    .footer__price
+      .footer__price-old 750₽
+      .footer__price-new 690₽
+    .footer__grid
+      each el in footerItems
+        .footer__item
+          .footer__item-image
+            img(src=el.image alt="")
+          .footer__item-txt !{el.txt}
+    .footer__order
+      a(href="javascript:") Оформить заказ!

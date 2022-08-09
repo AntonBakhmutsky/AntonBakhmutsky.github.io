@@ -1,0 +1,44 @@
+@use '../abstracts/variables' as *
+@use '../abstracts/mixins' as *
+
+.first
+  box-sizing: border-box
+  padding: 174px 0 94px
+  background: url(../assets/img/section/bg.png) no-repeat center/cover
+
+  .container
+    padding: 0 64px
+
+  &__image
+    position: absolute
+    right: -54px
+    top: -184px
+    pointer-events: none
+    z-index: 0
+
+  &__title
+    color: $white
+    position: relative
+    +font(144px, 152px, 700)
+    z-index: 1
+    text-transform: uppercase
+
+  &__subtitle
+    position: relative
+    +font(24px, 28px)
+    z-index: 1
+    max-width: 650px
+    margin-top: 24px
+
+  &__desc
+    margin-top: 120px
+
+    &-title
+      +font(36px, 42px, 700)
+      text-transform: uppercase
+
+    &-txt
+      +font(18px, 22px)
+      margin-top: 16px
+      max-width: 340px
+
