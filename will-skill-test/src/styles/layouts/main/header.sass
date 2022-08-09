@@ -1,0 +1,72 @@
+@use '../../abstracts/variables' as *
+@use '../../abstracts/mixins' as *
+
+.header
+  box-sizing: border-box
+  padding: 23px 0
+
+  .container
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+  &__menu
+    display: flex
+    align-items: center
+
+    a
+      color: $white
+      position: relative
+
+      &:after
+        content: ''
+        position: absolute
+        width: 0
+        height: 1px
+        background-color: $orange
+        top: calc(100% + 2px)
+        left: 0
+        transition: .3s
+
+      &:hover
+        color: $orange
+
+        &:after
+          width: 100%
+
+      &:active
+        color: $white
+
+      &:not(:last-child)
+        margin-right: 40px
+
+  &__logo
+    width: 120px
+    height: 35px
+
+  &__basket
+    width: 32px
+    height: 28px
+    position: relative
+
+  &__logo, &__basket
+    &:hover
+      svg
+        path
+          fill: $orange
+
+    &-counter
+      width: 16px
+      height: 16px
+      border-radius: 50%
+      display: flex
+      align-items: center
+      justify-content: center
+      position: absolute
+      bottom: -8px
+      right: -8px
+      background-color: $orange
+      +font(12px, 12px)
+
+  &__mobile-btn
+    display: none
