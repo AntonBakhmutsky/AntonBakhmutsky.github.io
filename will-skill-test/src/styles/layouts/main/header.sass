@@ -10,6 +10,8 @@
   width: 100%
   background: $black-background
   z-index: 10
+  +screen($tablet-sm)
+    padding: 13px 0 12px
 
   .container
     display: flex
@@ -19,10 +21,48 @@
   &__menu
     display: flex
     align-items: center
+    +screen($desktop-sm)
+      flex-direction: column
+      position: fixed
+      justify-content: center
+      width: 100%
+      height: 100%
+      top: 0
+      bottom: 0
+      right: 0
+      z-index: 15
+      background-color: $black-background
+      transition: .3s
+      left: -120vw
+
+      &_active
+        left: 0
+
+    &-close
+      display: none
+      +screen($desktop-sm)
+        display: block
+        width: 25px
+        height: 25px
+        position: absolute
+        top: 40px
+        right: 40px
+
+        &:active
+          svg
+            rect
+              fill: $orange
+
+        svg
+          width: 100%
+          height: 100%
 
     a
       color: $white
       position: relative
+      +font(18px, 18px)
+      +screen($desktop-sm)
+        +font(24px, 24px)
 
       &:after
         content: ''
@@ -45,21 +85,38 @@
 
       &:not(:last-child)
         margin-right: 40px
+        +screen($desktop-sm)
+          margin: 0 0 32px 0
 
   &__logo
     width: 120px
     height: 35px
+    +screen($desktop-sm)
+      margin-right: auto
+    +screen($tablet-sm)
+      width: 115px
+      height: 30px
 
   &__basket
     width: 32px
     height: 28px
     position: relative
+    +screen($desktop-sm)
+      margin-right: 30px
+    +screen($tablet-sm)
+      width: 27px
+      height: 23px
 
   &__logo, &__basket
     &:hover
       svg
         path
           fill: $orange
+
+    &:active
+      svg
+        path
+          fill: $white
 
     &-counter
       width: 16px
@@ -76,3 +133,14 @@
 
   &__mobile-btn
     display: none
+    cursor: pointer
+    +screen($desktop-sm)
+      display: flex
+      align-items: center
+      justify-content: center
+
+      &:hover
+        svg
+          rect
+            fill: $orange
+

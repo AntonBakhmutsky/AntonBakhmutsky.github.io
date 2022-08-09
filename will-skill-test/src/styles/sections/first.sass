@@ -5,9 +5,16 @@
   box-sizing: border-box
   padding: 174px 0 94px
   background: url(../assets/img/section/bg.png) no-repeat center/cover
+  +screen($tablet-sm)
+    padding: 84px 0 0
 
   .container
     padding: 0 64px
+    +screen($tablet-sm)
+      padding: 0 20px
+      display: flex
+      align-items: center
+      flex-direction: column
 
   &__image
     position: absolute
@@ -15,30 +22,71 @@
     top: -184px
     pointer-events: none
     z-index: 0
+    +screen($desktop-sm)
+      right: 0
+      width: 616px
+      height: 784px
+      top: -80px
+    +screen($tablet-sm)
+      width: 280px
+      height: 384px
+      position: relative
+      top: auto
+      right: auto
+      order: 1
+      margin-bottom: -80px
+
+  &__title, &__subtitle, &__desc
+    position: relative
+    z-index: 1
 
   &__title
     color: $white
-    position: relative
     +font(144px, 152px, 700)
-    z-index: 1
     text-transform: uppercase
+    +screen($desktop-sm)
+      +font(94px, 106px, 700)
+    +screen($tablet)
+      +font(74px, 82px, 700)
+    +screen($tablet-sm)
+      +font(42px, 48px, 700)
+      text-align: center
+
 
   &__subtitle
-    position: relative
     +font(24px, 28px)
-    z-index: 1
     max-width: 650px
     margin-top: 24px
+    +screen($tablet)
+      +font(20px, 22px)
+      max-width: 450px
+    +screen($tablet-sm)
+      +font(16px, 18px)
+      max-width: 360px
+      margin-top: 16px
+      text-align: center
 
   &__desc
     margin-top: 120px
+    +screen($tablet-sm)
+      margin-top: 40px
 
     &-title
       +font(36px, 42px, 700)
       text-transform: uppercase
+      +screen($tablet)
+        +font(26px, 32px, 700)
+      +screen($tablet-sm)
+        +font(20px, 28px, 700)
+        text-align: center
 
     &-txt
       +font(18px, 22px)
       margin-top: 16px
       max-width: 340px
-
+      +screen($tablet)
+        +font(16px, 20px)
+      +screen($tablet-sm)
+        +font(14px, 18px)
+        text-align: center
+        max-width: 280px
