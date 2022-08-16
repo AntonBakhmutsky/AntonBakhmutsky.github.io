@@ -1,0 +1,21 @@
+@use '../abstracts/variables' as *
+@use '../abstracts/mixins' as *
+
+.header
+  box-sizing: border-box
+  padding: 34px 0
+
+  &__container
+    display: flex
+    align-items: center
+
+  &__reserve
+    margin-right: 44px
+    box-sizing: border-box
+    padding: 10px 20px
+    border-radius: 68px
+    +font(16px, 16px, 700)
+    text-transform: uppercase
+
+    span
+      font-size: 14px
