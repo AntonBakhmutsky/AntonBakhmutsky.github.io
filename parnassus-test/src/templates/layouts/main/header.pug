@@ -1,8 +1,8 @@
 header.header
   .container.container_flex
-    .header__logo
+    a.header__logo(href="javascript:")
       | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/header/logo.svg')}
     .header__container
       .header__reserve Reserve for #[span ₹]499
-      button.header__bureger
+      button.header__burger
         | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/header/burger.svg')}

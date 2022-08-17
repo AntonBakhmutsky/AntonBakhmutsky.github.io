@@ -1,0 +1,7 @@
+mixin colored-point(params)
+  .colored-point(
+    class=params.active ? 'active' : ''
+  )
+    button.colored-point__inner(
+      class=`colored-point__inner_${params.modifier}`
+    )

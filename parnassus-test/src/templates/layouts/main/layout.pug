@@ -1,10 +1,15 @@
 include ../../abstracts/variables
 
+include ../../mixins/colored-point
+include ../../mixins/pop-up-point
+include ../../mixins/desc-item
+
 doctype html
 html(lang="en")
   head
     include head
   body.body_black
+    include ../../components/menu
     include header
     main.main
       block content
