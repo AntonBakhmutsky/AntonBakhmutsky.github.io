@@ -12,8 +12,7 @@ body
   display: flex
   flex-direction: column
 
-.body
-  &_black
+  &.black
     background: $black-gradient, #333333
     color: $white
 
@@ -22,14 +21,20 @@ body
         background: $white
         color: $black
 
-  &_yellow
-    background: $blue-gradient
+  &.yellow
+    background: $blue-gradient, darken(#20D6FF, 90%)
     color: $black
+
+    .black
+      display: none
 
     .header
       &__reserve
         background: $black
         color: $white
+
+    .yellow
+      display: block
 
 a
   text-decoration: none
@@ -42,6 +47,10 @@ section
   padding: 80px 0 34px
   width: 100%
   min-height: 600px
+  display: none
+
+  &.active
+    display: block
 
 .header, footer
   flex: 0 0 auto
@@ -84,14 +93,14 @@ svg
 
 // ----------------- Animations
 
-@keyframes colored-pulse
+@keyframes pulse
   0%
     width: 0
     height: 0
 
   50%
-    width: calc(100% + 45%)
-    height: calc(100% + 45%)
+    width: calc(100% + 50%)
+    height: calc(100% + 50%)
 
   100%
     width: 0

@@ -2,4 +2,32 @@
 @use '../abstracts/mixins' as *
 
 .yellow
-  display: none
+  .footer
+    margin-top: 20px
+
+  &__image
+    position: absolute
+    top: 0
+    left: 0
+    display: block
+    z-index: -1
+
+    img
+      display: block
+      object-fit: cover
+
+    .pop-up-point
+      position: absolute
+
+      &_first
+        right: 38%
+        top: 10%
+
+      &_second
+        top: 43%
+        right: 36%
+
+      &_third
+        top: 40%
+        left: 39%
+
