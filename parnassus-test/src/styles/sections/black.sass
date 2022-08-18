@@ -1,5 +1,6 @@
 @use '../abstracts/variables' as *
 @use '../abstracts/mixins' as *
+@use '../abstracts/extends' as *
 
 .black
   background: url(../assets/img/black/ola.svg) center no-repeat
@@ -21,29 +22,25 @@
         right: 50px
 
         .pop-up-point__modal
-          left: calc(100% + 20px)
-          top: calc(100% + 10px)
+          @extend %right
 
       &_second
         top: 18%
         left: 50px
 
         .pop-up-point__modal
-          right: calc(100% + 20px)
-          top: calc(100% + 10px)
+          @extend %left
 
       &_third
         top: 35%
         right: 40%
 
         .pop-up-point__modal
-          left: calc(100% + 20px)
-          top: calc(100% + 10px)
+          @extend %right
 
       &_fourth
         top: 52%
         left: 35%
 
         .pop-up-point__modal
-          right: calc(100% + 20px)
-          top: calc(100% + 10px)
+          @extend %left

@@ -1,5 +1,6 @@
 @use '../abstracts/variables' as *
 @use '../abstracts/mixins' as *
+@use '../abstracts/extends' as *
 
 .yellow
   .footer
@@ -10,7 +11,7 @@
     top: 0
     left: 0
     display: block
-    z-index: -1
+    z-index: 0
 
     img
       display: block
@@ -23,11 +24,21 @@
         right: 38%
         top: 10%
 
+        .pop-up-point__modal
+          @extend %right
+
       &_second
         top: 43%
         right: 36%
 
+        .pop-up-point__modal
+          @extend %right
+
+
       &_third
         top: 40%
         left: 39%
+
+        .pop-up-point__modal
+          @extend %left
 
