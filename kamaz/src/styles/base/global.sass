@@ -1,0 +1,102 @@
+@use '../abstracts/variables' as *
+@use '../abstracts/mixins' as *
+
+html
+  scroll-behavior: smooth
+  min-height: 100vh
+
+body
+  max-width: 1920px
+  margin: 0 auto
+  min-height: 100vh
+  display: flex
+  flex-direction: column
+  font-family: $font
+
+  .header, .footer
+    flex: 0 1 auto
+
+  .main
+    flex: 1 0 auto
+
+a
+  text-decoration: none
+  display: block
+  color: $black
+  transition: .5s
+  outline: none
+
+h1, h2, h3, h4, p
+  margin: 0
+
+button
+  appearance: none
+  border: none
+  cursor: pointer
+  padding: 0
+  background: transparent
+  transition: .5s
+
+.btn
+  width: 100%
+  height: 44px
+  +font(12px, 12px, 500)
+  border: 3px solid $blue
+  color: $blue
+
+  &:hover
+    color: $white
+    border-color: $white
+
+  &:active
+    color: $blue
+    border-color: $blue
+
+  &_header
+    max-width: 190px
+
+    &:hover
+      color: $blue
+      border-color: $white
+
+    &:active
+      color: $white
+      border-color: $white
+
+.container
+  max-width: 1412px
+  box-sizing: border-box
+  width: 100%
+  height: 100%
+  margin: 0 auto
+  padding: 0 20px
+  position: relative
+  +screen($tablet)
+    padding: 0 30px
+  +screen($tablet-sm)
+    padding: 0 10px
+
+  &_header-menu
+    max-width: 1027px
+    padding: 0
+    +screen($desktop-m)
+      max-width: 768px
+    +screen($desktop-sm)
+      max-width: 700px
+
+svg,
+img
+  max-width: 100%
+  max-height: 100%
+  flex-shrink: 0
+
+svg
+  path, circle, rect
+    transition: .5s
+
+ul
+  padding: 0
+  margin: 0
+
+  li
+    list-style-type: none

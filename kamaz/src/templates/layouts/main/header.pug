@@ -1,0 +1,23 @@
+header.header
+  .header__desktop
+    .header__top
+      .container.container_header-menu
+        +header-menu(headerTopMenu)
+    .header__middle
+      a.header__logo.header__logo_sotrans(href="https://sotrans.ru/")
+        img(src=require('@/assets/img/header/logo-sotr.svg') alt="")
+      .container.container_header-menu
+        +header-menu(headerMiddleMenu)
+      a.header__logo.header__logo_kamaz(href="https://kamaz.sotrans.ru/")
+        img(src=require('@/assets/img/header/logo-kamaz.svg') alt="")
+    form.header__search
+      .header__search-input
+        input(type="search" placeholder="Поиск по сайту")
+  .header__mobile
+    .container
+      a.header__mobile-logo.header__mobile-logo_sotr(href="https://sotrans.ru/")
+        img(src=require('@/assets/img/header/logo-sotr-mobile.svg') alt="")
+      a.header__mobile-logo.header__mobile-logo_kamaz(href="https://kamaz.sotrans.ru/")
+        img(src=require('@/assets/img/header/logo-kamaz-mobile.svg') alt="")
+      button.header__mobile-btn
+        img(src=require('@/assets/img/header/arrow-down.svg') alt="")

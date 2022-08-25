@@ -1,0 +1,122 @@
+@use '../../abstracts/variables' as *
+@use '../../abstracts/mixins' as *
+
+.header
+  &__desktop
+    +screen($tablet)
+      display: none
+
+  &__top
+    background-color: $blue-light
+    +font(14px, 22px)
+    height: 25px
+
+    .header__menu
+      a + a
+        margin-left: 1em
+
+      a
+        position: relative
+
+        &:before, &:after
+          content: attr(aria-label)
+          text-decoration: inherit
+
+        &:before
+          font-weight: 500
+          visibility: hidden
+
+        &:after
+          position: absolute
+          left: 0
+          top: 0
+          right: 0
+          bottom: 0
+
+        &:hover:before
+          visibility: visible
+
+        &:hover:after
+          display: none
+
+  &__middle
+    background-color: $white
+    +font(18px, 28px, 500)
+    height: 60px
+    position: relative
+    display: flex
+    justify-content: center
+    box-sizing: border-box
+    box-shadow: 0 0 15px rgba(0, 0, 0, .1)
+    +screen($desktop-m)
+      +font(16px, 26px, 500)
+
+    a
+      &:hover
+        color: $blue
+
+      &:active
+        color: $black
+
+  &__menu
+    display: flex
+    align-items: center
+    justify-content: space-between
+    height: 100%
+
+    a
+      transition: color .5s
+
+  &__logo
+    position: absolute
+
+    &_sotrans
+      left: 45px
+      top: 50%
+      transform: translateY(-50%)
+      width: 150px
+      height: 26px
+      +screen($desktop-m)
+        left: 25px
+        width: 120px
+        height: 22px
+
+    &_kamaz
+      right: 45px
+      top: 0
+      width: 66px
+      height: 128px
+      +screen($desktop-m)
+        width: 46px
+        height: 89px
+        right: 25px
+
+  &__mobile
+    display: none
+    height: 25px
+    background-color: $white
+    filter: drop-shadow(10px 0px 15px rgba(42, 42, 42, 0.05))
+    position: relative
+    z-index: 10
+    +screen($tablet)
+      display: block
+
+    .container
+      display: flex
+      align-items: center
+      justify-content: space-between
+
+    &-btn
+      width: 50px
+      height: 50px
+      border-radius: 7px
+      position: absolute
+      top: 0
+      left: 50%
+      transform: translateX(-50%)
+      background-color: $white
+      box-sizing: border-box
+      padding: 10px
+      display: flex
+      justify-content: center
+      align-items: flex-end

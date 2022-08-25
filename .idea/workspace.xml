@@ -2,7 +2,49 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7c4a1d67-fc80-4dae-bb52-57116103a785" name="Default Changelist" comment="clear work tree">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kamaz/.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kamaz/.env.example" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kamaz/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kamaz/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kamaz/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kamaz/postcss.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kamaz/src/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kamaz/src/assets/fonts/FuturaPT-Book.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kamaz/src/assets/fonts/FuturaPT-Book.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kamaz/src/assets/fonts/FuturaPT-Demi.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kamaz/src/assets/fonts/FuturaPT-Demi.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kamaz/src/assets/fonts/FuturaPT-Light.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kamaz/src/assets/fonts/FuturaPT-Light.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kamaz/src/assets/fonts/FuturaPT-Medium.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kamaz/src/assets/fonts/FuturaPT-Medium.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kamaz/src/assets/img/footer/arrow-up.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kamaz/src/assets/img/footer/logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kamaz/src/assets/img/footer/tg.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kamaz/src/assets/img/footer/wt.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kamaz/src/assets/img/header/arrow-down.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kamaz/src/assets/img/header/logo-kamaz-mobile.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kamaz/src/assets/img/header/logo-kamaz-second.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kamaz/src/assets/img/header/logo-kamaz.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kamaz/src/assets/img/header/logo-sotr-mobile.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kamaz/src/assets/img/header/logo-sotr.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kamaz/src/assets/img/header/loupe.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kamaz/src/scripts/components/links.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kamaz/src/scripts/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kamaz/src/styles/abstracts/fonts.sass" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kamaz/src/styles/abstracts/mixins.sass" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kamaz/src/styles/abstracts/variables.sass" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kamaz/src/styles/app.sass" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kamaz/src/styles/base/global.sass" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kamaz/src/styles/layouts/main/footer.sass" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kamaz/src/styles/layouts/main/header.sass" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kamaz/src/templates/abstracts/variables.pug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kamaz/src/templates/layouts/main/footer.pug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kamaz/src/templates/layouts/main/head.pug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kamaz/src/templates/layouts/main/header.pug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kamaz/src/templates/layouts/main/layout.pug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kamaz/src/templates/mixins/header-menu.pug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kamaz/src/templates/pages/index.pug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kamaz/webpack.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,14 +67,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -46,6 +88,7 @@
       <workItem from="1658504560197" duration="80000" />
       <workItem from="1658905431271" duration="78000" />
       <workItem from="1661322589427" duration="396000" />
+      <workItem from="1661425109883" duration="335000" />
     </task>
     <task id="LOCAL-00001" summary="clear work tree">
       <created>1658231286677</created>
@@ -75,7 +118,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661322622798</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="clear work tree">
+      <created>1661425203767</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1661425203767</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
