@@ -6,6 +6,7 @@ mixin header-menu(params)
           a(
             href=el.href
             aria-label=el.label
+            class=el.searchBtn ? 'header__search-btn' : ''
           )
         else
           a(href=el.href) #{el.txt}
