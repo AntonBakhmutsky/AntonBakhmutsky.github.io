@@ -1,0 +1,11 @@
+aside.trucks
+  .container
+    .trucks__grid
+      each el in trucksGrid
+        a.trucks__item(href=el.href)
+          span.trucks__item-title !{el.txt}
+          span.trucks__item-count #{el.count}
+          img(src=el.img alt="")
+      a.trucks__item(href="javascript:")
+        span.trucks__item-title Посмотреть #[br] весь каталог
+        | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/trucks/arrow-right.svg')}
