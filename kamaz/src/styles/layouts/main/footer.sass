@@ -1,9 +1,13 @@
 @use '../../abstracts/variables' as *
 @use '../../abstracts/mixins' as *
+@use '../../abstracts/extends' as *
 
 .footer
   position: relative
   box-sizing: border-box
+
+  a
+    @extend %opacity-link
 
   &__up-btn
     position: absolute
@@ -13,6 +17,7 @@
     align-items: center
     color: $white-darkest
     +font(14px, 22px)
+    @extend %opacity-link
     +screen($tablet)
       top: 17px
       right: auto
@@ -128,12 +133,6 @@
         display: flex
 
         a
-          &:hover
-            opacity: .6
-
-          &:active
-            opacity: 1
-
           &:not(:last-child)
             margin-right: 20px
 

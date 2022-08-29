@@ -3,3 +3,128 @@
 
 .top-slider
   min-height: 626px
+  position: relative
+  margin-top: -60px
+  color: $white
+  overflow: hidden
+  +screen($tablet)
+    margin-top: 0
+    height: 576px
+
+  .container
+    z-index: 2
+    padding: 121px 0 0 175px
+    +screen($desktop-sm)
+      padding: 121px 100px 0
+    +screen($tablet)
+      padding: 35px 30px
+    +screen($tablet-sm)
+      padding: 35px 10px
+
+  &__title
+    +font(86px, 95px, 600)
+    +screen($desktop-sm)
+      +font(66px, 75px, 600)
+    +screen($tablet)
+      +font(48px, 52px, 600)
+
+    span
+      display: block
+      +screen($tablet)
+        display: inline
+
+  &__text
+    +font(24px, 31px, 500)
+    margin-top: 30px
+    +screen($desktop-sm)
+      +font(20px, 28px)
+    +screen($tablet)
+      +font(18px, 24px)
+      margin-top: 20px
+
+    span
+      display: block
+      +screen($tablet)
+        display: inline
+
+  &__links
+    display: flex
+    align-items: center
+    margin-top: 74px
+    +screen($tablet)
+      flex-direction: column
+      margin-top: 40px
+
+    &-catalog
+      margin-right: 26px
+      width: 100%
+      +screen($tablet)
+        margin-right: 0
+
+    &-tech
+      color: $white
+      +font(18px, 20px)
+      +screen($tablet)
+        margin-top: 12px
+
+      &:hover
+        opacity: .6
+
+      &:active
+        opacity: 1
+
+  &__rect
+    position: absolute
+    top: 0
+    left: -78px
+    max-width: 1215px
+    width: 100%
+    height: 626px
+    z-index: 1
+    transform: skew(-15deg, 0)
+    background-color: $blue
+    +screen(1500)
+      left: -150px
+    +screen($desktop-sm)
+      left: -300px
+    +screen($tablet)
+      left: 0
+      transform: skew(0deg, -15deg)
+      top: -220px
+    +screen($mobile)
+      top: -150px
+
+    img
+      position: absolute
+      left: 0
+      top: 0
+
+  &__desktop
+    position: absolute
+    right: 0
+    top: 0
+    max-width: 1144px
+    width: 100%
+    height: 626px
+    z-index: 0
+    +screen($tablet)
+      height: 402px
+      top: auto
+      bottom: 0
+    +screen($tablet-xs)
+      height: 302px
+    +screen($mobile)
+      height: 202px
+
+  .swiper
+    width: 100%
+    height: 100%
+
+    &-slide
+      overflow: hidden
+
+      img
+        width: 100%
+        height: 100%
+        object-fit: cover
+        object-position: center
