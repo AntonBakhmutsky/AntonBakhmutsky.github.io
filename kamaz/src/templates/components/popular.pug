@@ -1,7 +1,38 @@
 section.popular
   .container
-    h2.popular__title Популярные позиции
-    .popular__slider
-      .swiper
+    h2.popular__title.section-title Популярные позиции
+    .popular__slider.swiper
         .swiper-wrapper
+          each el in popularSlider
+            .swiper-slide.popular__item
+              .popular__item-gallery
+                each image in el.images
+                  img(src=image alt="")
+              .popular__content
+                .popular__head
+                  h3.popular__head-title #{el.name}
+                  .popular__head-type #{el.type}
+                  .popular__head-status(
+                    class=`popular__head-status_${el.statusModifier}`
+                  ) #{el.status}
+                .popular__desc
+                  .popular__desc-item
+                    span Год выпуска
+                    span #{el.year}
+                  .popular__desc-item
+                    span Мощность двигателя
+                    span #{el.year}
+                  .popular__desc-item
+                    span Год выпуска
+                    span #{el.year}
+                  .popular__desc-item
+                    span Мощность двигателя
+                    span #{el.year}
+                .popular__price #{el.price}
+                a.popular__link.btn Подробнее
+
+
+
+
+
 

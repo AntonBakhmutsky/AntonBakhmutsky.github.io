@@ -1,3 +1,116 @@
 @use '../abstracts/variables' as *
 @use '../abstracts/mixins' as *
 
+.popular
+  .container
+    padding: 0
+
+  &__slider
+    margin-top: 60px
+    +screen($tablet)
+      margin-top: 26px
+
+  &__item
+    max-width: 396px
+
+    &-gallery
+      width: 100%
+      height: 238px
+      display: flex
+      overflow: hidden
+
+      img
+        display: block
+        width: 100%
+        height: 100%
+        object-fit: cover
+        object-position: center
+
+
+    .hvr
+      &__images
+        position: relative
+
+      &__sectors
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        display: flex
+
+      &__sector
+        flex-grow: 1
+
+      &__dots
+        display: flex
+        align-items: center
+        justify-content: center
+
+      &__dot
+        width: 32px
+        height: 2px
+        margin: -20px 2px 0
+        background: $white
+        z-index: 2
+
+      &__dot--active
+        background: $blue
+
+  &__content
+    box-sizing: border-box
+    padding: 8px 24px 18px
+    border: 2px solid $white-dark
+
+  &__head
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    align-items: flex-end
+
+    &-title
+      +font(32px, 38px, 500)
+
+    &-type
+      +font(18px, 28px)
+
+    &-status
+      +font(18px, 28px, 500)
+      width: 100%
+
+      &_stock
+        color: $green
+
+      &_order
+        color: $red
+
+  &__desc
+    display: flex
+    flex-wrap: wrap
+    margin-top: 10px
+
+    &-item
+      display: flex
+      flex-direction: column
+
+      &:nth-child(odd)
+        flex-basis: 45%
+
+      &:nth-child(even)
+        flex-basis: 55%
+
+      span
+        &:first-child
+          +font(18px, 27px)
+          color: $gray
+
+        &:last-child
+          +font(24px, 30px, 500)
+
+  &__price
+    margin-top: 13px
+    +font(32px, 38px, 500)
+
+  &__link
+    margin-top: 10px
+
