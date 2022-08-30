@@ -1,0 +1,23 @@
+section.partners
+  .container
+    h2.partners__title.section-title Нам доверяют
+  .partners__slider.swiper
+    ul.swiper-wrapper
+      each el in partnersBlock
+        li.swiper-slide
+          img(src=el alt="")
+  .container
+    .partners__desc
+      .partners__desc-item
+        .partners__desc-num
+          span  12
+        .partners__desc-txt Сервисных центров #[br] по все стране
+      .partners__desc-item
+        .partners__desc-num
+          span  3 594
+          | +
+        .partners__desc-txt Проданных единиц #[br] техники
+      .partners__desc-item
+        .partners__desc-num
+          span  30
+        .partners__desc-txt Лет на рынке продажи #[br] и обслуживания техники

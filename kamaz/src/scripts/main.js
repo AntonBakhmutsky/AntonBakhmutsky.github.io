@@ -5,3 +5,4 @@ require('./components/mobile-menu');
 require('./components/top-slider');
 require('./components/up-button');
 require('./components/popular-slider');
+require('./components/partners-slider');
