@@ -9,6 +9,17 @@
   width: 100%
   transition: top .5s
 
+  &:after
+    content: ''
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .1)
+    width: 50px
+    height: 50px
+    border-radius: 7px
+    position: absolute
+    top: 0
+    left: 50%
+    transform: translateX(-50%)
+
   &__desktop
     +screen($tablet)
       display: none
@@ -128,9 +139,9 @@
     display: none
     height: 25px
     background-color: $white
-    filter: drop-shadow(10px 0px 15px rgba(42, 42, 42, 0.05))
     position: relative
     z-index: 10
+    box-shadow: 0 0 15px rgba(0, 0, 0, .1)
     +screen($tablet)
       display: block
 
@@ -153,6 +164,7 @@
       display: flex
       justify-content: center
       align-items: flex-end
+      z-index: 2
 
   &__search
     display: flex

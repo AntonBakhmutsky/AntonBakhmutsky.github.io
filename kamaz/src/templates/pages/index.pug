@@ -1,6 +1,8 @@
 extends ../layouts/main/layout.pug
 
 append variables
+  -
+    mainForm = true
 
 block title
   | Kamaz Sotrans
@@ -12,3 +14,4 @@ block content
   include ../components/partners
   include ../components/services
   include ../components/offers
+  include ../components/feedback

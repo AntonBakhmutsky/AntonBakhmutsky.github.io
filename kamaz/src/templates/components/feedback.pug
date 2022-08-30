@@ -1,0 +1,26 @@
+section.feedback
+  .container
+    if (mainForm)
+      h2.feedback__title.section-title Обратная связь
+    else
+      h2.feedback__title.section-title.section-title_sm Остались вопросы?
+    .feedback__content
+      form.feedback__form
+        .feedback__form-fields
+          .feedback__form-input
+            input(type="text" name="name" required)
+            span Ваше имя
+          .feedback__form-input
+            input(type="tel" name="tel" required)
+            span Ваш телефон
+          .feedback__form-input
+            input(type="email" name="mail" required)
+            span E-mail для связи
+          .feedback__form-textarea
+            textarea(name="comment" placeholder="Комментарий")
+          .feedback__form-bottom
+            button(type="submit").feedback__form-submit.btn.btn_sm Отправить
+            .feedback__form-policy
+              span Продолжая, вы принимаете нашу
+              a(href="javascript:") Политику конфиденциальности
+        .feedback__form-lottie

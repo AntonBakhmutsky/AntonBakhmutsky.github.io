@@ -1,0 +1,32 @@
+@use '../abstracts/variables' as *
+@use '../abstracts/mixins' as *
+
+.feedback
+  &__form
+    margin-top: 75px
+    background-color: #fff
+
+    &-fields
+      display: grid
+      grid-template-columns: repeat(2, 1fr)
+      grid-gap: 30px 30px
+
+    &-input, &-textarea
+      width: 280px
+      border: 1px solid $gray
+
+    &-input
+      position: relative
+      height: 44px
+
+
+      span
+        display: block
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        left: 13px
+
+    &-textarea
+      height: 192px
+
