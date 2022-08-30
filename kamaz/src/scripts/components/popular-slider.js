@@ -1,9 +1,9 @@
-import Swiper, { Pagination } from 'swiper';
+import Swiper, { Pagination, Navigation } from 'swiper';
 import HvrSlider from '../plugins/hvr-slider';
 
 window.addEventListener('load', () => {
 
-  Swiper.use([Pagination])
+  Swiper.use([Pagination, Navigation])
 
   if (!document.querySelector('.popular__slider')) {
     return false
@@ -22,8 +22,12 @@ window.addEventListener('load', () => {
         },
         1280: {
           slidesPerView: 3,
-          spaceBetween: 95,
+          spaceBetween: 95
         }
+      },
+      navigation: {
+        nextEl: '.popular .swiper-button-next',
+        prevEl: '.popular .swiper-button-prev'
       }
     });
 
