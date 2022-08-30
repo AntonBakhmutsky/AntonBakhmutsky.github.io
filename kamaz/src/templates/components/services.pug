@@ -1,0 +1,11 @@
+section.services
+  .container
+    h2.services__title.section-title Наши услуги
+    .services__grid
+      each el in servicesBlock
+        a.services__item(href=el.href)
+          .services__item-desc !{el.txt}
+          .services__item-image
+            img(src=el.img alt="")
+
+

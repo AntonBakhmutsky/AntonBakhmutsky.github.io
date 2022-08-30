@@ -1,0 +1,41 @@
+@use '../abstracts/variables' as *
+@use '../abstracts/mixins' as *
+
+.services
+  &__grid
+    margin-top: 64px
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    grid-gap: 30px 30px
+    +screen(1280)
+      grid-template-columns: repeat(2, 1fr)
+    +screen($tablet)
+      grid-template-columns: 1fr
+      grid-gap: 10px
+
+  &__item
+    box-sizing: border-box
+    padding: 18px 26px
+    border: 2px solid $white-darkest
+    display: flex
+    align-items: center
+    justify-content: space-between
+    +font(32px, 38px, 500)
+    height: 130px
+
+    &-desc
+      align-self: flex-start
+
+    &:hover
+      background-color: $blue
+      color: $white
+      margin-top: -10px
+      box-shadow: 0 4px 4px rgb(0 91 195 / 20%)
+
+      img
+        filter: grayscale(100%) brightness(1000%)
+
+    span
+      display: block
+      +font(14px, 22px)
+      color: $gray
