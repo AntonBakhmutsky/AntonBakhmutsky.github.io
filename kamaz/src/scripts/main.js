@@ -6,3 +6,4 @@ require('./components/top-slider');
 require('./components/up-button');
 require('./components/popular-slider');
 require('./components/partners-slider');
+require('./components/offer-slider');

@@ -1,0 +1,20 @@
+section.offers
+  .swiper-button-prev
+  .swiper-button-next
+  .container
+    h2.offers__title.section-title Спецпредложения
+    .offers__slider.swiper
+      .swiper-wrapper
+        each el in offersBlock
+          .offers__item.swiper-slide
+            .offers__item-gallery
+              each image in el.images
+                img(src=image alt="")
+            .offers__item-desc
+              .offers__item-container
+                h3.offers__item-title #{el.title}
+                .offers__item-status #{el.status}
+              .offers__item-txt #{el.txt}
+              a.offers__item-link.btn.btn_sm В каталог
+
+

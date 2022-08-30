@@ -8,44 +8,6 @@
     +screen($tablet)
       padding: 0 10px
 
-  .swiper
-    &-button
-      &-prev, &-next
-        top: 59%
-        +screen($tablet)
-          display: none
-
-        &:after
-          font-size: 24px
-          color: $gray
-
-        &:hover
-          opacity: .6
-
-        &:active
-          opacity: 1
-
-      &-disabled
-        visibility: visible
-
-      &-prev
-        left: 130px
-        +screen(1700)
-          left: 10px
-        +screen(1400)
-          top: 80px
-          transform: none
-          left: auto
-          right: 40px
-
-      &-next
-        right: 130px
-        +screen(1700)
-          right: 10px
-        +screen(1400)
-          top: 80px
-          transform: none
-
   .container
     padding: 0
     max-width: 1372px
@@ -54,7 +16,6 @@
     margin-top: 60px
     +screen($tablet)
       margin-top: 26px
-
 
   &__item
     max-width: 396px
@@ -71,36 +32,6 @@
         height: 100%
         object-fit: cover
         object-position: center
-
-    .hvr
-      &__images
-        position: relative
-
-      &__sectors
-        position: absolute
-        top: 0
-        left: 0
-        right: 0
-        bottom: 0
-        display: flex
-
-      &__sector
-        flex-grow: 1
-
-      &__dots
-        display: flex
-        align-items: center
-        justify-content: center
-
-      &__dot
-        width: 32px
-        height: 2px
-        margin: -20px 2px 0
-        background: $white
-        z-index: 2
-
-      &__dot--active
-        background: $blue
 
   &__content
     box-sizing: border-box
