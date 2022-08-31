@@ -8,5 +8,4 @@ require('./components/popular');
 require('./components/partners-slider');
 require('./components/offer-slider');
 require('./components/form');
-require('./components/trucks');
 require('./components/global-animations');

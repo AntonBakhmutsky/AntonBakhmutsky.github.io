@@ -3,12 +3,13 @@ import anime from 'animejs';
 
 window.addEventListener('load', () => {
 
-  const sectionTitle = document.querySelectorAll('.section-title');
+  // slide to right
+  const slideToRightElements = document.querySelectorAll('.slide-right');
 
-  sectionTitle.forEach(title => {
-    inViewport(title, () => {
+  slideToRightElements.forEach(el => {
+    inViewport(el, () => {
       anime({
-        targets: title,
+        targets: el,
         opacity: [0, 1],
         translateX: [-100, 0],
         duration: 1000,
@@ -17,4 +18,18 @@ window.addEventListener('load', () => {
     });
   });
 
+  // slide to up
+  const slideToUpElements = document.querySelectorAll('.slide-up');
+
+  slideToUpElements.forEach(el => {
+    inViewport(el, () => {
+      anime({
+        targets: el,
+        opacity: [0, 1],
+        translateY: [100, 0],
+        duration: 1000,
+        easing: 'easeOutQuart'
+      })
+    });
+  });
 });

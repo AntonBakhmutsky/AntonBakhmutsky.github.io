@@ -8,17 +8,18 @@
   left: 0
   width: 100%
   transition: top .5s
+  +screen($tablet)
 
-  &:after
-    content: ''
-    box-shadow: 0 5px 15px rgba(0, 0, 0, .1)
-    width: 50px
-    height: 50px
-    border-radius: 7px
-    position: absolute
-    top: 0
-    left: 50%
-    transform: translateX(-50%)
+    &:after
+      content: ''
+      box-shadow: 0 5px 15px rgba(0, 0, 0, .1)
+      width: 50px
+      height: 50px
+      border-radius: 7px
+      position: absolute
+      top: 0
+      left: 50%
+      transform: translateX(-50%)
 
   &__desktop
     +screen($tablet)
