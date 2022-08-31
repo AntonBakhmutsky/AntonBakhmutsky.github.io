@@ -8,3 +8,4 @@ require('./components/popular-slider');
 require('./components/partners-slider');
 require('./components/offer-slider');
 require('./components/form');
+

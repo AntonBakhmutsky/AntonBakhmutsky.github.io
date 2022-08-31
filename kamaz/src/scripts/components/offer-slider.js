@@ -6,7 +6,7 @@ window.addEventListener('load', () => {
   Swiper.use([Navigation])
 
   if (!document.querySelector('.offers__slider')) {
-    return false
+    return false;
   } else {
 
     // card slider

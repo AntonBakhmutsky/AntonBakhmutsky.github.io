@@ -4,7 +4,7 @@ window.addEventListener('load', () => {
 
 
   if (!document.querySelector('.partners__slider')) {
-    return false
+    return false;
   } else {
 
     // partners slider

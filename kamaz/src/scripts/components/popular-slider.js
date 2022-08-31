@@ -6,7 +6,7 @@ window.addEventListener('load', () => {
   Swiper.use([Pagination, Navigation])
 
   if (!document.querySelector('.popular__slider')) {
-    return false
+    return false;
   } else {
 
     // card slider

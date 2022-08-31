@@ -1,10 +1,10 @@
 window.addEventListener('load', () => {
 
   if (!document.querySelector('.footer__up-btn')) {
-    return false
+    return false;
   } else {
     document.querySelector('.footer__up-btn').addEventListener('click', () => {
-      window.scrollTo(0, 0)
+      window.scrollTo(0, 0);
     });
   }
 
