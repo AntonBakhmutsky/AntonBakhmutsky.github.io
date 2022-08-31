@@ -4,8 +4,9 @@ require('./components/header');
 require('./components/mobile-menu');
 require('./components/top-slider');
 require('./components/up-button');
-require('./components/popular-slider');
+require('./components/popular');
 require('./components/partners-slider');
 require('./components/offer-slider');
 require('./components/form');
-
+require('./components/trucks');
+require('./components/global-animations');

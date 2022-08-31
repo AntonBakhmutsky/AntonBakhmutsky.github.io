@@ -1,5 +1,7 @@
 import Swiper, { Pagination, Navigation } from 'swiper';
 import HvrSlider from '../plugins/hvr-slider';
+import inViewport from '@/scripts/plugins/inViewport';
+import anime from 'animejs';
 
 window.addEventListener('load', () => {
 
@@ -33,6 +35,21 @@ window.addEventListener('load', () => {
 
     // image switcher(Hvr Slider)
     new HvrSlider('.popular__item-gallery');
-  }
 
+    // slides animation
+    const popularSlides = document.querySelectorAll('.popular__item');
+
+    popularSlides.forEach((slide, i )=> {
+      inViewport(slide, () => {
+        anime({
+          targets: slide,
+          opacity: [0, 1],
+          translateY: [100, 0],
+          duration: 1000,
+          delay: (i + 1) * 200,
+          easing: 'easeOutQuart'
+        })
+      });
+    });
+  }
 });
