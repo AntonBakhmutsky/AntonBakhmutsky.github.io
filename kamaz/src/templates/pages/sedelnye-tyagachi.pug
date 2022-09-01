@@ -1,0 +1,14 @@
+extends ../layouts/main/layout.pug
+
+append variables
+  -
+    mainModifier = 'category'
+    topSliderTitle = '<span>Седельные</span><span>тягачи</span>'
+    topSliderText = '<span>С заводской гарантией от официального дилера.</span><span>Продажа и сервисное обслуживание техники по всей России.</span>'
+
+block title
+  | Kamaz Sotrans
+
+block content
+  include ../components/top-slider
+  include ../components/engine

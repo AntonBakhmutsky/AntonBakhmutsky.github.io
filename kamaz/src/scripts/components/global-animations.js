@@ -32,4 +32,19 @@ window.addEventListener('load', () => {
       })
     });
   });
+
+  // slide to left
+  const slideToLeftElements = document.querySelectorAll('.slide-left');
+
+  slideToLeftElements.forEach(el => {
+    inViewport(el, () => {
+      anime({
+        targets: el,
+        opacity: [0, 1],
+        translateX: [-100, 0],
+        duration: 1000,
+        easing: 'easeOutQuart'
+      })
+    });
+  });
 });

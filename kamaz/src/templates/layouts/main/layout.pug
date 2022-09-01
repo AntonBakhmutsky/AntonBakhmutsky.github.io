@@ -16,7 +16,7 @@ html(lang="ru")
     <!-- Header -->
     include header
     <!-- Content -->
-    main.main
+    main.main(class=mainModifier ? `main_${mainModifier}` : '')
       block content
     <!-- Footer -->
     include footer

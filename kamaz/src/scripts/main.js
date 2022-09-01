@@ -1,5 +1,3 @@
-require('./components/links');
-
 require('./components/preloader');
 require('./components/header');
 require('./components/mobile-menu');

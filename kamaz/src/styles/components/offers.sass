@@ -13,7 +13,8 @@
       padding: 0
 
   &__title
-    padding: 0 10px
+    +screen($tablet)
+      padding: 0 10px
 
   .swiper
     &-button
@@ -123,6 +124,7 @@
     &-link
       margin-top: auto
       background-color: #fff
+      z-index: 2
       +screen($tablet)
         margin-top: 20px
         width: 100%
