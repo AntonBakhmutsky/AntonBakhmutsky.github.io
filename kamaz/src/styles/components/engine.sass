@@ -1,0 +1,48 @@
+@use '../abstracts/variables' as *
+@use '../abstracts/mixins' as *
+@use '../abstracts/extends' as *
+
+.engine
+  box-sizing: border-box
+  padding: 120px 0
+
+  &__desc
+    margin-top: 60px
+    display: flex
+    justify-content: space-between
+
+    &-left
+      max-width: 364px
+
+      div
+        &:nth-child(2)
+          margin-top: 88px
+
+        &:last-child
+          margin-top: 188px
+
+    &-right
+      max-width: 281px
+
+      div
+        &:nth-child(2)
+          margin-top: 100px
+
+        &:last-child
+          margin-top: 163px
+
+    &-feature
+      +font(64px, 70px, 600)
+      color: $blue
+
+    &-txt
+      +font(18px, 27px)
+
+  &__lottie
+    width: 571px
+    height: 605px
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)
+    bottom: 0
+
