@@ -12,22 +12,32 @@ window.addEventListener('load', () => {
 
     servicesItems.forEach((el, i )=> {
       inViewport(el, () => {
-        if (i < 3) {
-          anime({
-            targets: el,
-            opacity: [.6, 1],
-            translateY: [150, 0],
-            duration: 1000,
-            delay: i * 150,
-            easing: 'easeOutQuart'
-          })
+        if (window.innerWidth > 1024) {
+          if (i < 3) {
+            anime({
+              targets: el,
+              opacity: [.6, 1],
+              translateY: [150, 0],
+              duration: 1000,
+              delay: i * 150,
+              easing: 'easeOutQuart'
+            })
+          } else {
+            anime({
+              targets: el,
+              opacity: [.6, 1],
+              translateY: [150, 0],
+              duration: 1000,
+              delay: (i - 3) * 150,
+              easing: 'easeOutQuart'
+            })
+          }
         } else {
           anime({
             targets: el,
-            opacity: [.6, 1],
+            opacity: [0, 1],
             translateY: [150, 0],
             duration: 1000,
-            delay: (i - 3) * 150,
             easing: 'easeOutQuart'
           })
         }

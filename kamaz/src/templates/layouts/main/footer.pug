@@ -5,13 +5,13 @@ footer.footer
   .footer__content
     .container
       .footer__top
-        a.footer__logo(href="https://kamaz.sotrans.ru/")
+        a.footer__logo.slide-right(href="https://kamaz.sotrans.ru/")
           img(src=require('@/assets/img/footer/logo.svg') alt="")
         .footer__menu
           each el in footerMenu
             a(href=el.href) #{el.txt}
       .footer__bottom
-        .footer__bottom-left
+        .footer__bottom-left.slide-up
           p Основными направлениями деятельности сертифицированного сервисного центра «Техцентры СОТРАНС» является ремонт и обслуживание грузовых автомобилей Камаз.
           p Сервисная станция оказывает услуги по техническому обслуживанию, гарантийному ремонту и восстановлению аварийных автомобилей. Кроме ремонта, «Техцентры СОТРАНС» предлагают оригинальные запасные части Камаз.
         .footer__bottom-right

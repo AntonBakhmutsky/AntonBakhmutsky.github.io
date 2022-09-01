@@ -20,6 +20,16 @@ body
   +screen($tablet)
     background-color: #fff
 
+  &.loaded_hiding
+    .preloader
+      transition: .3s opacity
+      opacity: 0
+
+  &.loaded
+    .preloader
+      display: none
+
+
   .header, .footer
     flex: 0 1 auto
 
@@ -32,7 +42,7 @@ a
   text-decoration: none
   display: block
   color: $black
-  transition: .5s
+  transition: color .5s, opacity .5s, background-color .5s
   outline: none
 
 h1, h2, h3, h4, p

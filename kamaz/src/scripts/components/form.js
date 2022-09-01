@@ -1,5 +1,6 @@
 import lottieWeb from 'lottie-web';
 import inViewport from '@/scripts/plugins/inViewport';
+import anime from "animejs";
 
 window.addEventListener('load', () => {
 
@@ -35,5 +36,20 @@ window.addEventListener('load', () => {
       animation.play();
     });
 
+    // fields animation
+    const inputFieldsContainer = document.querySelectorAll('.feedback__form-input');
+
+    inputFieldsContainer.forEach((el, i )=> {
+      inViewport(el, () => {
+        anime({
+          targets: el,
+          opacity: [0, 1],
+          translateX: [-150, 0],
+          duration: 1000,
+          delay: i * 100,
+          easing: 'easeOutQuart'
+        })
+      });
+    });
   }
 });
