@@ -10,3 +10,4 @@ require('./components/offer-slider');
 require('./components/form');
 require('./components/global-animations');
 require('./components/partners');
+require('./components/services');

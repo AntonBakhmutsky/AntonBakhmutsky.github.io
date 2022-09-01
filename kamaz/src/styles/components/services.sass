@@ -22,9 +22,14 @@
     justify-content: space-between
     +font(32px, 38px, 500)
     height: 130px
+    transition: background-color .5s, color .5s, margin-top .5s, box-shadow .5s
 
     &-desc
       align-self: flex-start
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      height: 100%
 
     &:hover
       background-color: $blue
