@@ -1,0 +1,36 @@
+@use '../abstracts/variables' as *
+@use '../abstracts/mixins' as *
+
+.safety
+  &__grid
+    margin-top: 90px
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    grid-gap: 30px 30px
+    +screen($desktop-sm)
+      grid-template-columns: repeat(2, 1fr)
+    +screen($tablet)
+      grid-template-columns: 1fr
+      grid-gap: 10px
+
+  &__item
+    box-sizing: border-box
+    padding: 25px 26px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    border: 3px solid $white-darkest
+    height: 200px
+    transition: background-color .5s, color .5s, margin-top .5s, box-shadow .5s, border-color .5s
+
+    &:hover
+      background-color: $blue
+      border-color: $blue
+      color: $white
+      margin-top: -10px
+      box-shadow: 0 4px 4px rgb(0 91 195 / 20%)
+      +screen($desktop-sm)
+        margin-top: 0
+
+      img
+        filter: grayscale(100%) brightness(1000%)

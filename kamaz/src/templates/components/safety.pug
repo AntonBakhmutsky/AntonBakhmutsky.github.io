@@ -1,0 +1,9 @@
+section.safety
+  .container
+    h2.safety__title.section-title Системы безопасности
+    .safety__grid
+      each el in safetyItems
+        a.safety__item(href=el.href)
+          .safety__item-txt !{el.txt}
+          .safety__item-image
+            img(src=el.img alt="")
