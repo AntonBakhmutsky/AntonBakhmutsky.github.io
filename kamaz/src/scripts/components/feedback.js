@@ -1,6 +1,6 @@
 import lottieWeb from 'lottie-web';
 import inViewport from '@/scripts/plugins/inViewport';
-import anime from "animejs";
+import anime from 'animejs';
 
 window.addEventListener('load', () => {
 

@@ -5,6 +5,7 @@
 .engine
   box-sizing: border-box
   padding: 120px 0
+  background-color: #fff
 
   &__desc
     margin-top: 60px
@@ -12,6 +13,7 @@
     justify-content: space-between
 
     &-left
+      z-index: 3
       max-width: 364px
 
       div
@@ -22,6 +24,7 @@
           margin-top: 188px
 
     &-right
+      z-index: 3
       max-width: 281px
 
       div
@@ -39,10 +42,19 @@
       +font(18px, 27px)
 
   &__lottie
+    z-index: 0
     width: 571px
     height: 605px
     position: absolute
-    left: 50%
-    transform: translateX(-50%)
-    bottom: 0
+    left: 25%
+    bottom: -120px
+
+    &:after
+      content: ''
+      height: 100%
+      width: 3px
+      background-color: #fff
+      position: absolute
+      right: -1px
+      top: 0
 

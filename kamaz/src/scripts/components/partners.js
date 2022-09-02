@@ -1,5 +1,6 @@
 import inViewport from '@/scripts/plugins/inViewport';
 import anime from 'animejs';
+import numsAnimation from '@/scripts/plugins/numbers-animation';
 
 window.addEventListener('load', () => {
 
@@ -25,36 +26,6 @@ window.addEventListener('load', () => {
 
     // nums animation
     const nums = document.querySelectorAll('.partners__desc-num span');
-
-    nums.forEach((num, i)=> {
-      inViewport(num, () => {
-        switch (i) {
-          case 0:
-            anime({
-              targets: num,
-              innerHTML: [0, 12],
-              easing: 'linear',
-              round: 1
-            });
-            break;
-          case 1:
-            anime({
-              targets: num,
-              innerHTML: [0, 3594],
-              easing: 'linear',
-              round: 1
-            });
-            break;
-          case 2:
-            anime({
-              targets: num,
-              innerHTML: [0, 30],
-              easing: 'linear',
-              round: 1
-            });
-            break;
-        }
-      });
-    });
+    numsAnimation(nums);
   }
 });

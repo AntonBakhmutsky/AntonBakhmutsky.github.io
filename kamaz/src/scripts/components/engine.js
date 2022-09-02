@@ -1,6 +1,6 @@
 import lottieWeb from 'lottie-web';
-import inViewport from '@/scripts/plugins/inViewport';
-import anime from "animejs";
+import checkPosition from '@/scripts/plugins/chek-position';
+import numsAnimation from '@/scripts/plugins/numbers-animation';
 
 window.addEventListener('load', () => {
 
@@ -11,6 +11,7 @@ window.addEventListener('load', () => {
     // lottie animation
     const lottieContainer = document.querySelector('.engine__lottie');
     const animationData = require('@/assets/documents/R6-engine-animation_2.mp4.lottie-1.json');
+    let scrollPosition = 0, timer = null;
 
     const animation = lottieWeb.loadAnimation({
       container: lottieContainer,
@@ -20,11 +21,27 @@ window.addEventListener('load', () => {
       autoplay: false
     });
 
-    inViewport(lottieContainer, () => {
-      animation.play();
+    window.addEventListener('scroll', () => {
+      if (checkPosition(lottieContainer) && window.scrollY > scrollPosition) {
+        scrollPosition = window.scrollY;
+        animation.setSpeed(1);
+        animation.play();
+      } else if (checkPosition(lottieContainer) && window.scrollY < scrollPosition) {
+        scrollPosition = window.scrollY;
+        animation.setSpeed(-1);
+        animation.play()
+      } else {
+        animation.stop();
+      }
     });
 
-    // fields animation
-    const inputFieldsContainer = document.querySelectorAll('.feedback__form-input');
+    lottieContainer.addEventListener('click', () => {
+      animation.setSpeed(-1)
+      animation.play()
+    })
+
+    // nums animation
+    const nums = document.querySelectorAll('.engine__desc-feature span');
+    numsAnimation(nums);
   }
 });
