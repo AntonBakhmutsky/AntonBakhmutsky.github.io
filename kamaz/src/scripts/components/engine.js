@@ -9,7 +9,7 @@ window.addEventListener('load', () => {
   } else {
 
     // lottie animation
-    const lottieContainer = document.querySelector('.engine__lottie');
+    const lottieContainer = document.querySelector('.engine__lottie-container');
     const animationData = require('@/assets/documents/R6-engine-animation_2.mp4.lottie-1.json');
     let scrollPosition = 0, timer = null;
 
