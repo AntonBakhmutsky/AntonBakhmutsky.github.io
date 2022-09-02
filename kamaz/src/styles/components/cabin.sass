@@ -1,0 +1,67 @@
+@use '../abstracts/variables' as *
+@use '../abstracts/mixins' as *
+@use '../abstracts/extends' as *
+
+.cabin
+  background: url(../assets/img/cabin/cabin-bg.jpg) no-repeat center/cover
+  box-sizing: border-box
+  padding: 130px 0
+  color: $white
+  height: 944px
+
+  .container
+    height: auto
+
+  &__txt
+    +font(18px, 27px)
+    margin-top: 60px
+    max-width: 600px
+
+  &__grid
+    margin-top: 40px
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    grid-gap: 30px 30px
+
+  &__item
+    color: $white
+    display: flex
+    justify-content: space-between
+    align-items: center
+    width: 100%
+    height: 130px
+    border: 3px solid $white
+    box-sizing: border-box
+    padding: 18px 26px
+    transition: background-color .5s, color .5s, margin-top .5s, box-shadow .5s
+
+    &:nth-child(7)
+      grid-column: span 2
+
+    &:hover
+      background-color: $white
+      color: $black-light
+      margin-top: -10px
+      box-shadow: 0 4px 4px rgb(0 91 195 / 20%)
+      +screen($tablet)
+        margin-top: 0
+
+      svg
+        path[fill]
+          fill: $black-light
+
+        path[stroke]
+          stroke: $black-light
+
+    &-desc
+      display: flex
+      flex-direction: column
+      height: 100%
+      justify-content: space-between
+
+    &-title
+      +font(22px, 28px, 500)
+
+    &-txt
+      +font(16px, 20px, 300)
+      max-width: 766px

@@ -11,3 +11,4 @@ require('./components/global-animations');
 require('./components/partners');
 require('./components/services');
 require('./components/engine');
+require('./components/cabin');

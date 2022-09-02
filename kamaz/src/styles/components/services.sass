@@ -7,7 +7,7 @@
     display: grid
     grid-template-columns: repeat(3, 1fr)
     grid-gap: 30px 30px
-    +screen(1280)
+    +screen($desktop-sm)
       grid-template-columns: repeat(2, 1fr)
     +screen($tablet)
       grid-template-columns: 1fr
@@ -36,7 +36,7 @@
       color: $white
       margin-top: -10px
       box-shadow: 0 4px 4px rgb(0 91 195 / 20%)
-      +screen($tablet)
+      +screen($desktop-sm)
         margin-top: 0
 
       img
