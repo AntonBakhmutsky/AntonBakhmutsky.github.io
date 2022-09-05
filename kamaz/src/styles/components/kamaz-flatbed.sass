@@ -1,0 +1,41 @@
+@use '../abstracts/variables' as *
+@use '../abstracts/mixins' as *
+
+.kamaz-flatbed
+  box-sizing: border-box
+  padding: 120px 0
+
+  &__container
+    margin-top: 60px
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+
+  &__item
+    flex-basis: 50%
+    z-index: 2
+
+    &:nth-child(2)
+      max-width: 341px !important
+
+      .section-txt
+        max-width: 330px
+
+    &:last-child
+      margin-top: 145px
+      max-width: 281px
+
+    .section
+      &-txt
+        margin-top: 25px
+        max-width: 300px
+
+      &-sub-title
+        margin-top: 0
+
+  &__image
+    z-index: 0
+    max-width: 440px
+    position: absolute
+    top: 196px
+    left: 22%
