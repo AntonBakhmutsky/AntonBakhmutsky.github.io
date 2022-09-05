@@ -1,0 +1,24 @@
+@use '../abstracts/variables' as *
+@use '../abstracts/mixins' as *
+
+.truck-engine
+  .section-txt
+    &:last-child
+      margin-top: 80px
+
+  &__container
+    display: flex
+    justify-content: space-between
+    margin-top: 30px
+
+    &-block
+      width: 100%
+
+      &:first-child
+        max-width: 383px
+
+      &:last-child
+        max-width: 443px
+
+      .section-txt
+        margin-top: 10px !important
