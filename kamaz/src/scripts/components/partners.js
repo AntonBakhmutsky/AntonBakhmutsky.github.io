@@ -1,6 +1,5 @@
 import inViewport from '@/scripts/plugins/inViewport';
 import anime from 'animejs';
-import numsAnimation from '@/scripts/plugins/numbers-animation';
 
 window.addEventListener('load', () => {
 
@@ -23,9 +22,5 @@ window.addEventListener('load', () => {
         })
       });
     });
-
-    // nums animation
-    const nums = document.querySelectorAll('.partners__desc-num span');
-    numsAnimation(nums);
   }
 });

@@ -47,4 +47,25 @@ window.addEventListener('load', () => {
       })
     });
   });
+
+  // nums animation
+  if (!document.querySelector('.num-anim')) {
+    return false;
+  } else {
+
+    const nums = document.querySelectorAll('.num-anim');
+
+    nums.forEach(num => {
+      const numValue = Number(num.textContent.split(' ').join(''));
+
+      inViewport(num, () => {
+        anime({
+          targets: num,
+          innerHTML: [0, numValue],
+          easing: 'linear',
+          round: 1
+        });
+      })
+    });
+  }
 });

@@ -1,6 +1,5 @@
 import lottieWeb from 'lottie-web';
 import checkPosition from '@/scripts/plugins/chek-position';
-import numsAnimation from '@/scripts/plugins/numbers-animation';
 
 window.addEventListener('load', () => {
 
@@ -39,9 +38,5 @@ window.addEventListener('load', () => {
       animation.setSpeed(-1)
       animation.play()
     })
-
-    // nums animation
-    const nums = document.querySelectorAll('.engine__desc-feature span');
-    numsAnimation(nums);
   }
 });
