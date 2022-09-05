@@ -1,0 +1,128 @@
+@use '../abstracts/variables' as *
+@use '../abstracts/mixins' as *
+
+.catalog
+  padding-top: 40px
+
+  .container
+    &:last-child
+      margin-top: 35px
+      display: flex
+
+  &__main
+    margin-right: 45px
+
+  &__aside
+    flex-shrink: 0
+
+
+  &__links
+    display: flex
+    align-items: center
+
+    svg
+      &:hover
+        path
+          fill: $blue
+
+      &:active
+        path
+          fill: #C0C0C0
+
+    h1
+      margin-left: 30px
+      +font(18px, 27px)
+
+      a
+        &:hover
+          color: $blue
+
+        &:active
+          color: $black
+
+  &__form
+    &-fields
+      display: grid
+      grid-template-columns: repeat(3, 1fr)
+      grid-gap: 20px 20px
+
+      .catalog__form-filter
+        max-width: none
+
+      & input:checked + label
+        color: #005BC3
+        cursor: pointer
+
+        &:before
+          background: $blue url(../assets/img/catalog/check.svg) no-repeat center/10px 10px
+          border-color: $blue
+
+      & input + label
+        font-style: normal
+        +font(18px, 27px)
+        box-sizing: border-box
+        padding: 0 20px 0 26px
+        color: $black-light
+        cursor: pointer
+        position: relative
+
+        &:before
+          content: ''
+          width: 16px
+          height: 16px
+          border: 1px solid $black-light
+          border-radius: 3px
+          position: absolute
+          top: 5px
+          left: 0
+
+    &-inputs
+      display: flex
+
+      .catalog__form-filter
+        flex-basis: 50%
+
+        &:last-child
+          border-left: none
+
+    &-panel
+      box-sizing: border-box
+      padding: 22px 39px
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1)
+
+    &-filter
+      padding: 8.5px 13px
+      border: 1px solid $black-light
+      font-style: normal
+      +font(18px, 27px)
+      appearance: none
+      background: $white url(../assets/img/catalog/arrow-gray.svg) no-repeat center right 19px
+      outline: none
+      color: $black-light
+      max-width: 280px
+      width: 100%
+
+      &:hover
+        background: $blue-light url(../assets/img/catalog/arrow-black.svg) no-repeat center right 19px
+        border-color: $blue
+        color: $blue
+
+        &::placeholder
+          color: $blue
+
+      &::placeholder
+        color: $black-light
+
+    input
+      &.catalog__form-filter
+        background-image: none
+        max-width: none
+
+    &-checkboxes
+      display: flex
+      align-items: center
+
+      label
+        white-space: nowrap
+        margin: 0
+

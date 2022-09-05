@@ -1,0 +1,45 @@
+section.catalog
+  .container
+    .catalog__links
+      a(href="/")
+        | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/catalog/home.svg')}
+      h1
+        a(href="javascript:") Каталог
+  .container
+    .catalog__main
+      form.catalog__form
+        .catalog__form-panel.slide-right
+          .catalog__form-fields
+            select.catalog__form-filter(name="categoryId" id="categoryId" data-request="onProductFilterAjax" data-request-update="filter: '#productFilter'")
+              option(value="all") Категория
+            select.catalog__form-filter(name="productName" id="productName" data-request="onProductFilterAjax" data-request-update="filter: '#productFilter'")
+              option(value="") Модель
+            .catalog__form-inputs
+              input.catalog__form-filter(type="number" name="min-price" placeholder="Цена от")
+              input.catalog__form-filter(type="number" name="max-price" placeholder="до")
+            select.catalog__form-filter(name="" id="")
+              option(value="") Двигатель
+            select.catalog__form-filter(name="" id="")
+              option(value="") Коробка
+            .catalog__form-checkboxes
+              input#sleepingPlace(type="checkbox" name="sleeping-place")
+              label(for="sleepingPlace") Спальное место
+              input#leasing(type="checkbox" name="leasing")
+              label(for="leasing") В лизинг
+          .catalog__form-optional
+            input#euro5(type="checkbox" name="euro5")
+            label.catalog__form-optional-item(for="euro5") Евро 5
+            input#lowTonnage(type="checkbox" name="lowTonnage")
+            label.catalog__form-optional-item(for="lowTonnage") Малотоннажный
+            input#new(type="checkbox" name="new")
+            label.catalog__form-optional-item(for="new") Новинка
+          .catalog__form-buttons
+            button.catalog__form-more
+              img(src=require('@/assets/img/catalog/arrow-gray.svg') alt="")
+              | Еще параметры
+            button.catalog__form-submit.btn(type="submit" data-request="onProductFilterAjax" data-request-update="product-list: '#productList'") Показать 1 056 предложений
+        select.catalog__form-filter(name='sorting' data-request="onProductFilterAjax" data-request-update="product-list: '#productList'")
+          option(value='default' selected) По умолчанию
+    aside.catalog__aside.slide-up
+      a.catalog__aside-link(href="javascript:")
+        img(src=require('@/assets/img/catalog/souvenir.jpg') alt="")
