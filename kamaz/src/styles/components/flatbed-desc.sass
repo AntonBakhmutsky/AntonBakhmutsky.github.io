@@ -1,0 +1,21 @@
+@use '../abstracts/variables' as *
+@use '../abstracts/mixins' as *
+
+.flatbed-desc
+  .container
+    display: flex
+    margin-top: 120px
+    justify-content: space-between
+
+  .section-txt
+    margin-top: 0
+
+  &__container
+    &:first-child
+      flex-basis: 50%
+
+    &:last-child
+      flex-basis: 35%
+
+    img
+      margin-top: 35px
