@@ -1,0 +1,17 @@
+extends ../layouts/main/layout.pug
+
+append variables
+  -
+    txtModifier = 'margin'
+    mainModifier = 'category'
+    topSliderTitle = 'Шасси'
+    topSliderText = '<span>С заводской гарантией от официального дилера.</span><span>Продажа и сервисное обслуживание техники по всей России.</span>'
+
+block title
+  | Kamaz Sotrans
+
+block content
+  include ../components/top-slider
+  include ../components/kamaz-chassis
+  include ../components/offers
+  include ../components/popular
