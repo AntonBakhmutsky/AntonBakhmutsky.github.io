@@ -13,3 +13,5 @@ require('./components/services');
 require('./components/engine');
 require('./components/cabin');
 require('./components/safety');
+require('./components/semitrailer');
+require('./components/suspension');
