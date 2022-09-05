@@ -60,13 +60,23 @@ button
   background: transparent
   transition: .5s
 
-.section-title
-  +font(64px, 70px, 600)
-  box-sizing: border-box
-  padding-left: 100px
-  +screen($tablet)
-    +font(34px, 38px, 600)
-    padding-left: 0
+.section
+  &-title
+    +font(64px, 70px, 600)
+    box-sizing: border-box
+    padding-left: 100px
+    +screen($tablet)
+      +font(34px, 38px, 600)
+      padding-left: 0
+
+  &-txt
+    margin-top: 30px
+    +font(18px, 27px)
+
+  &-sub-title
+    +font(64px, 70px, 600)
+    color: $blue
+    margin-top: 30px
 
 .btn
   width: 100%
