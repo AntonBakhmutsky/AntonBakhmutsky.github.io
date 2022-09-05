@@ -41,7 +41,7 @@ window.addEventListener('load', () => {
       anime({
         targets: el,
         opacity: [0, 1],
-        translateX: [-100, 0],
+        translateX: [100, 0],
         duration: 1000,
         easing: 'easeOutQuart'
       })
