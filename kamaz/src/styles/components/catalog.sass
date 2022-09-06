@@ -89,6 +89,7 @@
       box-sizing: border-box
       padding: 22px 39px
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.1)
+      margin-bottom: 24px
 
     &-filter
       padding: 8.5px 13px
@@ -125,4 +126,49 @@
       label
         white-space: nowrap
         margin: 0
+
+    &-optional
+      display: flex
+      flex-wrap: wrap
+      margin-top: 10px
+
+      & input + label
+        box-sizing: border-box
+        padding: 10px 20px
+        +font(18px, 27px)
+        border-radius: 20px
+        background-color: $white-dark
+        border: 1px solid $white-dark
+        transition: .3s
+        margin: 10px 20px 10px 0
+
+      & input:checked + label
+        background-color: $blue-light
+        border-color: $blue
+        color: $blue
+
+    &-buttons
+      margin-top: 33px
+      display: flex
+      justify-content: space-between
+
+    &-submit
+      width: auto
+      box-sizing: border-box
+      padding: 0 60px
+
+    &-more
+      display: flex
+      align-items: center
+      +font(18px, 20px, 500)
+      transition: opacity .5s
+
+      img
+        margin-right: 15px
+
+      &:hover
+        opacity: .6
+
+      &:active
+        opacity: 1
 

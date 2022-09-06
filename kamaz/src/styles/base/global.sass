@@ -43,6 +43,13 @@ body
       +screen($tablet)
         padding-bottom: 60px
 
+      .section-title
+        +font(86px, 95px, 600)
+        +screen($desktop-sm)
+          +font(66px, 75px, 600)
+        +screen($tablet)
+          +font(48px, 52px, 600)
+
     &_catalog
       .offers
         padding-bottom: 0
@@ -139,6 +146,9 @@ button
   +screen($tablet-sm)
     padding: 0 10px
 
+  &_m
+    max-width: 1278px
+
   &_sm
     max-width: 1175px
 
@@ -193,7 +203,6 @@ input, textarea
 
 input[type="checkbox"]
   display: none
-
 
 textarea
   resize: none
