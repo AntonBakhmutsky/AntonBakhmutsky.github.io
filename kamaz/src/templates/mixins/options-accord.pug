@@ -1,0 +1,11 @@
+mixin options-accord(params)
+  .options-accord
+    .options-accord__visible
+      h3.options-accord__title #{params.title}
+      .options-accord__arrow
+        | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/product-page/arrow-dark-gray.svg')}
+    .options-accord__hidden
+      each el in params.options
+        .options-accord__item
+          span #{el.option}
+          span #{el.value}
