@@ -1,7 +1,7 @@
 section.product-info
   .container.container_sm
-    .product-info__slider
-      h2.product-info__name.section-title.slide-right 54901
+    .product-info__slider.slide-right
+      h2.product-info__name.section-title 54901
       .swiper.swiper__main
         .swiper-wrapper
           each el in productPageSlider
@@ -13,17 +13,16 @@ section.product-info
           each el in productPageSlider
             .swiper-slide
               img(src=el alt="")
-    .product__panel
+    .product-info__panel.slide-up
       .product-status-stock В наличии
-      .product__panel-container
-        .product__panel-price
-        a.product__panel-call.btn(href="javascript:") Заказать звонок
-      .product__panel-grid
-        ul.characteristic-list
-          each el in productPagePanelItems
-            li.characteristic-list__item
-              span #{el.name}
-              span #{el.value}
-      a.product__panel-more(href="#")
+      .product-info__panel-container
+        .product-info__panel-price 4 299 999 руб.
+        a.product-info__panel-call.btn(href="javascript:") Заказать звонок
+      ul.characteristic-list
+        each el in productPagePanelItems
+          li.characteristic-list__item
+            span #{el.name}
+            span #{el.value}
+      a.product-info__panel-modifications(href="#modifications")
         | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/product-page/arrow-dark-gray.svg')}
         | Доступные модификации

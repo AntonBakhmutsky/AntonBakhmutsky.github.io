@@ -9,7 +9,7 @@ window.addEventListener('load', () => {
   } else {
     const swiperThumbs = new Swiper('.swiper.swiper__thumbs', {
       loop: true,
-      spaceBetween: 10,
+      spaceBetween: 35,
       slidesPerView: 4,
       freeMode: true,
       watchSlidesProgress: true,
