@@ -2,15 +2,12 @@ extends ../layouts/main/layout.pug
 
 append variables
   -
-    mainModifier = 'catalog'
+    mainModifier = 'product-page'
 
 block title
   | Kamaz Sotrans
 
 block content
-  .container.container_m
-    +breadcrumbs(catalogBreadcrumbs)
-  include ../components/catalog
   include ../components/popular
   include ../components/offers
   include ../components/feedback
