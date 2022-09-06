@@ -343,7 +343,7 @@
       price: '12 299 999 руб.',
       items: [
         {itemName: 'Колесная формула', itemValue: '4х2'},
-        {itemName: 'Высота ССУ при снаряжённой массе', itemValue: '1 530 мм'},
+        {itemName: 'ТСУ (высота ССУ)', itemValue: '1 530 мм'},
         {itemName: 'Двигатель', itemValue: 'Weichai'},
         {itemName: 'Мощность двигателя', itemValue: '300 л.с.'},
         {itemName: 'Тип', itemValue: 'тягач'}
@@ -385,7 +385,7 @@
       price: '12 299 999 руб.',
       items: [
         {itemName: 'Колесная формула', itemValue: '4х2'},
-        {itemName: 'Высота ССУ при снаряжённой массе', itemValue: '1 530 мм'},
+        {itemName: 'ТСУ (высота ССУ)', itemValue: '1 530 мм'},
         {itemName: 'Двигатель', itemValue: 'Weichai'},
         {itemName: 'Мощность двигателя', itemValue: '300 л.с.'},
         {itemName: 'Тип', itemValue: 'тягач'}
@@ -413,4 +413,23 @@
   ]
 
   //- product-page
-  productPageBreadcrumbs = []
+  productPageBreadcrumbs = [
+    {href: 'catalog.html', txt: 'Каталог'},
+    {href: 'sedelnye-tyagachi', txt: 'Сидельные тягачи'},
+    {href: 'product-page.html', txt: 'Kamaz 54901', active: true}
+  ]
+
+  productPageSlider = [
+    require('@/assets/img/product-page/slides/1.jpg'),
+    require('@/assets/img/product-page/slides/2.jpg'),
+    require('@/assets/img/product-page/slides/3.jpg'),
+    require('@/assets/img/product-page/slides/4.jpg')
+  ]
+
+  productPagePanelItems = [
+    { name: 'Колесная формула', value: '6х6'},
+    { name: 'Грузоподъемность', value: '11 225 кг'},
+    { name: 'Двигатель', value: 'КАМАЗ или Cummins'},
+    { name: 'Мощность двигателя', value: '300 л.с.'},
+    { name: 'Тип', value: 'борт/шасси'}
+  ]

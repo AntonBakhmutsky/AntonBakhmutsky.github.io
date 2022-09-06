@@ -41,17 +41,17 @@ section.catalog
               h3.catalog__product-title #{el.name}
               .catalog__product-container
                 if (el.status === 'stock')
-                  .catalog__product-status-stock В наличии
+                  .product-status-stock В наличии
                 else if (el.status === 'order')
-                  .catalog__product-status-order Под заказ
+                  .product-status-order Под заказ
                 .catalog__product-price #{el.price}
             .catalog__product-bottom
               .catalog__product-images
                 each image in el.images
                   img(src=image alt="")
-              .catalog__product-grid
+              ul.characteristic-list
                 each item in el.items
-                  .catalog__product-grid-item
+                  li.characteristic-list__item
                     span #{item.itemName}
                     span #{item.itemValue}
         button.catalog__products-more.slide-top
