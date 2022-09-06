@@ -1,5 +1,5 @@
 mixin options-accord(params)
-  .options-accord
+  .options-accord.slide-up
     .options-accord__visible
       h3.options-accord__title #{params.title}
       .options-accord__arrow
@@ -7,5 +7,5 @@ mixin options-accord(params)
     .options-accord__hidden
       each el in params.options
         .options-accord__item
-          span #{el.option}
-          span #{el.value}
+          span.options-accord__item-name #{el.option}
+          span.options-accord__item-value #{el.value}

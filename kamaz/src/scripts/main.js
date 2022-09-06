@@ -16,3 +16,4 @@ require('./components/safety');
 require('./components/footer');
 require('./components/catalog');
 require('./components/product-page');
+require('./components/options-accord');
