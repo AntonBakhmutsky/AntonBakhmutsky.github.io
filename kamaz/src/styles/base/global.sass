@@ -300,5 +300,41 @@ textarea
 select
   cursor: pointer
 
+.breadcrumbs
+  display: flex
+  align-items: center
+
+  svg
+    &:hover
+      path
+        fill: $blue
+
+    &:active
+      path
+        fill: #C0C0C0
+
+  &__item
+    +font(18px, 27px)
+    margin-right: 58px
+
+    &:first-child
+      margin-right: 30px
+
+    &:last-child
+      margin-right: 0
+
+    a
+      color: $gray
+
+      &.active
+        color: $black
+
+    a:not(.active)
+      &:hover
+        color: $blue
+
+      &:active
+        color: $black
+
 .slide-up, .slide-right
 

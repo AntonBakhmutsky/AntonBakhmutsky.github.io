@@ -14,3 +14,4 @@ require('./components/engine');
 require('./components/cabin');
 require('./components/safety');
 require('./components/footer');
+require('./components/catalog');
