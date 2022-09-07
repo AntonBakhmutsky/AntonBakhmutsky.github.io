@@ -39,6 +39,45 @@ body
     +screen($tablet)
       padding-top: 25px
 
+    &_other-pages
+      .top-slider
+        display: flex
+        align-items: center
+        margin: 0
+        min-height: 374px
+        +screen($mobile)
+          height: 500px
+
+        .container
+          padding-top: 0
+          +screen($tablet)
+            padding-top: 40px
+
+        &__rect
+          height: 374px
+          +screen(1600)
+            left: -280px
+          +screen($desktop-sm)
+            left: -390px
+          +screen($tablet)
+            height: 500px
+            left: 0
+            transform: skew(0deg, -15deg)
+            top: -220px
+          +screen($mobile)
+            top: -150px
+
+        &__desktop
+          height: 374px
+          max-width: 954px
+          +screen($tablet)
+            height: 402px
+            top: auto
+            bottom: 0
+          +screen($mobile)
+            height: 202px
+
+
     &_category
       padding-bottom: 120px
       +screen($tablet)
