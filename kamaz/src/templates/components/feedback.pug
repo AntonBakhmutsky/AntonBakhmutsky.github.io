@@ -2,10 +2,12 @@ section.feedback
   .container
     if (mainForm)
       h2.feedback__title.section-title.slide-right Обратная связь
-    else
+    else if (otherPageForm)
       h2.feedback__title.section-title.section-title_sm.slide-right Остались вопросы?
+    else if (serviceForm)
+      h2.feedback__title.feedback__title_service.slide-right Заполните заявку и наш специалист свяжется с вами в ближайщее время
     .feedback__content
-      form.feedback__form
+      form.feedback__form(class=serviceForm ? 'feedback__form_service':'')
         .feedback__form-fields
           .feedback__form-grid(class=serviceForm ? 'feedback__form-grid_service':'')
             if (serviceForm)
