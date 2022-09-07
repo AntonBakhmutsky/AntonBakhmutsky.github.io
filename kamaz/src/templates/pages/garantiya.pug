@@ -1,0 +1,16 @@
+extends ../layouts/main/layout.pug
+
+append variables
+  -
+    mainModifier = 'other-pages'
+    topSliderTitle = 'Гарантия'
+    topSliderSlides = topSliderOther
+    otherPageForm = true
+
+block title
+  | Kamaz Sotrans
+
+block content
+  include ../components/top-slider
+  include ../components/guarantee
+  include ../components/feedback
