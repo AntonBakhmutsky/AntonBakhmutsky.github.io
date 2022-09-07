@@ -77,7 +77,12 @@ body
           +screen($mobile)
             height: 202px
 
+      .list
+        margin-top: 35px
 
+        &__item
+          &:not(:first-child)
+            margin-top: 10px
     &_category
       padding-bottom: 120px
       +screen($tablet)
