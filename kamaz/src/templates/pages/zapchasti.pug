@@ -1,0 +1,14 @@
+extends ../layouts/main/layout.pug
+
+append variables
+  -
+    mainModifier = 'other-pages'
+    topSliderTitle = 'Запасные части'
+    topSliderSlides = topSliderOther
+
+block title
+  | Kamaz Sotrans
+
+block content
+  include ../components/top-slider
+  include ../components/parts
