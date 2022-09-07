@@ -8,4 +8,5 @@ mixin options-accord(params)
       each el in params.options
         .options-accord__item
           span.options-accord__item-name #{el.option}
-          span.options-accord__item-value #{el.value}
+          if (el.value)
+            span.options-accord__item-value #{el.value}

@@ -32,7 +32,10 @@
     span
       display: block
       +screen($tablet)
-        display: inline
+        display: inline-block
+
+        &:first-child:not(:last-child)
+          margin-right: 15px
 
   &__text
     +font(24px, 31px, 500)
