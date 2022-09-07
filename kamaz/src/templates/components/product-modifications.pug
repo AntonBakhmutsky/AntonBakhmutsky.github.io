@@ -1,12 +1,11 @@
-section.product-modifications
+section.product-modifications#product-modifications
   .container.container_sm
     h2.product-modifications__title.slide-right Доступные модификации
-    .product-modifications__container
+    .product-modifications__container.slide-up
       each el in productModificationsItems
         .product-modifications__item
           h3.product-modifications__item-title #{el.title}
-          each characteristic in el.characteristics
-            .product-modifications__item
-            .product-modifications__item
-            .product-modifications__item
-            .product-modifications__item
+          +characteristic-list(el.characteristics)
+          .product-modifications__item-container
+            each options in el.optionsAccord
+              +options-accord(options)

@@ -2,3 +2,29 @@
 @use '../abstracts/mixins' as *
 
 .product-modifications
+  padding-top: 100px
+
+  &__title
+    +font(32px, 38px, 500)
+    margin-bottom: 40px
+
+  &__item
+    &-title
+      +font(32px, 38px, 500)
+      color: $black-light
+
+    &:not(:first-child)
+      margin-top: 15px
+
+    .characteristic-list
+      margin: 0
+      display: flex
+      grid-template-columns: none
+      grid-gap: inherit
+      flex-wrap: wrap
+
+      &__item
+        margin: 15px 60px 15px 0
+
+    &-container
+      margin-top: 15px
