@@ -1,0 +1,64 @@
+@use '../abstracts/variables' as *
+@use '../abstracts/mixins' as *
+
+.leasing
+  padding-top: 30px
+
+  &__links
+    margin-top: 35px
+
+    &-item
+      display: flex
+      align-items: center
+      color: $white-darkest
+
+      &:not(:first-child)
+        margin-top: 35px
+
+      &:hover
+        span
+          &.leasing__links-item-num
+            color: $blue
+
+          &.leasing__links-item-txt
+            color: $black
+
+          &.leasing__links-item-rect
+            border-color: $blue
+            background-color: $blue
+            color: $white
+
+      &:active
+        span
+          &.leasing__links-item-num
+            color: $white-darkest
+
+          &.leasing__links-item-txt
+            color: $white-darkest
+
+          &.leasing__links-item-rect
+            border-color: $white-darkest
+            background-color: transparent
+            color: $white-darkest
+
+      span
+        transition: color .4s, border-color .4s, background-color .4s
+
+        &.leasing__links-item-num
+          +font(86px, 94px, 600)
+          margin-right: 30px
+
+        &.leasing__links-item-txt
+          +font(32px, 38px, 500)
+
+        &.leasing__links-item-rect
+          margin-left: auto
+          +font(18px, 20px, 500)
+          display: flex
+          align-items: center
+          justify-content: center
+          border: 3px solid $white-darkest
+          box-sizing: border-box
+          width: 190px
+          height: 44px
+

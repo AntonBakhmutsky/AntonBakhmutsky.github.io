@@ -40,6 +40,16 @@ body
       padding-top: 25px
 
     &_other-pages
+      .feedback
+        background-color: transparent
+        padding: 35px 0 120px
+
+        &__form
+          margin-top: 35px
+
+        &__title
+          +font(32px, 38px, 500)
+
       .top-slider
         display: flex
         align-items: center
@@ -83,6 +93,7 @@ body
         &__item
           &:not(:first-child)
             margin-top: 10px
+
     &_category
       padding-bottom: 120px
       +screen($tablet)
@@ -429,7 +440,10 @@ select
 .other-page
   &-title
     +font(32px, 38px, 500)
-    margin-bottom: 75px
+
+  &-sub-title
+    +font(24px, 32px, 500)
+    margin-top: 35px
 
   &-image
     margin-top: 35px
