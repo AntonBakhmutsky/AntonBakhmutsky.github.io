@@ -24,6 +24,30 @@
       justify-content: flex-start
       align-items: center
 
+    &-select
+      padding: 9px 13px
+      border: 1px solid $black-light
+      font-style: normal
+      +font(18px, 27px)
+      appearance: none
+      background: $white url(../assets/img/catalog/arrow-gray.svg) no-repeat center right 19px
+      outline: none
+      color: $black-light
+      max-width: 280px
+      width: 100%
+      transition: background-color .4s, border-color .4s
+
+      &:hover
+        background: $blue-light url(../assets/img/catalog/arrow-black.svg) no-repeat center right 19px
+        border-color: $blue
+        color: $blue
+
+        &::placeholder
+          color: $blue
+
+      &::placeholder
+        color: $black-light
+
     &-fields
       +screen($tablet)
         width: 100%
