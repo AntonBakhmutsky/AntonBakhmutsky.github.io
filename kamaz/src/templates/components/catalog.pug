@@ -28,9 +28,7 @@ section.catalog
             input#new(type="checkbox" name="new")
             label.catalog__form-optional-item(for="new") Новинка
           .catalog__form-buttons
-            button.catalog__form-more
-              img(src=require('@/assets/img/catalog/arrow-gray.svg') alt="")
-              | Еще параметры
+            +btn-more('Еще параметры')
             button.catalog__form-submit.btn(type="submit" data-request="onProductFilterAjax" data-request-update="product-list: '#productList'") Показать 1 056 предложений
         select.catalog__form-filter.slide-up(name='sorting' data-request="onProductFilterAjax" data-request-update="product-list: '#productList'")
           option(value='default' selected) По умолчанию
@@ -50,9 +48,7 @@ section.catalog
                 each image in el.images
                   img(src=image alt="")
               +characteristic-list(el.items)
-        button.catalog__products-more.slide-top
-          img(src=require('@/assets/img/catalog/arrow-gray.svg') alt="")
-          | Показать еще
+      +btn-more('Показать еще')
     aside.catalog__aside.slide-up
       a.catalog__aside-link(href="javascript:")
         img(src=require('@/assets/img/catalog/souvenir.jpg') alt="")

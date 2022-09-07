@@ -1,6 +1,24 @@
+@use '../abstracts/variables' as *
+@use '../abstracts/mixins' as *
+
 %opacity-link
   &:hover
     opacity: .6
 
   &:active
     opacity: 1
+
+%colored-link
+  &:hover
+    color: $blue
+
+    svg
+      path
+        stroke: $blue
+
+  &:active
+    color: $black-light
+
+    svg
+      path
+        stroke: $black-light

@@ -1,5 +1,6 @@
 @use '../abstracts/variables' as *
 @use '../abstracts/mixins' as *
+@use '../abstracts/extends' as *
 
 html
   scroll-behavior: smooth
@@ -132,6 +133,19 @@ button
     &:active
       color: $white
       border-color: $white
+
+.btn-more
+  margin: 30px auto 0
+  display: flex
+  align-items: center
+  +font(18px, 20px, 500)
+  color: $black-light
+  transition: color .5s
+
+  svg
+    margin: 2px 14px 0 0
+
+  @extend %colored-link
 
 .container
   max-width: 1420px

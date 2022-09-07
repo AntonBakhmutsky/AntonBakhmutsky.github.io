@@ -133,38 +133,23 @@
       box-sizing: border-box
       padding: 0 60px
 
-    &-more
-      display: flex
-      align-items: center
-      +font(18px, 20px, 500)
-      transition: opacity .5s
-
-      img
-        margin-right: 15px
-
-      @extend %opacity-link
+    .btn-more
+      margin: 0
 
   &__products
     margin-top: 40px
-
-    &-more
-      margin: 12px auto 0
-      display: flex
-      align-items: center
-      +font(18px, 20px, 500)
-      transition: opacity .4s
-
-      img
-        margin-right: 15px
-
-      @extend  %opacity-link
 
   &__product
     box-sizing: border-box
     padding: 25px
     transition: background-color .3s
+    border: 2px solid $white-darkest
+    border-bottom: 0
     +screen($tablet)
       background-color: #fff
+
+    &:last-child
+      border-bottom: 2px solid $white-darkest
 
     &:hover
       background-color: $blue-light
