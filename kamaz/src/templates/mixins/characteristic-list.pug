@@ -1,0 +1,6 @@
+mixin characteristic-list(params)
+  ul.characteristic-list
+    each el in params
+      li.characteristic-list__item
+        span #{el.name}
+        span #{el.value}

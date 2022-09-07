@@ -49,11 +49,7 @@ section.catalog
               .catalog__product-images
                 each image in el.images
                   img(src=image alt="")
-              ul.characteristic-list
-                each item in el.items
-                  li.characteristic-list__item
-                    span #{item.itemName}
-                    span #{item.itemValue}
+              +characteristic-list(el.items)
         button.catalog__products-more.slide-top
           img(src=require('@/assets/img/catalog/arrow-gray.svg') alt="")
           | Показать еще

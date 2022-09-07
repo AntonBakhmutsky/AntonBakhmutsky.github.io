@@ -18,11 +18,7 @@ section.product-info
       .product-info__panel-container
         .product-info__panel-price 4 299 999 руб.
         a.product-info__panel-call.btn(href="javascript:") Заказать звонок
-      ul.characteristic-list
-        each el in productPagePanelItems
-          li.characteristic-list__item
-            span #{el.name}
-            span #{el.value}
+      +characteristic-list(productPagePanelItems)
       a.product-info__panel-modifications(href="#modifications")
         | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/product-page/arrow-dark-gray.svg')}
         | Доступные модификации

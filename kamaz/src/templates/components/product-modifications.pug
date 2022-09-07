@@ -1,3 +1,12 @@
 section.product-modifications
   .container.container_sm
     h2.product-modifications__title.slide-right Доступные модификации
+    .product-modifications__container
+      each el in productModificationsItems
+        .product-modifications__item
+          h3.product-modifications__item-title #{el.title}
+          each characteristic in el.characteristics
+            .product-modifications__item
+            .product-modifications__item
+            .product-modifications__item
+            .product-modifications__item
