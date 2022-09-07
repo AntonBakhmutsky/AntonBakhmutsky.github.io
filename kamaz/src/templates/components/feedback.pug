@@ -9,7 +9,7 @@ section.feedback
         .feedback__form-fields
           .feedback__form-grid(class=serviceForm ? 'feedback__form-grid_service':'')
             if (serviceForm)
-              select#categoryId.feedback__form-select(name='categoryId' data-request='onProductFilterAjax' data-request-update="filter: '#productFilter'")
+              select#categoryId.feedback__form-select.slide-right(name='categoryId' data-request='onProductFilterAjax' data-request-update="filter: '#productFilter'")
                 option(value='engineRepair') Ремонт двигателей
                 option(value='carRepair') Ремонт автомобилей
                 option(value='carTO') ТО автомобилей

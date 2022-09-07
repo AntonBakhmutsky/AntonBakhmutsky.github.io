@@ -46,7 +46,7 @@ window.addEventListener('load', () => {
           opacity: [0, 1],
           translateX: [-150, 0],
           duration: 1000,
-          delay: i * 100,
+          delay: (i + 1) * 100,
           easing: 'easeOutQuart'
         })
       });

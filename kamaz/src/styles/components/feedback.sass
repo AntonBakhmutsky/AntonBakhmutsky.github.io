@@ -63,6 +63,22 @@
         grid-gap: 10px 0
         grid-template: auto / 1fr
 
+      &_service
+        .feedback__form
+          &-input
+            &:nth-child(2)
+              grid-row: 2 / 3
+              grid-column: 1 / 2
+            &:nth-child(3)
+              grid-row: 3 / 4
+              grid-column: 1 / 2
+            &:nth-child(4)
+              grid-row: 4 / 5
+              grid-column: 1 / 2
+
+          &-textarea
+            grid-row: 2 / 5
+
     &-input, &-textarea
       border: 1px solid $gray
 
