@@ -1,5 +1,8 @@
-section.feedback
-  .container
+section.feedback(class=serviceForm ? 'feedback_service':'')
+  .container(
+    class=serviceForm ? 'container_xs':''
+    class=otherPageForm ? 'container_xs':''
+  )
     if (mainForm)
       h2.feedback__title.section-title.slide-right Обратная связь
     else if (otherPageForm)
