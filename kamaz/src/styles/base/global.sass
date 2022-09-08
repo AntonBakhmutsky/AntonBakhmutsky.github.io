@@ -461,5 +461,40 @@ select
       object-position: center
       object-fit: cover
 
+.form-input
+  border: 1px solid $gray
+  position: relative
+  height: 44px
+
+  input
+    padding: 11px 13px
+
+  span
+    display: block
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    left: 13px
+    +font(14px, 14px)
+    color: $gray
+    pointer-events: none
+    transition: .2s
+    +screen($tablet)
+      transition: 0s
+
+    &.active
+      margin-top: -35px
+      left: 0
+      +font(12px, 12px)
+      +screen($tablet)
+        left: 13px
+        margin-top: 0
+        +font(14px, 14px)
+        opacity: 0
+
+    &:after
+      content: '*'
+      color: $red
+
 .slide-up, .slide-right
 

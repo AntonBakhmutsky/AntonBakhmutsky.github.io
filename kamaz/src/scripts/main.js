@@ -18,3 +18,4 @@ require('./components/catalog');
 require('./components/product-page');
 require('./components/options-accord');
 require('./components/contacts');
+require('./components/working');

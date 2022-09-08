@@ -9,6 +9,7 @@ include ../../mixins/options-accord
 include ../../mixins/characteristic-list
 include ../../mixins/btn-more
 include ../../mixins/contacts-item
+include ../../mixins/list-without-anim
 
 doctype html
 html(lang="ru")
@@ -22,7 +23,7 @@ html(lang="ru")
     <!-- Header -->
     include header
     <!-- Content -->
-    main.main(class=mainModifier ? `main_${mainModifier}` : '')
+    main.main(class=mainModifier ? `main_${mainModifier}`:'')
       block content
     <!-- Footer -->
     include footer

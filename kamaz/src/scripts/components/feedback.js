@@ -1,6 +1,7 @@
 import lottieWeb from 'lottie-web';
 import inViewport from '@/scripts/plugins/inViewport';
 import anime from 'animejs';
+import togglePlaceholder from '@/scripts/plugins/input-placeholder';
 
 window.addEventListener('load', () => {
 
@@ -10,15 +11,7 @@ window.addEventListener('load', () => {
 
     // input placeholder
     const inputFields = document.querySelectorAll('.feedback__form-input input');
-
-    const togglePlaceholder = (e) => {
-      const inputValue = e.currentTarget.value.trim();
-      const list = e.currentTarget.parentElement.querySelector('span').classList;
-
-      !inputValue && list.contains('active') ? list.remove('active') : list.add('active');
-    }
-
-    inputFields.forEach(el => el.addEventListener('input', togglePlaceholder));
+    togglePlaceholder(inputFields);
 
     // lottie animation
     const lottieContainer = document.querySelector('.feedback__form-lottie');
