@@ -268,7 +268,7 @@ input, textarea
   +font(14px, 22px)
 
   &::placeholder
-    color: $gray-placeholder
+    color: $gray-light
 
 input[type="checkbox"]
   display: none
@@ -381,7 +381,7 @@ select
 
     &:active
       path
-        fill: #C0C0C0
+        fill: $gray-light
 
   &__item
     +font(18px, 27px)
@@ -444,6 +444,13 @@ select
   &-sub-title
     +font(24px, 32px, 500)
     margin-top: 35px
+
+  &-accord-txt
+    +font(22px, 28px, 500)
+    margin-top: 15px
+
+    &_margin
+      margin-top: 30px
 
   &-image
     margin-top: 35px

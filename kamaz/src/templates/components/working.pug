@@ -1,0 +1,42 @@
+section.working
+  .container.container_xs
+    .working__container
+      .working__item.working__item_refactoring
+        .working__item-visible
+          .working__item-svg
+            | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/working/refactoring.svg')}
+            h3.other-page-title Переоборудование автомобиля
+        .working__item-hidden
+          .working__item-images
+            each el in workingItemImages
+              img(src=el alt="")
+          p.section-txt Предоставляем услуги по переоборудованию техники на собственной производственной базе. С полным документальным сопровождением.
+          p.other-page-accord-txt Установка платформ:
+          +list(refactoringList)
+          p.other-page-accord-txt Переоборудование тягачей под ДОПОГ
+          p.other-page-accord-txt.other-page-accord-txt_margin Гидрофикация тягачей
+          p.other-page-accord-txt.other-page-accord-txt_margin Установка КМУ
+      .working__item.working__item_trade-in
+        .working__item-visible
+          .working__item-svg
+            | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/working/trade-in.svg')}
+            h3.other-page-title Trade-In
+          .working__item-hidden
+            .working__item-images
+              each el in workingItemImages
+                img(src=el alt="")
+            p.other-page-accord-txt.other-page-accord-txt_margin Trade-In от КАМАЗ – возможность освободить свое время и средства:
+            +list(traidInList)
+            .working__item-switch
+              .working__item-switch-buttons
+                button.working__item-btn(data-id=0) Выгодно
+                button.working__item-btn(data-id=1) Удобно
+                button.working__item-btn(data-id=2) Важно
+            .working__item-switch-container
+              .working__item-switch-item
+                +list(traidInListProfit)
+              .working__item-switch-item
+                +list(traidInListComfort)
+              .working__item-switch-item
+                p.section-txt Программа действует как для юридических так и для физических лиц.
+
