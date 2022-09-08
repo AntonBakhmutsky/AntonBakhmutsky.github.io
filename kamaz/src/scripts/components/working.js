@@ -18,7 +18,7 @@ window.addEventListener('load', () => {
     const tradeInSwitcherButtons = document.querySelectorAll('.working__item-switch-btn');
     const tradeInSwitcherContentItems = document.querySelectorAll('.working__item-switch-content');
 
-    const switchContent = (event) => {
+    const switchTradeInContent = (event) => {
       const target = event.currentTarget;
       const eventId = target.dataset.id;
       const nextActiveContent = tradeInSwitcherContentItems[eventId];
@@ -37,8 +37,31 @@ window.addEventListener('load', () => {
       target.classList.add('active')
     }
 
-    tradeInSwitcherButtons.forEach(el => el.addEventListener('click', switchContent));
+    tradeInSwitcherButtons.forEach(el => el.addEventListener('click', switchTradeInContent));
 
     // delivery steps
+    const deliveryContentItems = document.querySelectorAll('.working__item-steps-content');
+    const deliverySteps = document.querySelectorAll('.working__item-steps-num span');
+    const deliveryNextButton = document.querySelector('.working__item-steps-btn.btn');
+    const deliveryPreviousButton = document.querySelector('.working__item-steps-btn:not(.btn)');
+
+    const switchDeliveryContent = (event) => {
+      const target = event.currentTarget;
+      const eventAction = target.dataset.action;
+      const currentStepNum = document.querySelector('.working__item-steps-num span.active');
+      const currentStepId = Number(currentStepNum.dataset.id);
+      let nextStep, nextStepId, nextStepNum;
+
+      if (eventAction === 'next' && currentStepId !== 2) {
+        nextStepId = currentStepId + 1;
+      }
+
+      nextStep = document.querySelector(`.working__item-steps-content[data-id="${nextStepId.toString()}"]`);
+      nextStepNum = document.querySelector(`.working__item-steps-num span[data-id="${nextStepId.toString()}"]`);
+      console.log(nextStep, nextStepNum)
+    }
+
+    deliveryNextButton.addEventListener('click', switchDeliveryContent);
+    deliveryPreviousButton.addEventListener('click', switchDeliveryContent);
   }
 });

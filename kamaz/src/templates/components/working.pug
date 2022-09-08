@@ -54,13 +54,13 @@ section.working
               span.active(data-id=0) Шаг 1
               span(data-id=1) Шаг 2
               span(data-id=2) Шаг 3
-            form.working__item-steps-form
-              .working__item-steps-content
+            form.working__item-steps-form(action="")
+              .working__item-steps-content.active(data-id=0)
                 h3.other-page-title Расчет стоимости
                 .working__item-steps-input.form-input
                   input#startAdress(type='text' name='startAdress' required='' autocomplete='off')
                   span Введите адрес доставки
-              .working__item-steps-content
+              .working__item-steps-content(data-id=1)
                 h3.other-page-title Выберите дилерский центр
                 .working__item-steps-radio
                   input#bor.bounce(type='radio' name='sotrans-office' value='30.651757,59.667685')
@@ -70,7 +70,7 @@ section.working
                 .working__item-steps-input.form-input
                   input#endAddress(type='text' name='office' autocomplete='off')
                   span Или введите свой адрес
-              .working__item-steps-content
+              .working__item-steps-content(data-id=2)
                 h3.other-page-title Примерная стоимость: ~ 9 956 рублей #[span#deliveryResponse]
                 .working__item-steps-map
                   img(src=require('@/assets/img/working/map.jpg') alt="")
@@ -86,6 +86,6 @@ section.working
                     input(type="email" name="mail" required)
                     span E-mail для связи
               .working__item-steps-buttons
-                button.working__item-steps-btn.btn Далее
-                button.working__item-steps-btn Вернуться назад
+                button.working__item-steps-btn.btn(data-action="next") Далее
+                button.working__item-steps-btn(data-action="prev") Вернуться назад
                 .working__item-steps-policy.disabled Продолжая, вы принимаете нашу #[a(href="javascript:") Политику конфиденциальности]
