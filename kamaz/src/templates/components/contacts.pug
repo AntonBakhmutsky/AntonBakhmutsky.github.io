@@ -1,37 +1,25 @@
 section.contacts
   .container.container_xs
-    each el, index in contactsItems
+    each el in contactsItemsParnas
+      +contacts-item(el)
+    each el in contactsItemsElab
+      +contacts-item(el)
+    each el, index in contactsItemsRed
       if (index < 3)
-        .contacts__item.slide-up
-          .contacts__item-image
-            img(src=el.image alt="")
-          .contacts__item-info
-            .contacts__item-name #{el.name}
-            .contacts__item-position #{el.position}
-            a.contacts__item-tel(href=`tel:${el.telFirst}`) #{el.telFirst} #{el.additional}
-            a.contacts__item-tel(href=`tel:${el.telSecond}`) #{el.telFirst}
-            a.contacts__item-mail(href=`mailto:${el.mail}`) #{el.mail}
+        +contacts-item(el)
     .contacts__map.slide-right
       h2.other-page-title Площадки
       .contacts__map-buttons
-        button.contacts__map-btn Красный бор
-        button.contacts__map-btn Парнас
-        button.contacts__map-btn Елабуга
+        button.contacts__map-btn.active(data-id="0") Красный бор
+        button.contacts__map-btn(data-id="1") Парнас
+        button.contacts__map-btn(data-id="2") Елабуга
       .contacts__map-container
-        img.contacts__map-container-image(src=require('@/assets/img/contacts/map.jpg') alt="")
+        img(src=require('@/assets/img/contacts/map.jpg') alt="")
       .contacts__map-address Ленинградская обл., Тосненский р-н, пгт Красный Бор, ул. Промышленная 3 (трасса М10/Е105, 39-й км Московского шоссе)
       .contacts__map-hours
         span Продажа автомобилей: пн-пт 09:00 – 18:00
         span Сервис: ежедневно 09:00- 21:00
         span Запчасти: пн-пт 09:00 – 18:00
-    each el, index in contactsItems
+    each el, index in contactsItemsRed
       if (index > 2)
-        .contacts__item.slide-up
-          .contacts__item-image
-            img(src=el.image alt="")
-          .contacts__item-info
-            .contacts__item-name #{el.name}
-            .contacts__item-position #{el.position}
-            a.contacts__item-tel(href=`tel:${el.telFirst}`) #{el.telFirst} #{el.additional}
-            a.contacts__item-tel(href=`tel:${el.telSecond}`) #{el.telFirst}
-            a.contacts__item-mail(href=`mailto:${el.mail}`) #{el.mail}
+        +contacts-item(el)
