@@ -44,21 +44,51 @@ window.addEventListener('load', () => {
     const deliverySteps = document.querySelectorAll('.working__item-steps-num span');
     const deliveryNextButton = document.querySelector('.working__item-steps-btn.btn');
     const deliveryPreviousButton = document.querySelector('.working__item-steps-btn:not(.btn)');
+    const deliveryInputs = document.querySelectorAll('.working__item-steps-input input');
 
     const switchDeliveryContent = (event) => {
       const target = event.currentTarget;
       const eventAction = target.dataset.action;
       const currentStepNum = document.querySelector('.working__item-steps-num span.active');
       const currentStepId = Number(currentStepNum.dataset.id);
+      const currentStep = deliveryContentItems[currentStepId];
       let nextStep, nextStepId, nextStepNum;
 
       if (eventAction === 'next' && currentStepId !== 2) {
         nextStepId = currentStepId + 1;
+      } else if (eventAction === 'prev' && currentStepId !== 0) {
+        nextStepId = currentStepId - 1;
+      }
+
+      if (nextStepId === 2) {
+        deliveryNextButton.setAttribute('type', 'submit');
+        deliveryNextButton.removeEventListener('click', switchDeliveryContent);
+      } else if (currentStepId === 2) {
+        deliveryNextButton.addEventListener('click', switchDeliveryContent);
+      } else if (currentStepId === 0) {
+        deliveryPreviousButton.classList.remove('disabled');
+      } else if (nextStepId === 0) {
+        deliveryPreviousButton.classList.add('disabled');
       }
 
       nextStep = document.querySelector(`.working__item-steps-content[data-id="${nextStepId.toString()}"]`);
       nextStepNum = document.querySelector(`.working__item-steps-num span[data-id="${nextStepId.toString()}"]`);
-      console.log(nextStep, nextStepNum)
+
+      deliveryInputs.forEach(el => el.removeAttribute('required'));
+      nextStep.querySelectorAll('input:not([type="radio"])').forEach(el => el.required = true);
+      deliveryContentItems.forEach(el => el.classList.remove('active'));
+      deliverySteps.forEach(el => el.classList.remove('active'));
+      nextStepNum.classList.add('active');
+      nextStep.classList.add('active');
+
+      anime({
+        targets: nextStep,
+        opacity: [0, 1],
+        translateX: [-100, 0],
+        duration: 800,
+        easing: 'easeOutQuart'
+      });
+
     }
 
     deliveryNextButton.addEventListener('click', switchDeliveryContent);

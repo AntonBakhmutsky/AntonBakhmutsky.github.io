@@ -58,7 +58,7 @@ section.working
               .working__item-steps-content.active(data-id=0)
                 h3.other-page-title Расчет стоимости
                 .working__item-steps-input.form-input
-                  input#startAdress(type='text' name='startAdress' required='' autocomplete='off')
+                  input#startAdress(type='text' name='startAdress' required autocomplete='off')
                   span Введите адрес доставки
               .working__item-steps-content(data-id=1)
                 h3.other-page-title Выберите дилерский центр
@@ -77,15 +77,15 @@ section.working
                 p.section-txt Оставьте свои контактные данные и наш специалист свяжется с вами для уточнения заявки
                 .working__item-steps-fields
                   .working__item-steps-input.form-input
-                    input(type="text" name="name" required)
+                    input(type="text" name="name" autocomplete='off')
                     span Ваше имя
                   .working__item-steps-input.form-input
-                    input(type="tel" name="tel" required)
+                    input(type="tel" name="tel" autocomplete='off')
                     span Ваш телефон
                   .working__item-steps-input.form-input
-                    input(type="email" name="mail" required)
+                    input(type="email" name="mail" autocomplete='off')
                     span E-mail для связи
               .working__item-steps-buttons
                 button.working__item-steps-btn.btn(data-action="next") Далее
-                button.working__item-steps-btn(data-action="prev") Вернуться назад
+                button.working__item-steps-btn.disabled(data-action="prev") Вернуться назад
                 .working__item-steps-policy.disabled Продолжая, вы принимаете нашу #[a(href="javascript:") Политику конфиденциальности]

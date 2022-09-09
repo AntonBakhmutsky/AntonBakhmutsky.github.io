@@ -172,6 +172,7 @@
           align-items: center
           +font(18px, 20px)
           color: $gray-light
+          transition: color .4s, opacity .4s
 
           &:hover
             color: $blue
@@ -180,7 +181,9 @@
             color: $gray-light
 
           &.disabled
-            display: none
+            opacity: 0
+            pointer-events: none
+            visibility: hidden
 
       &-policy
         width: 100%
