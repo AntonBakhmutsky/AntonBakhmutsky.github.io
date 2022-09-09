@@ -23,8 +23,9 @@
     +font(32px, 38px, 500)
     height: 130px
     transition: background-color .5s, color .5s, margin-top .5s, box-shadow .5s
-    +screen($tablet)
-      height: auto
+    +screen($tablet-xs)
+      +font(24px, 26px, 500)
+      padding: 18px 20px
 
     &-desc
       align-self: flex-start
