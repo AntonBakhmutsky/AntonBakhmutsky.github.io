@@ -4,6 +4,8 @@
 .semitrailer
   box-sizing: border-box
   padding: 120px 0
+  +screen($tablet)
+    padding: 60px 0
 
   &__length
     +font(64px, 70px, 600)
@@ -15,16 +17,28 @@
     display: flex
     flex-wrap: wrap
     justify-content: space-between
+    +screen($tablet-sm)
+      flex-direction: column
+      margin-top: 20px
 
     &-item
       +font(18px, 27px)
       flex-basis: 50%
+      +screen($tablet-sm)
+        flex-basis: 100%
 
       &:first-child
         +font(24px, 30px, 500)
 
       &:nth-child(n + 3)
         margin-top: 25px
+        +screen($tablet-sm)
+          margin-top: 0
+
+      &:not(:first-child)
+        margin-top: 20px
 
   &__image
     margin-top: 60px
+    +screen($tablet-sm)
+      margin-top: 40px

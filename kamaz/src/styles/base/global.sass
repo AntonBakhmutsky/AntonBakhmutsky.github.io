@@ -103,8 +103,8 @@ body
         +font(86px, 95px, 600)
         +screen($desktop-sm)
           +font(66px, 75px, 600)
-        +screen($tablet)
-          +font(48px, 52px, 600)
+        +screen($tablet-xs)
+          +font(36px, 42px, 600)
 
     &_catalog, &_product-page
       .offers
@@ -136,8 +136,9 @@ button
     box-sizing: border-box
     padding-left: 100px
     +screen($tablet)
-      +font(34px, 38px, 600)
       padding-left: 0
+    +screen($tablet-xs)
+      +font(34px, 38px, 600)
 
   &-txt
     margin-top: 30px
@@ -147,6 +148,10 @@ button
     +font(64px, 70px, 600)
     color: $blue
     margin-top: 30px
+    +screen($desktop-sm)
+      +font(44px, 50px, 600)
+    +screen($tablet-sm)
+
 
 .btn
   width: 100%
