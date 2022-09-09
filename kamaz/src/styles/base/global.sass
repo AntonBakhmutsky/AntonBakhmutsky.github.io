@@ -376,10 +376,15 @@ textarea
 .list
   +font(22px, 28px, 500)
   padding-left: 40px
+  +screen($tablet)
+    margin-top: 15px
 
   &__item
-    margin-top: 30px
     position: relative
+    margin-top: 30px
+    +screen($tablet)
+      margin-top: 15px
+
 
     &:before
       content: ''
