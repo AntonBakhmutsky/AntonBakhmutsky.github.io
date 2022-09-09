@@ -10,6 +10,7 @@
     +screen($desktop-sm)
       grid-template-columns: repeat(2, 1fr)
     +screen($tablet)
+      margin-top: 30px
       grid-template-columns: 1fr
       grid-gap: 10px
 
@@ -22,7 +23,8 @@
     border: 3px solid $white-darkest
     height: 200px
     transition: background-color .5s, color .5s, margin-top .5s, box-shadow .5s, border-color .5s
-
+    +screen($tablet)
+      height: auto
 
     &:hover
       background-color: $blue
@@ -36,5 +38,19 @@
       img
         filter: grayscale(100%) brightness(1000%)
 
-    &-txt
+    &-title
       +font(22px, 28px, 500)
+      +screen($tablet-xs)
+        +font(18px, 22px, 500)
+
+    &-image
+      flex-shrink: 0
+      width: 60px
+      height: 60px
+      display: flex
+      align-items: center
+      padding-left: 40px
+      +screen($tablet-xs)
+        width: 48px
+        height: 48px
+        padding-left: 20px
