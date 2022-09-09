@@ -16,6 +16,7 @@ section.working
           p.other-page-accord-txt Переоборудование тягачей под ДОПОГ
           p.other-page-accord-txt.other-page-accord-txt_margin Гидрофикация тягачей
           p.other-page-accord-txt.other-page-accord-txt_margin Установка КМУ
+          .working__item-pad
       .working__item.working__item_trade-in
         .working__item-visible
           .working__item-svg
@@ -39,6 +40,7 @@ section.working
               +list-without-anim(traidInListComfort)
             .working__item-switch-content(data-id=2)
               p.section-txt Программа действует как для юридических так и для физических лиц.
+          .working__item-pad
       .working__item.working__item_delivery
         .working__item-visible
           .working__item-svg
@@ -89,3 +91,17 @@ section.working
                 button.working__item-steps-btn.btn(data-action="next") Далее
                 button.working__item-steps-btn.disabled(data-action="prev") Вернуться назад
                 .working__item-steps-policy.disabled Продолжая, вы принимаете нашу #[a(href="javascript:") Политику конфиденциальности]
+          .working__item-pad
+      .working__item.working__item_inshurance
+        .working__item-visible
+          .working__item-svg
+            | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/working/inshurance.svg')}
+          h3.other-page-title Доставка техники
+        .working__item-hidden
+          .working__item-images
+            each el in workingItemImagesFourth
+              img(src=el alt="")
+          p.other-page-accord-txt.other-page-accord-txt_margin Trade-In от КАМАЗ – возможность освободить свое время и средства:
+          p.section-txt Подходим к каждому проекту страхования автопарка индивидуально и составляем программу страхования, опираясь на потребности страхователя, состав, возраст и условия работы автопарка.
+          +list-without-anim(inshuranceList)
+          .working__item-pad

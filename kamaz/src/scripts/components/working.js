@@ -7,6 +7,18 @@ window.addEventListener('load', () => {
     return false;
   } else {
 
+    // items accordion
+    const workingItemsVisible = document.querySelectorAll('.working__item-visible');
+
+    const toggleHidden = (event) => {
+      const target = event.currentTarget;
+      const hidden = target.nextElementSibling;
+      target.classList.toggle('active');
+      !hidden.hasAttribute('style') ? hidden.setAttribute('style', `max-height: ${hidden.scrollHeight}px`) : hidden.removeAttribute('style');
+    }
+
+    workingItemsVisible.forEach(el => el.addEventListener('click', toggleHidden));
+
     // input placeholder
     const inputFields = document.querySelectorAll('.working__item-steps-input input');
     togglePlaceholder(inputFields);
@@ -14,17 +26,26 @@ window.addEventListener('load', () => {
     // image switcher(Hvr Slider)
     new HvrSlider('.working__item-images');
 
+    // recalculation max height
+    const recalculationMaxHeight = (e) => {
+      const hiddenContent = e.currentTarget.closest('.working__item-hidden');
+      hiddenContent.setAttribute('style', `max-height: ${hiddenContent.scrollHeight}px`);
+    }
+
     // trade-in switcher
     const tradeInSwitcherButtons = document.querySelectorAll('.working__item-switch-btn');
     const tradeInSwitcherContentItems = document.querySelectorAll('.working__item-switch-content');
 
     const switchTradeInContent = (event) => {
+      event.stopPropagation();
       const target = event.currentTarget;
       const eventId = target.dataset.id;
       const nextActiveContent = tradeInSwitcherContentItems[eventId];
 
       tradeInSwitcherButtons.forEach(el => el.classList.remove('active'));
       tradeInSwitcherContentItems.forEach(el => el.dataset.id === eventId ? el.classList.add('active') : el.classList.remove('active'));
+
+      recalculationMaxHeight(event);
 
       anime({
         targets: nextActiveContent,
@@ -47,6 +68,7 @@ window.addEventListener('load', () => {
     const deliveryInputs = document.querySelectorAll('.working__item-steps-input input');
 
     const switchDeliveryContent = (event) => {
+      event.stopPropagation();
       const target = event.currentTarget;
       const eventAction = target.dataset.action;
       const currentStepNum = document.querySelector('.working__item-steps-num span.active');
@@ -80,6 +102,8 @@ window.addEventListener('load', () => {
       deliverySteps.forEach(el => el.classList.remove('active'));
       nextStepNum.classList.add('active');
       nextStep.classList.add('active');
+
+      recalculationMaxHeight(event);
 
       anime({
         targets: nextStep,

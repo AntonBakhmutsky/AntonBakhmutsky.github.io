@@ -7,6 +7,21 @@
   &__item
     background-color: #fff
     overflow: hidden
+    border: 2px solid $white-darkest
+    border-bottom: 0
+
+    &:last-child
+      border-bottom: 2px solid $white-darkest
+
+    &-pad
+      padding: 20px 0
+
+    .list
+      +font(18px, 27px)
+      margin: 0 !important
+
+      &__item
+        margin-top: 5px
 
     &_trade-in
       p + .list
@@ -16,12 +31,12 @@
         p
           margin-top: 5px
 
-    .list
-      +font(18px, 27px)
-      margin: 0 !important
+    &_inshurance
+      .list
+        margin-top: 25px !important
 
-      &__item
-        margin-top: 5px
+        &__item
+          margin-top: 15px !important
 
     &-visible
       min-height: 128px
@@ -35,7 +50,7 @@
         color: $gray-light
         transition: color .5s
 
-      &:hover
+      &:hover, &.active
         .other-page-title
           color: $black
 
@@ -52,9 +67,11 @@
       height: 48px
 
     &-hidden
+      overflow: hidden
       box-sizing: border-box
-      padding: 0 40px 40px
+      padding: 0 40px 0
       transition: max-height .4s
+      max-height: 0
 
     &-images
       position: relative
