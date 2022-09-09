@@ -5,10 +5,10 @@ section.cabin
   .container
     .cabin__grid
       each el in cabinGridItems
-        a.cabin__item(href=el.href)
+        .cabin__item
           .cabin__item-desc
-            .cabin__item-title !{el.title}
+            h3.cabin__item-title !{el.title}
             if (el.txt)
-              .cabin__item-txt !{el.txt}
+              p.cabin__item-txt !{el.txt}
           .cabin__item-svg
             | !{el.svg}
