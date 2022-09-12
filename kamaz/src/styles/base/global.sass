@@ -119,9 +119,19 @@ body
     &_catalog, &_product-page
       .offers
         padding-bottom: 100px
+        +screen($tablet)
+          padding-bottom: 60px
 
       .feedback
         padding: 60px 0 160px
+        +screen($tablet)
+          padding: 60px 0
+
+    &_product-page
+      .catalog__form
+        padding: 100px 0 0
+        +screen($tablet)
+          padding: 60px 0 0
 a
   text-decoration: none
   display: block
