@@ -43,6 +43,14 @@
     cursor: pointer
     color: $gray
     transition: background-color .4s, color .4s
+    +screen($tablet)
+      padding: 30px
+    +screen($tablet-xs)
+      padding: 20px
+      +font(20px, 28px, 500)
+      height: 80px
+    +screen(340px)
+      padding: 10px
 
   &__arrow
     transition: transform .4s
@@ -57,6 +65,12 @@
     padding: 12px 123px
     display: flex
     justify-content: space-between
+    +screen($tablet)
+      padding: 12px 60px
+    +screen($tablet-xs)
+      padding: 12px 20px
+    +screen($tablet-xs)
+      padding: 10px
 
     &:nth-child(even)
       background-color: $blue-light
@@ -65,7 +79,11 @@
       +font(18px, 27px)
       box-sizing: border-box
       padding-right: 20px
+      +screen($tablet-xs)
+        +font(16px, 22px)
 
     &-value
       +font(24px, 31px, 500)
       white-space: nowrap
+      +screen($tablet-xs)
+        +font(20px, 26px, 500)
