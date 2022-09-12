@@ -20,14 +20,32 @@
       display: flex
       justify-content: space-between
       +font(18px, 27px)
+      +screen($tablet)
+        padding: 0 10px
+      +screen($tablet-xs)
+        flex-direction: column
+        padding: 10px
 
       &:nth-child(even)
         background-color: $blue-light
 
       span
         flex-shrink: 0
+        +screen($tablet)
+          flex-shrink: 1
 
         &:first-child
           max-width: 540px
           width: 100%
           box-sizing: border-box
+
+        &:nth-child(2)
+          white-space: nowrap
+          padding: 0 40px
+          +screen($tablet-xs)
+            padding: 0
+
+        &:nth-child(2), &:last-child
+          white-space: nowrap
+          margin-top: 10px
+          font-weight: 500

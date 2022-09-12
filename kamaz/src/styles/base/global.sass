@@ -43,6 +43,8 @@ body
       .feedback
         background-color: transparent
         padding: 120px 0
+        +screen($tablet)
+          padding: 60px 0
 
         &__form
           margin-top: 35px
@@ -61,6 +63,10 @@ body
         min-height: 374px
         +screen($mobile)
           height: 500px
+
+        &__title
+          +screen($tablet)
+            text-align: center
 
         .container
           padding-top: 0

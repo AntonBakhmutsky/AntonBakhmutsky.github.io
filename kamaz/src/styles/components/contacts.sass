@@ -4,11 +4,15 @@
 
 .contacts
   padding: 60px 0 90px
+  +screen($tablet)
+    padding: 30px 0 60px
 
   &__item
     visibility: hidden
     opacity: 0
     display: none
+    +screen($tablet-sm)
+      flex-direction: column
 
     &.active
       display: flex
@@ -22,6 +26,9 @@
       flex-shrink: 0
       width: 315px
       height: 352px
+      +screen($tablet-sm)
+        width: 100%
+        height: auto
 
       img
         width: 100%
@@ -36,21 +43,31 @@
       display: flex
       flex-direction: column
       justify-content: center
+      +screen($tablet-sm)
+        padding: 0
 
     &-name
       +font(32px, 38px, 500)
+      +screen($tablet-xs)
+        +font(26px, 32px, 500)
 
     &-position
       +font(18px, 27px)
       margin-top: 15px
+      +screen($tablet-xs)
+        +font(16px, 24px)
 
     &-tel
       +font(22px, 28px, 500)
       margin-top: 15px
+      +screen($tablet-xs)
+        +font(18px, 24px, 500)
 
     &-mail
       +font(18px, 27px, 500)
       margin-top: 15px
+      +screen($tablet-xs)
+        +font(16px, 24px, 600)
 
   &__map
     margin-top: 35px
@@ -59,6 +76,10 @@
       margin-top: 50px
       display: flex
       justify-content: space-between
+      +screen($tablet-xs)
+        flex-direction: column
+        align-items: flex-start
+        margin-top: 30px
 
     &-btn
       height: 55px
@@ -66,6 +87,11 @@
       +font(24px, 31px, 600)
       color: $gray-light
       transition: color .3s
+      +screen($tablet-xs)
+        +font(20px, 26px, 600)
+        width: auto
+        height: 30px
+
 
       &:hover:not(.active)
         color: $black
@@ -80,6 +106,8 @@
       margin-top: 40px
       width: 100%
       height: 485px
+      +screen($tablet-xs)
+        height: 300px
 
       img
         width: 100%
@@ -90,9 +118,15 @@
     &-address
       margin-top: 35px
       +font(24px, 31px, 600)
+      +screen($tablet-xs)
+        +font(20px, 24px, 500)
+        margin-top: 20px
 
     &-hours
       display: flex
       flex-direction: column
       +font(18px, 27px)
       margin-top: 40px
+      +screen($tablet-xs)
+        margin-top: 20px
+        +font(16px, 20px)
