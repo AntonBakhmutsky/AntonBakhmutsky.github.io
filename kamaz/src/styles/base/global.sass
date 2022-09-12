@@ -413,6 +413,9 @@ select
   display: flex
   align-items: center
   padding: 40px 0
+  +screen($tablet)
+    padding: 30px 0 10px
+    flex-wrap: wrap
 
   svg
     &:hover
@@ -426,9 +429,14 @@ select
   &__item
     +font(18px, 27px)
     margin-right: 58px
+    white-space: nowrap
+    +screen($tablet)
+      margin: 5px 10px 5px
 
     &:first-child
       margin-right: 30px
+      +screen($tablet)
+        margin-right: 10px
 
     &:last-child
       margin-right: 0

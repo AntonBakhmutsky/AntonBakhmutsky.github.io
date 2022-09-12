@@ -3,13 +3,21 @@
 
 .product-info
   padding-bottom: 80px
+  +screen($tablet)
+    padding: 30px 0 60px
 
   .container
     display: flex
     justify-content: space-between
+    +screen($tablet)
+      flex-direction: column
+      align-items: center
 
   &__slider
     max-width: 446px
+    +screen($tablet)
+      max-width: none
+      width: 100%
 
     .swiper
       img
@@ -20,11 +28,16 @@
 
       &__main
         margin-top: 50px
+        +screen($tablet)
+          margin-top: 30px
 
         .swiper
           &-slide
             width: 446px
             height: 354px
+            +screen($tablet)
+              width: 100%
+              height: auto
 
           &-pagination
             &-bullet
@@ -46,6 +59,9 @@
             height: 70px
             cursor: pointer
             opacity: .6
+            +screen($tablet)
+              width: auto
+              height: auto
 
             &-thumb-active
               opacity: 1
@@ -56,14 +72,24 @@
     padding: 50px 40px
     border: 2px solid $white-darkest
     background-color: $white-dark
+    +screen($tablet)
+      padding: 20px
+      margin-top: 60px
+      max-width: 100%
 
     &-container
       display: flex
       justify-content: space-between
       align-items: center
+      +screen($tablet)
+        flex-direction: column
+        align-items: flex-start
 
     &-call
       max-width: 284px
+      +screen($tablet)
+        max-width: none
+        margin-top: 30px
 
     &-price
       flex-shrink: 0
@@ -75,6 +101,11 @@
       grid-template-columns: repeat(2, 1fr)
       grid-gap: 46px 20px
       margin: 40px 0 0
+      +screen($tablet)
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr))
+      +screen($tablet-sm)
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr))
+
 
     &-modifications
       margin-top: 60px
