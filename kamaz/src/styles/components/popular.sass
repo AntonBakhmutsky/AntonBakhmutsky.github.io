@@ -47,9 +47,14 @@
 
     &-title
       +font(32px, 38px, 500)
+      +screen($tablet-xs)
+        +font(28px, 34px, 500)
+
 
     &-type
       +font(18px, 28px)
+      +screen($tablet-xs)
+        +font(16px, 24px)
 
     &-status
       +font(18px, 28px, 500)
@@ -80,13 +85,20 @@
         &:first-child
           +font(18px, 27px)
           color: $gray
+          +screen($tablet-xs)
+            +font(15px, 28px)
 
         &:last-child
           +font(24px, 30px, 500)
+          +screen($tablet-xs)
+            +font(20px, 26px, 500)
 
   &__price
     margin-top: 13px
     +font(32px, 38px, 500)
+    +screen($tablet-xs)
+      margin-top: 20px
+      +font(28px, 34px, 500)
 
   &__link
     margin-top: 10px
