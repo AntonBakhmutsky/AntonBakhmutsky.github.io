@@ -6,14 +6,20 @@
 
   &__links
     margin-top: 35px
+    +screen($tablet)
+      margin-top: 20px
 
     &-item
       display: flex
       align-items: center
       color: $white-darkest
+      +screen($tablet-xs)
+        flex-wrap: wrap
 
       &:not(:first-child)
         margin-top: 35px
+        +screen($tablet-xs)
+          margin-top: 25px
 
       &:hover
         span
@@ -47,9 +53,20 @@
         &.leasing__links-item-num
           +font(86px, 94px, 600)
           margin-right: 30px
+          +screen($tablet-sm)
+            +font(64px, 72px, 600)
+          +screen($tablet-xs)
+            +font(44px, 52px, 600)
+            margin-right: 10px
 
         &.leasing__links-item-txt
           +font(32px, 38px, 500)
+          +screen($tablet-sm)
+            +font(26px, 32px, 500)
+            margin-right: 20px
+          +screen($tablet-xs)
+            +font(18px, 24px, 500)
+            margin-right: 0
 
         &.leasing__links-item-rect
           margin-left: auto
@@ -61,4 +78,7 @@
           box-sizing: border-box
           width: 190px
           height: 44px
-
+          flex-shrink: 0
+          +screen($tablet-xs)
+            width: 100%
+            margin: 5px 0 0
