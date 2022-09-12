@@ -22,22 +22,28 @@ class HvrSlider {
         hvrImages.prepend(el);
 
         const hvrImagesArray = hvr.querySelectorAll('img');
-        hvrImagesArray.forEach(() => {
-          hvrSectors.insertAdjacentHTML('afterbegin', '<div class="hvr__sector"></div>');
-          hvrDots.insertAdjacentHTML('afterbegin', '<div class="hvr__dot"></div>');
+        hvrImagesArray.forEach((el, i, arr) => {
+          const hvrDot = document.createElement('div');
+          const hvrSector = document.createElement('div');
+          hvrDot.classList.add('hvr__dot');
+          hvrSector.classList.add('hvr__sector');
+          hvrDot.dataset.id = (arr.length - 1 - i).toString();
+          hvrSector.dataset.id = (arr.length - 1 - i).toString();
+          hvrSectors.insertAdjacentElement('afterbegin', hvrSector);
+          hvrDots.insertAdjacentElement('afterbegin', hvrDot);
         });
         hvrDots.firstChild.classList.add('hvr__dot--active');
         const setActiveEl = function (targetEl) {
           const index = [...hvrSectors.children].indexOf(targetEl);
           hvrImagesArray.forEach((img, idx) => {
-            if (index == idx) {
+            if (index === idx) {
               img.style.display = 'block';
             } else {
               img.style.display = 'none';
             }
           });
           hvr.querySelectorAll('.hvr__dot').forEach((dot, idx) => {
-            if (index == idx) {
+            if (index === idx) {
               dot.classList.add('hvr__dot--active');
             } else {
               dot.classList.remove('hvr__dot--active');

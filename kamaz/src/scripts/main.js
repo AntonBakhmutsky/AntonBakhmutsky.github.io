@@ -5,7 +5,7 @@ require('./components/top-slider');
 require('./components/up-button');
 require('./components/popular');
 require('./components/partners-slider');
-require('./components/offer-slider');
+require('./components/offers-slider');
 require('./components/feedback');
 require('./components/global-animations');
 require('./components/partners');
