@@ -73,7 +73,7 @@ window.addEventListener('load', () => {
       const eventAction = target.dataset.action;
       const currentStepNum = document.querySelector('.working__item-steps-num span.active');
       const currentStepId = Number(currentStepNum.dataset.id);
-      const currentStep = deliveryContentItems[currentStepId];
+      const policy = document.querySelector('.working__item-steps-policy');
       let nextStep, nextStepId, nextStepNum;
 
       if (eventAction === 'next' && currentStepId !== 2) {
@@ -85,7 +85,9 @@ window.addEventListener('load', () => {
       if (nextStepId === 2) {
         deliveryNextButton.setAttribute('type', 'submit');
         deliveryNextButton.removeEventListener('click', switchDeliveryContent);
+        policy.classList.remove('disabled');
       } else if (currentStepId === 2) {
+        policy.classList.add('disabled');
         deliveryNextButton.addEventListener('click', switchDeliveryContent);
       } else if (currentStepId === 0) {
         deliveryPreviousButton.classList.remove('disabled');
