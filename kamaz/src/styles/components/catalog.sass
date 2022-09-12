@@ -8,18 +8,33 @@
   .container
     &:last-child
       display: flex
+      +screen($tablet)
+        flex-direction: column
 
   &__main
     margin-right: 45px
+    +screen($tablet)
+      margin-right: 0
 
   &__aside
     flex-shrink: 0
+    +screen($tablet)
+      margin-top: 60px
+      display: flex
+      justify-content: center
 
   &__form
     &-fields
       display: grid
       grid-template-columns: repeat(3, 1fr)
       grid-gap: 20px 20px
+      box-sizing: border-box
+      padding: 22px 39px 0
+      +screen($tablet-sm)
+        grid-template-columns: auto
+        padding: 20px 20px 0
+      +screen($tablet-xs)
+        padding: 20px 10px 0
 
       .catalog__form-filter
         max-width: none
@@ -62,7 +77,6 @@
 
     &-panel
       box-sizing: border-box
-      padding: 22px 39px
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.1)
       margin-bottom: 24px
 
@@ -90,6 +104,10 @@
       &::placeholder
         color: $black-light
 
+    select
+      &.catalog__form-filter
+        padding-right: 30px
+
     input
       &.catalog__form-filter
         background-image: none
@@ -107,6 +125,11 @@
       display: flex
       flex-wrap: wrap
       margin-top: 10px
+      padding: 0 29px
+      +screen($tablet-sm)
+        padding: 0 20px
+      +screen($tablet-xs)
+        padding: 0
 
       & input + label
         box-sizing: border-box
@@ -116,7 +139,8 @@
         background-color: $white-dark
         border: 1px solid $white-dark
         transition: .3s
-        margin: 10px 20px 10px 0
+        margin: 10px
+        +screen($tablet-sm)
 
       & input:checked + label
         background-color: $blue-light
@@ -127,14 +151,27 @@
       margin-top: 33px
       display: flex
       justify-content: space-between
+      box-sizing: border-box
+      padding: 0 39px 22px
+      +screen($tablet-sm)
+        padding: 0 20px 20px
+      +screen($tablet-xs)
+        margin-top: 30px
+        padding: 0 10px 20px
+        flex-direction: column-reverse
 
     &-submit
       width: auto
       box-sizing: border-box
       padding: 0 60px
+      +screen($tablet-xs)
+        width: 100%
+        padding: 0 10px
 
     .btn-more
       margin: 0
+      +screen($tablet-xs)
+        margin-top: 30px
 
   &__products
     margin-top: 40px
@@ -147,37 +184,52 @@
     border-bottom: 0
     +screen($tablet)
       background-color: #fff
+      border-bottom: 2px solid $white-darkest
+    +screen($tablet-xs)
+      padding: 15px
+
+    &:not(:first-child)
+      +screen($tablet)
+        margin-top: 10px
 
     &:last-child
       border-bottom: 2px solid $white-darkest
 
-    &:hover
-      background-color: $blue-light
-      +screen($tablet)
-        background-color: #fff
-
-    &:active
-      background-color: $white
-      +screen($tablet)
-        background-color: $blue-light
-
     &-container
       display: flex
       align-items: center
+      +screen($tablet-xs)
+        flex-direction: column
+        align-items: flex-start
 
     &-price
       +font(24px, 32px, 500)
+      white-space: nowrap
 
     &-top
       display: flex
       justify-content: space-between
+      +screen($tablet)
+        flex-direction: column
 
     &-title
       +font(32px, 38px, 500)
 
-    &-bottom
+    &-middle
       margin-top: 16px
       display: flex
+      +screen($tablet-xs)
+        flex-direction: column
+
+    &-bottom
+      margin-top: 30px
+      display: flex
+      justify-content: flex-end
+
+      .btn
+        max-width: 280px
+        +screen($tablet)
+          max-width: none
 
     &-images
       width: 210px
@@ -185,6 +237,10 @@
       display: flex
       overflow: hidden
       position: relative
+      +screen($tablet-xs)
+        margin: 0 auto
+        width: 100%
+        height: auto
 
       img
         display: block
@@ -194,6 +250,12 @@
         object-position: center
 
     .characteristic-list
+      +screen($tablet-sm)
+        grid-template-columns: repeat(2, 1fr)
+      +screen($tablet-xs)
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr))
+        margin: 30px 0 0
+
       &__item
         span
           &:first-child
@@ -204,6 +266,9 @@
       &__images
         width: 210px
         height: 160px
+        +screen($tablet-xs)
+          width: 100%
+          height: auto
       &__dot
         width: 100%
         margin: -20px 5px 0 0

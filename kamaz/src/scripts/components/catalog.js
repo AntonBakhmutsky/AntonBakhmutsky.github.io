@@ -10,5 +10,10 @@ window.addEventListener('load', () => {
     // image switcher(Hvr Slider)
     new HvrSlider('.catalog__product-images');
 
+    document.querySelectorAll('.catalog__product .hvr').forEach(el => el.addEventListener('click', (e) => {
+      e.stopPropagation();
+      e.preventDefault();
+    }));
+
   }
 });

@@ -34,7 +34,7 @@ section.catalog
           option(value='default' selected) По умолчанию
       .catalog__products.slide-up
         each el in catalogItems
-          a.catalog__product(href=el.link)
+          .catalog__product
             .catalog__product-top
               h3.catalog__product-title #{el.name}
               .catalog__product-container
@@ -43,11 +43,13 @@ section.catalog
                 else if (el.status === 'order')
                   .product-status-order Под заказ
                 .catalog__product-price #{el.price}
-            .catalog__product-bottom
+            .catalog__product-middle
               .catalog__product-images
                 each image in el.images
                   img(src=image alt="")
               +characteristic-list(el.items)
+            .catalog__product-bottom
+              a.catalog__product-link.btn(href=el.link) Подробнее
       +btn-more('Показать еще')
     aside.catalog__aside.slide-up
       a.catalog__aside-link(href="javascript:")
