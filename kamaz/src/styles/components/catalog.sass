@@ -92,6 +92,8 @@
       max-width: 280px
       width: 100%
       transition: background-color .4s, border-color .4s
+      +screen($tablet-sm)
+        max-width: none
 
       &:hover
         background: $blue-light url(../assets/img/catalog/arrow-black.svg) no-repeat center right 19px

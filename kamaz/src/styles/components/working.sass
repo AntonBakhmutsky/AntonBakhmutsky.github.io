@@ -78,7 +78,7 @@
       box-sizing: border-box
       padding: 0 40px
       transition: max-height .4s
-      //max-height: 0
+      max-height: 0
       +screen($tablet-sm)
         padding: 0 20px
       +screen($tablet-xs)
@@ -102,12 +102,15 @@
       &-buttons
         display: flex
         margin: 30px 0 15px
+        +screen($tablet-xs)
 
       &-btn
         width: 150px
         +font(24px, 31px, 600)
         color: $gray-light
         transition: color .3s
+        +screen($tablet-xs)
+          width: auto
 
         &:hover:not(.active)
           color: $black
@@ -117,6 +120,10 @@
 
         &:not(:last-child)
           margin-right: 60px
+          +screen($tablet-xs)
+            margin-right: 20px
+          +screen(340)
+            margin-right: 15px
 
       &-container
         display: flex
@@ -141,6 +148,11 @@
 
         &.active
           display: block
+
+        .other-page-title
+          +screen($tablet-xs)
+            display: flex
+            flex-direction: column
 
       &-input
         max-width: 280px
