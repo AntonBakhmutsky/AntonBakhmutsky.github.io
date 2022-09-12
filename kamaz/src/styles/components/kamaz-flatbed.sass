@@ -3,31 +3,52 @@
 
 .kamaz-flatbed
   padding: 120px 0
+  +screen($tablet)
+    padding: 60px 0
 
   &__container
     margin-top: 60px
     display: flex
     flex-wrap: wrap
     justify-content: space-between
+    +screen($tablet)
+      margin-top: 40px
+      flex-wrap: nowrap
+      flex-direction: column
 
   &__item
     flex-basis: 50%
     z-index: 2
+    +screen($tablet)
+      flex-basis: auto
+      order: 0
 
     &:nth-child(2)
       max-width: 341px !important
+      +screen($tablet)
+        max-width: none !important
+        order: 1
+        margin-top: 30px
 
       .section-txt
         max-width: 330px
+        +screen($tablet)
+          max-width: none
 
-    &:last-child
+    &:nth-child(3)
       margin-top: 145px
       max-width: 281px
+      +screen($tablet)
+        max-width: none
+        order: 3
+        margin-top: 0
 
     .section
       &-txt
         margin-top: 25px
         max-width: 300px
+        +screen($tablet)
+          margin-top: 10px
 
       &-sub-title
         margin-top: 0
@@ -38,3 +59,9 @@
     position: absolute
     top: 196px
     left: 22%
+    +screen($tablet)
+      margin: 30px 0
+      position: inherit
+      top: auto
+      left: auto
+      order: 2
