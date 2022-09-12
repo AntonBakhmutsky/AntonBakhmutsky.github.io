@@ -49,6 +49,10 @@ body
 
         &__title
           +font(32px, 38px, 500)
+          +screen($tablet)
+            +font(26px, 32px, 500)
+          +screen($tablet-xs)
+            +font(22px, 28px, 500)
 
       .top-slider
         display: flex
@@ -61,7 +65,7 @@ body
         .container
           padding-top: 0
           +screen($tablet)
-            padding-top: 40px
+            padding-top: 110px !important
 
         &__rect
           height: 374px
@@ -489,10 +493,14 @@ select
 .other-page
   &-title
     +font(32px, 38px, 500)
+    +screen($tablet-sm)
+      +font(24px, 32px, 500)
 
   &-sub-title
     +font(24px, 32px, 500)
     margin-top: 35px
+    +screen($tablet-sm)
+      +font(20px, 28px, 500)
 
   &-accord-txt
     +font(22px, 28px, 500)

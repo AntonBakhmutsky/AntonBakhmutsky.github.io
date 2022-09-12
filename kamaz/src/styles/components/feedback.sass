@@ -10,7 +10,9 @@
 
   &_service
     background-color: transparent
-    padding: 35px 0 120px
+    padding: 35px 0 120px !important
+    +screen($tablet-xs)
+      padding: 35px 0 60px !important
 
   .container
     max-width: 1165px
@@ -47,6 +49,8 @@
       max-width: 280px
       width: 100%
       transition: background-color .4s, border-color .4s
+      +screen($tablet)
+        max-width: none
 
       &:hover
         background: $blue-light url(../assets/img/catalog/arrow-black.svg) no-repeat center right 19px
@@ -89,6 +93,8 @@
 
           &-textarea
             grid-row: 2 / 5
+            +screen($tablet)
+              grid-row: 5 /6
 
     &-input, &-textarea
       border: 1px solid $gray
@@ -181,5 +187,5 @@
       max-width: 398px
       margin-top: -100px
       +screen($tablet)
-        margin-top: -15px
+        margin-top: -45px
         max-width: 300px
