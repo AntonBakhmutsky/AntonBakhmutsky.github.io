@@ -19,3 +19,4 @@ require('./components/product-page');
 require('./components/options-accord');
 require('./components/contacts');
 require('./components/working');
+require('./components/contact-form');
