@@ -8,5 +8,5 @@ export default function (inputs) {
   }
 
   inputs.forEach(el => el.addEventListener('input', togglePlaceholder))
-
+  inputs.forEach(el => el.addEventListener('click', togglePlaceholder))
 }
