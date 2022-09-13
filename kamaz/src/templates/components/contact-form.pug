@@ -23,7 +23,7 @@ form.contact-form(action="")
     .contact-form__textarea
       textarea(name="comment" placeholder="Комментарий")
     .contact-form__file
-      input#file.contact-form__file-input(type="file" name="attachment")
+      input#file.contact-form__file-input(type="file" name="attachment" multiple="multiple")
       label.contact-form__file-label(for="file")
         span.contact-form__file-txt Прикрепить файл
   button.contact-form__submit.btn(type="submit" name="submit" id="submit") Отправить

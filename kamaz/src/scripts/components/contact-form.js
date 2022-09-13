@@ -23,6 +23,22 @@ window.addEventListener('load', () => {
 
     contactFormBtn.addEventListener('click', toggleContactForm);
     contactFormClose.addEventListener('click', toggleContactForm);
-  }
 
+    // input file
+    const inputFile = contactForm.querySelector('.contact-form__file input');
+    const inputFileLabel = inputFile.nextElementSibling;
+    const labelValue = inputFileLabel.querySelector('.contact-form__file-txt');
+
+    inputFile.addEventListener('change', function (event) {
+      let countFiles;
+      if (this.files && this.files.length >= 1) {
+        countFiles = this.files.length;
+      }
+      if (countFiles) {
+        labelValue.innerText = 'Выбрано файлов: ' + countFiles;
+      } else {
+        labelValue.innerText = 'Прикрепить файл';
+      }
+    });
+  }
 });
