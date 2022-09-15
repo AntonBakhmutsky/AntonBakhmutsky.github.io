@@ -4,12 +4,12 @@ block title
   | Vue App
 
 block content
-  section#assignment
-    button(@click="increase(5)") Add 5
-    button(@click="increase(1)") Add 1
-    // 1) Connect the buttons and calculate a value (a number)
-    // Show "Not there yet" until you reach a result of exactly 37
-    // Show "Too much!" if the result is greater than 37
-    p Result: {{ result }}
-    p {{ message }}
-    // 2) Watch for changes in "result" and reset the value to 0 after 5 seconds
+  section#user-goals
+    h2 My course goals
+    input(type='text' v-model="goalValue")
+    button(@click="addGoal") Add Goal
+    p(v-show="!goals.length") No goals have been added yet - please start adding some!
+    ul(v-show='goals.length')
+      li(v-for="goal in goals" key="goal" v-text="goal")
+
+
