@@ -1,8 +1,0 @@
-section.yellow
-  .container.container_flex
-    include ../components/colored-block
-    .yellow__image
-      img(src=require("@/assets/img/yellow/bike.png") alt="bike")
-      each el in yellowPopUpPoints
-        +pop-up-point(el)
-    include ../components/desc-block

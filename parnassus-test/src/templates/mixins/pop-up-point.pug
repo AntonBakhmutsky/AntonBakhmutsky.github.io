@@ -1,8 +1,0 @@
-mixin pop-up-point(params)
-  .pop-up-point(class=params.modifier ? `pop-up-point_${params.modifier}` : '')
-    .pop-up-point__item
-      .pop-up-point__modal
-        .pop-up-point__modal-image
-          img(src=params.image alt="")
-        .pop-up-point__modal-title #{params.title}
-        .pop-up-point__modal-text #{params.description}
