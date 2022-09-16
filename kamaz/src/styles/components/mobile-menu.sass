@@ -8,11 +8,11 @@
     display: flex
     flex-direction: column
     position: fixed
-    left: 0
-    top: -120vh
+    left: -120vw
+    top: 0
     right: 0
     bottom: 0
-    width: 100vw
+    width: 81.25%
     height: 100vh
     z-index: 50
     background-color: $white
@@ -53,32 +53,24 @@
 
   &__links
     width: 100%
-    margin-top: 13px
+    margin-top: 15px
     display: flex
 
-    &-left, &-right
-      a
-        margin-top: 30px
-
-    &-right
-      flex-basis: 43%
-      text-align: right
-      +font(14px, 22px)
-
-    &-left
-      flex-basis: 57%
-      +font(18px, 28px, 500)
+    &-list
+      &-item
+        &:not(:first-child)
+          margin-top: 30px
 
   &__close
-    width: 100%
-    align-self: flex-end
+    position: absolute
+    top: 50%
+    right: 15px
+    transform: translateY(-50%) rotate(-90deg)
+    width: 20px
+    height: 20px
     display: flex
     justify-content: center
-    margin-top: auto
+    align-items: center
 
-    &-btn
-      width: 40px
-      height: 40px
-      display: flex
-      justify-content: center
-      align-items: flex-end
+    img
+      width: 100%

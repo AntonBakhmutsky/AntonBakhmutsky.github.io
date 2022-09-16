@@ -7,16 +7,9 @@
   form.mobile-menu__search
     input(type="text" name="" placeholder="Поиск по сайту")
   .mobile-menu__links
-    .mobile-menu__links-left
-      ul.mobile-menu__links-list
-        each el in leftMenu
-          li.mobile-menu__links-list-item
-            a(href=el.href) #{el.txt}
-    .mobile-menu__links-right
-      ul.mobile-menu__links-list
-        each el in rightMenu
-          li.mobile-menu__links-list-item
-            a(href=el.href) #{el.txt}
+    ul.mobile-menu__links-list
+      each el in rightMenu
+        li.mobile-menu__links-list-item
+          a(href=el.href) #{el.txt}
   .mobile-menu__close
-    .mobile-menu__close-btn
-      img(src=require('@/assets/img/header/arrow-up.svg') alt="")
+    img(src=require('@/assets/img/header/arrow-up.svg') alt="")

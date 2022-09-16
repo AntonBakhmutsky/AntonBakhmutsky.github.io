@@ -27,7 +27,7 @@ window.addEventListener('load', () => {
     if (window.scrollY > scrollPosition && winWidth > 1024  ) {
       scrollPosition = window.scrollY;
       if (!header.hasAttribute('style')) {
-        header.style.transform = 'translateY(-25px)';
+        header.style.transform = 'translateY(-90px)';
         kamazList.add('active');
       }
 
