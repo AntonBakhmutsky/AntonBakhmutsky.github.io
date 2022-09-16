@@ -8,8 +8,8 @@ block content
     h2 My course goals
     input(type='text' v-model="goalValue")
     button(@click="addGoal") Add Goal
-    p(v-show="!goals.length") No goals have been added yet - please start adding some!
-    ul(v-show='goals.length')
-      li(v-for="goal in goals" key="goal" v-text="goal")
+    p(v-if="!goals.length") No goals have been added yet - please start adding some!
+    ul(v-else)
+      li(v-for="(goal, index) in goals") {{ goal }} - {{ index }}
 
 
