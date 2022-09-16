@@ -1,24 +1,32 @@
-window.addEventListener('load', () => {
+import anime from 'animejs';
 
+window.addEventListener('load', () => {
 
   if (!document.querySelector('.contacts')) {
     return false;
   } else {
 
     // switch content
-    const contactsItems = document.querySelectorAll('.contacts__item');
-    const map = document.querySelectorAll('.contacts__map');
+    const switchItems = document.querySelectorAll('.contacts__switch-content-item');
     const mapButtons = document.querySelectorAll('.contacts__map-btn');
 
     const switchContent = (event) => {
       const target = event.currentTarget;
       const eventId = target.dataset.id;
+      const nextActiveContent = switchItems[eventId];
 
       mapButtons.forEach(el => el.classList.remove('active'));
       target.classList.add('active');
-      contactsItems.forEach(el => el.dataset.id === eventId ? el.classList.add('active') : el.classList.remove('active'));
+      switchItems.forEach(el => el.dataset.id === eventId ? el.classList.add('active') : el.classList.remove('active'));
 
-      window.scrollTo(0, 0);
+      anime({
+        targets: nextActiveContent,
+        opacity: [0, 1],
+        translateX: [-200, 0],
+        duration: 800,
+        easing: 'easeOutQuart'
+      });
+
     }
 
     mapButtons.forEach(el => el.addEventListener('click', switchContent));

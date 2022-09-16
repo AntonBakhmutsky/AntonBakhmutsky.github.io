@@ -1,8 +1,5 @@
 mixin contacts-item(params)
-  .contacts__item.slide-up(
-    data-id=params.dataId
-    class=params.active ? 'active' : ''
-  )
+  .contacts__item.slide-up
     .contacts__item-image
       img(src=params.image alt="")
     .contacts__item-info
