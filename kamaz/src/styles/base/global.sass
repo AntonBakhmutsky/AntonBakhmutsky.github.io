@@ -536,7 +536,7 @@ select
   position: relative
   height: 44px
 
-  input
+  input, textarea
     padding: 11px 13px
 
   span
@@ -553,7 +553,8 @@ select
       transition: 0s
 
     &.active
-      margin-top: -35px
+      top: -20px
+      transform: none
       left: 0
       +font(12px, 12px)
       +screen($tablet)

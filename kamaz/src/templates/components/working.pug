@@ -52,27 +52,35 @@ section.working
               img(src=el alt="")
           p.section-txt Осуществляем доставку любой техники по всей территории Российской Федерации. #[br] Для получении информации об ориентировочной стоимости услуги воспользуйтесь калькулятором.
           .working__item-steps
-            .working__item-steps-num
-              span.active(data-id=0) Шаг 1
-              span(data-id=1) Шаг 2
-              span(data-id=2) Шаг 3
             form.working__item-steps-form(action="")
               .working__item-steps-content.active(data-id=0)
                 h3.other-page-title Расчет стоимости
+                .working__item-steps-num
+                  span.active(data-id=0) Шаг 1
+                  span(data-id=1) Шаг 2
+                  span(data-id=2) Шаг 3
                 .working__item-steps-input.form-input
-                  input#startAdress(type='text' name='startAdress' required autocomplete='off')
+                  textarea#startAdress(name='startAdress' required autocomplete='off')
                   span Введите адрес доставки
               .working__item-steps-content(data-id=1)
-                h3.other-page-title Выберите дилерский центр
+                h3.other-page-title Выберите дилерский центр, либо введите адрес, откуда нужно забрать автомобиль
+                .working__item-steps-num
+                  span(data-id=0) Шаг 1
+                  span(data-id=1) Шаг 2
+                  span(data-id=2) Шаг 3
                 .working__item-steps-radio
                   input#bor.bounce(type='radio' name='sotrans-office' value='30.651757,59.667685')
                   label(for='bor' title='Вкладка 1') Красный бор
                   input#parnas(type='radio' name='sotrans-office' value='30.375390,60.055807')
                   label(for='parnas' title='Вкладка 2') Парнас
                 .working__item-steps-input.form-input
-                  input#endAddress(type='text' name='office' autocomplete='off')
+                  textarea#endAddress(name='office' autocomplete='off')
                   span Или введите свой адрес
               .working__item-steps-content(data-id=2)
+                .working__item-steps-num
+                  span.active(data-id=0) Шаг 1
+                  span(data-id=1) Шаг 2
+                  span(data-id=2) Шаг 3
                 h3.other-page-title Примерная стоимость: ~ #[span#deliveryResponse 9 956 рублей]
                 .working__item-steps-map
                   img(src=require('@/assets/img/working/map.jpg') alt="")

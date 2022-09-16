@@ -19,10 +19,6 @@ window.addEventListener('load', () => {
 
     workingItemsVisible.forEach(el => el.addEventListener('click', toggleHidden));
 
-    // input placeholder
-    const inputFields = document.querySelectorAll('.working__item-steps-input input');
-    togglePlaceholder(inputFields);
-
     // image switcher(Hvr Slider)
     new HvrSlider('.working__item-images');
 
@@ -119,5 +115,20 @@ window.addEventListener('load', () => {
 
     deliveryNextButton.addEventListener('click', switchDeliveryContent);
     deliveryPreviousButton.addEventListener('click', switchDeliveryContent);
+
+    // input placeholder
+    const inputFields = document.querySelectorAll('.working__item-steps-input input');
+    const textareaFields = document.querySelectorAll('.working__item-steps-input textarea');
+    togglePlaceholder(inputFields);
+    togglePlaceholder(textareaFields);
+
+    // grow textarea
+    textareaFields.forEach(el => {
+      el.addEventListener('scroll', function (event) {
+        console.log(this.scrollHeight)
+        this.closest('.form-input').style.height = `${this.scrollHeight}px`;
+        recalculationMaxHeight(event);
+      });
+    });
   }
 });

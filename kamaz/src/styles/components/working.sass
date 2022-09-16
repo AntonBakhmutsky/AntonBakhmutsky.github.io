@@ -10,6 +10,10 @@
     border: 2px solid $white-darkest
     border-bottom: 0
 
+    &:nth-child(3)
+      .working__item-hidden
+        max-height: none
+
     &:last-child
       border-bottom: 2px solid $white-darkest
 
@@ -143,8 +147,14 @@
       margin-top: 30px
 
       &-content
-        margin-top: 10px
         display: none
+
+        h3
+          margin-bottom: 30px
+
+        &[data-id="2"]
+          h3
+            margin: 10px 0
 
         &.active
           display: block
@@ -160,6 +170,8 @@
         width: 100%
         +screen($tablet-sm)
           max-width: none
+
+        textarea
 
       &-num
         display: flex
