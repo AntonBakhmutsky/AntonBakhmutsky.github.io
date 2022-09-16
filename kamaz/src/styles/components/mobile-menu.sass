@@ -14,11 +14,11 @@
     bottom: 0
     width: 81.25%
     height: 100vh
-    z-index: 50
+    z-index: 1001
     background-color: $white
     padding: 50px
     box-sizing: border-box
-    transition: top .5s
+    transition: left .5s
   +screen($tablet-sm)
     padding: 30px
   +screen($tablet-xs)
@@ -26,7 +26,7 @@
 
   &.active
     transition: .5s
-    top: 0
+    left: 0
 
   &__head
     width: 100%
@@ -60,17 +60,3 @@
       &-item
         &:not(:first-child)
           margin-top: 30px
-
-  &__close
-    position: absolute
-    top: 50%
-    right: 15px
-    transform: translateY(-50%) rotate(-90deg)
-    width: 20px
-    height: 20px
-    display: flex
-    justify-content: center
-    align-items: center
-
-    img
-      width: 100%

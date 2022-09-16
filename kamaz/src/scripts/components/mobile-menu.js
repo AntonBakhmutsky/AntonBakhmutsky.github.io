@@ -1,9 +1,8 @@
 window.addEventListener('load', () => {
 
-  // search
+  // mobile menu
   const mobileMenu = document.querySelector('.mobile-menu');
   const mobileMenuBtn = document.querySelector('.header__mobile-btn');
-  const mobileMenuClose = document.querySelector('.mobile-menu__close');
 
   const toggleMenu = () => {
     mobileMenu.classList.toggle('active');
@@ -11,6 +10,42 @@ window.addEventListener('load', () => {
   }
 
   mobileMenuBtn.addEventListener('click', toggleMenu);
-  mobileMenuClose.addEventListener('click', toggleMenu);
 
+  // swipe event
+  document.addEventListener('touchstart', handleTouchStart, false);
+  document.addEventListener('touchmove', handleTouchMove, false);
+
+  let xDown = null;
+  let yDown = null;
+
+  function handleTouchStart(evt) {
+    xDown = evt.touches[0].clientX;
+    yDown = evt.touches[0].clientY;
+  }
+
+  function handleTouchMove(evt) {
+    if (!xDown || !yDown) {
+      return;
+    }
+
+    let xUp = evt.touches[0].clientX;
+    let yUp = evt.touches[0].clientY;
+
+    let xDiff = xDown - xUp;
+    let yDiff = yDown - yUp;
+    if (Math.abs(xDiff) > Math.abs(yDiff)) {
+      console.log(xDiff)
+      if (xDiff > 0) {
+        // left swipe
+        if (mobileMenu.classList.contains('active')) {
+          mobileMenu.classList.remove('active');
+        }
+      } else {
+        // right swipe
+      }
+    }
+
+    xDown = null;
+    yDown = null;
+  }
 });
