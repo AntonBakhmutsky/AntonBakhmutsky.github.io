@@ -1,8 +1,9 @@
 header.header
   .header__desktop
     .header__top
-      .container.container_header-menu
-        +header-menu(headerTopMenu)
+      .header__top-container
+        .container.container_header-menu
+          +header-menu(headerTopMenu)
     .header__middle
       a.header__logo.header__logo_sotrans(href="https://sotrans.ru/")
         img(src=require('@/assets/img/header/logo-sotr.svg') alt="")

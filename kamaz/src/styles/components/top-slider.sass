@@ -4,22 +4,22 @@
 .top-slider
   min-height: 626px
   position: relative
-  margin-top: -60px
   color: $white
   overflow: hidden
+  display: flex
+  align-items: center
   +screen($tablet)
-    margin-top: 0
     height: 576px
 
   .container
     z-index: 2
-    padding: 121px 0 0 175px
+    padding: 0 0 0 175px
     +screen($desktop-sm)
-      padding: 121px 100px 0
+      padding: 0 100px 0
     +screen($tablet)
-      padding: 35px 30px
+      padding: 60px 30px
     +screen($tablet-sm)
-      padding: 35px 10px
+      padding: 60px 10px
 
   &__title
     padding: 0
@@ -27,15 +27,13 @@
     +screen($desktop-sm)
       +font(66px, 75px, 600)
     +screen($tablet)
+      text-align: center
       +font(48px, 52px, 600)
 
     span
       display: block
       +screen($tablet)
         display: inline-block
-
-        &:first-child:not(:last-child)
-          margin-right: 15px
 
   &__text
     +font(24px, 31px, 500)

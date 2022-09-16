@@ -16,9 +16,17 @@
   &__top
     background-color: $blue-light
     +font(14px, 22px)
-    height: 25px
+    height: 90px
     z-index: 4
     position: relative
+    display: flex
+    align-items: center
+
+    &-container
+      width: 100%
+      height: 48px
+      background-color: $white
+      box-shadow: 0 4px 8px #9EBADA
 
     .header__menu
       a + a
@@ -57,7 +65,7 @@
     flex-direction: column-reverse
     justify-content: center
     box-sizing: border-box
-    padding: 15px 0
+    padding: 23px 0
     box-shadow: 0 0 15px rgba(0, 0, 0, .1)
     +screen($desktop-m)
       +font(16px, 26px, 500)
@@ -84,7 +92,7 @@
 
     &_sotrans
       left: 45px
-      top: 19px
+      top: 25px
       width: 150px
       height: 26px
       +screen($desktop-m)
