@@ -1,0 +1,6 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+@font-face {
+  @include ff('FuturaPT', 'FuturaPT-Light', 300);
+}
