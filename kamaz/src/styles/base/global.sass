@@ -132,6 +132,7 @@ body
         padding: 100px 0 0
         +screen($tablet)
           padding: 60px 0 0
+
 a
   text-decoration: none
   display: block
@@ -412,7 +413,6 @@ textarea
     +screen($tablet)
       margin-top: 15px
 
-
     &:before
       content: ''
       width: 10px
@@ -430,8 +430,8 @@ select
   display: flex
   align-items: center
   padding: 40px 0
-  +screen($tablet)
-    padding: 30px 0 10px
+  +screen(1100)
+    padding: 50px 0 10px
     flex-wrap: wrap
 
   svg
@@ -447,12 +447,12 @@ select
     +font(18px, 27px)
     margin-right: 58px
     white-space: nowrap
-    +screen($tablet)
+    +screen(1100)
       margin: 5px
 
     &:first-child
       margin-right: 30px
-      +screen($tablet)
+      +screen(1100)
         margin-right: 10px
 
     &:last-child

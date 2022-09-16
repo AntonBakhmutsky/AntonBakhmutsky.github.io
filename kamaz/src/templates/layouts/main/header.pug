@@ -21,5 +21,5 @@ header.header
         img(src=require('@/assets/img/header/logo-sotr-mobile.svg') alt="")
       a.header__mobile-logo.header__mobile-logo_kamaz(href="https://kamaz.sotrans.ru/")
         img(src=require('@/assets/img/header/logo-kamaz-mobile.svg') alt="")
-      button.header__mobile-btn
-        img(src=require('@/assets/img/header/arrow-down.svg') alt="")
+      button.header__mobile-btn(class=menuBtnColor ? `header__mobile-btn_${menuBtnColor}`:'')
+        | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/header/menu.svg')}
