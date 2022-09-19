@@ -9,10 +9,15 @@ window.addEventListener('load', () => {
 
     // items accordion
     const workingItemsVisible = document.querySelectorAll('.working__item-visible');
+    const workingItemsHidden = document.querySelectorAll('.working__item-hidden');
 
     const toggleHidden = (event) => {
       const target = event.currentTarget;
       const hidden = target.nextElementSibling;
+      if (!target.classList.contains('active')) {
+        workingItemsHidden.forEach(el => el.removeAttribute('style'));
+        workingItemsVisible.forEach(el => el.classList.remove('active'));
+      }
       target.classList.toggle('active');
       !hidden.hasAttribute('style') ? hidden.setAttribute('style', `max-height: ${hidden.scrollHeight}px`) : hidden.removeAttribute('style');
     }
@@ -51,7 +56,7 @@ window.addEventListener('load', () => {
         easing: 'easeOutQuart'
       });
 
-      target.classList.add('active')
+      target.classList.add('active');
     }
 
     tradeInSwitcherButtons.forEach(el => el.addEventListener('click', switchTradeInContent));
@@ -62,6 +67,7 @@ window.addEventListener('load', () => {
     const deliveryNextButton = document.querySelector('.working__item-steps-btn.btn');
     const deliveryPreviousButton = document.querySelector('.working__item-steps-btn:not(.btn)');
     const deliveryInputs = document.querySelectorAll('.working__item-steps-input input');
+    const deliveryTextarea = document.querySelectorAll('.working__item-steps-input textarea');
 
     const switchDeliveryContent = (event) => {
       event.stopPropagation();
@@ -95,7 +101,9 @@ window.addEventListener('load', () => {
       nextStepNum = document.querySelector(`.working__item-steps-num span[data-id="${nextStepId.toString()}"]`);
 
       deliveryInputs.forEach(el => el.removeAttribute('required'));
+      deliveryTextarea.forEach(el => el.removeAttribute('required'));
       nextStep.querySelectorAll('input:not([type="radio"])').forEach(el => el.required = true);
+      nextStep.querySelectorAll('textarea').forEach(el => el.required = true);
       deliveryContentItems.forEach(el => el.classList.remove('active'));
       deliverySteps.forEach(el => el.classList.remove('active'));
       nextStepNum.classList.add('active');
@@ -124,9 +132,10 @@ window.addEventListener('load', () => {
 
     // grow textarea
     textareaFields.forEach(el => {
-      el.addEventListener('scroll', function (event) {
-        console.log(this.scrollHeight)
-        this.closest('.form-input').style.height = `${this.scrollHeight}px`;
+      el.addEventListener('input', function (event) {
+        const fieldContainer = this.closest('.form-input');
+        fieldContainer.style.height = 0;
+        fieldContainer.style.height = `${this.scrollHeight}px`;
         recalculationMaxHeight(event);
       });
     });
