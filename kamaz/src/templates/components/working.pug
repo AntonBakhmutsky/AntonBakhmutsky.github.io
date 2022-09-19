@@ -52,8 +52,8 @@ section.working
               img(src=el alt="")
           p.section-txt Осуществляем доставку любой техники по всей территории Российской Федерации. #[br] Для получении информации об ориентировочной стоимости услуги воспользуйтесь калькулятором.
           .working__item-steps
-            form.working__item-steps-form(action="")
-              .working__item-steps-content.active(data-id=0)
+            .working__item-steps-form(action="")
+              form.working__item-steps-content.active(data-id=0)
                 h3.other-page-title Расчет стоимости
                 .working__item-steps-num
                   span.active(data-id=0) Шаг 1
@@ -62,7 +62,9 @@ section.working
                 .working__item-steps-input.form-input
                   textarea#startAdress(name='startAdress' required autocomplete='off')
                   span Введите адрес доставки
-              .working__item-steps-content(data-id=1)
+                .working__item-steps-buttons
+                  button.working__item-steps-btn.btn(data-action="next" type="submit") Далее
+              form.working__item-steps-content(data-id=1)
                 h3.other-page-title Выберите дилерский центр, либо введите адрес, откуда нужно забрать автомобиль
                 .working__item-steps-num
                   span(data-id=0) Шаг 1
@@ -76,7 +78,10 @@ section.working
                 .working__item-steps-input.form-input
                   textarea#endAddress(name='office' autocomplete='off')
                   span Или введите свой адрес
-              .working__item-steps-content(data-id=2)
+                .working__item-steps-buttons
+                  button.working__item-steps-btn.btn(data-action="next" type="submit") Далее
+                  button.working__item-steps-btn(data-action="prev") Вернуться назад
+              form.working__item-steps-content(data-id=2)
                 .working__item-steps-num
                   span.active(data-id=0) Шаг 1
                   span(data-id=1) Шаг 2
@@ -95,10 +100,10 @@ section.working
                   .working__item-steps-input.form-input
                     input(type="email" name="mail" autocomplete='off')
                     span E-mail для связи
-              .working__item-steps-buttons
-                button.working__item-steps-btn.btn(data-action="next") Далее
-                button.working__item-steps-btn.disabled(data-action="prev") Вернуться назад
-                .working__item-steps-policy.disabled Продолжая, вы принимаете нашу #[a(href="javascript:") Политику конфиденциальности]
+                .working__item-steps-buttons
+                  button.working__item-steps-btn.btn(data-action="next" type="submit") Далее
+                  button.working__item-steps-btn(data-action="prev") Вернуться назад
+                .working__item-steps-policy Продолжая, вы принимаете нашу #[a(href="javascript:") Политику конфиденциальности]
           .working__item-pad
       .working__item.working__item_inshurance
         .working__item-visible

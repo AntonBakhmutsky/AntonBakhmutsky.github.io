@@ -64,19 +64,19 @@ window.addEventListener('load', () => {
     // delivery steps
     const deliveryContentItems = document.querySelectorAll('.working__item-steps-content');
     const deliverySteps = document.querySelectorAll('.working__item-steps-num span');
-    const deliveryNextButton = document.querySelector('.working__item-steps-btn.btn');
-    const deliveryPreviousButton = document.querySelector('.working__item-steps-btn:not(.btn)');
+    const deliveryNextButtons = document.querySelectorAll('.working__item-steps-btn.btn');
+    const deliveryPreviousButtons = document.querySelectorAll('.working__item-steps-btn:not(.btn)');
     const deliveryInputs = document.querySelectorAll('.working__item-steps-input input');
     const deliveryTextarea = document.querySelectorAll('.working__item-steps-input textarea');
 
     const switchDeliveryContent = (event) => {
       event.stopPropagation();
+      event.preventDefault();
       const target = event.currentTarget;
       const eventAction = target.dataset.action;
       const currentStepNum = document.querySelector('.working__item-steps-num span.active');
       const currentStepId = Number(currentStepNum.dataset.id);
-      const policy = document.querySelector('.working__item-steps-policy');
-      let nextStep, nextStepId, nextStepNum;
+      let nextStep, nextStepId, nextStepNums;
 
       if (eventAction === 'next' && currentStepId !== 2) {
         nextStepId = currentStepId + 1;
@@ -85,20 +85,13 @@ window.addEventListener('load', () => {
       }
 
       if (nextStepId === 2) {
-        deliveryNextButton.setAttribute('type', 'submit');
-        deliveryNextButton.removeEventListener('click', switchDeliveryContent);
-        policy.classList.remove('disabled');
+        deliveryNextButtons.forEach(el => el.removeEventListener('click', switchDeliveryContent));
       } else if (currentStepId === 2) {
-        policy.classList.add('disabled');
-        deliveryNextButton.addEventListener('click', switchDeliveryContent);
-      } else if (currentStepId === 0) {
-        deliveryPreviousButton.classList.remove('disabled');
-      } else if (nextStepId === 0) {
-        deliveryPreviousButton.classList.add('disabled');
+        deliveryNextButtons.forEach(el => el.addEventListener('click', switchDeliveryContent));
       }
 
       nextStep = document.querySelector(`.working__item-steps-content[data-id="${nextStepId.toString()}"]`);
-      nextStepNum = document.querySelector(`.working__item-steps-num span[data-id="${nextStepId.toString()}"]`);
+      nextStepNums = document.querySelectorAll(`.working__item-steps-num span[data-id="${nextStepId.toString()}"]`);
 
       deliveryInputs.forEach(el => el.removeAttribute('required'));
       deliveryTextarea.forEach(el => el.removeAttribute('required'));
@@ -106,7 +99,7 @@ window.addEventListener('load', () => {
       nextStep.querySelectorAll('textarea').forEach(el => el.required = true);
       deliveryContentItems.forEach(el => el.classList.remove('active'));
       deliverySteps.forEach(el => el.classList.remove('active'));
-      nextStepNum.classList.add('active');
+      nextStepNums.forEach(el => el.classList.add('active'));
       nextStep.classList.add('active');
 
       recalculationMaxHeight(event);
@@ -121,8 +114,8 @@ window.addEventListener('load', () => {
 
     }
 
-    deliveryNextButton.addEventListener('click', switchDeliveryContent);
-    deliveryPreviousButton.addEventListener('click', switchDeliveryContent);
+    deliveryNextButtons.forEach(el =>el.addEventListener('click', switchDeliveryContent));
+    deliveryPreviousButtons.forEach(el => el.addEventListener('click', switchDeliveryContent));
 
     // input placeholder
     const inputFields = document.querySelectorAll('.working__item-steps-input input');
