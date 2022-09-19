@@ -3,29 +3,29 @@
 **Installation**
 
 ```
-yarn
+npm i
 ```
 
 **Start Dev Server**
 
 ```
-yarn serve
+npm run serve
 ```
 
 **Build Prod Version**
 
 ```
-yarn prod
+npm run prod
 ```
 
 **Build Dev Version**
 
 ```
-yarn dev
+npm run dev
 ```
 
 **Run Watcher**
 
 ```
-yarn watch
+npm run watch
 ```
