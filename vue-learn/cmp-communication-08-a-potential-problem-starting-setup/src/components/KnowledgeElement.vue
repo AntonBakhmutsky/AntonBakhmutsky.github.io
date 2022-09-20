@@ -1,9 +1,8 @@
-<template>
-  <li>
-    <h3>{{ topicName }}</h3>
-    <p>{{ description }}</p>
-    <button @click="$emit('select-topic', id)">Learn More</button>
-  </li>
+<template lang="pug">
+li
+  h3 {{ topicName }}
+  p {{ description }}
+  button(@click="$emit('select-topic', id)") Learn More
 </template>
 
 <script>

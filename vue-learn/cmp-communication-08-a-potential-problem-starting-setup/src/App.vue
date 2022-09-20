@@ -1,11 +1,10 @@
-<template>
-  <div>
-    <active-element
-      :topic-title="activeTopic && activeTopic.title"
-      :text="activeTopic && activeTopic.fullText"
-    ></active-element>
-    <knowledge-base :topics="topics" @select-topic="activateTopic"></knowledge-base>
-  </div>
+<template lang="pug">
+div
+  active-element(
+    :topic-title="activeTopic && activeTopic.title"
+    :text="activeTopic && activeTopic.fullText"
+  )
+  knowledge-base(:topics="topics" @select-topic="activateTopic")
 </template>
 
 <script>

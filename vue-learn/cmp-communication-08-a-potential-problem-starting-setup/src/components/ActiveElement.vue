@@ -1,8 +1,7 @@
-<template>
-  <section>
-    <h2>{{ topicTitle }}</h2>
-    <p>{{ text }}</p>
-  </section>
+<template lang="pug">
+section
+  h2 {{ topicTitle }}
+  p {{ text }}
 </template>
 
 <script>
