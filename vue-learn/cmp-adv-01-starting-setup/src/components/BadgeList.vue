@@ -1,16 +1,19 @@
 <template lang="pug">
 
 section
-  h2 Available Badges
-  ul
-    li
-      base-badge(type="admin" caption="ADMIN")
-    li
-      base-badge(type="author" caption="AUTHOR")
+  base-card
+    template(v-slot:header)
+      h2 Available Badges
+    template(v-slot:default)
+      ul
+        li
+          base-badge(type="admin" caption="ADMIN")
+        li
+          base-badge(type="author" caption="AUTHOR")
 
 </template>
 
-<style>
+<style scoped>
 section h2 {
   margin: 0.5rem 0;
   color: #3a3a3a;
