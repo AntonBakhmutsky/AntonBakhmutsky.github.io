@@ -11,12 +11,10 @@ export default {
     userName: {
       type: String,
       required: false,
-      default: 'Anton'
     },
     userAge: {
-      type: String,
+      type: Number,
       required: false,
-      default: '36'
     }
   }
 }

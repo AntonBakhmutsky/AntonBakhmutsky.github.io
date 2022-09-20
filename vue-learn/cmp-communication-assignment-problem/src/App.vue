@@ -3,7 +3,7 @@
 header
   h1 Vue assignment
 main
-  active-user(:user-name="name" :user-age="age")
+  active-user(:user-name="user.name" :user-age="user.age")
   user-data(@set-name-and-age="getNameAndAge")
 
 </template>
@@ -12,14 +12,20 @@ main
 export default {
   data() {
     return {
-      name: 'Anton',
-      age: '36'
+      user: {
+        name: 'Anton',
+        age: 36
+      }
     }
   },
   methods: {
     getNameAndAge(userName, userAge) {
-      this.name = userName;
-      this.age = userAge;
+      if (userName && userAge) {
+        this.user.name = userName;
+        this.user.age = Number(userAge);
+      } else {
+        alert('Full all fields!')
+      }
     }
   }
 }

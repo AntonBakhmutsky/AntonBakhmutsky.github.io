@@ -3,10 +3,12 @@
 section.user-data
   div
     label(for="name") User name:
-    input#name(type="text" v-model="enteredName" @input="setNameAndAge")
+    input#name(type="text" v-model="enteredName")
   div
     label(for="age") User age:
-    input#age(type="text" v-model="enteredAge" @input="setNameAndAge")
+    input#age(type="text" v-model="enteredAge")
+  div
+    button(@click="setNameAndAge") Set Name And Age
 </template>
 
 <script>
@@ -19,7 +21,7 @@ export default {
   },
   methods: {
     setNameAndAge() {
-      this.$emit('set-name-and-age', this.enteredName, this.enteredAge)
+      this.$emit('set-name-and-age', this.enteredName, this.enteredAge);
     }
   }
 }
