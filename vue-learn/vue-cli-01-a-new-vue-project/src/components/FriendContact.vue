@@ -4,7 +4,7 @@ li
   h2 {{ name }} {{ isFavorite ? '(Favorite)' : '' }}
   button(@click="toggleDetails") Show Details
   button(@click="toggleFavorite") Toggle Favorite
-  button(@click="deleteContact") Delete contact
+  button(@click="$emit('delete-contact', this.id)") Delete contact
   ul(v-if="detailsAreVisible")
     li #[strong Phone: {{ phoneNumber }}]
     li #[strong Email: {{ emailAddress }}]
@@ -37,17 +37,7 @@ export default {
       default: false
     }
   },
-  // emits: ['toggle-favorite'],
-  emits: {
-    'toggle-favorite': function(id) {
-      if (id) {
-        return true;
-      } else {
-        console.log('Warning: Friend id is not exist');
-        return false;
-      }
-    }
-  },
+  emits: ['toggle-favorite', 'delete-contact'],
   data() {
     return {
       detailsAreVisible: false
@@ -59,9 +49,6 @@ export default {
     },
     toggleFavorite() {
       this.$emit('toggle-favorite', this.id);
-    },
-    deleteContact() {
-      this.$emit('delete-contact', this.id)
     }
   },
 }
