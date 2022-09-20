@@ -1,13 +1,14 @@
-<template>
-  <div>
-    <the-header></the-header>
-    <badge-list></badge-list>
-    <user-info
-      :full-name="activeUser.name"
-      :info-text="activeUser.description"
-      :role="activeUser.role"
-    ></user-info>
-  </div>
+<template lang="pug">
+
+div
+  the-header
+  badge-list
+  user-info(
+    :full-name="activeUser.name"
+    :info-text="activeUser.description"
+    :role="activeUser.role"
+  )
+
 </template>
 
 <script>

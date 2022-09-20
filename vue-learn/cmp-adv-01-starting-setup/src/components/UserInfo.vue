@@ -1,11 +1,11 @@
-<template>
-  <section>
-    <div>
-      <h3>{{ fullName }}</h3>
-      <base-badge :type="role" :caption="role.toUpperCase()"></base-badge>
-    </div>
-    <p>{{ infoText }}</p>
-  </section>
+<template lang="pug">
+
+section
+  div
+    h3 {{ fullName }}
+    base-badge(:type="role" :caption="role.toUpperCase()")
+  p {{ infoText }}
+
 </template>
 
 <script>
