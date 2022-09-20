@@ -3,8 +3,18 @@
 section
   header
     h1 My Friends
+  new-friend(@pass-new-friend="addNewFriend")
   ul
-    friend-contact(v-for="friend in friends" :key="friend.id" :name="friend.name" :phone-number="friend.phone" :email-address="friend.email" :is-favorite="friend.isFavorite")
+    friend-contact(
+      v-for="friend in friends"
+      :key="friend.id"
+      :id="friend.id"
+      :name="friend.name"
+      :phone-number="friend.phone"
+      :email-address="friend.email"
+      :is-favorite="friend.isFavorite"
+      @toggle-favorite="toggleFavoriteStatus"
+    )
 
 </template>
 
@@ -18,16 +28,31 @@ export default {
           name: 'Manuel Lorenz',
           phone: '1234 5678 991',
           email: 'manuel@localhost.com',
-          isFavorite: 1
+          isFavorite: true
         },
         {
           id: 'julie',
           name: 'Julie Jones',
           phone: '09876 543 221',
           email: 'julie@localhost.com',
-          isFavorite: 0
+          isFavorite: false
         }
       ]
+    }
+  },
+  methods: {
+    toggleFavoriteStatus(friendId) {
+      const identifiedFriend = this.friends.find(friend => friendId === friend.id);
+      identifiedFriend.isFavorite = !identifiedFriend.isFavorite;
+    },
+    addNewFriend(id, name, phone, email, favorite) {
+      let newFriend = {}
+      newFriend.id = id;
+      newFriend.name = name;
+      newFriend.phone = phone;
+      newFriend.email = email;
+      newFriend.isFavorite = favorite;
+      this.friends.unshift(newFriend);
     }
   }
 }
