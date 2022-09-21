@@ -9,7 +9,7 @@ BaseCard
     @click="setSelectedTab('add-resource')"
     :mode="addResButtonMode"
   ) Add Resource
-component(:is="selectedTab" @add-resource="addNewResource")
+component(:is="selectedTab")
 
 </template>
 
@@ -52,6 +52,7 @@ export default {
   provide() {
     return {
       resources: this.storedResources,
+      addItem: this.addNewResource,
       deleteItem: this.deleteResource
     }
   },
@@ -67,6 +68,7 @@ export default {
         link: link
       }
       this.storedResources.push(newResource);
+      this.selectedTab = 'stored-resources';
     },
     deleteResource(id) {
       const currentResource = this.storedResources.find(resource => id === resource.id);
