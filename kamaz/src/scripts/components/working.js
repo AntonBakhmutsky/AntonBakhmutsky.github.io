@@ -1,6 +1,7 @@
 import HvrSlider from '../plugins/hvr-slider';
 import anime from 'animejs';
 import togglePlaceholder from '@/scripts/plugins/input-placeholder';
+import {logPlugin} from "@babel/preset-env/lib/debug";
 
 window.addEventListener('load', () => {
   if (!document.querySelector('.working')) {
@@ -95,7 +96,7 @@ window.addEventListener('load', () => {
 
       deliveryInputs.forEach(el => el.removeAttribute('required'));
       deliveryTextarea.forEach(el => el.removeAttribute('required'));
-      nextStep.querySelectorAll('input:not([type="radio"])').forEach(el => el.required = true);
+      nextStep.querySelectorAll('input:not([type="checkbox"])').forEach(el => el.required = true);
       nextStep.querySelectorAll('textarea').forEach(el => el.required = true);
       deliveryContentItems.forEach(el => el.classList.remove('active'));
       deliverySteps.forEach(el => el.classList.remove('active'));
@@ -116,6 +117,20 @@ window.addEventListener('load', () => {
 
     deliveryNextButtons.forEach(el =>el.addEventListener('click', switchDeliveryContent));
     deliveryPreviousButtons.forEach(el => el.addEventListener('click', switchDeliveryContent));
+
+    // delivery steps checkboxes
+    const deliveryStepsCheckboxes = document.querySelectorAll('.working__item_delivery input[type="checkbox"]');
+
+    function clearChecked() {
+      const anotherCheckboxes = this.parentElement.querySelectorAll(`input:not([id="${this.id}"])`);
+      anotherCheckboxes.forEach(el => {
+        if (el.checked) {
+          el.checked = false;
+        }
+      })
+    }
+
+    deliveryStepsCheckboxes.forEach(el => el.addEventListener('click', clearChecked));
 
     // input placeholder
     const inputFields = document.querySelectorAll('.working__item-steps-input input');

@@ -5,7 +5,7 @@ li
     div
       header
         h3 {{ title }}
-        BaseButton(mode="flat") Delete
+        BaseButton(mode="flat" @click="deleteItem(id)") Delete
     p {{ description }}
     nav
       a(:href="link") View resource
@@ -15,7 +15,8 @@ li
 <script>
 
 export default {
-  props: ['title', 'description', 'link']
+  props: ['id', 'title', 'description', 'link'],
+  inject: ['deleteItem']
 }
 </script>
 

@@ -184,10 +184,35 @@
           &.active
             background-color: $blue
 
-      &-radio
+      &-checkboxes
         margin-top: 12px
         display: flex
         flex-direction: column
+
+        input[type="checkbox"] + label
+          position: relative
+          box-sizing: border-box
+          padding-left: 30px
+          +font(14px, 22px, 500)
+
+          &:not(:first-child)
+            margin-top: 16px
+
+          &:before
+            content: ''
+            position: absolute
+            top: 50%
+            transform: translateY(-50%)
+            left: 0
+            width: 20px
+            height: 20px
+            border: 1px solid $blue
+            box-sizing: border-box
+            border-radius: 50%
+
+        input[type="checkbox"]:checked + label
+          &:before
+            border-width: 6px
 
       &-map
         margin-top: 10px

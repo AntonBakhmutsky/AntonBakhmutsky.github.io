@@ -1,23 +1,37 @@
 <template lang="pug">
 
 BaseCard
-  form
+  form(@submit.prevent="submitData" ref="form")
     .form-control
       label(for="title") Title
-      input#title(name="title" type="text")
+      input#title(name="title" type="text" required v-model="enteredTitle")
     .form-control
       label(for="description") Description
-      textarea#description(name="description" rows="3")
+      textarea#description(name="description" rows="3" required v-model="enteredDescription")
     .form-control
-      label(for="link") Title
-      input#link(name="link" type="url")
+      label(for="link") Link
+      input#link(name="link" type="url" required v-model="enteredLink")
     div
       BaseButton(type="submit") Add Resource
 
 </template>
 
 <script>
-export default {}
+export default {
+  data() {
+    return {
+      enteredTitle: '',
+      enteredDescription: '',
+      enteredLink: ''
+    }
+  },
+  methods: {
+    submitData() {
+      this.$emit('add-resource', this.enteredTitle, this.enteredDescription, this.enteredLink);
+      this.$refs.form.reset();
+    }
+  }
+}
 </script>
 
 <style lang="sass" scoped>
