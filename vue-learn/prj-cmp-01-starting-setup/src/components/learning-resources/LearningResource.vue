@@ -15,12 +15,7 @@ li
 <script>
 
 export default {
-  props: ['title', 'description', 'link'],
-  data() {
-    return {
-
-    }
-  }
+  props: ['title', 'description', 'link']
 }
 </script>
 
