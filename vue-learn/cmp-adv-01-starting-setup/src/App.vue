@@ -2,12 +2,6 @@
 
 div
   TheHeader
-  BadgeList
-  UserInfo(
-    :full-name="activeUser.name"
-    :info-text="activeUser.description"
-    :role="activeUser.role"
-  )
 
 </template>
 
@@ -15,12 +9,14 @@ div
 import TheHeader from './components/TheHeader.vue';
 import BadgeList from './components/BadgeList.vue';
 import UserInfo from './components/UserInfo.vue';
+import CourseGoals from './components/CourseGoals';
 
 export default {
   components: {
     TheHeader,
     BadgeList,
-    UserInfo
+    UserInfo,
+    CourseGoals
   },
   data() {
     return {

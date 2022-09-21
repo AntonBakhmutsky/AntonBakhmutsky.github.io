@@ -2,10 +2,10 @@
 
 section
   base-card
-    template(v-slot:header)
+    template(#header)
       h3 {{ fullName }}
       base-badge(:type="role" :caption="role.toUpperCase()")
-    template(v-slot:default)
+    template(#default)
       p {{ infoText }}
 
 </template>
