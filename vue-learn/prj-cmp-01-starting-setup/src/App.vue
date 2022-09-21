@@ -1,6 +1,6 @@
 <template lang="pug">
 
-
+StoredResources(:resources="storedResources")
 
 </template>
 

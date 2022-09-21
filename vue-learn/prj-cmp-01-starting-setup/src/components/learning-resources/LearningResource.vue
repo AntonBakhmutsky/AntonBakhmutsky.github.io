@@ -1,17 +1,19 @@
 <template lang="pug">
 
 li
-  div
-    header
-      h3 {{ title }}
-      button Delete
-  p {{ description }}
-  nav
-    a(:href="link")
+  BaseCard
+    div
+      header
+        h3 {{ title }}
+        button Delete
+    p {{ description }}
+    nav
+      a(:href="link") {{ link }}
 
 </template>
 
 <script>
+
 export default {
   props: ['title', 'description', 'link'],
   data() {

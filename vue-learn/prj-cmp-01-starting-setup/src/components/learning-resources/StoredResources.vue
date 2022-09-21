@@ -12,7 +12,7 @@ ul
 </template>
 
 <script>
-import LearningResource from './components/learning-resources/LearningResource';
+import LearningResource from './LearningResource';
 
 export default {
   components: {
