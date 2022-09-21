@@ -1,15 +1,18 @@
 <template lang="pug">
 
+TheHeader(title="RememberMe")
 StoredResources(:resources="storedResources")
 
 </template>
 
 <script>
 import StoredResources from './components/learning-resources/StoredResources';
+import TheHeader from '@/components/layout/TheHeader';
 
 export default {
   components: {
-    StoredResources
+    StoredResources,
+    TheHeader
   },
   data() {
     return {
