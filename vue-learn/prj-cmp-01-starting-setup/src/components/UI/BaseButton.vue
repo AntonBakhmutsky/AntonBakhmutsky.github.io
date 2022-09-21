@@ -1,7 +1,6 @@
 <template lang="pug">
 
-button(:type="type" :class="mode")
-  slot
+button(:type="type" :class="mode") #[slot]
 
 </template>
 

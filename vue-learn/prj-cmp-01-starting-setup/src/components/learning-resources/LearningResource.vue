@@ -5,10 +5,10 @@ li
     div
       header
         h3 {{ title }}
-        button Delete
+        BaseButton(mode="flat") Delete
     p {{ description }}
     nav
-      a(:href="link") {{ link }}
+      a(:href="link") View resource
 
 </template>
 
