@@ -1,12 +1,12 @@
 <template lang="pug">
 
-button(:type="type" :class="mode") #[slot]
+button(:class="mode") #[slot]
 
 </template>
 
 <script>
 export default {
-  props: ['type', 'mode']
+  props: ['mode']
 }
 </script>
 
