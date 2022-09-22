@@ -3,7 +3,6 @@ window.addEventListener('load', () => {
   if (!document.querySelector('.options-accord')) {
     return false;
   } else {
-    const accordions = document.querySelectorAll('.options-accord');
     const accordionContainers = document.querySelectorAll('.options');
 
     const toggleAccordion = (e) => {
@@ -15,6 +14,5 @@ window.addEventListener('load', () => {
     };
 
     accordionContainers.forEach(el => el.addEventListener('click', toggleAccordion));
-
   }
 });

@@ -123,11 +123,23 @@ window.addEventListener('load', () => {
 
     function clearChecked() {
       const anotherCheckboxes = this.parentElement.querySelectorAll(`input:not([id="${this.id}"])`);
+      const textarea = this.parentElement.nextElementSibling.querySelector('textarea');
+      const placeholder = textarea.nextElementSibling;
+      console.log(placeholder)
+
       anotherCheckboxes.forEach(el => {
         if (el.checked) {
           el.checked = false;
         }
-      })
+      });
+
+      if (this.checked) {
+        placeholder.classList.add('active');
+        textarea.parentElement.style.height = `${textarea.scrollHeight}px`;
+      } else {
+        textarea.parentElement.removeAttribute('style');
+        placeholder.classList.remove('active');
+      }
     }
 
     deliveryStepsCheckboxes.forEach(el => el.addEventListener('click', clearChecked));
