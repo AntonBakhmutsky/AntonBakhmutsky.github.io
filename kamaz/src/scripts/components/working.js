@@ -30,7 +30,7 @@ window.addEventListener('load', () => {
 
     // recalculation max height
     const recalculationMaxHeight = (e) => {
-      const hiddenContent = e.currentTarget.closest('.working__item-hidden');
+      const hiddenContent = e.target.closest('.working__item-hidden');
       hiddenContent.setAttribute('style', `max-height: ${hiddenContent.scrollHeight}px`);
     }
 
@@ -121,11 +121,10 @@ window.addEventListener('load', () => {
     // delivery steps checkboxes
     const deliveryStepsCheckboxes = document.querySelectorAll('.working__item_delivery input[type="checkbox"]');
 
-    function clearChecked() {
+    function clearChecked(event) {
       const anotherCheckboxes = this.parentElement.querySelectorAll(`input:not([id="${this.id}"])`);
       const textarea = this.parentElement.nextElementSibling.querySelector('textarea');
       const placeholder = textarea.nextElementSibling;
-      console.log(placeholder)
 
       anotherCheckboxes.forEach(el => {
         if (el.checked) {
@@ -135,12 +134,14 @@ window.addEventListener('load', () => {
 
       if (this.checked) {
         placeholder.classList.add('active');
-        textarea.parentElement.style.height = `${textarea.scrollHeight}px`;
       } else {
-        textarea.parentElement.removeAttribute('style');
-        placeholder.classList.remove('active');
+        if (!textarea.value) {
+          placeholder.classList.remove('active');
+        }
       }
+      growTextarea(event);
     }
+
 
     deliveryStepsCheckboxes.forEach(el => el.addEventListener('click', clearChecked));
 
@@ -154,10 +155,25 @@ window.addEventListener('load', () => {
     textareaFields.forEach(el => {
       el.addEventListener('input', function (event) {
         const fieldContainer = this.closest('.form-input');
-        fieldContainer.style.height = 0;
+        fieldContainer.removeAttribute('style');
         fieldContainer.style.height = `${this.scrollHeight}px`;
         recalculationMaxHeight(event);
       });
     });
+
+    document.addEventListener('click', (event) => {
+      growTextarea(event);
+    });
+
+    function growTextarea(event) {
+      const textareaContainers = document.querySelectorAll('.working__item_delivery textarea');
+      textareaContainers.forEach(el => {
+        if (el.value && el.closest('.working__item-steps-content.active')) {
+          el.parentElement.removeAttribute('style');
+          el.parentElement.style.height = `${el.scrollHeight}px`;
+          recalculationMaxHeight(event)
+        }
+      });
+    }
   }
 });

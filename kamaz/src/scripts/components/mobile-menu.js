@@ -6,7 +6,7 @@ window.addEventListener('load', () => {
 
   const toggleMenu = () => {
     mobileMenu.classList.toggle('active');
-    document.body.classList.toggle('body_fix');
+    document.body.classList.add('body_fix');
   }
 
   mobileMenuBtn.addEventListener('click', toggleMenu);
@@ -39,6 +39,7 @@ window.addEventListener('load', () => {
         // left swipe
         if (mobileMenu.classList.contains('active')) {
           mobileMenu.classList.remove('active');
+          document.body.classList.remove('body_fix');
         }
       } else {
         // right swipe
