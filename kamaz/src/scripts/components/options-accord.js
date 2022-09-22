@@ -4,15 +4,17 @@ window.addEventListener('load', () => {
     return false;
   } else {
     const accordions = document.querySelectorAll('.options-accord');
+    const accordionContainers = document.querySelectorAll('.options');
 
     const toggleAccordion = (e) => {
-      const target = e.currentTarget;
-      const hidden = target.querySelector('.options-accord__hidden');
+      const item = e.target.closest('.options-accord');
+      const hidden = item.querySelector('.options-accord__hidden');
 
-      target.classList.toggle('active')
+      item.classList.toggle('active')
       !hidden.hasAttribute('style') ? hidden.setAttribute('style', `max-height: ${hidden.scrollHeight}px`) : hidden.removeAttribute('style');
     };
 
-    accordions.forEach(el => el.addEventListener('click', toggleAccordion));
+    accordionContainers.forEach(el => el.addEventListener('click', toggleAccordion));
+
   }
 });

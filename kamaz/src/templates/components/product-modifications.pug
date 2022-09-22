@@ -6,7 +6,7 @@ section.product-modifications#product-modifications
         .product-modifications__item
           h3.product-modifications__item-title #{el.title}
           +characteristic-list(el.characteristics)
-          .product-modifications__item-container
+          .options
             each options in el.optionsAccord
               +options-accord(options)
     +btn-more('Показать еще')

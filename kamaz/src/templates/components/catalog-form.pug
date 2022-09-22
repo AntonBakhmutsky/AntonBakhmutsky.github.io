@@ -26,6 +26,6 @@ form.catalog__form
       label.catalog__form-optional-item(for="new") Новинка
     .catalog__form-buttons
       +btn-more('Еще параметры')
-      button.catalog__form-submit.btn(type="submit" data-request="onProductFilterAjax" data-request-update="product-list: '#productList'") Показать 1 056 предложений
+      button.catalog__form-submit.btn#filterBtn(type="submit" data-request="onProductFilterAjax" data-request-update="product-list: '#productList'") Показать 1 056 предложений
   select.catalog__form-filter.slide-up(name='sorting' data-request="onProductFilterAjax" data-request-update="product-list: '#productList'")
     option(value='default' selected) По умолчанию
