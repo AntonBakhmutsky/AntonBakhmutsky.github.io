@@ -1,20 +1,16 @@
-<template>
-  <section>
-    <base-card>
-      <h2>Submitted Experiences</h2>
-      <div>
-        <base-button>Load Submitted Experiences</base-button>
-      </div>
-      <ul>
-        <survey-result
-          v-for="result in results"
-          :key="result.id"
-          :name="result.name"
-          :rating="result.rating"
-        ></survey-result>
-      </ul>
-    </base-card>
-  </section>
+<template lang="pug">
+section
+  BaseCard
+    h2 Submitted Experiences
+    div
+      base-button Load Submitted Experiences
+    ul
+      survey-result(
+        v-for="result in results"
+        :key="result.id"
+        :name="result.name"
+        :rating="result.rating"
+      )
 </template>
 
 <script>

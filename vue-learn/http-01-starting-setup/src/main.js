@@ -6,7 +6,7 @@ import App from './App.vue';
 
 const app = createApp(App);
 
-app.component('base-card', BaseCard);
-app.component('base-button', BaseButton);
+app.component('BaseCard', BaseCard);
+app.component('BaseButton', BaseButton);
 
 app.mount('#app');

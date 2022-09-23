@@ -1,10 +1,8 @@
-<template>
-  <li>
-    <p>
-      <span class="highlight">{{ name }}</span> rated the learning experience
-      <span :class="ratingClass">{{ rating }}</span>.
-    </p>
-  </li>
+<template lang="pug">
+li
+  p
+    span(class="highlight") {{ name }} rated the learning experience
+    span(:class="ratingClass") {{ rating }}
 </template>
 
 <script>
