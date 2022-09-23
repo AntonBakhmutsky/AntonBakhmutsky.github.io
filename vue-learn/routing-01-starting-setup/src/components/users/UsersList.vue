@@ -1,7 +1,6 @@
-<template>
-  <ul>
-    <user-item v-for="user in users" :key="user.id" :name="user.fullName" :role="user.role"></user-item>
-  </ul>
+<template lang="pug">
+ul
+  UserItem(v-for="user in users" :key="user.id" :name="user.fullName" :role="user.role")
 </template>
 
 <script>
@@ -15,11 +14,10 @@ export default {
 };
 </script>
 
-<style scoped>
-ul {
-  list-style: none;
-  margin: 2rem auto;
-  max-width: 20rem;
-  padding: 0;
-}
+<style lang="sass" scoped>
+ul
+  list-style: none
+  margin: 2rem auto
+  max-width: 20rem
+  padding: 0
 </style>

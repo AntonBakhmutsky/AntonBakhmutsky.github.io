@@ -1,8 +1,7 @@
-<template>
-  <the-navigation @set-page="setActivePage"></the-navigation>
-  <main>
-    <component :is="activePage"></component>
-  </main>
+<template lang="pug">
+TheNavigation(@set-page="setActivePage")
+main
+  component(:is="activePage")
 </template>
 
 <script>
@@ -47,16 +46,13 @@ export default {
 };
 </script>
 
-<style>
-* {
-  box-sizing: border-box;
-}
+<style lang="sass">
+*
+  box-sizing: border-box
 
-html {
-  font-family: sans-serif;
-}
+html
+  font-family: sans-serif
 
-body {
-  margin: 0;
-}
+body
+  margin: 0
 </style>
