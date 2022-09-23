@@ -34,7 +34,6 @@ window.addEventListener('load', () => {
     let xDiff = xDown - xUp;
     let yDiff = yDown - yUp;
     if (Math.abs(xDiff) > Math.abs(yDiff)) {
-      console.log(xDiff)
       if (xDiff > 0) {
         // left swipe
         if (mobileMenu.classList.contains('active')) {
