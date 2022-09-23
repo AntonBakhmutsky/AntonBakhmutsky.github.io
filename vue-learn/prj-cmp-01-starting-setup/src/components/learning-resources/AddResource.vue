@@ -1,10 +1,11 @@
 <template lang="pug">
-BaseDialog(v-if="inputIsInvalid" title="Invalid input" @close="confirmError")
-  template(#default)
-    p Unfortunately, at least one input value is invalid.
-    p Please check all inputs and make sure you enter at least a few characters into each input fields.
-  template(#actions)
-    BaseButton(@click="confirmError") Okay
+teleport(to="body")
+  BaseDialog(v-if="inputIsInvalid" title="Invalid input" @close="confirmError")
+    template(#default)
+      p Unfortunately, at least one input value is invalid.
+      p Please check all inputs and make sure you enter at least a few characters into each input fields.
+    template(#actions)
+      BaseButton(@click="confirmError") Okay
 BaseCard
   form(@submit.prevent="submitData" ref="form")
     .form-control
@@ -18,7 +19,6 @@ BaseCard
       input#link(name="link" type="url" ref="linkInput")
     div
       BaseButton(type="submit") Add Resource
-
 </template>
 
 <script>
