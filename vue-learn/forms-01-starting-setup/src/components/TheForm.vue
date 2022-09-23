@@ -1,42 +1,86 @@
 <template lang="pug">
-form
-  .form-control
+form(@submit.prevent="submitForm")
+  .form-control(:class="{invalid: userNameValidity === 'invalid'}")
     label(for='user-name') Your Name
-    input#user-name(name='user-name' type='text')
+    input#user-name(name='user-name' type='text' v-model.trim="userName" @blur="validateInput")
+    p(v-if="userNameValidity === 'invalid'") Please enter a valid name!
   .form-control
     label(for='age') Your Age (Years)
-    input#age(name='age' type='number')
+    input#age(name='age' type='number' v-model="userAge")
   .form-control
     label(for='referrer') How did you hear about us?
-    select#referrer(name='referrer')
+    select#referrer(name='referrer' v-model="referrer")
       option(value='google') Google
       option(value='wom') Word of mouth
       option(value='newspaper') Newspaper
   .form-control
     h2 What are you interested in?
     div
-      input#interest-news(name='interest' type='checkbox')
+      input#interest-news(name='interest' value="news" type='checkbox' v-model="interest")
       label(for='interest-news') News
     div
-      input#interest-tutorials(name='interest' type='checkbox')
+      input#interest-tutorials(name='interest' value="tutorials" type='checkbox' v-model="interest")
       label(for='interest-tutorials') Tutorials
     div
-      input#interest-nothing(name='interest' type='checkbox')
+      input#interest-nothing(name='interest' value="nothing" type='checkbox' v-model="interest")
       label(for='interest-nothing') Nothing
   .form-control
     h2 How do you learn?
     div
-      input#how-video(name='how' type='radio')
+      input#how-video(name='how' type='radio' value="video" v-model="how")
       label(for='how-video') Video Courses
     div
-      input#how-blogs(name='how' type='radio')
+      input#how-blogs(name='how' type='radio' value="blogs" v-model="how")
       label(for='how-blogs') Blogs
     div
-      input#how-other(name='how' type='radio')
+      input#how-other(name='how' type='radio' value="other" v-model="how")
       label(for='how-other') Other
+  .form-control
+    RatingControl(v-model="rating")
+  .form-control
+    input#confirm-terms(type="checkbox" name="confirm-terms" v-model="confirm")
+    label(for="confirm-terms") Agree to terms of use?
   div
     button Save Data
 </template>
+
+<script>
+import RatingControl from './RatingControl';
+export default {
+  components: {RatingControl},
+  data() {
+    return {
+      userName: '',
+      userAge: null,
+      referrer: 'wom',
+      interest: [],
+      how: null,
+      confirm: false,
+      userNameValidity: 'pending',
+      rating: null
+    }
+  },
+  methods: {
+    submitForm() {
+      this.userName = '';
+      this.userAge = null;
+      this.referrer = 'wom';
+      this.interest = [];
+      this.how = null;
+      this.confirm = false;
+      this.rating = null;
+    },
+    validateInput() {
+      if (this.userName === '') {
+        this.userNameValidity = 'invalid';
+      } else {
+        this.userNameValidity = 'valid';
+
+      }
+    }
+  },
+}
+</script>
 
 <style scoped lang="sass">
 form
@@ -49,6 +93,12 @@ form
 
 .form-control
   margin: 0.5rem 0
+
+  &.invalid input
+    border-color: red
+
+  &.invalid label
+    color: red
 
 label
   font-weight: bold
