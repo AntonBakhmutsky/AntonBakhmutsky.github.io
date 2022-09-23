@@ -2,6 +2,7 @@
 li
   p
     span(class="highlight") {{ name }} rated the learning experience
+    |&nbsp;
     span(:class="ratingClass") {{ rating }}
 </template>
 
