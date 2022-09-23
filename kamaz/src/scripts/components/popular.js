@@ -33,6 +33,10 @@ window.addEventListener('load', () => {
       }
     });
 
+    // swiper wrapper height
+    const swiperWrapper = document.querySelector('.popular__slider.swiper .swiper-wrapper');
+    console.log(swiperWrapper)
+
     // image switcher(Hvr Slider)
     new HvrSlider('.popular__item-gallery');
 

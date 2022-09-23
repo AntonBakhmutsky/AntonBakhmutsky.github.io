@@ -75,8 +75,22 @@
       max-width: 845px
       width: 100%
       height: 100%
+      flex-grow: 1
+      flex-basis: 61.5%
       +screen($tablet)
+        flex-basis: auto
         max-width: none
+      +screen(710)
+        max-height: 300px
+      +screen(520)
+        max-height: 250px
+      +screen(440)
+        max-height: 191px
+      +screen(335)
+        max-height: 148px
+
+      a
+        width: 100%
 
       img
         width: 100%
@@ -93,7 +107,10 @@
       flex-direction: column
       justify-content: space-between
       overflow: hidden
+      flex-grow: 0
+      flex-basis: 38.5%
       +screen($tablet)
+        flex-basis: auto
         border-left: 2px solid $white-darkest
         border-top: none
         padding: 46px 10px 40px
@@ -135,35 +152,3 @@
     &-container
       display: flex
       justify-content: space-between
-
-    .hvr
-      width: 845px
-      +screen(1400)
-        width: 745px
-      +screen($desktop-sm)
-        width: 645px
-      +screen(1100)
-        width: 580px
-      +screen($tablet)
-        width: 100%
-        height: 300px
-      +screen($tablet-xs)
-        height: 148px
-
-      &__dots
-        margin-top: -6px
-        +screen($tablet)
-          margin-top: 16px
-
-      &__dot
-        +screen($tablet)
-          flex-shrink: 0
-          width: 15px
-          height: 15px
-          border-radius: 50%
-          background-color: $white-darkest
-          margin: 0 15px
-
-        &--active
-          +screen($tablet)
-            background-color: $blue
