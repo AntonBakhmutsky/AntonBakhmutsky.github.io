@@ -1,5 +1,5 @@
-<template>
-  <the-form></the-form>
+<template lang="pug">
+TheForm
 </template>
 
 <script>
