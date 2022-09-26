@@ -2,6 +2,8 @@
 TheNavigation
 main
   RouterView
+footer
+  RouterView(name="footer")
 </template>
 
 <script>
