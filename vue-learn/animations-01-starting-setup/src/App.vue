@@ -3,7 +3,15 @@
   .block(:class="{animate: animatedBlock}")
   button(@click="animateBlock") Animate
 .container
-  transition(name="para")
+  transition(
+    name="para"
+    @before-enter="beforeEnter"
+    @enter="enter"
+    @after-enter="afterEnter"
+    @before-leave="beforeLeave"
+    @leave="leave"
+    @after-leave="afterLeave"
+  )
     p(v-if="paraIsVisible") This is only sometimes visible...
   button(@click="toggleParagraph") Toggle paragraph
 .container
@@ -28,6 +36,30 @@ export default {
     };
   },
   methods: {
+    leave(el) {
+      console.log('leave');
+      console.log(el);
+    },
+    afterLeave(el) {
+      console.log('afterLeave');
+      console.log(el);
+    },
+    beforeEnter(el) {
+      console.log('before Enter');
+      console.log(el);
+    },
+    afterEnter(el) {
+      console.log('after Enter');
+      console.log(el);
+    },
+    enter(el) {
+      console.log('enter');
+      console.log(el);
+    },
+    beforeLeave(el) {
+      console.log('before Leave');
+      console.log(el);
+    },
     animateBlock() {
       this.animatedBlock = !this.animatedBlock;
     },
