@@ -1,12 +1,14 @@
 <template lang="pug">
-.backdrop(@click="$emit('close')")
-dialog(open='')
-  slot
+.backdrop(@click="$emit('close')" v-if="open")
+transition(name="modal")
+  dialog(open v-if="open")
+    slot
 </template>
 
 <script>
 export default {
   emits: ['close'],
+  props: ['open']
 };
 </script>
 
@@ -32,7 +34,12 @@ dialog
   background-color: white
   z-index: 100
   border: none
-  animation: modal .3s ease-out forwards
+
+.modal-enter-active
+  animation: modal .3s ease-out
+
+.modal-leave-active
+  animation: modal .3s ease-out reverse
 
 @keyframes modal
   from

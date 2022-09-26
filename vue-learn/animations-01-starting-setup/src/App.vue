@@ -3,10 +3,10 @@
   .block(:class="{animate: animatedBlock}")
   button(@click="animateBlock") Animate
 .container
-    transition
-      p(v-if="paraIsVisible") This is only sometimes visible...
-    button(@click="toggleParagraph") Toggle paragraph
-base-modal(@close='hideDialog' v-if='dialogIsVisible')
+  transition(name="para")
+    p(v-if="paraIsVisible") This is only sometimes visible...
+  button(@click="toggleParagraph") Toggle paragraph
+base-modal(@close='hideDialog' :open='dialogIsVisible')
   p This is a test dialog!
   button(@click='hideDialog') Close it!
 .container
@@ -82,9 +82,9 @@ button
 
 .animate
   //transform: translateX(-150px)
-  animation: slide-fade .3s ease-out forwards
+  animation: slide-scale .3s ease-out forwards
 
-@keyframes slide-fade
+@keyframes slide-scale
   0%
     transform: translateX(0) scale(1)
 
@@ -94,4 +94,26 @@ button
   100%
     transform: translateX(-150px) scale(1)
 
+.para-enter-from
+  //opacity: 0
+  //transform: translateY(-30px)
+
+
+.para-enter-active
+  animation: slide-scale .3s ease-out
+
+.para-enter-to
+  //opacity: 1
+  //transform: translateY(0)
+
+.para-leave-from
+  //opacity: 1
+  //transform: translateY(0)
+
+.para-leave-active
+  animation: slide-scale .3s ease-out
+
+.para-leave-to
+  //opacity: 0
+  //transform: translateY(-30px)
 </style>
