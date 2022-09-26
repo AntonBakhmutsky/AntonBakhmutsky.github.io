@@ -1,5 +1,7 @@
 <template lang="pug">
 .container
+  ListData
+.container
   .block(:class="{animate: animatedBlock}")
   button(@click="animateBlock") Animate
 .container
@@ -11,6 +13,9 @@
     @before-leave="beforeLeave"
     @leave="leave"
     @after-leave="afterLeave"
+    @enter-cancelled="enterCancelled"
+    @leave-cancelled="leaveCancelled"
+    :css="false"
   )
     p(v-if="paraIsVisible") This is only sometimes visible...
   button(@click="toggleParagraph") Toggle paragraph
@@ -26,38 +31,70 @@ base-modal(@close='hideDialog' :open='dialogIsVisible')
 </template>  
 
 <script>
+import ListData from '@/components/ListData';
 export default {
+  components: {
+    ListData
+  },
   data() {
     return {
       dialogIsVisible: false,
       animatedBlock: false,
       paraIsVisible: false,
-      usersAreVisible: false
+      usersAreVisible: false,
+      enterInterval: null,
+      leaveInterval: null
     };
   },
   methods: {
-    leave(el) {
-      console.log('leave');
-      console.log(el);
+    enterCancelled() {
+      clearInterval(this.enterInterval);
     },
-    afterLeave(el) {
-      console.log('afterLeave');
-      console.log(el);
+    leaveCancelled() {
+      clearInterval(this.leaveInterval);
     },
     beforeEnter(el) {
       console.log('before Enter');
       console.log(el);
+      el.style.opacity = 0;
+    },
+    enter(el, done) {
+      console.log('enter');
+      console.log(el);
+      let round = 1;
+      this.enterInterval = setInterval(() => {
+        el.style.opacity = round * 0.01;
+        round++;
+        if (round > 100) {
+          clearInterval(this.enterInterval);
+          done();
+        }
+      }, 20);
     },
     afterEnter(el) {
       console.log('after Enter');
       console.log(el);
     },
-    enter(el) {
-      console.log('enter');
-      console.log(el);
-    },
     beforeLeave(el) {
       console.log('before Leave');
+      console.log(el);
+      el.style.opacity = 1;
+    },
+    leave(el, done) {
+      console.log('leave');
+      console.log(el);
+      let round = 100;
+      this.leaveInterval = setInterval(() => {
+        el.style.opacity = round * 0.01;
+        round--;
+        if (round === 0) {
+          clearInterval(this.leaveInterval);
+          done();
+        }
+      }, 20);
+    },
+    afterLeave(el) {
+      console.log('afterLeave');
       console.log(el);
     },
     animateBlock() {
@@ -136,29 +173,6 @@ button
 
   100%
     transform: translateX(-150px) scale(1)
-
-.para-enter-from
-  //opacity: 0
-  //transform: translateY(-30px)
-
-
-.para-enter-active
-  animation: slide-scale .3s ease-out
-
-.para-enter-to
-  //opacity: 1
-  //transform: translateY(0)
-
-.para-leave-from
-  //opacity: 1
-  //transform: translateY(0)
-
-.para-leave-active
-  animation: slide-scale .3s ease-out
-
-.para-leave-to
-  //opacity: 0
-  //transform: translateY(-30px)
 
 .fade-button-enter-from, .fade-button-leave-to
   opacity: 0
