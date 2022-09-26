@@ -1,4 +1,5 @@
 <template lang="pug">
+button(@click="confirmInput") Confirm
 ul
   UserItem(v-for="user in users" :key="user.id" :name="user.fullName" :role="user.role")
 </template>
@@ -11,6 +12,11 @@ export default {
     UserItem,
   },
   inject: ['users'],
+  methods: {
+    confirmInput() {
+      this.$router.push('/teams');
+    }
+  }
 };
 </script>
 

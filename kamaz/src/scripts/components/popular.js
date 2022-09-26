@@ -12,6 +12,7 @@ window.addEventListener('load', () => {
   } else {
 
     // card slider
+
     const popularSlider = new Swiper('.popular__slider.swiper',  {
       breakpoints: {
         320: {
@@ -34,8 +35,21 @@ window.addEventListener('load', () => {
     });
 
     // swiper wrapper height
-    const swiperWrapper = document.querySelector('.popular__slider.swiper .swiper-wrapper');
-    console.log(swiperWrapper)
+    const swiperSlideContents = document.querySelectorAll('.popular__slider .swiper-slide .popular__content');
+
+    function setSwiperHeight() {
+      const contentHeights = [];
+
+      swiperSlideContents.forEach(el => contentHeights.push(el.scrollHeight));
+
+      const maxContentHeight = Math.max(...contentHeights);
+
+      swiperSlideContents.forEach(el => el.style.minHeight = `${maxContentHeight}px`)
+    }
+
+    setSwiperHeight()
+
+    window.addEventListener('resize', setSwiperHeight)
 
     // image switcher(Hvr Slider)
     new HvrSlider('.popular__item-gallery');

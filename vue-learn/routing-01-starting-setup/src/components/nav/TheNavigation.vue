@@ -3,20 +3,13 @@ header
   nav
     ul
       li
-        button(@click="setActivePage('teams-list')") Teams
+        RouterLink(to="/teams") Teams
       li
-        button(@click="setActivePage('users-list')") Users
+        RouterLink(to="/users") Users
 </template>
 
 <script>
-export default {
-  emits: ['set-page'],
-  methods: {
-    setActivePage(page) {
-      this.$emit('set-page', page);
-    },
-  },
-};
+export default {};
 </script>
 
 <style lang="sass" scoped>
@@ -40,7 +33,7 @@ ul
 li
   margin: 0 2rem
 
-button
+a
   font: inherit
   background: transparent
   border: 1px solid transparent
@@ -48,8 +41,9 @@ button
   color: white
   padding: 0.5rem 1.5rem
   display: inline-block
+  text-decoration: none
 
-  &:hover, &:active
+  &:hover, &:active, &.active
     color: #f1a80a
     border-color: #f1a80a
     background-color: #1a037e

@@ -1,19 +1,15 @@
 <template lang="pug">
-TheNavigation(@set-page="setActivePage")
+TheNavigation
 main
-  component(:is="activePage")
+  RouterView
 </template>
 
 <script>
-import TeamsList from './components/teams/TeamsList.vue';
-import UsersList from './components/users/UsersList.vue';
 import TheNavigation from './components/nav/TheNavigation.vue';
 
 export default {
   components: {
-    TheNavigation,
-    TeamsList,
-    UsersList,
+    TheNavigation
   },
   data() {
     return {
@@ -37,11 +33,6 @@ export default {
       teams: this.teams,
       users: this.users,
     };
-  },
-  methods: {
-    setActivePage(page) {
-      this.activePage = page;
-    },
   },
 };
 </script>

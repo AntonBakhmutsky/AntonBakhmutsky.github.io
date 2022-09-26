@@ -38,6 +38,8 @@
     padding: 8px 24px 18px
     border: 2px solid $white-dark
     overflow: hidden
+    display: flex
+    flex-direction: column
 
   &__head
     display: flex
@@ -69,7 +71,7 @@
   &__desc
     display: flex
     flex-wrap: wrap
-    margin-top: 10px
+    margin: 10px 0
 
     &-item
       display: flex
@@ -94,10 +96,9 @@
             +font(20px, 26px, 500)
 
   &__price
-    margin-top: 13px
     +font(32px, 38px, 500)
+    margin-top: auto
     +screen($tablet-xs)
-      margin-top: 20px
       +font(28px, 34px, 500)
 
   &__link

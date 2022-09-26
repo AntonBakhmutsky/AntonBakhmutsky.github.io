@@ -2,12 +2,12 @@
 li
   h3 {{ name }}
   div(class="team-members") {{ memberCount }} Members
-  a(href="#") View Members
+  RouterLink(:to="`/teams/${id}`") View Members
 </template>
 
 <script>
 export default {
-  props: ['name', 'memberCount'],
+  props: ['id', 'name', 'memberCount'],
 };
 </script>
 
