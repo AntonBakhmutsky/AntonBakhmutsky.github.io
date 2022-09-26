@@ -1,10 +1,10 @@
 import { createApp } from 'vue';
 
 import App from './App.vue';
-import router from '@/router/router';
+import BaseModal from './components/BaseModal.vue';
 
 const app = createApp(App);
 
-app.use(router)
+app.component('base-modal', BaseModal);
 
 app.mount('#app');
