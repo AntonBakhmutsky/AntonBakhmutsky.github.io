@@ -1,7 +1,11 @@
 <template lang="pug">
 .container
-  .block
-  button Animate
+  .block(:class="{animate: animatedBlock}")
+  button(@click="animateBlock") Animate
+.container
+    transition
+      p(v-if="paraIsVisible") This is only sometimes visible...
+    button(@click="toggleParagraph") Toggle paragraph
 base-modal(@close='hideDialog' v-if='dialogIsVisible')
   p This is a test dialog!
   button(@click='hideDialog') Close it!
@@ -12,15 +16,25 @@ base-modal(@close='hideDialog' v-if='dialogIsVisible')
 <script>
 export default {
   data() {
-    return { dialogIsVisible: false };
+    return {
+      dialogIsVisible: false,
+      animatedBlock: false,
+      paraIsVisible: false
+    };
   },
   methods: {
+    animateBlock() {
+      this.animatedBlock = !this.animatedBlock;
+    },
     showDialog() {
       this.dialogIsVisible = true;
     },
     hideDialog() {
       this.dialogIsVisible = false;
     },
+    toggleParagraph() {
+      this.paraIsVisible = !this.paraIsVisible;
+    }
   },
 };
 </script>
@@ -53,6 +67,7 @@ button
   height: 8rem
   background-color: #290033
   margin-bottom: 2rem
+  //transition: transform .3s
 
 .container
   max-width: 40rem
@@ -64,4 +79,19 @@ button
   padding: 2rem
   border: 2px solid #ccc
   border-radius: 12px
+
+.animate
+  //transform: translateX(-150px)
+  animation: slide-fade .3s ease-out forwards
+
+@keyframes slide-fade
+  0%
+    transform: translateX(0) scale(1)
+
+  70%
+    transform: translateX(-120px) scale(1.1)
+
+  100%
+    transform: translateX(-150px) scale(1)
+
 </style>
