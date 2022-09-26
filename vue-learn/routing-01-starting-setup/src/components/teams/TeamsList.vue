@@ -1,4 +1,5 @@
 <template lang="pug">
+RouterView
 ul
   TeamsItem(
     v-for="team in teams"

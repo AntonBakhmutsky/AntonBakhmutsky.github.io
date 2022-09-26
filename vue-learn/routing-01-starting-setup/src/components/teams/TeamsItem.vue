@@ -2,12 +2,22 @@
 li
   h3 {{ name }}
   div(class="team-members") {{ memberCount }} Members
-  RouterLink(:to="`/teams/${id}`") View Members
+  RouterLink(:to="teamMembersLink") View Members
 </template>
 
 <script>
 export default {
   props: ['id', 'name', 'memberCount'],
+  computed: {
+    teamMembersLink() {
+      // return `/teams/${this.id}?sort=asc`;
+      return {
+        name: 'team-members',
+        params: { teamId: this.id },
+        query: { sort: 'asc' }
+      }
+    }
+  }
 };
 </script>
 
