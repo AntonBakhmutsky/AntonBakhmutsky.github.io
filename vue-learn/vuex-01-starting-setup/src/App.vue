@@ -4,6 +4,8 @@ BaseContainer(title="Vuex")
   FavoriteValue
   button(@click="addOne") Add 10
   ChangeCounter
+BaseContainer(title="Auth")
+  UserAuth
 </template>
 
 <script>
@@ -11,13 +13,15 @@ import BaseContainer from './components/BaseContainer.vue';
 import TheCounter from "@/components/TheCounter";
 import ChangeCounter from "@/components/ChangeCounter";
 import FavoriteValue from "@/components/FavoriteValue";
+import UserAuth from "@/components/UserAuth";
 
 export default {
   components: {
     BaseContainer,
     TheCounter,
     ChangeCounter,
-    FavoriteValue
+    FavoriteValue,
+    UserAuth
   },
   methods: {
     addOne() {
