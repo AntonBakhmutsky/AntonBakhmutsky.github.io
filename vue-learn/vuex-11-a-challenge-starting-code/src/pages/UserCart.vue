@@ -2,10 +2,10 @@
 section
   h2 Your Cart
   h3 Total Amount:
-    BaseBadge(mode='elegant') ${{ cartTotal }}
+    BaseBadge(mode='elegant') ${{ getCartTotal }}
   ul
     CartItem(
-      v-for='item in cart.items'
+      v-for='item in getCart.items'
       :key='item.productId'
       :prod-id='item.productId'
       :title='item.title'
@@ -17,16 +17,14 @@ section
 
 <script>
 import CartItem from '../components/cart/CartItem.vue';
+import {mapGetters} from 'vuex';
 
 export default {
-  inject: ['cart'],
   components: {
     CartItem,
   },
   computed: {
-    cartTotal() {
-      return this.cart.total.toFixed(2);
-    }
+    ...mapGetters('cart', ['getCart', 'getCartTotal'])
   }
 };
 </script>

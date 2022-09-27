@@ -8,7 +8,7 @@ header
         RouterLink(to='/products') Products
       li
         RouterLink(to='/cart') Cart
-        BaseBadge(mode='elegant') {{ cart.qty }}
+        BaseBadge(mode='elegant') {{ getCart.qty }}
       li(v-if='isAuth')
         RouterLink(to='/admin') Admin
   div
@@ -18,13 +18,14 @@ header
 
 <script>
 import {mapActions, mapGetters} from 'vuex'
+
 export default {
-  inject: ['cart'],
   methods: {
     ...mapActions('auth', ['logIn', "logOut"])
   },
   computed: {
-    ...mapGetters('auth', ['isAuth'])
+    ...mapGetters('auth', ['isAuth']),
+    ...mapGetters('cart', ['getCart'])
   }
 };
 </script>
