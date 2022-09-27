@@ -19,7 +19,6 @@ export default {
     state.cart.qty++;
     state.cart.total += payload.price;
   },
-
   removeProductFromCart(state, payload) {
     const productInCartIndex = state.cart.items.findIndex(
       (cartItem) => cartItem.productId === payload
