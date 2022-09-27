@@ -1,5 +1,5 @@
 <template lang="pug">
-BaseContainer(title="Vuex")
+BaseContainer(title="Vuex" v-if="userIsAuthenticated")
   TheCounter
   FavoriteValue
   button(@click="addOne") Add 10
@@ -14,6 +14,7 @@ import TheCounter from "@/components/TheCounter";
 import ChangeCounter from "@/components/ChangeCounter";
 import FavoriteValue from "@/components/FavoriteValue";
 import UserAuth from "@/components/UserAuth";
+import {mapGetters} from "vuex";
 
 export default {
   components: {
@@ -27,10 +28,13 @@ export default {
     addOne() {
       // this.$store.dispatch('increase', {value: 10});
       this.$store.dispatch({
-        type: 'increase',
+        type: 'numbers/increase',
         value: 10
       })
     },
+  },
+  computed: {
+    ...mapGetters(['userIsAuthenticated'])
   }
 };
 </script>
