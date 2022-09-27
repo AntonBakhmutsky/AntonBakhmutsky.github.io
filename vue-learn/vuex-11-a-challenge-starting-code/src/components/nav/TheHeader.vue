@@ -9,16 +9,23 @@ header
       li
         RouterLink(to='/cart') Cart
         BaseBadge(mode='elegant') {{ cart.qty }}
-      li(v-if='isLoggedIn')
+      li(v-if='isAuth')
         RouterLink(to='/admin') Admin
   div
-    button(v-if='!isLoggedIn' @click='login') Login
-    button(v-if='isLoggedIn' @click='logout') Logout
+    button(v-if='!isAuth' @click='logIn') Login
+    button(v-if='isAuth' @click='logOut') Logout
 </template>
 
 <script>
+import {mapActions, mapGetters} from 'vuex'
 export default {
-  inject: ['isLoggedIn', 'login', 'logout', 'cart'],
+  inject: ['cart'],
+  methods: {
+    ...mapActions('auth', ['logIn', "logOut"])
+  },
+  computed: {
+    ...mapGetters('auth', ['isAuth'])
+  }
 };
 </script>
 
