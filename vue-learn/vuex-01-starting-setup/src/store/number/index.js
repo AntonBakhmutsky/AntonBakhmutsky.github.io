@@ -2,8 +2,7 @@ import numberMutations from'./mutations';
 import numberActions from'./actions';
 import numberGetters from'./getters';
 
-
-const counterModule = {
+export default {
   namespaced: true,
   state() {
     return {
@@ -14,5 +13,3 @@ const counterModule = {
   actions: numberActions,
   getters: numberGetters
 }
-
-export default counterModule
