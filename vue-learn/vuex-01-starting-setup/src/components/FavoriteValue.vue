@@ -1,12 +1,13 @@
 <template lang="pug">
 h3 {{ counter }}
+p We do more...
 </template>
 
 <script>
 export default {
   computed: {
     counter() {
-      return this.$store.state.counter * 2;
+      return this.$store.getters.normalizedCounter;
     }
   },
 }

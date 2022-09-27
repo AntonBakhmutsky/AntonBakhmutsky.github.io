@@ -6,7 +6,7 @@ button(@click="addOne") Add 2
 export default {
   methods: {
     addOne() {
-      this.$store.commit('increment');
+      this.$store.dispatch('increment');
     },
   }
 }
