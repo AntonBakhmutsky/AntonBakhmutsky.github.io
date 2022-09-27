@@ -4,6 +4,10 @@ section
   p There isn't much to do at the moment - sorry ...
 </template>
 
+<script>
+export default {}
+</script>
+
 <style scoped lang="sass">
 section
   text-align: center

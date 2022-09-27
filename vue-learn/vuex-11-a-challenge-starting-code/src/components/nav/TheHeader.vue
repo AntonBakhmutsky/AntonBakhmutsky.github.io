@@ -1,16 +1,16 @@
 <template lang="pug">
 header
   h1
-    router-link(to='/') VueShop
+    RouterLink(to='/') VueShop
   nav
     ul
       li
-        router-link(to='/products') Products
+        RouterLink(to='/products') Products
       li
-        router-link(to='/cart') Cart
-        base-badge(mode='elegant') {{ cart.qty }}
+        RouterLink(to='/cart') Cart
+        BaseBadge(mode='elegant') {{ cart.qty }}
       li(v-if='isLoggedIn')
-        router-link(to='/admin') Admin
+        RouterLink(to='/admin') Admin
   div
     button(v-if='!isLoggedIn' @click='login') Login
     button(v-if='isLoggedIn' @click='logout') Logout

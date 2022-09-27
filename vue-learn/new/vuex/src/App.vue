@@ -1,6 +1,6 @@
-<template lang="pug">
-TheHeader
-RouterView
+<template>
+  <the-header></the-header>
+  <router-view></router-view>
 </template>
 
 <script>
@@ -26,7 +26,7 @@ export default {
         {
           id: 'p2',
           image:
-            'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Adenium_Seed_Pappus_Black_Uthandi_Aug21_D72_20862.jpg/500px-Adenium_Seed_Pappus_Black_Uthandi_Aug21_D72_20862.jpg',
+            'https://upload.wikimedia.org/wikipedia/en/thumb/c/c9/Tent_at_High_Shelf_Camp_cropped.jpg/640px-Tent_at_High_Shelf_Camp_cropped.jpg',
           title: 'Mountain Tent',
           description: 'A tent for the ambitious outdoor tourist.',
           price: 129.99,
@@ -88,23 +88,24 @@ export default {
     },
     login() {
       this.isLoggedIn = true;
-      console.log(this.isLoggedIn)
     },
     logout() {
       this.isLoggedIn = false;
-      console.log(this.isLoggedIn)
     },
   },
 };
 </script>
 
-<style lang="sass">
-*
-  box-sizing: border-box
+<style>
+* {
+  box-sizing: border-box;
+}
 
-html
-  font-family: sans-serif
+html {
+  font-family: sans-serif;
+}
 
-body
-  margin: 0
+body {
+  margin: 0;
+}
 </style>
