@@ -1,6 +1,6 @@
-<template>
-  <the-header></the-header>
-  <router-view></router-view>
+<template lang="pug">
+TheHeader
+RouterView
 </template>
 
 <script>
@@ -96,16 +96,13 @@ export default {
 };
 </script>
 
-<style>
-* {
-  box-sizing: border-box;
-}
+<style lang="sass">
+*
+  box-sizing: border-box
 
-html {
-  font-family: sans-serif;
-}
+html
+  font-family: sans-serif
 
-body {
-  margin: 0;
-}
+body
+  margin: 0
 </style>
