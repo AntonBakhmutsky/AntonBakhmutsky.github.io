@@ -11,22 +11,22 @@ li
       div
         | Quantity:
         strong {{ qty }}
-    .item__total Total: ${{ itemTotal }}
-    button(@click='removeProductFromCart') Remove
+    .item__total Total: ${{ getCartTotal }}
+    button(@click='remove') Remove
 </template>
 
 <script>
-import {mapActions} from 'vuex';
+import {mapGetters} from 'vuex';
 
 export default {
   props: ['prodId', 'title', 'image', 'price', 'qty'],
   computed: {
-    itemTotal() {
-      return (this.price * this.qty).toFixed(2);
-    }
+   ...mapGetters('cart', ['getCartTotal'])
   },
   methods: {
-    ...mapActions('cart', ['removeProductFromCart'])
+    remove() {
+      this.$store.dispatch('cart/removeProductFromCart', {productId: this.prodId})
+    }
   }
 };
 </script>

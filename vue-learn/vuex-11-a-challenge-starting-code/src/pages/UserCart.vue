@@ -5,7 +5,7 @@ section
     BaseBadge(mode='elegant') ${{ getCartTotal }}
   ul
     CartItem(
-      v-for='item in getCart.items'
+      v-for='item in getCart'
       :key='item.productId'
       :prod-id='item.productId'
       :title='item.title'

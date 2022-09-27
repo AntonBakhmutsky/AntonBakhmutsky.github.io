@@ -1,31 +1,33 @@
 export default {
   addProductToCart(state, payload) {
-    const productInCartIndex = state.cart.items.findIndex(
-      (ci) => ci.productId === payload.id
+    const productData = payload;
+    const productInCartIndex = state.items.findIndex(
+      (ci) => ci.productId === productData.id
     );
 
     if (productInCartIndex >= 0) {
-      state.cart.items[productInCartIndex].qty++;
+      state.items[productInCartIndex].qty++;
     } else {
       const newItem = {
-        productId: payload.id,
-        title: payload.title,
-        image: payload.image,
-        price: payload.price,
+        productId: productData.id,
+        title: productData.title,
+        image: productData.image,
+        price: productData.price,
         qty: 1,
       };
-      state.cart.items.push(newItem);
+      state.items.push(newItem);
     }
-    state.cart.qty++;
-    state.cart.total += payload.price;
+    state.qty++;
+    state.total += productData.price;
   },
   removeProductFromCart(state, payload) {
-    const productInCartIndex = state.cart.items.findIndex(
-      (cartItem) => cartItem.productId === payload
+    const prodId = payload.productId;
+    const productInCartIndex = state.items.findIndex(
+      (cartItem) => cartItem.productId === prodId
     );
-    const prodData = state.cart.items[productInCartIndex];
-    state.cart.items.splice(productInCartIndex, 1);
-    state.cart.qty -= prodData.qty;
-    state.cart.total -= prodData.price * prodData.qty;
-  },
+    const prodData = state.items[productInCartIndex];
+    state.items.splice(productInCartIndex, 1);
+    state.qty -= prodData.qty;
+    state.total -= prodData.price * prodData.qty;
+  }
 }

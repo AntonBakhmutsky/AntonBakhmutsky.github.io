@@ -8,7 +8,7 @@ header
         RouterLink(to='/products') Products
       li
         RouterLink(to='/cart') Cart
-        BaseBadge(mode='elegant') {{ getCart.qty }}
+        BaseBadge(mode='elegant') {{ getCartQty }}
       li(v-if='isAuth')
         RouterLink(to='/admin') Admin
   div
@@ -25,7 +25,7 @@ export default {
   },
   computed: {
     ...mapGetters('auth', ['isAuth']),
-    ...mapGetters('cart', ['getCart'])
+    ...mapGetters('cart', ['getCart', 'getCartQty'])
   }
 };
 </script>

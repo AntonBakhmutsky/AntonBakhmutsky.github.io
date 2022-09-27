@@ -6,7 +6,9 @@ export default {
   namespaced: true,
   state() {
     return {
-      cart: { items: [], total: 0, qty: 0 }
+      items: [],
+      total: 0,
+      qty: 0
     }
   },
   mutations: cartMutations,
