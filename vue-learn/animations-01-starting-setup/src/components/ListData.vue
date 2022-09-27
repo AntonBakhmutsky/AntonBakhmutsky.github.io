@@ -36,6 +36,7 @@ ul
     border: 1px solid #ccc
     padding: 1rem
     text-align: center
+    cursor: pointer
 
 div
   display: flex
@@ -66,9 +67,12 @@ div
 
 .list-leave-active
   transition: 1s
+  position: absolute
 
 .list-leave-to
   opacity: 0
   transform: translateX(-30px)
 
+.list-move
+  transition: transform .4s ease
 </style>
