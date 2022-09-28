@@ -12,6 +12,9 @@
     display: grid
     grid-template-columns: repeat(auto-fill, minmax(330px, 1fr))
     grid-gap: 20px
+    +screen($tablet)
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr))
+
 
   &__item
     &-image
@@ -24,6 +27,8 @@
       display: flex
       align-items: center
       justify-content: center
+      +screen($tablet-xs)
+        height: 300px
 
     &-txt
       transition: .4s color

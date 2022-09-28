@@ -21,10 +21,7 @@ export default {
     ...mapActions('cart', ['addProductToCart']),
     addToCart() {
       this.addProductToCart({
-        id: this.id,
-        image: this.image,
-        title: this.title,
-        price: this.price,
+        id: this.id
       });
     },
   },
