@@ -518,6 +518,8 @@
   productModificationsItems = [
     {
       title: '54901-22-92 (4х2)',
+      status: 'stock',
+      price: '4 299 999 руб',
       characteristics: [
         {name: 'Двигатель', value: 'Р6 910.12-450 (Евро-5)'},
         {name: 'Мощность двигателя', value: '280 л.с.'},
@@ -554,6 +556,8 @@
     },
     {
       title: '54901-53-92 (4х2)',
+      status: 'order',
+      price: '4 299 999 руб',
       characteristics: [
         {name: 'Двигатель', value: 'Р6 910.12-450 (Евро-5)'},
         {name: 'Мощность двигателя', value: '420 л.с.'},
@@ -876,8 +880,24 @@
 
   // transport types
   typesImages = [
-    require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/types/feight-transport.svg'),
-    require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/types/semi-trailers.svg'),
-    require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/types/special.svg'),
-    require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/types/bus.svg')
+    {
+      img: require('@/assets/img/types/feight-transport.svg'),
+      txt: 'Грузовой транспорт',
+      href: 'javascript:'
+    },
+    {
+      img: require('@/assets/img/types/semi-trailers.svg'),
+      txt: 'Полуприцепы',
+      href: 'javascript:'
+    },
+    {
+      img: require('@/assets/img/types/special.svg'),
+      txt: 'Спецтехника',
+      href: 'javascript:'
+    },
+    {
+      img: require('@/assets/img/types/bus.svg'),
+      txt: 'Автобусы',
+      href: 'javascript:'
+    },
   ]

@@ -15,11 +15,41 @@
       +font(32px, 38px, 500)
       color: $black-light
 
+    &-top
+      display: flex
+      align-items: center
+      justify-content: space-between
+      +screen($tablet)
+        flex-direction: column
+        align-items: flex-start
+
+    &-container
+      display: flex
+      align-items: center
+      +screen($tablet-sm)
+        flex-direction: column
+        align-items: flex-start
+        width: 100%
+
+    &-price
+      white-space: nowrap
+      margin-right: 40px
+      +font(32px, 38px, 500)
+      +screen($tablet-sm)
+        margin: 10px 0 0 0
+
+    &-call
+      width: 250px
+      +screen($tablet-sm)
+        width: 100%
+        max-width: none
+        margin-top: 15px
+
     &:not(:first-child)
       margin-top: 15px
 
     .characteristic-list
-      margin: 0
+      margin: 10px 0 0 0
       display: flex
       grid-template-columns: none
       grid-gap: inherit

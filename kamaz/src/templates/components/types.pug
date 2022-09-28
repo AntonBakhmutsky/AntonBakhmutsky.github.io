@@ -3,7 +3,8 @@ section.types
     h2.section-title.slide-right Выберете тип транспорта
     .types__grid
       each el in typesImages
-        .types__item
+        a.types__item(href=el.href)
           .types__item-image
-            | !{el}
+            img(src=el.img alt="")
+          .types__item-txt #{el.txt}
 
