@@ -1,9 +1,29 @@
 <template lang="pug">
-
+button(v-if="!link" :class="mode")
+  slot
+RouterLink(v-else :to="to" :class="mode")
+  slot
 </template>
 
 <script>
-export default {}
+export default {
+  props: {
+    mode: {
+      type: String,
+      required: false,
+      default: null
+    },
+    link: {
+      type: Boolean,
+      required: false
+    },
+    to: {
+      type: String,
+      required: false,
+      default: '/'
+    }
+  }
+}
 </script>
 
 <style lang="sass" scoped>

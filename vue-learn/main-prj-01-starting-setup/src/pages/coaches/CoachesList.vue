@@ -1,20 +1,21 @@
 <template lang="pug">
 section FILTER
 section
-  .controls
-    button() Refresh
-    RouterLink(to="/register") Register as Coach
-  ul(v-if="hasCoaches")
-    CoachItem(
-      v-for="coach in filteredCoaches"
-      :key="coach.id"
-      :id="coach.id"
-      :first-name="coach.firstName"
-      :last-name="coach.lastName"
-      :rate="coach.hourlyRate"
-      :areas="coach.areas"
-    )
-  h3 No coaches found.
+  BaseCard
+    .controls
+      BaseButton(mode="outline") Refresh
+      BaseButton(to="/register" link) Register as Coach
+    ul(v-if="hasCoaches")
+      CoachItem(
+        v-for="coach in filteredCoaches"
+        :key="coach.id"
+        :id="coach.id"
+        :first-name="coach.firstName"
+        :last-name="coach.lastName"
+        :rate="coach.hourlyRate"
+        :areas="coach.areas"
+      )
+    h3 No coaches found.
 </template>
 
 <script>

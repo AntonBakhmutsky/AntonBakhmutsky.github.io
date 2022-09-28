@@ -1,9 +1,16 @@
 <template lang="pug">
-
+span.badge(:class="type") {{ text }}
 </template>
 
 <script>
-export default {}
+export default {
+  props: ['type', 'title'],
+  computed: {
+    text() {
+      return this.title.toUpperCase();
+    }
+  }
+}
 </script>
 
 <style lang="sass" scoped>

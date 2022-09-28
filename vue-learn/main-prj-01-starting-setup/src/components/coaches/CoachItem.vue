@@ -5,12 +5,14 @@ li
   div
     span(v-for="area in areas" :key="area") {{ area }}
   .actions
-    RouterLink(:to="coachContactLink") Contact
-    RouterLink(:to="coachDetailsLink") View Details
+    BaseButton(:to="coachContactLink" link mode="outline") Contact
+    BaseButton(:to="coachDetailsLink" link) View Details
 </template>
 
 <script>
+import BaseButton from "@/components/UI/BaseButton";
 export default {
+  components: {BaseButton},
   props: ['id', 'firstName', 'lastName', 'rate', 'areas'],
   computed: {
     fullName() {
