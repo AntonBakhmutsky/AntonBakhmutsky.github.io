@@ -1,6 +1,10 @@
 <template lang="pug">
 section FILTER
-section  LIST OF COACHES
+section
+  .controls
+    button() Refresh
+    RouterLink(to="/register") Register as Coach
+  ul LIST OF COACHES
 </template>
 
 <script>

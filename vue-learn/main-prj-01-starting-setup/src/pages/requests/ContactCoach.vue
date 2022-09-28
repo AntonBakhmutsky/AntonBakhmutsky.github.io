@@ -1,5 +1,5 @@
 <template lang="pug">
-
+p Contact
 </template>
 
 <script>
