@@ -5,8 +5,10 @@ section
   BaseCard
     .controls
       BaseButton(mode="outline" @click="loadCoaches") Refresh
-      BaseButton(to="/register" link v-if="!isCoach") Register as Coach
-    ul(v-if="hasCoaches")
+      BaseButton(to="/register" link v-if="!isCoach && !isLoading") Register as Coach
+    div(v-if="isLoading")
+      BaseSpinner
+    ul(v-else-if="hasCoaches")
       CoachItem(
         v-for="coach in filteredCoaches"
         :key="coach.id"
@@ -30,11 +32,12 @@ export default {
   },
   data() {
     return {
+      isLoading: false,
       activeFilters: {
         frontend: true,
         backend: true,
         career: true
-      }
+      },
     }
   },
   computed: {
@@ -51,7 +54,7 @@ export default {
       });
     },
     hasCoaches() {
-      return this.$store.getters['coaches/hasCoaches'];
+      return !this.isLoading && this.$store.getters['coaches/hasCoaches'];
     },
     isCoach() {
       return this.$store.getters['coaches/isCoach'];
@@ -64,8 +67,10 @@ export default {
     setFilters(updatedFilters) {
       this.activeFilters = updatedFilters;
     },
-    loadCoaches() {
-      this.$store.dispatch('coaches/loadCoaches');
+    async loadCoaches() {
+      this.isLoading = true;
+      await this.$store.dispatch('coaches/loadCoaches');
+      this.isLoading = false;
     }
   }
 }

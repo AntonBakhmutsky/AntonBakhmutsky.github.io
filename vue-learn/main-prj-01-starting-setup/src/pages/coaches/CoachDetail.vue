@@ -7,7 +7,7 @@ section
   BaseCard
     header
       h2 Interested? Reach out now!
-      BaseButton(link :to="contactLink") Contact
+      BaseButton(link :to="contactLink" v-if="!isContact") Contact
     RouterView
 section
   BaseCard
@@ -24,11 +24,14 @@ export default {
     }
   },
   computed: {
+    isContact() {
+      return /contact/.test(this.$route.path);
+    },
     fullName() {
       return `${this.selectedCoach.firstName} ${this.selectedCoach.lastName}`;
     },
     contactLink() {
-      return `${this.$route.path}/${this.id}/contact`;
+      return `${this.$route.path}/contact`;
     },
     areas() {
       return this.selectedCoach.areas;
