@@ -5,7 +5,7 @@ section
   BaseCard
     .controls
       BaseButton(mode="outline") Refresh
-      BaseButton(to="/register" link) Register as Coach
+      BaseButton(to="/register" link v-if="!isCoach") Register as Coach
     ul(v-if="hasCoaches")
       CoachItem(
         v-for="coach in filteredCoaches"
@@ -52,6 +52,9 @@ export default {
     },
     hasCoaches() {
       return this.$store.getters['coaches/hasCoaches'];
+    },
+    isCoach() {
+      return this.$store.getters['coaches/isCoach'];
     }
   },
   methods: {
