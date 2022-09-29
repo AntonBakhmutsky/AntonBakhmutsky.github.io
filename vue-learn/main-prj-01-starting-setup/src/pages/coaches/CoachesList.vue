@@ -4,7 +4,7 @@ section
 section
   BaseCard
     .controls
-      BaseButton(mode="outline") Refresh
+      BaseButton(mode="outline" @click="loadCoaches") Refresh
       BaseButton(to="/register" link v-if="!isCoach") Register as Coach
     ul(v-if="hasCoaches")
       CoachItem(
@@ -57,9 +57,15 @@ export default {
       return this.$store.getters['coaches/isCoach'];
     }
   },
+  created() {
+    this.loadCoaches();
+  },
   methods: {
     setFilters(updatedFilters) {
       this.activeFilters = updatedFilters;
+    },
+    loadCoaches() {
+      this.$store.dispatch('coaches/loadCoaches');
     }
   }
 }
