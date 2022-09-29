@@ -4,7 +4,7 @@ form(@submit.prevent="submitForm")
     label(for="email") Your E-mail
     input#email(type="email" v-model.trim="email")
   .form-control
-    label(for="message") Your E-mail
+    label(for="message") Message
     textarea#message(rows="5" v-model.trim="message")
     p.errors(v-if="!formIsValid") Please enter a valid email and non-empty message.
   .actions
