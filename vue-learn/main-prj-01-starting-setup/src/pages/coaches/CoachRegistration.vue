@@ -2,15 +2,22 @@
 section
   BaseCard
     h2 Register as a coach now!
-    CoachForm
+    CoachForm(@save-data="saveData")
 </template>
 
 <script>
 import CoachForm from '@/components/coaches/CoachForm';
 
 export default {
+  emits: ['save-data'],
   components: {
     CoachForm
+  },
+  methods: {
+    saveData(data) {
+      this.$store.dispatch('coaches/registerCoach', data);
+      this.$router.replace('/coaches');
+    }
   }
 }
 </script>
