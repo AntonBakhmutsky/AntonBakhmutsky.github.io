@@ -3,16 +3,14 @@ li
   h3 {{ fullName }}
   h4 {{ rate }}/hour
   div
-    span(v-for="area in areas" :key="area") {{ area }}
+    BaseBadge(v-for="area in areas" :key="area" :class="area" :title="area")
   .actions
     BaseButton(:to="coachContactLink" link mode="outline") Contact
     BaseButton(:to="coachDetailsLink" link) View Details
 </template>
 
 <script>
-import BaseButton from "@/components/UI/BaseButton";
 export default {
-  components: {BaseButton},
   props: ['id', 'firstName', 'lastName', 'rate', 'areas'],
   computed: {
     fullName() {
