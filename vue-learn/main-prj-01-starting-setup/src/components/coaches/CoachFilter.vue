@@ -28,13 +28,30 @@ export default {
     setFilter(event) {
       const inputId = event.target.id;
       const isActive = event.target.checked;
-      const updateFilters = {
+      const updatedFilters = {
         ...this.filters,
         [inputId]: isActive
       }
-      this.filters = updateFilters;
-      this.$emit('change-filter', updateFilters)
+      this.filters = updatedFilters;
+      this.$emit('change-filter', updatedFilters);
     },
   }
 }
 </script>
+
+<style lang="sass" scoped>
+h2
+  margin: 0.5rem 0
+
+.filter-option
+  margin-right: 1rem
+
+  label, input
+    vertical-align: middle
+
+  label
+    margin-left: 0.25rem
+
+  &.active label
+    font-weight: bold
+</style>

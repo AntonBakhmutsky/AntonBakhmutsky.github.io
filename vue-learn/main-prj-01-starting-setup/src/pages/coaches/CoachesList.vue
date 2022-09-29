@@ -1,5 +1,6 @@
 <template lang="pug">
-section FILTER
+section
+  CoachFilter(@change-filter="setFilters")
 section
   BaseCard
     .controls
@@ -15,20 +16,47 @@ section
         :rate="coach.hourlyRate"
         :areas="coach.areas"
       )
-    h3 No coaches found.
+    h3(v-else) No coaches found.
 </template>
 
 <script>
 import CoachItem from '@/components/coaches/CoachItem';
+import CoachFilter from '@/components/coaches/CoachFilter';
 
 export default {
-  components: {CoachItem},
+  components: {
+    CoachItem,
+    CoachFilter
+  },
+  data() {
+    return {
+      activeFilters: {
+        frontend: true,
+        backend: true,
+        career: true
+      }
+    }
+  },
   computed: {
     filteredCoaches() {
-      return this.$store.getters['coaches/coaches'];
+      const coaches = this.$store.getters['coaches/coaches'];
+      return coaches.filter(coach => {
+        if (this.activeFilters.frontend && coach.areas.includes('frontend')) {
+          return true;
+        }
+        if (this.activeFilters.backend && coach.areas.includes('backend')) {
+          return true;
+        }
+        return this.activeFilters.career && coach.areas.includes('career');
+      });
     },
     hasCoaches() {
       return this.$store.getters['coaches/hasCoaches'];
+    }
+  },
+  methods: {
+    setFilters(updatedFilters) {
+      this.activeFilters = updatedFilters;
     }
   }
 }
