@@ -5,6 +5,7 @@ import requestsModule from './modules/requests/index'
 
 const store = createStore({
   modules: {
+    lastFetch: null,
     coaches: coachesModule,
     requests: requestsModule
   },
