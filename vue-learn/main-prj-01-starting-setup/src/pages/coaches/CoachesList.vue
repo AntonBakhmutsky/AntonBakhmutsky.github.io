@@ -8,7 +8,7 @@ div
     BaseCard
       .controls
         BaseButton(mode="outline" @click="loadCoaches(true)") Refresh
-        BaseButton(to="/register" link v-if="!isCoach && !isLoading") Register as Coach
+        BaseButton(to="/register" link v-if="isLoggedIn && !isCoach && !isLoading") Register as Coach
       div(v-if="isLoading")
         BaseSpinner
       ul(v-else-if="hasCoaches")
@@ -45,6 +45,9 @@ export default {
     }
   },
   computed: {
+    isLoggedIn() {
+      return this.$store.getters.isAuthenticated;
+    },
     filteredCoaches() {
       const coaches = this.$store.getters['coaches/coaches'];
       return coaches.filter(coach => {
