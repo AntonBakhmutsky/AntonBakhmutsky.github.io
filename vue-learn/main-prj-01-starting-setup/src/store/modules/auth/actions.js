@@ -13,11 +13,16 @@ export default {
 
     if (!response.ok) {
       console.log(responseData);
-      throw new Error(responseData.error.message || 'Failed to authenticate.');
+      const error = new Error(responseData.error.message || 'Failed to authenticate.');
+      throw error;
     }
 
     console.log(responseData);
-    context.commit('setUser', { token: responseData.idToken, userId: responseData.localId, tokenExpiration: responseData.expiresIn});
+    context.commit('setUser', {
+      token: responseData.idToken,
+      userId: responseData.localId,
+      tokenExpiration: responseData.expiresIn
+    });
   },
   async signup(context, payload) {
     const response = await fetch('https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyCD_0afDlRVpcMa3i9pngM4TFb06H01kiY', {
@@ -33,10 +38,15 @@ export default {
 
     if (!response.ok) {
       console.log(responseData);
-      throw new Error(responseData.error.message || 'Failed to authenticate.');
+      const error = new Error(responseData.error.message || 'Failed to authenticate.');
+      throw error;
     }
 
     console.log(responseData);
-    context.commit('setUser', { token: responseData.idToken, userId: responseData.localId, tokenExpiration: responseData.expiresIn});
+    context.commit('setUser', {
+      token: responseData.idToken,
+      userId: responseData.localId,
+      tokenExpiration: responseData.expiresIn
+    });
   }
-}
+};

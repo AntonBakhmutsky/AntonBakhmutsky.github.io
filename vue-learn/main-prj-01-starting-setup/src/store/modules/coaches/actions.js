@@ -11,7 +11,9 @@ export default {
 
     const token = context.rootGetters.token;
 
-    const response = await fetch(`https://vue-http-demo-ca7ca-default-rtdb.firebaseio.com/coaches/${userId}.json?auth=${token}`, {
+    const response = await fetch(`https://vue-http-demo-ca7ca-default-rtdb.firebaseio.com/coaches/${userId}.json?auth=` +
+      token,
+      {
       method: 'PUT',
       body: JSON.stringify(coachData)
     });
@@ -31,11 +33,14 @@ export default {
     if (!payload.forceRefresh && !context.getters.shouldUpdate) {
       return;
     }
-    const response = await fetch(`https://vue-http-demo-ca7ca-default-rtdb.firebaseio.com/coaches.json`);
+    const response = await fetch(
+      `https://vue-http-demo-ca7ca-default-rtdb.firebaseio.com/coaches.json`
+    );
     const responseData = await response.json();
 
     if (!response.ok) {
-      throw new Error(responseData.message || 'Failed to fetch!');
+      const error = new Error(responseData.message || 'Failed to fetch!');
+      throw error;
     }
 
     const coaches = [];
@@ -51,7 +56,8 @@ export default {
       }
       coaches.push(coach);
     }
+
     context.commit('setCoaches', coaches);
     context.commit('setFetchTimeStamp');
   }
-}
+};

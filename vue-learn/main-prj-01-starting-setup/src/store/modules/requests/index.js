@@ -12,4 +12,4 @@ export default {
   mutations: mutations,
   actions: actions,
   getters: getters
-}
+};
