@@ -3,6 +3,7 @@ import actions from './actions';
 import getters from './getters';
 
 export default {
+  lastFetch: null,
   namespaced: true,
   state() {
     return {
