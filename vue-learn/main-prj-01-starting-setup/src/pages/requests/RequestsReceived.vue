@@ -1,14 +1,15 @@
 <template lang="pug">
-BaseDialog(:show="!!error" title="An error occurred!" @close="handleError")
-  p {{ error }}
-section
-  BaseCard
-    header
-      h2 Requests Received
-    BaseSpinner(v-if="isLoading")
-    ul(v-else-if="hasRequests && !isLoading")
-      RequestItem(v-for="req in receivedRequests" :key="req.id" :email="req.userEmail", :message="req.message")
-    h3(v-else) You haven't received any request yet!
+div
+  BaseDialog(:show="!!error" title="An error occurred!" @close="handleError")
+    p {{ error }}
+  section
+    BaseCard
+      header
+        h2 Requests Received
+      BaseSpinner(v-if="isLoading")
+      ul(v-else-if="hasRequests && !isLoading")
+        RequestItem(v-for="req in receivedRequests" :key="req.id" :email="req.userEmail", :message="req.message")
+      h3(v-else) You haven't received any request yet!
 </template>
 
 <script>

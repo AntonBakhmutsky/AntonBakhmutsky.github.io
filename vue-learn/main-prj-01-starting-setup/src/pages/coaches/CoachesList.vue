@@ -1,26 +1,27 @@
 <template lang="pug">
-BaseDialog(:show="!!error" title="An error occurred!" @close="handleError")
-  p {{ error }}
-section
-  CoachFilter(@change-filter="setFilters")
-section
-  BaseCard
-    .controls
-      BaseButton(mode="outline" @click="loadCoaches(true)") Refresh
-      BaseButton(to="/register" link v-if="!isCoach && !isLoading") Register as Coach
-    div(v-if="isLoading")
-      BaseSpinner
-    ul(v-else-if="hasCoaches")
-      CoachItem(
-        v-for="coach in filteredCoaches"
-        :key="coach.id"
-        :id="coach.id"
-        :first-name="coach.firstName"
-        :last-name="coach.lastName"
-        :rate="coach.hourlyRate"
-        :areas="coach.areas"
-      )
-    h3(v-else) No coaches found.
+div
+  BaseDialog(:show="!!error" title="An error occurred!" @close="handleError")
+    p {{ error }}
+  section
+    CoachFilter(@change-filter="setFilters")
+  section
+    BaseCard
+      .controls
+        BaseButton(mode="outline" @click="loadCoaches(true)") Refresh
+        BaseButton(to="/register" link v-if="!isCoach && !isLoading") Register as Coach
+      div(v-if="isLoading")
+        BaseSpinner
+      ul(v-else-if="hasCoaches")
+        CoachItem(
+          v-for="coach in filteredCoaches"
+          :key="coach.id"
+          :id="coach.id"
+          :first-name="coach.firstName"
+          :last-name="coach.lastName"
+          :rate="coach.hourlyRate"
+          :areas="coach.areas"
+        )
+      h3(v-else) No coaches found.
 </template>
 
 <script>

@@ -1,18 +1,19 @@
 <template lang="pug">
-section
-  BaseCard
-    h2 {{ fullName }}
-    h3 {{ rate }}
-section
-  BaseCard
-    header
-      h2 Interested? Reach out now!
-      BaseButton(link :to="contactLink" v-if="!isContact") Contact
-    RouterView
-section
-  BaseCard
-    BaseBadge(v-for="area in areas" :key="area" :class="area" :title="area")
-    p {{ description }}
+div
+  section
+    BaseCard
+      h2 {{ fullName }}
+      h3 {{ rate }}
+  section
+    BaseCard
+      header
+        h2 Interested? Reach out now!
+        BaseButton(link :to="contactLink" v-if="!isContact") Contact
+      RouterView
+  section
+    BaseCard
+      BaseBadge(v-for="area in areas" :key="area" :class="area" :title="area")
+      p {{ description }}
 </template>
 
 <script>
