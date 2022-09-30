@@ -7,8 +7,5 @@ section
 </template>
 
 <script>
-import BaseCard from "@/components/UI/BaseCard";
-export default {
-  components: {BaseCard}
-}
+export default {}
 </script>
