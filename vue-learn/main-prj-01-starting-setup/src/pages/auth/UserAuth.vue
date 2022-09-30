@@ -1,15 +1,20 @@
 <template lang="pug">
-BaseCard
-  form(@submit.prevent="submitForm")
-    .form-control
-      label(for="email") E-mail
-      input#email(type="email" v-model.trim="email")
-    .form-control
-      label(for="email") Password
-      input#password(type="password" v-model.trim="password")
-    p(v-if="!formIsValid") Please enter a valid email and password (must be at least 6 characters long)
-    BaseButton {{ submitButtonCaption }}
-    BaseButton(type="button" mode="flat" @click="switchAuthMethod") {{ switchModeButtonCaption }}
+div
+  BaseDialog(:show="!!error" title="An error occurred" @close="handleError")
+    p {{ error }}
+  BaseDialog(:show="isLoading" title="Authenticating..." fixed)
+    BaseSpinner
+  BaseCard
+    form(@submit.prevent="submitForm")
+      .form-control
+        label(for="email") E-mail
+        input#email(type="email" v-model.trim="email")
+      .form-control
+        label(for="email") Password
+        input#password(type="password" v-model.trim="password")
+      p(v-if="!formIsValid") Please enter a valid email and password (must be at least 6 characters long)
+      BaseButton {{ submitButtonCaption }}
+      BaseButton(type="button" mode="flat" @click="switchAuthMethod") {{ switchModeButtonCaption }}
 </template>
 
 <script>
@@ -19,7 +24,9 @@ export default {
       email: '',
       password: '',
       formIsValid: true,
-      mode: 'login'
+      mode: 'login',
+      isLoading: false,
+      error: null
     }
   },
   computed: {
@@ -39,20 +46,34 @@ export default {
     },
   },
   methods: {
-    submitForm() {
+    handleError() {
+      this.error = null;
+    },
+    async submitForm() {
       if (this.email === '' || !this.email.includes('@') || this.password.length < 6) {
         this.formIsValid = false;
         return;
       }
 
-      if (this.mode === 'login') {
-        // ....
-      } else {
-        this.$store.dispatch('auth/signup', {
-          email: this.email,
-          password: this.password
-        })
+      this.isLoading = true;
+
+      const actionPayload = {
+        email: this.email,
+        password: this.password
       }
+
+      try {
+        if (this.mode === 'login') {
+          await this.$store.dispatch('auth/login', actionPayload);
+        } else {
+          await this.$store.dispatch('auth/signup', actionPayload);
+        }
+      } catch(error) {
+        this.error = error.message || 'Failed to authenticate? try later.'
+      }
+
+
+      this.isLoading = false;
     },
     switchAuthMethod() {
       if (this.mode === 'login') {

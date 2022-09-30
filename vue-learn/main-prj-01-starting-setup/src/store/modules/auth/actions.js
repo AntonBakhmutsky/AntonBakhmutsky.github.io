@@ -1,5 +1,24 @@
 export default {
-  login() {},
+  async login(context, payload) {
+    const response = await fetch('https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyCD_0afDlRVpcMa3i9pngM4TFb06H01kiY', {
+      method: 'POST',
+      body: JSON.stringify({
+        email: payload.email,
+        password: payload.password,
+        returnSecureToken: true
+      })
+    });
+
+    const responseData = await response.json();
+
+    if (!response.ok) {
+      console.log(responseData);
+      throw new Error(responseData.error.message || 'Failed to authenticate.');
+    }
+
+    console.log(responseData);
+    context.commit('setUser', { token: responseData.idToken, userId: responseData.localId, tokenExpiration: responseData.expiresIn});
+  },
   async signup(context, payload) {
     const response = await fetch('https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyCD_0afDlRVpcMa3i9pngM4TFb06H01kiY', {
       method: 'POST',
@@ -14,7 +33,7 @@ export default {
 
     if (!response.ok) {
       console.log(responseData);
-      throw new Error(responseData.message || 'Failed to authenticate.');
+      throw new Error(responseData.error.message || 'Failed to authenticate.');
     }
 
     console.log(responseData);
