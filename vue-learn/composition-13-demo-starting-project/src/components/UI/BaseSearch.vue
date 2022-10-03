@@ -1,7 +1,6 @@
-<template>
-  <form>
-    <input type="search" @input="search" :value="searchTerm" placeholder="Filter items" />
-  </form>
+<template lang="pug">
+form
+  input(type='search' @input='search' :value='searchTerm' placeholder='Filter items')
 </template>
 
 <script>
@@ -16,18 +15,16 @@ export default {
 };
 </script>
 
-<style scoped>
-input {
-  font: inherit;
-  width: 100%;
-  display: block;
-  padding: 0.15rem;
-  border: 1px solid #ccc;
-}
+<style lang="sass" scoped>
+input
+  font: inherit
+  width: 100%
+  display: block
+  padding: 0.15rem
+  border: 1px solid #ccc
 
-input:focus {
-  outline: none;
-  border-color: #00006b;
-  background-color: #eeeeff;
-}
+  &:focus
+    outline: none
+    border-color: #00006b
+    background-color: #eeeeff
 </style>

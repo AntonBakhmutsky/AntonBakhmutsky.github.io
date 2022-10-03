@@ -1,21 +1,12 @@
-<template>
-  <base-container>
-    <h2>Active Users</h2>
-    <base-search @search="updateSearch" :search-term="enteredSearchTerm"></base-search>
-    <div>
-      <button @click="sort('asc')" :class="{selected: sorting === 'asc'}">Sort Ascending</button>
-      <button @click="sort('desc')" :class="{selected: sorting === 'desc'}">Sort Descending</button>
-    </div>
-    <ul>
-      <user-item
-        v-for="user in displayedUsers"
-        :key="user.id"
-        :user-name="user.fullName"
-        :id="user.id"
-        @list-projects="$emit('list-projects', $event)"
-      ></user-item>
-    </ul>
-  </base-container>
+<template lang="pug">
+BaseContainer
+  h2 Active Users
+  BaseSearch(@search='updateSearch' :search-term='enteredSearchTerm')
+  div
+    button(@click="sort('asc')" :class="{selected: sorting === 'asc'}") Sort Ascending
+    button(@click="sort('desc')" :class="{selected: sorting === 'desc'}") Sort Descending
+  ul
+    UserItem(v-for='user in displayedUsers' :key='user.id' :user-name='user.fullName' :id='user.id' @list-projects="$emit('list-projects', $event)")
 </template>
 
 <script>
@@ -82,10 +73,9 @@ export default {
 };
 </script>
 
-<style scoped>
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
+<style lang="sass" scoped>
+ul
+  list-style: none
+  margin: 0
+  padding: 0
 </style>

@@ -1,15 +1,12 @@
-<template>
-  <base-container v-if="user">
-    <h2>{{ user.fullName }}: Projects</h2>
-    <base-search v-if="hasProjects" @search="updateSearch" :search-term="enteredSearchTerm"></base-search>
-    <ul v-if="hasProjects">
-      <project-item v-for="prj in availableProjects" :key="prj.id" :title="prj.title"></project-item>
-    </ul>
-    <h3 v-else>No projects found.</h3>
-  </base-container>
-  <base-container v-else>
-    <h3>No user selected.</h3>
-  </base-container>
+<template lang="pug">
+BaseContainer(v-if='user')
+  h2 {{ user.fullName }}: Projects
+  BaseSearch(v-if='hasProjects' @search='updateSearch' :search-term='enteredSearchTerm')
+  ul(v-if='hasProjects')
+    ProjectItem(v-for='prj in availableProjects' :key='prj.id' :title='prj.title')
+  h3(v-else='') No projects found.
+BaseContainer(v-else='')
+  h3 No user selected.
 </template>
 
 <script>
@@ -59,10 +56,9 @@ export default {
 };
 </script>
 
-<style scoped>
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
+<style lang="sass" scoped>
+ul
+  list-style: none
+  margin: 0
+  padding: 0
 </style>

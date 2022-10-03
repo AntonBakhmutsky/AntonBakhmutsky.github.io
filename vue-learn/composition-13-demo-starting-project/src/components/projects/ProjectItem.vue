@@ -1,7 +1,6 @@
-<template>
-  <li>
-    <h3>{{ title }}</h3>
-  </li>
+<template lang="pug">
+li
+  h3 {{ title }}
 </template>
 
 <script>
