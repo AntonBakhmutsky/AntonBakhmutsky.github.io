@@ -1,16 +1,20 @@
 <template lang="pug">
 section.container
-  h2 {{ userName }}
-  h3 {{ uAge }}
+  UserData(:first-name="firstName" :last-name="lastName" :age="uAge")
   button(@click="setAge") Change Age
   div
     input(type="text" placeholder="First Name" v-model="firstName")
-    input(type="text" placeholder="Last Name" v-model="lastName")
+    input(type="text" placeholder="Last Name" ref="lastNameInput")
+    button(@click="setLastName") Set Lastname
 </template>
 
 <script>
 import { ref, computed, reactive, watch } from 'vue'
+import UserData from '@/components/UserData';
 export default {
+  components: {
+    UserData
+  },
   setup() {
     // const uName = ref('Maximilian');
     const uAge = ref(31);
@@ -22,6 +26,7 @@ export default {
 
     const firstName = ref('');
     const lastName = ref('');
+    const lastNameInput = ref(null);
 
     watch(uAge, function(newValue, oldValue) {
       console.log('Old age: ' + oldValue);
@@ -36,8 +41,8 @@ export default {
       firstName.value = event.target.value;
     }
 
-    function setLastName(event) {
-      lastName.value = event.target.value;
+    function setLastName() {
+      lastName.value = lastNameInput.value.value;
     }
 
     // console.log(isRef(uAge));
@@ -51,7 +56,7 @@ export default {
       uAge.value = 32;
     }
 
-    return { user: user, setAge: setNewData, setFirstName, setLastName, userName: uName, firstName, lastName, uAge }
+    return { user: user, setAge: setNewData, setFirstName, setLastName, userName: uName, firstName, lastNameInput, lastName, uAge }
   }
   // data() {
   //   return {
