@@ -9,7 +9,7 @@ section.container
 </template>
 
 <script>
-import { ref, computed, reactive, watch } from 'vue'
+import { ref, computed, reactive, watch, provide } from 'vue'
 import UserData from '@/components/UserData';
 export default {
   components: {
@@ -44,6 +44,8 @@ export default {
     function setLastName() {
       lastName.value = lastNameInput.value.value;
     }
+
+    provide('userAge', uAge)
 
     // console.log(isRef(uAge));
     // console.log(isReactive(user), user.age)
