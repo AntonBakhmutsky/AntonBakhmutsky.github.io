@@ -8,7 +8,7 @@ div
     BaseCard
       .controls
         BaseButton(mode="outline" @click="loadCoaches(true)") Refresh
-        BaseButton(link to="/auth" v-if="!isLoggedIn") Login
+        BaseButton(link to="/auth?redirect=register" v-if="!isLoggedIn") Login to register as Coach
         BaseButton(to="/register" link v-if="isLoggedIn && !isCoach && !isLoading") Register as Coach
       div(v-if="isLoading")
         BaseSpinner
