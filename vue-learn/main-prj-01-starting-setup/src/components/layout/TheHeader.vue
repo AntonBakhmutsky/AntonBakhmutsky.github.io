@@ -6,12 +6,28 @@ header
     ul
       li
         RouterLink(to="/coaches") All coaches
-      li
+      li(v-if="isLoggedIn")
         RouterLink(to="/requests") Requests
+      li(v-else)
+        RouterLink(to="/auth") Login
+      li(v-if="isLoggedIn")
+        BaseButton(@click="logout") Logout
+
 </template>
 
 <script>
-export default {}
+export default {
+  computed: {
+    isLoggedIn() {
+      return this.$store.getters.isAuthenticated;
+    }
+  },
+  methods: {
+    logout() {
+      this.$store.dispatch('logout');
+    }
+  }
+}
 </script>
 
 <style lang="sass" scoped>
