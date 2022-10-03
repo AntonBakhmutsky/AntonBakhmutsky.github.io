@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="7fcd1f01-c9d6-4f79-93ba-c4f89fa50cf4" name="Changes" comment="clear work tree" />
+    <list default="true" id="67109aed-daf8-4713-953d-1b7c43b6e6cc" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-learn/main-prj-01-starting-setup/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/vue-learn/main-prj-01-starting-setup/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-learn/main-prj-01-starting-setup/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue-learn/main-prj-01-starting-setup/src/App.vue" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,10 +20,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
-  <component name="ProjectId" id="2Eq3IqJ2ZEpLBx5a81lUy8fKJaW" />
+  <component name="ProjectId" id="2FP8JcmR4CH0VOTf8b0a0PU8leY" />
   <component name="ProjectViewState">
     <option name="autoscrollToSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -27,28 +31,34 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="7fcd1f01-c9d6-4f79-93ba-c4f89fa50cf4" name="Changes" comment="" />
-      <created>1663309209674</created>
+      <changelist id="67109aed-daf8-4713-953d-1b7c43b6e6cc" name="Default Changelist" comment="" />
+      <created>1664382289625</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1663309209674</updated>
-      <workItem from="1663309210874" duration="40000" />
-      <workItem from="1663570044117" duration="7000" />
+      <updated>1664382289625</updated>
+      <workItem from="1664382291372" duration="1253000" />
+      <workItem from="1664385698094" duration="740000" />
+      <workItem from="1664464959457" duration="1205000" />
+      <workItem from="1664598350567" duration="1373000" />
+      <workItem from="1664601578010" duration="504000" />
+      <workItem from="1664602112313" duration="6000" />
+      <workItem from="1664604894758" duration="31000" />
+      <workItem from="1664605303203" duration="607000" />
+      <workItem from="1664606128742" duration="283000" />
+      <workItem from="1664606430137" duration="6000" />
+      <workItem from="1664813246972" duration="1614000" />
     </task>
-    <task id="LOCAL-00001" summary="clear work tree">
-      <created>1663309233273</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1663309233273</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -64,9 +74,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="clear work tree" />
-    <option name="LAST_COMMIT_MESSAGE" value="clear work tree" />
   </component>
 </project>
