@@ -6,7 +6,7 @@ section
       h3 {{ product.title }}
       h4 ${{ product.price }}
       p {{ product.description }}
-      router-link(to='/products/id') View Details
+      router-link(:to="`/products/${product.id}`") View Details
 </template>
 
 <script>
