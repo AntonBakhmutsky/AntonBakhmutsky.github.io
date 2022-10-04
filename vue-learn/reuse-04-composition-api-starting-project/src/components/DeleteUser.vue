@@ -1,5 +1,5 @@
 <template lang="pug">
-UserAlert(v-if='alertIsVisible' :title='alertTitle' @close='hideAlert')
+UserAlert(v-if='alertIsVisible' title='Delete User?' @close='hideAlert')
   p Do you want to continue with deleting a user?
 section
   h2 Delete a User
