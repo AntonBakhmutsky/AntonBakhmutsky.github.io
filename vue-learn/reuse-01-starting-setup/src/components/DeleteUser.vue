@@ -1,5 +1,5 @@
 <template lang="pug">
-UserAlert(v-if='alertIsVisible' title='Delete the User?' @close='hideAlert')
+UserAlert(v-if='alertIsVisible' :title='alertTitle' @close='hideAlert')
   p Do you want to continue with deleting a user?
 section
   h2 Delete a User
@@ -13,6 +13,11 @@ import UserAlert from "@/components/UserAlert";
 export default {
   components: {
     UserAlert,
+  },
+  data() {
+    return {
+      alertTitle: 'Delete user?'
+    }
   },
   mixins: [alertMixin]
 };
