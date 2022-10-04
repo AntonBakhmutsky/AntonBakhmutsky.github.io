@@ -1,16 +1,12 @@
-<template>
-  <div class="backdrop" @click="closeDialog"></div>
-  <dialog open>
-    <header>
-      <h2>{{ title }}</h2>
-    </header>
-    <div>
-      <slot></slot>
-    </div>
-    <menu>
-      <button @click="closeDialog">Close</button>
-    </menu>
-  </dialog>
+<template lang="pug">
+.backdrop(@click='closeDialog')
+dialog(open='')
+  header
+    h2 {{ title }}
+  div
+    slot
+  menu
+    button(@click='closeDialog') Close
 </template>
 
 <script>

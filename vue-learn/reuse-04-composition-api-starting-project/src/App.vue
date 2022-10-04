@@ -1,8 +1,7 @@
-<template>
-  <main>
-    <add-user></add-user>
-    <delete-user></delete-user>
-  </main>
+<template lang="pug">
+main
+  AddUser
+  DeleteUser
 </template>
 
 <script>
