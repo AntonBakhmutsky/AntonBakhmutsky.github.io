@@ -1,0 +1,121 @@
+@use '../abstracts/variables' as *
+@use '../abstracts/mixins' as *
+
+.search
+  padding: 40px 0 80px
+  +screen($tablet)
+    padding: 60px 0
+
+  &__field
+    position: relative
+    border: 1px solid $gray
+    box-sizing: border-box
+
+    img
+      position: absolute
+      width: 24px
+      height: 24px
+      top: 50%
+      transform: translateY(-50%)
+      right: 33px
+      +screen($tablet)
+        width: 20px
+        height: 20px
+        right: 10px
+
+    input
+      +font(18px, 28px)
+      padding: 16px 53px 16px 30px
+      +screen($tablet)
+        padding: 10px 30px 10px 10px
+
+  &__title
+    margin-top: 30px
+    +font(32px, 42px, 500)
+
+  &__results
+    margin-top: 80px
+    +screen($tablet)
+      margin-top: 40px
+
+  &__item
+    background-color: $white-dark
+    box-sizing: border-box
+    border: 2px solid $white-darkest
+
+    &:not(:first-child)
+      margin-top: 36px
+      +screen($tablet)
+        margin-top: 20px
+
+    span
+      color: $blue
+
+    strong
+      +font(24px, 28px, 500)
+
+    b
+      +font(24px, 31px, 400)
+
+    &-top
+      padding: 16px 30px
+      display: flex
+      align-items: center
+      justify-content: space-between
+      +screen($tablet)
+        padding: 10px
+        align-items: flex-start
+
+    &-category
+      +font(20px, 24px, 500)
+      color: $black-light
+      padding-left: 20px
+      box-sizing: border-box
+
+    &-middle
+      background-color: $black-light
+      padding: 10px 30px
+      +screen($tablet)
+        padding: 10px
+
+    &-bottom
+      padding: 24px 30px 20px
+      +screen($tablet)
+        padding: 20px 16px
+
+      .btn
+        width: 286px
+        +screen($tablet)
+          width: 100%
+
+
+    &-middle
+      background-color: $blue-light
+
+  &__pagination
+    display: flex
+    justify-content: center
+    margin-top: 30px
+
+    ul
+      display: flex
+      +font(32px, 35px, 600)
+      +screen($tablet)
+        +font(20px, 24px, 600)
+
+      li
+        &:not(:last-child)
+          margin-right: 33px
+          +screen($tablet)
+            margin-right: 20px
+
+        a
+          color: $gray-light
+
+          &.active
+            color: $blue
+
+          &:hover:not(.active)
+            color: $blue
+
+
