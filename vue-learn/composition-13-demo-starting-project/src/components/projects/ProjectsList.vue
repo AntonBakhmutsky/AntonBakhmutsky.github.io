@@ -11,7 +11,7 @@ BaseContainer(v-else='')
 
 <script>
 import ProjectItem from './ProjectItem.vue';
-import {ref, computed, watch} from 'vue';
+import {ref, computed, watch, toRefs} from 'vue';
 
 export default {
   components: {
@@ -45,7 +45,12 @@ export default {
       }, 300);
     });
 
-    watch(props.user, function() {
+    // const propsWithRefs = toRefs(props);
+    // const user = propsWithRefs.user
+
+    const { user } = toRefs(props)
+
+    watch(user, function() {
       enteredSearchTerm.value = '';
     });
 
