@@ -12,7 +12,7 @@ import BaseSpinner from '@/components/UI/BaseSpinner';
 
 const BaseDialog = defineAsyncComponent(() => import('@/components/UI/BaseDialog'));
 
-const app = createApp(App)
+const app = createApp(App);
 
 app.use(router);
 app.use(store);

@@ -1,5 +1,8 @@
 <template lang="pug">
-
+TheHeader
+RouterView(v-slot='slotProps')
+  transition(name='route' mode='out-in')
+    component(:is='slotProps.Component')
 </template>
 
 <script>
