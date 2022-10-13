@@ -1,0 +1,31 @@
+extends ../layouts/main/layout.pug
+
+block title
+  | Capsula
+
+block content
+  section#active-projects
+    header
+      h2 Active Projects
+    ul
+      li#p1.card(data-extra-info='Got lifetime access, but would be nice to finish it soon!')
+        h2 Finish the Course
+        p Finish the course within the next two weeks.
+        button.alt More Info
+        button Finish
+      li#p2.card(data-extra-info='Not really a business topic but still important.')
+        h2 Buy Groceries
+        p Don't forget to pick up groceries today.
+        button.alt More Info
+        button Finish
+  section#finished-projects
+    header
+      h2 Finished Projects
+    ul
+      li#p3.card(data-extra-info='Super important conference! Fictional but still!')
+        h2 Book Hotel
+        p
+          | Academind conference takes place in December, don't forget to book a
+          | hotel.
+        button.alt More Info
+        button Activate
