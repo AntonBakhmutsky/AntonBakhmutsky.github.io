@@ -2,6 +2,8 @@ import DomHelper from "@/scripts/classes/DomHelper";
 import Tooltip from "@/scripts/classes/Tooltip";
 
 export default class ProjectItem {
+  hasActiveTooltip = false;
+
   constructor(id, updateProjectListsFunction, type) {
     this.id = id;
     this.updateProjectListsHandler = updateProjectListsFunction;
@@ -10,8 +12,12 @@ export default class ProjectItem {
   }
 
   showMoreEventHandler() {
-    const tooltip = new Tooltip();
-    tooltip.show();
+    if (this.hasActiveTooltip) {
+      return;
+    }
+    const tooltip = new Tooltip(() => this.hasActiveTooltip = false);
+    tooltip.attach();
+    this.hasActiveTooltip = true;
   }
 
   connectMoreInfoButton() {
