@@ -9,6 +9,7 @@ export default class ProjectItem {
     this.updateProjectListsHandler = updateProjectListsFunction;
     this.connectMoreInfoButton();
     this.connectSwitchButton(type);
+    this.connectDrag();
   }
 
   showMoreEventHandler() {
@@ -21,6 +22,19 @@ export default class ProjectItem {
     tooltip.attach();
     this.hasActiveTooltip = true;
   }
+
+  connectDrag() {
+    const item = document.getElementById(this.id)
+    item.addEventListener('dragstart', event => {
+      event.dataTransfer.setData('text/plain', this.id);
+      event.dataTransfer.effectAllowed = 'move';
+    });
+
+    item.addEventListener('dragend', () => {
+      console.log(event)
+    });
+  }
+
   connectMoreInfoButton() {
     const projectItemElement = document.getElementById(this.id);
     const moreInfoBtn = projectItemElement.querySelector('button:first-of-type');
