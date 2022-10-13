@@ -15,15 +15,16 @@ export default class ProjectItem {
     if (this.hasActiveTooltip) {
       return;
     }
-    const tooltip = new Tooltip(() => this.hasActiveTooltip = false);
+    const projectElement = document.getElementById(this.id);
+    const tooltipText = projectElement.dataset.extraInfo;
+    const tooltip = new Tooltip(() => this.hasActiveTooltip = false, tooltipText, this.id);
     tooltip.attach();
     this.hasActiveTooltip = true;
   }
-
   connectMoreInfoButton() {
     const projectItemElement = document.getElementById(this.id);
     const moreInfoBtn = projectItemElement.querySelector('button:first-of-type');
-    moreInfoBtn.addEventListener('click', this.showMoreEventHandler);
+    moreInfoBtn.addEventListener('click', this.showMoreEventHandler.bind(this));
   }
 
   connectSwitchButton(type) {
