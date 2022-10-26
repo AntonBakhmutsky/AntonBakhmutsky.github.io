@@ -1,37 +1,37 @@
 <template lang="pug">
-RouterView(v-slot="slotProps")
-  transition(name="fade-button" mode="out-in")
-    component(:is="slotProps.Component")
-
-//.container
-//  ListData
-//.container
-//  .block(:class="{animate: animatedBlock}")
-//  button(@click="animateBlock") Animate
-//.container
-//  transition(
-//    name="para"
-//    @before-enter="beforeEnter"
-//    @enter="enter"
-//    @after-enter="afterEnter"
-//    @before-leave="beforeLeave"
-//    @leave="leave"
-//    @after-leave="afterLeave"
-//    @enter-cancelled="enterCancelled"
-//    @leave-cancelled="leaveCancelled"
-//    :css="false"
-//  )
-//    p(v-if="paraIsVisible") This is only sometimes visible...
-//  button(@click="toggleParagraph") Toggle paragraph
-//.container
+//RouterView(v-slot="slotProps")
 //  transition(name="fade-button" mode="out-in")
-//    button(@click="showUsers" v-if="!usersAreVisible") Show Users
-//    button(@click="hideUsers" v-else) Hide Users
-//base-modal(@close='hideDialog' :open='dialogIsVisible')
-//  p This is a test dialog!
-//  button(@click='hideDialog') Close it!
-//.container
-//  button(@click='showDialog') Show Dialog
+//    component(:is="slotProps.Component")
+
+.container
+  ListData
+.container
+  .block(:class="{animate: animatedBlock}")
+  button(@click="animateBlock") Animate
+.container
+  transition(
+    name="para"
+    @before-enter="beforeEnter"
+    @enter="enter"
+    @after-enter="afterEnter"
+    @before-leave="beforeLeave"
+    @leave="leave"
+    @after-leave="afterLeave"
+    @enter-cancelled="enterCancelled"
+    @leave-cancelled="leaveCancelled"
+    :css="false"
+  )
+    p(v-if="paraIsVisible") This is only sometimes visible...
+  button(@click="toggleParagraph") Toggle paragraph
+.container
+  transition(name="fade-button" mode="out-in")
+    button(@click="showUsers" v-if="!usersAreVisible") Show Users
+    button(@click="hideUsers" v-else) Hide Users
+base-modal(@close='hideDialog' :open='dialogIsVisible')
+  p This is a test dialog!
+  button(@click='hideDialog') Close it!
+.container
+  button(@click='showDialog') Show Dialog
 </template>  
 
 <script>
