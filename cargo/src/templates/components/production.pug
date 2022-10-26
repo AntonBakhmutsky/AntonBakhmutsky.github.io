@@ -1,0 +1,11 @@
+section.production
+  .container
+    h2.section__title Собственное производство
+    p.production__txt Компания Sotrans занимается производством собственных Полуприцепов
+    .production__slider.swiper
+      .swiper-wrapper
+        each el in productionSlider
+          .swiper-slide
+            .swiper-image
+              img(src=el.img alt="")
+            .swiper-text #{el.txt}
