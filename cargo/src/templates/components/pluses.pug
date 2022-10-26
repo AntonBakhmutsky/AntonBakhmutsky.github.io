@@ -1,1 +1,10 @@
 section.pluses
+  .container
+    h2.section__title Наши преимущества
+    ul.pluses__grid
+      each el in plusesList
+        li.pluses__item
+          .pluses__item-image
+            img(src=el.img alt="")
+          .pluses__item-txt !{el.txt}
+
