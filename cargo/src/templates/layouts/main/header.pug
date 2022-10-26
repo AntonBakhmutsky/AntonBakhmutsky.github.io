@@ -1,1 +1,8 @@
-header
+header.header
+  .container
+    a.header__logo(href="https://sotrans.ru/")
+      img(src=require('@/assets/img/header/logo.svg') alt="")
+    nav.header__menu
+      each el in headerLinks
+        a(href=el.href) #{el.txt}
+

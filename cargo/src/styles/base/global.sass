@@ -9,15 +9,18 @@ body
   max-width: 1920px
   margin: 0 auto
   min-height: 100vh
-  display: flex
-  flex-direction: column
   font-family: $font
   position: relative
   background-color: $white
+  +font(18px, 22px)
 
 .container
   position: relative
   width: 100%
+  max-width: 1440px
+  box-sizing: border-box
+  padding: 0 75px
+  margin: 0 auto
 
 a
   text-decoration: none
@@ -61,3 +64,6 @@ input, textarea
 
   &::placeholder
     color: $black
+
+.main
+  padding: 90px 0 70px

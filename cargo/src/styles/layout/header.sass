@@ -1,0 +1,20 @@
+@use '../abstracts/variables' as *
+@use '../abstracts/mixins' as *
+
+.header
+  padding: 30px 0
+  position: fixed
+  width: 100%
+  top: 0
+  left: 0
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.16)
+
+  .container
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+  &__menu
+    display: flex
+    flex-basis: 68%
+    justify-content: space-between
