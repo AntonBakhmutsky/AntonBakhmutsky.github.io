@@ -2,3 +2,37 @@
 @use '../abstracts/mixins' as *
 
 .questions
+  padding: 60px 0
+
+  .container
+    display: flex
+    justify-content: space-between
+
+  &__list
+    flex-basis: 47.7%
+
+    li
+      position: relative
+      box-sizing: border-box
+      padding-left: 48px
+
+      h3
+        +font(26px, 26px, 500)
+
+      &:not(:first-child)
+        margin-top: 31px
+
+      &:before
+        content: ''
+        width: 15px
+        height: 15px
+        border-radius: 50%
+        background-color: $orange
+        position: absolute
+        left: 0
+        top: 4px
+
+  &__image
+    flex-basis: 49%
+
+
