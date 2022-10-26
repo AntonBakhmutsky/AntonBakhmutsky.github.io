@@ -2,3 +2,69 @@
 @use '../abstracts/mixins' as *
 
 .sharing
+  height: 715px
+
+  .container
+    &:first-child
+      height: calc(100% - 91px)
+      background: url(../assets/img/sharing/cars.jpg) center left no-repeat
+      display: flex
+      justify-content: flex-end
+
+    &:last-child
+      height: 91px
+      background-color: $orange-rgba
+      color: $white
+      display: flex
+      align-items: center
+
+  &__txt
+    display: flex
+    align-items: center
+
+  &__path
+    height: 100%
+    width: 100%
+    max-width: 1020px
+    clip-path: polygon(60% 0, 100% 0, 100% 100%, 0% 100%)
+    background: url(../assets/img/sharing/roads.jpg) center/cover no-repeat
+
+  &__content
+    background: $orange-rgba
+    width: 100%
+    height: 100%
+    display: flex
+    justify-content: center
+    flex-direction: column
+
+  &__title
+    +font(64px, 64px, 500)
+    color: $white
+    margin: 160px 0 0 346px
+
+  &__anchor
+    width: 283px
+    height: 61px
+    background: $white
+    border-radius: 8px
+    display: flex
+    margin: 40px 0 0 346px
+    align-items: center
+    justify-content: center
+    +font(24px, 24px, 500)
+    color: $orange
+    box-sizing: border-box
+    border: 2px solid $white
+
+    &:hover
+      background-color: $orange
+      color: $white
+      border-color: $white
+
+    &:active
+      background-color: $white
+      color: $orange
+      border-color: $orange
+
+
+
