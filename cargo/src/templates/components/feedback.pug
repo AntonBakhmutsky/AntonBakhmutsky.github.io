@@ -1,0 +1,30 @@
+section.feedback
+  .container
+    .feedback__container
+      h2.section__title Обратная связь
+      form.feedback__form
+        .feedback__form-grid
+          .feedback__form-input
+            input(type="text" name="name" required autocomplete="off")
+            span Ваше имя
+          .feedback__form-input
+            input(type="tel" name="tel" required autocomplete="off")
+            span Ваш телефон
+          .feedback__form-input
+            input(type="email" name="mail" required autocomplete="off")
+            span E-mail для связи
+          .feedback__form-textarea
+            textarea(name="comment" placeholder="Комментарий")
+        .feedback__form-bottom
+          button.feedback__form-submit(type="submit") Отправить
+          .feedback__form-policy
+            span Продолжая, вы принимаете нашу
+            a(href="javascript:") Политику конфиденциальности
+    .feedback__container
+      .feedback__contacts
+        .feedback__contacts-name Дмитрий Шарапов
+        .feedback__contacts-phone #[span Телефон:] +7 921 424-55-72
+        .feedback__contacts-mail #[span E-mail:] d.sharapov@sotrans.ru
+        .feedback__contacts-time #[span Время работы:] Круглосуточно
+
+

@@ -1,1 +1,2 @@
-require('./components/production')
+require('./components/production');
+require('./components/feedback');
