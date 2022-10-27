@@ -1,8 +1,9 @@
 section.questions
   .container
-    ul.questions__list
-      each el in questionsList
-        li
-          h3 !{el}
-    .questions__image
-      img(src=require('@/assets/img/questions/man.jpg') alt="")
+    h2.section__title Оптимизируйте свой бизнесс
+    .questions__container
+      ul.questions__list
+        each el in questionsList
+          li !{el}
+      .questions__image
+        img(src=require('@/assets/img/questions/man.jpg') alt="")

@@ -2,11 +2,23 @@
 @use '../abstracts/mixins' as *
 
 .questions
-  padding: 60px 0
+  padding: 80px 0 60px
 
   .container
+    padding: 0
+
+  .section__title
+    height: 91px
+    background-color: $orange
+    color: $white
+    padding: 0 75px
+
+  &__container
+    margin-top: 76px
     display: flex
     justify-content: space-between
+    box-sizing: border-box
+    padding: 0 75px
 
   &__list
     flex-basis: 47.7%
@@ -15,9 +27,7 @@
       position: relative
       box-sizing: border-box
       padding-left: 48px
-
-      h3
-        +font(26px, 26px, 500)
+      +font(26px, 26px, 500)
 
       &:not(:first-child)
         margin-top: 31px
