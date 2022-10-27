@@ -14,7 +14,8 @@ window.addEventListener('load', () => {
         translateX: [el.dataset.start || -110, 0],
         duration: 1000,
         easing: 'easeOutQuart',
-        delay: Number(el.dataset.delay) || 0
+        delay: Number(el.dataset.delay) || 0,
+        scale: el.dataset.scale || 1
       })
     });
   });
@@ -30,7 +31,8 @@ window.addEventListener('load', () => {
         translateY: [el.dataset.start || 130, 0],
         duration: 1000,
         easing: 'easeOutQuart',
-        delay: Number(el.dataset.delay) || 0
+        delay: Number(el.dataset.delay) || 0,
+        scale: el.dataset.scale || 1
       })
     });
   });
