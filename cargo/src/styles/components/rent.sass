@@ -3,3 +3,109 @@
 
 .rent
   padding-top: 75px
+
+  &__content
+    height: 700px
+    background: url(../assets/img/rent/truck.png) center no-repeat
+    margin-top: 40px
+    position: relative
+
+  &__point
+    position: absolute
+
+    &-icon
+      width: 80px
+      height: 80px
+      display: flex
+      align-items: center
+      justify-content: center
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15)
+      border-radius: 7px
+      background-color: $white
+
+    &-txt
+      +font(20px, 26px, 500)
+      margin-top: 12px
+
+    &-vector
+      position: absolute
+
+      img
+        max-width: none
+        max-height: none
+
+    &_top-left
+      top: 10px
+      left: 0
+
+      .rent__point
+        &-vector
+          left: 99px
+          top: 39px
+
+    &_top-right
+      top: 46px
+      right: 118px
+
+      .rent__point
+        &-vector
+          left: -80px
+          top: 39px
+
+
+        &-icon
+          margin: 0 auto
+
+    &_bottom-left
+      left: 0
+      bottom: 110px
+
+      .rent__point
+        &-vector
+          top: -29px
+          left: 100px
+
+    &_bottom-center
+      bottom: 50px
+      left: 394px
+
+      .rent__point
+        &-vector
+          top: 0
+          left: 22px
+
+        &-icon
+          margin-left: auto
+
+        &-txt
+          text-align: right
+
+    &_bottom-right
+      bottom: -12px
+      right: 224px
+
+      .rent__point
+        &-vector
+          top: -85px
+          left: -96px
+
+        &-txt
+          text-align: right
+
+        &-icon
+          margin-left: auto
+
+    &_middle
+      right: 0
+      bottom: 135px
+
+      .rent__point
+        &-vector
+          left: -4px
+          top: 36px
+
+        &-txt
+          text-align: right
+
+        &-icon
+          margin-left: auto

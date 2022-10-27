@@ -1,0 +1,7 @@
+mixin rent-point(params)
+  .rent__point(class=`rent__point_${params.modifier}`)
+    .rent__point-icon
+      img(src=params.icon alt="")
+    .rent__point-vector
+      img(src=params.point alt="")
+    .rent__point-txt !{params.txt}
