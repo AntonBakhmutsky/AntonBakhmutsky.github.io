@@ -1,0 +1,16 @@
+@use '../abstracts/variables' as *
+@use '../abstracts/mixins' as *
+
+.footer
+  height: 91px
+  background-color: $orange-rgba
+
+  .container
+    height: 100%
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+  span
+    color: $white
+    +font(24px, 24px, 500)

@@ -71,6 +71,7 @@
 
       textarea
         padding: 11px 13px
+        resize: none
 
         &::placeholder
           color: $gray
@@ -125,6 +126,12 @@
           position: absolute
           bottom: 0
           left: 0
+
+        &:hover
+          opacity: .6
+
+        &:active
+          opacity: 1
 
   &__contacts
     +font(24px, 28px)
