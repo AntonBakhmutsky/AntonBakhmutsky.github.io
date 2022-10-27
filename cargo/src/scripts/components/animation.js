@@ -11,7 +11,7 @@ window.addEventListener('load', () => {
       anime({
         targets: el,
         opacity: [0, 1],
-        translateX: [-110, 0],
+        translateX: [el.dataset.start || -110, 0],
         duration: 1000,
         easing: 'easeOutQuart',
         delay: Number(el.dataset.delay) || 0
@@ -27,7 +27,7 @@ window.addEventListener('load', () => {
       anime({
         targets: el,
         opacity: [0, 1],
-        translateY: [130, 0],
+        translateY: [el.dataset.start || 130, 0],
         duration: 1000,
         easing: 'easeOutQuart',
         delay: Number(el.dataset.delay) || 0
