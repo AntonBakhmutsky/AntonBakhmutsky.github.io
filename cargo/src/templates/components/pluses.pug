@@ -4,7 +4,8 @@ section.pluses
     ul.pluses__grid
       each el in plusesList
         li.pluses__item
-          .pluses__item-image
-            img(src=el.img alt="")
-          .pluses__item-txt !{el.txt}
+          .pluses__item-container
+            .pluses__item-image
+              img(src=el.img alt="")
+            .pluses__item-txt !{el.txt}
 
