@@ -1,6 +1,6 @@
 section.rent
   .container
-    h2.section__title Аренда нового полуприцепа #[span Бесплатно]
+    h2.section__title.slide-right(data-delay="300") Аренда нового полуприцепа #[span Бесплатно]
     .rent__content
       each el in rentPoints
         +rent-point(el)
