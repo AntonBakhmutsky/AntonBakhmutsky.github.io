@@ -1,9 +1,9 @@
 section.pluses
   .container
-    h2.section__title Наши преимущества
+    h2.section__title.slide-right Наши преимущества
     ul.pluses__grid
       each el in plusesList
-        li.pluses__item
+        li.pluses__item.slide-up(data-delay=el.delay)
           .pluses__item-container
             .pluses__item-image
               img(src=el.img alt="")

@@ -3,7 +3,7 @@ section.questions
     h2.section__title.slide-right Оптимизируйте свой бизнесс
     .questions__container
       ul.questions__list
-        each el in questionsList
-          li !{el}
-      .questions__image
+        each el, index in questionsList
+          li.slide-right(data-delay=`${index * 150}`) !{el}
+      .questions__image.slide-up
         img(src=require('@/assets/img/questions/man.jpg') alt="")

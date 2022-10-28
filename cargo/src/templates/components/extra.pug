@@ -1,11 +1,11 @@
 section.extra
   .container
-    h2.section__title Дополнительно Вы получаете
+    h2.section__title.slide-right Дополнительно Вы получаете
     .extra__container
       ul.extra__list
-        each el in extraList
-          li.extra__list-item
-            .extra__list-item-image
+        each el, index in extraList
+          li.extra__list-item.slide-right(data-delay=`${index * 150}`)
+            .extra__list-item-image.slide-up
               img(src=require('@/assets/img/extra/list-item.svg') alt="")
             .extra__list-item-txt !{el}
       .extra__image

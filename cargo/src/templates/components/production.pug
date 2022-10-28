@@ -1,11 +1,11 @@
 section.production
   .container
-    h2.section__title Собственное производство
-    p.production__txt Компания Sotrans занимается производством собственных Полуприцепов
+    h2.section__title.slide-right Собственное производство
+    p.production__txt.slide-up Компания Sotrans занимается производством собственных Полуприцепов
     .production__slider.swiper
       .swiper-wrapper
-        each el in productionSlider
-          .swiper-slide
+        each el, index in productionSlider
+          .swiper-slide.slide-up(data-delay=`${index * 200}`)
             .swiper-image
               img(src=el.img alt="")
             .swiper-txt #{el.txt}
