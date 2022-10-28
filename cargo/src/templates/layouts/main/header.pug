@@ -2,7 +2,10 @@ header.header
   .container
     a.header__logo(href="https://sotrans.ru/")
       img(src=require('@/assets/img/header/logo.svg') alt="")
+      img(src=require('@/assets/img/header/logo-mob.svg') alt="")
     nav.header__menu
       each el in headerLinks
         a(href=el.href) #{el.txt}
+    button.header__btn
+      img(src=require('@/assets/img/header/burger.svg') alt="")
 
