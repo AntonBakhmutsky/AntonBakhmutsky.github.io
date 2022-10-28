@@ -2,3 +2,21 @@ section.offers
   .container
     h2.section__title.slide-right Мы предлагаем
     .offers__content
+      .offers__scroll
+        each el, index in offersItems
+          if (index === 0)
+            .offers__item.slide-up(data-delay="100" data-duration="1500") !{el}
+          else if (index === 1)
+            .offers__item.slide-up(data-delay="200" data-duration="1500") !{el}
+          else
+            .offers__item !{el}
+        .offers__truck
+          .offers__truck.slide-right
+            img(src=require('@/assets/img/offers/truck.png') alt="")
+            img(src=require('@/assets/img/offers/1.png') alt="")
+            img(src=require('@/assets/img/offers/2.png') alt="")
+            img(src=require('@/assets/img/offers/3.png') alt="")
+            img(src=require('@/assets/img/offers/4.png') alt="")
+            img(src=require('@/assets/img/offers/5.png') alt="")
+
+

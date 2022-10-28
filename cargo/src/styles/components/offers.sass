@@ -3,4 +3,137 @@
 
 .offers
   .container
+    padding: 70px 75px
     background: linear-gradient(180deg, #E4E4E4 0%, rgba(195, 195, 195, 0) 100%)
+    height: 100%
+
+  &__content
+    overflow: auto
+    height: 100%
+    scrollbar-width: none
+
+    &::-webkit-scrollbar
+      width: 0
+      height: 0
+      display: none
+      visibility: hidden
+
+  &__scroll
+    height: 640px
+    width: 2450px
+    position: relative
+    overflow: hidden
+
+  &__item
+    +font(20px, 20px, 500)
+    position: absolute
+    opacity: 0
+
+    &:after
+      content: ''
+      position: absolute
+      bottom: -35px
+      left: 40%
+      width: 16px
+      height: 16px
+      border-radius: 50%
+      background-color: $orange
+
+    &:before
+      content: ''
+      position: absolute
+      width: 1px
+      height: 204px
+      top: calc(100% + 43px)
+      left: calc(40% + 8px)
+      background: $black
+
+    &:first-child
+      left: 0
+      top: 84px
+
+    &:nth-child(2)
+      left: 406px
+      bottom: 330px
+
+      &:before
+        height: 87px
+
+    &:nth-child(3)
+      left: 985px
+      top: 80px
+
+      &:before
+        height: 271px
+        left: calc(30% + 8px)
+
+      &:after
+        left: 30%
+
+    &:nth-child(4)
+      z-index: 2
+      left: 1189px
+      bottom: 257px
+
+      &:before
+        left: 18px
+        height: 114px
+
+      &:after
+        left: 10px
+
+    &:nth-child(5)
+      left: 1528px
+      top: 124px
+
+      &:before
+        height: 279px
+        left: calc(26% + 8px)
+
+      &:after
+        left: 26%
+
+    &:nth-child(6)
+      left: 1966px
+      top: 28px
+
+      &:before
+        height: 114px
+        left: calc(37% + 8px)
+
+      &:after
+        left: 37%
+
+  &__truck
+    position: absolute
+    bottom: 5px
+    left: 0
+    width: 771px
+    height: 193px
+
+    img:not(:first-child)
+      animation: wheels 1s ease-out
+      position: absolute
+      bottom: -5px
+
+      &:nth-child(2)
+        right: 45px
+
+      &:nth-child(3)
+        right: 213px
+
+      &:nth-child(4)
+        left: 232px
+
+      &:nth-child(5)
+        left: 174px
+
+      &:nth-child(6)
+        left: 115px
+
+@keyframes wheels
+  from
+    transform: rotate(0deg)
+
+  to
+    transform: rotate(360deg)

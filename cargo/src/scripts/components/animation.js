@@ -29,7 +29,7 @@ window.addEventListener('load', () => {
         targets: el,
         opacity: [0, 1],
         translateY: [el.dataset.start || 150, 0],
-        duration: 1000,
+        duration: el.dataset.duration || 1000,
         easing: 'easeOutQuart',
         delay: Number(el.dataset.delay) || 0,
         scale: el.dataset.scale || 1
