@@ -1,4 +1,5 @@
 import anime from 'animejs';
+import checkPosition from '../plugins/check-position';
 
 window.addEventListener('load', () => {
   const scrollContainer = document.querySelector('.offers__content');
@@ -6,6 +7,9 @@ window.addEventListener('load', () => {
   const truck = document.querySelector('.offers__truck');
   const wheels = truck.querySelectorAll('img:not(:first-child)');
   const offersItems = document.querySelectorAll('.offers__item:not(:nth-child(2), :nth-child(3))');
+  const allOffersItems = document.querySelectorAll('.offers__item');
+  const truckMobile = document.querySelector('.offers__truck-mobile');
+  let winWidth = window.innerWidth;
 
   let rotateAngle = 0;
 
@@ -60,8 +64,13 @@ window.addEventListener('load', () => {
       rotateAngle += 75;
     }
   }
-
-  scrollContainer.addEventListener('wheel', addOnWheel);
+  if (winWidth > 1024) {
+    scrollContainer.addEventListener('wheel', addOnWheel);
+  } else {
+    allOffersItems.forEach(el => el.removeAttribute('data-delay'));
+    allOffersItems.forEach(el => el.removeAttribute('data-duration'));
+    allOffersItems.forEach(el => el.classList.add('slide-up'));
+  }
 
   function dragBlock(event) {
     event.preventDefault();
@@ -83,4 +92,45 @@ window.addEventListener('load', () => {
       scrollContainer.style.cursor = 'grab';
     }
   }
+
+  window.addEventListener('resize', () => {
+    if (winWidth !== window.innerWidth) {
+      winWidth = window.innerWidth;
+
+      if (winWidth > 1024 && !allOffersItems[0].hasAttribute('data-delay')) {
+        scrollContainer.addEventListener('wheel', addOnWheel);
+        allOffersItems[0].setAttribute('data-delay', '100');
+        allOffersItems[1].setAttribute('data-delay', '200');
+        allOffersItems[0].setAttribute('data-duration', '1500');
+        allOffersItems[1].setAttribute('data-duration', '1500');
+        offersItems.forEach(el => el.classList.remove('.slide-up'));
+      } else {
+        scrollContainer.removeEventListener('wheel', addOnWheel);
+        allOffersItems[0].removeAttribute('data-delay');
+        allOffersItems[1].removeAttribute('data-delay');
+        allOffersItems[0].removeAttribute('data-duration');
+        allOffersItems[1].removeAttribute('data-duration');
+      }
+    }
+  });
+
+  // truck mobile
+  let lastScrollTop = 0;
+  const maxTop = scrollItem.scrollHeight - truckMobile.offsetHeight;
+  window.addEventListener('scroll', (e) => {
+    let st = window.scrollY || document.documentElement.scrollTop;
+    const getTruckTop = () => Number(truckMobile.style.top.replace(/[a-zа-яё]/gi, ''))
+    let top = getTruckTop();
+
+    if (st > lastScrollTop){
+      if (getTruckTop() < maxTop && checkPosition(offersItems[offersItems.length - 2])) {
+        truckMobile.style.top = `${top + 10}px`;
+      }
+    } else {
+      if (getTruckTop() > 0 && checkPosition(offersItems[offersItems.length - 2])) {
+        truckMobile.style.top = `${top - 10}px`;
+      }
+    }
+    lastScrollTop = st <= 0 ? 0 : st;
+  })
 });

@@ -6,6 +6,10 @@
     padding: 70px 75px
     background: linear-gradient(180deg, #E4E4E4 0%, rgba(195, 195, 195, 0) 100%)
     height: 100%
+    +screen($desktop-sm)
+      padding: 70px 45px
+    +screen($tablet)
+      padding: 40px 10px
 
   &__content
     overflow: auto
@@ -23,11 +27,28 @@
     width: 2450px
     position: relative
     overflow: hidden
+    +screen($tablet)
+      width: 100%
+      height: auto
+      margin-top: 30px
 
   &__item
     +font(20px, 20px, 500)
     position: absolute
     opacity: 0
+    +screen($tablet)
+      +font(16px, 25px, 500)
+      position: relative
+      left: auto !important
+      right: auto !important
+      top: auto !important
+      bottom: auto !important
+      opacity: 1
+      max-width: 73%
+      padding-left: 32px
+
+      &:not(:first-child)
+        margin-top: 15px
 
     &:after
       content: ''
@@ -38,6 +59,12 @@
       height: 16px
       border-radius: 50%
       background-color: $orange
+      +screen($tablet)
+        left: 0 !important
+        top: 7px !important
+        bottom: auto !important
+        width: 12px
+        height: 12px
 
     &:before
       content: ''
@@ -47,6 +74,8 @@
       top: calc(100% + 43px)
       left: calc(40% + 8px)
       background: $black
+      +screen($tablet)
+        display: none
 
     &:first-child
       left: 0
@@ -110,6 +139,16 @@
     left: 0
     width: 771px
     height: 193px
+    +screen($tablet)
+      display: none
+
+    &-mobile
+      display: none
+      +screen($tablet)
+        display: block
+        position: absolute
+        top: 0
+        right: -85px
 
     img:not(:first-child)
       animation: wheels 1s ease-out
@@ -130,6 +169,11 @@
 
       &:nth-child(6)
         left: 115px
+
+    &__mobile
+      display: none
+      +screen($tablet)
+        display: block
 
 @keyframes wheels
   from
