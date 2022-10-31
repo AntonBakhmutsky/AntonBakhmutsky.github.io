@@ -85,9 +85,18 @@ input, textarea
   &__title
     +font(64px, 74px, 500)
     text-align: center
+    +screen($tablet)
+      +font(44px, 54px, 500)
+    +screen($tablet-sm)
+      +font(24px, 34px, 500)
+    +screen($tablet-xs)
+      +font(16px, 16px, 500)
 
     span
       color: $orange
+      +screen($tablet-xs)
+        display: block
+        margin-top: 10px
 
 .slide-right, .slide-up
 

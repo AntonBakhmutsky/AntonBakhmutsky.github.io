@@ -2,8 +2,12 @@ section.rent#rent
   .container
     h2.section__title.slide-right(data-delay="300") Аренда нового полуприцепа #[span Бесплатно]
     .rent__content
+      each el, index in rentPoints
+        if (index < 3)
+          +rent-point(el)
       .rent__image.slide-right(data-start="-800")
         img(src=require('@/assets/img/rent/truck.png') alt="")
-      each el in rentPoints
-        +rent-point(el)
+      each el, index in rentPoints
+        if (index > 2)
+          +rent-point(el)
 

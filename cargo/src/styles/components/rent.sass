@@ -3,6 +3,8 @@
 
 .rent
   padding-top: 90px
+  +screen(1180)
+    padding-top: 40px
 
   &__content
     height: 700px
@@ -11,10 +13,31 @@
     display: flex
     align-items: center
     justify-content: center
+    +screen(1180)
+      flex-direction: column
+      height: auto
+      align-items: flex-start
+
+      br
+        display: none
+
+  &__image
+    +screen(1180)
+      margin: 20px 0 35px
 
   &__point
     position: absolute
     opacity: 0
+    z-index: 1
+    +screen(1180)
+      position: relative
+      left: auto !important
+      right: auto !important
+      bottom: auto !important
+      top: auto !important
+      display: flex
+      align-items: center
+      margin-bottom: 30px
 
     &-icon
       width: 80px
@@ -25,13 +48,21 @@
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15)
       border-radius: 7px
       background-color: $white
+      flex-shrink: 0
+      +screen(1180)
+        margin: 0 11px 0 0 !important
 
     &-txt
       +font(20px, 26px, 500)
       margin-top: 12px
+      +screen(1180)
+        text-align: left !important
+        margin: 0
 
     &-vector
       position: absolute
+      +screen(1180)
+        display: none
 
       img
         max-width: none
@@ -86,6 +117,8 @@
     &_bottom-right
       bottom: -12px
       right: 224px
+      +screen(1348)
+        right: 130px
 
       .rent__point
         &-vector
