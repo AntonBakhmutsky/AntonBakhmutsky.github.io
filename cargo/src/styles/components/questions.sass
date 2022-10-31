@@ -3,6 +3,8 @@
 
 .questions
   padding: 80px 0 60px
+  +screen($tablet)
+    padding: 40px 0
 
   .container
     padding: 0
@@ -12,6 +14,13 @@
     background-color: $orange
     color: $white
     padding: 0 75px
+    display: flex
+    align-items: center
+    justify-content: center
+    +screen($desktop-sm)
+      padding: 0 45px
+    +screen($tablet)
+      padding: 0 10px
 
   &__container
     margin-top: 76px
@@ -19,15 +28,29 @@
     justify-content: space-between
     box-sizing: border-box
     padding: 0 75px
+    +screen($desktop-sm)
+      padding: 0 45px
+    +screen($tablet)
+      padding: 0
+      flex-direction: column-reverse
+      justify-content: flex-start
+      margin: 0
 
   &__list
     flex-basis: 47.7%
+    +screen($tablet)
+      flex-basis: auto
+      margin-top: 35px
+      padding: 0 10px
 
     li
       position: relative
       box-sizing: border-box
       padding-left: 48px
       +font(26px, 26px, 500)
+      +screen($tablet)
+        padding-left: 32px
+        +font(16px, 22px, 500)
 
       &:not(:first-child)
         margin-top: 31px
@@ -41,8 +64,14 @@
         position: absolute
         left: 0
         top: 4px
+        +screen($tablet)
+          width: 12px
+          height: 12px
 
   &__image
     flex-basis: 49%
+    +screen($tablet)
+      flex-basis: auto
+      margin: 0 auto
 
 
