@@ -123,11 +123,11 @@ window.addEventListener('load', () => {
     let top = getTruckTop();
 
     if (st > lastScrollTop){
-      if (getTruckTop() < maxTop && checkPosition(offersItems[offersItems.length - 2])) {
+      if (getTruckTop() < maxTop && checkPosition(offersItems[3])) {
         truckMobile.style.top = `${top + 10}px`;
       }
     } else {
-      if (getTruckTop() > 0 && checkPosition(offersItems[offersItems.length - 2])) {
+      if (getTruckTop() > 0 && checkPosition(offersItems[3])) {
         truckMobile.style.top = `${top - 10}px`;
       }
     }

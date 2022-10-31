@@ -4,14 +4,26 @@
 .actions
   padding: 30px 0 40px
   box-sizing: border-box
+  +screen($tablet)
+    padding-bottom: 0
+
+  .container
+    +screen($tablet)
+      padding: 0
 
   &__container
     margin-top: 50px
     display: flex
     justify-content: space-between
+    +screen($tablet)
+      margin-top: 35px
+      justify-content: flex-start
+      flex-direction: column
 
   &__image
     flex-basis: 49%
+    +screen($tablet)
+      flex-basis: auto
 
     img
       width: 100%
@@ -24,11 +36,20 @@
     display: flex
     flex-direction: column
     justify-content: space-between
+    +screen($tablet)
+      flex-basis: auto
+      margin-top: 21px
+      box-sizing: border-box
+      padding: 0 10px
 
     li
       display: flex
       align-items: center
       +font(20px, 20px, 500)
+      +screen($tablet)
+        +font(16px, 20px, 500)
+        margin-top: 15px
+        align-items: flex-start
 
       span
         +font(48px, 34px, 700, $font-pop)
@@ -37,5 +58,10 @@
         width: 30px
         display: flex
         align-items: flex-end
+        +screen($tablet)
+          align-items: flex-start
+          +font(40px, 60px, 700)
+          margin: -15px 10px 0 0
+          width: auto
 
 
