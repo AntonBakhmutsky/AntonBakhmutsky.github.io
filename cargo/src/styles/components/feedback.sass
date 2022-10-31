@@ -2,7 +2,9 @@
 @use '../abstracts/mixins' as *
 
 .feedback
-  margin-bottom: 80px
+  padding-bottom: 80px
+  +screen($tablet)
+    padding-bottom: 40px
 
   .section__title
     text-align: left
@@ -10,6 +12,9 @@
   .container
     display: flex
     justify-content: space-between
+    +screen($tablet)
+      flex-direction: column
+      justify-content: flex-start
 
   &__form
     margin-top: 26px
@@ -97,6 +102,9 @@
       +font(18px, 18px, 500)
       color: $orange
       margin-right: 20px
+      +screen($tablet)
+        width: 100%
+        margin-top: 25px
 
       &:hover
         background-color: $orange
@@ -135,13 +143,20 @@
 
   &__contacts
     +font(24px, 28px)
+    +screen($tablet)
+      +font(20px, 24px)
 
     &-name
       +font(36px, 36px, 500)
       margin: 26px 0 15px
+      +screen($tablet)
+        +font(20px, 20px, 500)
+        margin: 30px 0 15px
 
     span
       +font(24px, 28px, 500)
+      +screen($tablet)
+        +font(20px, 24px, 500)
 
 
 

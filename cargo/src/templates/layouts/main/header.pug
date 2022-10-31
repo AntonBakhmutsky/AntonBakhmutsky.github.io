@@ -6,6 +6,8 @@ header.header
     nav.header__menu
       each el in headerLinks
         a(href=el.href) #{el.txt}
+      .header__menu-vector
+        img(src=require('@/assets/img/header/vector.svg') alt="")
     button.header__btn
       img(src=require('@/assets/img/header/burger.svg') alt="")
 

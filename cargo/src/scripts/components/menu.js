@@ -37,11 +37,11 @@ window.addEventListener('load', () => {
     if (Math.abs(xDiff) > Math.abs(yDiff)) {
       if (xDiff > 0) {
         // left swipe
+      } else {
         if (mobileMenu.classList.contains('active')) {
           mobileMenu.classList.remove('active');
           document.body.classList.remove('body_fix');
         }
-      } else {
         // right swipe
       }
     }
