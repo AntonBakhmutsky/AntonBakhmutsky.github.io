@@ -6,7 +6,7 @@ window.addEventListener('load', () => {
   const scrollItem = document.querySelector('.offers__scroll');
   const truck = document.querySelector('.offers__truck');
   const wheels = truck.querySelectorAll('img:not(:first-child)');
-  const offersItems = document.querySelectorAll('.offers__item:not(:nth-child(2), :nth-child(3))');
+  const offersItems = document.querySelectorAll('.offers__item:not(:nth-child(1), :nth-child(2))');
   const allOffersItems = document.querySelectorAll('.offers__item');
   const truckMobile = document.querySelector('.offers__truck-mobile');
   let winWidth = window.innerWidth;
@@ -115,21 +115,28 @@ window.addEventListener('load', () => {
 
   // truck mobile
   let lastScrollTop = 0;
-  const maxTop = scrollItem.scrollHeight - truckMobile.offsetHeight;
+  const maxTop = scrollItem.scrollHeight - truckMobile.offsetHeight + 34;
+  const truckMobileLine = document.querySelector('.offers__line-mobile')
   window.addEventListener('scroll', (e) => {
     let st = window.scrollY || document.documentElement.scrollTop;
     const getTruckTop = () => Number(truckMobile.style.top.replace(/[a-zа-яё]/gi, ''))
     let top = getTruckTop();
 
-    if (st > lastScrollTop){
-      if (getTruckTop() < maxTop && checkPosition(allOffersItems[2])) {
-        truckMobile.style.top = `${top + 10}px`;
+    if (checkPosition(truckMobile)) {
+      if (st > lastScrollTop){
+        if (getTruckTop() < maxTop) {
+          truckMobile.style.top = `${top + 12}px`;
+        } else {
+          truckMobile.style.top = `${maxTop + 13}px`;
+        }
+      } else {
+        if (getTruckTop() > 0) {
+          truckMobile.style.top = `${top - 12}px`;
+        } else {
+          truckMobile.style.top = `${-34}px`;
+        }
       }
-    } else {
-      if (getTruckTop() > 0 && checkPosition(allOffersItems[1])) {
-        truckMobile.style.top = `${top - 10}px`;
-      }
+      lastScrollTop = st <= 0 ? 0 : st;
     }
-    lastScrollTop = st <= 0 ? 0 : st;
   })
 });
