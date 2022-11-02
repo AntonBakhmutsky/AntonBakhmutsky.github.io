@@ -65,6 +65,12 @@
       &.active
         right: 0
 
+      a
+        +screen($tablet)
+          +font(14px, 22px)
+          &:not(:first-child)
+            margin-top: 30px
+
     &-vector
       display: none
       +screen($tablet)
@@ -73,8 +79,3 @@
         top: 6px
         right: 8px
 
-      a
-        +screen($tablet)
-          +font(14px, 22px)
-          &:not(:first-child)
-            margin-top: 30px

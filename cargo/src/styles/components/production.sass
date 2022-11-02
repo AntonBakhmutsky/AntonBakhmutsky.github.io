@@ -30,18 +30,22 @@
       margin-top: 30px
 
     &-button-next
-      display: none
+      display: flex
+      width: 76px
+      height: 76px
+      border-radius: 50%
+      background-color: rgba(255, 255, 255, 0.7)
+      transition: opacity .3s
+      top: 140px
+      right: 77px
       +screen($tablet)
-        display: flex
-        width: 36px
-        height: 36px
-        border-radius: 50%
-        background-color: $gray-light
-        right: 17px
-        transition: opacity .3s
+        right: 11px
 
-        &:active
-          opacity: .6
+      &:hover
+        opacity: .6
+
+      &:active
+        opacity: 1
 
       &:after
         display: none

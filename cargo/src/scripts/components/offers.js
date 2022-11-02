@@ -51,7 +51,7 @@ window.addEventListener('load', () => {
               targets: el,
               opacity: [0, 1],
               translateY: [150, 0],
-              duration: 1500,
+              duration: 1000,
               easing: 'easeOutQuart',
             })
           }
@@ -75,7 +75,6 @@ window.addEventListener('load', () => {
   function dragBlock(event) {
     event.preventDefault();
     let shiftX = event.clientX;
-    console.log(shiftX)
 
     document.addEventListener('mousemove', onMouseMove);
     document.addEventListener('mouseup', onMouseUp);
@@ -123,11 +122,11 @@ window.addEventListener('load', () => {
     let top = getTruckTop();
 
     if (st > lastScrollTop){
-      if (getTruckTop() < maxTop && checkPosition(truckMobile)) {
+      if (getTruckTop() < maxTop && checkPosition(allOffersItems[2])) {
         truckMobile.style.top = `${top + 10}px`;
       }
     } else {
-      if (getTruckTop() > 0 && checkPosition(truckMobile)) {
+      if (getTruckTop() > 0 && checkPosition(allOffersItems[1])) {
         truckMobile.style.top = `${top - 10}px`;
       }
     }

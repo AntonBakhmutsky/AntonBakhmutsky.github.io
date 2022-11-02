@@ -92,6 +92,8 @@
     color: $orange
     box-sizing: border-box
     border: 2px solid $white
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25)
+    transition: transform .4s
     +screen($tablet)
       margin: 20px auto 30px
       width: calc(100% - 20px)
@@ -99,14 +101,10 @@
       +font(20px, 20px, 500)
 
     &:hover
-      background-color: $orange
-      color: $white
-      border-color: $white
+      transform: scale(1.1) !important
 
     &:active
-      background-color: $white
-      color: $orange
-      border-color: $orange
+      transform: scale(1) !important
 
 
 

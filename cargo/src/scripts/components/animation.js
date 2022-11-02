@@ -3,6 +3,19 @@ import anime from 'animejs';
 
 window.addEventListener('load', () => {
 
+  if (window.innerWidth < 1024) {
+    const allSlideRight = document.querySelectorAll('.slide-right');
+    const allSlideUp = document.querySelectorAll('.slide-up');
+
+    const removeAnimAttrs = (el) => {
+      el.removeAttribute('data-delay');
+      el.removeAttribute('data-duration');
+    }
+
+    allSlideRight.forEach(el => removeAnimAttrs(el));
+    allSlideUp.forEach(el => removeAnimAttrs(el));
+  }
+
   // slide to right
   const slideToRightElements = document.querySelectorAll('.slide-right');
 
