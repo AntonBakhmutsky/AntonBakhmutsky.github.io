@@ -59,15 +59,22 @@
     align-items: center
     justify-content: center
 
+    svg
+      path
+        fill: $gray-dark
+        stroke: $gray-dark
+
     &:hover
       svg
         path
           fill: $orange
+          stroke: $orange
 
     &:active
       svg
         path
-          fill: $gray-light
+          fill: $gray-dark
+          stroke: $gray-dark
 
   &__title
     +font(34px, 38px, 600)
@@ -83,10 +90,11 @@
       display: flex
       align-items: center
       justify-content: center
-      border: 2px solid $gray-light
+      border: 1px solid $gray-dark
       box-sizing: border-box
       +font(18px, 18px, 500)
       color: $black
+      border-radius: 8px
 
       &:hover
         background-color: $orange
@@ -95,7 +103,7 @@
 
       &:active
         background-color: transparent
-        border-color: $gray-light
+        border-color: $gray-dark
         color: $black
 
       &:not(:first-child)
@@ -128,6 +136,7 @@
     border: 1px solid $gray
     box-sizing: border-box
     padding: 6px 11px 59px
+    border-radius: 8px
 
     textarea
       &::placeholder
@@ -161,7 +170,7 @@
         color: #fff
 
       &:active
-        background-color: $gray-light
+        background-color: $gray-dark
         color: $black
 
     &-txt
