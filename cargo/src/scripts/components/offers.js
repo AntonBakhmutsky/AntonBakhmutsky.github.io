@@ -1,5 +1,6 @@
 import anime from 'animejs';
 import checkPosition from '../plugins/check-position';
+import inViewport from '../plugins/inViewport';
 
 window.addEventListener('load', () => {
   const scrollContainer = document.querySelector('.offers__content');
@@ -122,21 +123,24 @@ window.addEventListener('load', () => {
     const getTruckTop = () => Number(truckMobile.style.top.replace(/[a-zа-яё]/gi, ''))
     let top = getTruckTop();
 
-    if (checkPosition(truckMobile)) {
-      if (st > lastScrollTop){
-        if (getTruckTop() < maxTop) {
-          truckMobile.style.top = `${top + 12}px`;
+    inViewport(scrollContainer, () => {
+      if (checkPosition(truckMobile)) {
+        if (st > lastScrollTop){
+          if (getTruckTop() < maxTop) {
+            truckMobile.style.top = `${top + 15}px`;
+          } else {
+            truckMobile.style.top = `${maxTop + 13}px`;
+          }
         } else {
-          truckMobile.style.top = `${maxTop + 13}px`;
+          if (getTruckTop() > 0) {
+            truckMobile.style.top = `${top - 15}px`;
+          } else {
+            truckMobile.style.top = `${-34}px`;
+          }
         }
-      } else {
-        if (getTruckTop() > 0) {
-          truckMobile.style.top = `${top - 12}px`;
-        } else {
-          truckMobile.style.top = `${-34}px`;
-        }
+        lastScrollTop = st <= 0 ? 0 : st;
       }
-      lastScrollTop = st <= 0 ? 0 : st;
-    }
+    }, 'half')
+
   })
 });
