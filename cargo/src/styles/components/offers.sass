@@ -12,6 +12,53 @@
       background-color: #E3E3E3
       padding: 40px 10px
 
+  &__top
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+  &__arrow
+    width: 56px
+    height: 56px
+    border-radius: 50%
+    background-color: $white
+    display: flex
+    align-items: center
+    justify-content: center
+    transition: opacity .3s
+    cursor: pointer
+    user-select: none
+    visibility: hidden
+    opacity: 0
+    pointer-events: none
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25)
+    +screen($tablet)
+      display: none
+
+    &.active
+      pointer-events: auto
+      opacity: 1
+      visibility: visible
+      +screen($tablet)
+        display: none
+
+    img
+      pointer-events: none
+
+    &_left
+      img
+        margin-right: 2px
+
+    &_right
+      img
+        margin-left: 2px
+
+    &:hover
+      opacity: .6
+
+    &:active
+      opacity: 1
+
   &__content
     overflow: auto
     height: 100%

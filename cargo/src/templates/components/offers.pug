@@ -1,6 +1,11 @@
 section.offers#offers
   .container
-    h2.section__title.slide-right Мы предлагаем
+    .offers__top
+      .offers__arrow.offers__arrow_left
+        img(src=require('@/assets/img/offers/left.svg') alt="")
+      h2.section__title.slide-right Мы предлагаем
+      .offers__arrow.offers__arrow_right
+        img(src=require('@/assets/img/offers/right.svg') alt="")
     .offers__content
       .offers__scroll
         each el, index in offersItems

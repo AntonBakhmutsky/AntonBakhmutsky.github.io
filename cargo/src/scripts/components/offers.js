@@ -10,6 +10,8 @@ window.addEventListener('load', () => {
   const offersItems = document.querySelectorAll('.offers__item:not(:nth-child(1), :nth-child(2))');
   const allOffersItems = document.querySelectorAll('.offers__item');
   const truckMobile = document.querySelector('.offers__truck-mobile');
+  const leftArrow = document.querySelector('.offers__arrow_left');
+  const rightArrow = document.querySelector('.offers__arrow_right');
   let winWidth = window.innerWidth;
 
   let rotateAngle = 0;
@@ -60,6 +62,8 @@ window.addEventListener('load', () => {
       } else {
         scrollContainer.addEventListener('mousedown', dragBlock);
         scrollContainer.style.cursor = 'grab';
+        leftArrow.classList.add('active');
+        rightArrow.classList.add('active');
         scrollContainer.removeEventListener('wheel', addOnWheel);
       }
       rotateAngle += 75;
@@ -141,6 +145,28 @@ window.addEventListener('load', () => {
         lastScrollTop = st <= 0 ? 0 : st;
       }
     }, 'half')
-
   })
+
+  // scroll buttons
+  let interval
+
+  const scrollStart = (e) => {
+    interval = setInterval(() => {
+      console.log(e.target)
+      if (e.target.classList.contains('offers__arrow_left')) {
+        scrollContainer.scrollLeft -= 50;
+      } else {
+        scrollContainer.scrollLeft += 50;
+      }
+    }, 100);
+  }
+
+  const scrollStop = () => {
+    clearInterval(interval);
+  }
+
+  leftArrow.addEventListener('mousedown', scrollStart);
+  rightArrow.addEventListener('mousedown', scrollStart);
+  leftArrow.addEventListener('mouseup', scrollStop);
+  rightArrow.addEventListener('mouseup', scrollStop);
 });
