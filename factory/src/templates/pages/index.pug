@@ -1,7 +1,13 @@
 extends ../layouts/main/layout.pug
 
+append variables
+  -
+    topTitle = 'Делаем серьезную технику на века'
+    topTxt = 'Первый кузовостроительный завод в СЗФО'
+    mainModifier = 'home'
+
 block title
-  | Title
+  | МЕХ ЗАВОД SOTRANS
 
 block content
-  p Asdfffdfdcvzxc dsfasdfasdlkf' esdaf
+  include ../sections/global/top-sec

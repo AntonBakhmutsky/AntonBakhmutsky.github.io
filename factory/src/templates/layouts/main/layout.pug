@@ -1,9 +1,16 @@
+//- variables
+block variables
+  include ../../abstracts/variables
+
+//- mixins
+include ../../abstracts/mixins/link
+
 doctype html
 html(lang="en")
   head
     include head
   body
     include header
-    main
+    main.main(class=mainModifier ? `main_${mainModifier}`:'')
       block content
     include footer

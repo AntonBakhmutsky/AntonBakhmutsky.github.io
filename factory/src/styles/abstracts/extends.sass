@@ -1,0 +1,23 @@
+@use './variables' as *
+
+%opacity-click
+  &:hover
+    opacity: .6
+
+  &:active
+    opacity: 1
+
+%blue-light-click
+  &:hover
+    color: $blue-light
+
+    svg
+      path
+        stroke: $blue-light
+
+  &:active
+    color: $black
+
+    svg
+      path
+        stroke: $blue-light

@@ -1,0 +1,3 @@
+mixin link(params)
+  a(href=params.url class=params.class ? params.class : '' target="_blank" rel="noopener noreferrer nofollow") #{params.txt}
+    block

@@ -1,1 +1,23 @@
-header
+header.header
+  .container
+    +link({url: 'https://sotrans.ru/', class: `header__logo`})
+      img(src=require('@/assets/img/global/header-logo.svg') alt="logo")
+    nav.header__menu
+      each el, index in headerMenu
+        if (index !== 1)
+          +link(el)
+        else
+          .header__menu-drop
+            .header__menu-drop-top
+              span #{el.txt}
+              img(src=require('@/assets/img/global/vector-down.svg') alt="vector down")
+            .header__menu-drop-options
+              .header__menu-drop-sub
+                .header__menu-drop-sub-btn #{el.children[0].txt}
+                  | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/global/vector-right.svg')}
+                .header__menu-drop-sub-options
+                  each item in el.children[0].children
+                    +link(item)
+                +link(el.children[1])
+
+
