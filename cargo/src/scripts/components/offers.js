@@ -152,7 +152,6 @@ window.addEventListener('load', () => {
 
   const scrollStart = (e) => {
     interval = setInterval(() => {
-      console.log(e.target)
       if (e.target.classList.contains('offers__arrow_left')) {
         scrollContainer.scrollLeft -= 50;
       } else {
