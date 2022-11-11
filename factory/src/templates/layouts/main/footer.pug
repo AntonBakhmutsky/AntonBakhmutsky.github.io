@@ -1,1 +1,41 @@
-footer
+footer.footer
+  .container
+    form.feedback
+      h3.feedback__title Связаться с нами
+      p.feedback__txt Наш менеджер свяжется с вами в ближайшее время
+      .feedback__fields
+        .feedback__input
+          label(for="name") Имя
+          input#name(type="text" name="name" required autocomplete="off")
+        .feedback__input
+          label(for="tel") Телефон
+          input#tel(type="tel" name="tel" required autocomplete="off")
+        .feedback__input
+          label(for="email") Телефон
+          input#email(type="email" name="email" required autocomplete="off")
+        .feedback__textarea
+          label(for="message") Ваше сообщение
+          textarea#message(name="message")
+        .feedback__policy
+          input#policy(type="checkbox" name="policy")
+          label(for="policy") #[span Продолжая, вы принимаете] #[a(href="javascript:") политику конфиденциальности]
+        button.feedback__submit(type="submit") Оставить заявку
+    .footer__contacts
+      h3.footer__contacts-title Наши контакты
+      ul.footer__contacts-list
+        each el in footerContactsList
+          li.footer__contacts-list-item
+            if (el.url)
+              a(href=el.url)
+                img(src=el.icon alt="")
+                span #{el.txt}
+            else
+              div
+                img(src=el.icon alt="")
+                span #{el.txt}
+      h3.footer__contacts-title Навигация
+      nav.footer__contacts-nav
+        each el in footerNavList
+          a(href=el.url) #{el.txt}
+    a.footer__logo(href="/")
+      img(src=require('@/assets/img/footer/footer-logo.svg') alt="footer logo")

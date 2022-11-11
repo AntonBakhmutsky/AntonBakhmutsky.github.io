@@ -1,5 +1,72 @@
 @use '../../abstracts/variables' as *
 @use '../../abstracts/mixins' as *
+@use '../../abstracts/extends' as *
 
 .footer
   flex: 0 1 auto
+  padding: 86px 0
+  background-color: $blue-lightest
+
+  .container
+    display: flex
+
+  .feedback
+    margin-right: 255px
+
+  h3
+    +font(32px, 38px, 500, $font-title)
+
+  label
+    +font(14px, 14px, 350)
+
+  &__logo
+    width: 341px
+    height: 110px
+    position: absolute
+    bottom: 3px
+    right: 76px
+
+  &__contacts
+    margin-top: 31px
+
+    &-list
+      margin: 34px 0 65px
+
+      &-item
+        +font(20px, 36px, 350)
+
+        &:not(:first-child)
+          margin-top: 12px
+
+        a, div
+          display: flex
+          align-items: center
+
+          img
+            margin-right: 9px
+
+        a
+          &:hover
+            color: $blue-light
+
+          &:active
+            color: $blue-light
+
+        &:last-child
+          box-sizing: border-box
+          padding-left: 4px
+
+          img
+            margin-right: 11px
+
+    &-nav
+      margin-top: 33px
+
+      a
+        +font(18px, 29px, 500)
+        @extend %blue-light-click
+
+        &:not(:first-child)
+          margin-top: 12px
+
+
