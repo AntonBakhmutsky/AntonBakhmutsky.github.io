@@ -1,0 +1,14 @@
+section.about
+  .container
+    .about__desc
+      h2.section-title #[span 01] О компании
+      ul.about__list
+        each el in aboutList
+          li.about__list-item
+            span #{el.num}
+            span #{el.txt}
+      .about__image-mob
+        img(src=require('@/assets/img/index/about.png') alt="")
+      p.about__txt ООО «Механический Завод СОТРАНС» входит в ГК СОТРАНС и является первым кузовостроительным заводом в СЗФО. Завод начал свою деятельность с января 2021 года и на сегодняшний день занимается разработкой, производством и монтажом различных видов надстроек на базе грузовых шасси различных производителей: MAN, Scania, Volvo, Mercedes Benz, Daf, Ford, КАМАЗ, МАЗ, УРАЛ.
+    .about__image
+      img(src=require('@/assets/img/index/about.png') alt="")

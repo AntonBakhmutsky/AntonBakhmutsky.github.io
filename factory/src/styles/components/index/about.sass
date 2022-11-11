@@ -1,0 +1,73 @@
+@use '../../abstracts/variables' as *
+@use '../../abstracts/mixins' as *
+
+.about
+  padding: 35px 0
+
+  .container
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+  &__desc
+    flex-basis: 55.5%
+    margin-right: 70px
+    +screen($tablet)
+      margin-right: 0
+      flex-basis: auto
+      display: flex
+      flex-direction: column
+      align-items: center
+
+      .section-title
+        align-self: flex-start
+
+  &__list
+    margin-top: 24px
+    display: flex
+    +screen($tablet)
+      margin-top: 30px
+      flex-direction: column
+
+    &-item
+      display: flex
+      flex-direction: column
+      +screen($tablet)
+        align-items: center
+
+      &:not(:last-child)
+        margin-right: 60px
+        +screen($tablet)
+          margin: 0 0 20px 0
+
+      span
+        &:first-child
+          color: $blue
+          +font(32px, 52px, 500, $font-title)
+
+        &:last-child
+          +font(20px, 32px, 500)
+
+  &__txt
+    margin-top: 35px
+    +screen($tablet)
+      margin-top: 42px
+
+  &__image
+    flex-basis: 36.4%
+    +screen($tablet)
+      display: none
+
+    img
+      width: 100%
+      height: 100%
+
+    &-mob
+      display: none
+      +screen($tablet)
+        display: block
+        margin-top: 30px
+
+        img
+          width: 100%
+          height: 100%
