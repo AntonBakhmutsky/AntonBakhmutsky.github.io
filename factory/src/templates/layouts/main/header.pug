@@ -10,14 +10,15 @@ header.header
           .header__menu-drop
             .header__menu-drop-top
               span #{el.txt}
-              img(src=require('@/assets/img/global/vector-down.svg') alt="vector down")
-            .header__menu-drop-options
-              .header__menu-drop-sub
-                .header__menu-drop-sub-btn #{el.children[0].txt}
-                  | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/global/vector-right.svg')}
-                .header__menu-drop-sub-options
-                  each item in el.children[0].children
-                    +link(item)
-                +link(el.children[1])
+              | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/global/vector-down.svg')}
+              .header__menu-drop-container
+                .header__menu-drop-options
+                  .header__menu-drop-sub
+                    span #{el.children[0].txt}
+                      | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/global/vector-right.svg')}
+                    .header__menu-drop-sub-options
+                        each item in el.children[0].children
+                          +link(item)
+                  +link(el.children[1])
 
 
