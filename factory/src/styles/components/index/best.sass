@@ -1,4 +1,76 @@
 @use '../../abstracts/variables' as *
 @use '../../abstracts/mixins' as *
+@use '../../abstracts/extends' as *
 
 .best
+  padding: 53px 0 61px
+  position: relative
+  height: 463px
+  box-sizing: border-box
+  background-color: $blue-lightest
+  +screen($tablet)
+    height: auto
+    padding: 0 0 40px 0
+
+  &__bg
+    height: 100%
+    position: absolute
+    top: 0
+    left: 0
+    +screen(1280)
+      width: 50%
+    +screen($tablet)
+      width: 100%
+      position: relative
+      top: auto
+      left: auto
+
+    img
+      width: 100%
+      height: 100%
+
+      &:first-child
+        +screen($tablet)
+          display: none
+
+      &:nth-child(2)
+        display: none
+        +screen($tablet)
+          display: block
+
+  .container
+    display: flex
+    justify-content: flex-end
+    +screen($tablet)
+      justify-content: flex-start
+      flex-direction: column
+
+  &__content
+    z-index: 1
+    position: relative
+    max-width: 506px
+
+    .section-title
+      margin-top: 30px
+
+  &__txt
+    margin-top: 30px
+    +screen($tablet)
+      margin-top: 22px
+
+  &__link
+    margin-top: 30px
+    height: 49px
+    width: 249px
+    border-radius: 4px
+    background-color: $blue
+    display: flex
+    align-items: center
+    justify-content: center
+    +font(18px, 18px, 500)
+    color: $white
+    @extend %opacity-click
+    +screen($tablet)
+      margin-top: 40px
+      width: 100%
+
