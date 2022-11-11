@@ -4,17 +4,33 @@
 
 .footer
   flex: 0 1 auto
-  padding: 86px 0
-  background-color: $blue-lightest
+
+  &__top
+    background-color: $blue-lightest
+    padding: 86px 0
+    +screen($tablet)
+      padding: 0 0 30px
 
   .container
     display: flex
+    +screen($tablet)
+      flex-direction: column
+
+    &:first-child
+      +screen($tablet)
+        padding: 0
 
   .feedback
     margin-right: 255px
+    +screen(1200)
+      margin-right: 50px
+    +screen($tablet)
+      margin-right: 0
 
   h3
     +font(32px, 38px, 500, $font-title)
+    +screen($tablet)
+      +font(24px, 28px, 500, $font-title)
 
   label
     +font(14px, 14px, 350)
@@ -23,14 +39,44 @@
     width: 341px
     height: 110px
     position: absolute
-    bottom: 3px
+    bottom: 89px
     right: 76px
+    +screen($tablet)
+      width: 116px
+      height: 37px
+      bottom: 404px
+      right: 10px
 
   &__contacts
     margin-top: 31px
+    +screen($tablet)
+      margin-top: 20px
+      box-sizing: border-box
+      padding: 0 10px
+      display: flex
+      flex-direction: column
+
+    &-title
+      margin-top: 20px
+
+      &:nth-child(4)
+        display: none
+
+    &-slide-up
+      display: none
+      +screen($tablet)
+        display: flex
+        align-items: center
+        +font(14px, 15px, 350)
+
+      img
+        margin-right: 10px
 
     &-list
       margin: 34px 0 65px
+      +screen($tablet)
+        order: 1
+        margin: 25px 0 0
 
       &-item
         +font(20px, 36px, 350)
@@ -55,12 +101,22 @@
         &:last-child
           box-sizing: border-box
           padding-left: 4px
+          +screen($tablet)
+            +font(20px, 24px, 350)
+
+            div
+              align-items: flex-start
+
+              img
+                margin-top: 2px
 
           img
             margin-right: 11px
 
     &-nav
       margin-top: 33px
+      +screen($tablet)
+        margin-top: 20px
 
       a
         +font(18px, 29px, 500)
@@ -69,4 +125,24 @@
         &:not(:first-child)
           margin-top: 12px
 
+  &__copyright
+    padding: 24px 0
+    display: flex
+    justify-content: space-between
+    align-items: center
+    width: 100%
+    +font(14px, 22px, 500)
+
+    a
+      @extend %opacity-click
+      position: relative
+
+      &:after
+        content: ''
+        width: 100%
+        height: 1px
+        background-color: $black
+        position: absolute
+        bottom: 3px
+        left: 0
 
