@@ -3,3 +3,57 @@
 
 .top
   height: 615px
+  position: relative
+  color: $white
+  padding-bottom: 55px
+  box-sizing: border-box
+  +screen($tablet)
+    height: 582px
+
+  &:before
+    content: ''
+    width: 100%
+    height: 100%
+    position: absolute
+    top: 0
+    left: 0
+    background: linear-gradient(103.49deg, rgba(0, 0, 0, 0.9) 11.06%, rgba(0, 0, 0, 0) 97.33%, rgba(0, 0, 0, 0) 103.86%)
+
+  .container
+    display: flex
+    flex-direction: column
+    height: 100%
+
+  &__title
+    max-width: 800px
+    +font(64px, 70px, 700, $font-title)
+    +screen($tablet)
+      +font(36px, 40px, 700, $font-title)
+
+  &__txt
+    +font(32px, 39px, 500, $font-title)
+    margin-top: 14px
+    +screen($tablet)
+      +font(22px, 26px, 500, $font-title)
+      margin-top: 18px
+
+  &__btn
+    height: 56px
+    width: 312px
+    border-radius: 4px
+    background: $yellow
+    margin-top: 57px
+    display: flex
+    align-items: center
+    justify-content: center
+    +font(18px, 18px, 500)
+    transition: transform .3s
+    +screen($tablet)
+      width: 100%
+      margin-top: auto
+
+    &:hover
+      transform: scale(1.1)
+
+    &:active
+      transform: scale(1)

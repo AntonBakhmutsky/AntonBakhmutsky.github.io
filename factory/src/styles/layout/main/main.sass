@@ -5,5 +5,12 @@
   flex: 1 0 auto
   &_home
     .top
+      padding-top: 223px
       background: url(../assets/img/index/top-bg.jpg) center/cover no-repeat
       height: 700px
+      +screen($tablet)
+        height: 614px
+        padding-top: 208px
+      +screen($tablet-xs)
+        background: url(../assets/img/index/top-bg-mob.jpg) center/cover no-repeat
+
