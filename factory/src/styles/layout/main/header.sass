@@ -11,7 +11,11 @@
   background-color: $white
   z-index: 10
   box-sizing: border-box
-  padding: 34px
+  height: 95px
+  display: flex
+  align-items: center
+  +screen($tablet)
+    height: 32px
 
   .container
     display: flex
@@ -22,6 +26,11 @@
     @extend %opacity-click
     display: flex
     align-items: center
+    width: 150px
+    height: 19px
+    +screen($tablet)
+      width: 80px
+      height: 10px
 
   &__menu
     display: flex
@@ -29,6 +38,8 @@
     max-width: 1010px
     width: 100%
     justify-content: space-between
+    +screen(1280)
+      display: none
 
     a
       @extend %blue-light-click
@@ -62,7 +73,6 @@
               pointer-events: auto
               opacity: 1
 
-
       &-container
         padding-top: 15px
         position: absolute
@@ -87,7 +97,6 @@
         padding: 14px 0
         background-color: $white
         box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25)
-
 
       &-sub
         &:hover
@@ -130,5 +139,11 @@
 
           svg
             margin-left: 18px
+
+  &__btn
+    display: none
+    +screen(1280)
+      display: flex
+      align-items: center
 
 
