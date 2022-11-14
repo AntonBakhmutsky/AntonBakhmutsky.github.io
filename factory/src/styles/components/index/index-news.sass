@@ -4,11 +4,37 @@
 
 .index-news
   padding: 50px 0 76px
+  +screen($tablet)
+    padding: 51px 0 59px
 
-  .swiper
+  &__grid
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
+    grid-gap: 16px
+
+  &__item
     margin-top: 40px
 
+    &:not(:first-child)
+      +screen($tablet)
+        display: none
+
+    &_new
+      .index-news__item-image
+        &:before
+          content: 'Новое'
+          width: 138px
+          height: 45px
+          display: flex
+          align-items: center
+          justify-content: center
+          background-color: $yellow
+          bottom: 0
+          left: 0
+          position: absolute
+
     &-image
+      position: relative
       height: 232px
 
       img
