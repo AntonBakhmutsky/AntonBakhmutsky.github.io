@@ -132,10 +132,16 @@
     align-items: center
     width: 100%
     +font(14px, 22px, 500)
+    +screen($tablet)
+      flex-direction: column
+      justify-content: flex-start
+      align-items: flex-start
 
     a
       @extend %opacity-click
       position: relative
+      +screen($tablet)
+        margin-top: 15px
 
       &:after
         content: ''
