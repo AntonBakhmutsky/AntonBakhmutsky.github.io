@@ -1,0 +1,25 @@
+section.products-slider
+  .container
+    .products-slider__top.section-top
+      h2.section-title #[span 05] Продукция
+      +link({url: 'products.html', txt: 'Посмотреть все', class: 'more-link'})
+    .swiper
+      .swiper-wrapper
+        each el in productsList
+          .swiper-slide
+            .swiper-slide-image
+              img(src=el.img)
+            .swiper-slide-content
+              h2.swiper-slide-title #{el.title}
+              ul.swiper-slide-list
+                each option in el.options
+                  li
+                    span #{option.title}
+                    span #{option.txt}
+              .swiper-slide-btns
+                a(href=el.url) Заказать звонок
+                a(href=el.url) Подробнее
+      .swiper-button-next
+        img(src=require('@/assets/img/index/products/arrow-right.svg') alt="")
+    .section-bottom
+      +link({url: 'products.html', txt: 'Посмотреть все', class: 'more-link'})

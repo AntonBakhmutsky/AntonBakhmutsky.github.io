@@ -151,3 +151,42 @@ input[type="checkbox"]:checked + label
   z-index: 1
   +screen($tablet)
     background: $image-mask-mob
+
+.more-link
+  color: $blue
+  position: relative
+  +font(16px, 18px, 500)
+
+  &:after
+    content: ''
+    width: 100%
+    height: 1px
+    background-color: $blue
+    position: absolute
+    bottom: 0
+    left: 0
+
+
+.section
+  &-top
+    display: flex
+    justify-content: space-between
+    align-items: center
+    +screen($tablet)
+      flex-direction: column
+      align-items: flex-start
+
+    .more-link
+      +screen($tablet)
+        display: none
+
+  &-bottom
+    margin-top: 33px
+    display: flex
+    justify-content: center
+    align-items: center
+
+    .more-link
+      display: none
+      +screen($tablet)
+        display: block
