@@ -3,3 +3,16 @@ section.index-news
     .index-news__top.section-top
       h2.section-title #[span 06] Новости
       +link({url: 'news.html', txt: 'Посмотреть все', class: 'more-link'})
+    .swiper
+      .swiper-wrapper
+        each el in newsList
+          .swiper-slide
+            .swiper-image
+              img(src=el.img alt="")
+            .swiper-content
+              .swiper-date #{el.date}
+              h3.swiper-title #{el.title}
+              p.swiper-txt #{el.txt}
+              a.swiper-link.btn.btn_yellow(href=el.url) Читать далее
+    .section-bottom
+      +link({url: 'news.html', txt: 'Посмотреть все', class: 'more-link'})
