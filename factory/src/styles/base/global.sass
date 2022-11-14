@@ -110,29 +110,29 @@ input[type="checkbox"]:checked + label
   &-title
     box-sizing: border-box
     padding-left: 25px
-    position: relative
     +font(32px, 52px, 700, $font-title)
 
-    &:before
-      content: ''
-      width: 18px
-      height: 18px
-      border-radius: 50%
-      background-color: $gray-light
-      position: absolute
-      top: 50%
-      transform: translateY(-50%)
-      left: 0
-
     span
+      position: relative
       color: $blue
       +font(32px, 39px, 500, $font-title)
+
+      &:before
+        content: ''
+        width: 18px
+        height: 18px
+        border-radius: 50%
+        background-color: $gray-light
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        left: -25px
 
     &_white
       color: $white
 
       &:before
-        color: $white
+        background-color: $white
 
       span
         color: $white
