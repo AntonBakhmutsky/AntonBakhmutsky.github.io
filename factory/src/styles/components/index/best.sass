@@ -5,12 +5,15 @@
 .best
   padding: 53px 0 61px
   position: relative
-  height: 463px
   box-sizing: border-box
   background-color: $blue-lightest
   +screen($tablet)
     height: auto
     padding: 0 0 40px 0
+
+  .container
+    &:nth-child(2)
+      height: 463px
 
   &__bg
     height: 100%
@@ -49,6 +52,9 @@
     z-index: 1
     position: relative
     max-width: 506px
+    +screen($tablet)
+      max-width: none
+      width: 100%
 
     .section-title
       margin-top: 30px

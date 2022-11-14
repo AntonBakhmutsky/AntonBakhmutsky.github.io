@@ -1,0 +1,13 @@
+section.benefits
+  .container
+    h2.section-title.section-title_white #[span 03] Ключевые преимущества
+    .swiper
+      .swiper-wrapper
+        each el in benefitsSlides
+          .swiper-slide
+            h3.swiper-slide-title #{el.title}
+            p.swiper-slide-text #{el.txt}
+            .swiper-slide-image
+              img(src=el.img alt="")
+
+
