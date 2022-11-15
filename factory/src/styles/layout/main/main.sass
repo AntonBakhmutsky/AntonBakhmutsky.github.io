@@ -3,8 +3,10 @@
 
 .main
   flex: 1 0 auto
-  padding-top: 147px
-  
+  padding-top: 157px
+  +screen($tablet)
+    padding-top: 32px
+
   &_home
     padding-top: 0
     .top
@@ -16,4 +18,11 @@
         padding-top: 208px
       +screen($tablet-xs)
         background: url(../assets/img/index/top-bg-mob.jpg) center/cover no-repeat
+
+  &_semitrailer
+    .top
+      background: url(../assets/img/polupritsepy/top-bg.jpg) center/cover no-repeat
+      +screen($tablet-xs)
+        background: url(../assets/img/polupritsepy/top-bg-mob.jpg) center/cover no-repeat
+
 

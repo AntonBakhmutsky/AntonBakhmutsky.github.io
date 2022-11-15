@@ -2,8 +2,24 @@ extends ../layouts/other-pages/layout.pug
 
 append variables
   -
-    topTitle = 'Делаем серьезную технику на века'
-    topTxt = 'Первый кузовостроительный завод в СЗФО'
+    topTitle = 'Полуприцепы шторные'
+    callModal = true
+    mainModifier = 'semitrailer'
+    breadCrumbsList = [
+      {
+        url: 'javascript:',
+        txt: 'Продукция'
+      },
+      {
+        url: 'javascript:',
+        txt: 'Полуприцепы'
+      },
+      {
+        url: 'javascript:',
+        txt: 'Шторные полуприцепы',
+        class: 'active'
+      }
+    ]
 
 block title
   | МЕХ ЗАВОД SOTRANS

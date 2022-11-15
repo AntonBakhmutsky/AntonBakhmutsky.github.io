@@ -1,5 +1,6 @@
 @use '../abstracts/variables' as *
 @use '../abstracts/mixins' as *
+@use '../abstracts/extends' as *
 
 html
   scroll-behavior: smooth
@@ -214,3 +215,7 @@ input[type="checkbox"]:checked + label
     &:active
       background-color: transparent
       color: $yellow
+
+  &_yellow_fill
+    background-color: $yellow
+    @extend %opacity-click

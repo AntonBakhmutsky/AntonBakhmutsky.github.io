@@ -1,0 +1,7 @@
+mixin breadcrumbs(params)
+  .breadcrumbs
+    .container
+      ul.breadcrumbs__list
+        each el in params
+          li.breadcrumbs__item
+            +link({url: el.url, txt: el.txt, class: el.class})

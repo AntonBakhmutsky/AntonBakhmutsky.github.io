@@ -16,4 +16,5 @@ html(lang="ru")
     main.main(class=mainModifier ? `main_${mainModifier}`:'')
       block content
     include ../main/footer
-    include ../../sections/global/call-modal
+    if (callModal)
+      include ../../sections/global/call-modal

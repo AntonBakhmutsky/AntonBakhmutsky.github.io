@@ -1,0 +1,16 @@
+.call-modal
+  .call-modal__body
+    .call-modal__close
+      img(src=require('@/assets/img/global/close.svg') alt="")
+    .call-modal__image
+      img(src=require('@/assets/img/global/collage/collage-small-top-left.png') alt="")
+    form.call-modal__form
+      h2.call-modal__title Заказать звонок
+      .call-modal__fields
+        .call-modal__input
+          label(for="modal-name") Имя
+          input#modal-name(type="text" name="name")
+        .call-modal__input
+          label(for="modal-phone") Телефон
+          input#modal-phone(type="tel" name="tel")
+      button.call-modal__submit.btn.btn_yellow_fill(type="submit") Оставить заявку
