@@ -2,24 +2,34 @@ header.header
   .container
     +link({url: 'https://sotrans.ru/', class: `header__logo`})
       img(src=require('@/assets/img/global/header-logo.svg') alt="logo")
-    nav.header__menu
-      each el, index in headerMenu
-        if (index !== 1)
-          +link(el)
-        else
-          .header__menu-drop
-            .header__menu-drop-top
-              span #{el.txt}
-              | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/global/vector-down.svg')}
-              .header__menu-drop-container
-                .header__menu-drop-options
-                  .header__menu-drop-sub
-                    span #{el.children[0].txt}
-                      | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/global/vector-right.svg')}
-                    .header__menu-drop-sub-options
-                        each item in el.children[0].children
-                          +link(item)
-                  +link(el.children[1])
+    .header__menu
+      .header__menu-top
+        +link({url: 'https://sotrans.ru/', class: 'header__menu-logo'})
+          img(src=require('@/assets/img/global/mob-logo.svg') alt="mobile logo")
+        button
+          img(src=require('@/assets/img/global/vector-thin.svg') alt="")
+      form.header__menu-search
+        .header__menu-search-field
+          input#search(type="text" name="search" placeholder="Поиск по сайту")
+          img(src=require('@/assets/img/global/loupe.svg') alt="")
+      nav.header__menu-list
+        each el, index in headerMenu
+          if (index !== 1)
+            +link(el)
+          else
+            .header__menu-drop
+              .header__menu-drop-top
+                span #{el.txt}
+                | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/global/vector-down.svg')}
+                .header__menu-drop-container
+                  .header__menu-drop-options
+                    .header__menu-drop-sub
+                      span #{el.children[0].txt}
+                        | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/global/vector-right.svg')}
+                      .header__menu-drop-sub-options
+                          each item in el.children[0].children
+                            +link(item)
+                    +link(el.children[1])
     button.header__btn
       img(src=require('@/assets/img/global/burger.svg') alt="")
 
