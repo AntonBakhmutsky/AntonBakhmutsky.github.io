@@ -6,7 +6,7 @@ block variables
 include ../../abstracts/mixins/link
 
 doctype html
-html(lang="en")
+html(lang="ru")
   head
     include head
   body
@@ -14,3 +14,4 @@ html(lang="en")
     main.main(class=mainModifier ? `main_${mainModifier}`:'')
       block content
     include footer
+    include ../../sections/global/call-modal

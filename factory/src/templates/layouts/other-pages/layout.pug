@@ -4,13 +4,16 @@ block variables
 
 //- mixins
 include ../../abstracts/mixins/link
+include ../../abstracts/mixins/breadcrumbs
 
 doctype html
-html(lang="en")
+html(lang="ru")
   head
-    include head
+    include ../main/head
   body
     include header
+    +breadcrumbs(breadCrumbsList)
     main.main(class=mainModifier ? `main_${mainModifier}`:'')
       block content
-    include footer
+    include ../main/footer
+    include ../../sections/global/call-modal
