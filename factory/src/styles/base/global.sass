@@ -115,11 +115,14 @@ input[type="checkbox"]:checked + label
     box-sizing: border-box
     padding-left: 25px
     +font(32px, 36px, 700, $font-title)
+    display: flex
+    align-items: flex-start
 
     span
       position: relative
       color: $blue
       +font(32px, 39px, 500, $font-title)
+      margin: -2px 14px 0 0
 
       &:before
         content: ''

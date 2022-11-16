@@ -5,25 +5,31 @@
   padding: 55px 0
   background-color: $blue-lightest
 
+  .container
+    +screen($tablet)
+      padding: 0
+
   &__content
     display: flex
     flex-wrap: wrap
     justify-content: space-between
     margin-top: 26px
+    +screen($tablet)
+      flex-direction: column
+      flex-wrap: nowrap
 
   .section-title
-    display: flex
-    align-items: flex-start
     +screen($tablet)
       display: block
 
-    span
-      margin: -2px 18px 0 0
+      span
+        margin: 0 0 0 10px
 
   &__image
     flex-basis: 58%
     +screen($tablet)
       flex-basis: auto
+      margin-top: 34px
 
     img
       width: 100%
@@ -32,6 +38,9 @@
       object-position: center
 
   &__options
+    +screen($tablet)
+      padding: 0 10px
+
     strong
       +font(20px, 26px, 500)
 
@@ -43,6 +52,7 @@
       flex-basis: 40%
       +screen($tablet)
         flex-basis: auto
+        order: -1
 
     &_bottom
       width: 100%
