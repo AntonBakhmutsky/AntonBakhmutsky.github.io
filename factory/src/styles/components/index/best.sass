@@ -3,15 +3,16 @@
 @use '../../abstracts/extends' as *
 
 .best
-  padding: 53px 0 61px
   position: relative
   box-sizing: border-box
   background-color: $blue-lightest
+  height: 577px
   +screen($tablet)
     height: auto
     padding: 0 0 40px 0
 
   .container
+    height: 100%
     &:nth-child(2)
       height: 463px
 
@@ -20,8 +21,6 @@
     position: absolute
     top: 0
     left: 0
-    +screen(1280)
-      width: 50%
     +screen($tablet)
       width: 100%
       position: relative
@@ -49,10 +48,18 @@
       flex-direction: column
 
   &__content
+    height: 100%
+    display: flex
+    flex-direction: column
+    justify-content: center
+    background-color: $blue-lightest
+    box-sizing: border-box
+    padding: 0 10px
     z-index: 1
     position: relative
-    max-width: 506px
+    max-width: 526px
     +screen($tablet)
+      padding: 0
       max-width: none
       width: 100%
 
