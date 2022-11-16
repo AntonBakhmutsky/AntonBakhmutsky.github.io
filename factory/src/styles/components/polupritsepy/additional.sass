@@ -2,3 +2,91 @@
 @use '../../abstracts/mixins' as *
 
 .additional
+  padding: 56px 0 91px
+
+  .swiper
+    max-width: 1440px
+    margin: 40px auto 0
+
+    &-button-next
+      width: 92px
+      height: 92px
+      background-color: rgba(0, 0, 0, .5)
+      border-radius: 50%
+      right: 80px
+      top: 45%
+      transition: background-color .3s
+      +screen($tablet)
+        top: 35%
+        width: 56px
+        height: 56px
+        right: 6px
+
+        img
+          width: 14px
+          height: 23px
+      &:after
+        content: ''
+
+      &:hover
+        background-color: rgba(0, 0, 0, .8)
+
+      &:active
+        background-color: rgba(0, 0, 0, .5)
+
+    &-slide
+      position: relative
+      border-radius: 4px
+      overflow: hidden
+      display: flex
+      box-sizing: border-box
+      flex-direction: column
+
+      &:hover
+        .swiper-slide-hidden
+          visibility: visible
+          opacity: 1
+
+      &-mob-txt
+        display: none
+        +screen($tablet)
+          display: block
+          +font(20px, 26px, 500, $font-title)
+          box-sizing: border-box
+          padding: 0 10px
+
+      &-image
+        background-color: $white
+
+        img
+          width: 100%
+          height: 100%
+          object-fit: contain
+          object-position: center
+
+      &-hidden
+        position: absolute
+        width: 100%
+        height: 100%
+        background-color: rgba($blue, .9)
+        color: $white
+        top: 0
+        left: 0
+        box-sizing: border-box
+        padding: 43px 14px
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: flex-end
+        visibility: hidden
+        opacity: 0
+        transition: visibility .3s, opacity .3s
+        +screen($tablet)
+          display: none
+
+        &-txt
+          +font(34px, 36px, 500, $font-title)
+          text-align: center
+
+        &-logo
+          margin-top: 80px
