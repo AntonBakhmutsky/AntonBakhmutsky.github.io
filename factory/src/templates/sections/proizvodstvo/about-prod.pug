@@ -1,0 +1,14 @@
+section.about-prod
+  .container
+    .about-prod__desc
+      h2.section-title #[span 01] О производстве
+      .about-prod__content
+        each el in aboutProdContent
+          if (el.num)
+            p
+              strong #{el.txt}
+              span #{el.num}
+          else
+            p #{el.txt}
+    .about-prod__image
+      img(src=require('@/assets/img/proizvodstvo/about-prod.jpg') alt="О производстве")

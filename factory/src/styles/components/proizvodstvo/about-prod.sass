@@ -2,3 +2,66 @@
 @use '../../abstracts/mixins' as *
 
 .about-prod
+  padding: 80px 0
+  +screen($tablet)
+    padding: 50px 0
+
+  .container
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    +screen($tablet)
+      flex-direction: column
+      align-items: center
+      padding: 0
+
+  &__desc
+    flex-basis: 47%
+    +screen($tablet)
+      flex-basis: auto
+      box-sizing: border-box
+      padding: 0 10px
+
+  &__content
+    p
+      margin-top: 30px
+      display: flex
+      justify-content: space-between
+      align-items: flex-end
+      +font(20px, 26px, 350)
+      +screen($tablet)
+        flex-direction: column
+        align-items: center
+        text-align: center
+
+      &:nth-child(1),
+      &:nth-child(2)
+        strong
+          +font(20px, 26px, 500)
+          flex-basis: 60%
+
+        span
+          +font(32px, 32px, 500, $font-title)
+          color: $blue
+          +screen($tablet)
+            margin-top: 30px
+
+      &:nth-child(2)
+        margin-top: 40px
+
+  &__image
+    flex-basis: 49.15%
+    border-radius: 4px
+    overflow: hidden
+    +screen($tablet)
+      margin-top: 40px
+      flex-basis: auto
+      width: 100%
+
+    img
+      width: 100%
+      height: 100%
+      object-position: center
+      object-fit: contain
+      +screen($tablet)
+        object-fit: cover

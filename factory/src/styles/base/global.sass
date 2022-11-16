@@ -151,6 +151,21 @@ input[type="checkbox"]:checked + label
         &:before
           background-color: $blue
 
+  &-sub-title
+    +font(32px, 36px, 700, $font-title)
+    position: relative
+    padding-left: 29px
+
+    &:before
+      content: ''
+      position: absolute
+      top: 10px
+      left: 0
+      width: 18px
+      height: 18px
+      border-radius: 50%
+      background-color: $blue
+
 .image-overlay
   position: absolute
   width: 100%
