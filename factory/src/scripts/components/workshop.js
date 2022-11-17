@@ -20,7 +20,8 @@ window.addEventListener('load', () => {
     })
 
     // swiper wrapper height
-    const swiperSlideImages = document.querySelectorAll('.workshop .swiper-slide .swiper-slide-image');
+    const swiperSlideImages = document.querySelectorAll('.workshop .swiper-slide .swiper-slide-image')
+    const swiperWrapper = document.querySelector('.workshop .swiper-wrapper')
 
     function setSwiperWorkshopHeight() {
       const contentHeights = [];
@@ -29,13 +30,13 @@ window.addEventListener('load', () => {
 
       const maxImageHeight = Math.max(...contentHeights);
 
-      swiperSlideImages.forEach(el => el.style.minHeight = `${maxImageHeight}px`)
+      swiperWrapper.style.height = `${maxContentHeight}px`
     }
 
     setSwiperWorkshopHeight()
 
     window.addEventListener('resize', () => {
-      swiperSlideImages.forEach(el => el.removeAttribute('style'))
+      swiperWrapper.style.height = 'auto'
       setSwiperWorkshopHeight()
     })
   }

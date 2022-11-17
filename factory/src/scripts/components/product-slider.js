@@ -1,10 +1,10 @@
 import Swiper, {Navigation} from 'swiper'
 
 window.addEventListener('load', () => {
-  if (!document.querySelector('.products-slider .swiper')) {
+  if (!document.querySelector('.product-slider .swiper')) {
     return false
   } else {
-    const slider = new Swiper('.products-slider .swiper', {
+    const slider = new Swiper('.product-slider .swiper', {
       modules: [Navigation],
       navigation: {
         nextEl: '.swiper-button-next'
@@ -13,42 +13,41 @@ window.addEventListener('load', () => {
       breakpoints: {
         320: {
           slidesPerView: 1,
-          spaceBetween: 10
         },
         640: {
           slidesPerView: 1.2,
           spaceBetween: 20
         },
         768: {
-          slidesPerView: 2,
-          spaceBetween: 20
-        },
-        1024: {
-          slidesPerView: 3,
+          slidesPerView: 1.4,
           spaceBetween: 20
         },
         1280: {
-          spaceBetween: 30,
-          slidesPerView: 4,
+          slidesPerView: 2.3,
+          spaceBetween: 20
         }
       }
     })
 
     // swiper wrapper height
-    const swiperSlideContents = document.querySelectorAll('.products-slider .swiper-slide .swiper-slide-content');
+    const swiperSlideImgs = document.querySelectorAll('.product-slider .swiper-slide .swiper-slide-image');
+    const swiperWrapper = document.querySelector('.product-slider .swiper-wrapper')
 
     function setSwiperHeight() {
       const contentHeights = [];
 
-      swiperSlideContents.forEach(el => contentHeights.push(el.scrollHeight));
+      swiperSlideImgs.forEach(el => contentHeights.push(el.scrollHeight));
 
       const maxContentHeight = Math.max(...contentHeights);
 
-      swiperSlideContents.forEach(el => el.style.minHeight = `${maxContentHeight}px`)
+      swiperWrapper.style.height = `${maxContentHeight}px`
     }
 
     setSwiperHeight()
 
-    window.addEventListener('resize', setSwiperHeight)
+    window.addEventListener('resize', () => {
+      swiperWrapper.style.height = 'auto'
+      setSwiperHeight()
+    })
   }
 })
