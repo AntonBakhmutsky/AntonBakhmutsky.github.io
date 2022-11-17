@@ -1,0 +1,39 @@
+@use '../../abstracts/variables' as *
+@use '../../abstracts/mixins' as *
+
+.product-specs
+  padding: 56px 0
+  background-color: $blue-lightest
+  +screen($tablet)
+    padding: 40px 0
+
+    .section-title
+      +font(24px, 36px, 700, $font-title)
+
+  &__content
+    display: flex
+    margin-top: 25px
+    justify-content: space-between
+    +screen($tablet)
+      flex-direction: column
+
+  &__container
+    flex-basis: 45%
+    display: flex
+    flex-direction: column
+
+  &__list
+    margin-top: 36px
+
+    li
+      &:not(:first-child)
+        margin-top: 12px
+
+      span
+        +font(16px, 26px, 500)
+        +screen($tablet)
+          +font(18px, 26px, 500, $font-title)
+
+      b
+        +font(18px, 26px, 500, $font-title)
+        color: $blue

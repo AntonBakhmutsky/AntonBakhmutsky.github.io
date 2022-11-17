@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ae987b70-632d-4167-9275-929a3af93a1a" name="Changes" comment="clear work tree">
+      <change afterPath="$PROJECT_DIR$/factory/src/styles/components/product/product-specs.sass" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/factory/src/templates/sections/product/product-specs.pug" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/factory/src/scripts/components/animations.js" beforeDir="false" afterPath="$PROJECT_DIR$/factory/src/scripts/components/animations.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/factory/src/templates/sections/proizvodstvo/about-prod.pug" beforeDir="false" afterPath="$PROJECT_DIR$/factory/src/templates/sections/proizvodstvo/about-prod.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/factory/src/templates/sections/proizvodstvo/cert.pug" beforeDir="false" afterPath="$PROJECT_DIR$/factory/src/templates/sections/proizvodstvo/cert.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/factory/src/templates/sections/proizvodstvo/workshop.pug" beforeDir="false" afterPath="$PROJECT_DIR$/factory/src/templates/sections/proizvodstvo/workshop.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/factory/src/styles/app.sass" beforeDir="false" afterPath="$PROJECT_DIR$/factory/src/styles/app.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/factory/src/styles/base/global.sass" beforeDir="false" afterPath="$PROJECT_DIR$/factory/src/styles/base/global.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/factory/src/templates/abstracts/variables.pug" beforeDir="false" afterPath="$PROJECT_DIR$/factory/src/templates/abstracts/variables.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/factory/src/templates/pages/product.pug" beforeDir="false" afterPath="$PROJECT_DIR$/factory/src/templates/pages/product.pug" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
