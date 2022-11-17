@@ -142,6 +142,6 @@ window.addEventListener('load', () => {
   leftListAnimation('.index-news__item')
 
   // why list
-  leftListAnimation('.why__list li', 100)
+  topListAnimation('.why__list li', 50)
 
 })
