@@ -1,0 +1,60 @@
+@use '../../abstracts/variables' as *
+@use '../../abstracts/mixins' as *
+
+.preloader
+  position: fixed
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  background-color: #fff
+  z-index: 1000
+  display: flex
+  align-items: center
+  justify-content: center
+
+  &__container
+    width: 300px
+    height: 300px
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: center
+
+    .spinner
+      transform: rotate(-90deg)
+      width: 260px
+      height: 260px
+      z-index: 2
+      margin: -25px 0 0 -25px
+
+      & .path
+        stroke: $yellow
+        stroke-linecap: round
+        animation: dash 1.5s ease-in-out infinite
+        z-index: 5
+        position: relative
+
+        &_bg
+          z-index: 0
+          stroke: #f6f6f6
+
+@keyframes rotate
+  100%
+    transform: rotate(360deg)
+
+@keyframes dash
+  0%
+    stroke-dasharray: 1, 150
+    stroke-dashoffset: 0
+
+  50%
+    stroke-dasharray: 90, 150
+    stroke-dashoffset: -35
+
+  100%
+    stroke-dasharray: 90, 150
+    stroke-dashoffset: -124
+
+
+

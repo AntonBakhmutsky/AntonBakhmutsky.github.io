@@ -1,7 +1,7 @@
 footer.footer
   .footer__top
     .container
-      form.feedback
+      form.feedback.slide-right
         h3.feedback__title Связаться с нами
         p.feedback__txt Наш менеджер свяжется с вами в ближайшее время
         .feedback__fields
@@ -21,7 +21,7 @@ footer.footer
             input#policy(type="checkbox" name="policy")
             label(for="policy") #[span Продолжая, вы принимаете] #[a(href="javascript:") политику конфиденциальности]
           button.feedback__submit(type="submit") Оставить заявку
-      .footer__contacts
+      .footer__contacts.slide-up
         button.footer__contacts-slide-up
           img(src=require('@/assets/img/footer/vector-top.svg') alt="")
           span Вернуться назад
@@ -41,9 +41,9 @@ footer.footer
         nav.footer__contacts-nav
           each el in footerNavList
             a(href=el.url) #{el.txt}
-      a.footer__logo(href="/")
+      a.footer__logo.slide-left(href="/")
         img(src=require('@/assets/img/footer/footer-logo.svg') alt="footer logo")
   .container
     .footer__copyright
-      span © 2022 Все права защищены. <br> All rights reserved SOTRANS
-      a(href="javascript:") Политика конфиденциальности
+      span.slide-right © 2022 Все права защищены. <br> All rights reserved SOTRANS
+      a.slide-left(href="javascript:") Политика конфиденциальности

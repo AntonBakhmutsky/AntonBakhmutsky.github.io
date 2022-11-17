@@ -10,6 +10,7 @@ html(lang="ru")
   head
     include head
   body
+    include ../../sections/global/preloader
     include header
     main.main(class=mainModifier ? `main_${mainModifier}`:'')
       block content

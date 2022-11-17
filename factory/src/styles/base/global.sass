@@ -16,6 +16,15 @@ body
   background-color: $white
   color: $black
 
+  &.loaded_hiding
+    .preloader
+      transition: .3s opacity
+      opacity: 0
+
+  &.loaded
+    .preloader
+      display: none
+
 .body_fix
   overflow: hidden
 
@@ -239,7 +248,7 @@ input[type="checkbox"]:checked + label
     background-color: $yellow
     @extend %opacity-click
 
-.anim-num
-
 strong
   +font(20px, 26px, 500)
+
+.anim-num, .slide-right, .slide-up, .slide-left
