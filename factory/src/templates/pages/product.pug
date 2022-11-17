@@ -1,0 +1,25 @@
+extends ../layouts/other-pages/layout.pug
+
+append variables
+  -
+    callModal = true
+    mainModifier = 'product-page'
+    breadCrumbsList = [
+      {
+        url: 'javascript:',
+        txt: 'Оборудование'
+      },
+      {
+        url: 'javascript:',
+        txt: 'Бортовые платформы'
+      },
+      {
+        url: 'javascript:',
+        txt: 'Бортовая Платформа с КМУ Hyva HB 80 E2'
+      }
+    ]
+
+block title
+  | МЕХ ЗАВОД SOTRANS
+
+block content

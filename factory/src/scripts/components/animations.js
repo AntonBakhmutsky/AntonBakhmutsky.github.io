@@ -135,7 +135,7 @@ window.addEventListener('load', () => {
   // partners list
   leftListAnimation('.partners__list li')
 
-  // product list
+  // product.pug list
   topListAnimation('.products-slider .swiper-slide')
 
   // news list

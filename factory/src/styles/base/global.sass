@@ -251,4 +251,26 @@ input[type="checkbox"]:checked + label
 strong
   +font(20px, 26px, 500)
 
+.call-modal__btn
+  button
+    height: 56px
+    width: 312px
+    border-radius: 4px
+    background: $yellow
+    margin-top: 57px
+    display: flex
+    align-items: center
+    justify-content: center
+    +font(18px, 18px, 500)
+    transition: transform .3s
+    +screen($tablet)
+      width: 100%
+      margin-top: auto
+
+    &:hover
+      transform: scale(1.1)
+
+    &:active
+      transform: scale(1)
+
 .anim-num, .slide-right, .slide-up, .slide-left
