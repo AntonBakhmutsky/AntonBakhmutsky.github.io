@@ -160,6 +160,11 @@ input[type="checkbox"]:checked + label
         &:before
           background-color: $blue
 
+  &-title-txt
+    +font(40px, 60px, 700, $font-title)
+    +screen($tablet)
+      +font(24px, 27px, 700, $font-title)
+
   &-sub-title
     +font(32px, 36px, 700, $font-title)
     position: relative
