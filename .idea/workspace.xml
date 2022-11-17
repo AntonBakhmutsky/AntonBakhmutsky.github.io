@@ -2,22 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ae987b70-632d-4167-9275-929a3af93a1a" name="Changes" comment="clear work tree">
-      <change afterPath="$PROJECT_DIR$/factory/src/scripts/components/header.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/factory/src/scripts/components/index-news.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/factory/src/scripts/components/partners.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/factory/src/scripts/components/why.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/factory/src/scripts/helpers/animations.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/factory/src/scripts/components/animations.js" beforeDir="false" afterPath="$PROJECT_DIR$/factory/src/scripts/components/animations.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/factory/src/scripts/components/product-slider.js" beforeDir="false" afterPath="$PROJECT_DIR$/factory/src/scripts/components/product-slider.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/factory/src/scripts/components/products-slider.js" beforeDir="false" afterPath="$PROJECT_DIR$/factory/src/scripts/components/products-slider.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/factory/src/scripts/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/factory/src/scripts/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/factory/src/styles/base/global.sass" beforeDir="false" afterPath="$PROJECT_DIR$/factory/src/styles/base/global.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/factory/src/styles/components/global/top-sec.sass" beforeDir="false" afterPath="$PROJECT_DIR$/factory/src/styles/components/global/top-sec.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/factory/src/templates/abstracts/variables.pug" beforeDir="false" afterPath="$PROJECT_DIR$/factory/src/templates/abstracts/variables.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/factory/src/templates/layouts/other-pages/header.pug" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/factory/src/templates/layouts/other-pages/layout.pug" beforeDir="false" afterPath="$PROJECT_DIR$/factory/src/templates/layouts/other-pages/layout.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/factory/src/templates/pages/product.pug" beforeDir="false" afterPath="$PROJECT_DIR$/factory/src/templates/pages/product.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/factory/src/templates/sections/polupritsepy/additional.pug" beforeDir="false" afterPath="$PROJECT_DIR$/factory/src/templates/sections/polupritsepy/additional.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/factory/src/templates/sections/polupritsepy/pluses.pug" beforeDir="false" afterPath="$PROJECT_DIR$/factory/src/templates/sections/polupritsepy/pluses.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/factory/src/templates/sections/polupritsepy/specs.pug" beforeDir="false" afterPath="$PROJECT_DIR$/factory/src/templates/sections/polupritsepy/specs.pug" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +46,7 @@
       <option name="presentableId" value="Default" />
       <updated>1668671000906</updated>
       <workItem from="1668671002045" duration="39000" />
-      <workItem from="1668677123982" duration="619000" />
+      <workItem from="1668677123982" duration="1568000" />
     </task>
     <task id="LOCAL-00001" summary="clear work tree">
       <created>1668671029521</created>
@@ -74,7 +62,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668677135094</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="clear work tree">
+      <created>1668680996636</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1668680996636</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

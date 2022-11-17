@@ -1,9 +1,9 @@
 section.specs
   .container
     .specs__desc
-      h2.section-title #[span 01] Технические характеристики
+      h2.section-title.slide-right #[span 01] Технические характеристики
       ul.specs__list
         each el in specsList
-          li.specs__list-item #[span #{el.txt}] #[span !{el.num}]
-    .specs__image
+          li.specs__list-item.slide-up #[span #{el.txt}] #[span !{el.num}]
+    .specs__image.slide-left
       img(src=require('@/assets/img/polupritsepy/specs.jpg') alt="")

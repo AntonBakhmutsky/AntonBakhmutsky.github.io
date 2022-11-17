@@ -1,4 +1,5 @@
 import Swiper, {Navigation} from 'swiper'
+import {topListAnimation} from '../helpers/animations'
 
 window.addEventListener('load', () => {
   if (!document.querySelector('.additional .swiper')) {
@@ -29,5 +30,7 @@ window.addEventListener('load', () => {
         }
       }
     })
+
+    topListAnimation('.additional .swiper-slide:not(.swiper-slide-duplicate)')
   }
 })
