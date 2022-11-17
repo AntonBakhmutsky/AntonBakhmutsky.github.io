@@ -3,9 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="ae987b70-632d-4167-9275-929a3af93a1a" name="Changes" comment="clear work tree">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/factory/src/templates/sections/polupritsepy/additional.pug" beforeDir="false" afterPath="$PROJECT_DIR$/factory/src/templates/sections/polupritsepy/additional.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/factory/src/templates/sections/polupritsepy/pluses.pug" beforeDir="false" afterPath="$PROJECT_DIR$/factory/src/templates/sections/polupritsepy/pluses.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/factory/src/templates/sections/polupritsepy/specs.pug" beforeDir="false" afterPath="$PROJECT_DIR$/factory/src/templates/sections/polupritsepy/specs.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/factory/src/scripts/components/animations.js" beforeDir="false" afterPath="$PROJECT_DIR$/factory/src/scripts/components/animations.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/factory/src/templates/sections/proizvodstvo/about-prod.pug" beforeDir="false" afterPath="$PROJECT_DIR$/factory/src/templates/sections/proizvodstvo/about-prod.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/factory/src/templates/sections/proizvodstvo/cert.pug" beforeDir="false" afterPath="$PROJECT_DIR$/factory/src/templates/sections/proizvodstvo/cert.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/factory/src/templates/sections/proizvodstvo/workshop.pug" beforeDir="false" afterPath="$PROJECT_DIR$/factory/src/templates/sections/proizvodstvo/workshop.pug" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +47,7 @@
       <option name="presentableId" value="Default" />
       <updated>1668671000906</updated>
       <workItem from="1668671002045" duration="39000" />
-      <workItem from="1668677123982" duration="1568000" />
+      <workItem from="1668677123982" duration="1872000" />
     </task>
     <task id="LOCAL-00001" summary="clear work tree">
       <created>1668671029521</created>

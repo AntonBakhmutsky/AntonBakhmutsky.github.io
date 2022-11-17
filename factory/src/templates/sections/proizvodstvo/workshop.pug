@@ -1,12 +1,12 @@
 section.workshop
   .container
-    h2.section-title #[span 02] Структура цехов
+    h2.section-title.slide-right #[span 02] Структура цехов
   .workshop__blank
-    .workshop__blank-bg
+    .workshop__blank-bg.slide-right
       img(src=require('@/assets/img/proizvodstvo/workshop.png') alt="")
       img(src=require('@/assets/img/proizvodstvo/workshop-mob.jpg') alt="")
     .container
-      .workshop__blank-desc
+      .workshop__blank-desc.slide-up
         h3.section-sub-title Заготовительное производство
         ul.workshop__blank-list
           each el in workshopBlank
@@ -14,25 +14,25 @@ section.workshop
   .workshop__welding
     .container
       .workshop__welding-desc
-        h3.section-sub-title Сварочное производство
+        h3.section-sub-title.slide-right Сварочное производство
         ul.workshop__welding-list
           each el in workshopWelding
-            li !{el}
-      .workshop__welding-image
+            li.slide-up !{el}
+      .workshop__welding-image.slide-left
         img(src=require('@/assets/img/proizvodstvo/welding.jpg') alt="")
   .workshop__assembly
-    .workshop__assembly-tile
+    .workshop__assembly-tile.slide-right
       each el in workshopAssemblyTile
         .workshop__assembly-tile-item
           img(src=el alt="")
     .container
-      .workshop__assembly-desc
+      .workshop__assembly-desc.slide-up
         h3.section-sub-title Сборочное производство
         p.workshop__assembly-txt После проведения горячего цинкования в погружных ваннах сборочный конвейер в тактовом режиме обеспечивает ритмичный выпуск продукции по всей цепочке технологического цикла:
         ul.workshop__assembly-list
           each el in workshopAssembly
             li !{el}
-    .swiper
+    .swiper.slide-right
       .swiper-wrapper
         each el in workshopAssemblySlider
           .swiper-slide
