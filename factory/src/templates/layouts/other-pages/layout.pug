@@ -11,7 +11,7 @@ html(lang="ru")
   head
     include ../main/head
   body
-    include header
+    include ../main/header
     +breadcrumbs(breadCrumbsList)
     main.main(class=mainModifier ? `main_${mainModifier}`:'')
       block content

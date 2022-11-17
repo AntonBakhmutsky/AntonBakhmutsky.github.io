@@ -1,4 +1,5 @@
 import Swiper, {Navigation} from 'swiper'
+import {topListAnimation} from '../helpers/animations'
 
 window.addEventListener('load', () => {
   if (!document.querySelector('.products-slider .swiper')) {
@@ -50,5 +51,8 @@ window.addEventListener('load', () => {
     setSwiperHeight()
 
     window.addEventListener('resize', setSwiperHeight)
+
+    // products list
+    topListAnimation('.products-slider .swiper-slide:not(.swiper-slide-duplicate)')
   }
 })

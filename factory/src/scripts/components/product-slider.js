@@ -1,4 +1,5 @@
 import Swiper, {Navigation} from 'swiper'
+import {topListAnimation} from '../helpers/animations'
 
 window.addEventListener('load', () => {
   if (!document.querySelector('.product-slider .swiper')) {
@@ -29,6 +30,9 @@ window.addEventListener('load', () => {
       }
     })
 
+    // products list
+    topListAnimation('.product-slider .swiper-slide:not(.swiper-slide-duplicate)')
+
     // swiper wrapper height
     const swiperSlideImgs = document.querySelectorAll('.product-slider .swiper-slide .swiper-slide-image');
     const swiperWrapper = document.querySelector('.product-slider .swiper-wrapper')
@@ -49,5 +53,6 @@ window.addEventListener('load', () => {
       swiperWrapper.style.height = 'auto'
       setSwiperHeight()
     })
+
   }
 })
