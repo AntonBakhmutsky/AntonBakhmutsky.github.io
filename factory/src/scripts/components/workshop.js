@@ -30,7 +30,7 @@ window.addEventListener('load', () => {
 
       const maxImageHeight = Math.max(...contentHeights);
 
-      swiperWrapper.style.height = `${maxContentHeight}px`
+      swiperWrapper.style.height = `${maxImageHeight}px`
     }
 
     setSwiperWorkshopHeight()
