@@ -15,7 +15,7 @@ header.header
       nav.header__menu-list
         each el, index in headerMenu
           if (index !== 1)
-            +link(el)
+            a(href=el.url) #{el.txt}
           else
             .header__menu-drop
               .header__menu-drop-top
@@ -30,6 +30,7 @@ header.header
                           each item in el.children[0].children
                             +link(item)
                     +link(el.children[1])
+            a(href='catalog.html') #{el.txt}
     button.header__btn
       img(src=require('@/assets/img/global/burger.svg') alt="")
 

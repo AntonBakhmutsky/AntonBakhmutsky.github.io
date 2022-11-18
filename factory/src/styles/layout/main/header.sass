@@ -61,6 +61,7 @@
         justify-content: flex-start
         align-items: flex-end
 
+
         a, .header__menu-drop
           +font(14px, 22px, 500)
           &:not(:last-child)
@@ -84,6 +85,7 @@
 
               a
                 margin-bottom: 0
+
     &-top, &-search
       display: none
 
@@ -130,6 +132,13 @@
 
     &-drop
       position: relative
+      +screen(1280)
+        display: none
+
+      & + a
+        display: none
+        +screen(1280)
+          display: block
 
       &-top
         cursor: pointer

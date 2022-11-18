@@ -1,0 +1,17 @@
+extends ../layouts/other-pages/layout.pug
+
+append variables
+  -
+    mainModifier = 'catalog'
+    breadCrumbsList = [
+      {
+        url: 'javascript:',
+        txt: 'Продукция'
+      }
+    ]
+
+block title
+  | МЕХ ЗАВОД SOTRANS
+
+block content
+  include ../sections/global/search

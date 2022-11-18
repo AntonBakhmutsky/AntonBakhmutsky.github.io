@@ -4,6 +4,7 @@ window.addEventListener('load', () => {
   const mobileMenuBtn = document.querySelector('.header__btn')
   const menuBtn = document.querySelector('.header__menu-top button')
   const mobileMenuItems = document.querySelectorAll('.header__menu a')
+  const headerMenuDrop = document.querySelector('.header__menu-drop')
 
   const toggleMenu = () => {
     mobileMenu.classList.toggle('active')
@@ -52,5 +53,7 @@ window.addEventListener('load', () => {
   }
 
   mobileMenuItems.forEach(el => el.addEventListener('click', toggleMenu))
-
+  headerMenuDrop.addEventListener('click', () => {
+    location.href = 'catalog.html'
+  })
 })
