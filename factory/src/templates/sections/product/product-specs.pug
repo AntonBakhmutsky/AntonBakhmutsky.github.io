@@ -1,13 +1,13 @@
 section.product-specs
   .container
-    h2.section-title-txt КМУ Hyva HB 80 E2
+    h2.section-title-txt.slide-right КМУ Hyva HB 80 E2
     .product-specs__content
-      .product-specs__container
+      .product-specs__container.slide-up
         h3.section-title.section-title_white_blue #[span 01] Технические характеристики
         ul.product-specs__list
           each el in productList
             li  #[span #{el.option}] #[b #{el.value}]
-      .product-specs__container
+      .product-specs__container.slide-left
         h3.section-title.section-title_white_blue #[span 02] Комплектация
         ul.product-specs__list
           each el in compList

@@ -1,8 +1,8 @@
 section.diagram
   .diagram__top
     .container
-      h2.section-title.section-title_white_blue #[span 03] Техническая схема
-      .diagram__drawing
+      h2.section-title.section-title_white_blue.slide-right #[span 03] Техническая схема
+      .diagram__drawing.slide-left
         .diagram__drawing-image
           img(src=require('@/assets/img/product/diagram-1.png') alt="")
           .diagram__drawing-btn
@@ -18,10 +18,10 @@ section.diagram
   .diagram__bottom
     .container
       .diagram__desc
-        h2.section-title-txt Бортовая алюминиевая платформа
-        p.diagram__txt Материал изготовления фургона:
-        ul.diagram__list
+        h2.section-title-txt.slide-right Бортовая алюминиевая платформа
+        p.diagram__txt.slide-up Материал изготовления фургона:
+        ul.diagram__list.slide-up
           each el in diagramList
             li #[span #{el.option}] #[span #{el.value}]
-      .diagram__image
+      .diagram__image.slide-left
         img(src=require('@/assets/img/product/platform.jpg') alt="")
