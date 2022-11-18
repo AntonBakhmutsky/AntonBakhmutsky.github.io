@@ -5,20 +5,18 @@ append variables
     mainModifier = 'semitrailer'
     breadCrumbsList = [
       {
-        url: 'javascript:',
+        url: 'proizvodstvo.html',
         txt: 'Оборудование'
       },
       {
-        url: 'javascript:',
-        txt: 'Спецтехника'
-      },
-      {
-        url: 'javascript:',
-        txt: 'Спецтехника'
+        url: 'polupritsepy.html',
+        txt: 'Полуприцепы'
       }
     ]
+
 block title
   | МЕХ ЗАВОД SOTRANS
 
 block content
   include ../sections/global/search
+  +category-grid({title: 'Полуприцепы', list: semitrailerList})

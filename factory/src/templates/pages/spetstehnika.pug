@@ -5,11 +5,11 @@ append variables
     mainModifier = 'special'
     breadCrumbsList = [
       {
-        url: 'javascript:',
+        url: 'proizvodstvo.html',
         txt: 'Оборудование'
       },
       {
-        url: 'javascript:',
+        url: 'spetstehnika.html',
         txt: 'Спецтехника'
       }
     ]
@@ -18,4 +18,4 @@ block title
 
 block content
   include ../sections/global/search
-  +category-grid(specialList)
+  +category-grid({title: 'Спецтехника' ,list: specialList})

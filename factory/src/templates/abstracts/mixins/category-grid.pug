@@ -1,8 +1,9 @@
 mixin category-grid(params)
   section.category-grid
     .container
+      h2.category-grid__title #{params.title}
       .category-grid__grid
-        each el in params
+        each el in params.list
           a.category-grid__item(href=el.url)
             .category-grid__item-image
               | !{el.image}

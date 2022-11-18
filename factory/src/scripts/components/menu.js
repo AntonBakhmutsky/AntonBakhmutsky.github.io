@@ -56,7 +56,7 @@ window.addEventListener('load', () => {
   mobileMenuItems.forEach(el => el.addEventListener('click', toggleMenu))
 
   headerMenuDrop.addEventListener('click', () => {
-    location.href = 'catalog.html'
+    location.href = 'polupritsepy.html'
   })
 
   headerMenuDropSub.addEventListener('click', (e) => {

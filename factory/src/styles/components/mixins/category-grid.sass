@@ -3,20 +3,32 @@
 @use '../../abstracts/extends' as *
 
 .category-grid
-  padding: 100px 0
+  padding: 10px 0
+  height: calc(100vh - 160px)
   +screen($tablet)
-    padding: 20px 0
+    padding: 20px 0 50px
+    height: auto
 
   .container
     +screen($tablet-xs)
       padding: 0
 
   &__grid
+    margin-top: 33px
     display: grid
-    grid-template-columns: repeat(auto-fit, minmax(366px, 1fr))
+    grid-template-columns: repeat(auto-fill, minmax(366px, 1fr))
     grid-gap: 20px
     +screen($tablet-xs)
       grid-template-columns: 1fr
+      margin-top: 20px
+
+  &__title
+    +font(40px, 60px, 700, $font-title)
+    +screen($tablet)
+      +font(24px, 32px, 700, $font-title)
+    +screen($tablet-xs)
+      box-sizing: border-box
+      padding: 0 10px
 
   &__item
     background-color: #F9F9F9
@@ -28,6 +40,9 @@
     box-shadow: 0 4px 4px rgba(0, 0, 0, .25)
     +screen($tablet-xs)
       padding: 20px 19px
+
+    &-txt
+      text-align: center
 
     &:hover:not(:active)
       background-color: $blue
