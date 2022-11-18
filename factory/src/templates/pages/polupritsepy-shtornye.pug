@@ -1,0 +1,32 @@
+extends ../layouts/other-pages/layout.pug
+
+append variables
+  -
+    topTitle = 'Полуприцепы шторные'
+    callModal = true
+    mainModifier = 'curtain'
+    breadCrumbsList = [
+      {
+        url: 'javascript:',
+        txt: 'Продукция'
+      },
+      {
+        url: 'javascript:',
+        txt: 'Полуприцепы'
+      },
+      {
+        url: 'javascript:',
+        txt: 'Шторные полуприцепы',
+        class: 'active'
+      }
+    ]
+
+block title
+  | МЕХ ЗАВОД SOTRANS
+
+block content
+  include ../sections/global/top-sec
+  include ../sections/polupritsepy/specs
+  include ../sections/polupritsepy/pluses
+  include ../sections/polupritsepy/platform
+  include ../sections/polupritsepy/additional

@@ -2,31 +2,23 @@ extends ../layouts/other-pages/layout.pug
 
 append variables
   -
-    topTitle = 'Полуприцепы шторные'
-    callModal = true
     mainModifier = 'semitrailer'
     breadCrumbsList = [
       {
         url: 'javascript:',
-        txt: 'Продукция'
+        txt: 'Оборудование'
       },
       {
         url: 'javascript:',
-        txt: 'Полуприцепы'
+        txt: 'Спецтехника'
       },
       {
         url: 'javascript:',
-        txt: 'Шторные полуприцепы',
-        class: 'active'
+        txt: 'Спецтехника'
       }
     ]
-
 block title
   | МЕХ ЗАВОД SOTRANS
 
 block content
-  include ../sections/global/top-sec
-  include ../sections/polupritsepy/specs
-  include ../sections/polupritsepy/pluses
-  include ../sections/polupritsepy/platform
-  include ../sections/polupritsepy/additional
+  include ../sections/global/search

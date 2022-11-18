@@ -1,0 +1,9 @@
+mixin category-grid(params)
+  section.category-grid
+    .container
+      .category-grid__grid
+        each el in params
+          a.category-grid__item(href=el.url)
+            .category-grid__item-image
+              | !{el.image}
+            .category-grid__item-txt #{el.txt}
