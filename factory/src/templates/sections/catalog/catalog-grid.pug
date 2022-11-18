@@ -1,8 +1,8 @@
 section.catalog-grid
   .container
     ul.catalog-grid__list
-      each el in catalogList
-        li.catalog-grid__item
+      each el, index in catalogList
+        li.catalog-grid__item(class = index % 2 === 0 ? 'slide-right':'slide-left')
           .catalog-grid__item-image
             img(src=el.image alt="")
             .catalog-grid__item-collage

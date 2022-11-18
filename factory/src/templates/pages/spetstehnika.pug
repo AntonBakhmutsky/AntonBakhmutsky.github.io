@@ -1,0 +1,21 @@
+extends ../layouts/other-pages/layout.pug
+
+append variables
+  -
+    mainModifier = 'special'
+    breadCrumbsList = [
+      {
+        url: 'javascript:',
+        txt: 'Оборудование'
+      },
+      {
+        url: 'javascript:',
+        txt: 'Спецтехника'
+      }
+    ]
+block title
+  | МЕХ ЗАВОД SOTRANS
+
+block content
+  include ../sections/global/search
+  include ../sections/spetstehnika/special

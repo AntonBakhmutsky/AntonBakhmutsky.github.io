@@ -59,7 +59,8 @@ window.addEventListener('load', () => {
     location.href = 'catalog.html'
   })
 
-  headerMenuDropSub.addEventListener('click', () => {
+  headerMenuDropSub.addEventListener('click', (e) => {
+    e.stopPropagation()
     location.href = 'spetstehnika.html'
   })
 })
