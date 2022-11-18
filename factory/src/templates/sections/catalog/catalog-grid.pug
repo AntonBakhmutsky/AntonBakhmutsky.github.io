@@ -1,0 +1,14 @@
+section.catalog-grid
+  .container
+    ul.catalog-grid__list
+      each el in catalogList
+        li.catalog-grid__item
+          .catalog-grid__item-image
+            img(src=el.image alt="")
+            .catalog-grid__item-collage
+              img(src=el.collage alt="")
+          .catalog-grid__item-bottom
+            a(href=el.url) #{el.txt}
+
+
+

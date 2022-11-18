@@ -2,3 +2,28 @@
 @use '../../abstracts/mixins' as *
 
 .search
+  padding: 30px
+  box-sizing: border-box
+  max-width: 1111px
+  width: 100%
+  margin: 0 auto
+  +screen(1280)
+    display: none
+
+  &__field
+    display: flex
+
+    input
+      height: 40px
+      border-radius: 14px 0 0 14px
+      border: 2px solid $blue-light
+      flex-grow: 1
+
+    button
+      height: 40px
+      border-radius: 0 14px 14px 0
+      border: 2px solid $blue-light
+      background-color: $blue-light
+      color: $white
+      +font(18px, 18px, 500)
+      width: 184px
