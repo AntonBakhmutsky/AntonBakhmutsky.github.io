@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ae987b70-632d-4167-9275-929a3af93a1a" name="Changes" comment="clear work tree">
-      <change afterPath="$PROJECT_DIR$/factory/src/assets/img/product/diagram-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/factory/src/assets/img/product/diagram-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/factory/src/assets/img/product/loupe.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/factory/src/styles/components/product/diagram.sass" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/factory/src/templates/sections/product/diagram.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/factory/src/styles/app.sass" beforeDir="false" afterPath="$PROJECT_DIR$/factory/src/styles/app.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/factory/src/templates/pages/product.pug" beforeDir="false" afterPath="$PROJECT_DIR$/factory/src/templates/pages/product.pug" afterDir="false" />
-    </list>
+    <list default="true" id="ae987b70-632d-4167-9275-929a3af93a1a" name="Changes" comment="clear work tree" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -51,6 +42,7 @@
       <updated>1668671000906</updated>
       <workItem from="1668671002045" duration="39000" />
       <workItem from="1668677123982" duration="1872000" />
+      <workItem from="1668752026718" duration="4000" />
     </task>
     <task id="LOCAL-00001" summary="clear work tree">
       <created>1668671029521</created>
