@@ -2,7 +2,7 @@ section.news
   .container
     .news__grid
       each el in newsListSecond
-        .news__item(class=el.modifier ? `news__item_${el.modifier}`:'')
+        .news__item.slide-up(class=el.modifier ? `news__item_${el.modifier}`:'')
           .news__item-image
             img(src=el.img alt="")
           .news__item-content
@@ -10,7 +10,7 @@ section.news
             h3.news__item-title #{el.title}
             p.news__item-txt #{el.txt}
             a.news__item-link.btn.btn_yellow(href=el.url) Читать далее
-    ul.pagination
+    ul.pagination.slide-up
       each el, index in paginationList
         li
           a(href="javascript:" class = index === 0 ? 'active' : '') #{el}

@@ -1,0 +1,53 @@
+@use '../../abstracts/variables' as *
+@use '../../abstracts/mixins' as *
+
+.news-content
+  img
+    width: 100%
+    height: 100%
+    object-position: center
+    object-fit: cover
+
+  &__text
+    padding: 60px 0
+    +screen($tablet)
+      padding: 40px 0 20px
+
+    p
+      +font(20px, 26px, 350)
+      &:not(:first-child)
+        margin-top: 30px
+
+  &__tile
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(418px, 1fr))
+    grid-gap: 16px
+    padding-bottom: 70px
+    +screen($tablet-sm)
+      display: none
+
+  .swiper
+    display: none
+    +screen($tablet-sm)
+      display: block
+
+    &-button-next
+      width: 56px
+      height: 56px
+      border-radius: 50%
+      background-color: rgba(0, 0, 0, .5)
+      cursor: pointer
+      transition: background-color .3s
+
+      img
+        width: 14px
+        height: 24px
+
+      &:hover
+        background-color: rgba(0, 0, 0, .9)
+
+      &:active
+        background-color: rgba(0, 0, 0, .5)
+
+      &:after
+        content: ''

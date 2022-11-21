@@ -1,0 +1,24 @@
+extends ../layouts/other-pages/layout.pug
+
+append variables
+  -
+    mainModifier = 'news-inner'
+    topTitle = '<div class="top__date"><span>06</span><span>июня</span></div> SOTRANS — Эксперты по СПС'
+    breadCrumbsList = [
+      {
+        url: 'novosti.html',
+        txt: 'Новости'
+      },
+      {
+        url: 'novost.html',
+        txt: 'SOTRANS — Эксперты по СПС'
+      }
+    ]
+
+block title
+  | МЕХ ЗАВОД SOTRANS
+
+block content
+  include ../sections/global/top-sec
+  .container
+    include ../sections/novosti/news-content
