@@ -1,0 +1,16 @@
+extends ../layouts/other-pages/layout.pug
+
+append variables
+  -
+    mainModifier = 'catalog'
+    breadCrumbsList = [
+      {
+        url: 'contacts.html',
+        txt: 'Контакты'
+      }
+    ]
+
+block title
+  | МЕХ ЗАВОД SOTRANS
+
+block content

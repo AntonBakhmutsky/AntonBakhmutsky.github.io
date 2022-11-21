@@ -1,0 +1,25 @@
+extends ../layouts/other-pages/layout.pug
+
+append variables
+  -
+    mainModifier = 'hook'
+    breadCrumbsList = [
+      {
+        url: 'proizvodstvo.html',
+        txt: 'Оборудование'
+      },
+      {
+        url: 'spetstehnika.html',
+        txt: 'Спецтехника'
+      },
+      {
+        url: 'kryukovoj-pogruzchik.html',
+        txt: 'Крюковой погрузчик'
+      }
+    ]
+block title
+  | МЕХ ЗАВОД SOTRANS
+
+block content
+  include ../sections/global/search
+  include ../sections/hook/product-tile

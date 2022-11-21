@@ -1,0 +1,33 @@
+sectioin.product-tile
+  .container
+    .product-tile__top
+      h2.section-title-txt.slide-right Крюковой погрузчик
+      .product-tile__switcher.slide-left
+        button.product-tile__switcher-btn.active(data-direction="horizontal")
+          | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/hook/vertical.svg')}
+        button.product-tile__switcher-btn(data-direction="vertical")
+          | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/hook/horizontal.svg')}
+    .product-tile__grid.product-tile__grid_horizontal
+      each el in tileList
+        .product-tile__item
+          .product-tile__item-image
+            img(src=el.image alt="")
+          .product-tile__item-desc
+            .product-tile__item-top
+              h2.product-tile__item-title #{el.name}
+              .product-tile__item-btns
+                a(href="javascript:") Заказать звонок
+                a(href="javascript:") Подробнее
+            ul.product-tile__item-options
+              each item in el.options
+                li
+                  span #{item.option}
+                  span #{item.value}
+            .product-tile__item-btns
+              a(href="javascript:") Заказать звонок
+              a(href="javascript:") Подробнее
+
+
+
+
+
