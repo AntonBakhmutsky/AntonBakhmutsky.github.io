@@ -3,9 +3,10 @@
 
 .main
   flex: 1 0 auto
-  padding-top: 157px
+  padding-top: 95px
   +screen($tablet)
     padding-top: 32px
+
 
   &_home
     padding-top: 0
@@ -18,6 +19,11 @@
         padding-top: 208px
       +screen($tablet-xs)
         background: url(../assets/img/index/top-bg-mob.jpg) center/cover no-repeat
+
+    .index-news__item
+      &:not(:first-child)
+        +screen($tablet)
+          display: none
 
   &_curtain
     .top
@@ -36,6 +42,21 @@
         line-height: 100px
         +screen($tablet)
           line-height: 44px
+
+  &_news
+   .top
+      background: url(../assets/img/news/top-bg.jpg) center/cover no-repeat
+      height: 268px
+      padding-top: 94px
+      +screen($tablet-xs)
+        padding-top: 198px
+        height: 581px
+        background: url(../assets/img/news/top-bg-mob.jpg) center/cover no-repeat
+
+  .news__grid
+    grid-template-columns: repeat(auto-fit, minmax(418px, 1fr))
+    +screen($tablet)
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
 
   &_product-page
     .products-slider

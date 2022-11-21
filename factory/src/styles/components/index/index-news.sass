@@ -2,7 +2,7 @@
 @use '../../abstracts/mixins' as *
 @use '../../abstracts/extends' as *
 
-.index-news
+.index-news, .news
   padding: 50px 0 76px
   +screen($tablet)
     padding: 51px 0 59px
@@ -14,10 +14,6 @@
 
   &__item
     margin-top: 40px
-
-    &:not(:first-child)
-      +screen($tablet)
-        display: none
 
     &_new
       .index-news__item-image

@@ -13,8 +13,8 @@ html(lang="ru")
     include ../main/head
   body
     include ../main/header
-    +breadcrumbs(breadCrumbsList)
     main.main(class=mainModifier ? `main_${mainModifier}`:'')
+      +breadcrumbs(breadCrumbsList)
       block content
     include ../main/footer
     if (callModal)

@@ -1,0 +1,19 @@
+extends ../layouts/other-pages/layout.pug
+
+append variables
+  -
+    mainModifier = 'news'
+    topTitle = 'Новости'
+    breadCrumbsList = [
+      {
+        url: 'novosti.html',
+        txt: 'Новости'
+      }
+    ]
+
+block title
+  | МЕХ ЗАВОД SOTRANS
+
+block content
+  include ../sections/global/top-sec
+  include ../sections/novosti/news

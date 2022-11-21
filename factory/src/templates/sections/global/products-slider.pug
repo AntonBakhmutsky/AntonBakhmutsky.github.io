@@ -2,7 +2,7 @@ section.products-slider
   .container
     .products-slider__top.section-top
       h2.section-title.slide-right #[span #{productsTitleNum}] #{productsTitleTxt}
-      +link({url: 'products.html', txt: 'Посмотреть все', class: 'more-link slide-up'})
+      a.more-link.slide-up(href="catalog.html") Посмотреть все
     .swiper
       .swiper-wrapper
         each el in productsList
@@ -22,4 +22,5 @@ section.products-slider
       .swiper-button-next
         img(src=require('@/assets/img/index/products/arrow-right.svg') alt="")
     .section-bottom
-      +link({url: 'products.html', txt: 'Посмотреть все', class: 'more-link'})
+      a.more-link.slide-up(href="catalog.html") Посмотреть все
+
