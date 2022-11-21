@@ -282,4 +282,34 @@ strong
     &:active
       transform: scale(1)
 
+.contacts-phone,
+.contacts-mail
+  box-sizing: border-box
+  padding-left: 40px
+  position: relative
+  margin-top: 35px
+  +font(24px, 28px)
+  @extend %blue-light-click
+
+  span
+    +screen($tablet-xs)
+      display: block
+
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    top: 50%
+    transform: translateY(-50%)
+    height: 24px
+    width: 24px
+
+.contacts-phone
+  &:before
+    background: url(../assets/img/contacts/phone.svg) no-repeat center/cover
+
+.contacts-mail
+  &:before
+    background: url(../assets/img/contacts/mail.svg) no-repeat center/cover
+
 .anim-num, .slide-right, .slide-up, .slide-left
