@@ -1,0 +1,11 @@
+section.repair
+  .repair__bg.slide-left
+    img(src=require('@/assets/img/remont/repair.png') alt="")
+    img(src=require('@/assets/img/remont/repair-mob.jpg') alt="")
+  .container
+    .repair__content
+      h2.section-title.section-title_blue.slide-up #[span 03] Ремонт тентов
+      ul.repair__list.slide-up
+        each el in repairList
+          li #{el}
+
