@@ -166,6 +166,27 @@ input[type="checkbox"]:checked + label
         &:before
           background-color: $white
 
+  &-list
+    margin-top: 10px
+
+    span
+      font-weight: 500
+
+    li
+      position: relative
+      box-sizing: border-box
+      padding-left: 21px
+
+      &:before
+        content: ''
+        position: absolute
+        top: 6px
+        left: 0
+        width: 12px
+        height: 12px
+        border-radius: 50%
+        background-color: #CDCDCD
+
   &-title-txt
     +font(40px, 60px, 700, $font-title)
     +screen($tablet)
@@ -332,5 +353,6 @@ strong
       margin-right: 30px
       +screen($tablet)
         margin-right: 15px
+
 
 .anim-num, .slide-right, .slide-up, .slide-left

@@ -2,3 +2,22 @@
 @use '../../abstracts/mixins' as *
 
 .gto
+  padding: 80px 0 50px
+
+  .container
+    display: flex
+    justify-content: space-between
+
+  .section-title
+    margin-bottom: 32px
+
+  &__txt
+    &:not(:first-child)
+      margin-top: 30px
+    span
+      font-weight: 500
+
+  &__container
+    flex-basis: 47%
+    +screen($tablet)
+      flex-basis: auto
