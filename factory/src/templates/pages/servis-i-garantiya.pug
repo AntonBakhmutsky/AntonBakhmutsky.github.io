@@ -1,0 +1,22 @@
+extends ../layouts/other-pages/layout.pug
+
+append variables
+  -
+    mainModifier = 'service'
+    topTitle = 'Гарантия и сервис'
+    callModal = true
+    breadCrumbsList = [
+      {
+        url: 'servis-i-garantiya.html',
+        txt: 'Гарантия и сервис'
+      }
+    ]
+
+block title
+  | МЕХ ЗАВОД SOTRANS
+
+block content
+  include ../sections/global/top-sec
+  include ../sections/service/service
+  include ../sections/service/carcass
+  include ../sections/service/gto

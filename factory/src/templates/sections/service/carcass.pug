@@ -1,0 +1,11 @@
+section.carcass
+  .carcass__bg.slide-right
+    img(src=require('@/assets/img/service/carcass.png') alt="")
+    img(src=require('@/assets/img/service/carcass.png') alt="")
+  .container
+    .carcass__content.slide-up
+      h2.section-title.section-title_blue #[span 02] Кузовной ремонт
+      p.carcass__txt Авторизованные сервисные станции располагают двумя крупнейшими кузовными участками на севере #[span (Парнас)] и юге #[span (Красный Бор)] города. Площадь каждого кузовного участка составляет 720 м2. Компания производит:
+      ul.carcass__list
+        each el in carcassList
+          li !{el}

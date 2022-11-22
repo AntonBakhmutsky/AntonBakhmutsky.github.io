@@ -1,0 +1,11 @@
+@use '../../abstracts/variables' as *
+@use '../../abstracts/mixins' as *
+
+.carcass
+  height: 702px
+  +screen($tablet)
+    height: auto
+
+  .container
+    +screen($tablet)
+      margin-top: 0
