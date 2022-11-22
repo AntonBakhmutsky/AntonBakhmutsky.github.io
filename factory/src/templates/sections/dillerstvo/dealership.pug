@@ -1,2 +1,12 @@
 section.dealership
   .container
+    h2.dealership__title.slide-right Дилерство
+    p.dealership__txt.slide-left Компания является официальным дилером крупнейших производителей коммерческой и специальной техники: Mercedes-Benz, KAMAZ, Hyundai, JAC, FUSO, МАЗ, JAC Motors, UMG, XCMG, Golden Dragon, Урал.
+    ul.dealership__list
+      each el, index in dealershipList
+        li.dealership__item(class = index % 2 ? 'slide-left':'slide-right')
+          .dealership__item-image
+            img(src=el.image alt="")
+            .dealership__item-icon
+              img(src=el.logo alt="")
+          h3.dealership__item-title #{el.name}
