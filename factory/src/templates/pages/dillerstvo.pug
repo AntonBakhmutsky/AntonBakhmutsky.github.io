@@ -1,0 +1,17 @@
+extends ../layouts/other-pages/layout.pug
+
+append variables
+  -
+    mainModifier = 'dealership'
+    breadCrumbsList = [
+      {
+        url: 'dillerstvo.html',
+        txt: 'Диллерство'
+      }
+    ]
+
+block title
+  | МЕХ ЗАВОД SOTRANS
+
+block content
+  include ../sections/dillerstvo/dealership
