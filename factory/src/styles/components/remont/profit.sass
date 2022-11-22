@@ -2,3 +2,38 @@
 @use '../../abstracts/mixins' as *
 
 .profit
+  padding: 60px 0
+  +screen($tablet)
+    padding: 60px 0 20px
+
+  &__content
+    display: flex
+    justify-content: space-between
+    margin-top: 32px
+    +screen($tablet)
+      flex-direction: column
+      justify-content: flex-start
+
+  &__container
+    max-width: 506px
+
+    &:last-child
+      margin-top: 20px
+
+  &__list
+    margin-top: 10px
+
+    li
+      position: relative
+      box-sizing: border-box
+      padding-left: 21px
+
+      &:before
+        content: ''
+        position: absolute
+        top: 6px
+        left: 0
+        width: 12px
+        height: 12px
+        border-radius: 50%
+        background-color: #CDCDCD
