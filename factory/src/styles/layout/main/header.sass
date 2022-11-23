@@ -33,8 +33,9 @@
       height: 10px
 
   &__menu
-    max-width: 1010px
     width: 100%
+    box-sizing: border-box
+    padding-left: 19px
     +screen(1280)
       position: fixed
       top: 0
@@ -44,7 +45,6 @@
       height: 100%
       background-color: $white
       max-width: none
-      box-sizing: border-box
       padding: 25px 16px 34px
 
       &.active
