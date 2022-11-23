@@ -10,7 +10,10 @@ include ../../abstracts/mixins/category-grid
 doctype html
 html(lang="ru")
   head
-    include ../main/head
+    if (map)
+      include ../other-pages/head
+    else
+      include ../main/head
   body
     include ../main/header
     main.main(class=mainModifier ? `main_${mainModifier}`:'')
@@ -19,3 +22,5 @@ html(lang="ru")
     include ../main/footer
     if (callModal)
       include ../../sections/global/call-modal
+    if (map)
+      include ../../html/map.html
