@@ -1,4 +1,5 @@
 import anime from 'animejs'
+import {leftListAnimation} from '@/scripts/helpers/animations'
 
 window.addEventListener('load', () => {
   if (!document.querySelector('.map-mob')) {
@@ -26,5 +27,6 @@ window.addEventListener('load', () => {
     }
 
     switchButtons.forEach(el => el.addEventListener('click', switchMap))
+    leftListAnimation('.map-mob__btn')
   }
 })

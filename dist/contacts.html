@@ -1,198 +1,16 @@
-<!doctype html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
-  <meta name="format-detection" content="telephone=no">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=56464b72-c230-4b3f-94d1-ec633e7f2937&amp;lang=ru_RU"></script>
-  <title>МЕХ ЗАВОД SOTRANS</title>
-  <link href="app.css" rel="stylesheet">
-</head>
-<body>
-<header class="header">
-  <div class="container"><a class="header__logo slide-right" href="/" target="_blank"
-                            rel="noopener noreferrer nofollow"><img src="assets/img/global/header-logo.svg" alt="logo"></a>
-    <div class="header__menu">
-      <div class="header__menu-top"><a class="header__menu-logo" href="https://sotrans.ru/" target="_blank"
-                                       rel="noopener noreferrer nofollow"><img src="assets/img/global/mob-logo.svg"
-                                                                               alt="mobile logo"></a>
-        <button><img src="assets/img/global/vector-thin.svg" alt=""></button>
-      </div>
-      <form class="header__menu-search">
-        <div class="header__menu-search-field"><input id="search" name="search" placeholder="Поиск по сайту"><img
-          src="assets/img/global/loupe.svg" alt=""></div>
-      </form>
-      <nav class="header__menu-list"><a href="/">О компании</a>
-        <div class="header__menu-drop">
-          <div class="header__menu-drop-top"><span>Продукция</span>
-            <svg width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M2 1.5L8 7.5L14 1.5" stroke="#363636" stroke-width="2" stroke-linecap="square"
-                    stroke-linejoin="round"></path>
-            </svg>
-            <div class="header__menu-drop-container">
-              <div class="header__menu-drop-options">
-                <div class="header__menu-drop-sub"><span>Спецтехника<svg width="9" height="16" viewBox="0 0 9 16"
-                                                                         fill="none" xmlns="http://www.w3.org/2000/svg"><path
-                  d="M1.5 14L7.5 8L1.5 2" stroke="#363636" stroke-width="2" stroke-linecap="square"
-                  stroke-linejoin="round"></path></svg></span>
-                  <div class="header__menu-drop-sub-options"><a href="product.html" target="_blank"
-                                                                rel="noopener noreferrer nofollow">Бортовая платформа с
-                    КМУ</a><a href="product.html" target="_blank" rel="noopener noreferrer nofollow">Гидроборт</a><a
-                    href="kryukovoj-pogruzchik.html" target="_blank" rel="noopener noreferrer nofollow">Крюковой
-                    погрузчик</a></div>
-                </div>
-                <a href="polupritsepy.html" target="_blank" rel="noopener noreferrer nofollow">Полуприцепы</a></div>
-            </div>
-          </div>
-        </div>
-        <a href="catalog.html">Продукция</a><a href="proizvodstvo.html">Оборудование</a><a href="remont.html">Ремонт</a><a
-          href="dilerstvo.html">Дилерство</a><a href="servis-i-garantiya.html">Гарантия и сервис</a><a
-          href="novosti.html">Новости</a><a href="contacts.html">Контакты</a><a href="javascript:">Поиск по сайту</a>
-      </nav>
-    </div>
-    <button class="header__btn"><img src="assets/img/global/burger.svg" alt=""></button>
-  </div>
-</header>
-<main class="main main_catalog">
-  <div class="breadcrumbs">
-    <div class="container">
-      <ul class="breadcrumbs__list slide-right">
-        <li class="breadcrumbs__item"><a href="contacts.html" target="_blank" rel="noopener noreferrer nofollow">Контакты</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-  <section class="contacts-map">
-    <div class="container">
-      <div class="slide-right" id="map"></div>
-      <h2 class="contacts-map__title">Контакты</h2>
-      <div class="map-mob slide-up">
-        <div class="map-mob__switcher">
-          <div class="map-mob__btn">
-            <button data-index="0">Парнас</button>
-          </div>
-          <div class="map-mob__btn">
-            <button data-index="1">Красный Бор</button>
-          </div>
-          <div class="map-mob__btn">
-            <button data-index="2">Ельна</button>
-          </div>
-          <div class="map-mob__btn">
-            <button data-index="3">Елабуга</button>
-          </div>
-        </div>
-        <div class="map-mob__maps">
-          <div class="map-mob__item active" data-index="0">
-            <div id="red-forest-map"></div>
-          </div>
-          <div class="map-mob__item" data-index="1">
-            <div id="parnas-map"></div>
-          </div>
-          <div class="map-mob__item" data-index="2">
-            <div id="elna-map"></div>
-          </div>
-          <div class="map-mob__item" data-index="3">
-            <div id="elabuga-map"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="sales">
-    <div class="container">
-      <div class="sales__top"><h2 class="section-title-txt slide-right">Отдел продаж</h2><a
-        class="sales__phone contacts-phone slide-up" href="tel:+7(812)4954202">Отдел продаж:
-        <span>+7 (812) 495 42 02</span></a><a class="sales__mail contacts-mail slide-up"
-                                              href="mailto:Support@sotrans.ru">Support@sotrans.ru</a></div>
-      <div class="sales__contacts"><h2 class="section-title-txt slide-right">Руководство</h2>
-        <ul class="sales__contacts-list">
-          <li class="sales__item">
-            <div class="sales__item-image"><img src="assets/img/contacts/1.jpg" alt=""></div>
-            <div class="sales__item-position">Генеральный директор</div>
-            <div class="sales__item-name">Иванов Иван Иванович</div>
-            <a class="contacts-phone" href="tel:+79218869375">Отдел продаж: <span>+7 921 886 93 75</span></a><a
-            class="contacts-mail" href="mailto:info@mz-sotrans.ru">info@mz-sotrans.ru</a></li>
-          <li class="sales__item">
-            <div class="sales__item-image"><img src="assets/img/contacts/2.jpg" alt=""></div>
-            <div class="sales__item-position">Генеральный директор</div>
-            <div class="sales__item-name">Иванов Иван Иванович</div>
-            <a class="contacts-phone" href="tel:+79218869375">Отдел продаж: <span>+7 921 886 93 75</span></a><a
-            class="contacts-mail" href="mailto:info@mz-sotrans.ru">info@mz-sotrans.ru</a></li>
-          <li class="sales__item">
-            <div class="sales__item-image"><img src="assets/img/contacts/3.jpg" alt=""></div>
-            <div class="sales__item-position">Генеральный директор</div>
-            <div class="sales__item-name">Иванов Иван Иванович</div>
-            <a class="contacts-phone" href="tel:+79218869375">Отдел продаж: <span>+7 921 886 93 75</span></a><a
-            class="contacts-mail" href="mailto:info@mz-sotrans.ru">info@mz-sotrans.ru</a></li>
-        </ul>
-      </div>
-    </div>
-  </section>
-</main>
-<footer class="footer">
-  <div class="footer__top">
-    <div class="container">
-      <form class="feedback slide-right"><h3 class="feedback__title">Связаться с нами</h3>
-        <p class="feedback__txt">Наш менеджер свяжется с вами в ближайшее время</p>
-        <div class="feedback__fields">
-          <div class="feedback__input"><label for="name">Имя</label><input id="name" name="name" required
-                                                                           autocomplete="off"></div>
-          <div class="feedback__input"><label for="tel">Телефон</label><input id="tel" type="tel" name="tel" required
-                                                                              autocomplete="off"></div>
-          <div class="feedback__input"><label for="email">Телефон</label><input id="email" type="email" name="email"
-                                                                                required autocomplete="off"></div>
-          <div class="feedback__textarea"><label for="message">Ваше сообщение</label><textarea id="message"
-                                                                                               name="message"></textarea>
-          </div>
-          <div class="feedback__policy"><input id="policy" type="checkbox" name="policy"><label for="policy"><span>Продолжая, вы принимаете</span>
-            <a href="javascript:">политику конфиденциальности</a></label></div>
-          <button class="feedback__submit" type="submit">Оставить заявку</button>
-        </div>
-      </form>
-      <div class="footer__contacts slide-up">
-        <button class="footer__contacts-slide-up"><img src="assets/img/footer/vector-top.svg" alt=""><span>Вернуться назад</span>
-        </button>
-        <h3 class="footer__contacts-title">Наши контакты</h3>
-        <ul class="footer__contacts-list">
-          <li class="footer__contacts-list-item"><a href="tel:79216953701"><img src="assets/img/footer/phone.svg"
-                                                                                alt=""><span>+ 7 (921) 695 37 01</span></a>
-          </li>
-          <li class="footer__contacts-list-item"><a href="mailto:info@mz-sotrans.ru"><img
-            src="assets/img/footer/mail.svg" alt=""><span>info@mz-sotrans.ru</span></a></li>
-          <li class="footer__contacts-list-item">
-            <div><img src="assets/img/footer/mark.svg" alt=""><span>Посёлок Красный Бор, Промышленная улица, 3</span>
-            </div>
-          </li>
-        </ul>
-        <h3 class="footer__contacts-title">Навигация</h3>
-        <nav class="footer__contacts-nav"><a href="/">О компании</a><a href="catalog.html">Продукция</a><a
-          href="proizvodstvo.html">Оборудование</a><a href="javascript:">Дилерство</a><a
-          href="contacts.html">Контакты</a></nav>
-      </div>
-      <a class="footer__logo slide-left" href="/"><img src="assets/img/footer/footer-logo.svg" alt="footer logo"></a>
-    </div>
-  </div>
-  <div class="container">
-    <div class="footer__copyright"><span
-      class="slide-right">© 2022 Все права защищены.<br>All rights reserved SOTRANS</span><a class="slide-left"
-                                                                                             href="javascript:">Политика
-      конфиденциальности</a></div>
-  </div>
-</footer>
-<script>ymaps.ready(function () {
-  // desktop maps
-  const map = new ymaps.Map('map', {
-    center: [57.08939925644734, 44.98963160999127],
-    zoom: 6,
-    controls: [],
-  })
+<!doctype html><html lang="ru"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"><meta name="format-detection" content="telephone=no"><meta http-equiv="X-UA-Compatible" content="ie=edge"><script src="https://api-maps.yandex.ru/2.1/?apikey=56464b72-c230-4b3f-94d1-ec633e7f2937&amp;lang=ru_RU"></script><title>МЕХ ЗАВОД SOTRANS</title><link href="app.css" rel="stylesheet"></head><body><header class="header"><div class="container"><a class="header__logo slide-right" href="/" target="_blank" rel="noopener noreferrer nofollow"><img src="assets/img/global/header-logo.svg" alt="logo"></a><div class="header__menu"><div class="header__menu-top"><a class="header__menu-logo" href="https://sotrans.ru/" target="_blank" rel="noopener noreferrer nofollow"><img src="assets/img/global/mob-logo.svg" alt="mobile logo"></a><button><img src="assets/img/global/vector-thin.svg" alt=""></button></div><form class="header__menu-search"><div class="header__menu-search-field"><input id="search" name="search" placeholder="Поиск по сайту"><img src="assets/img/global/loupe.svg" alt=""></div></form><nav class="header__menu-list"><a href="/">О компании</a><div class="header__menu-drop"><div class="header__menu-drop-top"><span>Продукция</span><svg width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 1.5L8 7.5L14 1.5" stroke="#363636" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"></path></svg><div class="header__menu-drop-container"><div class="header__menu-drop-options"><div class="header__menu-drop-sub"><span>Спецтехника<svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.5 14L7.5 8L1.5 2" stroke="#363636" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"></path></svg></span><div class="header__menu-drop-sub-options"><a href="product.html" target="_blank" rel="noopener noreferrer nofollow">Бортовая платформа с КМУ</a><a href="product.html" target="_blank" rel="noopener noreferrer nofollow">Гидроборт</a><a href="kryukovoj-pogruzchik.html" target="_blank" rel="noopener noreferrer nofollow">Крюковой погрузчик</a></div></div><a href="polupritsepy.html" target="_blank" rel="noopener noreferrer nofollow">Полуприцепы</a></div></div></div></div><a href="catalog.html">Продукция</a><a href="proizvodstvo.html">Оборудование</a><a href="remont.html">Ремонт</a><a href="dilerstvo.html">Дилерство</a><a href="servis-i-garantiya.html">Гарантия и сервис</a><a href="novosti.html">Новости</a><a href="contacts.html">Контакты</a><a href="javascript:">Поиск по сайту</a></nav></div><button class="header__btn"><img src="assets/img/global/burger.svg" alt=""></button></div></header><main class="main main_catalog"><div class="breadcrumbs"><div class="container"><ul class="breadcrumbs__list slide-right"><li class="breadcrumbs__item"><a href="contacts.html" target="_blank" rel="noopener noreferrer nofollow">Контакты</a></li></ul></div></div><section class="contacts-map"><div class="container"><div class="slide-right" id="map"></div><h2 class="contacts-map__title">Контакты</h2><div class="map-mob slide-right"><div class="map-mob__switcher"><div class="map-mob__btn"><button data-index="0">Парнас</button></div><div class="map-mob__btn"><button data-index="1">Красный Бор</button></div><div class="map-mob__btn"><button data-index="2">Ельна</button></div><div class="map-mob__btn"><button data-index="3">Елабуга</button></div></div><div class="map-mob__maps"><div class="map-mob__item active" data-index="0"><div id="red-forest-map"></div></div><div class="map-mob__item" data-index="1"><div id="parnas-map"></div></div><div class="map-mob__item" data-index="2"><div id="elna-map"></div></div><div class="map-mob__item" data-index="3"><div id="elabuga-map"></div></div></div></div></div></section><section class="sales"><div class="container"><div class="sales__top"><h2 class="section-title-txt slide-right">Отдел продаж</h2><a class="sales__phone contacts-phone slide-up" href="tel:+7(812)4954202">Отдел продаж: <span>+7 (812) 495 42 02</span></a><a class="sales__mail contacts-mail slide-up" href="mailto:Support@sotrans.ru">Support@sotrans.ru</a></div><div class="sales__contacts"><h2 class="section-title-txt slide-right">Руководство</h2><ul class="sales__contacts-list"><li class="sales__item"><div class="sales__item-image"><img src="assets/img/contacts/1.jpg" alt=""></div><div class="sales__item-position">Генеральный директор</div><div class="sales__item-name">Иванов Иван Иванович</div><a class="contacts-phone" href="tel:+79218869375">Отдел продаж: <span>+7 921 886 93 75</span></a><a class="contacts-mail" href="mailto:info@mz-sotrans.ru">info@mz-sotrans.ru</a></li><li class="sales__item"><div class="sales__item-image"><img src="assets/img/contacts/2.jpg" alt=""></div><div class="sales__item-position">Генеральный директор</div><div class="sales__item-name">Иванов Иван Иванович</div><a class="contacts-phone" href="tel:+79218869375">Отдел продаж: <span>+7 921 886 93 75</span></a><a class="contacts-mail" href="mailto:info@mz-sotrans.ru">info@mz-sotrans.ru</a></li><li class="sales__item"><div class="sales__item-image"><img src="assets/img/contacts/3.jpg" alt=""></div><div class="sales__item-position">Генеральный директор</div><div class="sales__item-name">Иванов Иван Иванович</div><a class="contacts-phone" href="tel:+79218869375">Отдел продаж: <span>+7 921 886 93 75</span></a><a class="contacts-mail" href="mailto:info@mz-sotrans.ru">info@mz-sotrans.ru</a></li></ul></div></div></section></main><footer class="footer"><div class="footer__top"><div class="container"><form class="feedback slide-right"><h3 class="feedback__title">Связаться с нами</h3><p class="feedback__txt">Наш менеджер свяжется с вами в ближайшее время</p><div class="feedback__fields"><div class="feedback__input"><label for="name">Имя</label><input id="name" name="name" required autocomplete="off"></div><div class="feedback__input"><label for="tel">Телефон</label><input id="tel" type="tel" name="tel" required autocomplete="off"></div><div class="feedback__input"><label for="email">Телефон</label><input id="email" type="email" name="email" required autocomplete="off"></div><div class="feedback__textarea"><label for="message">Ваше сообщение</label><textarea id="message" name="message"></textarea></div><div class="feedback__policy"><input id="policy" type="checkbox" name="policy"><label for="policy"><span>Продолжая, вы принимаете</span> <a href="javascript:">политику конфиденциальности</a></label></div><button class="feedback__submit" type="submit">Оставить заявку</button></div></form><div class="footer__contacts slide-up"><button class="footer__contacts-slide-up"><img src="assets/img/footer/vector-top.svg" alt=""><span>Вернуться назад</span></button><h3 class="footer__contacts-title">Наши контакты</h3><ul class="footer__contacts-list"><li class="footer__contacts-list-item"><a href="tel:79216953701"><img src="assets/img/footer/phone.svg" alt=""><span>+ 7 (921) 695 37 01</span></a></li><li class="footer__contacts-list-item"><a href="mailto:info@mz-sotrans.ru"><img src="assets/img/footer/mail.svg" alt=""><span>info@mz-sotrans.ru</span></a></li><li class="footer__contacts-list-item"><div><img src="assets/img/footer/mark.svg" alt=""><span>Посёлок Красный Бор, Промышленная улица, 3</span></div></li></ul><h3 class="footer__contacts-title">Навигация</h3><nav class="footer__contacts-nav"><a href="/">О компании</a><a href="catalog.html">Продукция</a><a href="proizvodstvo.html">Оборудование</a><a href="javascript:">Дилерство</a><a href="contacts.html">Контакты</a></nav></div><a class="footer__logo slide-left" href="/"><img src="assets/img/footer/footer-logo.svg" alt="footer logo"></a></div></div><div class="container"><div class="footer__copyright"><span class="slide-right">© 2022 Все права защищены.<br>All rights reserved SOTRANS</span><a class="slide-left" href="javascript:">Политика конфиденциальности</a></div></div></footer><script>ymaps.ready(function () {
+    // desktop maps
+    const map = new ymaps.Map('map', {
+      center: [57.08939925644734, 44.98963160999127],
+      zoom: 6,
+      controls: [],
+    })
 
-  const iconContentLayout = ymaps.templateLayoutFactory.createClass(
-    '<div class="map__address">$[properties.iconContent]</div>'
-  )
+    const iconContentLayout = ymaps.templateLayoutFactory.createClass(
+      '<div class="map__address">$[properties.iconContent]</div>'
+    )
 
-  const redForestLayout = `<div class="map__address-body map__address-body_red-forest"><h2><img src="assets/img/global/map-logo.svg"></h2>
+    const redForestLayout = `<div class="map__address-body map__address-body_red-forest"><h2><img src="assets/img/global/map-logo.svg"></h2>
                             <div class="map__address-txt">Ленингракдская обл., Тосненский р-н, пгт Красный Бор, ул. Промышленная, д. 3 (трасса М10/Е105, 39-й км Московского шоссе)</div>
                             <div class="map__address-hours">Режим работы: ежедневно, с 10.00 до 21.00</div>
                             <div class="map__address-phone">
@@ -203,7 +21,7 @@
                               </span>
                             </div></div>`
 
-  const parnasLayout = `<div class="map__address-body map__address-body_parnas"><h2><img src="assets/img/global/map-logo.svg"></h2>
+    const parnasLayout = `<div class="map__address-body map__address-body_parnas"><h2><img src="assets/img/global/map-logo.svg"></h2>
                           <div class="map__address-txt">Санкт-Петербург 194292, Парнас, ул. Верхняя, дом 16</div>
                           <div class="map__address-hours">Режим работы: Пн-Пт с 9:00 до 18:00</div>
                           <div class="map__address-phone">
@@ -214,157 +32,154 @@
                             </span>
                           </div></div>`
 
-  const elnaLayout = `<div class="map__address-body map__address-body_elna"><h2><img src="assets/img/global/map-logo.svg"></h2>
+    const elnaLayout = `<div class="map__address-body map__address-body_elna"><h2><img src="assets/img/global/map-logo.svg"></h2>
                         <div class="map__address-txt">Московская область, Богородский городской округ, деревня Ельня, Новая улица, 16А</div></div>`
 
-  const elabugaLayout = `<div class="map__address-body map__address-body_elabuga"><h2><img src="assets/img/global/map-logo.svg"></h2>
+    const elabugaLayout = `<div class="map__address-body map__address-body_elabuga"><h2><img src="assets/img/global/map-logo.svg"></h2>
                            <div class="map__address-txt">Республика Татарстан, Елабужский район, Федеральная трасса М7, 1023 км</div></div>`
 
-  const redForest = new ymaps.Placemark([59.66768456450318, 30.651756999999925], {
-    iconContent: redForestLayout
-  }, {
-    iconLayout: 'default#imageWithContent',
-    iconImageHref: 'assets/img/global/marker.png',
-    iconImageSize: [30, 36],
-    iconContentOffset: [-34, 40],
-    iconContentLayout: iconContentLayout
-  })
+    const redForest = new ymaps.Placemark([59.66768456450318, 30.651756999999925], {
+      iconContent: redForestLayout
+    }, {
+      iconLayout: 'default#imageWithContent',
+      iconImageHref: 'assets/img/global/marker.png',
+      iconImageSize: [30, 36],
+      iconContentOffset: [-34, 40],
+      iconContentLayout: iconContentLayout
+    })
 
-  const parnas = new ymaps.Placemark([60.055807064037396, 30.375390499999998], {
-    iconContent: parnasLayout
-  }, {
-    iconLayout: 'default#imageWithContent',
-    iconImageHref: 'assets/img/global/marker.png',
-    iconImageSize: [30, 36],
-    iconContentOffset: [50, -80],
-    iconContentLayout: iconContentLayout
-  })
+    const parnas = new ymaps.Placemark([60.055807064037396, 30.375390499999998], {
+      iconContent: parnasLayout
+    }, {
+      iconLayout: 'default#imageWithContent',
+      iconImageHref: 'assets/img/global/marker.png',
+      iconImageSize: [30, 36],
+      iconContentOffset: [50, -80],
+      iconContentLayout: iconContentLayout
+    })
 
-  const elna = new ymaps.Placemark([55.84744206891417, 38.342234499999975], {
-    iconContent: elnaLayout
-  }, {
-    iconLayout: 'default#imageWithContent',
-    iconImageHref: 'assets/img/global/marker.png',
-    iconImageSize: [30, 36],
-    iconContentOffset: [40, 0],
-    iconContentLayout: iconContentLayout
-  })
+    const elna = new ymaps.Placemark([55.84744206891417, 38.342234499999975], {
+      iconContent: elnaLayout
+    }, {
+      iconLayout: 'default#imageWithContent',
+      iconImageHref: 'assets/img/global/marker.png',
+      iconImageSize: [30, 36],
+      iconContentOffset: [40, 0],
+      iconContentLayout: iconContentLayout
+    })
 
-  const elabuga = new ymaps.Placemark([55.813485500338615, 52.09983400000002], {
-    iconContent: elabugaLayout
-  }, {
-    iconLayout: 'default#imageWithContent',
-    iconImageHref: 'assets/img/global/marker.png',
-    iconImageSize: [30, 36],
-    iconContentOffset: [40, 0],
-    iconContentLayout: iconContentLayout
-  })
+    const elabuga = new ymaps.Placemark([55.813485500338615, 52.09983400000002], {
+      iconContent: elabugaLayout
+    }, {
+      iconLayout: 'default#imageWithContent',
+      iconImageHref: 'assets/img/global/marker.png',
+      iconImageSize: [30, 36],
+      iconContentOffset: [40, 0],
+      iconContentLayout: iconContentLayout
+    })
 
-  // mobile maps
-  const mapRedForest = new ymaps.Map('red-forest-map', {
-    center: [59.43134964126753, 30.570080256624546],
-    zoom: 8,
-    controls: [],
-    behaviors: ['drag', 'multiTouch'],
-  })
+    // mobile maps
+    const mapRedForest = new ymaps.Map('red-forest-map', {
+      center: [59.43134964126753,30.570080256624546],
+      zoom: 8,
+      controls: [],
+      behaviors: ['drag', 'multiTouch'],
+    })
 
-  const mapParnas = new ymaps.Map('parnas-map', {
-    center: [59.808423948048194, 30.479443049593293],
-    zoom: 8,
-    controls: [],
-    behaviors: ['drag', 'multiTouch'],
-  })
+    const mapParnas = new ymaps.Map('parnas-map', {
+      center: [59.808423948048194,30.479443049593293],
+      zoom: 8,
+      controls: [],
+      behaviors: ['drag', 'multiTouch'],
+    })
 
-  const mapElna = new ymaps.Map('elna-map', {
-    center: [55.83469205479343, 38.31957519824215],
-    zoom: 12,
-    controls: [],
-    behaviors: ['drag', 'multiTouch'],
-  })
+    const mapElna = new ymaps.Map('elna-map', {
+      center: [55.83469205479343,38.31957519824215],
+      zoom: 12,
+      controls: [],
+      behaviors: ['drag', 'multiTouch'],
+    })
 
-  const mapElabuga = new ymaps.Map('elabuga-map', {
-    center: [55.76386728069934, 52.13897279394529],
-    zoom: 11,
-    controls: [],
-    behaviors: ['drag', 'multiTouch'],
-  })
+    const mapElabuga = new ymaps.Map('elabuga-map', {
+      center: [55.76386728069934,52.13897279394529],
+      zoom: 11,
+      controls: [],
+      behaviors: ['drag', 'multiTouch'],
+    })
 
-  const redForestMob = new ymaps.Placemark([59.66768456450318, 30.651756999999925], {
-    iconContent: redForestLayout
-  }, {
-    iconLayout: 'default#imageWithContent',
-    iconImageHref: 'assets/img/global/marker.png',
-    iconImageSize: [30, 36],
-    iconContentOffset: [-160, -130],
-    iconContentLayout: iconContentLayout
-  })
+    const redForestMob = new ymaps.Placemark([59.66768456450318, 30.651756999999925], {
+      iconContent: redForestLayout
+    }, {
+      iconLayout: 'default#imageWithContent',
+      iconImageHref: 'assets/img/global/marker.png',
+      iconImageSize: [30, 36],
+      iconContentOffset: [-160, -130],
+      iconContentLayout: iconContentLayout
+    })
 
-  const parnasMob = new ymaps.Placemark([60.055807064037396, 30.375390499999998], {
-    iconContent: parnasLayout
-  }, {
-    iconLayout: 'default#imageWithContent',
-    iconImageHref: 'assets/img/global/marker.png',
-    iconImageSize: [30, 36],
-    iconContentOffset: [-40, 40],
-    iconContentLayout: iconContentLayout
-  })
+    const parnasMob = new ymaps.Placemark([60.055807064037396, 30.375390499999998], {
+      iconContent: parnasLayout
+    }, {
+      iconLayout: 'default#imageWithContent',
+      iconImageHref: 'assets/img/global/marker.png',
+      iconImageSize: [30, 36],
+      iconContentOffset: [-40, 40],
+      iconContentLayout: iconContentLayout
+    })
 
-  const elnaMob = new ymaps.Placemark([55.84744206891417, 38.342234499999975], {
-    iconContent: elnaLayout
-  }, {
-    iconLayout: 'default#imageWithContent',
-    iconImageHref: 'assets/img/global/marker.png',
-    iconImageSize: [30, 36],
-    iconContentOffset: [-170, -40],
-    iconContentLayout: iconContentLayout
-  })
+    const elnaMob = new ymaps.Placemark([55.84744206891417,38.342234499999975], {
+      iconContent: elnaLayout
+    }, {
+      iconLayout: 'default#imageWithContent',
+      iconImageHref: 'assets/img/global/marker.png',
+      iconImageSize: [30, 36],
+      iconContentOffset: [-170, -40],
+      iconContentLayout: iconContentLayout
+    })
 
-  const elabugaMob = new ymaps.Placemark([55.813485500338615, 52.09983400000002], {
-    iconContent: elabugaLayout
-  }, {
-    iconLayout: 'default#imageWithContent',
-    iconImageHref: 'assets/img/global/marker.png',
-    iconImageSize: [30, 36],
-    iconContentOffset: [-50, 35],
-    iconContentLayout: iconContentLayout
-  })
+    const elabugaMob = new ymaps.Placemark([55.813485500338615, 52.09983400000002], {
+      iconContent: elabugaLayout
+    }, {
+      iconLayout: 'default#imageWithContent',
+      iconImageHref: 'assets/img/global/marker.png',
+      iconImageSize: [30, 36],
+      iconContentOffset: [-50, 35],
+      iconContentLayout: iconContentLayout
+    })
 
-  map.controls.add('zoomControl', {
-    position: {
-      top: 280,
-      left: 'auto',
-      right: 10,
-      bottom: 'auto'
-    },
-    size: 'small'
-  })
-  map.controls.add('geolocationControl', {
-    position: {
-      top: 360,
-      left: 'auto',
-      right: 10,
-      bottom: 'auto'
-    }
-  })
+    map.controls.add('zoomControl', {
+      position: {
+        top: 280,
+        left: 'auto',
+        right: 10,
+        bottom: 'auto'
+      },
+      size: 'small'
+    })
+    map.controls.add('geolocationControl', {
+      position: {
+        top: 360,
+        left: 'auto',
+        right: 10,
+        bottom: 'auto'
+      }
+    })
 
-  map.geoObjects
-    .add(parnas)
-    .add(elna)
-    .add(elabuga)
-    .add(redForest)
+    map.geoObjects
+      .add(parnas)
+      .add(elna)
+      .add(elabuga)
+      .add(redForest)
 
-  mapRedForest.geoObjects
-    .add(redForestMob)
+    mapRedForest.geoObjects
+      .add(redForestMob)
 
-  mapParnas.geoObjects
-    .add(parnasMob)
+    mapParnas.geoObjects
+      .add(parnasMob)
 
-  mapElna.geoObjects
-    .add(elnaMob)
+    mapElna.geoObjects
+      .add(elnaMob)
 
-  mapElabuga.geoObjects
-    .add(elabugaMob)
-});</script>
-<script src="app.js"></script>
-</body>
-</html>
+    mapElabuga.geoObjects
+      .add(elabugaMob)
+  });</script><script src="app.js"></script></body></html>
