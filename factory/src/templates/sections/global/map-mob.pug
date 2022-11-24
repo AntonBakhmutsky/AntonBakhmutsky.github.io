@@ -1,0 +1,13 @@
+.map-mob
+  .map-mob__switcher
+    each el, index in mapSwitcher
+      button(data-index=index)
+  .map-mob__maps
+    .map-mob__item(data-index='0')
+      #red-forest-map
+    .map-mob__item(data-index='1')
+      #parnas-map
+    .map-mob__item(data-index='2')
+      #elna-map
+    .map-mob__item(data-index='3')
+      #elabuga-map

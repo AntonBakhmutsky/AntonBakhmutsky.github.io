@@ -1,56 +1,172 @@
 <script>
-    ymaps.ready(function () {
-        const myMap = new ymaps.Map('map', {
-                center: [55.751574, 37.573856],
-                zoom: 9
-            }, {
-                searchControlProvider: 'yandex#search'
-            }),
+  ymaps.ready(function () {
+    // desktop maps
+    const map = new ymaps.Map('map', {
+      center: [57.08939925644734, 44.98963160999127],
+      zoom: 6,
+      controls: [],
+      behaviors: ['drag'],
+    })
 
-            // Создаём макет содержимого.
-            MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-                '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-            ),
+    const iconContentLayout = ymaps.templateLayoutFactory.createClass(
+      '<div class="map__address">$[properties.iconContent]</div>'
+    )
 
-            myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-                hintContent: 'Собственный значок метки',
-                balloonContent: 'Это красивая метка'
-            }, {
-                // Опции.
-                // Необходимо указать данный тип макета.
-                iconLayout: 'default#image',
-                // Своё изображение иконки метки.
-                iconImageHref: '../../assets/img/global/marker.png',
-                // Размеры метки.
-                iconImageSize: [30, 42],
-                // Смещение левого верхнего угла иконки относительно
-                // её "ножки" (точки привязки).
-                iconImageOffset: [-5, -38]
-            }),
+    const redForestLayout = `<div class="map__address-body map__address-body_red-forest"><h2><img src="assets/img/global/map-logo.svg"></h2>
+                            <div class="map__address-txt">Ленингракдская обл., Тосненский р-н, пгт Красный Бор, ул. Промышленная, д. 3 (трасса М10/Е105, 39-й км Московского шоссе)</div>
+                            <div class="map__address-hours">Режим работы: ежедневно, с 10.00 до 21.00</div>
+                            <div class="map__address-phone">
+                              <span>Телефон:</span>
+                              <span>
+                                <a href="tel:+78124954320">+7(812) 495 43 20</a>
+                                <a href="tel:+79216953701">+7(921) 695 37 01</a>
+                              </span>
+                            </div></div>`
 
-            myPlacemarkWithContent = new ymaps.Placemark([55.661574, 37.573856], {
-                hintContent: 'Собственный значок метки с контентом',
-                balloonContent: 'А эта — новогодняя',
-                iconContent: '12'
-            }, {
-                // Опции.
-                // Необходимо указать данный тип макета.
-                iconLayout: 'default#imageWithContent',
-                // Своё изображение иконки метки.
-                iconImageHref: '../../assets/img/global/marker.png',
-                // Размеры метки.
-                iconImageSize: [48, 48],
-                // Смещение левого верхнего угла иконки относительно
-                // её "ножки" (точки привязки).
-                iconImageOffset: [-24, -24],
-                // Смещение слоя с содержимым относительно слоя с картинкой.
-                iconContentOffset: [15, 15],
-                // Макет содержимого.
-                iconContentLayout: MyIconContentLayout
-            });
+    const parnasLayout = `<div class="map__address-body map__address-body_parnas"><h2><img src="assets/img/global/map-logo.svg"></h2>
+                          <div class="map__address-txt">Санкт-Петербург 194292, Парнас, ул. Верхняя, дом 16</div>
+                          <div class="map__address-hours">Режим работы: Пн-Пт с 9:00 до 18:00</div>
+                          <div class="map__address-phone">
+                            <span>Телефон:</span>
+                            <span>
+                              <a href="tel:+78124954320">+7(812) 495 43 20</a>
+                              <a href="tel:+79216953701">+7(921) 695 37 01</a>
+                            </span>
+                          </div></div>`
 
-        myMap.geoObjects
-            .add(myPlacemark)
-            .add(myPlacemarkWithContent);
-    });
+    const elnaLayout = `<div class="map__address-body map__address-body_elna"><h2><img src="assets/img/global/map-logo.svg"></h2>
+                        <div class="map__address-txt">Московская область, Богородский городской округ, деревня Ельня, Новая улица, 16А</div></div>`
+
+    const elabugaLayout = `<div class="map__address-body map__address-body_elabuga"><h2><img src="assets/img/global/map-logo.svg"></h2>
+                           <div class="map__address-txt">Республика Татарстан, Елабужский район, Федеральная трасса М7, 1023 км</div></div>`
+
+    const redForest = new ymaps.Placemark([59.66768456450318, 30.651756999999925], {
+      iconContent: redForestLayout
+    }, {
+      iconLayout: 'default#imageWithContent',
+      iconImageHref: 'assets/img/global/marker.png',
+      iconImageSize: [30, 36],
+      iconImageOffset: [-24, -24],
+      iconContentOffset: [15, 15],
+      iconContentLayout: iconContentLayout
+    })
+
+    const parnas = new ymaps.Placemark([60.055807064037396, 30.375390499999998], {
+      iconContent: parnasLayout
+    }, {
+      iconLayout: 'default#imageWithContent',
+      iconImageHref: 'assets/img/global/marker.png',
+      iconImageSize: [30, 36],
+      iconImageOffset: [-24, -24],
+      iconContentOffset: [15, 15],
+      iconContentLayout: iconContentLayout
+    })
+
+    const elna = new ymaps.Placemark([55.84744206891417, 38.342234499999975], {
+      iconContent: elnaLayout
+    }, {
+      iconLayout: 'default#imageWithContent',
+      iconImageHref: 'assets/img/global/marker.png',
+      iconImageSize: [30, 36],
+      iconImageOffset: [-24, -24],
+      iconContentOffset: [15, 15],
+      iconContentLayout: iconContentLayout
+    })
+
+    const elabuga = new ymaps.Placemark([55.813485500338615, 52.09983400000002], {
+      iconContent: elabugaLayout
+    }, {
+      // Опции.
+      // Необходимо указать данный тип макета.
+      iconLayout: 'default#imageWithContent',
+      // Своё изображение иконки метки.
+      iconImageHref: 'assets/img/global/marker.png',
+      // Размеры метки.
+      iconImageSize: [30, 36],
+      // Смещение левого верхнего угла иконки относительно
+      // её "ножки" (точки привязки).
+      iconImageOffset: [-24, -24],
+      // Смещение слоя с содержимым относительно слоя с картинкой.
+      iconContentOffset: [15, 15],
+      // Макет содержимого.
+      iconContentLayout: iconContentLayout
+    })
+
+    // mobile maps
+    const redForestMob = new ymaps.Placemark([59.66768456450318, 30.651756999999925], {
+      iconContent: redForestLayout
+    }, {
+      iconLayout: 'default#imageWithContent',
+      iconImageHref: 'assets/img/global/marker.png',
+      iconImageSize: [30, 36],
+      iconImageOffset: [-24, -24],
+      iconContentOffset: [15, 15],
+      iconContentLayout: iconContentLayout
+    })
+
+    const parnasMob = new ymaps.Placemark([60.055807064037396, 30.375390499999998], {
+      iconContent: parnasLayout
+    }, {
+      iconLayout: 'default#imageWithContent',
+      iconImageHref: 'assets/img/global/marker.png',
+      iconImageSize: [30, 36],
+      iconImageOffset: [-24, -24],
+      iconContentOffset: [15, 15],
+      iconContentLayout: iconContentLayout
+    })
+
+    const elnaMob = new ymaps.Placemark([55.84744206891417, 38.342234499999975], {
+      iconContent: elnaLayout
+    }, {
+      iconLayout: 'default#imageWithContent',
+      iconImageHref: 'assets/img/global/marker.png',
+      iconImageSize: [30, 36],
+      iconImageOffset: [-24, -24],
+      iconContentOffset: [15, 15],
+      iconContentLayout: iconContentLayout
+    })
+
+    const elabugaMob = new ymaps.Placemark([55.813485500338615, 52.09983400000002], {
+      iconContent: elabugaLayout
+    }, {
+      // Опции.
+      // Необходимо указать данный тип макета.
+      iconLayout: 'default#imageWithContent',
+      // Своё изображение иконки метки.
+      iconImageHref: 'assets/img/global/marker.png',
+      // Размеры метки.
+      iconImageSize: [30, 36],
+      // Смещение левого верхнего угла иконки относительно
+      // её "ножки" (точки привязки).
+      iconImageOffset: [-24, -24],
+      // Смещение слоя с содержимым относительно слоя с картинкой.
+      iconContentOffset: [15, 15],
+      // Макет содержимого.
+      iconContentLayout: iconContentLayout
+    })
+
+    map.controls.add('zoomControl', {
+      position: {
+        top: 280,
+        left: 'auto',
+        right: 10,
+        bottom: 'auto'
+      },
+      size: 'small'
+    })
+    map.controls.add('geolocationControl', {
+      position: {
+        top: 360,
+        left: 'auto',
+        right: 10,
+        bottom: 'auto'
+      }
+    })
+
+    map.geoObjects
+      .add(redForest)
+      .add(parnas)
+      .add(elna)
+      .add(elabuga)
+  });
 </script>
