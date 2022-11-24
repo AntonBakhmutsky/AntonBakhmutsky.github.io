@@ -2,9 +2,14 @@
 @use '../../abstracts/mixins' as *
 
 .contacts-map
-  +screen($tablet)
-    height: 620px
-
   .container
     padding: 0
     height: 100%
+
+  &__title
+    display: none
+    +screen($tablet)
+      display: block
+      padding: 25px 10px 21px
+      box-sizing: border-box
+      +font(24px, 26px, 700, $font-title)

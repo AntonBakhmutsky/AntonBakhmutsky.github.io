@@ -5,7 +5,6 @@
       center: [57.08939925644734, 44.98963160999127],
       zoom: 6,
       controls: [],
-      behaviors: ['drag'],
     })
 
     const iconContentLayout = ymaps.templateLayoutFactory.createClass(
@@ -46,8 +45,7 @@
       iconLayout: 'default#imageWithContent',
       iconImageHref: 'assets/img/global/marker.png',
       iconImageSize: [30, 36],
-      iconImageOffset: [-24, -24],
-      iconContentOffset: [15, 15],
+      iconContentOffset: [-34, 40],
       iconContentLayout: iconContentLayout
     })
 
@@ -57,8 +55,7 @@
       iconLayout: 'default#imageWithContent',
       iconImageHref: 'assets/img/global/marker.png',
       iconImageSize: [30, 36],
-      iconImageOffset: [-24, -24],
-      iconContentOffset: [15, 15],
+      iconContentOffset: [50, -80],
       iconContentLayout: iconContentLayout
     })
 
@@ -68,39 +65,56 @@
       iconLayout: 'default#imageWithContent',
       iconImageHref: 'assets/img/global/marker.png',
       iconImageSize: [30, 36],
-      iconImageOffset: [-24, -24],
-      iconContentOffset: [15, 15],
+      iconContentOffset: [40, 0],
       iconContentLayout: iconContentLayout
     })
 
     const elabuga = new ymaps.Placemark([55.813485500338615, 52.09983400000002], {
       iconContent: elabugaLayout
     }, {
-      // Опции.
-      // Необходимо указать данный тип макета.
       iconLayout: 'default#imageWithContent',
-      // Своё изображение иконки метки.
       iconImageHref: 'assets/img/global/marker.png',
-      // Размеры метки.
       iconImageSize: [30, 36],
-      // Смещение левого верхнего угла иконки относительно
-      // её "ножки" (точки привязки).
-      iconImageOffset: [-24, -24],
-      // Смещение слоя с содержимым относительно слоя с картинкой.
-      iconContentOffset: [15, 15],
-      // Макет содержимого.
+      iconContentOffset: [40, 0],
       iconContentLayout: iconContentLayout
     })
 
     // mobile maps
+    const mapRedForest = new ymaps.Map('red-forest-map', {
+      center: [59.43134964126753,30.570080256624546],
+      zoom: 8,
+      controls: [],
+      behaviors: ['drag', 'multiTouch'],
+    })
+
+    const mapParnas = new ymaps.Map('parnas-map', {
+      center: [59.808423948048194,30.479443049593293],
+      zoom: 8,
+      controls: [],
+      behaviors: ['drag', 'multiTouch'],
+    })
+
+    const mapElna = new ymaps.Map('elna-map', {
+      center: [55.83469205479343,38.31957519824215],
+      zoom: 12,
+      controls: [],
+      behaviors: ['drag', 'multiTouch'],
+    })
+
+    const mapElabuga = new ymaps.Map('elabuga-map', {
+      center: [55.76386728069934,52.13897279394529],
+      zoom: 11,
+      controls: [],
+      behaviors: ['drag', 'multiTouch'],
+    })
+
     const redForestMob = new ymaps.Placemark([59.66768456450318, 30.651756999999925], {
       iconContent: redForestLayout
     }, {
       iconLayout: 'default#imageWithContent',
       iconImageHref: 'assets/img/global/marker.png',
       iconImageSize: [30, 36],
-      iconImageOffset: [-24, -24],
-      iconContentOffset: [15, 15],
+      iconContentOffset: [-160, -130],
       iconContentLayout: iconContentLayout
     })
 
@@ -110,38 +124,27 @@
       iconLayout: 'default#imageWithContent',
       iconImageHref: 'assets/img/global/marker.png',
       iconImageSize: [30, 36],
-      iconImageOffset: [-24, -24],
-      iconContentOffset: [15, 15],
+      iconContentOffset: [-40, 40],
       iconContentLayout: iconContentLayout
     })
 
-    const elnaMob = new ymaps.Placemark([55.84744206891417, 38.342234499999975], {
+    const elnaMob = new ymaps.Placemark([55.84744206891417,38.342234499999975], {
       iconContent: elnaLayout
     }, {
       iconLayout: 'default#imageWithContent',
       iconImageHref: 'assets/img/global/marker.png',
       iconImageSize: [30, 36],
-      iconImageOffset: [-24, -24],
-      iconContentOffset: [15, 15],
+      iconContentOffset: [-170, -40],
       iconContentLayout: iconContentLayout
     })
 
     const elabugaMob = new ymaps.Placemark([55.813485500338615, 52.09983400000002], {
       iconContent: elabugaLayout
     }, {
-      // Опции.
-      // Необходимо указать данный тип макета.
       iconLayout: 'default#imageWithContent',
-      // Своё изображение иконки метки.
       iconImageHref: 'assets/img/global/marker.png',
-      // Размеры метки.
       iconImageSize: [30, 36],
-      // Смещение левого верхнего угла иконки относительно
-      // её "ножки" (точки привязки).
-      iconImageOffset: [-24, -24],
-      // Смещение слоя с содержимым относительно слоя с картинкой.
-      iconContentOffset: [15, 15],
-      // Макет содержимого.
+      iconContentOffset: [-50, 35],
       iconContentLayout: iconContentLayout
     })
 
@@ -164,9 +167,21 @@
     })
 
     map.geoObjects
-      .add(redForest)
       .add(parnas)
       .add(elna)
       .add(elabuga)
+      .add(redForest)
+
+    mapRedForest.geoObjects
+      .add(redForestMob)
+
+    mapParnas.geoObjects
+      .add(parnasMob)
+
+    mapElna.geoObjects
+      .add(elnaMob)
+
+    mapElabuga.geoObjects
+      .add(elabugaMob)
   });
 </script>

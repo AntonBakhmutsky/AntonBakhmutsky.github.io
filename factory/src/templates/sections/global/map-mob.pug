@@ -1,9 +1,10 @@
-.map-mob
+.map-mob.slide-up
   .map-mob__switcher
     each el, index in mapSwitcher
-      button(data-index=index)
+      .map-mob__btn
+        button(data-index=index) #{el}
   .map-mob__maps
-    .map-mob__item(data-index='0')
+    .map-mob__item.active(data-index='0')
       #red-forest-map
     .map-mob__item(data-index='1')
       #parnas-map

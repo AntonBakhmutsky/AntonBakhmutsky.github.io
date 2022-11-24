@@ -3,64 +3,10 @@
 @use '../../abstracts/extends' as *
 
 .service-map
-  &__image
-    position: relative
-    max-width: 1440px
-    width: 100%
-    margin: 42px auto 0
-    display: flex
-
-    & > img
-      width: 100%
-      height: 100%
-      object-fit: cover
-      object-position: center
-
-  &__addres
-    width: 294px
-    box-sizing: border-box
-    padding: 34px 18px
-    background-color: $white
-    border-radius: 8px
-    +font(16px, 18px, 700, $font-title)
-    color: $blue-dark
-    position: absolute
-
-    &:nth-child(2)
-      top: 38px
-      right: 29%
-      +screen(1280)
-        right: 22%
-      +screen(1130)
-        top: 10px
-
-    &:nth-child(3)
-      bottom: 38px
-      right: 17%
-      +screen(1280)
-        right: 10%
-      +screen(1130)
-        bottom: 10px
-
-
-    &-logo
-      margin-bottom: 20px
-
-    &-hours
-      margin-top: 10px
-
-    &-phone
-      margin-top: 10px
-      display: flex
-
-      a
-        color: $blue-dark
-        @extend %opacity-click
-
-        &:last-child:not(:first-child)
-          margin-top: 10px
-
-      span
-        &:first-child
-          margin-right: 10px
+  .container:nth-child(2)
+    padding: 0
+    height: 100%
+    margin: 44px auto 100px
+    +screen($tablet)
+      margin: 40px auto 0
 
