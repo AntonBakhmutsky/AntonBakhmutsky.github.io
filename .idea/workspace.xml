@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="53d63cb4-c62a-4e23-9b3e-0ee45c9bef4e" name="Changes" comment="clear work tree" />
+    <list default="true" id="53d63cb4-c62a-4e23-9b3e-0ee45c9bef4e" name="Changes" comment="clear work tree">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -41,7 +43,7 @@
       <option name="presentableId" value="Default" />
       <updated>1669280877552</updated>
       <workItem from="1669280878710" duration="89000" />
-      <workItem from="1669283260852" duration="350000" />
+      <workItem from="1669283260852" duration="611000" />
     </task>
     <task id="LOCAL-00001" summary="clear work tree">
       <created>1669280915085</created>
