@@ -27,6 +27,6 @@ window.addEventListener('load', () => {
     }
 
     switchButtons.forEach(el => el.addEventListener('click', switchMap))
-    leftListAnimation('.map-mob__btn')
+    leftListAnimation('.map-mob__btn', 100)
   }
 })
