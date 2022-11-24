@@ -15,6 +15,7 @@ html(lang="ru")
     else
       include ../main/head
   body
+    include ../../sections/global/preloader
     include ../main/header
     main.main(class=mainModifier ? `main_${mainModifier}`:'')
       +breadcrumbs(breadCrumbsList)
