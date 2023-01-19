@@ -1,38 +1,50 @@
 header.header
   .container
-    a.header__logo.slide-right(href="index.html")
-      img(src=require('@/assets/img/global/header-logo.svg') alt="logo")
+    .header__container.slide-right
+      button.header__btn
+        img(src=require('@/assets/img/global/burger.svg') alt="")
+      a.header__logo(href="index.html")
+        img(src=require('@/assets/img/global/header-logo.svg') alt="logo")
     .header__menu
       .header__menu-top
-        +link({url: 'https://sotrans.ru/', class: 'header__menu-logo'})
-          img(src=require('@/assets/img/global/mob-logo.svg') alt="mobile logo")
         button
-          img(src=require('@/assets/img/global/vector-thin.svg') alt="")
+          img(src=require('@/assets/img/global/close.svg') alt="close button")
       nav.header__menu-list.slide-left
         each el, index in headerMenu
           if (index !== 1)
             a(href=el.url) #{el.txt}
           else
-            .header__menu-drop
-              .header__menu-drop-top
-                span #{el.txt}
-                | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/global/vector-down.svg')}
-                .header__menu-drop-container
-                  .header__menu-drop-options
-                    .header__menu-drop-sub
-                      span #{el.children[0].txt}
-                        | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/global/vector-right.svg')}
-                      .header__menu-drop-sub-options
-                          each item in el.children[0].children
-                            +link(item)
-                    +link(el.children[1])
-            a(href='catalog.html') #{el.txt}
+            .header__drop
+              .header__drop-top
+                span
+                  | Продукция
+                  | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/global/vector-down-sm.svg')}
+                .header__drop-container
+                  .header__drop-options
+                    .header__drop-options-item
+                      | Спецтехника
+                      | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/global/vector-right-sm.svg')}
+                      .header__drop-sub-container.header__drop-sub-container_tech
+                        .header__drop-sub-options
+                          a(href="javascript:") Бортовая платформа с КМУ
+                          a(href="javascript:") Гидроборт
+                          a(href="javascript:") Крюковые погрузчики
+                    .header__drop-options-item
+                      | Полуприцепы
+                      | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/global/vector-right-sm.svg')}
+                      .header__drop-sub-container.header__drop-sub-container_semitrailers
+                        .header__drop-sub-options
+                          a(href="javascript:") Шторные полуприцепы
+                          a(href="javascript:") Рефриджераторы полуприцепы
         .header__search
           input#search(type="text" name="search" placeholder="Поиск" autocomplete="off")
           .header__search-close
             img(src=require('@/assets/img/global/close-blue.svg') alt="")
         .header__search-btn
           img(src=require('@/assets/img/global/loupe.svg') alt="")
-    button.header__btn
-      img(src=require('@/assets/img/global/burger.svg') alt="")
-
+    .header__mobile-search
+      input#search-mobile(type="text" name="search-mobile" placeholder="Поиск" autocomplete="off")
+      .header__mobile-search-close
+        img(src=require('@/assets/img/global/close-mobile.svg') alt="")
+    .header__mobile-search-btn.slide-left
+      img(src=require('@/assets/img/global/loupe-mobile.svg') alt="")
