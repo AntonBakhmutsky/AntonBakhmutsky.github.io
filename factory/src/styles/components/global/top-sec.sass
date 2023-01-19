@@ -2,44 +2,49 @@
 @use '../../abstracts/mixins' as *
 
 .top
-  height: 615px
+  height: 585px
   position: relative
   color: $white
-  padding-bottom: 50px
-  padding-top: 123px
   box-sizing: border-box
   +screen($tablet)
-    height: 582px
-    padding-top: 196px
-
-  &:before
-    content: ''
-    width: 100%
-    height: 100%
-    position: absolute
-    top: 0
-    left: 0
-    background: linear-gradient(103.49deg, rgba(0, 0, 0, 0.9) 11.06%, rgba(0, 0, 0, 0) 97.33%, rgba(0, 0, 0, 0) 103.86%)
+    height: 460px
 
   .container
     display: flex
     flex-direction: column
+    width: 100%
     height: 100%
+    padding: 112px 60px
+    background: url(../assets/img/index/top-bg.jpg) no-repeat center/cover
+    +screen($tablet)
+      padding: 64px 20px
+      justify-content: flex-end
+
+    &:before
+      content: ''
+      width: 100%
+      height: 100%
+      position: absolute
+      top: 0
+      left: 0
+      background: linear-gradient(90deg, #17263D 0%, rgba(23, 38, 61, 0) 100%)
+      opacity: 0.96
+      pointer-events: none
 
   &__title
     max-width: 800px
-    +font(64px, 74px, 700, $font-title)
+    +font(60px, 66px, 700, $font-title)
     +screen($tablet)
-      +font(36px, 44px, 700, $font-title)
+      +font(32px, 36px, 700, $font-title)
 
   &__txt
-    +font(32px, 39px, 500, $font-title)
+    +font(24px, 39px)
     margin-top: 14px
     +screen($tablet)
-      +font(22px, 26px, 500, $font-title)
+      +font(14px, 19px)
       margin-top: 18px
 
   &__btn
     margin-top: 57px
     +screen($tablet)
-      margin-top: auto
+      margin-top: 26px

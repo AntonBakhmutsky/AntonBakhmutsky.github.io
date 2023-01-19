@@ -222,46 +222,24 @@ input[type="checkbox"]:checked + label
   display: flex
   align-items: center
   justify-content: center
-  height: 38px
+  height: 36px
 
-  &_yellow
-    color: $yellow
-    border: 1px solid $yellow
-
-    &:hover
-      background-color: $yellow
-      color: $white
-
-    &:active
-      background-color: transparent
-      color: $yellow
-
-  &_yellow_fill
-    background-color: $yellow
-    @extend %opacity-click
-
-strong
-  +font(20px, 26px, 500)
-
-.call-modal__btn
-  button
-    height: 56px
-    width: 312px
-    border-radius: 4px
-    background: $yellow
-    display: flex
-    align-items: center
-    justify-content: center
-    +font(18px, 18px, 500)
-    transition: transform .3s
+  &_orange
+    width: 230px
+    height: 50px
+    color: $white
+    transition: background-color .3s, box-shadow .3s
+    background-color: $orange
+    box-shadow: 0 6px 13px rgba(0, 0, 0, .3)
+    +font(16px, 16px, 500)
     +screen($tablet)
-      width: 100%
+      width: 183px
+      height: 46px
 
-    &:hover
-      transform: scale(1.1)
+    &:hover:not(:active)
+      background-color: lighten($orange, 10%)
+      box-shadow: 0 5px 9px rgba(0, 0, 0, .16)
 
-    &:active
-      transform: scale(1)
 
 .contacts-phone,
 .contacts-mail
@@ -270,7 +248,7 @@ strong
   position: relative
   margin-top: 35px
   +font(24px, 28px)
-  @extend %blue-light-click
+  @extend %blue-click
 
   span
     +screen($tablet-xs)
@@ -307,7 +285,7 @@ strong
         color: $blue
 
       &:not(.active)
-        @extend %blue-light-click
+        @extend %blue-click
 
     &:not(:last-child)
       margin-right: 30px
@@ -315,5 +293,7 @@ strong
         margin-right: 15px
 
 
-.anim-num, .slide-right, .slide-up, .slide-left
+.slide-right, .slide-up, .slide-left
   opacity: 0
+
+.anim-num
