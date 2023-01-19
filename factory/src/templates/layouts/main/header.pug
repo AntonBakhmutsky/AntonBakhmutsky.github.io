@@ -8,11 +8,7 @@ header.header
           img(src=require('@/assets/img/global/mob-logo.svg') alt="mobile logo")
         button
           img(src=require('@/assets/img/global/vector-thin.svg') alt="")
-      form.header__menu-search
-        .header__menu-search-field
-          input#search(type="text" name="search" placeholder="Поиск по сайту")
-          img(src=require('@/assets/img/global/loupe.svg') alt="")
-      nav.header__menu-list
+      nav.header__menu-list.slide-left
         each el, index in headerMenu
           if (index !== 1)
             a(href=el.url) #{el.txt}
@@ -31,6 +27,12 @@ header.header
                             +link(item)
                     +link(el.children[1])
             a(href='catalog.html') #{el.txt}
+        .header__search
+          input#search(type="text" name="search" placeholder="Поиск" autocomplete="off")
+          .header__search-close
+            img(src=require('@/assets/img/global/close-blue.svg') alt="")
+        .header__search-btn
+          img(src=require('@/assets/img/global/loupe.svg') alt="")
     button.header__btn
       img(src=require('@/assets/img/global/burger.svg') alt="")
 

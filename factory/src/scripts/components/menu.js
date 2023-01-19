@@ -54,13 +54,4 @@ window.addEventListener('load', () => {
   }
 
   mobileMenuItems.forEach(el => el.addEventListener('click', toggleMenu))
-
-  headerMenuDrop.addEventListener('click', () => {
-    location.href = 'polupritsepy.html'
-  })
-
-  headerMenuDropSub.addEventListener('click', (e) => {
-    e.stopPropagation()
-    location.href = 'spetstehnika.html'
-  })
 })

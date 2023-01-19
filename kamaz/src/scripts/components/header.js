@@ -1,12 +1,12 @@
 window.addEventListener('load', () => {
 
   // search
-  const header = document.querySelector('.header');
   const searchBtn = document.querySelector('.header__search-btn');
   const searchPanel = document.querySelector('.header__search');
   const kamazLogo = document.querySelector('.header__logo_kamaz');
   const panelList = searchPanel.classList;
   const kamazList = kamazLogo.classList;
+  const header = document.querySelector('.header');
   let scrollPosition = 0, winWidth = window.innerWidth;
 
   const toggleSearch = () => {

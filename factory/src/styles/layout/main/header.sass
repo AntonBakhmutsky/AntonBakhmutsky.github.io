@@ -11,11 +11,11 @@
   background-color: $white
   z-index: 10
   box-sizing: border-box
-  height: 95px
+  height: 70px
   display: flex
   align-items: center
   +screen($tablet)
-    height: 32px
+    height: 54px
 
   .container
     display: flex
@@ -32,10 +32,60 @@
       width: 80px
       height: 10px
 
+  &__search
+    height: 36px
+    display: flex
+    align-items: center
+    position: absolute
+    top: -10px
+    right: 0
+    width: calc(100% + 1px)
+    z-index: 1
+    border-radius: 4px
+    visibility: hidden
+    opacity: 0
+    transition: opacity .3s, visibility .3s
+    +screen($tablet)
+      display: none
+
+    &.active
+      visibility: visible
+      opacity: 1
+
+    input
+      background-color: $white
+      box-sizing: border-box
+      padding: 10px 21px 10px 15px
+      border: 1px solid $white-dark
+      width: 100%
+      border-radius: 4px
+      +font(12px, 12px, 350)
+
+      &::placeholder
+        color: $white-darkest
+
+    &-btn
+      display: flex
+      align-items: center
+      cursor: pointer
+
+    &-close
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      right: 9px
+      z-index: 2
+      display: flex
+      align-items: center
+      cursor: pointer
+
   &__menu
+    max-width: 930px
     width: 100%
     box-sizing: border-box
-    padding-left: 19px
+    padding-left: 20px
+    position: relative
+    margin-left: auto
     +screen(1280)
       position: fixed
       top: 0
@@ -51,10 +101,12 @@
         right: 0
 
     &-list
+      position: relative
       display: flex
-      +font(18px, 28px, 500)
+      +font(14px, 18px, 500)
       width: 100%
       justify-content: space-between
+      align-items: center
       +screen(1280)
         margin-top: 20px
         flex-direction: column
@@ -63,7 +115,7 @@
 
 
         a, .header__menu-drop
-          +font(14px, 22px, 500)
+          +font(14px, 18px, 500)
           &:not(:last-child)
             margin-bottom: 30px
 

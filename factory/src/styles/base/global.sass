@@ -33,12 +33,12 @@ body
   width: 100%
   max-width: 1440px
   box-sizing: border-box
-  padding: 0 76px
+  padding: 0 60px
   margin: 0 auto
   +screen(1400)
     padding: 0 30px
   +screen($tablet)
-    padding: 0 10px
+    padding: 0 20px
 
 a
   text-decoration: none
@@ -90,7 +90,7 @@ textarea
   height: 132px
   padding: 12px
 
-input:not([type="checkbox"])
+input:not([type="checkbox"], #search)
   height: 44px
   border: 1px solid rgba($gray-darkest, .5)
   +font(14px, 16px, 350)
@@ -122,49 +122,9 @@ input[type="checkbox"]:checked + label
 
 .section
   &-title
-    box-sizing: border-box
-    padding-left: 25px
-    +font(32px, 36px, 700, $font-title)
-    display: flex
-    align-items: flex-start
-
-    span
-      position: relative
-      color: $blue
-      +font(32px, 39px, 500, $font-title)
-      margin: -2px 14px 0 0
-
-      &:before
-        content: ''
-        width: 18px
-        height: 18px
-        margin-top: 2px
-        border-radius: 50%
-        background-color: $gray-light
-        position: absolute
-        top: 50%
-        transform: translateY(-50%)
-        left: -25px
-
-    &_white
-      color: $white
-
-      span
-        &:before
-          background-color: $white
-
-      span
-        color: $white
-
-    &_blue
-      span
-        &:before
-          background-color: $blue
-
-    &_white_blue
-      span
-        &:before
-          background-color: $white
+    +font(40px, 52px, 700, $font-title)
+    +screen($tablet)
+      +font(28px, 30px, 700, $font-title)
 
   &-list
     margin-top: 10px
