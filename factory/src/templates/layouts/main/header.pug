@@ -11,31 +11,7 @@ header.header
           img(src=require('@/assets/img/global/close.svg') alt="close button")
       nav.header__menu-list.slide-left
         each el, index in headerMenu
-          if (index !== 1)
-            a(href=el.url) #{el.txt}
-          else
-            .header__drop
-              .header__drop-top
-                span
-                  | Продукция
-                  | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/global/vector-down-sm.svg')}
-                .header__drop-container
-                  .header__drop-options
-                    .header__drop-options-item
-                      | Спецтехника
-                      | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/global/vector-right-sm.svg')}
-                      .header__drop-sub-container.header__drop-sub-container_tech
-                        .header__drop-sub-options
-                          a(href="javascript:") Бортовая платформа с КМУ
-                          a(href="javascript:") Гидроборт
-                          a(href="javascript:") Крюковые погрузчики
-                    .header__drop-options-item
-                      | Полуприцепы
-                      | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/global/vector-right-sm.svg')}
-                      .header__drop-sub-container.header__drop-sub-container_semitrailers
-                        .header__drop-sub-options
-                          a(href="javascript:") Шторные полуприцепы
-                          a(href="javascript:") Рефриджераторы полуприцепы
+          a(href=el.url) #{el.txt}
         .header__search
           input#search(type="text" name="search" placeholder="Поиск" autocomplete="off")
           .header__search-close
