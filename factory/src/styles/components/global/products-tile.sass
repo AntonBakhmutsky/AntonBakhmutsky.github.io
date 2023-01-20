@@ -1,0 +1,29 @@
+@use '../../abstracts/variables' as *
+@use '../../abstracts/mixins' as *
+@use '../../abstracts/extends' as *
+
+.products-tile
+  box-sizing: border-box
+  padding: 60px 0
+  +screen($tablet)
+    padding: 40px 0
+
+  &__grid
+    margin-top: 40px
+    display: grid
+    grid-template-columns: repeat(auto-fill, minmax(315px, 1fr))
+    grid-gap: 20px
+    +screen($tablet)
+      grid-gap: 26px 20px
+    +screen($mobile)
+      grid-template-columns: 1fr
+
+  .txt-link
+    position: absolute
+    top: 16px
+    right: 60px
+    +screen($tablet)
+      position: relative
+      top: auto
+      right: auto
+      margin: 40px auto 0

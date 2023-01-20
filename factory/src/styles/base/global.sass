@@ -129,47 +129,6 @@ input[type="checkbox"]:checked + label
     &_white
       color: $white
 
-  &-list
-    margin-top: 10px
-
-    span
-      font-weight: 500
-
-    li
-      position: relative
-      box-sizing: border-box
-      padding-left: 21px
-
-      &:before
-        content: ''
-        position: absolute
-        top: 6px
-        left: 0
-        width: 12px
-        height: 12px
-        border-radius: 50%
-        background-color: #CDCDCD
-
-  &-title-txt
-    +font(40px, 60px, 700, $font-title)
-    +screen($tablet)
-      +font(24px, 27px, 700, $font-title)
-
-  &-sub-title
-    +font(32px, 36px, 700, $font-title)
-    position: relative
-    padding-left: 29px
-
-    &:before
-      content: ''
-      position: absolute
-      top: 10px
-      left: 0
-      width: 18px
-      height: 18px
-      border-radius: 50%
-      background-color: $blue
-
 .image-overlay
   position: absolute
   width: 100%
@@ -242,7 +201,6 @@ input[type="checkbox"]:checked + label
     &:hover:not(:active)
       background-color: lighten($orange, 10%)
       box-shadow: 0 5px 9px rgba(0, 0, 0, .16)
-
 
 .contacts-phone,
 .contacts-mail

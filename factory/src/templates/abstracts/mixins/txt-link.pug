@@ -1,0 +1,4 @@
+mixin txt-link(params)
+  a.txt-link(href=params.url class= params.class ? params.class : '')
+    span #{params.txt}
+    | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/global/vector-right.svg')}

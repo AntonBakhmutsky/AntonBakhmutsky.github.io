@@ -1,0 +1,14 @@
+mixin product-card(params)
+  .product-card
+    .product-card__image
+      img(src=params.img)
+    .product-card__content
+      h2.product-card__title #{params.title}
+      ul.product-card__list
+        each option in params.options
+          li
+            span #{option.title}
+            span #{option.txt}
+      .product-card__btns
+        a(href=params.url) Заказать звонок
+        a(href=params.url) Подробнее
