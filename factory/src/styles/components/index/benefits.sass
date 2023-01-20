@@ -3,43 +3,63 @@
 @use '../../abstracts/extends' as *
 
 .benefits
-  padding-top: 55px
-  background: url(../assets/img/index/benefits-bg.jpg) center/cover no-repeat
+  .section-title
+    +screen($tablet)
+      padding: 0 20px
+
+  .container
+    padding: 30px 0 30px 60px
+    background-color: $blue-dark
+    height: 725px
+    +screen($tablet)
+      padding: 30px 0 0
+      height: 576px
+      box-sizing: border-box
 
   .swiper
     box-sizing: border-box
-    padding-left: 76px
-    max-width: 1440px
     margin: 35px auto 0
-    padding-bottom: 111px
+    height: 100%
     color: $white
-    height: 571px
-    +screen(1439)
-      padding: 40px 76px
-      height: auto
-    +screen(905)
-      padding: 40px 0
-      margin: 0
+    +screen($tablet)
+      height: 481px
 
     &-slide
       opacity: .5
       position: relative
-      +screen(1439)
+      +screen($tablet)
+        padding: 0 20px 70px
+        box-sizing: border-box
         display: flex
-        flex-direction: column-reverse
+        flex-direction: column
+        align-items: flex-start
+
+      &-active
+        opacity: 1
+
+        .swiper-slide-image
+          &:after
+            content: ''
+            width: 100%
+            height: 11px
+            position: absolute
+            bottom: 0
+            left: 0
+            z-index: 2
+            background-color: $orange
 
       &-num
         display: none
-        +screen(1439)
+        +screen($tablet)
           display: block
           position: absolute
-          right: 30px
-          top: 15px
+          right: 50px
+          bottom: 15px
           +font(26px, 39px, 500, $font-title)
 
           &:after
             content: ''
-            width: 76px
+            width: 58px
             height: 4px
             border-radius: 4px
             background-color: $white
@@ -48,70 +68,41 @@
             transform: translateY(-50%)
             left: calc(100% + 12px)
 
-      &-active
-        opacity: 1
-
-        .swiper-slide-text
-          font-weight: 500
-
       &-top
-        display: flex
-        position: relative
-        +screen(1439)
-          flex-direction: column
-          max-width: 752px
-          margin: 0 auto
-        +screen(881)
-          padding: 0 10px
-
+        +screen($tablet)
+          margin-bottom: auto
 
       &-title
-        +font(20px, 26px, 700)
-        max-width: 294px
-        +screen(1439)
-          max-width: none
-          margin-top: 24px
-          box-sizing: border-box
-          padding-right: 80px
+        +font(18px, 25px, 700)
+        +screen($tablet)
 
       &-text
-        +font(16px, 26px, 350)
-        max-width: 261px
-        +screen(1439)
+        +font(14px, 22px, 350)
+        max-width: 804px
+        margin-top: 10px
+        height: 44px
+        +screen($tablet)
           max-width: none
           margin-top: 15px
+          height: auto
 
       &-image
         margin-top: 40px
         border-radius: 4px
         overflow: hidden
         position: relative
-        max-width: 752px
-        +screen(1439)
-          margin: 0 auto
-        +screen(881)
-          height: 224px
+        max-width: 804px
+        display: flex
+        +screen($tablet)
           max-width: none
+          margin-top: 0
           width: 100%
 
-          img
-            width: 100%
-            height: 100%
-            object-position: center
-            object-fit: cover
-
-          +screen(460)
-            height: 124px
-
-        &:after
-          content: ''
+        img
           width: 100%
-          height: 11px
-          position: absolute
-          bottom: 0
-          left: 0
-          z-index: 2
-          background-color: $yellow
+          height: 100%
+          object-position: center
+          object-fit: cover
 
         &:before
           content: ''
@@ -124,16 +115,16 @@
           background: linear-gradient(270deg, rgba(230, 243, 251, 0.6) -28.13%, rgba(230, 243, 251, 0) 71.87%)
 
     &-pagination
-      left: 76px
-      bottom: 60px
-      max-width: 952px
+      left: -4px
+      bottom: 100px
+      max-width: 1034px
       display: flex
-      +screen(1439)
+      +screen($tablet)
         display: none
 
       &-bullet
         border-radius: 4px
-        max-width: 230px
+        max-width: 260px
         width: 100%
         transition: max-width .3s
         position: relative
@@ -178,7 +169,7 @@
 
     &-button
       &-next, &-prev
-        bottom: 50px
+        bottom: 82px
         top: auto
         @extend %opacity-click
         +screen(1439)
@@ -187,11 +178,11 @@
           content: ''
 
       &-next
-        right: 386px
+        right: 400px
 
       &-prev
         left: auto
-        right: 455px
+        right: 460px
 
 
 

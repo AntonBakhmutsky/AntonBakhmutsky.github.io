@@ -7,7 +7,7 @@ window.addEventListener('load', () => {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev'
     },
-    autoplay: true,
+    // autoplay: true,
     speed: 800,
     loop: true,
     pagination: {
@@ -17,11 +17,17 @@ window.addEventListener('load', () => {
     breakpoints: {
       320: {
         slidesPerView: 1,
-        spaceBetween: 76
+        spaceBetween: 20
       },
-      1440: {
-        spaceBetween: 140,
-        slidesPerView: 1.7,
+      1025: {
+        slidesPerView: 1.2,
+        spaceBetween: 40,
+        setWrapperSize: 804
+      },
+      1280: {
+        slidesPerView: 1.6,
+        spaceBetween: 40,
+        setWrapperSize: 804
       }
     }
   })
