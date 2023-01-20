@@ -11,10 +11,12 @@ body
   min-height: 100vh
   display: flex
   flex-direction: column
-  +font(18px, 28px, 350)
+  +font(18px, 28px)
   position: relative
   background-color: $white
   color: $black
+  +screen($tablet)
+    +font(16px, 26px)
 
   &.loaded_hiding
     .preloader
