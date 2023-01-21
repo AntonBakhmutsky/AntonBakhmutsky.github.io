@@ -1,0 +1,10 @@
+mixin news-card(params)
+  .news-card
+    .news-card__image
+      img(src=params.img alt="")
+    .news-card__date #{params.date}
+    h3.news-card__ttitle #{params.title}
+    p.news-card__txt #{params.txt}
+    a(href=params.url)
+      span Читать
+      | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/global/vector-right-white.svg')}

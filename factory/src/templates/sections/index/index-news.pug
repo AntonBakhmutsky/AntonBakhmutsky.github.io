@@ -1,18 +1,6 @@
 section.index-news
   .container
-    .index-news__top.section-top
-      h2.section-title.slide-right #[span 06] Новости
-      a.more-link.slide-up(href="novosti.html") Посмотреть все
+    h2.section-title Новости
     .index-news__grid
       each el in newsList
-        .index-news__item(class=el.modifier ? `index-news__item_${el.modifier}`:'')
-          .index-news__item-image
-            img(src=el.img alt="")
-          .index-news__item-content
-            .index-news__item-date #{el.date}
-            h3.index-news__item-title #{el.title}
-            p.index-news__item-txt #{el.txt}
-            a.index-news__item-link.btn.btn_yellow(href=el.url) Читать далее
-    .section-bottom
-      a.more-link.slide-up(href="novosti.html") Посмотреть все
-
+        +news-card(el)
