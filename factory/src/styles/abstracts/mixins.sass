@@ -14,3 +14,9 @@
 =screen($_size)
   @media only screen and (max-width: #{$_size}px)
     @content
+
+=txt-overflow($_strings)
+  display: -webkit-box
+  -webkit-line-clamp: $_strings
+  -webkit-box-orient: vertical
+  overflow: hidden

@@ -4,8 +4,6 @@ window.addEventListener('load', () => {
   const mobileMenuBtn = document.querySelector('.header__btn')
   const menuBtn = document.querySelector('.header__menu-top button')
   const mobileMenuItems = document.querySelectorAll('.header__menu a')
-  const headerMenuDrop = document.querySelector('.header__menu-drop')
-  const headerMenuDropSub = document.querySelector('.header__menu-drop-sub')
 
   const toggleMenu = () => {
     mobileMenu.classList.toggle('active')

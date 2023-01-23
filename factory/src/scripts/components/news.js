@@ -1,21 +1,9 @@
-import Swiper, {Navigation} from 'swiper'
+import {leftListAnimation} from '../helpers/animations'
 
 window.addEventListener('load', () => {
-  if (!document.querySelector('.news-content .swiper')) {
+  if (!document.querySelector('.news-card')) {
     return false
   } else {
-    const slider = new Swiper('.news-content .swiper', {
-      modules: [Navigation],
-      navigation: {
-        nextEl: '.swiper-button-next'
-      },
-      loop: true,
-      breakpoints: {
-        320: {
-          slidesPerView: 1,
-          spaceBetween: 10
-        }
-      }
-    })
+    leftListAnimation('.news-card')
   }
 })
