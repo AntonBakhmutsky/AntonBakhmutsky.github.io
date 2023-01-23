@@ -7,7 +7,7 @@ window.addEventListener('load', () => {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev'
     },
-    // autoplay: true,
+    autoplay: true,
     speed: 800,
     loop: true,
     pagination: {
