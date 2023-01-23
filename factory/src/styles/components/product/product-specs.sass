@@ -2,42 +2,29 @@
 @use '../../abstracts/mixins' as *
 
 .product-specs
-  padding: 56px 0
-  background-color: $blue-lightest
-  +screen($tablet)
-    padding: 40px 0
-
-    .section-title
-      +font(24px, 36px, 700, $font-title)
-
-  &__content
-    display: flex
-    margin-top: 25px
-    justify-content: space-between
-    +screen($tablet)
-      flex-direction: column
-
-  &__container
-    flex-basis: 45%
-    display: flex
-    flex-direction: column
-
-    &:last-child
-      +screen($tablet)
-        margin-top: 40px
+  &__title
+    +font(26px, 28px, 700)
 
   &__list
-    margin-top: 36px
+    margin-top: 46px
 
     li
+      display: flex
+      justify-content: space-between
+      align-items: center
+
       &:not(:first-child)
-        margin-top: 12px
+        margin-top: 16px
 
       span
-        +font(16px, 26px, 500)
-        +screen($tablet)
-          +font(18px, 26px, 500, $font-title)
+        +font(16px, 28px)
 
-      b
-        +font(18px, 26px, 500, $font-title)
-        color: $blue
+        &:nth-child(2)
+          flex-grow: 1
+          height: 2px
+          margin: 0 22px
+          background-color: $gray-second-light
+
+
+        &:last-child
+          font-weight: 500

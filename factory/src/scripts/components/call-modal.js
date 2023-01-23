@@ -12,7 +12,6 @@ window.addEventListener('load', () => {
 
     const closeModal = (e) => {
       const target = e.target
-      console.log(target)
       if (target.closest('.call-modal__close') || target.classList.contains('call-modal')) {
         modal.classList.remove('active')
         document.body.classList.remove('body_fix')

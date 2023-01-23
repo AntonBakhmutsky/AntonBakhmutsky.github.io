@@ -1,3 +1,28 @@
 mixin product-slider(params)
   .product-slider
+    .swiper.main-slider
+      .swiper-wrapper
+        each el in params
+          .swiper-slide
+            img(src=el alt="")
+      .swiper-button-next
+      .swiper-button-prev
+    .swiper.thumb-slider
+      .swiper-wrapper
+        each el in params
+          .swiper-slide
+            img(src=el alt="")
+    .product-slider__modal
+      .swiper.thumb-modal-slider
+        .swiper-wrapper
+          each el in params
+            .swiper-slide
+              img(src=el alt="")
+      .swiper.main-modal-slider
+        .swiper-wrapper
+          each el in params
+            .swiper-slide
+              img(src=el alt="")
+        .swiper-button-next
+        .swiper-button-prev
 

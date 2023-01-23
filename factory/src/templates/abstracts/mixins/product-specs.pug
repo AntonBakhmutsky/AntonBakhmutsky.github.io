@@ -1,3 +1,10 @@
 mixin product-specs(params)
   .product-specs
-
+    h3.product-specs__title Технические характеристики
+    ul.product-specs__list
+      each el in params
+        li
+          span #{el.name}
+          span
+          span #{el.value}
+    button.btn.btn_orange.call-modal__btn Заказать звонок
