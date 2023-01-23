@@ -1,0 +1,45 @@
+@use '../../abstracts/variables' as *
+@use '../../abstracts/mixins' as *
+@use '../../abstracts/extends' as *
+
+.products-grid
+  padding: 33px 0 66px
+  +screen($tablet)
+    padding: 20px 0 70px
+
+  &__block
+    margin-top: 60px
+    +screen($tablet)
+      margin-top: 50px
+
+    &:nth-child(2)
+      .category-grid__item
+        +screen($tablet)
+          &:nth-child(1)
+            .category-grid__item-image
+              width: 113px
+              height: 66px
+
+          &:nth-child(2)
+            .category-grid__item-image
+              width: 112px
+              height: 66px
+
+    &:nth-child(3)
+      .category-grid__item
+        +screen($tablet)
+          &:nth-child(1)
+            .category-grid__item-image
+              width: 112px
+              height: 81px
+
+          &:nth-child(2)
+            .category-grid__item-image
+              width: 149px
+              height: 53px
+              margin-left: -33px
+
+          &:nth-child(3)
+            .category-grid__item-image
+              width: 123px
+              height: 87px
