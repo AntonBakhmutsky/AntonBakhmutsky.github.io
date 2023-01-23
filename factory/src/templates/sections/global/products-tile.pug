@@ -1,9 +1,0 @@
-section.products-tile
-  .container
-    h2.section-title.slide-right  #{productsTitleTxt}
-    .products-tile__grid
-      each el in productsList
-        +product-card(el)
-    +txt-link({ txt: 'Вся продукция', url: 'products.html', class: 'slide-left' })
-
-

@@ -1,0 +1,28 @@
+extends ../layouts/other-pages/layout.pug
+
+append variables
+  -
+    mainModifier = 'products-category'
+    breadCrumbsList = [
+      {
+        url: '/',
+        txt: 'Главная'
+      },
+      {
+        url: 'products.html',
+        txt: 'Продукция'
+      },
+      {
+        url: 'spetstehnika.html',
+        txt: 'Спецтехника'
+      },
+      {
+        url: 'hooklifts.html',
+        txt: 'Крюковые погрузчики'
+      }
+    ]
+block title
+  | МЕХ ЗАВОД SOTRANS
+
+block content
+  +products-tile({ title: 'Крюковые погрузчики', list: hookLiftsList })

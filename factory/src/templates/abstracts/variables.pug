@@ -6,6 +6,7 @@
   breadCrumbsList = null
   callModal = false
   map = false
+  txtLink = false
 
   //- header
   headerMenu = [
@@ -58,29 +59,6 @@
     {
       icon: require('@/assets/img/footer/home.svg'),
       txt: 'п. Красный Бор, ул. Промышленная 3'
-    }
-  ]
-
-  footerNavList = [
-    {
-      url: 'index.html',
-      txt: 'О компании'
-    },
-    {
-      url: 'catalog.html',
-      txt: 'Продукция'
-    },
-    {
-      url: 'proizvodstvo.html',
-      txt: 'Оборудование'
-    },
-    {
-      url: 'javascript:',
-      txt: 'Дилерство'
-    },
-    {
-      url: 'contacts.html',
-      txt: 'Контакты'
     }
   ]
 
@@ -222,6 +200,66 @@
         }
       ],
       url: 'javascript:'
+    }
+  ]
+
+  hookLiftsList = [
+    {
+      img: require('@/assets/img/index/products/3.jpg'),
+      title: 'Крюковой погрузчик FAW J6P-390',
+      options: [
+        {
+          title: 'Грузоподъёмность номинальная',
+          txt: '22 т'
+        },
+        {
+          title: 'Высота крюка',
+          txt: '1570 мм (DIN 30722)'
+        },
+        {
+          title: 'Длина погрузчика рабочая (R):',
+          txt: '5100 мм'
+        }
+      ],
+      url: 'hook-390.html'
+    },
+    {
+      img: require('@/assets/img/index/products/3.jpg'),
+      title: 'Крюковой погрузчик FAW J6P-390',
+      options: [
+        {
+          title: 'Грузоподъёмность номинальная',
+          txt: '22 т'
+        },
+        {
+          title: 'Высота крюка',
+          txt: '1570 мм (DIN 30722)'
+        },
+        {
+          title: 'Длина погрузчика рабочая (R):',
+          txt: '5100 мм'
+        }
+      ],
+      url: 'hook-390.html'
+    },
+    {
+      img: require('@/assets/img/index/products/3.jpg'),
+      title: 'Крюковой погрузчик FAW J6P-390',
+      options: [
+        {
+          title: 'Грузоподъёмность номинальная',
+          txt: '22 т'
+        },
+        {
+          title: 'Высота крюка',
+          txt: '1570 мм (DIN 30722)'
+        },
+        {
+          title: 'Длина погрузчика рабочая (R):',
+          txt: '5100 мм'
+        }
+      ],
+      url: 'hook-390.html'
     }
   ]
 
@@ -529,87 +567,8 @@
   ]
 
   // product page
-  productSlides = [
-    require('@/assets/img/product/slides/1.jpg'),
-    require('@/assets/img/product/slides/2.jpg'),
-    require('@/assets/img/product/slides/3.jpg')
-  ]
-
-  productList = [
-    {
-      option: 'Модель:',
-      value: 'HB80E2'
-    },
-    {
-      option: 'Грузовой момент, Т.м.:',
-      value: '8'
-    },
-    {
-      option: 'Максимальный  вертикальный вылет, м.:',
-      value: '10,2'
-    },
-    {
-      option: 'Угол поворота, град.:',
-      value: '400'
-    },
-    {
-      option: 'Время оборота, сек.:',
-      value: '15'
-    },
-    {
-      option: 'Рабочее давление, бар.:',
-      value: '285'
-    },
-    {
-      option: 'Собственный вес, кг.:',
-      value: '930'
-    },
-    {
-      option: 'Объем гидробака, л.:',
-      value: '35'
-    },
-    {
-      option: 'Расход масла л/мин:',
-      value: '20'
-    },
-    {
-      option: 'Размеры мм:',
-      value: '2300х1940х600'
-    },
-    {
-      option: 'Максимальный вылет стрелы м.:',
-      value: '7,05'
-    },
-    {
-      option: 'Грузоподъемность при максимальном вылете стрелы кг.:',
-      value: '1050'
-    }
-  ]
-
-  compList = [
-    {
-      option: 'Вес крана ru.:',
-      value: '1030'
-    },
-    {
-      option: 'Масляный бак'
-    },
-    {
-      option: 'Монтажный комплект'
-    },
-    {
-      option: 'Ручные поворотные опоры'
-    },
-    {
-      option: 'Крюк'
-    },
-    {
-      option: 'Опоры ручные поворотные м.:',
-      value: '4,60'
-    },
-    {
-      option: 'Гидравлическая система защиты от перегрузки'
-    }
+  hook390Page = [
+    slides = []
   ]
 
   // diagram
@@ -645,17 +604,17 @@
     {
       image: require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/products/special/1.svg'),
       txt: 'Бортовая платформа с КМУ',
-      url: 'product.html'
+      url: 'products-category.html'
     },
     {
       image: require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/products/special/2.svg'),
       txt: 'Гидроборт',
-      url: 'product.html'
+      url: 'products-category.html'
     },
     {
       image: require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/products/special/3.svg'),
       txt: 'Крюковой погрузчик',
-      url: 'product.html'
+      url: 'hooklifts.html'
     }
   ]
 
@@ -663,12 +622,12 @@
     {
       image: require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/products/semitrailers/1.svg'),
       txt: 'Шторные полуприцепы',
-      url: 'polupritsepy-shtornye'
+      url: 'products-category.html'
     },
     {
       image: require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/products/semitrailers/2.svg'),
       txt: 'Рефриджераторы полуприцепы',
-      url: 'product.html'
+      url: 'products-category.html'
     }
   ]
 

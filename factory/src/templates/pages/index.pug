@@ -5,8 +5,8 @@ append variables
     topTitle = 'Делаем серьезную технику на века'
     topTxt = 'Первый кузовостроительный завод в СЗФО'
     mainModifier = 'home'
-    productsTitleTxt = 'Продукция'
     callModal = true
+    txtLink = true
 
 block title
   | МЕХ ЗАВОД SOTRANS
@@ -16,7 +16,7 @@ block content
   include ../sections/index/nums
   include ../sections/index/about
   include ../sections/index/benefits
-  include ../sections/global/products-tile
+  +products-tile({ title: 'Продукция', list: productsList })
   include ../sections/index/partners
   include ../sections/index/why
   include ../sections/index/index-news
