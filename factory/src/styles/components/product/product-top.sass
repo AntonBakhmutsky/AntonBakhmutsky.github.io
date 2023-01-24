@@ -2,5 +2,14 @@
 @use '../../abstracts/mixins' as *
 
 .product-top
+  .container
+    +screen($tablet)
+      padding: 0
+
+  .section-title
+    +screen($tablet)
+      padding: 0 20px
+      box-sizing: border-box
+
   &__container
     margin-top: 35px

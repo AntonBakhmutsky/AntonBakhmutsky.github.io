@@ -2,6 +2,9 @@
 @use '../../abstracts/mixins' as *
 
 .product-specs
+  +screen($tablet)
+    padding: 0 20px
+
   &__title
     +font(26px, 28px, 700)
 
@@ -27,3 +30,6 @@
 
         &:last-child
           font-weight: 500
+
+  .call-modal__btn
+    margin-top: 50px
