@@ -33,7 +33,7 @@ window.addEventListener('load', () => {
         }
       }
     })
-    const thumbModalSlider = new Swiper('.product-slider .swiper.thumb-modal-slider', {
+    const thumbModalSlider = new Swiper('.product-slider__modal .swiper.thumb-modal-slider', {
       spaceBetween: 6,
       slidesPerView: 'auto',
       freeMode: true,
@@ -44,7 +44,7 @@ window.addEventListener('load', () => {
         }
       }
     })
-    new Swiper('.product-slider .swiper.main-modal-slider', {
+    new Swiper('.product-slider__modal .swiper.main-modal-slider', {
       modules: [Navigation, Pagination, Thumbs],
       loop: true,
       spaceBetween: 200,
@@ -66,10 +66,9 @@ window.addEventListener('load', () => {
   const slides = document.querySelectorAll('.main-slider .swiper-slide')
 
   const showModal = (e) => {
-    if (e.target.closest('.swiper-slide') && window.innerWidth > 1024) {
+    if (e.target.closest('.swiper-slide') && window.innerWidth > 1024 || e.target.closest('.swiper-modal-btn')) {
       modal.classList.add('active')
-    } else if (e.target.closest('.swiper-modal-btn')) {
-      modal.classList.add('active')
+      document.body.classList.add('body_fix')
     }
   }
 
@@ -78,6 +77,7 @@ window.addEventListener('load', () => {
     console.log(e.currentTarget)
     if (e.target.closest('.product-slider__modal-close') || e.target.classList.contains('active')) {
       modal.classList.remove('active')
+      document.body.classList.remove('body_fix')
     }
   }
 
