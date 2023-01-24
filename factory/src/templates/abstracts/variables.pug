@@ -9,6 +9,10 @@
   txtLink = false
   productSpecs = null
   productSlides = null
+  additionalTitle = null
+  additionalSubtitle = null
+  additionalOptions = null
+  additionalDiagram = null
 
   //- header
   headerMenu = [
@@ -494,26 +498,6 @@
     '<strong>Двери распашные</strong> – HESTAL, двухстворчатые, с углом открывания 270°. Дверное полотно – наборный алюминий. Фурнитура: 4 петли и 2 штанги на дверь (штанги внутри алюминиевого профиля дверей). Фиксаторы дверей в открытом положении - штанговые.'
   ]
 
-  //- additional
-  additionalSlides = [
-    {
-      image: require('@/assets/img/polupritsepy/additional/1.png'),
-      txt: 'Выдвижная оцинкованная лестница'
-    },
-    {
-      image: require('@/assets/img/polupritsepy/additional/2.png'),
-      txt: 'Инструментальный ящик пластиковый'
-    },
-    {
-      image: require('@/assets/img/polupritsepy/additional/3.png'),
-      txt: '4 пластиковых крыла с брызговиками'
-    },
-    {
-      image: require('@/assets/img/polupritsepy/additional/4.png'),
-      txt: 'Кронштейн для подключения тормозной и осветительной системы в передней части шасси'
-    }
-  ]
-
   //- about prod
   aboutProdContent = [
     {
@@ -596,7 +580,22 @@
         name: 'Собственный вес',
         value: '2250 кг'
       }
-    ]
+    ],
+    additional: [
+      {name: 'Мин. внутр. длинна сменного кузова', value: '5000 мм (с гидравлическими замками кузова)'},
+      {name: 'Мин. внутр. длинна сменного кузова', value: '6200 мм (свес от края погрузчика — 1384 мм)'},
+      {name: 'Расстояние гидравлических замков кузова (D)', value: '620 мм'},
+      {name: 'Рабочая ширина опор кузова', value: '1060 мм'},
+      {name: 'Высота опор кузова', value: '240 мм'},
+      {name: 'Угол опрокидывания', value: '44 с/49c  60 см3/об'},
+      {name: 'Время погрузки/опрокидывания кузова', value: '310 бар'},
+      {name: 'Рабочее давление гидравлической системы', value: '48°'},
+      {name: 'Рекомендуемая подача гидронасоса', value: '61-81 л/мин'},
+      {name: 'Рабочее давление пневматической системы', value: '6-8 бар'},
+      {name: 'Тип управления', value: 'электрическая система управления'},
+      {name: 'Покрытие', value: 'финишная окраска'},
+    ],
+    diagram: require('@/assets/img/product/hook/hook-390-diagram.jpg')
   }
 
   // diagram
