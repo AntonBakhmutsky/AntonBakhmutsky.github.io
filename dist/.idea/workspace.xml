@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f69f632a-3d9b-47c0-8556-ac8618be2b7b" name="Changes" comment="clear work tree" />
+    <list default="true" id="f69f632a-3d9b-47c0-8556-ac8618be2b7b" name="Changes" comment="clear work tree">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../factory/src/assets/img/index/benefits_slides/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/../factory/src/assets/img/index/benefits_slides/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../factory/src/styles/components/index/benefits.sass" beforeDir="false" afterPath="$PROJECT_DIR$/../factory/src/styles/components/index/benefits.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../factory/src/templates/abstracts/variables.pug" beforeDir="false" afterPath="$PROJECT_DIR$/../factory/src/templates/abstracts/variables.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../factory/src/templates/sections/index/benefits.pug" beforeDir="false" afterPath="$PROJECT_DIR$/../factory/src/templates/sections/index/benefits.pug" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,14 +29,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -40,6 +46,7 @@
       <option name="presentableId" value="Default" />
       <updated>1674460879147</updated>
       <workItem from="1674460880283" duration="36000" />
+      <workItem from="1674538285020" duration="657000" />
     </task>
     <task id="LOCAL-00001" summary="clear work tree">
       <created>1674460909324</created>
@@ -48,7 +55,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674460909324</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="clear work tree">
+      <created>1674538317922</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1674538317922</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
