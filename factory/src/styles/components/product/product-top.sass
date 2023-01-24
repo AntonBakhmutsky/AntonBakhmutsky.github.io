@@ -2,6 +2,10 @@
 @use '../../abstracts/mixins' as *
 
 .product-top
+  padding: 15px 0 50px
+  +screen($tablet)
+    padding: 20px 0 40px
+
   .container
     +screen($tablet)
       padding: 0
@@ -13,3 +17,11 @@
 
   &__container
     margin-top: 35px
+    display: flex
+    justify-content: space-between
+    gap: 20px
+    +screen($tablet)
+      margin-top: 15px
+      gap: 30px
+      flex-direction: column-reverse
+      justify-content: flex-start

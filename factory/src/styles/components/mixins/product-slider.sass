@@ -2,6 +2,9 @@
 @use '../../abstracts/mixins' as *
 
 .product-slider
+  +screen($tablet)
+    margin-top: 20px
+
   .main-slider
     &.swiper
       max-width: 650px
@@ -19,7 +22,6 @@
           position: absolute
           bottom: 12px
           right: 12px
-          display: flex
           align-items: center
           justify-content: center
           width: 36px
@@ -42,8 +44,13 @@
         display: flex
         overflow: hidden
         position: relative
+        cursor: pointer
         +screen($tablet)
           height: auto
+
+        &-active
+          .swiper-modal-btn
+            display: flex
 
         img
           width: 100%
@@ -125,6 +132,7 @@
         padding: 3px
         border: 1px solid transparent
         display: flex
+        cursor: pointer
 
         &-thumb-active
           border-color: $blue-second
@@ -175,6 +183,7 @@
       height: 637px
       box-sizing: border-box
       padding: 60px 20px 60px 30px
+      z-index: 1
       +screen($tablet)
         width: 100vw
         height: 100vh
@@ -187,6 +196,7 @@
       position: absolute
       top: 20px
       right: 20px
+      cursor: pointer
       +screen($tablet)
         svg
           path

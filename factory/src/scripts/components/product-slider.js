@@ -59,4 +59,29 @@ window.addEventListener('load', () => {
       },
     })
   }
+
+  // product modal
+  const modal = document.querySelector('.product-slider__modal')
+  const modalButtons = document.querySelectorAll('.swiper-modal-btn')
+  const slides = document.querySelectorAll('.main-slider .swiper-slide')
+
+  const showModal = (e) => {
+    if (e.target.closest('.swiper-slide') && window.innerWidth > 1024) {
+      modal.classList.add('active')
+    } else if (e.target.closest('.swiper-modal-btn')) {
+      modal.classList.add('active')
+    }
+  }
+
+  const closeModal = (e) => {
+    e.stopPropagation()
+    console.log(e.currentTarget)
+    if (e.target.closest('.product-slider__modal-close') || e.target.classList.contains('active')) {
+      modal.classList.remove('active')
+    }
+  }
+
+  modalButtons.forEach(el => el.addEventListener('click', showModal))
+  slides.forEach(el => el.addEventListener('click', showModal))
+  modal.addEventListener('click', closeModal)
 })
