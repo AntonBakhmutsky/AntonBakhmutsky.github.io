@@ -3,7 +3,7 @@ window.addEventListener('load', () => {
     return null
   } else {
     const modal = document.querySelector('.call-modal')
-    const modalBtn = document.querySelector('.call-modal__btn')
+    const modalBtns = document.querySelectorAll('.call-modal__btn')
 
     const openModal = () => {
       modal.classList.add('active')
@@ -18,7 +18,7 @@ window.addEventListener('load', () => {
       }
     }
 
-    modalBtn.addEventListener('click', openModal)
+    modalBtns.forEach(el => el.addEventListener('click', openModal))
     modal.addEventListener('click', closeModal)
   }
 })
