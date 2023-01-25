@@ -1,0 +1,36 @@
+section.product-tabs
+  .container
+    .product-tabs__switcher
+      each el,index in tabButtons
+        if (index === 0)
+          button.active(data-id=0) #{el}
+        else
+          button(data-id=index) #{el}
+    .product-tabs__content
+      .product-tabs__block.active(data-id=0)
+        ul.product-tabs__list
+          each el in tabLeftDesc
+            li
+              h3 #{el.title}
+              p #{el.value}
+        .product-tabs__container
+          if (tabLeftImage)
+            .product-tabs__image
+              img(src=tabLeftImage alt="")
+          if (tabLeftVideo)
+            .product__video
+              .product__video-btn
+                button
+                  img(src=require('@/assets/img/global/play-btn.svg') alt="")
+              video(loop muted)
+                source(src=tabLeftVideo type="video/mp4")
+      .product-tabs__block(data-id=1)
+        ul.product-tabs__list
+          each el in tabRightDesc
+            li
+              h3 #{el.title}
+              p #{el.value}
+        .product-tabs__container
+          if (tabRightImage)
+            .product-tabs__image
+              img(src=tabRightImage alt="")

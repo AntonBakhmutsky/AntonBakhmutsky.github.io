@@ -13,6 +13,7 @@ window.addEventListener('load', () => {
     new Swiper('.product-slider .swiper.main-slider', {
       modules: [Navigation, Pagination, Thumbs],
       spaceBetween: 10,
+      loop: true,
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',

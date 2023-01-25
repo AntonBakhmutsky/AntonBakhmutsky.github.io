@@ -8,6 +8,12 @@ append variables
     callModal = true
     productSpecs = semitrailersCurtain.specs
     productSlides = semitrailersCurtain.slides
+    tabLeftDesc = semitrailersCurtain.tabLeft.desc
+    tabLeftImage = semitrailersCurtain.tabLeft.image
+    tabLeftVideo = semitrailersCurtain.tabLeft.video
+    tabRightDesc = semitrailersCurtain.tabRight.desc
+    tabRightImage = semitrailersCurtain.tabRight.image
+    tabButtons = ['Конструкция', 'Надстройка полуприцепа']
     breadCrumbsList = [
       {
         url: '/',
@@ -33,3 +39,4 @@ block title
 block content
   include ../sections/global/top-sec
   include ../sections/product/product-top
+  include ../sections/product/product-tabs
