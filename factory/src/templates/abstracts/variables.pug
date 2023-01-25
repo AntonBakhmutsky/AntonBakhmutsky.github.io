@@ -14,6 +14,9 @@
   additionalOptions = null
   additionalDiagram = null
   additionalContentModifier = null
+  topSecBreadcrumbs = false
+  productTopTitle = null
+  productSpecsCallBtn = null
 
   //- header
   headerMenu = [
@@ -584,7 +587,7 @@
     ],
     additional: [
       {name: 'Мин. внутр. длинна сменного кузова', value: '5000 мм (с гидравлическими замками кузова)'},
-      {name: 'Мин. внутр. длинна сменного кузова', value: '6200 мм (свес от края погрузчика — 1384 мм)'},
+      {name: 'Макс. внутр. длинна сменного кузова', value: '6200 мм (свес от края погрузчика — 1384 мм)'},
       {name: 'Расстояние гидравлических замков кузова (D)', value: '620 мм'},
       {name: 'Рабочая ширина опор кузова', value: '1060 мм'},
       {name: 'Высота опор кузова', value: '240 мм'},
@@ -598,7 +601,69 @@
     ],
     diagram: require('@/assets/img/product/hook/hook-390-diagram.jpg')
   }
-
+  semitrailersCurtain = {
+    slides: [
+      require('@/assets/img/product/semitrailers/curtain/1.jpg'),
+      require('@/assets/img/product/semitrailers/curtain/2.jpg'),
+      require('@/assets/img/product/semitrailers/curtain/3.jpg'),
+      require('@/assets/img/product/semitrailers/curtain/4.jpg'),
+      require('@/assets/img/product/semitrailers/curtain/5.jpg'),
+    ],
+    specs: [
+      {
+        name: 'Длинна грузовой платформы',
+        value: '13 600 мм'
+      },
+      {
+        name: 'Ширина грузовой платформы',
+        value: '2 470 мм'
+      },
+      {
+        name: 'Высота в свету под крышей',
+        value: '2 710 мм'
+      },
+      {
+        name: 'Общая длина',
+        value: '13 900 мм'
+      },
+      {
+        name: 'Общая ширина',
+        value: '2 550 мм'
+      },
+      {
+        name: 'Межосевое расстояние',
+        value: '1 310 мм'
+      },
+      {
+        name: 'Допустимый общий вес',
+        value: '35 000 кг'
+      },
+      {
+        name: 'Технически возможный общий вес',
+        value: '38 000 кг'
+      },
+      {
+        name: 'Общая допустимая нагрузка <br> на осевой агрегат',
+        value: '24 000 кг (на каждую ось по 8 000 кг)'
+      },
+      {
+        name: 'Технически возможная нагрузка <br> на агрегат',
+        value: '27 000 кг (на каждую ось по 9 000 кг)'
+      },
+      {
+        name: 'Собственный вес в базовой комплектации',
+        value: '6 650 кг'
+      },
+      {
+        name: 'Высота седельного устройства',
+        value: '1 150 кг'
+      },
+      {
+        name: 'Допустимая нагрузка на седельное устройство',
+        value: '11 500 кг'
+      }
+    ]
+  }
   // diagram
   diagramList = [
     {
@@ -632,12 +697,12 @@
     {
       image: require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/products/special/1.svg'),
       txt: 'Бортовая платформа с КМУ',
-      url: 'products-category.html'
+      url: 'javascript:'
     },
     {
       image: require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/products/special/2.svg'),
       txt: 'Гидроборт',
-      url: 'products-category.html'
+      url: 'javascript:'
     },
     {
       image: require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/products/special/3.svg'),
@@ -650,12 +715,12 @@
     {
       image: require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/products/semitrailers/1.svg'),
       txt: 'Шторные полуприцепы',
-      url: 'products-category.html'
+      url: 'semitrailers-curtain.html'
     },
     {
       image: require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/products/semitrailers/2.svg'),
       txt: 'Рефриджераторы полуприцепы',
-      url: 'products-category.html'
+      url: 'javascript:'
     }
   ]
 

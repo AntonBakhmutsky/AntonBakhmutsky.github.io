@@ -4,7 +4,10 @@ mixin product-specs(params)
     ul.product-specs__list
       each el in params
         li
-          span #{el.name}
+          span !{el.name}
           span
-          span #{el.value}
-    button.btn.btn_orange.call-modal__btn Заказать звонок
+          span !{el.value}
+    if (productSpecsCallBtn)
+      button.btn.btn_orange.call-modal__btn Заказать звонок
+    else
+      button.product-specs__more Развернуть характеристики

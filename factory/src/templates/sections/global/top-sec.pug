@@ -1,5 +1,7 @@
 section.top
   .container
+    if (topSecBreadcrumbs)
+      +breadcrumbs(breadCrumbsList)
     .top__content.slide-right
       h1.top__title !{topTitle}
       if (topTxt)

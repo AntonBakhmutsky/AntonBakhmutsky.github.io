@@ -7,6 +7,23 @@
   +screen($tablet)
     padding-top: 60px
 
-  &_home
+  &_semitrailer-curtain
     .top
+      &__title
+        margin-top: 23px
+    .product-top
+      &__container
+        +screen($tablet)
+          flex-direction: column
 
+    .product-specs
+      flex-basis: 48%
+
+      li
+        &:nth-child(9),
+        &:nth-child(10)
+          align-items: flex-start
+
+          span
+            &:nth-child(2)
+              margin-top: 14px

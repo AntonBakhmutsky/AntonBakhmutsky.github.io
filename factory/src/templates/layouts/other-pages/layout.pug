@@ -24,7 +24,8 @@ html(lang="ru")
     include ../../sections/global/preloader
     include ../main/header
     main.main(class=mainModifier ? `main_${mainModifier}`:'')
-      +breadcrumbs(breadCrumbsList)
+      if (!topSecBreadcrumbs)
+        +breadcrumbs(breadCrumbsList)
       block content
     include ../main/footer
     if (callModal)

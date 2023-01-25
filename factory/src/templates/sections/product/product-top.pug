@@ -1,6 +1,7 @@
 section.product-top
   .container
-    h2.section-title.slide-right Крюковой погрузчик FAW J6P-390
+    if (productTopTitle)
+      h2.section-title.slide-right #{productTopTitle}
     .product-top__container
       +product-specs(productSpecs)
       +product-slider(productSlides)

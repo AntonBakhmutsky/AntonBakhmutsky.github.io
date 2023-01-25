@@ -9,6 +9,32 @@
   +screen($tablet)
     height: 460px
 
+  .breadcrumbs
+    position: absolute
+    left: 0
+    background-color: transparent
+    top: 0
+
+    &__item
+      a
+        color: $white
+
+      &:last-child
+        a
+          font-weight: 500
+          color: $white
+
+    .container
+      width: 100%
+      height: auto
+      padding: 0 60px
+      background: transparent
+      +screen($tablet)
+        padding: 0 20px
+
+      &:before
+        display: none
+
   .container
     display: flex
     flex-direction: column
