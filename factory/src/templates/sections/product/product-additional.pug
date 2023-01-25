@@ -1,14 +1,15 @@
 section.product-additional
-  h2.product-additional__title #{additionalTitle}
-  if (additionalSubtitle)
-    h3.product-additional__subtitle #{additionalSubtitle}
-  if (additionalOptions)
-    .product-additional__content
-      .product-additional__options
-        each el in additionalOptions
-          .product-additional__options-item
-            span #{el.name}
-            span #{el.value}
-      if (additionalDiagram)
-        .product-additional__diagram
-          img(src=additionalDiagram alt="diagram")
+  .container
+    h2.section-title.section-title_sm #{additionalTitle}
+    if (additionalSubtitle)
+      h3.product-additional__subtitle #{additionalSubtitle}
+    .product-additional__content(class=additionalContentModifier ? additionalContentModifier:'')
+      if (additionalOptions)
+        .product-additional__options
+          each el in additionalOptions
+            .product-additional__options-item
+              span #{el.name}
+              span #{el.value}
+        if (additionalDiagram)
+          .product-additional__diagram
+            img(src=additionalDiagram alt="diagram")

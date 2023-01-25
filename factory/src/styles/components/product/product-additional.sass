@@ -2,3 +2,60 @@
 @use '../../abstracts/mixins' as *
 
 .product-additional
+  .container
+    background-color: #F4F4F4
+    padding: 40px 50px 76px
+    +screen($tablet)
+      padding: 20px 10px 23px
+
+  &__content
+    margin-top: 40px
+
+    &_flex-row
+      display: flex
+      gap: 20px
+      +screen($tablet)
+        flex-direction: column
+        gap: 34px
+
+  &__options
+    max-width: 822px
+    width: 100%
+    +screen($tablet)
+      max-width: none
+
+    &-item
+      display: flex
+      min-height: 44px
+      align-items: center
+      +screen($tablet)
+        flex-direction: column
+        align-items: flex-start
+        padding: 16px 10px
+        box-sizing: border-box
+
+      &:nth-child(odd)
+        background-color: $white
+
+      span
+        flex-basis: 50%
+        +font(16px, 26px)
+        box-sizing: border-box
+        padding: 7px 20px
+        +screen($tablet)
+          flex-basis: auto
+          padding: 0
+
+        &:last-child
+          font-weight: 500
+          +screen($tablet)
+            margin-top: 8px
+
+  &__diagram
+    flex-shrink: 0
+    +screen($tablet)
+      flex-shrink: 1
+      align-self: center
+
+    img
+      width: 100%

@@ -131,6 +131,11 @@ input[type="checkbox"]:checked + label
     &_white
       color: $white
 
+    &_sm
+      +font(26px, 28px, 700)
+      +screen($tablet)
+        +font(20px, 24px, 700)
+
 .image-overlay
   position: absolute
   width: 100%
