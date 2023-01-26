@@ -1,6 +1,16 @@
 section.contacts-map
   .container
-    include ../global/map
-    h2.contacts-map__title Контакты
-    include ../global/map-mob
+    h2.section-title.slide-right Контакты
+    .contacts-map__container.slide-left
+      .contacts-map__info
+        h3.contacts-map__info-title Отдел продаж
+        each el in contactsInfo
+          .contacts-map__info-item
+            .contacts-map__info-item-image
+              img(src=el.icon alt="")
+            if (el.url)
+              a.contacts-map__info-item-txt(href=el.url) #{el.txt}
+            else
+              .contacts-map__info-item-txt !{el.txt}
+      include ../global/map
 

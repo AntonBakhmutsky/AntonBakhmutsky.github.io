@@ -2,6 +2,10 @@
 @use '../../abstracts/mixins' as *
 
 .product-optional
+  padding-bottom: 74px
+  +screen($tablet)
+    padding-bottom: 80px
+
   &__grid
     padding: 40px 0 60px
     display: grid
@@ -18,6 +22,9 @@
     overflow: hidden
     height: 330px
     flex-shrink: 0
+    box-sizing: border-box
+    padding: 20px
+    +font(16px, 22px)
     +screen($tablet-xs)
       height: 310px
 
@@ -43,6 +50,10 @@
         height: 100%
         object-fit: cover
         object-position: center
+
+    &-txt
+      z-index: 2
+      color: $white
 
   .call-modal__btn
     margin: 0 auto

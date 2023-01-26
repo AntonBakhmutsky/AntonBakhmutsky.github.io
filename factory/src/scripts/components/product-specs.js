@@ -1,5 +1,5 @@
 window.addEventListener('load', () => {
-  if (!document.querySelector('.product-specs') && document.querySelector('.product-specs__more')) {
+  if (!document.querySelector('.product-specs') && !document.querySelector('.product-specs__more')) {
     return false
   } else {
     const specsList = document.querySelector('.product-specs__list')

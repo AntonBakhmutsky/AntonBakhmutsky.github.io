@@ -2,14 +2,90 @@
 @use '../../abstracts/mixins' as *
 
 .contacts-map
-  .container
-    padding: 0
-    height: 100%
+  padding: 15px 0 50px
+  +screen($tablet)
+    padding: 20px 0 26px
 
-  &__title
-    display: none
+  .container
     +screen($tablet)
-      display: block
-      padding: 25px 10px 21px
-      box-sizing: border-box
-      +font(24px, 26px, 700, $font-title)
+      padding: 0 10px
+
+  .section-title
+    +screen($tablet)
+      padding: 0 10px
+
+  &__container
+    border-radius: 10px
+    display: flex
+    overflow: hidden
+    margin-top: 37px
+    +screen($tablet)
+      margin-top: 30px
+      border-radius: 6px
+      flex-direction: column
+
+  &__info
+    background-color: $blue-second
+    color: $white
+    box-sizing: border-box
+    padding: 24px 26px
+    flex-shrink: 0
+    position: relative
+    +screen($tablet)
+      height: 265px
+
+    &:after
+      content: ''
+      position: absolute
+      top: 0
+      right: -9px
+      width: 10px
+      height: 100%
+      background-color: $blue-second
+      +screen($tablet)
+        display: none
+
+    &-title
+      +font(22px, 24px, 500)
+
+    a
+      color: $white
+
+    &-item
+      display: flex
+
+      &:not(:first-child)
+        margin-top: 26px
+        +screen($tablet)
+          margin-top: 20px
+
+      &-image
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 26px
+        height: 26px
+        flex-shrink: 0
+        border-radius: 4px
+        background-color: $white
+        margin-right: 12px
+        box-sizing: border-box
+        padding: 0 6px
+
+        img
+          width: 100%
+
+#map
+  [class*="copyrights-pane"]
+    display: none !important
+
+#map
+  height: 315px
+  max-width: 985px
+  width: 100%
+  border-radius: 10px
+  overflow: hidden
+  +screen($tablet)
+    height: 212px
+    border-radius: 6px
+    margin-top: -6px
