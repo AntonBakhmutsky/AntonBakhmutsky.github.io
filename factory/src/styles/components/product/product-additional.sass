@@ -59,3 +59,25 @@
 
     img
       width: 100%
+
+  &__equipment
+    display: flex
+
+    &-list
+      display: flex
+      flex-direction: column
+      gap: 10px
+      margin-top: 20px
+
+    &-item
+      border-radius: 4px
+      box-sizing: border-box
+      background-color: $white
+      padding: 16px
+
+      h3
+        +font(16px, 28px, 500)
+
+      ul
+        li
+          list-style-type: disc
