@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f69f632a-3d9b-47c0-8556-ac8618be2b7b" name="Changes" comment="clear work tree" />
+    <list default="true" id="f69f632a-3d9b-47c0-8556-ac8618be2b7b" name="Changes" comment="clear work tree">
+      <change beforePath="$PROJECT_DIR$/product.html" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -43,6 +45,7 @@
       <workItem from="1674538285020" duration="673000" />
       <workItem from="1674539402109" duration="1245000" />
       <workItem from="1674630303784" duration="25000" />
+      <workItem from="1674731434184" duration="164000" />
     </task>
     <task id="LOCAL-00001" summary="clear work tree">
       <created>1674460909324</created>
@@ -93,7 +96,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674630319027</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="clear work tree">
+      <created>1674731449473</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1674731449473</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

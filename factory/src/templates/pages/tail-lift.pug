@@ -1,0 +1,39 @@
+extends ../layouts/other-pages/layout.pug
+
+append variables
+  -
+    mainModifier = 'tail-lift'
+    callModal = true
+    productSpecs = hook390Page.specs
+    productSlides = hook390Page.slides
+    productTopTitle = 'Гидроборт LTK -1000ST/Al'
+    additionalTitle = 'Дополнительные характеристики'
+    additionalOptions = hook390Page.additional
+    additionalDiagram = hook390Page.diagram
+    additionalContentModifier = 'product-additional__content_flex-row'
+    productSpecsCallBtn = true
+    breadCrumbsList = [
+      {
+        url: '/',
+        txt: 'Главная'
+      },
+      {
+        url: 'products.html',
+        txt: 'Продукция'
+      },
+      {
+        url: 'javascript:',
+        txt: 'Спецтехника'
+      },
+      {
+        url: 'tail-lift.html',
+        txt: 'Гидроборт'
+      }
+    ]
+
+block title
+  | МЕХ ЗАВОД SOTRANS
+
+block content
+  include ../sections/product/product-top
+  include ../sections/product/product-additional
