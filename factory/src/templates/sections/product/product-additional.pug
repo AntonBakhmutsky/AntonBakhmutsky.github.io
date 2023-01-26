@@ -13,3 +13,19 @@ section.product-additional
         if (additionalDiagram)
           .product-additional__diagram
             img(src=additionalDiagram alt="diagram")
+      if (additionalEquipment)
+        .product-additional__equpment
+          .product-additional__equpment-item
+            each el in additionalEquipmentLists
+              if (el.items)
+                h3 #{el.title}
+                ul
+                  each item in el.items
+                    li #{item}
+              else
+                h3 #{el.title}
+          if (additionalEquipmentImage)
+            .product-additional__equpment-image
+              img(src=el alt="")
+
+

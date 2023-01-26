@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f69f632a-3d9b-47c0-8556-ac8618be2b7b" name="Changes" comment="clear work tree" />
+    <list default="true" id="f69f632a-3d9b-47c0-8556-ac8618be2b7b" name="Changes" comment="clear work tree">
+      <change beforePath="$PROJECT_DIR$/contacts.html" beforeDir="false" afterPath="$PROJECT_DIR$/contacts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../factory/src/templates/abstracts/variables.pug" beforeDir="false" afterPath="$PROJECT_DIR$/../factory/src/templates/abstracts/variables.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../factory/src/templates/pages/tail-lift.pug" beforeDir="false" afterPath="$PROJECT_DIR$/../factory/src/templates/pages/tail-lift.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../factory/src/templates/sections/product/product-additional.pug" beforeDir="false" afterPath="$PROJECT_DIR$/../factory/src/templates/sections/product/product-additional.pug" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,6 +50,7 @@
       <workItem from="1674630303784" duration="25000" />
       <workItem from="1674731434184" duration="164000" />
       <workItem from="1674734357731" duration="23000" />
+      <workItem from="1674736085023" duration="13000" />
     </task>
     <task id="LOCAL-00001" summary="clear work tree">
       <created>1674460909324</created>
