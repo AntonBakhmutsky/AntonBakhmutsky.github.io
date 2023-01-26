@@ -34,29 +34,31 @@
       flex-wrap: wrap
 
     li
-      &:nth-child(1)
-        +screen($tablet)
-          width: 120px
-
-      &:nth-child(2)
-        +screen($tablet)
-          width: 94px
-
-      &:nth-child(3)
-        +screen($tablet)
-          width: 102px
-
-      &:nth-child(4)
-        margin-top: -38px
-        +screen($tablet)
-          width: 95px
-          margin: 0
-
-      &:nth-child(5)
-        margin-top: -25px
-        +screen($tablet)
-          width: 98px
-          margin: 0
+      +screen($tablet)
+        width: 50%
+      //&:nth-child(1)
+      //  +screen($tablet)
+      //    width: 120px
+      //
+      //&:nth-child(2)
+      //  +screen($tablet)
+      //    width: 94px
+      //
+      //&:nth-child(3)
+      //  +screen($tablet)
+      //    width: 102px
+      //
+      //&:nth-child(4)
+      //  margin-top: -38px
+      //  +screen($tablet)
+      //    width: 95px
+      //    margin: 0
+      //
+      //&:nth-child(5)
+      //  margin-top: -25px
+      //  +screen($tablet)
+      //    width: 98px
+      //    margin: 0
 
       img
         max-width: 100%

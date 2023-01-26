@@ -4,6 +4,6 @@ window.addEventListener('load', () => {
   if (!document.querySelector('.index-news')) {
     return false
   } else {
-    leftListAnimation('.index-news__item')
+    leftListAnimation('.news-card')
   }
 })

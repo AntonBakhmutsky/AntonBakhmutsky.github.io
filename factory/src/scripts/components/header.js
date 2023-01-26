@@ -26,4 +26,12 @@ window.addEventListener('load', () => {
 
   searchMobileBtn.addEventListener('click', toggleSearchMobile)
   searchMobileClose.addEventListener('click', toggleSearchMobile)
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 1 && search.classList.contains('active')) {
+      toggleSearch()
+    } else if (window.scrollY > 1 && searchMobile.classList.contains('active')) {
+      toggleSearchMobile()
+    }
+  })
 })

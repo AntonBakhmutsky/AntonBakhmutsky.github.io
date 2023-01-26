@@ -7,7 +7,7 @@ window.addEventListener('load', () => {
 
   const toggleMenu = () => {
     mobileMenu.classList.toggle('active')
-    document.body.classList.add('body_fix')
+    document.body.classList.toggle('body_fix')
   }
 
   mobileMenuBtn.addEventListener('click', toggleMenu)

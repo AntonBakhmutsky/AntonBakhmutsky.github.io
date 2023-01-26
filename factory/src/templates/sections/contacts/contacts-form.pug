@@ -1,0 +1,17 @@
+section.contacts-form
+  .container
+    form(method="POST" action="")
+      h2.contacts-form__title.slide-right Ответим на ваши вопросы
+      .contacts-form__inputs
+        .contacts-form__field.slide-right
+          input(name="name" type="text" placeholder="Ваше Имя" required)
+          .contacts-form__error Поле не может быть пустым
+        .contacts-form__field.slide-left
+          input(name="tel" type="tel" placeholder="Телефон" required)
+          .contacts-form__error Введите корректный номер
+      .contacts-form__comment.slide-up
+        textarea(name="comment" placeholder="Комментарий")
+      .contacts-form__checkbox.slide-up
+        input#policy(type="checkbox" required)
+        label(for="policy") Я согласен с #[a(href="javascript:") Политикой конфидициальности]
+      button.contacts-form__submit.btn.btn_orange.slide-up(type="submit") Отправить

@@ -1,0 +1,119 @@
+@use '../../abstracts/variables' as *
+@use '../../abstracts/mixins' as *
+@use '../../abstracts/extends' as *
+
+.contacts-form
+  .container
+    padding: 34px 50px 44px
+    background: url(../assets/img/contacts/form-bg.jpg) no-repeat center/cover
+    +screen($tablet)
+      padding: 30px 20px 50px
+
+  &__title
+    +font(30px, 45px, 700, $font-title)
+    color: $white
+    text-align: center
+    +screen($tablet)
+      +font(22px, 36px, 700, $font-title)
+
+  form
+    max-width: 784px
+    margin: 0 auto
+    +screen($tablet)
+      margin-top: 20px
+
+  &__inputs
+    display: flex
+    gap: 20px
+    margin-top: 44px
+    +screen($tablet)
+      flex-direction: column
+      gap: 34px
+
+  &__field
+    flex-grow: 1
+    position: relative
+
+    &.error
+      input
+        border-color: #FF7878 !important
+
+      .contacts-form__error
+        visibility: visible
+        opacity: 1
+
+    input
+      border-color: $white !important
+      color: $white
+      height: 46px !important
+      font-size: 16px !important
+      font-weight: 500 !important
+      padding: 0 15px
+
+      &::placeholder
+        color: #BFBFBF
+        font-weight: 350 !important
+
+  &__comment
+    margin-top: 40px
+    +screen($tablet)
+      margin-top: 34px
+
+    textarea
+      height: 150px
+      padding: 12px 15px
+      +font(16px, 18px, 500)
+      color: $white
+      border-color: $white
+      +screen($tablet)
+        height: 170px
+
+      &::placeholder
+        color: #BFBFBF
+        font-weight: 350
+
+  &__error
+    box-sizing: border-box
+    padding: 0 15px
+    position: absolute
+    top: calc(100% + 3px)
+    color: #FF7878
+    transition: opacity .3s, visibility .3s
+    visibility: hidden
+    opacity: 1
+    +font(14px, 16px)
+
+  &__checkbox
+    box-sizing: border-box
+    padding-left: 36px
+    +font(16px, 18px)
+    color: white
+    margin-top: 40px
+    +screen($tablet)
+      margin-top: 34px
+      +font(14px, 20px)
+
+    a
+      display: inline-block
+      position: relative
+      color: #9DB8DE
+      transition: opacity .3s
+      @extend %opacity-click
+      +screen($tablet-xs)
+        display: block
+        width: fit-content
+
+      &:after
+        content: ''
+        position: absolute
+        bottom: 0
+        left: 0
+        width: 100%
+        height: 1px
+        background-color: #9DB8DE
+
+  &__submit
+    margin: 41px auto 0
+    width: 288px
+    +screen($tablet-xs)
+      width: 100%
