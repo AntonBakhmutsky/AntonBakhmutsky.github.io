@@ -28,6 +28,13 @@ section.product-additional
                   h3 #{el.title}
           if (additionalEquipmentImage)
             .product-additional__equipment-image
-              img(src=el alt="")
+              .product-additional__equipment-image-container
+                img(src=additionalEquipmentImage alt="")
+              if (additionalEquipmentCaption)
+                .product-additional__equipment-image-caption
+                  each el in additionalEquipmentCaption
+                    span #{el}
+
+
 
 

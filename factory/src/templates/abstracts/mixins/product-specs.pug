@@ -7,7 +7,7 @@ mixin product-specs(params)
           span !{el.name}
           span
           span !{el.value}
+    if (productSpecsMore)
+      button.product-specs__more Развернуть характеристики
     if (productSpecsCallBtn)
       button.btn.btn_orange.call-modal__btn Заказать звонок
-    else
-      button.product-specs__more Развернуть характеристики

@@ -130,7 +130,7 @@
         box-sizing: border-box
         border-radius: 8px
         padding: 3px
-        border: 1px solid transparent
+        border: 2px solid transparent
         display: flex
         cursor: pointer
 
@@ -193,6 +193,8 @@
         padding: 50px 10px
         flex-direction: column-reverse
         justify-content: center
+      +landscape
+        padding: 10px
 
     &-close
       position: absolute
@@ -203,6 +205,12 @@
         svg
           path
             stroke: $black
+      +landscape
+        z-index: 10
+        svg
+          path
+            stroke: $blue-second
+
 
     .main-modal-slider
       &.swiper
@@ -214,6 +222,8 @@
           max-width: none
           padding: 0
           margin-top: 105px
+        +landscape
+          margin-top: 0
 
       .swiper
         &-button
@@ -249,6 +259,9 @@
           display: flex
           border-radius: 10px
           overflow: hidden
+          +screen($tablet)
+            min-height: 250px
+            flex-shrink: 0
 
           img
             object-fit: cover
@@ -265,6 +278,8 @@
           margin: 105px 0 0 0
           width: auto
           padding: 0 10px
+        +landscape
+          display: none
 
         .swiper
           &-slide
@@ -272,7 +287,7 @@
             height: 66px
             border-radius: 10px
             padding: 3px
-            border: 1px solid transparent
+            border: 2px solid transparent
             box-sizing: border-box
             +screen($tablet)
               width: 58px
