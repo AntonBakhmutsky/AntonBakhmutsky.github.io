@@ -7,11 +7,13 @@
     padding: 33px 0 50px
 
   &__grid
+    margin-top: 30px
     display: grid
     grid-template-columns: repeat(auto-fit, minmax(315px, 1fr))
     grid-gap: 20px
     +screen($tablet-xs)
       grid-template-columns: 1fr
+      margin-top: 25px
 
   &__item
     display: flex

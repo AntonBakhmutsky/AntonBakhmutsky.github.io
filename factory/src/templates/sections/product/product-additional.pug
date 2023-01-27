@@ -1,17 +1,17 @@
 section.product-additional
   .container
-    h2.section-title.section-title_sm #{additionalTitle}
+    h2.section-title.section-title_sm.slide-right #{additionalTitle}
     if (additionalSubtitle)
-      h3.product-additional__subtitle #{additionalSubtitle}
+      h3.product-additional__subtitle.slide-right #{additionalSubtitle}
     .product-additional__content(class=additionalContentModifier ? additionalContentModifier:'')
       if (additionalOptions)
         .product-additional__options
           each el in additionalOptions
-            .product-additional__options-item
+            .product-additional__options-item.slide-up
               span #{el.name}
               span #{el.value}
         if (additionalDiagram)
-          .product-additional__diagram
+          .product-additional__diagram.slide-up
             img(src=additionalDiagram alt="diagram")
       if (additionalEquipment)
         .product-additional__equipment
@@ -20,14 +20,14 @@ section.product-additional
               .product-additional__equipment-item
                 if (el.items)
                   if (el.title)
-                    h3 #{el.title}
-                  ul
+                    h3.slide-right #{el.title}
+                  ul.slide-right
                     each item in el.items
                       li #{item}
                 else
-                  h3 #{el.title}
+                  h3.slide-right #{el.title}
           if (additionalEquipmentImage)
-            .product-additional__equipment-image
+            .product-additional__equipment-image.slide-up
               .product-additional__equipment-image-container
                 img(src=additionalEquipmentImage alt="")
               if (additionalEquipmentCaption)

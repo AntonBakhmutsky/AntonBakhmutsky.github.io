@@ -2,3 +2,48 @@
 @use '../../abstracts/mixins' as *
 
 .product-platform
+  padding-bottom: 50px
+
+  .container
+    +screen($tablet)
+      padding: 0 10px
+
+  .section-title
+    +screen($tablet)
+      padding: 0 10px
+
+  &__txt
+    margin-top: 30px
+    +font(16px, 28px, 500)
+    +screen($tablet)
+      box-sizing: border-box
+      padding: 0 10px
+
+  &__list
+    margin-top: 14px
+    +font(16px, 28px)
+
+    li
+      box-sizing: border-box
+      padding: 0 18px
+      display: flex
+      min-height: 44px
+      align-items: center
+      +screen($tablet)
+        flex-direction: column
+        align-items: flex-start
+        padding: 16px 10px
+
+      &:nth-child(odd)
+        background-color: #F4F4F4
+
+      span
+        +screen($tablet)
+          flex-basis: auto !important
+
+        &:first-child
+          flex-basis: 33%
+
+        &:last-child
+          flex-basis: 67%
+          font-weight: 500
