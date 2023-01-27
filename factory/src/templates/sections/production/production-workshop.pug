@@ -1,0 +1,32 @@
+section.production-workshop
+  .container
+    h2.production-workshop__title.section-title.slide-right Производство нашего предприятия в едином #[br] цикле структурно #[span разделено на следующие цеха:]
+    .production-workshop__block.production-workshop__block_blank
+      +production-slider({ slides: blankSlides, modifier: 'left' })
+      .production-workshop__container.slide-left
+        h3 Заготовительное производство
+        p Раскрой листового металла (длиной до 12 м) на станках плазменной резки #[span КРИСТАЛЛ] и #[span DURMA]. Все станки управляются системой #[span CNC] (ЧПУ) и самой передовой на настоящее время системой #[span XPR-300], позволяющей обеспечить идеальную геометрию раскроя и точность диаметра отверстий по технологии #[span True Hole]. Раскрой ведется в программе #[span Pro Nest].
+        p Гибка металла на листогибочных станках #[span DURMA] с длинами рабочих столов 3 и 4 м. Все станки управляются системой #[span CNC] (ЧПУ).
+    .production-workshop__delimiter
+    .production-workshop__block.production-workshop__block_welding
+      .production-workshop__container.slide-right
+        h3 Сварочное производство
+        p Сварка всех компонентов осуществляется высококвалифицированными сварщиками на оборудовании #[span KEMPI Х5 FastMig 400] и #[span EWM Taurus 355] с использованием специальной технологической оснастки, которая обеспечивает идеальную точность геометрии.
+      .production-workshop__image.slide-up
+        img(src=require('@/assets/img/production/man.jpg') alt="Сварочное производство")
+    .production-workshop__delimiter
+    .production-workshop__block.production-workshop__block_galvanazing
+      .production-workshop__image.slide-up
+        img(src=require('@/assets/img/production/zink.jpg') alt="Сварочное производство")
+      .production-workshop__container.slide-left
+        h3 Цинкование
+        p Важным элементом технологи
+    .production-workshop__delimiter
+    .production-workshop__block.production-workshop__block_assembly
+      .production-workshop__container.slide-right
+        h3 Сборочное производство
+        p Сборочный конвейер в тактовом режиме обеспечивает выпуск продукции по всей цепочке технологического цикла:
+        ul
+          each el in assemblyList
+            li #{el}
+      +production-slider({ slides: assemblySlides, modifier: 'right' })

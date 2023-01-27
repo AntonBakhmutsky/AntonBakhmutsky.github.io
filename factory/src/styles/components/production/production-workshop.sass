@@ -2,3 +2,34 @@
 @use '../../abstracts/mixins' as *
 
 .production-workshop
+  padding: 46px 0 60px
+  +screen($tablet)
+    padding: 30px 0 40px
+
+  .container
+    padding: 0
+
+  &__title
+    margin-bottom: 84px
+    box-sizing: border-box
+    padding: 0 50px
+    +screen($tablet)
+      margin-bottom: 40px
+      padding: 0 20px
+
+    span
+      color: $blue-second
+
+  &__block
+    display: flex
+    gap: 52px
+
+    &_blank, &_zink
+      padding-right: 50px
+      +screen($tablet)
+        padding: 0
+
+    &_welding, &_assembly
+      padding-left: 50px
+      +screen($tablet)
+        padding: 0
