@@ -1,0 +1,8 @@
+section.production-about
+  .container
+    .production-about__top.slide-up
+      h2.production-about__title Наше производство располагается #[br] в собственном промышленном здании площадью
+      .production-about__num #[span.anim-num 15] тыс. м#[sup 2]
+    .production-about__grid
+      each el in productionAboutItems
+        p.production-about__item.slide-up !{el}
