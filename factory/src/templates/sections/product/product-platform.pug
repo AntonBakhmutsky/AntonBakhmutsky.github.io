@@ -1,0 +1,9 @@
+section.product-platform
+  .container
+    h2.section-title.section-title_sm Бортовая алюминиевая платформа
+    p.product-platform__txt Материалы изготовления фургона:
+    ul.product-platform__list
+      each el in onboard.platform
+        li
+          span #{el.name}
+          span #{el.value}
