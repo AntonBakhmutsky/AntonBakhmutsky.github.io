@@ -2,6 +2,10 @@
 @use '../../abstracts/mixins' as *
 
 .product-additional
+  padding-bottom: 40px
+  +screen($tablet)
+    padding-bottom: 0
+
   .container
     background-color: #F4F4F4
     padding: 40px 50px 76px
@@ -68,6 +72,8 @@
       flex-direction: column
       gap: 10px
       margin-top: 20px
+      max-width: 820px
+      width: 100%
 
     &-item
       border-radius: 4px
@@ -80,4 +86,19 @@
 
       ul
         li
-          list-style-type: disc
+          box-sizing: border-box
+          padding-left: 16px
+          position: relative
+          +font(16px, 34px)
+          +screen($tablet)
+            margin-top: 10px
+
+          &:before
+            content: ''
+            width: 6px
+            height: 6px
+            border-radius: 50%
+            position: absolute
+            left: 0
+            top: 14px
+            background-color: $blue-second

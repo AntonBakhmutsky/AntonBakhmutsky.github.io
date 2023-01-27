@@ -14,20 +14,20 @@ section.product-additional
           .product-additional__diagram
             img(src=additionalDiagram alt="diagram")
       if (additionalEquipment)
-        .product-additional__equpment
-          .product-additional__equpment-list
-            .product-additional__equpment-item
-              each el in additionalEquipmentLists
-                if (el.title)
-                  h3 #{el.title}
+        .product-additional__equipment
+          .product-additional__equipment-list
+            each el in additionalEquipmentLists
+              .product-additional__equipment-item
                 if (el.items)
+                  if (el.title)
+                    h3 #{el.title}
                   ul
                     each item in el.items
                       li #{item}
                 else
                   h3 #{el.title}
           if (additionalEquipmentImage)
-            .product-additional__equpment-image
+            .product-additional__equipment-image
               img(src=el alt="")
 
 
