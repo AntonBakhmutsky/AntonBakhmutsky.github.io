@@ -1,0 +1,23 @@
+extends ../layouts/other-pages/layout.pug
+
+append variables
+  -
+    mainModifier = 'production'
+    topSecBreadcrumbs = true
+    topTitle = 'Производство'
+    breadCrumbsList = [
+      {
+        url: '/',
+        txt: 'Главная'
+      },
+      {
+        url: 'production.html',
+        txt: 'Производство'
+      }
+    ]
+
+block title
+  | МЕХ ЗАВОД SOTRANS
+
+block content
+  include ../sections/global/top-sec
