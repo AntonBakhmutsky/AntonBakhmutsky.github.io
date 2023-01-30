@@ -1,0 +1,15 @@
+@use '../../abstracts/variables' as *
+@use '../../abstracts/mixins' as *
+
+.news-grid
+  padding: 15px 0 120px
+
+  &__content
+    display: grid
+    margin-top: 40px
+    grid-template-columns: repeat(auto-fit, minmax(315px, 1fr))
+    grid-gap: 40px 20px
+    +screen($tablet-xs)
+      grid-template-columns: 1fr
+      gap: 26px
+      margin-top: 30px

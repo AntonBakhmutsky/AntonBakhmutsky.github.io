@@ -1,0 +1,13 @@
+extends ../layouts/other-pages/layout.pug
+
+append variables
+  -
+    mainModifier = 'news-page'
+    breadCrumbsList = false
+
+block title
+  | МЕХ ЗАВОД SOTRANS
+
+block content
+  include ../sections/news/news-top
+  include ../sections/news/news-content

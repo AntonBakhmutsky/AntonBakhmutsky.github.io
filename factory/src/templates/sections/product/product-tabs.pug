@@ -18,12 +18,8 @@ section.product-tabs
             .product-tabs__image
               img(src=tabLeftImage alt="")
           if (tabLeftVideo)
-            .product__video
-              .product__video-btn
-                button
-                  img(src=require('@/assets/img/global/play-btn.svg') alt="")
-              video(loop muted)
-                source(src=tabLeftVideo type="video/mp4")
+            .product-tabs__gif
+              img(src=require('@/assets/img/product/semitrailers/curtain/trailer.gif') alt="")
       .product-tabs__block(data-id=1)
         ul.product-tabs__list
           each el in tabRightDesc

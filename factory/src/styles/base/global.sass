@@ -231,28 +231,6 @@ input[type="checkbox"]:checked + label
     height: 24px
     width: 24px
 
-.pagination
-  display: flex
-  justify-content: center
-  padding: 60px 0
-  +font(24px, 30px, 500, $font-title)
-  +screen($tablet)
-    +font(18px, 24px, 500, $font-title)
-
-  li
-    a
-      &.active
-        color: $blue
-
-      &:not(.active)
-        @extend %blue-click
-
-    &:not(:last-child)
-      margin-right: 30px
-      +screen($tablet)
-        margin-right: 15px
-
-
 .slide-right, .slide-up, .slide-left
   opacity: 0
 

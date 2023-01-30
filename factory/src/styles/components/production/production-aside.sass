@@ -1,0 +1,54 @@
+@use '../../abstracts/variables' as *
+@use '../../abstracts/mixins' as *
+
+.production-aside
+  padding: 60px 0
+  background-color: $white-blue
+  +screen($tablet)
+    padding: 30px 0
+
+  .container
+    display: flex
+    justify-content: space-between
+    gap: 100px
+    +screen($tablet)
+      flex-direction: column
+      gap: 35px
+
+  &__item
+    display: flex
+    gap: 18px
+    +screen($tablet)
+      flex-direction: column
+
+    &:nth-child(2)
+      +screen($tablet)
+        b
+          padding: 0 13px
+
+    b
+      width: 70px
+      height: 70px
+      border-radius: 10px
+      background-color: $blue-second
+      display: flex
+      align-items: center
+      justify-content: center
+      flex-shrink: 0
+      +screen($tablet)
+        width: 48px
+        height: 48px
+        box-sizing: border-box
+        padding: 0 10px
+
+        img
+          width: 100%
+
+    span
+      line-height: 22px
+      +screen($tablet)
+        +font(16px, 24px)
+
+      span
+        color: $blue-second
+        font-weight: 500

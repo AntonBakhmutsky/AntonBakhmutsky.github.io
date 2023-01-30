@@ -15,6 +15,37 @@
       padding: 0 20px
       box-sizing: border-box
 
+  &__header
+    display: flex
+    justify-content: space-between
+    align-items: center
+    gap: 40px
+    +screen($tablet)
+      flex-direction: column
+      gap: 20px
+      align-items: flex-start
+
+  &__guarantee
+    display: flex
+    gap: 16px
+    +screen($tablet)
+      flex-direction: column
+      gap: 6px
+      padding: 0 20px
+      box-sizing: border-box
+
+    &-item
+      box-sizing: border-box
+      padding: 6px 11px
+      display: flex
+      align-items: center
+      border-radius: 4px
+      border: 1px solid #EAEAEA
+      +font(14px, 14px, 500)
+
+    img
+      margin-right: 7px
+
   &__container
     margin-top: 35px
     display: flex

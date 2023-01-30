@@ -4,7 +4,8 @@ mixin news-card(params)
       img(src=params.img alt="")
     .news-card__date #{params.date}
     h3.news-card__title #{params.title}
-    p.news-card__txt #{params.txt}
+    if (params.txt)
+      p.news-card__txt #{params.txt}
     a.news-card__link(href=params.url)
       span Читать
       | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/global/vector-right-white.svg')}

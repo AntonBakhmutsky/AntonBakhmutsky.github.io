@@ -1,0 +1,7 @@
+aside.production-aside
+  .container
+    each el in asideList
+      .production-aside__item
+        b
+          img(src=el.icon alt="")
+        span !{el.txt}

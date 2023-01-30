@@ -1,7 +1,16 @@
 section.product-top
   .container
     if (productTopTitle)
+    .product-top__header
       h2.section-title.slide-right #{productTopTitle}
+      if (productTopGuarantee)
+        .product-top__guarantee.slide-left
+          .product-top__guarantee-item
+            img(src=require('@/assets/img/product/shield.svg') alt="")
+            | Гарантия 1 год
+          .product-top__guarantee-item
+            img(src=require('@/assets/img/product/wrench.svg') alt="")
+            | Послегарантийное обслуживание
     .product-top__container
       +product-specs(productSpecs)
       +product-slider(productSlides)

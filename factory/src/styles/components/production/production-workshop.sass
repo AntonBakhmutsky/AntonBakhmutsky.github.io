@@ -57,6 +57,46 @@
     &_welding, &_zink
       align-items: center
 
+    &_assembly
+      ul
+        margin-top: 16px
+
+        li
+          box-sizing: border-box
+          padding-left: 26px
+          position: relative
+          +font(18px, 35px)
+
+          &:before
+            content: ''
+            width: 10px
+            height: 10px
+            border-radius: 50%
+            background-color: $blue-second
+            position: absolute
+            left: 0
+            top: 11px
+
+    &_blank
+      p
+        position: relative
+        &:before
+          content: ''
+          position: absolute
+          left: -20px
+          top: 0
+          width: 6px
+          height: 100%
+
+        &:first-of-type
+          &:before
+            background-color: $blue-second
+
+        &:last-of-type
+          &:before
+            background-color: #D9DBDD
+
+
     &_welding
       .production-workshop__image
         &:after

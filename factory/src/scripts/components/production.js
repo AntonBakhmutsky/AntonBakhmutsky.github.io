@@ -1,4 +1,6 @@
 import Swiper, {Navigation, Pagination} from 'swiper'
+import {leftListAnimation} from '../helpers/animations'
+
 
 window.addEventListener('load', () => {
   if (!document.querySelector('.production-slider')) {
@@ -27,5 +29,6 @@ window.addEventListener('load', () => {
         }
       }
     })
+    leftListAnimation('.production-aside__item')
   }
 })
