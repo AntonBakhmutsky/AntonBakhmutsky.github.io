@@ -1,4 +1,31 @@
 @use '../../abstracts/variables' as *
 @use '../../abstracts/mixins' as *
+@use '../../abstracts/extends' as *
 
 .news-top
+  padding: 30px 0
+  +screen($tablet)
+    padding: 20px 0 40px
+
+  &__back
+    color: $blue-second
+    display: flex
+    align-items: center
+    +font(14px, 15px, 500)
+    @extend %opacity-click
+
+    img
+      margin-right: 8px
+      margin-top: -1px
+
+    .section-title
+      margin-top: 22px
+      +screen($tablet)
+        margin-top: 25px
+
+  &__date
+    +font(16px, 16px)
+    color: #878787
+    margin-top: 20px
+    +screen($tablet)
+      margin-top: 16px

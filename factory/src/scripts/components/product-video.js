@@ -11,7 +11,6 @@ window.addEventListener('load', () => {
 
       videoContainer.classList.add('playing')
       video.play()
-
     }
 
     videoButtons.forEach(el => el.addEventListener('click', toggleVideo))
