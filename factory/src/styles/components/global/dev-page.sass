@@ -3,4 +3,35 @@
 @use '../../abstracts/extends' as *
 
 .dev-page
+  height: calc(100vh - 326px)
+  position: relative
+  display: flex
+  align-items: center
+  justify-content: center
+  +screen($tablet)
+    height: 510px
 
+  .section-title
+    text-align: center
+    +screen($tablet)
+      max-width: 280px
+      +font(26px, 36px, 700, $font-title)
+
+  &__image
+    position: absolute
+    +screen($tablet)
+      img
+        width: 100%
+
+    &_bottom
+      bottom: 0
+      left: 50px
+      +screen($tablet)
+        width: 88px
+
+
+    &_top
+      top: 0
+      right: 50px
+      +screen($tablet)
+        width: 118px
