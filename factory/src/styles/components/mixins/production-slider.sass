@@ -3,10 +3,14 @@
 
 .production-slider
   flex-shrink: 0
+  +screen($tablet)
+    padding-left: 20px
 
   &_left
     .swiper
       padding-left: 152px
+      +screen($tablet)
+        padding: 0
 
       &-button
         &-next
@@ -20,6 +24,8 @@
   &_right
     .swiper
       padding-right: 152px
+      +screen($tablet)
+        padding: 0
 
       &-button
         &-next
@@ -35,6 +41,27 @@
     max-width: 812px
     width: 100%
     margin: 0
+    +screen($tablet)
+      max-width: none
+      padding: 0 20px 17px 0
+
+    &-pagination
+      display: none
+      +screen($tablet)
+        display: block
+        bottom: -8px
+
+        &-bullet
+          min-width: 10px
+          height: 6px
+          border-radius: 7px
+          background-color: #E2E2E2
+          opacity: 1
+          transition: min-width .3s, background-color .3s
+
+          &-active
+            background-color: $blue-second
+            min-width: 30px
 
     &-slide
       height: 447px
@@ -42,6 +69,10 @@
       width: 100%
       display: flex
       position: relative
+      +screen($tablet)
+        height: auto
+        max-width: none
+        box-sizing: border-box
 
       &-active
         &:after
@@ -59,6 +90,8 @@
         z-index: 1
         transition: opacity .3s, visibility .3s
         background-color: rgba($blue-second, .8)
+        +screen($tablet)
+          display: none
 
       img
         width: 100%
