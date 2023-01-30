@@ -1,0 +1,24 @@
+extends ../layouts/other-pages/layout.pug
+
+append variables
+  -
+    mainModifier = 'about'
+    topSecBreadcrumbs = true
+    topTitle = 'Полуприцепы шторные'
+    callModal = true
+    breadCrumbsList = [
+      {
+        url: '/',
+        txt: 'Главная'
+      },
+      {
+        url: 'about-company.html',
+        txt: 'О компании'
+      }
+    ]
+
+block title
+  | МЕХ ЗАВОД SOTRANS
+
+block content
+
