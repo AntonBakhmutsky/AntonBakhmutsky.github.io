@@ -1,0 +1,17 @@
+extends ../layouts/other-pages/layout.pug
+
+append variables
+  -
+    mainModifier = 'dev'
+    breadCrumbsList = false
+
+block title
+  | МЕХ ЗАВОД SOTRANS
+
+block content
+  section.dev-page
+    .dev-page__image.dev-page__image_top
+      img(src=require('@/assets/img/dev/top.svg') alt="")
+    h1.seciton-title Раздел находится в разработке
+    .dev-page__image.dev-page__image_bottom
+      img(src=require('@/assets/img/dev/bottom.svg') alt="")

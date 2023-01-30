@@ -1,23 +1,21 @@
 section.news-content
-  .container
+  .container.container_sm
     .news-content__image
       img(src=require('@/assets/img/news/news.jpg') alt="")
     p.news-content__txt 16.12.2022 года, Механический завод СОТРАНС был торжественно принят в члены ассоциации РОССПЕЦМАШ (Российская ассоциация производителей специализированной техники и оборудования.
     p.news-content__txt РОССПЕЦМАШ — некоммерческая организация, которая объединяет компании для лоббирования интересов отечественного специализированного машиностроения в органах государственной власти, продвижения их продукции на внутреннем и внешнем рынках, разработки и экспертизы технических стандартов и регламентов, решения вопросов модернизации отрасли и повышения качества выпускаемых техники и оборудования.
     p.news-content__txt В Ассоциацию «Росспецмаш» входит 239 предприятий, среди которых производители сельскохозяйственной и строительно-дорожной техники, пищевого оборудования, компонентов, прицепов и полуприцепов.
-    .news-content__slider
-      .swiper.swiper-main
-        .swiper-wrapper
-          each el in newsSlider
-            .swiper-slide
-              img(src=el alt="")
-        .swiper-pagination
-        .swiper-button-next
-        .swiper-button-prev
-      .swiper.swiper-thumbs(thumbsSlider="")
-        .swiper-wrapper
-          each el in newsSlider
-            .swiper-slide
-              img(src=el alt="")
-
-
+    +product-slider(newsSlider)
+    p.news-content__txt В 2021 году мы активно занялись разработкой проекта по созданию собственного полуприцепа. За короткий срок, нам удалось выпустить полуприцепы достойно конкурирующие с зарубежными аналогами.
+    .news-content__list
+      h4 Основные характеристики полуприцепа:
+      ul
+        each el in newsListThird
+          li #{el}
+    p.news-content__txt Продукция сертифицирована и прошла все испытания по эксплуатации. Шторные полуприцепы уже год эксплуатируются на дорогах и получают высокие положительные оценки от транспортных перевозчиков.
+    .product__video
+      .product__video-btn
+        button
+          img(src=require('@/assets/img/global/play-btn.svg') alt="")
+      video(loop muted controls)
+        source(src=require('@/assets/video/semitrailer.mp4') type="video/mp4")
