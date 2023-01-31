@@ -3,3 +3,169 @@
 @use '../../abstracts/extends' as *
 
 .about-slider
+  .container
+    padding: 0
+
+  .section-title
+    padding: 0 50px
+    box-sizing: border-box
+    +screen($tablet)
+      padding: 0 20px
+
+  .swiper
+    padding: 0 0 110px 50px
+    margin-top: 40px
+    +screen($tablet)
+      padding: 0 0 110px 20px
+    +screen($tablet-sm)
+      padding: 0 20px 47px
+
+    &-wrapper
+      +screen($tablet-sm)
+        flex-direction: column
+        gap: 20px
+
+    &-slide
+      width: 427px
+      height: 270px
+      position: relative
+      border-radius: 6px
+      overflow: hidden
+      box-sizing: border-box
+      padding: 0 40px
+      display: flex
+      align-items: center
+      justify-content: center
+      flex-direction: column
+      +screen($tablet-sm)
+        width: 100%
+        min-height: 176px
+
+        &-link
+          max-height: none !important
+          height: 36px
+          border-color: $white !important
+          margin-top: 20px !important
+
+        &-image
+          &:after
+            background-color: rgba(#1D3559, .87) !important
+
+      &:hover
+        .swiper-slide
+          &-link
+            max-height: 36px
+            height: 100%
+            margin-top: 20px
+            border-color: $white
+
+          &-image
+            &:after
+              background-color: rgba(#1D3559, .87)
+
+      &-image
+        position: absolute
+        top: 0
+        left: 0
+        bottom: 0
+        right: 0
+        display: flex
+
+        &:after
+          content: ''
+          z-index: 1
+          width: 100%
+          height: 100%
+          background-color: rgba(#2F3038, .7)
+          position: absolute
+          top: 0
+          left: 0
+          transition: background-color .3s
+
+        img
+          width: 100%
+          object-position: center
+          object-fit: cover
+
+      &-title
+        z-index: 2
+        position: relative
+        text-align: center
+        color: $white
+        +font(22px, 24px, 500)
+        +screen($tablet-sm)
+          +font(18px, 20px, 500)
+
+      &-link
+        width: 140px
+        max-height: 0
+        border-radius: 4px
+        box-sizing: border-box
+        border: 1px solid transparent
+        color: $white
+        display: flex
+        align-items: center
+        justify-content: center
+        z-index: 2
+        margin-top: 0
+        position: relative
+        transition: max-height .3s, margin-top .3s, border-color .3s
+        overflow: hidden
+
+        &:hover:not(:active)
+          background-color: $white
+          color: $blue-second
+
+          svg
+            path
+              stroke: $blue-second
+
+        span
+          margin-right: 8px
+          +font(14px, 14px, 500)
+
+    &-button
+      &-disabled
+        border: 2px solid #EAEAEA
+        opacity: 1
+        box-shadow: none !important
+
+        svg
+          path
+            stroke: #EAEAEA
+
+      &-next, &-prev
+        bottom: 50px
+        border-radius: 50%
+        width: 40px
+        height: 40px
+        background-color: $white
+        transition: background-color .3s
+        box-sizing: border-box
+        top: auto
+        left: auto
+        box-shadow: 0 7px 14px rgba(0, 0, 0, .16)
+        +screen($tablet-sm)
+          display: none
+
+        &:after
+          display: none
+
+        &:hover:not(:active)
+          background-color: $blue-second
+
+          svg
+            path
+              stroke: $white
+
+      &-next
+        right: 20px
+
+        svg
+          margin-right: -2px
+
+      &-prev
+        right: 74px
+
+        svg
+          margin-left: -2px
