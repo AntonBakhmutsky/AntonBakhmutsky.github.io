@@ -37,7 +37,7 @@
             &:nth-child(2)
               margin-top: 14px
 
-  &_production
+  &_production, &_about
     .top
       height: 454px
       +screen($tablet)
@@ -45,4 +45,10 @@
 
       .container
         background: url(../assets/img/production/top-bg.jpg) no-repeat center/cover
+        justify-content: center
+
+  &_about
+    .top
+      .container
+        background: url(../assets/img/about-page/top-bg.jpg) no-repeat center/cover
         justify-content: center
