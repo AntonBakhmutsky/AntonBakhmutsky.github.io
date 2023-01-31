@@ -29,6 +29,8 @@ html(lang="ru")
         +breadcrumbs(breadCrumbsList)
       block content
     include ../main/footer
+    if (imageModal)
+      include ../../sections/global/image-modal
     if (callModal)
       include ../../sections/global/call-modal
     if (map)
