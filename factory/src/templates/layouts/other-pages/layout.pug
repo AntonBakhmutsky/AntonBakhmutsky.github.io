@@ -29,6 +29,10 @@ html(lang="ru")
         +breadcrumbs(breadCrumbsList)
       block content
     include ../main/footer
+    .contact-form__overlay
+    button.contact-form-btn
+      img(src=require('@/assets/img/global/form-icon.svg') alt="")
+    include ../../sections/global/contact-form
     if (imageModal)
       include ../../sections/global/image-modal
     if (callModal)
