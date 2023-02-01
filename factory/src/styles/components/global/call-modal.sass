@@ -14,13 +14,15 @@
   display: flex
   align-items: center
   justify-content: center
-  background: rgba(0, 0, 0, .6)
+  background: rgba(#17263D, .6)
   box-sizing: border-box
   padding: 10px
   visibility: hidden
   opacity: 0
   pointer-events: none
   transition: opacity .3s, visibility .3s
+  +screen($tablet-sm)
+    background-color: $white
 
   &.active
     opacity: 1
@@ -28,14 +30,14 @@
     visibility: visible
 
   &__body
-    max-width: 417px
+    max-width: 556px
     width: 100%
     background-color: $white
-    border-radius: 4px
+    border-radius: 16px
     overflow: hidden
     position: relative
     box-sizing: border-box
-    padding: 54px 10px 64px
+    padding: 50px 10px 64px
     display: flex
     flex-direction: column
     align-items: center
@@ -47,26 +49,57 @@
     align-items: center
 
   &__fields
-    max-width: 290px
+    max-width: 330px
     width: 100%
     margin-top: 30px
 
   &__input
+    position: relative
+
+    &.error
+      input
+        border-color: #E04646 !important
+
+      .call-modal__error
+        visibility: visible
+        opacity: 1
+
     label, input
       +font(14px, 15px, 350)
 
+    input
+      height: 42px !important
+      border-radius: 4px
+
+      &::placeholder
+        color: #BFBFBF
+
     &:not(:first-child)
-      margin-top: 14px
+      margin-top: 30px
+
+  &__error
+    position: absolute
+    top: calc(100% + 4px)
+    left: 15px
+    color: #E04646
+    +font(10px, 10px)
+    visibility: hidden
+    opacity: 0
+    transition: visibility .3s, opacity .3s
 
   &__title
-    +font(32px, 38px, 500, $font-title)
+    +font(30px, 42px, 500, $font-title)
     text-align: center
+    +screen($tablet)
+      +font(26px, 29px, 700, $font-title)
 
   &__close
     position: absolute
-    top: 9px
-    right: 9px
+    top: 20px
+    right: 20px
     cursor: pointer
+    +screen($tablet-sm)
+      position: fixed
 
   &__image
     position: absolute
@@ -74,7 +107,16 @@
     top: -8px
 
   &__submit
-    margin-top: 31px
+    margin-top: 50px
     width: 100%
-    max-width: 290px
     height: 50px
+    background-color: $blue-second
+    border-radius: 4px
+    color: $white
+    box-sizing: border-box
+    +font(16px, 16px)
+    +screen($tablet-sm)
+      margin-top: 107px
+
+    &:hover:not(:active)
+      background-color: lighten($blue-second, 15%)
