@@ -1,0 +1,63 @@
+@use '../../abstracts/variables' as *
+@use '../../abstracts/mixins' as *
+@use '../../abstracts/extends' as *
+
+.search-results
+  padding: 15px 0 90px
+  +screen($tablet)
+    padding: 20px 0 53px
+
+  .container
+    +screen($tablet)
+      padding: 0
+
+  .seciton-title
+    +screen($tablet)
+      padding: 0 10px
+
+  &__field
+    position: relative
+    margin-top: 30px
+    +screen($tablet)
+      padding: 0 10px
+      margin-top: 25px
+
+    input:not([type="checkbox"], #search, #search-mobile)
+      border-color: #E8E8E8
+      +font(18px, 20px, 500)
+      padding: 0 40px 0 24px
+      height: 54px
+      +screen($tablet)
+        height: 46px
+        padding-right: 33px
+
+  &__icon
+    position: absolute
+    top: 14px
+    right: 14px
+    width: 26px
+    height: 26px
+    +screen($tablet)
+      width: 22px
+      height: 22px
+      top: 12px
+      right: 21px
+
+    img
+      width: 100%
+
+  &__tile
+    display: flex
+    flex-direction: column
+    gap: 26px
+
+  &__item
+    border-radius: 4px
+    background-color:  #FAFAFA
+
+    &-title
+      +font(20px, 22px, 700)
+      box-sizing: border-box
+      padding: 24px 24px 20px
+
+
