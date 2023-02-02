@@ -25,7 +25,7 @@ html(lang="ru")
     include ../../sections/global/preloader
     include ../main/header
     main.main(class=mainModifier ? `main_${mainModifier}`:'')
-      if (!topSecBreadcrumbs)
+      if (!topSecBreadcrumbs && breadCrumbsList)
         +breadcrumbs(breadCrumbsList)
       block content
     include ../main/footer
