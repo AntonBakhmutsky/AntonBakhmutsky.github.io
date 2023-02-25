@@ -1,0 +1,48 @@
+extends ../layouts/other-pages/layout.pug
+
+append variables
+  -
+    mainModifier = 'dealership'
+    map = true
+    breadCrumbsList = [
+      {
+        url: '/',
+        txt: 'Главная'
+      },
+      {
+        url: 'dealership.html',
+        txt: 'Контакты'
+      }
+    ]
+
+block title
+  | МЕХ ЗАВОД SOTRANS
+
+block content
+  section.dealership
+    .container
+      h2.section-title.slide-right Дилерство
+      p.dealership__txt.slide-right Механический завод СОТРАНС является дилером следующих компаний:
+      .dealership__grid.slide-left
+        each el in dealershipList
+          .dealership__item
+            .dealership__item-image
+              img(src=el.image alt="")
+            .dealership__item-title #{el.title}
+            .dealership__item-txt #{el.txt}
+            a.dealership__item-link(href=el.url)
+              | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/dealership/link.svg')}
+              span #{el.urlTxt}
+      p.dealership__txt.dealership__txt_second.slide-right А так же дистрибьютором:
+      .dealership__grid.dealership__grid_second.slide-left
+        .dealership__item
+          .dealership__item-image
+            img(src=require('@/assets/img/dealership/6.png') alt="")
+          .dealership__item-title TYEN (Китай)
+          .dealership__item-txt Оси и детали подвески для полуприцепов
+          a.dealership__item-link
+            | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/dealership/link.svg')}
+            span tyen-axle.com
+
+
+

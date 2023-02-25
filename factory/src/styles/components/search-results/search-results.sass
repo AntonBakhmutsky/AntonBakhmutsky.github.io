@@ -1,0 +1,123 @@
+@use '../../abstracts/variables' as *
+@use '../../abstracts/mixins' as *
+@use '../../abstracts/extends' as *
+
+.search-results
+  padding: 15px 0 90px
+  +screen($tablet)
+    padding: 20px 0 53px
+
+  .container
+    +screen($tablet)
+      padding: 0
+
+  .section-title
+    +screen($tablet)
+      padding: 0 20px
+
+  &__field
+    position: relative
+    margin-top: 30px
+    +screen($tablet)
+      padding: 0 10px
+      margin-top: 25px
+
+    input:not([type="checkbox"], #search, #search-mobile)
+      border-color: #E8E8E8
+      +font(18px, 20px, 500)
+      padding: 0 40px 0 24px
+      height: 54px
+      +screen($tablet)
+        height: 46px
+        padding-right: 33px
+
+  &__icon
+    position: absolute
+    top: 14px
+    right: 14px
+    width: 26px
+    height: 26px
+    +screen($tablet)
+      width: 22px
+      height: 22px
+      top: 12px
+      right: 21px
+
+    img
+      width: 100%
+
+  &__tile
+    display: flex
+    flex-direction: column
+    gap: 26px
+    margin-top: 40px
+    +screen($tablet)
+      margin-top: 26px
+      box-sizing: border-box
+      padding: 0 10px
+
+  &__item
+    border-radius: 4px
+    background-color:  #FAFAFA
+    border: 2px solid #ECECEC
+
+    &-title
+      +font(20px, 22px, 700)
+      box-sizing: border-box
+      padding: 24px 24px 20px
+      +screen($tablet)
+        +font(18px, 20px, 700)
+        padding: 14px 10px
+
+    &-txt
+      box-sizing: border-box
+      background-color: $white
+      padding: 16px 24px
+      +font(16px, 26px)
+      +screen($tablet)
+        +font(14px, 26px)
+        padding: 12px 10px
+
+      p
+        overflow: hidden
+        +txt-overflow(2)
+        height: 52px
+        +screen($tablet)
+          height: 78px
+          +txt-overflow(3)
+
+    &-link
+      box-sizing: border-box
+      padding: 20px 24px 24px
+      +screen($tablet)
+        padding: 14px 10px
+
+      a
+        display: flex
+        align-items: center
+        justify-content: center
+        box-sizing: border-box
+        height: 50px
+        width: 244px
+        border: 2px solid $blue-second
+        +font(16px, 16px, 400)
+        color: $blue-second
+        border-radius: 4px
+        +screen($tablet)
+          height: 46px
+
+        &:hover:not(:active)
+          background-color: $blue-second
+          color: $white
+
+          svg
+            path
+              stroke: $white
+
+        span
+          margin-right: 16px
+
+
+
+
+
