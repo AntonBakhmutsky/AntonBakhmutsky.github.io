@@ -1,0 +1,59 @@
+@use '../abstracts/variables' as *
+@use '../abstracts/mixins' as *
+
+html
+  min-height: 100vh
+
+body
+  max-width: 1920px
+  margin: 0 auto
+  min-height: 100vh
+  display: flex
+  flex-direction: column
+  font-family: $font
+  position: relative
+  background-color: $black
+  align-items: center
+  justify-content: center
+
+a
+  text-decoration: none
+  display: block
+  color: $black
+  transition: color .3s, opacity .3s, background-color .3s
+  outline: none
+
+h1, h2, h3, h4, p
+  margin: 0
+
+button
+  appearance: none
+  border: none
+  cursor: pointer
+  padding: 0
+  background: transparent
+  transition: .3s
+
+
+.step
+  margin: 0 auto
+  max-width: 683px
+  background: url(../assets/img/outline-d.svg) no-repeat center/contain
+  height: 1006px
+  display: flex
+  box-sizing: border-box
+  padding: 227px 67px 0
+
+  &__screen
+    &.hidden
+      display: none
+
+    &-message
+      background: rgba(255, 255, 255, 0.06)
+      box-sizing: border-box
+      padding: 25px 0 32px
+      display: flex
+      align-items: center
+      flex-direction: column
+
+    &-logo
