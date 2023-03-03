@@ -1,0 +1,25 @@
+extends ../layouts/other-pages/layout.pug
+
+append variables
+  -
+    mainModifier = 'vans'
+    breadCrumbsList = [
+      {
+        url: '/',
+        txt: 'Главная'
+      },
+      {
+        url: 'products.html',
+        txt: 'Продукция'
+      },
+      {
+        url: 'vans.html',
+        txt: 'Фургоны'
+      }
+    ]
+
+block title
+  | МЕХ ЗАВОД SOTRANS
+
+block content
+  include ../sections/products/products-grid-vans

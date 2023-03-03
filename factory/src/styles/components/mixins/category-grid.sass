@@ -8,7 +8,7 @@
     display: grid
     grid-template-columns: repeat(auto-fill, minmax(426px, 1fr))
     grid-gap: 20px
-    +screen($tablet-xs)
+    +screen($tablet)
       grid-template-columns: 1fr
       margin-top: 20px
 
@@ -16,6 +16,46 @@
     +font(26px, 28px, 700)
     +screen($tablet)
       +font(20px, 22px, 700)
+
+  &__link
+    height: 234px
+    display: flex
+    align-items: center
+    justify-content: center
+    background-color: #EDF2F9
+    border-radius: 10px
+    transition: background-color .3s
+    +screen($tablet)
+      height: 160px
+
+    &:hover:not(:active)
+      background-color: #E1EBF8
+
+    span
+      +font(30px, 35px, 500)
+      +screen($tablet)
+        +font(22px, 24px 500)
+
+      &:nth-child(2)
+        margin-left: 17px
+        width: 48px
+        height: 48px
+        background-color: #0B5CA0
+        display: flex
+        align-items: center
+        justify-content: center
+        border-radius: 50%
+        +screen($tablet)
+          margin-left: 14px
+          width: 34px
+          height: 34px
+
+        img
+          margin-right: -3px
+          +screen($tablet)
+            margin-right: -1px
+            width: 11px
+            height: 20px
 
   &__item
     display: flex
@@ -26,14 +66,42 @@
     box-shadow: 0 6px 23px rgba(0, 0, 0, .16)
     border-radius: 10px
     background-color: $white
-    +screen($tablet-xs)
+    box-sizing: border-box
+    position: relative
+    +screen($tablet)
       padding: 20px 19px
-      min-height: 161px
+      min-height: 160px
+
+    &_new
+      border: 2px solid $blue-second
+      cursor: auto
+
+      &:after
+        content: 'скоро в наличии'
+        background-color: $blue-second
+        +font(14px, 16px, 500)
+        color: $white
+        border-radius: 0 10px 0 10px
+        position: absolute
+        top: -1px
+        right: -1px
+        width: 146px
+        height: 33px
+        display: flex
+        align-items: center
+        justify-content: center
+        z-index: 1
+        box-sizing: border-box
+        padding-bottom: 2px
+        +screen($tablet)
+          width: 122px
+          height: 27px
+          +font(12px, 16px, 500)
 
     &-txt
       text-align: center
 
-    &:hover:not(:active)
+    &:hover:not(:active, .category-grid__item_new)
       background-color: $blue
       color: $white
 
@@ -59,8 +127,6 @@
           stroke: $blue
 
     &-image
-      width: 216px
-      height: 110px
       display: flex
       align-items: flex-end
       justify-content: center

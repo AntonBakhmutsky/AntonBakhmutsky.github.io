@@ -1,8 +1,14 @@
 mixin category-grid(params)
-  h3.category-grid__title #{params.title}
-  .category-grid__grid
+  h3.category-grid__title.slide-right #{params.title}
+  .category-grid__grid.slide-up
     each el in params.list
-      a.category-grid__item(href=el.url)
-        .category-grid__item-image
-          | !{el.image}
-        .category-grid__item-txt #{el.txt}
+      if (!el.link)
+        a.category-grid__item(href=el.url class=el.new ? 'category-grid__item_new':'')
+          .category-grid__item-image
+            | !{el.image}
+          .category-grid__item-txt #{el.txt}
+      else
+        a.category-grid__link(href=el.url)
+          span #{el.txt}
+          span
+            img(src=el.image alt="")
