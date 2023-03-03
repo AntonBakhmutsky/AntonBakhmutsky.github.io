@@ -28,6 +28,7 @@
   additionalEquipmentLists = null
   additionalEquipmentImage = null
   additionalEquipmentCaption = null
+  additionalDescription = null
   productSpecsMore = null
   productDiagrams = null
   productTopGuarantee = null
@@ -672,6 +673,61 @@
       ]
     }
   }
+
+  vansGoods = {
+    slides: [require('@/assets/img/product/vans/goods/1.jpg'), require('@/assets/img/product/vans/goods/2.jpg'), require('@/assets/img/product/vans/goods/3.jpg')],
+    specs: [
+      {
+        name: 'Габаритные размеры',
+        value: '6400х2550х2500'
+      },
+      {
+        name: 'Облицовка наружная',
+        value: 'плакированный металл'
+      },
+      {
+        name: 'Облицовка внутренняя',
+        value: 'обрешетка в 3 ряда'
+      },
+      {
+        name: 'Пол',
+        value: 'платформа снизу защищена оцинкованным листом от агрессивного воздействия дороги, покрытие пола — транспортная фанера'
+      },
+      {
+        name: 'Передняя стенка',
+        value: 'оцинкованный лист'
+      },
+      {
+        name: 'Крыша',
+        value: 'металлический каркас с ребрами жёсткости, оцинкованный металл'
+      },
+      {
+        name: 'Задние двери',
+        value: 'плакированный металл'
+      },
+      {
+        name: 'Фурнитура',
+        value: 'оцинкованная, штангового типа, 3 петли на дверь'
+      },
+      {
+        name: 'Обвязка кузова',
+        value: 'алюминиевый уголок'
+      },
+      {
+        name: 'Задний портал',
+        value: '3мм, оцинкованный металл'
+      },
+      {
+        name: 'Оборудование',
+        value: 'крылья с брызговиками, боковая защита, гидроборт 1500кг алюминиевый, внутренне освещение'
+      }
+    ],
+    description: [
+      'Промтоварный фургон представляет собой каркас из скругленной профильной трубы и обшитый снаружи плакированным металлом белого цвета.Стыки обрамлены алюминиевыми уголками.Установлены габаритные огни согласно нормам(оранжевые в продольной плоскости, белые в передней части сверху, красные — в задней части сверху), подключены к штатной системе автомобиля.Внутри фургона установлена светодиодная лампа, включаемая из кабины автомобиля.Задние ворота представляют собой каркас из профильной трубы с закладными для установки фурнитуры и обшитые с наружной стороны плакированным металлом.',
+      'Внутри на пол уложен оцинкованный металл, 18 мм ламинированная транспортная фанера.Подрамник изготовлен из П - образного профиля и поперечными траверсами.Все элементы металлоконструкции прошли соответствующую подготовку и окраску.',
+      'В задней части установлен Гидравлический борт, грузоподъемностью 1500кг, производства ATEK(Турция).'
+    ]
+  }
   onboard = {
     slides: [require('@/assets/img/product/hook/onboard/1.jpg'), require('@/assets/img/product/hook/onboard/2.jpg'), require('@/assets/img/product/hook/onboard/3.jpg'), require('@/assets/img/product/hook/onboard/4.jpg')],
     specs: [
@@ -782,6 +838,23 @@
     {
       image: require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/products/semitrailers/2.svg'),
       txt: 'Рефриджераторы полуприцепы',
+      url: 'javascript:'
+    }
+  ]
+  vansList = [
+    {
+      image: require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/products/vans/1.svg'),
+      txt: 'Промтоварные фургоны',
+      url: 'vans-goods.html'
+    },
+    {
+      image: require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/products/vans/2.svg'),
+      txt: 'Автомобили технической помощи',
+      url: 'vans-tech.html  '
+    },
+    {
+      image: require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/products/vans/3.svg'),
+      txt: 'Изометрические фургоны',
       url: 'javascript:'
     }
   ]

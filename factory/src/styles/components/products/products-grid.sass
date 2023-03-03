@@ -14,32 +14,53 @@
 
     &:nth-child(2)
       .category-grid__item
-        +screen($tablet)
-          &:nth-child(1)
-            .category-grid__item-image
+        &:nth-child(1)
+          .category-grid__item-image
+            width: 127px
+            height: 74px
+            +screen($tablet)
               width: 113px
               height: 66px
 
-          &:nth-child(2)
-            .category-grid__item-image
+        &:nth-child(2)
+          .category-grid__item-image
+            width: 127px
+            height: 74px
+            +screen($tablet)
               width: 112px
               height: 66px
 
     &:nth-child(3)
       .category-grid__item
-        +screen($tablet)
-          &:nth-child(1)
-            .category-grid__item-image
+        &:nth-child(1)
+          .category-grid__item-image
+            +screen($tablet)
               width: 112px
               height: 81px
 
-          &:nth-child(2)
-            .category-grid__item-image
+        &:nth-child(2)
+          .category-grid__item-image
+            width: 145px
+            height: 105px
+            +screen($tablet)
               width: 149px
               height: 53px
               margin-left: -33px
 
           &:nth-child(3)
             .category-grid__item-image
-              width: 123px
-              height: 87px
+              width: 138px
+              height: 99px
+              +screen($tablet)
+                width: 123px
+                height: 87px
+
+    &:nth-child(4)
+      .category-grid__item
+        +screen($tablet)
+          &:nth-child(1),
+          &:nth-child(2),
+          &:nth-child(3)
+            .category-grid__item-image
+              width: 100px
+              height: 53px

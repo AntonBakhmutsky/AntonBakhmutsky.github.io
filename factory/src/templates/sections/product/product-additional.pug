@@ -34,6 +34,11 @@ section.product-additional
                 .product-additional__equipment-image-caption
                   each el in additionalEquipmentCaption
                     span #{el}
+      if (additionalDescription)
+        .product-additional__desc
+          each el in additionalDescription
+            p #{el}
+
 
 
 

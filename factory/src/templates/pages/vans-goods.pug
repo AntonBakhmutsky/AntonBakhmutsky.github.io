@@ -1,0 +1,38 @@
+extends ../layouts/other-pages/layout.pug
+
+append variables
+  -
+    mainModifier = 'vans-goods'
+    callModal = true
+    productSpecs = vansGoods.specs
+    productSlides = vansGoods.slides
+    productTopTitle = 'Промтоварный фургон'
+    additionalTitle = 'Описание'
+    productSpecsCallBtn = true
+    productSpecsMore = true
+    additionalDescription = vansGoods.description
+    breadCrumbsList = [
+      {
+        url: '/',
+        txt: 'Главная'
+      },
+      {
+        url: 'products.html',
+        txt: 'Продукция'
+      },
+      {
+        url: 'javascript:',
+        txt: 'Фургоны'
+      },
+      {
+        url: 'vans-goods.html',
+        txt: 'Промтоварный фургон'
+      }
+    ]
+
+block title
+  | МЕХ ЗАВОД SOTRANS
+
+block content
+  include ../sections/product/product-top
+  include ../sections/product/product-additional
