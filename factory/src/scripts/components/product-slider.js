@@ -75,7 +75,6 @@ window.addEventListener('load', () => {
 
   const closeModal = (e) => {
     e.stopPropagation()
-    console.log(e.currentTarget)
     if (e.target.closest('.product-slider__modal-close') || e.target.classList.contains('active')) {
       modal.classList.remove('active')
       document.body.classList.remove('body_fix')

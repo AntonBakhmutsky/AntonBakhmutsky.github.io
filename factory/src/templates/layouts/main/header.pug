@@ -13,13 +13,15 @@ header.header
         each el, index in headerMenu
           a(href=el.url) #{el.txt}
         .header__search
-          input#search(type="text" name="search" placeholder="Поиск" autocomplete="off")
+          form(action='https://mz.sotrans.ru/search' method='get')
+            input#search(type="text" name="search" placeholder="Поиск" autocomplete="off")
           .header__search-close
             img(src=require('@/assets/img/global/close-blue.svg') alt="")
         .header__search-btn
           img(src=require('@/assets/img/global/loupe.svg') alt="")
     .header__mobile-search
-      input#search-mobile(type="text" name="search-mobile" placeholder="Поиск" autocomplete="off")
+      form(action='https://mz.sotrans.ru/search' method='get')
+        input#search-mobile(type="text" name="search-mobile" placeholder="Поиск" autocomplete="off")
       .header__mobile-search-close
         img(src=require('@/assets/img/global/close-mobile.svg') alt="")
     .header__mobile-search-btn.slide-left

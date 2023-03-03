@@ -70,9 +70,32 @@
     &-image
       width: 210px
       height: 297px
+      cursor: pointer
+      position: relative
+      transition: box-shadow .3s
       +screen($tablet)
         height: auto
         width: 100%
+
+      &:hover
+        box-shadow: 0 6px 23px rgba(0, 0, 0, .16)
+
+        &:before
+          opacity: 1
+
+      &:before
+        content: ''
+        width: 40px
+        height: 40px
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        background: $blue-second url(../assets/img/global/slider-btn.svg) no-repeat center
+        border-radius: 50%
+        opacity: 0
+        pointer-events: none
+        transition: opacity .3s
 
       img
         width: 100%
