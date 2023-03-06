@@ -6,6 +6,17 @@
     +screen($tablet)
       padding: 0
 
+  h3
+    +font(20px, 22px, 500)
+    +screen($tablet)
+      +font(18px, 20px, 500)
+
+  p
+    margin-top: 10px
+    +font(16px, 26px)
+    +screen($tablet)
+      margin-top: 8px
+
   &__gif
     width: 598px
     height: 364px
@@ -59,10 +70,9 @@
       width: 380px
       background-color: $white-blue
       color: $blue-dark
-      padding-bottom: 17px
+      padding-bottom: 15px
       +font(26px, 28px, 700)
       +screen($tablet)
-        padding-bottom: 0
         +font(16px, 16px, 700)
         width: auto
         padding: 0 12px
@@ -118,17 +128,6 @@
     li
       &:not(:first-child)
         margin-top: 26px
-
-      h3
-        +font(20px, 22px, 500)
-        +screen($tablet)
-          +font(18px, 20px, 500)
-
-      p
-        margin-top: 10px
-        +font(16px, 26px)
-        +screen($tablet)
-          margin-top: 8px
 
   &__container
     flex-basis: 47%
