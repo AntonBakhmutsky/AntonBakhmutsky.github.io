@@ -75,6 +75,7 @@
     &_new
       border: 2px solid $blue-second
       cursor: auto
+      box-shadow: none
 
       &:after
         content: 'скоро в наличии'
@@ -102,8 +103,9 @@
       text-align: center
 
     &:hover:not(:active, .category-grid__item_new)
-      background-color: $blue
+      background-color: $blue-second
       color: $white
+      box-shadow: none
       +screen($tablet)
         background-color: $white
         color: $black
@@ -143,12 +145,12 @@
         path[fill="white"],
         circle[fill="white"],
         rect[fill="white"]
-          fill: $blue
+          fill: $blue-second
 
         path[stroke="white"],
         circle[stroke="white"],
         rect[stroke="white"]
-          stroke: $blue
+          stroke: $blue-second
 
     &-image
       display: flex

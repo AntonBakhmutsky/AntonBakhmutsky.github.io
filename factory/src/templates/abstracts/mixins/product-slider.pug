@@ -21,7 +21,7 @@ mixin product-slider(params)
   .product-slider__modal
     .product-slider__modal-body
       .product-slider__modal-close
-        | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/global/close-blue-lg.svg')}
+        | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/global/close-sm.svg')}
       .swiper.thumb-modal-slider(thumbsSlider="")
         .swiper-wrapper
           each el in params
@@ -32,7 +32,8 @@ mixin product-slider(params)
         .swiper-wrapper
           each el in params
             .swiper-slide
-              img(src=el alt="")
+              .swiper-slide-image
+                img(src=el alt="")
         .swiper-pagination
         .swiper-button-next
           | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/global/vector-right-blue.svg')}
