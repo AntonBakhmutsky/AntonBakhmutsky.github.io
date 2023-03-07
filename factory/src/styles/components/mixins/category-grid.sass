@@ -104,6 +104,30 @@
     &:hover:not(:active, .category-grid__item_new)
       background-color: $blue
       color: $white
+      +screen($tablet)
+        background-color: $white
+        color: $black
+
+        svg
+          path[fill="#0B5CA0"],
+          circle[fill="#0B5CA0"],
+          rect[fill="#0B5CA0"]
+            fill: #0B5CA0 !important
+
+          path[stroke="#0B5CA0"],
+          circle[stroke="#0B5CA0"],
+          rect[stroke="#0B5CA0"]
+            stroke: #0B5CA0 !important
+
+          path[fill="white"],
+          circle[fill="white"],
+          rect[fill="white"]
+            fill: white !important
+
+          path[stroke="white"],
+          circle[stroke="white"],
+          rect[stroke="white"]
+            stroke: white !important
 
       svg
         path[fill="#0B5CA0"],

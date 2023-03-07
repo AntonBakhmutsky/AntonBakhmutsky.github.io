@@ -247,10 +247,23 @@
           padding: 0 48px 15px
           +screen($tablet)
             padding: 0 12px
+            white-space: nowrap
 
       &__block
         flex-direction: column
         gap: 25px
+
+        &:first-child
+          p
+            max-width: 783px
+            +screen($tablet)
+              max-width: none
+
+        &:nth-child(2)
+          p
+            max-width: 981px
+            +screen($tablet)
+              max-width: none
 
 
 

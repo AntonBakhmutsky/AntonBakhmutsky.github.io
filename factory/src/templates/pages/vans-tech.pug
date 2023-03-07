@@ -9,6 +9,7 @@ append variables
     productTopTitle = 'Автомобиль технической помощи'
     productSpecsCallBtn = true
     productSpecsMore = true
+    productTopGuarantee = true
     tabButtons = [
       'Описание',
       'Наполнение отсека',
@@ -38,7 +39,7 @@ block title
 
 block content
   include ../sections/product/product-top
-  section.product-tabs
+  section.product-tabs.slide-left
     .container
       .product-tabs__switcher
         each el,index in tabButtons
