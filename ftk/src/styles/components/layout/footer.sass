@@ -2,3 +2,61 @@
 @use '../../abstracts/mixins' as *
 
 .footer
+  background-color:  #F4F4F4
+
+  &__top
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding-top: 40px
+
+  &__logo
+    width: 223px
+    height: 56px
+
+  &__info
+    +font(14px, 20px)
+    display: flex
+    align-items: center
+    justify-content: center
+    gap: 30px
+    flex-wrap: wrap
+
+  &__contacts
+    box-sizing: border-box
+    padding: 22px 20px 27px 67px
+    background-color: white
+    margin-top: -70px
+
+    &-item
+      display: flex
+      position: relative
+
+      svg
+        +centering-y
+
+      &_phone
+        margin-top: 15px
+
+        svg
+          width: 19px
+          height: 20px
+          left: -31px
+
+          path
+            fill: $orange
+
+      &_mail
+        margin-top: 30px
+
+        svg
+          width: 22px
+          height: 14px
+          left: -32px
+  &__bottom
+    display: flex
+    justify-content: center
+    padding: 7px 0
+    +font(12px, 19px)
+    border-top: 1px solid #DFDFDF
+
