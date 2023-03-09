@@ -8,6 +8,7 @@
   top: 0
   left: 0
   width: 100%
+  z-index: 10
 
   .container
     display: flex
@@ -23,9 +24,27 @@
     align-items: center
     gap: 38px
 
-    a
+    &-item
       +font(18px, 32px, 500)
       color: $white
+      position: relative
+
+      &:after
+        content: ''
+        width: 5px
+        height: 5px
+        border-radius: 50%
+        background-color: $white
+        transition: opacity .3s, visibility .3s
+        +centering-x
+        top: calc(100% + 1px)
+        visibility: hidden
+        opacity: 0
+
+      &:hover
+        &:after
+          visibility: visible
+          opacity: 1
 
   &__phone
     display: flex

@@ -2,3 +2,58 @@
 @use '../../abstracts/mixins' as *
 
 .top
+  position: relative
+  height: 100vh
+  background: url(../assets/img/top/top-bg.jpg) no-repeat center/cover
+
+  &:before,
+  &:after
+    content: ''
+    width: 100%
+    position: absolute
+    left: 0
+
+  &:before
+    height: 62%
+    top: 0
+    z-index: 1
+    background: linear-gradient(180deg, #020A0A 0%, rgba(20, 22, 27, 0) 100%)
+    opacity: .85
+
+  &:after
+    height: 83%
+    bottom: 0
+    background: linear-gradient(0deg, #EA5C2A 0%, rgba(234, 92, 42, 0) 100%)
+    z-index: 2
+
+  .container
+    height: 100%
+    padding-top: 230px
+    z-index: 3
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+
+  &__title
+    +font(68px, 72px, 800)
+    max-width: 832px
+
+  &__txt
+    margin-top: 40px
+    +font(26px, 32px, 500)
+    max-width: 252px
+
+  &__container
+    color: $white
+    z-index: 3
+
+    &:last-child
+      display: flex
+      align-items: center
+      justify-content: space-between
+      height: 140px
+
+  &__list
+    display: flex
+
+
