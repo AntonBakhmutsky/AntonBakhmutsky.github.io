@@ -14,11 +14,23 @@ body
   +font(18px, 28px)
   position: relative
   background-color: $white
+  color: $black
+
+  &.loaded_hiding
+    .preloader
+      transition: .3s opacity
+      opacity: 0
+
+  &.loaded
+    .preloader
+      display: none
 
 .container
   position: relative
   width: 100%
+  box-sizing: border-box
   max-width: 1440px
+  padding: 0 60px
 
 a
   text-decoration: none
