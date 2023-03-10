@@ -120,6 +120,10 @@ input[type="radio"]:checked + label
     +font(50px, 62px, 800)
     position: relative
 
+    span
+      display: block
+      +font(30px, 30px, 500)
+
     &:before
       content: ''
       width: 40px
@@ -133,3 +137,45 @@ input[type="radio"]:checked + label
       color: $white
       &:before
         background-color: white
+
+.btn
+  width: 201px
+  height: 52px
+  display: flex
+  align-items: center
+  justify-content: center
+  box-sizing: border-box
+  background-color: $orange
+  gap: 16px
+  transition: background-color .5s
+  position: relative
+  margin-bottom: 3px
+  +font(18px, 18px, 700)
+  color: $white
+
+  &:hover
+    background-color: #F96A38
+
+    &:after
+      width: 100%
+
+  &:after
+    content: ''
+    position: absolute
+    top: 100%
+    left: 0
+    width: 141px
+    height: 3px
+    background-color: $white
+    transition: width .5s
+
+  &_prod
+    &:after
+      background-color: $black
+
+  &_trans
+    background-color: transparent
+    border: 2px solid $white
+
+    &:hover
+      background-color: rgba(255, 255, 255, 0.2)
