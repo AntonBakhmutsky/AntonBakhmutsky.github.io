@@ -1,13 +1,13 @@
 footer.footer
   .container
     .footer__top
-      .footer__logo
+      .footer__logo.slide-right
         | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/global/footer-logo.svg')}
-      .footer__info
+      .footer__info.slide-right
         span ООО «Федеральная транспортная компания «Сотранс»
         span ИНН: 7802355025
         span КПП: 471601001
-      .footer__contacts
+      .footer__contacts.slide-up
         .footer__contacts-name Дмитрий Шарапов
         a.footer__contacts-item.footer__contacts-item_phone(href="tel:+79214245572")
           | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/global/phone.svg')}
@@ -15,4 +15,4 @@ footer.footer
         a.footer__contacts-item.footer__contacts-item_mail(href="mailto:d.sharapov@sotrans.ru")
           | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/global/mail.svg')}
           span d.sharapov@sotrans.ru
-    .footer__bottom SOTRANS CARGO | © 2023 | Все права защищены
+    .footer__bottom.slide-left SOTRANS CARGO | © 2023 | Все права защищены

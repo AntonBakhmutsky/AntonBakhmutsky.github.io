@@ -2,3 +2,36 @@
 @use '../../abstracts/mixins' as *
 
 .offer
+  padding: 40px
+  background: url(../assets/img/offer/offer-bg.jpg)
+  position: relative
+
+  &:after
+    content: ''
+    width: 100%
+    height: 100%
+    position: absolute
+    left: 0
+    top: 0
+    z-index: 1
+    background-color: rgba($black, .69)
+
+  &__title
+    position: relative
+    z-index: 2
+    +font(22px, 28px, 500)
+    max-width: 753px
+    margin: 0 auto
+    color: $white
+    text-align: center
+
+    span
+      color: $orange
+
+  &__links
+    position: relative
+    margin-top: 50px
+    z-index: 2
+    display: flex
+    justify-content: center
+    gap: 30px
