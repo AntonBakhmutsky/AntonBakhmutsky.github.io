@@ -33,12 +33,22 @@
     &-item
       display: flex
       position: relative
+      +font(18px, 28px, 500)
 
       svg
         +centering-y
 
       &_phone
         margin-top: 15px
+        position: relative
+
+        &:after
+          content: 'круглосуточно'
+          position: absolute
+          top: 100%
+          left: 0
+          +font(16px, 17px)
+          color: #898989
 
         svg
           width: 19px

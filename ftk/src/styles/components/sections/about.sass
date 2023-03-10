@@ -2,3 +2,65 @@
 @use '../../abstracts/mixins' as *
 
 .about
+  background-color: $orange
+  color: $white
+  padding: 70px 0 90px
+
+  .container
+    display: flex
+    gap: 70px
+
+  &__container
+    &:first-child
+      flex-basis: 52%
+
+    &:last-child
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      padding-top: 20px
+
+    p
+      margin-top: 25px
+      +font(18px, 31px, 500)
+
+  &__item
+    display: flex
+    align-items: center
+    +font(22px, 28px, 700)
+
+    b
+      +font(36px, 28px, 700)
+
+    span
+      display: block
+      +font(18px, 28px)
+
+    .about__item-image
+      width: 79px
+      height: 52px
+      display: flex
+      align-items: center
+      justify-content: center
+      margin-right: 30px
+
+    &:nth-child(1)
+      .about__item-image
+        svg
+          width: 77px
+          height: 43px
+
+    &:nth-child(2)
+      .about__item-image
+        svg
+          width: 79px
+          height: 52px
+
+    &:nth-child(3)
+      .about__item-image
+        svg
+          width: 62px
+          height: 39px
+
+
+
