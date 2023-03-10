@@ -1,2 +1,10 @@
 section#year.year
   .container
+    h2.section-title 2022 год в цифрах
+    .year__tile
+      each el in  yearList
+        .year__item
+          .year__item-num !{el.num}
+          .year__item-txt !{el.txt}
+
+
