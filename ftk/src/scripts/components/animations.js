@@ -32,6 +32,21 @@ window.addEventListener('load', () => {
     })
   })
 
+  // slide to down
+  const slideToDownElements = document.querySelectorAll('.slide-down')
+
+  slideToDownElements.forEach(el => {
+    inViewport(el, () => {
+      anime({
+        targets: el,
+        opacity: [0, 1],
+        translateY: [-150, 0],
+        duration: 1000,
+        easing: 'easeOutQuart'
+      })
+    })
+  })
+
   // slide to left
   const slideLeft = document.querySelectorAll('.slide-left')
 

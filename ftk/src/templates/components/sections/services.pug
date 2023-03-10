@@ -1,2 +1,10 @@
 section#srvices.services
   .container
+    h2.section-title.slide-right Услуги
+    .services__grid.slide-up
+      each el in servicesItems
+        .services__item
+          .services__item-title #{el.title}
+          .services__item-txt #{el.txt}
+
+
