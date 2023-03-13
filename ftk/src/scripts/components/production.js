@@ -7,8 +7,8 @@ window.addEventListener('load', () => {
     initialSlide: 1,
     loopAdditionalSlides: 9,
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.swiper-button-prev',
+      prevEl: '.swiper-button-next',
     },
     breakpoints: {
       320: {

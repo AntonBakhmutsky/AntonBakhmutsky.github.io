@@ -24,6 +24,9 @@ body
     .preloader
       display: none
 
+.body_fix
+  overflow: hidden
+
 .container
   position: relative
   width: 100%
@@ -31,6 +34,8 @@ body
   max-width: 1440px
   padding: 0 60px
   margin: 0 auto
+  +screen(1180)
+    padding: 0 20px
 
 a
   text-decoration: none
