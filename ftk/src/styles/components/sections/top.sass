@@ -33,15 +33,26 @@
     display: flex
     flex-direction: column
     justify-content: space-between
+    +screen($tablet)
+      padding: 155px 10px 0
 
   &__title
     +font(68px, 72px, 800)
     max-width: 832px
+    +screen($tablet)
+      box-sizing: border-box
+      padding: 0 8px
+      +font(40px, 48px, 800)
 
   &__txt
     margin-top: 40px
     +font(26px, 32px, 500)
     max-width: 252px
+    +screen($tablet)
+      box-sizing: border-box
+      padding: 0 8px
+      +font(20px, 24px, 500)
+      margin-top: 16px
 
   &__container
     color: $white
@@ -52,6 +63,9 @@
       align-items: center
       justify-content: space-between
       height: 140px
+      +screen($tablet)
+        height: auto
+        margin-top: auto
 
   &__down
     width: 50px
@@ -63,6 +77,8 @@
     align-items: center
     justify-content: center
     transition: background-color .3s
+    +screen($tablet)
+      display: none
 
     &:hover:not(:active)
       background-color: rgba(255, 255, 255, 0.2)
@@ -76,27 +92,44 @@
     padding: 37px 0
     background-color: rgba(255, 255, 255, .1)
     margin-right: -60px
+    +screen($tablet)
+      justify-content: space-between
+      flex-wrap: wrap
+      margin: 0
+      gap: 23px 0
+      width: 100%
 
     &-item
       box-sizing: border-box
+      +screen($tablet)
 
       &-name
         +font(18px, 32px)
+        +screen($tablet)
+          +font(16px, 18px)
 
       &-value
         display: flex
         gap: 8px
         align-items: flex-end
+        +screen($tablet)
+          margin-top: 8px
 
         span
+          white-space: nowrap
+
           &:first-child
             +font(30px, 32px, 700)
+            +screen($tablet)
+              +font(24px, 32px, 700)
 
           &:last-child
             +font(16px, 16px, 700)
 
       &:nth-child(1)
         padding: 0 69px 0 63px
+        +screen($tablet)
+          padding: 0 15px 0 20px
 
         span
           &:last-child
@@ -104,11 +137,18 @@
 
       &:nth-child(2)
         padding: 0 50px
+        +screen($tablet)
+          order: 1
+          padding: 0 15px 0 20px
 
       &:nth-child(3)
         padding: 0 78px 0 49px
+        +screen($tablet)
+          padding: 0 20px 0 15px
 
       &:not(:last-child)
         border-right: 2px solid $white
+        +screen($tablet)
+          border: none
 
 

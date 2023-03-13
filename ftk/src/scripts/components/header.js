@@ -3,6 +3,11 @@ window.addEventListener('load', () => {
   const header = document.querySelector('.header')
   let scrollPosition = 0
 
+  if (window.scrollY !== 0) {
+    header.classList.add('sticky')
+    header.style.transform = 'translateY(-80px)'
+  }
+
   window.addEventListener('scroll', () => {
     if (window.scrollY > scrollPosition) {
       scrollPosition = window.scrollY
