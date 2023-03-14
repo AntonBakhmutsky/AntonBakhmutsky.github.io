@@ -22,7 +22,6 @@ window.addEventListener('load', () => {
         header.removeAttribute('style');
         header.classList.add('sticky')
       } else if (scrollPosition < 30) {
-        alert(scrollPosition)
         header.classList.remove('sticky')
       }
     }
