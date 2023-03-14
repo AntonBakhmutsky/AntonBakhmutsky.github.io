@@ -31,55 +31,75 @@
 
     p
       margin-top: 25px
-      +font(18px, 31px, 500)
+      +font(22px, 38px, 500)
+      +screen(1500)
+        +font(18px, 31px, 500)
       +screen($tablet)
         +font(16px, 28px, 500)
 
   &__item
     display: flex
     align-items: center
-    +font(22px, 28px, 700)
+    +font(26px, 30px, 700)
+    +screen(1500)
+      +font(22px, 28px, 700)
     +screen($tablet)
       +font(20px, 24px, 700)
       align-items: flex-start
 
     b
-      +font(36px, 28px, 700)
+      +font(44px, 44px, 700)
+      +screen(1500)
+        +font(36px, 28px, 700)
       +screen($tablet)
         +font(30px, 30px, 700)
 
     span
       display: block
-      +font(18px, 28px)
+      +font(22px, 30px)
+      +screen(1500)
+        +font(18px, 28px)
       +screen($tablet)
         +font(16px, 23px)
 
     .about__item-image
-      width: 79px
-      height: 52px
+      width: 91px
+      height: 60px
       display: flex
       align-items: center
       justify-content: center
       margin-right: 30px
       flex-shrink: 0
+      +screen(1500)
+        width: 79px
+        height: 52px
 
     &:nth-child(1)
       .about__item-image
         svg
-          width: 77px
-          height: 43px
+          width: 90px
+          height: 50px
+          +screen(1500)
+            width: 77px
+            height: 43px
 
     &:nth-child(2)
       .about__item-image
         svg
-          width: 79px
-          height: 52px
+          width: 91px
+          height: 60px
+          +screen(1500)
+            width: 79px
+            height: 52px
 
     &:nth-child(3)
       .about__item-image
         svg
-          width: 62px
-          height: 39px
+          width: 80px
+          height: 50px
+          +screen(1500)
+            width: 62px
+            height: 39px
 
 
 

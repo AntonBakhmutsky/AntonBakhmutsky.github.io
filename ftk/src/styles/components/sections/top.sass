@@ -36,8 +36,11 @@
       padding: 0 10px 0
 
   &__title
-    +font(68px, 72px, 800)
-    max-width: 832px
+    max-width: 1332px
+    +font(100px, 104px, 800)
+    +screen(1500)
+      max-width: 832px
+      +font(68px, 72px, 800)
     +screen($tablet)
       box-sizing: border-box
       padding: 0 8px
@@ -45,8 +48,11 @@
 
   &__txt
     margin-top: 40px
-    +font(26px, 32px, 500)
-    max-width: 252px
+    +font(40px, 49px, 500)
+    max-width: 388px
+    +screen(1500)
+      max-width: 252px
+      +font(26px, 32px, 500)
     +screen($tablet)
       box-sizing: border-box
       padding: 0 8px
@@ -67,7 +73,9 @@
       display: flex
       align-items: center
       justify-content: space-between
-      height: 140px
+      height: 174px
+      +screen(1500)
+        height: 140px
       +screen($tablet)
         height: auto
         margin-top: auto
@@ -92,11 +100,14 @@
       margin-bottom: -2px
 
   &__list
+    height: 100%
     display: flex
     box-sizing: border-box
-    padding: 37px 0
+    padding: 50px 0
     background-color: rgba(255, 255, 255, .1)
-    margin-right: 60px
+    margin-right: 100px
+    +screen(1500)
+      padding: 37px 0
     +screen($tablet)
       justify-content: space-between
       flex-wrap: wrap
@@ -106,17 +117,21 @@
 
     &-item
       box-sizing: border-box
-      +screen($tablet)
+      display: flex
+      flex-direction: column
+      justify-content: center
 
       &-name
-        +font(18px, 32px)
+        +font(24px, 32px)
+        +screen(1500)
+          +font(18px, 32px)
         +screen($tablet)
           +font(16px, 18px)
 
       &-value
         display: flex
         gap: 8px
-        align-items: flex-end
+        align-items: center
         +screen($tablet)
           margin-top: 8px
 
@@ -124,12 +139,16 @@
           white-space: nowrap
 
           &:first-child
-            +font(30px, 32px, 700)
+            +font(44px, 44px, 700)
+            +screen(1500)
+              +font(30px, 32px, 700)
             +screen($tablet)
               +font(24px, 32px, 700)
 
           &:last-child
-            +font(16px, 16px, 700)
+            +font(20px, 20px, 700)
+            +screen(1500)
+              +font(16px, 16px, 700)
 
       &:nth-child(1)
         padding: 0 69px 0 63px
@@ -143,7 +162,6 @@
       &:nth-child(2)
         padding: 0 50px
         +screen($tablet)
-          order: 1
           padding: 0 15px 0 20px
 
       &:nth-child(3)
