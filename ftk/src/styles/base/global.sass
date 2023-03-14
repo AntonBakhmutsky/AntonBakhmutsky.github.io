@@ -138,6 +138,8 @@ textarea
   margin-bottom: 3px
   +font(18px, 18px, 700)
   color: $white
+  +screen($tablet)
+    width: 217px
 
   &:hover
     background-color: #F96A38
@@ -154,18 +156,31 @@ textarea
     height: 3px
     background-color: $white
     transition: width .5s
+    +screen($tablet)
+      width: 100%
 
   &_prod
     &:after
       background-color: $black
 
+    &_mobile
+      display: none
+      +screen($tablet)
+        display: flex
+        margin: 10px auto 0
+        order: 0
+
   &_trans
     background-color: transparent
     border: 2px solid $white
+    +screen($tablet)
+      &:after
+        width: calc(100% + 4px)
 
     &:after
       left: -2px
       top: calc(100% + 2px)
+
 
     &:hover
       background-color: rgba(255, 255, 255, 0.2)
