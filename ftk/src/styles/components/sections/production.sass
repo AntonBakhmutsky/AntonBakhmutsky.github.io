@@ -44,10 +44,11 @@
       flex-basis: 53%
       height: 632px
       box-sizing: border-box
-      padding: 0 0 44px 60px
+      padding: 0 0 70px 60px
       flex-shrink: 0
       user-select: none
       +screen(1500)
+        padding: 0 0 50px 60px
         height: 490px
       +screen($tablet)
         order: 1
@@ -72,8 +73,8 @@
 
       &-button
         &-next, &-prev
-          width: 36px
-          height: 36px
+          width: 50px
+          height: 50px
           border-radius: 50%
           top: auto
           bottom: 0
@@ -81,6 +82,10 @@
           align-items: center
           justify-content: center
           transition: background-color .3s
+          +screen(1500)
+            width: 36px
+            height: 36px
+
 
           &:hover:not(:active)
             background-color: rgba(234, 92, 42, .1)
@@ -90,7 +95,9 @@
 
         &-prev
           left: auto
-          right: 46px
+          right: 66px
+          +screen(1500)
+            right: 46px
           +screen($tablet)
             right: 86px
 

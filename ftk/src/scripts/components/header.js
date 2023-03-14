@@ -33,8 +33,10 @@ window.addEventListener('load', () => {
   const menuItems = document.querySelectorAll('.header__menu-item')
 
   const toggleMenu = () => {
-    menu.classList.toggle('active')
-    document.body.classList.toggle('body_fix')
+    if (window.innerWidth < 1025) {
+      menu.classList.toggle('active')
+      document.body.classList.toggle('body_fix')
+    }
   }
 
   menuBtn.addEventListener('click', toggleMenu)

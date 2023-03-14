@@ -3,7 +3,7 @@
 
 .top
   position: relative
-  height: 100vh
+  height: calc(var(--vh, 1vh) * 100)
   background: url(../assets/img/top/top-bg.jpg) no-repeat center/cover
 
   &:before,
@@ -36,14 +36,14 @@
       padding: 0 10px 0
 
   &__title
-    max-width: 1332px
-    +font(100px, 104px, 800)
+    max-width: 1010px
+    +font(85px, 85px, 800)
     +screen(1500)
       max-width: 832px
       +font(68px, 72px, 800)
     +screen($tablet)
       box-sizing: border-box
-      padding: 0 8px
+      padding: 0 10px
       +font(40px, 48px, 800)
 
   &__txt
