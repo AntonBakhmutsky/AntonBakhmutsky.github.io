@@ -16,11 +16,13 @@ window.addEventListener('load', () => {
       }
     } else  {
       scrollPosition = window.scrollY;
+      console.log(scrollPosition)
 
       if (header.hasAttribute('style')) {
         header.removeAttribute('style');
         header.classList.add('sticky')
       } else if (scrollPosition < 20) {
+        alert(scrollPosition)
         header.classList.remove('sticky')
       }
     }
