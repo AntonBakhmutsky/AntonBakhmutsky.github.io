@@ -70,12 +70,10 @@ window.addEventListener('load', () => {
     const nums = document.querySelectorAll('.anim-num')
 
     nums.forEach(num => {
-      const numValue = Number(num.textContent.split(' ').join(''))
-
       inViewport(num, () => {
         anime({
           targets: num,
-          innerHTML: [0, numValue],
+          innerHTML: [0, num.textContent],
           easing: 'linear',
           round: 1
         })

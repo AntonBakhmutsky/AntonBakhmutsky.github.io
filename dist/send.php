@@ -1,13 +1,13 @@
 <?php
 mb_internal_encoding("UTF-8");
-$to = 'e.polikarpova@sotrans.ru,espolikarpova@yandex.ru,leysan.n@tc-sotrans.ru,ak@trucks.ru,sotransgroup@yandex.ru';
+$to = 'a.bahmutsky@sotrans.ru,espolikarpova@yandex.ru,leysan.n@tc-sotrans.ru,ak@trucks.ru,sotransgroup@yandex.ru';
 
 if(isset($_SERVER['HTTP_X_REQUESTED_WITH']) && !empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest' && !empty($_POST['name']))  {
   $name  = substr( $_POST['name'], 0, 64 );
   $tel = substr( $_POST['tel'], 0, 64 );
-  
+
   $message = substr( $_POST['comment'], 0, 1000 );
- 
+
 
   if ($_FILES['attachment']['error'] == UPLOAD_ERR_OK){
     $filepath = $_FILES['attachment']['tmp_name'];
@@ -19,7 +19,7 @@ if(isset($_SERVER['HTTP_X_REQUESTED_WITH']) && !empty($_SERVER['HTTP_X_REQUESTED
     $filepath = '';
     $filename = '';
   }
- 
+
   $body = "Имя:\r\n".$name."\r\n\r\n";
   $body .= "Контактный номер:\r\n".$tel."\r\n\r\n";
   if (isset( $_POST['mail'])){
@@ -27,7 +27,7 @@ if(isset($_SERVER['HTTP_X_REQUESTED_WITH']) && !empty($_SERVER['HTTP_X_REQUESTED
     $body .= "E-mail:\r\n".$mail."\r\n\r\n";
   }
   $body .= "Описание заказа:\r\n".$message;
- 
+
   send_mail($to, $body, $email, $filepath, $filename);
 }
 
@@ -37,7 +37,7 @@ function send_mail($to, $body, $email, $filepath, $filename)
   $from = "kamaz@sotrans.ru"; // Почта отправителя
   $subject = 'Заявка с сайта kamaz.sotrans.ru';
   $boundary = "--".md5(uniqid(time())); // генерируем разделитель
-  $headers = "From: $from\nReply-To: $from\n";  
+  $headers = "From: $from\nReply-To: $from\n";
   $headers .= "MIME-Version: 1.0\r\n";
   $headers .="Content-Type: multipart/mixed; boundary=\"".$boundary."\"\r\n";
   $multipart = "--".$boundary."\r\n";
@@ -45,9 +45,9 @@ function send_mail($to, $body, $email, $filepath, $filename)
   $multipart .= "Content-Transfer-Encoding: quoted-printable\r\n\r\n";
 
   $body = $body."\r\n\r\n";
- 
+
   $multipart .= $body;
- 
+
   $file = '';
   if ( !empty( $filepath ) ) {
     $fp = fopen($filepath, "r");

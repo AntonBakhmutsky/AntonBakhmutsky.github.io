@@ -20,7 +20,7 @@ window.addEventListener('load', () => {
       if (header.hasAttribute('style')) {
         header.removeAttribute('style');
         header.classList.add('sticky')
-      } else if (scrollPosition === 0) {
+      } else if (scrollPosition > 10) {
         header.classList.remove('sticky')
       }
     }
