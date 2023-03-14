@@ -3,11 +3,30 @@
 
 .services
   padding: 75px 0
+  +screen($tablet)
+    padding: 25px 0
+
+  .container
+    +screen($tablet)
+      padding: 0 20px
+
+  .section-title
+    +screen($tablet)
+      padding-left: 10px
+
+      &:before
+        left: -20px
+        transform: none
+        top: 10px
 
   &__grid
     display: grid
     grid-template: repeat(2, 330px) / repeat(4, 1fr)
     margin-top: 44px
+    +screen($tablet)
+      margin-top: 30px
+      grid-template: auto / 1fr
+      grid-gap: 16px
 
   &__item
     background-position: center
@@ -20,11 +39,16 @@
     box-sizing: border-box
     padding: 30px 28px
     transition: transform .5s, box-shadow .5s
+    +screen($tablet)
+      height: 335px
+      padding: 23px 16px 30px
 
     &.active
       box-shadow: 0 14px 38px rgba(0, 0, 0, .3)
       .services__item-txt
         margin-top: 12px
+        +screen($tablet)
+          margin-top: 10px
 
       &:after
         opacity: .9 !important
@@ -32,10 +56,14 @@
     &:hover
       transform: scale(1.1)
       z-index: 2
+      +screen($tablet)
+        transform: none
 
     &-title
       +font(28px, 30px, 700)
       z-index: 2
+      +screen($tablet)
+        +font(22px, 24px, 700)
 
     &-txt
       +font(16px, 24px)
@@ -44,6 +72,11 @@
       margin-top: 0
       transition: max-height .5s, margin-top .5s
       z-index: 2
+      +screen($tablet)
+        max-height: none
+        margin-top: 10px
+        +font(15px, 22px)
+        overflow: visible
 
 
     &:nth-child(1),
@@ -61,6 +94,8 @@
         top: 0
         opacity: .7
         transition: opacity .5s
+        +screen($tablet)
+          opacity: .9 !important
 
 
     &:nth-child(1)
@@ -74,6 +109,9 @@
       background-image: url(../assets/img/services/containers.jpg)
       grid-column: span 2
       grid-row: span 2
+      +screen($tablet)
+        grid-column: auto
+        grid-row: auto
 
     &:nth-child(4)
       background-color: $black
