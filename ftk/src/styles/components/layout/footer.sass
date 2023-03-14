@@ -24,8 +24,11 @@
       padding: 30px 0 0
 
   &__logo
-    width: 223px
-    height: 56px
+    width: 280px
+    height: 70px
+    +screen(1500)
+      width: 223px
+      height: 56px
 
   &__info
     +font(14px, 20px)
@@ -92,6 +95,7 @@
     padding: 7px 0
     +font(12px, 19px)
     border-top: 1px solid #DFDFDF
+    text-align: center
     +screen($tablet)
       border: none
       padding: 16px

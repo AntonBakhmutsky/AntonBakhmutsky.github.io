@@ -26,11 +26,14 @@
   &__title
     position: relative
     z-index: 2
-    +font(22px, 28px, 500)
-    max-width: 753px
+    +font(26px, 34px, 500)
+    max-width: 890px
     margin: 0 auto
     color: $white
     text-align: center
+    +screen(1500)
+      max-width: 753px
+      +font(22px, 28px, 500)
     +screen($tablet)
       max-width: none
       +font(18px, 26px, 500)

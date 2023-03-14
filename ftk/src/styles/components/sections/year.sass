@@ -35,27 +35,37 @@
       width: 100%
 
     &-num
-      +font(30px, 32px, 800)
+      +font(46px, 48px, 800)
       color: $orange
+      +screen(1500)
+        +font(30px, 32px, 800)
 
       span
-        +font(40px, 40px, 800)
+        +font(56px, 58px, 800)
+        +screen(1500)
+          +font(40px, 40px, 800)
         +screen($tablet)
           +font(30px, 32px, 800)
 
     &-txt
-      +font(24px, 28px)
+      +font(30px, 36px)
       margin-top: 20px
+      +screen(1500)
+        +font(24px, 28px)
       +screen($tablet)
         margin-top: 8px
         +font(22px, 26px)
 
     &:last-child
-      width: 400px
-      height: 180px
-      padding-left: 32px
-      background: $black url(../assets/img/year/track.svg) no-repeat top right
+      width: 498px
+      height: 217px
+      padding-left: 37px
+      background: $black url(../assets/img/year/track.svg) no-repeat top right / cover
       color: white
+      +screen(1500)
+        width: 400px
+        height: 180px
+        padding-left: 32px
       +screen($tablet)
         background: $black url(../assets/img/year/track.svg) no-repeat 85% 0
         width: 100%

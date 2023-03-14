@@ -30,6 +30,8 @@
     margin-top: 60px
     display: flex
     gap: 60px
+    +screen(1500)
+      gap: 40px
     +screen($tablet)
       flex-direction: column-reverse
       align-items: flex-start
@@ -39,14 +41,13 @@
       margin-top: 30px
 
     .swiper
-      flex-basis: 60%
+      flex-basis: 53%
       height: 632px
       box-sizing: border-box
       padding: 0 0 44px 60px
       flex-shrink: 0
       user-select: none
       +screen(1500)
-        flex-basis: 53%
         height: 490px
       +screen($tablet)
         order: 1
@@ -108,7 +109,9 @@
 
     p
       &:not(:first-child)
-        margin-top: 20px
+        margin-top: 30px
+        +screen(1500)
+          margin-top: 20px
 
       span
         color: $orange

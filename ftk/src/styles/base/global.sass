@@ -10,10 +10,14 @@ body
   min-height: 100vh
   display: flex
   flex-direction: column
-  +font(18px, 28px)
+  +font(22px, 28px)
   position: relative
   background-color: $white
   color: $black
+  +screen(1500)
+    +font(18px, 28px)
+  +screen($tablet)
+    +font(16px, 24px)
 
   &.loaded_hiding
     .preloader
@@ -103,7 +107,11 @@ textarea
 
     span
       display: block
-      +font(30px, 30px, 500)
+      +font(35px, 35px, 500)
+      margin-top: 24px
+      +screen(1500)
+        margin-top: 5px
+        +font(30px, 30px, 500)
       +screen(1180)
         +font(22px, 26px,500)
         margin-top: 10px
