@@ -11,10 +11,12 @@
       padding: 0 10px
 
   .section-title
-    padding: 0 0 0 20px
+    +screen(1180)
+      padding: 0 0 0 20px
 
     &:before
-      left: -10px
+      +screen(1180)
+        left: -10px
 
   &__tile
     display: flex
