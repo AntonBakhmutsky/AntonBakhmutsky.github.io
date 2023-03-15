@@ -1,6 +1,6 @@
 <?php
 mb_internal_encoding("UTF-8");
-$to = 'a.bahmutsky@sotrans.ru,espolikarpova@yandex.ru,leysan.n@tc-sotrans.ru,ak@trucks.ru,sotransgroup@yandex.ru';
+$to = 'a.bahmutsky@sotrans.ru,espolikarpova@yandex.ru,leysan.n@tc-sotrans.ru,ak@trucks.ru,sotransgroup@yandex.ru,d.sharapov@sotrans.ru';
 
 if(isset($_SERVER['HTTP_X_REQUESTED_WITH']) && !empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest' && !empty($_POST['name']))  {
   $name  = substr( $_POST['name'], 0, 64 );
