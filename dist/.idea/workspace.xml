@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5082d48f-0418-4192-bf85-15bae3f04734" name="Changes" comment="clear work tree" />
+    <list default="true" id="5082d48f-0418-4192-bf85-15bae3f04734" name="Changes" comment="clear work tree">
+      <change beforePath="$PROJECT_DIR$/../ftk/src/scripts/components/header.js" beforeDir="false" afterPath="$PROJECT_DIR$/../ftk/src/scripts/components/header.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,6 +47,7 @@
       <workItem from="1678797881319" duration="186000" />
       <workItem from="1678800503542" duration="849000" />
       <workItem from="1678803584020" duration="1999000" />
+      <workItem from="1678861459253" duration="326000" />
     </task>
     <task id="LOCAL-00001" summary="clear work tree">
       <created>1678454232875</created>
@@ -130,7 +133,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678805125181</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="clear work tree">
+      <created>1678861465475</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1678861465475</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
