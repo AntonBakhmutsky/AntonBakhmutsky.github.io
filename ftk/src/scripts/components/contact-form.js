@@ -40,6 +40,13 @@ window.addEventListener('load', () => {
       }
     })
 
+    // textarea
+    const textarea = document.querySelector('.contact-form textarea')
+
+    textarea.addEventListener('focus', () => textarea.parentElement.classList.add('focus'))
+
+    textarea.addEventListener('blur', () => textarea.parentElement.classList.remove('focus'))
+
     // request
 
     function usernameTest(input) {

@@ -34,8 +34,8 @@ if(isset($_SERVER['HTTP_X_REQUESTED_WITH']) && !empty($_SERVER['HTTP_X_REQUESTED
 // Вспомогательная функция для отправки почтового сообщения с вложением
 function send_mail($to, $body, $email, $filepath, $filename)
 {
-  $from = "kamaz@sotrans.ru"; // Почта отправителя
-  $subject = 'Заявка с сайта kamaz.sotrans.ru';
+  $from = "ftc@sotrans.ru"; // Почта отправителя
+  $subject = 'Заявка с сайта ftc.sotrans.ru';
   $boundary = "--".md5(uniqid(time())); // генерируем разделитель
   $headers = "From: $from\nReply-To: $from\n";
   $headers .= "MIME-Version: 1.0\r\n";
