@@ -20,7 +20,7 @@ window.addEventListener('load', () => {
       if (header.hasAttribute('style')) {
         header.removeAttribute('style');
 
-        if (window.scrollY < 100) {
+        if (window.scrollY < 10) {
           header.classList.remove('sticky')
         } else {
           header.classList.add('sticky')
