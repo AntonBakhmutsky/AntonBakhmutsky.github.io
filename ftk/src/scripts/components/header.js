@@ -19,12 +19,12 @@ window.addEventListener('load', () => {
 
       if (header.hasAttribute('style')) {
         header.removeAttribute('style');
+      }
 
-        if (window.scrollY < 20) {
-          header.classList.remove('sticky')
-        } else {
-          header.classList.add('sticky')
-        }
+      if (window.scrollY < 20) {
+        header.classList.remove('sticky')
+      } else {
+        header.classList.add('sticky')
       }
     }
   })
