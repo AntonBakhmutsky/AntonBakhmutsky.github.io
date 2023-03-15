@@ -78,10 +78,14 @@
         cursor: pointer
 
     &-item
-      +font(18px, 32px, 500)
+      +font(22px, 32px, 500)
       color: $white
       position: relative
+      +screen(1500)
+        +font(18px, 32px, 500)
       +screen($tablet)
+        +font(22px, 32px, 500)
+
         &:after
           display: none
 
