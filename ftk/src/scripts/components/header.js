@@ -9,7 +9,7 @@ window.addEventListener('load', () => {
   }
 
   window.addEventListener('scroll', () => {
-    if (window.scrollY > scrollPosition) {
+    if (window.scrollY > scrollPosition && window.scrollY > 19) {
       scrollPosition = window.scrollY
       if (!header.hasAttribute('style')) {
         header.style.transform = 'translateY(-80px)';
@@ -20,7 +20,7 @@ window.addEventListener('load', () => {
       if (header.hasAttribute('style')) {
         header.removeAttribute('style');
 
-        if (window.scrollY < 10) {
+        if (window.scrollY < 20) {
           header.classList.remove('sticky')
         } else {
           header.classList.add('sticky')
