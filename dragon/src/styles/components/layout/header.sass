@@ -2,3 +2,39 @@
 @use '../../abstracts/mixins' as *
 
 .header
+  padding: 20px 0 0
+
+  &__top
+    display: flex
+
+  &__logos
+    display: flex
+    gap: 36px
+    align-items: center
+    margin-right: auto
+
+    a
+      &:first-child
+        width: 136px
+        height: 32px
+
+        &:after
+          content: ''
+          width: 1px
+          height: 29px
+          +centering-y
+          right: -18px
+          background-color: $black
+
+      &:last-child
+        display: flex
+        align-items: center
+
+        img
+          width: 38px
+          height: 38px
+          margin-right: 6px
+
+        svg
+          width: 99px
+          height: 40px

@@ -116,8 +116,10 @@
   &__phone
     display: flex
     align-items: center
-    +font(16px, 32px, 500)
+    +font(22px, 32px, 500)
     color: $white
+    +screen(1500)
+      +font(16px, 32px, 500)
     +screen($tablet)
       display: none
 
@@ -125,5 +127,8 @@
       margin-left: 6px
 
     svg
-      width: 13px
-      height: 14px
+      width: 17px
+      height: 18px
+      +screen(1500)
+        width: 13px
+        height: 14px
