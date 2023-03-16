@@ -18,6 +18,11 @@ body
 .container
   position: relative
   width: 100%
+  max-width: 1920px
+  padding: 0 60px
+  box-sizing: border-box
+  +screen($tablet)
+    padding: 0 16px
 
 a
   text-decoration: none
@@ -38,6 +43,9 @@ button
   transition: .3s
 
 svg
+  max-width: 100%
+  max-height: 100%
+
   path, circle, rect
     transition: .3s
 
@@ -65,30 +73,8 @@ input, textarea
 textarea
   resize: none
 
-input[type="checkbox"], input[type="radio"]
-  display: none
+.header, footer
+  flex: 0 0 auto
 
-input[type="radio"] + label
-  position: relative
-  box-sizing: border-box
-  padding-left: 30px
-  +font(14px, 22px, 500)
-
-  &:not(:first-child)
-    margin-top: 16px
-
-  &:before
-    content: ''
-    position: absolute
-    top: 50%
-    transform: translateY(-50%)
-    left: 0
-    width: 20px
-    height: 20px
-    border: 1px solid $white
-    box-sizing: border-box
-    border-radius: 50%
-
-input[type="radio"]:checked + label
-  &:before
-    border-width: 6px
+.main
+  flex: 1 0 auto
