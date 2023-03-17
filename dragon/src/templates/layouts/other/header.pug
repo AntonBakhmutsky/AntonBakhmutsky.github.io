@@ -15,7 +15,7 @@ header.header
         .header__mobile-search
           | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/header/loupe.svg')}
         .header__burger
-          img(src=require('@/assets/img/header/burger.svg') alt="burger")
+          | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/header/burger.svg')}
     .header__bottom
       nav.menu
         each el in headerMenu

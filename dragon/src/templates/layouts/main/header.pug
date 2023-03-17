@@ -11,22 +11,28 @@ header.header.header_main
         a.header__contacts-phone(href="tel:88002223480")
           | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/header/phone.svg')}
           span 8 (800) 222-34-80
-        a.header__contacts-call(href="javascript:") Обратный звонок
+        a.header__contacts-call.btn.btn_trans.btn_trans_orange(href="javascript:")
+          span Обратный звонок
         .header__mobile-search
           | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/header/loupe.svg')}
+        .header__burger
+          | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/header/burger.svg')}
     .header__bottom
       nav.menu
         each el in headerMenu
           if (el.url)
             a.menu__item(href=el.url) #{el.txt}
           if (el.drop)
-            .menu-drop
+            .menu__drop
               .menu__drop-title
                 span #{el.txt}
                 | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/header/vector-down.svg')}
               .menu__drop-links
                 each link in el.drop
                   a(href=link.url) #{link.txt}
+        a.header__contacts-phone(href="tel:88002223480")
+          | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/header/phone.svg')}
+          span 8 (800) 222-34-80
       .header__search
         | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/header/loupe.svg')}
 

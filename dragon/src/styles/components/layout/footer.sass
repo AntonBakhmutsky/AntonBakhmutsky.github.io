@@ -2,3 +2,95 @@
 @use '../../abstracts/mixins' as *
 
 .footer
+  color: $white
+
+  &__top
+    background-color: #131B21
+    padding: 56px 0
+
+    .container
+      display: flex
+      justify-content: space-between
+
+  &__desc
+    max-width: 419px
+
+  &__bottom
+    background-color: #1B242C
+
+  &__logos
+    a
+      &:first-child
+        width: 340px
+        height: 80px
+
+      &:last-child
+        display: flex
+        gap: 12px
+        align-items: center
+        margin-top: 30px
+
+        img
+          width: 91px
+          height: 91px
+
+        svg
+          width: 234px
+          height: 18px
+
+          path
+            fill: $white
+
+  &__txt
+    margin-top: 35px
+    +font(18px, 30px)
+
+  &__menu
+    display: flex
+    gap: 140px
+
+    a
+      color: $white
+      +font(24px, 26px, 700)
+
+    &-block
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+
+  &__contacts
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+
+    &-item
+      display: flex
+      align-items: flex-start
+      gap: 13px
+
+      a
+        color: $white
+
+      &:nth-child(1)
+        margin-top: 20px
+        svg
+          width: 29px
+          height: 29px
+          margin-top: -12px
+
+      &:nth-child(2)
+        svg
+          width: 25px
+          height: 26px
+          margin-top: -12px
+
+        span
+          a
+            &:last-child
+              margin-top: 17px
+
+
+      &:nth-child(3)
+        svg
+          width: 28px
+          height: 17px
