@@ -11,6 +11,7 @@
     .container
       display: flex
       justify-content: space-between
+      gap: 30px
 
   &__desc
     max-width: 419px
@@ -47,7 +48,9 @@
 
   &__menu
     display: flex
-    gap: 140px
+    justify-content: space-between
+    max-width: 540px
+    width: 100%
 
     a
       color: $white
@@ -71,6 +74,9 @@
       a
         color: $white
 
+      svg
+        flex-shrink: 0
+
       &:nth-child(1)
         margin-top: 20px
         svg
@@ -82,7 +88,7 @@
         svg
           width: 25px
           height: 26px
-          margin-top: -12px
+          margin-top: -10 px
 
         span
           a
@@ -94,3 +100,29 @@
         svg
           width: 28px
           height: 17px
+
+  &__bottom
+    box-sizing: border-box
+    padding: 21px 0
+
+    .container
+      display: flex
+      justify-content: space-between
+      align-items: center
+
+  &__policy
+    display: flex
+    gap: 20px
+
+    a
+      color: #949597
+
+      &:first-child
+        &:after
+          content: '|'
+          position: absolute
+          right: -13px
+
+  &__info
+    display: flex
+    gap: 40px

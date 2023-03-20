@@ -6,11 +6,52 @@
   box-sizing: border-box
   border-bottom: 2px solid $gray
 
+  &_main
+    .header
+
   &__burger
     display: none
+    +screen(1280)
+      position: relative
+      display: flex
+      flex-shrink: 0
+      width: 40px
+      height: 40px
+      box-sizing: border-box
+      align-items: center
+      justify-content: center
+      z-index: 101
+      border: 2px solid $black
+      gap: 10px
+      flex-direction: column
+      transition: transform .3s, border-color .3s
+
+      &.active
+        border-color: $orange
+        transform: rotate(360deg)
+
+        .header__burger-line
+          width: 24px
+          background-color: $orange
+
+        .header__burger-line:nth-child(1)
+          transform: translate(0, 6px) rotate(-45deg)
+
+
+        .header__burger-line:nth-child(2)
+          transform: translate(0, -6px) rotate(45deg)
+
+      &-line
+        transition: .3s transform, width .3s, background-color .3s
+        width: 20px
+        height: 2px
+        background-color: $black
 
   &__mobile-search
     display: none
+    +screen(1280)
+      display: flex
+      align-items: center
 
   &__top
     display: flex
@@ -88,24 +129,86 @@
     display: flex
     gap: 70px
     padding: 32px 0 7px
+    align-items: center
 
   .menu
     display: flex
     justify-content: space-between
     align-items: center
     flex-grow: 1
+    +screen(1280)
+      position: fixed
+      top: 0
+      right: -100%
+      height: calc(var(--vh, 1vh) * 100)
+      flex-direction: column
+      background-color: $white
+      width: 100%
+      z-index: 100
+      transition: right .3s
+      padding: 85px 16px 40px
+      box-sizing: border-box
+      align-items: flex-start
+      overflow: auto
+
+      &.active
+        right: 0
 
     .header__contacts-phone
       display: none
-      +screen($tablet)
+      +screen(1280)
         display: flex
+        +font(22px, 30px, 700)
+        margin: auto auto 0
 
     &__item, &__drop
       +font(19px, 30px, 500)
+      position: relative
+      transition: .3s color
       +screen($desktop)
         +font(16px, 30px, 500)
-      +screen($tablet)
+      +screen(1280)
         +font(20px, 30px, 500)
+        margin-bottom: 38px
+
+      &:after
+        content: ''
+        width: 0
+        height: 4px
+        background: $black
+        position: absolute
+        left: 0
+        top: calc(100% + 6px)
+        transition: width .3s
+
+      &:hover
+        &:after
+          width: 100%
+          +screen(1280)
+            width: 0
+
+    &__drop
+      cursor: pointer
+      +screen(1280)
+        width: 100%
+
+      &-title
+        display: flex
+        gap: 6px
+        align-items: center
+        +screen(1280)
+          justify-content: space-between
+
+        &:hover
+          svg
+            transform: rotate(180deg)
+            +screen(1280)
+              transform: rotate(-90deg)
+
+        svg
+          margin-top: 3px
+          +screen(1280)
+            transform: rotate(-90deg)
 
   &__search
     flex-shrink: 0
