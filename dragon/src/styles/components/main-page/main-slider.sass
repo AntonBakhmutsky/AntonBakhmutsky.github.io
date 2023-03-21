@@ -1,0 +1,143 @@
+@use '../../abstracts/variables' as *
+@use '../../abstracts/mixins' as *
+
+.main-slider
+  width: 100vw
+  height: calc(var(--vh, 1vh) * 100)
+  position: relative
+
+  .swiper
+    width: 100%
+    height: 100%
+    position: absolute
+    left: 0
+    top: 0
+    user-select: none
+
+    &-slide
+      width: 100%
+      height: 100%
+      position: relative
+
+      &:after, &:before
+        content: ''
+        position: absolute
+        left: 0
+        opacity: .8
+        z-index: 1
+        width: 100%
+
+      &:before
+        height: 55%
+        top: 0
+        background: linear-gradient(180deg, #14161B 0%, rgba(20, 22, 27, 0) 100%)
+
+      &:after
+        height: 33%
+        bottom: 0
+        background:  linear-gradient(0deg, #131416 0%, rgba(19, 20, 22, 0) 100%)
+
+      img
+        object-fit: cover
+        object-position: center
+        width: 100%
+        height: 100%
+
+    &-button
+      &-prev, &-next
+        width: 80px
+        height: 80px
+        border-radius: 50%
+        box-sizing: border-box
+        border: 2px solid #787777
+        cursor: pointer
+        transition: border-color .3s
+        pointer-events: auto
+        z-index: 2
+        top: auto
+        bottom: 52px
+        left: auto
+        +screen($desktop)
+          width: 50px
+          height: 50px
+        +screen($tablet)
+          display: none
+
+        &:hover:not(:active)
+          border-color: $white
+
+        &:after
+          display: none
+
+        img
+          display: block
+          width: 10px
+          height: 22px
+          +screen($desktop)
+            width: 7px
+            height: 14px
+
+
+      &-prev
+        right: 166px
+        +screen($desktop)
+          right: 130px
+
+      &-next
+        right: 60px
+
+    &-pagination
+      display: none
+
+  .container
+    z-index: 1
+    display: flex
+    flex-direction: column
+    justify-content: center
+    height: 100%
+    color: $white
+    pointer-events: none
+
+  &__title
+    +font(76px, 80px, 800)
+    max-width: 641px
+    +screen($desktop)
+      +font(54px, 54px, 800)
+    +screen($tablet)
+      +font(40px, 41px, 800)
+      max-width: 300px
+
+    span
+      width: 213px
+      height: 10px
+      background-color: $white
+      display: inline-block
+      transform: translateY(-13px)
+      margin-left: 4px
+      +screen($desktop)
+        transform: translateY(-10px)
+        width: 147px
+        height: 7px
+      +screen($tablet)
+        transform: translateY(-7px)
+        width: 100px
+        height: 5px
+
+  &__txt
+    +font(30px, 40px)
+    margin-top: 44px
+    +screen($desktop)
+      +font(24px, 31px)
+      margin-top: 33px
+    +screen($tablet)
+      +font(20px, 26px)
+      margin-top: 20px
+
+  .btn
+    margin-top: 84px
+    pointer-events: auto
+    +screen($desktop)
+      margin-top: 79px
+    +screen($tablet)
+      margin-top: 40px
+

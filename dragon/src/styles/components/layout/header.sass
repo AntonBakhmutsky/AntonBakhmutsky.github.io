@@ -5,9 +5,67 @@
   padding: 20px 0 0
   box-sizing: border-box
   border-bottom: 2px solid $gray
+  position: fixed
+  width: 100%
+  top: 0
+  left: 0
+  z-index: 100
+  +screen(1280)
+    padding: 12px 0
+  +screen($tablet)
+    border: none
 
   &_main
+    color: $white
+    border-color: #919191
+
     .header
+      &__search, &__mobile-search
+        svg
+          path
+            fill: $white
+
+      &__burger
+        border-color: $white
+
+        &-line
+          background-color: $white
+
+      &__contacts
+        &-phone
+          color: $white
+          +screen($tablet)
+            color: $black
+
+          svg
+            path
+              fill: $white
+              +screen($tablet)
+                fill: $black
+
+        &-call
+          color: $white
+          border-color: $white
+
+          &:after
+            background-color: $white
+
+          &:hover
+            color: black
+
+    .menu
+      &__item, &__drop
+        color: $white
+        +screen($tablet)
+          color: $black
+
+        &:after
+          background-color: $white !important
+
+      &__drop
+        svg
+          path
+            fill: $white
 
   &__burger
     display: none
@@ -50,8 +108,11 @@
   &__mobile-search
     display: none
     +screen(1280)
+      width: 25px
+      height: 25px
       display: flex
       align-items: center
+      flex-shrink: 0
 
   &__top
     display: flex
@@ -117,6 +178,8 @@
       align-items: center
       +font(20px, 30px, 700)
       gap: 9px
+      +screen(1280)
+        display: none
 
       &:hover:not(:active)
         color: $orange
@@ -125,11 +188,17 @@
           path
             fill: $orange
 
+    &-call
+      +screen(1280)
+        display: none
+
   &__bottom
     display: flex
     gap: 70px
     padding: 32px 0 7px
     align-items: center
+    +screen(1280)
+      padding: 0
 
   .menu
     display: flex
@@ -214,3 +283,5 @@
     flex-shrink: 0
     width: 18px
     height: 18px
+    +screen(1280)
+      display: none

@@ -1,0 +1,16 @@
+section.main-slider
+  .swiper
+    .swiper-wrapper
+      each el in mainSlides
+        .swiper-slide
+          img(src=el alt="")
+    .swiper-pagination
+    .swiper-button-prev
+      img(src=require('@/assets/img/main-page/vector-left.svg') alt="")
+    .swiper-button-next
+      img(src=require('@/assets/img/main-page/vector-right.svg') alt="")
+  .container
+    h1.main-slider__title Сотранс #[span] эксклюзивный дистрибьютор
+    p.main-slider__txt Golden Dragon #[br] в Российской Федерации
+    a.btn.btn_orange(href="about.html")
+      span Подробнее
