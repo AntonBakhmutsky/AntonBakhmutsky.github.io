@@ -1,13 +1,13 @@
 header.header.header_main
   .container
     .header__top
-      .header__logos
+      .header__logos.slide-down
         a(href="/")
           | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/header/sotrans-logo-white.svg')}
         a(href="javascript:")
           img(src=require('@/assets/img/header/dragon-logo.png') alt="")
           | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/header/dragon-caption-white.svg')}
-      .header__contacts
+      .header__contacts.slide-left
         a.header__contacts-phone(href="tel:88002223480")
           | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/header/phone.svg')}
           span 8 (800) 222-34-80
@@ -19,7 +19,7 @@ header.header.header_main
           .header__burger-line
           .header__burger-line
     .header__bottom
-      nav.menu
+      nav.menu.slide-right
         each el in headerMenu
           if (el.url)
             a.menu__item(href=el.url) #{el.txt}
@@ -34,7 +34,7 @@ header.header.header_main
         a.header__contacts-phone(href="tel:88002223480")
           | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/header/phone.svg')}
           span 8 (800) 222-34-80
-      .header__search
+      .header__search.slide-up
         | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/header/loupe.svg')}
 
 

@@ -157,6 +157,18 @@ textarea
       height: 60px
       +font(20px, 20px, 500)
 
+    &_sm
+      width: 303px
+      height: 72px
+      +font(24px, 24px, 500)
+      +screen($desktop)
+        +font(20px, 20px, 500)
+        width: 244px
+        height: 60px
+      +screen($tablet)
+        width: 262px
+        height: 60px
+
     &:after
       content: ''
       width: 100%
@@ -179,3 +191,8 @@ textarea
 
   span
     z-index: 2
+
+.slide-right, .slide-up, .slide-left, .slide-down
+  opacity: 0
+
+.anim-num

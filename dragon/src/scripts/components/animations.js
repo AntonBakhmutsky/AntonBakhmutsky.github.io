@@ -12,6 +12,7 @@ window.addEventListener('load', () => {
         opacity: [0, 1],
         translateX: [-150, 0],
         duration: 1000,
+        delay: Number(el.dataset.delay) || 0,
         easing: 'easeOutQuart'
       })
     })
@@ -27,6 +28,7 @@ window.addEventListener('load', () => {
         opacity: [0, 1],
         translateY: [150, 0],
         duration: 1000,
+        delay: Number(el.dataset.delay) || 0,
         easing: 'easeOutQuart'
       })
     })
@@ -42,6 +44,7 @@ window.addEventListener('load', () => {
         opacity: [0, 1],
         translateY: [-150, 0],
         duration: 1000,
+        delay: Number(el.dataset.delay) || 0,
         easing: 'easeOutQuart'
       })
     })
@@ -57,6 +60,7 @@ window.addEventListener('load', () => {
         opacity: [0, 1],
         translateX: [150, 0],
         duration: 1000,
+        delay: Number(el.dataset.delay) || 0,
         easing: 'easeOutQuart'
       })
     })
