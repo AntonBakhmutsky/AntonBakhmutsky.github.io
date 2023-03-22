@@ -1,4 +1,18 @@
 section.main-desc
   .container
-    h2.main-desc__title Xiamen Golden Dragon Bus Co., LTD —
-    p.main-desc__txt китайский производитель автобусов среднего и большого класса с 1992 года.
+    .main-desc__info.slide-up
+      h2.main-desc__title Xiamen Golden Dragon Bus Co., LTD —
+      p.main-desc__txt китайский производитель автобусов среднего и большого класса с 1992 года.
+      a.btn.btn_orange.btn_orange_sm(href="about.html") О компании
+    .main-desc__video.slide-left
+      .main-desc__video-overlay
+        .main-desc__video-container
+          .main-desc__video-txt
+            span Golden Dragon
+            span видео о компании
+          button.main-desc__video-btn
+            img(src=require('@/assets/img/main-page/play.svg') alt="")
+      video(loop muted poster=require('@/assets/img/main-page/poster.jpg'))
+        source(src="" type="video/mp4")
+      .main-desc__video-glyphs.slide-down(data-delay='500')
+        | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/main-page/glyphs.svg')}

@@ -2,4 +2,160 @@
 @use '../../abstracts/mixins' as *
 
 .main-desc
+  padding-bottom: 215px
+  +screen($desktop)
+    padding-bottom: 188px
+  +screen($tablet)
+    padding-bottom: 70px
 
+  .container
+    display: flex
+    align-items: center
+    gap: 90px
+    +screen($desktop)
+      gap: 28px
+    +screen($tablet)
+      align-items: flex-start
+      flex-direction: column-reverse
+      gap: 94px
+
+  &__info
+    max-width: 428px
+    +screen($desktop)
+      max-width: 338px
+    +screen($tablet)
+      max-width: none
+      width: 100%
+
+    .btn
+      margin-top: 93px
+      +screen($desktop)
+        margin-top: 61px
+      +screen($tablet)
+        margin: 44px auto 0
+
+  &__title
+    +font(36px, 42px, 700)
+    +screen($desktop)
+      +font(26px, 30px, 700)
+    +screen($tablet)
+      +font(22px, 26px, 700)
+
+  &__txt
+    margin-top: 27px
+    +font(28px, 36px)
+    +screen($desktop)
+      margin-top: 15px
+      +font(24px, 28px)
+    +screen($tablet)
+      margin-top: 10px
+      +font(18px, 24px)
+
+  &__video
+    position: relative
+    max-width: 1280px
+    width: 100%
+    flex-shrink: 1
+
+    video
+      filter: drop-shadow(0px 6px 15px rgba(0, 0, 0, 0.25))
+      z-index: 2
+      position: relative
+      display: flex
+      object-fit: cover
+      object-position: center
+      width: 100%
+      height: 100%
+      +screen($tablet)
+        min-height: 210px
+
+    &-overlay
+      background: linear-gradient(0deg, #1E2024 0%, rgba(30, 32, 36, 0.01) 100%)
+      box-sizing: border-box
+      padding: 60px
+      display: flex
+      align-items: flex-end
+      position: absolute
+      left: 0
+      top: 0
+      width: 100%
+      height: 100%
+      z-index: 3
+      +screen($desktop)
+        padding: 40px
+      +screen($tablet)
+        padding: 20px
+
+    &-container
+      display: flex
+      justify-content: space-between
+      width: 100%
+      align-items: center
+
+    &-glyphs
+      position: absolute
+      bottom: -124px
+      right: -134px
+      width: 998px
+      height: 214px
+      +screen($desktop)
+        bottom: -110px
+        right: -114px
+        width: 765px
+        height: 164px
+      +screen($tablet)
+        bottom: -45px
+        right: -40px
+        width: 305px
+        height: 65px
+
+    &-txt
+      color: $white
+      display: flex
+      flex-direction: column
+      gap: 7px
+      +screen($desktop)
+        gap: 4px
+      +screen($tablet)
+        gap: 0
+
+      span
+        &:first-child
+          +font(36px, 42px, 700)
+          +screen($desktop)
+            +font(30px, 35px, 700)
+          +screen($tablet)
+            +font(20px, 24px, 700)
+
+        &:last-child
+          +font(24px, 28px)
+          +screen($desktop)
+            +font(20px, 28px)
+          +screen($tablet)
+            +font(14px, 15px)
+
+    &-btn
+      width: 100px
+      height: 100px
+      border-radius: 50%
+      box-sizing: border-box
+      display: flex
+      align-items: center
+      justify-content: center
+      border: 2px solid $white
+      cursor: pointer
+      +screen($desktop)
+        width: 90px
+        height: 90px
+      +screen($tablet)
+        width: 50px
+        height: 50px
+
+      img
+        margin-left: 5px
+        +screen($desktop)
+          width: 26px
+          height: 36px
+        +screen($tablet)
+          width: 15px
+          height: 20px
