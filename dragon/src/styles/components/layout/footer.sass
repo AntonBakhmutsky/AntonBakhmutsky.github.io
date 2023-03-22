@@ -15,6 +15,10 @@
 
   &__desc
     max-width: 419px
+    +screen($desktop)
+      max-width: 315px
+    +screen($tablet)
+      max-width: none
 
   &__bottom
     background-color: #1B242C
@@ -24,6 +28,12 @@
       &:first-child
         width: 340px
         height: 80px
+        +screen($desktop)
+          width: 245px
+          height: 58px
+        +screen($tablet)
+          width: 227px
+          height: 54px
 
       &:last-child
         display: flex
@@ -34,10 +44,22 @@
         img
           width: 91px
           height: 91px
+          +screen($desktop)
+            width: 65px
+            height: 65px
+          +screen($tablet)
+            width: 60px
+            height: 60px
 
         svg
           width: 234px
           height: 18px
+          +screen($desktop)
+            width: 169px
+            height: 13px
+          +screen($tablet)
+            width: 157px
+            height: 12px
 
           path
             fill: $white
@@ -45,6 +67,8 @@
   &__txt
     margin-top: 35px
     +font(18px, 30px)
+    +screen($desktop)
+      +font(14px, 20px)
 
   &__menu
     display: flex
