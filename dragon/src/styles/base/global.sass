@@ -30,8 +30,11 @@ body
   position: relative
   width: 100%
   max-width: 1920px
-  padding: 0 60px
+  padding: 0 100px
   box-sizing: border-box
+  margin: 0 auto
+  +screen($desktop)
+    padding: 0 60px
   +screen($tablet)
     padding: 0 16px
 
@@ -194,6 +197,9 @@ textarea
   opacity: 0
 
 .anim-num
+
+section
+  overflow: hidden
 
 .section
   &-title

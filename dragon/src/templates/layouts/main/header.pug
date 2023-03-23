@@ -9,12 +9,12 @@ header.header.header_main
           | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/header/dragon-caption-white.svg')}
       .header__contacts.slide-left
         a.header__contacts-phone(href="tel:88002223480")
-          | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/header/phone.svg')}
           span 8 (800) 222-34-80
-        a.header__contacts-call.btn.btn_trans.btn_trans_orange(href="javascript:")
-          span Обратный звонок
-        .header__mobile-search
+        .header__search
           | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/header/loupe.svg')}
+        a.header__login(href="javascript:")
+          | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/header/login.svg')}
+          span Войти
         .header__burger
           .header__burger-line
           .header__burger-line
@@ -34,8 +34,6 @@ header.header.header_main
         a.header__contacts-phone(href="tel:88002223480")
           | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/header/phone.svg')}
           span 8 (800) 222-34-80
-      .header__search.slide-up
-        | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/header/loupe.svg')}
 
 
 

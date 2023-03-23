@@ -20,13 +20,27 @@
     border-color: #919191
 
     .header
+      &__login
+        color: $white
+
+        &:hover:not(:active)
+          color: $orange
+
+          svg
+            path
+              fill: $orange
+
+        svg
+          path
+            fill: $white
+
       &__logos
         a
           &:first-child
             &:after
               background-color: $white
 
-      &__search, &__mobile-search
+      &__search
         svg
           path
             fill: $white
@@ -111,15 +125,6 @@
         height: 2px
         background-color: $black
 
-  &__mobile-search
-    display: none
-    +screen(1280)
-      width: 25px
-      height: 25px
-      display: flex
-      align-items: center
-      flex-shrink: 0
-      z-index: 0
 
   &__top
     display: flex
@@ -132,8 +137,8 @@
 
     a
       &:first-child
-        width: 166px
-        height: 40px
+        width: 160px
+        height: 38px
         +screen($desktop)
           width: 136px
           height: 32px
@@ -159,8 +164,8 @@
         gap: 6px
 
         img
-          width: 46px
-          height: 46px
+          width: 45px
+          height: 45px
           +screen($desktop)
             width: 38px
             height: 38px
@@ -169,11 +174,31 @@
             height: 26px
 
         svg
-          width: 120px
+          width: 115px
           height: 9px
           +screen($desktop)
             width: 99px
-            height: 7px
+            height: 8px
+          +screen($tablet)
+            width: 68px
+            height: 5px
+
+  &__login
+    display: flex
+    align-items: center
+    gap: 7px
+    +font(16px, 16px, 500)
+    +screen($desktop)
+      +font(14px, 14px, 500)
+    +screen(1280)
+      display: none
+
+    svg
+      width: 28px
+      height: 28px
+      +screen($desktop)
+        width: 24px
+        height: 24px
 
   &__contacts
     display: flex
@@ -186,7 +211,7 @@
     &-phone
       display: flex
       align-items: center
-      +font(20px, 30px, 700)
+      +font(18px, 30px, 500)
       gap: 9px
       +screen(1280)
         display: none
@@ -197,10 +222,6 @@
         svg
           path
             fill: $orange
-
-    &-call
-      +screen(1280)
-        display: none
 
   &__bottom
     display: flex
@@ -241,7 +262,7 @@
         margin: auto auto 0
 
     &__item, &__drop
-      +font(19px, 30px, 500)
+      +font(18px, 30px, 500)
       position: relative
       transition: .3s color
       +screen($desktop)
@@ -291,7 +312,6 @@
 
   &__search
     flex-shrink: 0
-    width: 18px
-    height: 18px
+    width: 28px
+    height: 28px
     +screen(1280)
-      display: none

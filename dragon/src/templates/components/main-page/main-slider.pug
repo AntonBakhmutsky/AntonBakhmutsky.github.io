@@ -3,14 +3,18 @@ section.main-slider
     .swiper-wrapper
       each el in mainSlides
         .swiper-slide
-          img(src=el alt="")
+          .container
+            if (el.main)
+              h1.swiper-slide-title.slide-right !{el.slideTitle}
+            else
+              h2.swiper-slide-title.slide-right !{el.slideTitle}
+            p.swiper-slide-txt.slide-left !{el.slideTxt}
+            a.btn.btn_orange.slide-up(href=el.slideUrl)
+              span Подробнее
+          .swiper-slide-image
+            img(src=el.slide alt="")
     .swiper-pagination
     .swiper-button-prev
       img(src=require('@/assets/img/main-page/vector-left.svg') alt="")
     .swiper-button-next
       img(src=require('@/assets/img/main-page/vector-right.svg') alt="")
-  .container
-    h1.main-slider__title.slide-right Сотранс #[span] эксклюзивный дистрибьютор
-    p.main-slider__txt.slide-left Golden Dragon #[br] в Российской Федерации
-    a.btn.btn_orange.slide-up(href="about.html")
-      span Подробнее

@@ -21,30 +21,89 @@
       width: 100%
       height: 100%
       position: relative
+      box-sizing: border-box
 
-      &:after, &:before
-        content: ''
+      .container
+        z-index: 10
+        position: relative
+
+      &-title
+        +font(76px, 80px, 800)
+        max-width: 641px
+        +screen($desktop)
+          +font(54px, 54px, 800)
+        +screen($tablet)
+          +font(40px, 41px, 800)
+          max-width: 300px
+
+        span
+          width: 213px
+          height: 10px
+          background-color: $white
+          display: inline-block
+          transform: translateY(-13px)
+          margin-left: 4px
+          +screen($desktop)
+            transform: translateY(-10px)
+            width: 147px
+            height: 7px
+          +screen($tablet)
+            transform: translateY(-7px)
+            width: 100px
+            height: 5px
+
+      &-txt
+        +font(30px, 40px)
+        margin-top: 44px
+        +screen($desktop)
+          +font(24px, 31px)
+          margin-top: 33px
+        +screen($tablet)
+          +font(20px, 26px)
+          margin-top: 20px
+
+      .btn
+        margin-top: 84px
+        pointer-events: auto
+        +screen($desktop)
+          margin-top: 79px
+        +screen($tablet)
+          margin-top: 40px
+
+
+      &-image
         position: absolute
-        left: 0
-        opacity: .8
-        z-index: 1
-        width: 100%
-
-      &:before
-        height: 55%
         top: 0
-        background: linear-gradient(180deg, #14161B 0%, rgba(20, 22, 27, 0) 100%)
-
-      &:after
-        height: 33%
-        bottom: 0
-        background:  linear-gradient(0deg, #131416 0%, rgba(19, 20, 22, 0) 100%)
-
-      img
-        object-fit: cover
-        object-position: center
+        left: 0
         width: 100%
         height: 100%
+        z-index: 1
+
+        img
+          object-fit: cover
+          object-position: center
+          width: 100%
+          height: 100%
+
+        &:after, &:before
+          pointer-events: none
+          content: ''
+          position: absolute
+          left: 0
+          opacity: .8
+          z-index: 1
+          width: 100%
+
+        &:before
+          height: 55%
+          top: 0
+          background: linear-gradient(180deg, #14161B 0%, rgba(20, 22, 27, 0) 100%)
+
+        &:after
+          height: 33%
+          bottom: 0
+          background:  linear-gradient(0deg, #131416 0%, rgba(19, 20, 22, 0) 100%)
+
 
     &-button
       &-prev, &-next
@@ -115,47 +174,4 @@
     pointer-events: none
     +screen($tablet)
       justify-content: flex-end
-
-  &__title
-    +font(76px, 80px, 800)
-    max-width: 641px
-    +screen($desktop)
-      +font(54px, 54px, 800)
-    +screen($tablet)
-      +font(40px, 41px, 800)
-      max-width: 300px
-
-    span
-      width: 213px
-      height: 10px
-      background-color: $white
-      display: inline-block
-      transform: translateY(-13px)
-      margin-left: 4px
-      +screen($desktop)
-        transform: translateY(-10px)
-        width: 147px
-        height: 7px
-      +screen($tablet)
-        transform: translateY(-7px)
-        width: 100px
-        height: 5px
-
-  &__txt
-    +font(30px, 40px)
-    margin-top: 44px
-    +screen($desktop)
-      +font(24px, 31px)
-      margin-top: 33px
-    +screen($tablet)
-      +font(20px, 26px)
-      margin-top: 20px
-
-  .btn
-    margin-top: 84px
-    pointer-events: auto
-    +screen($desktop)
-      margin-top: 79px
-    +screen($tablet)
-      margin-top: 40px
 
