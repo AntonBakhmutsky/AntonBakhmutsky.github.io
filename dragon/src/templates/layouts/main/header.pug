@@ -7,14 +7,16 @@ header.header.header_main
         a(href="javascript:")
           img(src=require('@/assets/img/header/dragon-logo.png') alt="")
           | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/header/dragon-caption-white.svg')}
+      form.header__search.slide-down
+        .header__search-field
+          input#search(type="text" name="search" placeholder="Поиск...")
+        .header__search-btn
       .header__contacts.slide-left
-        a.header__contacts-phone(href="tel:88002223480")
-          span 8 (800) 222-34-80
-        .header__search
-          | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/header/loupe.svg')}
         a.header__login(href="javascript:")
           | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/header/login.svg')}
           span Войти
+        a.header__contacts-phone(href="tel:88002223480")
+          span 8 (800) 222-34-80
         .header__burger
           .header__burger-line
           .header__burger-line
