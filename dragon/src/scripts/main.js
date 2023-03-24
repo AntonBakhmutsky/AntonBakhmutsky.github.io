@@ -3,4 +3,5 @@ require('./components/vh')
 require('./components/animations')
 require('./components/header')
 require('./components/main-slider')
+require('./components/linep-slider')
 

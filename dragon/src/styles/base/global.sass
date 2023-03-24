@@ -119,6 +119,8 @@ textarea
       height: 39px
 
     &:hover
+      color: $black
+
       &:after
         color: $white
 
@@ -131,6 +133,17 @@ textarea
       top: 0
       width: 0
       background-color: $white
+
+    &_lg
+      width: 276px
+      height: 66px
+      +font(22px, 23px, 500)
+      +screen($desktop)
+        width: 244px
+        height: 60px
+        +font(20px, 21px, 500)
+      +screen($tablet)
+        width: 262px
 
     &_orange
       border-color: $orange
