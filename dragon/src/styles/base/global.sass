@@ -183,6 +183,19 @@ textarea
         width: 262px
         height: 60px
 
+    &_xs
+      width: 276px
+      height: 66px
+      +font(22px, 22px, 500)
+      +screen($desktop)
+        +font(20px, 20px, 500)
+        width: 244px
+        height: 60px
+      +screen($tablet)
+        width: 262px
+        height: 60px
+
+
     &:after
       content: ''
       width: 100%

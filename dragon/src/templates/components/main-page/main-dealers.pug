@@ -1,0 +1,33 @@
+section.main-dealers
+  .container
+    h2.section-title Дистрибьютерские #[br] центры и дилеры
+    .main-dealers__container
+      .main-dealers__image
+        img(src=require('@/assets/img/main-page/dealers-map.svg') alt="")
+      form.main-dealers__form.form
+        h3.main-dealers__form-title Хотите стать #[span дилером]?
+        p.main-dealers__form-txt #[span Оставьте свои контактные данные,] #[span и мы свяжемся с вами в ближайшее время]
+        .form__field
+          input.form__field-input(type="text" required name="firstName")
+          span.form__field-placeholder Имя
+          span.form__field-error Это поле не может быть пустым
+        .form__field
+          input.form__field-input(type="text" name="lastName")
+          span.form__field-placeholder Фамилия
+        .form__field
+          input.form__field-input(type="text" name="city")
+          span.form__field-placeholder Город
+        .form__field.error
+          input.form__field-input(type="text" required name="phone")
+          span.form__field-placeholder Телефон
+          span.form__field-error Это поле не может быть пустым
+        .form__field
+          input.form__field-input(type="email" name="email")
+          span.form__field-placeholder Email
+        .form__checkbox
+          input#mainDealersFormPolicy(type="checkbox" required)
+          label(for="mainDealersFormPolicy") Я согласен с #[a(href="javascript:") Политикой конфидициальности]
+        button.btn.btn_trans.btn_trans_orange.form__submit(type="submit")
+          span Отправить
+      a.btn.btn_orange.btn_orange_xs.main-dealers__link(href="dealers.html")
+        span Дилерская сеть

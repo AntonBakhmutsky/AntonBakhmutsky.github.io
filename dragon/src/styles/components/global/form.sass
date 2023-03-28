@@ -1,0 +1,135 @@
+@use '../../abstracts/variables' as *
+@use '../../abstracts/mixins' as *
+
+.form
+  &__field
+    position: relative
+    margin-bottom: 34px
+    +screen($desktop)
+      margin-bottom: 26px
+
+    &:after
+      content: ''
+      width: 100%
+      height: 3px
+      position: absolute
+      bottom: 0
+      left: 0
+      background-color: transparent
+      transition: background-color .3s
+
+    &.focus
+      &:after
+        background-color: $black
+
+    &.active
+      .form__field
+        &-placeholder
+          top: 6px
+          font-size: 14px
+          +screen($desktop)
+            top: 2px
+
+    &.error
+      &:after
+        background-color: $red
+
+      .form__field-error
+        display: block
+
+    &-placeholder
+      position: absolute
+      left: 14px
+      top: 17px
+      +font(18px, 26px)
+      transition: top .3s, font-size .3s
+      color: #868686
+      +screen($desktop)
+        +font(16px, 26px)
+        top: 14px
+
+    &-input
+      padding: 26px 14px 12px
+      box-sizing: border-box
+      height: 63px
+      width: 100%
+      border: 1px solid #E3E3E3
+      +font(18px, 21px, 500)
+      +screen($desktop)
+        padding: 22px 14px 12px
+        height: 54px
+
+      &:required + .form__field-placeholder
+        &:after
+          content: '*'
+          color: $red
+
+    &-error
+      position: absolute
+      left: 10px
+      top: calc(100% + 2px)
+      +font(14px, 17px)
+      color: $red
+      display: none
+      +screen($desktop)
+        +font(12px, 14px)
+
+  &__checkbox
+    box-sizing: border-box
+    padding-left: 42px
+    margin-top: 40px
+    position: relative
+    +font(18px, 20px)
+    cursor: pointer
+    +screen($desktop)
+      margin-top: 30px
+    +screen($tablet)
+      +font(14px, 20px)
+
+    a
+      display: inline
+      color: $orange
+      text-decoration: underline
+
+    input[type="checkbox"]
+      display: none
+
+      &:checked + label:before
+        background: $orange url(../assets/img/global/check-white.svg) no-repeat center
+
+      & + label
+        &:before
+          content: ''
+          width: 26px
+          height: 26px
+          box-sizing: border-box
+          border: 1px solid $orange
+          position: absolute
+          left: 0
+          top: -4px
+          transition: background-color .3s
+          cursor: pointer
+          +screen($desktop)
+            width: 22px
+            height: 22px
+            top: -2px
+          +screen($tablet)
+            top: 50%
+            transform: translateY(-50%)
+            width: 30px
+            height: 30px
+
+  .btn
+    width: 240px
+    height: 66px
+    margin: 45px auto 0
+    background-color: white
+    +font(22px, 23px, 500)
+    +screen($desktop)
+      +font(18px, 19px, 500)
+      width: 181px
+      height: 53px
+    +screen($tablet)
+      width: 262px
+      height: 60px
+      +font(20px, 21px, 500)

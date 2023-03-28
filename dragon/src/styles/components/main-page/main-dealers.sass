@@ -1,0 +1,99 @@
+@use '../../abstracts/variables' as *
+@use '../../abstracts/mixins' as *
+
+.main-dealers
+  padding: 60px 0 40px
+  +screen($tablet)
+    padding: 60px 0 30px
+
+  &__container
+    position: relative
+    min-height: 839px
+    margin-top: 57px
+    display: flex
+    justify-content: flex-end
+    align-items: flex-start
+    flex-direction: column
+    +screen($desktop)
+      min-height: 668px
+    +screen($tablet)
+      min-height: auto
+      margin-top: 32px
+
+  &__image
+    position: absolute
+    left: -40px
+    top: 0
+    max-width: 1300px
+    width: 100%
+    +screen($desktop)
+      width: 979px
+      height: 543px
+    +screen($tablet)
+      width: auto
+      height: auto
+      position: relative
+      left: auto
+      top: auto
+
+    img
+      width: 100%
+      height: 100%
+      object-position: center
+      object-fit: cover
+
+  &__form
+    align-self: flex-end
+    width: 560px
+    box-sizing: border-box
+    padding: 40px
+    background: rgba(255, 255, 255, 0.2)
+    mix-blend-mode: normal
+    box-shadow: 0 10px 32px rgba(0, 0, 0, .16)
+    backdrop-filter: blur(3px)
+    margin-top: -130px
+    +screen($desktop)
+      width: 427px
+      padding: 24px
+    +screen($tablet)
+      box-shadow: 0 4px 21px rgba(0, 0, 0, .16)
+      order: 1
+      margin-top: 60px
+      width: 100%
+      padding: 26px 18px 40px
+
+    input
+      background-color: $white
+
+    &-title
+      +font(34px, 40px, 700)
+      text-align: center
+      +screen($desktop)
+        +font(26px, 30px, 700)
+      +screen($tablet)
+        +font(24px, 28px, 700)
+        text-align: left
+
+      span
+        color: $orange
+
+    &-txt
+      +font(22px, 26px)
+      margin: 14px 0 40px
+      text-align: center
+      display: flex
+      flex-direction: column
+      +screen($desktop)
+        margin: 17px 0 24px
+        +font(18px, 21px)
+      +screen($tablet)
+        margin: 19px 0 35px
+        +font(16px, 26px)
+        text-align: left
+        display: block
+
+  &__link
+    margin: 80px auto 0
+    +screen($tablet)
+      margin-top: 33px
+
