@@ -93,13 +93,13 @@
       &__contacts
         &-phone
           color: $white
-          +screen($tablet)
+          +screen(1280)
             color: $black
 
           svg
             path
               fill: $white
-              +screen($tablet)
+              +screen(1280)
                 fill: $black
 
         &-call
@@ -120,18 +120,6 @@
 
         &:after
           background-color: $white !important
-
-      &__drop
-        &-title
-          color: $white
-          +screen(1280)
-            color: $black
-
-        svg
-          path
-            fill: $white
-            +screen(1280)
-              fill: $black
 
   &__burger
     display: none
@@ -177,6 +165,20 @@
     z-index: 2
     align-items: center
     justify-content: space-between
+
+    .header__contacts-phone
+      position: relative
+      width: 184px
+      justify-content: flex-end
+      margin-top: -10px
+
+      &:after
+        content: 'Бесплатный звонок по России'
+        +font(13px, 15px, 500)
+        color: #A8A8A8
+        position: absolute
+        top: calc(100% + 2px)
+        right: 0
 
   &__logos
     display: flex
@@ -253,16 +255,20 @@
     align-items: center
     gap: 25px
     position: relative
-    +screen($tablet)
+    +screen(1280)
       z-index: 101
 
     &-phone
       display: flex
       align-items: center
-      +font(18px, 30px, 500)
+      +font(18px, 19px, 500)
       gap: 9px
       +screen(1280)
         display: none
+
+      span
+        span
+          color: $orange
 
       &:hover:not(:active)
         color: $orange
@@ -313,7 +319,7 @@
         margin: auto auto 0
         z-index: 14
 
-    &__item, &__drop
+    &__item
       +font(18px, 30px, 500)
       position: relative
       transition: .3s color
@@ -338,107 +344,6 @@
           width: 100%
           +screen(1280)
             width: 0
-
-    &__drop
-      cursor: pointer
-      user-select: none
-      +screen(1280)
-        width: 100%
-
-      &:hover
-        .menu__drop
-          &-links
-            visibility: visible
-            opacity: 1
-            pointer-events: auto
-
-          &-title
-            svg
-              transform: rotate(180deg)
-              +screen(1280)
-                transform: rotate(-90deg)
-
-      &:after
-        display: none
-
-      &-title
-        display: flex
-        gap: 6px
-        align-items: center
-        +screen(1280)
-          justify-content: space-between
-
-        svg
-          margin-top: 3px
-          +screen(1280)
-            transform: rotate(-90deg)
-
-      &-links
-        position: absolute
-        width: 297px
-        top: 100%
-        left: -40px
-        padding-top: 5px
-        visibility: hidden
-        opacity: 0
-        pointer-events: none
-        transition: opacity .3s, visibility .3s
-        +screen(1280)
-          opacity: 1
-          visibility: visible
-          pointer-events: auto
-          position: fixed
-          height: calc(var(--vh, 1vh) * 100 - 85px)
-          top: 85px
-          left: -120%
-          width: 100%
-          background-color: $white
-          z-index: 12
-
-      &-container
-        background-color: white
-        box-sizing: border-box
-        padding: 20px 40px
-        box-shadow: 0 4px 16px rgba(0, 0, 0, .25)
-        +screen(1280)
-          box-shadow: none
-          padding: 0
-
-        a
-          +font(16px, 16px 500)
-          +screen(1280)
-            +font(20px, 30px, 500)
-            box-sizing: border-box
-            padding: 0 16px
-
-          &:not(:last-child)
-            margin-bottom: 14px
-            +screen(1280)
-              margin-bottom: 38px
-
-          &:hover:not(:active)
-            color: $orange
-
-      &-back
-        display: none
-        color: $black
-        +screen(1280)
-          height: 54px
-          background-color: #F1F1F1
-          display: flex
-          align-items: center
-          justify-content: center
-          +font(20px, 30px, 500)
-          position: relative
-          margin-bottom: 25px
-
-          &:before
-            content: ''
-            +centering-y
-            left: 16px
-            width: 7px
-            height: 14px
-            background: url(../assets/img/header/vector-left.svg) no-repeat center/cover
 
   &__search
     display: flex

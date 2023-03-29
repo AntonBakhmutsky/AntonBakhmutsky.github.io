@@ -13,25 +13,14 @@ header.header.header_main
         .header__search-btn
       .header__contacts.slide-left
         a.header__contacts-phone(href="tel:88002223480")
-          span 8 (800) 222-34-80
+          span 8 (800) #[span 222-34-80]
         .header__burger
           .header__burger-line
           .header__burger-line
     .header__bottom
       nav.menu.slide-right
         each el in headerMenu
-          if (el.url && !el.drop)
-            a.menu__item(href=el.url) #{el.txt}
-          if (el.drop)
-            .menu__drop
-              .menu__drop-title
-                span #{el.txt}
-                | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/header/vector-down.svg')}
-              .menu__drop-links
-                .menu__drop-container
-                  .menu__drop-back #{el.txt}
-                  each link in el.drop
-                    a(href=link.url) #{link.txt}
+          a.menu__item(href=el.url) #{el.txt}
         a.header__contacts-phone(href="tel:88002223480")
           | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/header/phone.svg')}
           span 8 (800) 222-34-80

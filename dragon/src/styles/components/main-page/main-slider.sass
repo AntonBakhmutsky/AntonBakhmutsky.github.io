@@ -5,9 +5,6 @@
   width: 100vw
   height: calc(var(--vh, 1vh) * 100)
   position: relative
-  box-sizing: border-box
-  +screen($tablet)
-    padding-bottom: 86px
 
   .swiper
     width: 100%
@@ -22,6 +19,8 @@
       height: 100%
       position: relative
       box-sizing: border-box
+      +screen($tablet)
+        padding: 0 0 85px
 
       .container
         z-index: 10
@@ -107,26 +106,25 @@
 
     &-button
       &-prev, &-next
-        width: 80px
-        height: 80px
+        width: 50px
+        height: 50px
         border-radius: 50%
         box-sizing: border-box
-        border: 2px solid #787777
         cursor: pointer
-        transition: border-color .3s
+        transition: background-color .3s
         pointer-events: auto
         z-index: 2
         top: auto
-        bottom: 52px
+        bottom: 76px
         left: auto
         +screen($desktop)
-          width: 50px
-          height: 50px
+          width: 40px
+          height: 40px
         +screen($tablet)
           display: none
 
         &:hover:not(:active)
-          border-color: $white
+          background-color: $orange
 
         &:after
           display: none
@@ -140,12 +138,23 @@
             height: 14px
 
       &-prev
-        right: 166px
+        right: 351px
         +screen($desktop)
           right: 130px
 
       &-next
-        right: 60px
+        right: 186px
+
+    &-counter
+      position: absolute
+      right: 266px
+      bottom: 88px
+      width: 55px
+      height: 24px
+      +font(20px, 24px)
+      color: $white
+      z-index: 1
+      display: flex
 
     &-pagination
       display: none
@@ -159,7 +168,7 @@
         opacity: 1
         width: 10px
         height: 10px
-        margin: 0 10px
+        margin: 0 10px !important
 
         &-active
           background-color: $white
