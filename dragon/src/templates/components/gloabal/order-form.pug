@@ -1,0 +1,62 @@
+section.order-form(class=`order-form_${orderFormModifier}`)
+  .container.container_xs
+    h2.order-form__title #{orderFormTitle}
+    p.order-form__txt #{orderFormTxt}
+    form.form.order-form__fields
+      .order-form__fields-top
+        .form__field
+          input.form__field-input(type="text" required name="firstName")
+          span.form__field-placeholder Имя
+          span.form__field-error Это поле не может быть пустым
+        .form__field
+          input.form__field-input(type="text" name="lastName")
+          span.form__field-placeholder Фамилия
+        .form__field.error
+          input.form__field-input(type="text" required name="phone")
+          span.form__field-placeholder Телефон
+          span.form__field-error Это поле не может быть пустым
+        .form__field
+          input.form__field-input(type="text" name="city")
+          span.form__field-placeholder Город
+        .form__field
+          input.form__field-input(type="email" name="email")
+          span.form__field-placeholder Email
+      .order-form__fields-bottom
+        h3.order-form__subtitle Транспортное средство:
+        .order-form__fields-container
+          .form__select
+            input(type="hidden" name="type" value="")
+            .form__select-visible
+              .form__select-visible-value Тип
+              .form__select-visible-vector
+                img(src=require('@/assets/img/global/vector-down.svg') alt="")
+            .form__select-options
+              .form__select-options-item Городские автобусы
+              .form__select-options-item Междугородные автобусы
+              .form__select-options-item Туристические автобусы
+              .form__select-options-item Электрический транспорт
+          .form__select
+            input(type="hidden" name="seats" value="")
+            .form__select-visible
+              .form__select-visible-value Количество мест
+              .form__select-visible-vector
+                img(src=require('@/assets/img/global/vector-down.svg') alt="")
+            .form__select-options
+              .form__select-options-item 15+2
+              .form__select-options-item 26
+              .form__select-options-item 27+2
+              .form__select-options-item 28+2
+              .form__select-options-item 33
+              .form__select-options-item 39+1
+              .form__select-options-item 51+1
+          textarea.form__textarea(placeholder='Сообщение')
+        .form__checkbox
+          input#orderFormPolicy(type="checkbox" required)
+          label(for="orderFormPolicy") Я согласен с #[a(href="javascript:") Политикой конфидициальности]
+        button.btn.btn_trans.btn_trans_lg.order-form__submit(type="submit")
+          span Отправить
+
+
+
+
+

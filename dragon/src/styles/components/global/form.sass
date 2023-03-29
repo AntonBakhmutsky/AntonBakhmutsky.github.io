@@ -119,17 +119,96 @@
             width: 30px
             height: 30px
 
-  .btn
-    width: 240px
-    height: 66px
-    margin: 45px auto 0
-    background-color: white
-    +font(22px, 23px, 500)
-    +screen($desktop)
-      +font(18px, 19px, 500)
-      width: 181px
-      height: 53px
-    +screen($tablet)
-      width: 262px
+  &__select
+    position: relative
+
+    &.selected
+      .form__select-visible-value
+        font-weight: 500
+        color: $white
+
+    &.open
+      .form__select
+        &-visible-vector
+          transform: rotate(180deg)
+
+        &-options
+          visibility: visible
+          opacity: 1
+          pointer-events: auto
+
+    &-visible
       height: 60px
-      +font(20px, 21px, 500)
+      display: flex
+      align-items: center
+      justify-content: space-between
+      box-sizing: border-box
+      color: #BBBBBB
+      padding: 17px 14px
+      border: 1px solid #BBBBBB
+      +font(18px, 18px)
+      cursor: pointer
+      +screen($desktop)
+        height: 54px
+        +font(16px, 16px)
+
+      &-vector
+        transition: transform .3s
+
+    &-options
+      width: 100%
+      position: absolute
+      left: 0
+      top: calc(100% + 4px)
+      transition: opacity .3s, visibility .3s
+      background-color: $white
+      +font(18px, 26px)
+      color: $black
+      z-index: 1
+      visibility: hidden
+      opacity: 0
+      pointer-events: none
+      +screen($tablet)
+        +font(16px, 26px)
+
+      &-item
+        box-sizing: border-box
+        padding: 7px 14px
+        position: relative
+        cursor: pointer
+        transition: color .3s
+        +screen($tablet)
+          padding: 10px 14px
+
+        &.active
+          color: $orange
+
+        &:first-child
+          +screen($tablet)
+            padding-top: 20px
+
+        &:last-child
+          +screen($tablet)
+            padding-bottom: 20px
+
+        &:hover, &:active
+          color: $orange
+
+  &__textarea
+    height: 178px
+    box-sizing: border-box
+    padding: 17px 14px
+    border: 1px solid #BBBBBB
+    +font(18px, 21px, 500)
+    color: $white
+    +screen($desktop)
+      +font(16px, 21px, 500)
+      height: 174px
+    +screen($tablet)
+      padding: 14px
+
+    &::placeholder
+      color: #BBBBBB
+      +font(18px, 26px)
+      +screen($desktop)
+        +font(16px, 26px)

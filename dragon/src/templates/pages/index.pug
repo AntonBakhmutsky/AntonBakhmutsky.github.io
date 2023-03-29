@@ -1,5 +1,11 @@
 extends ../layouts/main/layout.pug
 
+append variables
+  -
+    orderFormTitle = 'Свяжитесь с нами'
+    orderFormTxt = 'Оставьте заявку и мы свяжемся с вами в ближайшее время'
+    orderFormModifier = 'main'
+
 block title
   | Golden Dragon
 
@@ -10,4 +16,5 @@ block content
   include ../components/main-page/main-lineup
   include ../components/main-page/main-dealers
   include ../components/main-page/main-news
+  include ../components/gloabal/order-form
 

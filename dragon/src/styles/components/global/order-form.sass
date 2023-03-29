@@ -1,0 +1,120 @@
+@use '../../abstracts/variables' as *
+@use '../../abstracts/mixins' as *
+
+.order-form
+  padding: 50px 0
+  color: $white
+  +screen($tablet)
+    padding: 30px 0 40px
+
+  &_main
+    background: url(../assets/img/main-page/main-form-bg.jpg) no-repeat center/cover
+
+  &__title
+    +font(50px, 59px, 700)
+    text-align: center
+    +screen($desktop)
+      +font(37px, 43px, 700)
+    +screen($tablet)
+      +font(30px, 35px, 700)
+      text-align: left
+
+  &__txt
+    +font(24px, 26px)
+    text-align: center
+    margin-top: 14px
+    +screen($desktop)
+      +font(18px, 26px)
+      margin-top: 15px
+    +screen($tablet)
+      +font(16px, 26px)
+      text-align: left
+      margin-top: 12px
+
+  &__subtitle
+    +font(22px, 26px, 500)
+    +screen($desktop)
+      +font(18px, 26px, 500)
+    +screen($tablet)
+      +font(16px, 26px, 500)
+
+  &__submit
+    margin: 66px auto 0
+
+  &__fields
+    margin-top: 56px
+    +screen($desktop)
+      margin-top: 40px
+
+    &-container
+      display: grid
+      grid-template-columns: repeat(2, 1fr)
+      grid-gap: 30px 20px
+      margin-top: 20px
+      +screen($desktop)
+        margin-top: 12px
+      +screen($tablet)
+        grid-gap: 26px
+        grid-template-columns: 1fr
+
+    &-top
+      display: grid
+      grid-template-columns: repeat(2, 1fr)
+      grid-gap: 30px 20px
+      +screen($tablet)
+        grid-gap: 26px
+        grid-template-columns: 1fr
+
+      .form__field
+        &:last-child
+          grid-column: span 2
+          +screen($tablet)
+            grid-column: auto
+
+    &-bottom
+      margin-top: 40px
+      +screen($tablet)
+        margin-top: 35px
+
+
+  .form
+    &__textarea
+      grid-column: span 2
+      +screen($tablet)
+        grid-column: auto
+        margin-top: 32px
+
+    &__checkbox
+      margin-top: 40px
+      +screen($tablet)
+        margin-top: 30px
+
+    &__field
+      margin: 0
+
+      &.focus
+        &:after
+          background-color: $white
+          opacity: .7
+
+      &.error
+        &:after
+          background-color: #FF8282
+          opacity: 1
+
+        .form__field-error
+          color: #FF8282
+
+      &-placeholder
+        color: #BBBBBB
+
+      &-error
+        color: #FF8282
+
+      &-input
+        color: $white
+        border-color: #BBBBBB
+
+        &:required + .form__field-placeholder
+          &:after
+            color: #BBBBBB
