@@ -14,6 +14,8 @@ block title
 
 block content
   section.lineup
+    .lineup__glyphs.slide-left
+      img(src=require('@/assets/img/lineup/glyphs.svg') alt="")
     .container
       h2.section-title.slide-right Модельный ряд
     form.lineup__filter.horizontal-scroll.slide-left
@@ -22,7 +24,11 @@ block content
       button.lineup__filter-item Междугородние
       button.lineup__filter-item Туристические
       button.lineup__filter-item Электрический транспорт
-    .lineup__grid.container
+    .lineup__grid.container.slide-up
+      each el in lineupCards
+        +product-card(el)
+
+
 
 
 

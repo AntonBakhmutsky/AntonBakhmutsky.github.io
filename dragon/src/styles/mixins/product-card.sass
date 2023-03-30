@@ -1,0 +1,168 @@
+@use '../abstracts/variables' as *
+@use '../abstracts/mixins' as *
+
+.product-card
+  &__top
+    height: 423px
+    position: relative
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-items: flex-start
+    +screen($desktop)
+      height: 353px
+    +screen($tablet-xs)
+      height: 206px
+
+  &__image
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    display: flex
+
+    img
+      width: 100%
+      height: 100%
+      object-position: center
+      object-fit: cover
+
+  &__params
+    z-index: 1
+    box-sizing: border-box
+    padding: 14px 20px
+    display: flex
+    gap: 9px
+    +font(16px, 16px, 500)
+    +screen($desktop)
+      +font(14px, 16px, 500)
+      gap: 7px
+      padding: 12px 15px
+    +screen($tablet)
+      +font(10px, 11px, 500)
+      gap: 6px
+      padding: 10px 16px
+
+    &-type, &-fuel
+      background-color: $white
+
+    &-type
+      border-radius: 26px
+      padding: 7px 16px
+      +screen($desktop)
+        padding: 5px 16px
+
+    &-fuel
+      border-radius: 21px
+      padding: 7px 10px 7px 37px
+      position: relative
+      +screen($desktop)
+        padding: 5px 10px 5px 37px
+      +screen($tablet)
+        padding-left: 26px
+
+      &_electricity
+        span
+          background: $orange url(../assets/img/lineup/electricity.svg) no-repeat center
+          +screen($desktop)
+            background-size: 11px 18px
+          +screen($tablet)
+            background-size: 7px 14px
+
+      &_gas
+        span
+          background: $blue url(../assets/img/lineup/gas.svg) no-repeat center
+          +screen($desktop)
+            background-size: 9px 14px
+          +screen($tablet)
+            background-size: 7px 11px
+
+      &_diesel
+        span
+          background: $black url(../assets/img/lineup/diesel.svg) no-repeat center
+          +screen($desktop)
+            background-size: 10px 15px
+          +screen($tablet)
+            background-size: 7px 10px
+
+      span
+        display: flex
+        width: 30px
+        height: 30px
+        border-radius: 50%
+        position: absolute
+        left: -1px
+        top: 0
+        +screen($desktop)
+          width: 26px
+          height: 26px
+        +screen($tablet)
+          width: 21px
+          height: 21px
+
+  &__title
+    z-index: 1
+    box-sizing: border-box
+    padding: 23px 20px 11px
+    background-color: $white
+    transform: translate(-1px, 6px)
+    +font(24px, 27px, 700)
+    +screen($desktop)
+      +font(22px, 27px, 700)
+      padding: 15px 16px 5px
+    +screen($tablet)
+      +font(18px, 27px, 700)
+      padding: 11px 16px 7px
+
+  &__bottom
+    margin-top: 16px
+    +screen($desktop)
+      margin-top: 14px
+    +screen($tablet)
+      margin-top: 12px
+
+  &__options
+    &-item
+      padding: 8px 20px
+      display: flex
+      align-items: center
+      justify-content: space-between
+      +screen($desktop)
+        padding: 2px 16px
+      +screen($tablet)
+        padding: 8px 16px
+        flex-direction: column
+        align-items: flex-start
+
+      &:nth-child(even)
+        background-color: #F5F5F5
+
+      span
+        +font(18px, 28px)
+        +screen($desktop)
+          font-size: 16px
+        +screen($tablet)
+          +font(14px, 16px)
+
+        &:nth-child(1)
+          color: #787878
+
+        &:nth-child(2)
+          +screen($tablet)
+            margin-top: 4px
+            font-weight: 500
+
+  &__link
+    margin-top: 26px
+    width: 275px
+    height: 60px
+    +font(20px, 21px, 500)
+    +screen($desktop)
+      width: 244px
+      height: 52px
+      +font(18px, 19px, 500)
+    +screen($tablet)
+      margin-top: 20px
+      height: 54px
+      width: 100%
