@@ -1,9 +1,9 @@
 section.order-form(class=`order-form_${orderFormModifier}`)
   .container.container_xs
-    h2.order-form__title #{orderFormTitle}
-    p.order-form__txt #{orderFormTxt}
+    h2.order-form__title.slide-down #{orderFormTitle}
+    p.order-form__txt.slide-down #{orderFormTxt}
     form.form.order-form__fields
-      .order-form__fields-top
+      .order-form__fields-top.slide-left
         .form__field
           input.form__field-input(type="text" required name="firstName")
           span.form__field-placeholder Имя
@@ -21,7 +21,7 @@ section.order-form(class=`order-form_${orderFormModifier}`)
         .form__field
           input.form__field-input(type="email" name="email")
           span.form__field-placeholder Email
-      .order-form__fields-bottom
+      .order-form__fields-bottom.slide-up
         h3.order-form__subtitle Транспортное средство:
         .order-form__fields-container
           .form__select
@@ -50,10 +50,10 @@ section.order-form(class=`order-form_${orderFormModifier}`)
               .form__select-options-item 39+1
               .form__select-options-item 51+1
           textarea.form__textarea(placeholder='Сообщение')
-        .form__checkbox
+        .form__checkbox.slide-right
           input#orderFormPolicy(type="checkbox" required)
           label(for="orderFormPolicy") Я согласен с #[a(href="javascript:") Политикой конфидициальности]
-        button.btn.btn_trans.btn_trans_lg.order-form__submit(type="submit")
+        button.btn.btn_trans.btn_trans_lg.order-form__submit.slide-right(type="submit")
           span Отправить
 
 
