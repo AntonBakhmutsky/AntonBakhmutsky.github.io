@@ -18,14 +18,20 @@ window.addEventListener('load', () => {
       },
     })
 
-    const sliderCounterLength = document.querySelector('.swiper-counter-length span')
-    const sliderCounterProgress = document.querySelector('.swiper-counter-progress span')
+    const counter = document.querySelector('.swiper-counter')
 
-    sliderCounterLength.textContent = slider.slides.length.toString()
-    sliderCounterProgress.textContent = (slider.realIndex + 1).toString()
+    if (slider.slides.length > 1) {
+      const sliderCounterLength = document.querySelector('.swiper-counter-length span')
+      const sliderCounterProgress = document.querySelector('.swiper-counter-progress span')
 
-    slider.on('slideChange', () => {
+      sliderCounterLength.textContent = slider.slides.length.toString()
       sliderCounterProgress.textContent = (slider.realIndex + 1).toString()
-    })
+
+      slider.on('slideChange', () => {
+        sliderCounterProgress.textContent = (slider.realIndex + 1).toString()
+      })
+    } else {
+      counter.classList.add('disabled')
+    }
   }
 })

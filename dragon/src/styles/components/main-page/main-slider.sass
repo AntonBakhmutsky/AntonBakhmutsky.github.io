@@ -2,7 +2,7 @@
 @use '../../abstracts/mixins' as *
 
 .main-slider
-  width: 100vw
+  width: 100%
   height: calc(var(--vh, 1vh) * 100)
   position: relative
 
@@ -118,6 +118,7 @@
         bottom: 76px
         left: auto
         +screen($desktop)
+          bottom: 50px
           width: 40px
           height: 40px
         +screen($tablet)
@@ -140,21 +141,34 @@
       &-prev
         right: 351px
         +screen($desktop)
-          right: 130px
+          right: 257px
 
       &-next
         right: 186px
+        +screen($desktop)
+          right: 128px
 
     &-counter
       position: absolute
       right: 266px
-      bottom: 88px
+      bottom: 89px
       width: 55px
       height: 24px
       +font(20px, 24px)
       color: $white
       z-index: 1
       display: flex
+      +screen($desktop)
+        bottom: 60px
+        right: 188px
+        width: 49px
+        height: 21px
+        +font(18px, 21px)
+      +screen($tablet)
+        display: none
+
+      &.disabled
+        display: none
 
     &-pagination
       display: none
