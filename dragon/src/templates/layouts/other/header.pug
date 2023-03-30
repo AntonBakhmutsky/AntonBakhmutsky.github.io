@@ -7,30 +7,20 @@ header.header
         a(href="javascript:")
           img(src=require('@/assets/img/header/dragon-logo.png') alt="")
           | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/header/dragon-caption-white.svg')}
+      form.header__search.slide-down
+        .header__search-field
+          input#search(type="text" name="search" placeholder="Поиск...")
+        .header__search-btn
       .header__contacts.slide-left
         a.header__contacts-phone(href="tel:88002223480")
-          span 8 (800) 222-34-80
-        .header__search
-          | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/header/loupe.svg')}
-        a.header__login(href="javascript:")
-          | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/header/login.svg')}
-          span Войти
+          span 8 (800) #[span 222-34-80]
         .header__burger
           .header__burger-line
           .header__burger-line
     .header__bottom
       nav.menu.slide-right
         each el in headerMenu
-          if (el.url)
-            a.menu__item(href=el.url) #{el.txt}
-          if (el.drop)
-            .menu__drop
-              .menu__drop-title
-                span #{el.txt}
-                | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/header/vector-down.svg')}
-              .menu__drop-links
-                each link in el.drop
-                  a(href=link.url) #{link.txt}
+          a.menu__item(href=el.url) #{el.txt}
         a.header__contacts-phone(href="tel:88002223480")
           | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/header/phone.svg')}
           span 8 (800) 222-34-80
