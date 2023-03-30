@@ -1,8 +1,30 @@
 extends ../layouts/other/layout.pug
 
+append variables
+  -
+    breadCrumbsList = [
+      {
+        url: '/',
+        txt: 'Главная'
+      }
+    ]
+
 block title
   | Golden Dragon
 
 block content
+  section.lineup
+    .container
+      h2.section-title.slide-right Модельный ряд
+    form.lineup__filter.horizontal-scroll.slide-left
+      button.lineup__filter-item.active Все
+      button.lineup__filter-item Городские
+      button.lineup__filter-item Междугородние
+      button.lineup__filter-item Туристические
+      button.lineup__filter-item Электрический транспорт
+    .lineup__grid.container
+
+
+
 
 

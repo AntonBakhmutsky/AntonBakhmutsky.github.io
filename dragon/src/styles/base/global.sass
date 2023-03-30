@@ -26,7 +26,7 @@ body
 .body_fix
   overflow: hidden
 
-.container
+.container, .lineup__filter
   position: relative
   width: 100%
   max-width: 1920px
@@ -220,8 +220,6 @@ textarea
         opacity: 1
         visibility: visible
 
-  &_white
-
   span
     z-index: 2
 
@@ -240,3 +238,13 @@ section
       +font(56px, 62px, 800)
     +screen($tablet)
       +font(34px, 38px, 800)
+
+.horizontal-scroll
+  overflow: auto
+  scrollbar-width: none
+
+  &::-webkit-scrollbar
+    width: 0
+    height: 0
+    display: none
+    visibility: hidden
