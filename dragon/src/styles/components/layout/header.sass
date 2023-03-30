@@ -74,7 +74,7 @@
               background-color: $white
 
       &__search
-        &-btn
+        &-btn, &-mobile-btn
           background-image: url(../assets/img/header/loupe-white.svg)
 
           &.disabled
@@ -373,6 +373,8 @@
       height: 40px
       width: 0
       transition: width .3s, flex-grow .3s
+      +screen($tablet)
+        display: none
 
       &.active
         width: auto
@@ -396,7 +398,16 @@
         path
           fill: $orange
 
+    &-mobile-btn
+      display: none
+      +screen($tablet)
+        display: block
+
     &-btn
+      +screen($tablet)
+        display: none
+
+    &-btn, &-mobile-btn
       flex-shrink: 0
       width: 28px
       height: 28px

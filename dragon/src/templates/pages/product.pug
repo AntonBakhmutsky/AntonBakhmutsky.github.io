@@ -1,0 +1,18 @@
+extends ../layouts/other/layout.pug
+
+append variables
+  -
+    breadCrumbsList = [
+      {
+        url: '/',
+        txt: 'Главная'
+      },
+      {
+        url: 'lineup.html',
+        txt: 'Модельный ряд'
+      }
+    ]
+block title
+  | Golden Dragon
+
+block content
