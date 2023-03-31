@@ -1,3 +1,37 @@
 section.product-top
   .container
-
+    .product-top__slider
+      .swiper.swiper_main
+        .swiper-wrapper
+          each el in productSlider
+            .swiper-slide
+              img.cover-image(src=el alt="")
+        .swiper-pagination
+      .swiper.swiper_thumb(thumbsSlider="")
+        .swiper-wrapper
+          each el in productSlider
+            .swiper-slide
+              img.cover-image(src=el alt="")
+        .swiper-button-prev
+          img(src=require('@/assets/img/global/vector-up-product.svg') alt="")
+        .swiper-button-next
+          img(src=require('@/assets/img/global/vector-down-product.svg') alt="")
+    .product-modal
+      .product-modal__body
+        .product-modal__close
+          .product-modal__close-image
+            img.cover-image(src=require('@/assets/img/global/product-modal-close.svg') alt="")
+        .swiper.swiper_thumb(thumbsSlider="")
+          .swiper-wrapper
+            each el in productSlider
+              .swiper-slide
+                img.cover-image(src=el alt="")
+          .swiper-button-prev
+            img(src=require('@/assets/img/global/vector-up-product.svg') alt="")
+          .swiper-button-next
+            img(src=require('@/assets/img/global/vector-down-product.svg') alt="")
+        .swiper.swiper_main
+          .swiper-wrapper
+            each el in productSlider
+              .swiper-slide
+                img.cover-image(src=el alt="")
