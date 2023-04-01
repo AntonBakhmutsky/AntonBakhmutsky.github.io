@@ -89,14 +89,15 @@
         max-height: calc(100vh - 204px)
         box-sizing: border-box
         width: 100%
-        +screen($desktop)
         +screen($tablet)
+          max-height: 100vh
           width: auto
 
         .swiper
           &-slide
+            display: flex
             +screen($tablet)
-
+              padding-bottom: 30px
           &-wrapper
             box-sizing: border-box
 

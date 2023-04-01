@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c6251b5-a5a4-4f8e-bc86-c912a51caee8" name="Changes" comment="clear work tree">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/app.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dragon/src/styles/components/product/product-modal.sass" beforeDir="false" afterPath="$PROJECT_DIR$/../dragon/src/styles/components/product/product-modal.sass" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +51,7 @@
       <workItem from="1680187259271" duration="23000" />
       <workItem from="1680340813752" duration="2416000" />
       <workItem from="1680347123455" duration="990000" />
+      <workItem from="1680350177621" duration="304000" />
     </task>
     <task id="LOCAL-00001" summary="clear work tree">
       <created>1679484871054</created>
