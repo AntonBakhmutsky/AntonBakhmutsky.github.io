@@ -2,7 +2,11 @@
 @use '../../abstracts/mixins' as *
 
 .product-top
-  padding: 60px 0 80px
+  padding-top: 40px
+  +screen($desktop)
+    padding: 36px
+  +screen($tablet)
+    padding-top: 26px
 
   .container
     +screen($tablet)

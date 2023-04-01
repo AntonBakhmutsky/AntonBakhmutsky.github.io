@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1c6251b5-a5a4-4f8e-bc86-c912a51caee8" name="Changes" comment="clear work tree">
-      <change beforePath="$PROJECT_DIR$/../dragon/src/styles/components/product/product-modal.sass" beforeDir="false" afterPath="$PROJECT_DIR$/../dragon/src/styles/components/product/product-modal.sass" afterDir="false" />
-    </list>
+    <list default="true" id="1c6251b5-a5a4-4f8e-bc86-c912a51caee8" name="Changes" comment="clear work tree" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -47,7 +45,7 @@
       <workItem from="1680184143997" duration="116000" />
       <workItem from="1680184742775" duration="30000" />
       <workItem from="1680187259271" duration="23000" />
-      <workItem from="1680340813752" duration="1809000" />
+      <workItem from="1680340813752" duration="2416000" />
     </task>
     <task id="LOCAL-00001" summary="clear work tree">
       <created>1679484871054</created>
@@ -112,7 +110,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680343226973</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="clear work tree">
+      <created>1680344310954</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1680344310954</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
