@@ -63,14 +63,11 @@ window.addEventListener('load', () => {
       breakpoints: {
         320: {
           slidesPerView: 'auto',
-          spaceBetween: 0,
         },
         1025: {
-          spaceBetween: 40
         },
         1521: {
           centeredSlides: true,
-          spaceBetween: 60
         }
       }
     })
