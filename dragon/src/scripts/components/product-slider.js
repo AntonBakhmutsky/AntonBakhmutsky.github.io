@@ -1,4 +1,4 @@
-import Swiper, {Navigation, Thumbs, Pagination} from 'swiper'
+import Swiper, {Navigation, Thumbs, Pagination, FreeMode} from 'swiper'
 
 window.addEventListener('load', () => {
   if (!document.querySelector('.product-top__slider')) {
@@ -55,7 +55,7 @@ window.addEventListener('load', () => {
       }
     })
     const modalMainSlider = new Swiper('.product-modal .swiper.swiper_main', {
-      modules: [Thumbs],
+      modules: [Thumbs, FreeMode],
       direction: 'vertical',
       thumbs: {
         swiper: modalThumbSlider,
@@ -63,8 +63,13 @@ window.addEventListener('load', () => {
       breakpoints: {
         320: {
           slidesPerView: 'auto',
+          freeMode: {
+            enabled: true,
+            momentum: false
+          },
         },
         1025: {
+          freeMode: false
         },
         1521: {
           centeredSlides: true,
