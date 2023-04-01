@@ -282,10 +282,15 @@
 
       span
         span
+          transition: color .3s
           color: $orange
 
       &:hover:not(:active)
-        color: $orange
+        color: $black
+
+        span
+          span
+            color: $black
 
         svg
           path
