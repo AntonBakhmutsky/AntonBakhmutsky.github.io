@@ -26,6 +26,9 @@
           max-height: 69px
           padding-bottom: 8px
           overflow: visible
+          +screen($tablet)
+            max-height: 0
+            padding-bottom: 0
 
     .header
       &__logos
@@ -180,6 +183,8 @@
         right: 0
 
   &:not(.header_main)
+    border-bottom: 2px solid #E8E8E8 !important
+
     .header
       &__logos
         svg
