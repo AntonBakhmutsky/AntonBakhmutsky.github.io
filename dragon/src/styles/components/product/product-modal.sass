@@ -55,12 +55,17 @@
     &-image
       width: 30px
       height: 30px
+      cursor: pointer
+      transition: opacity .3s
       +screen($desktop)
         width: 20px
         height: 20px
       +screen($tablet)
         width: 18px
         height: 18px
+
+      &:hover:not(:active)
+        opacity: .6
 
   &__body
     display: flex

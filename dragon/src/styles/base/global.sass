@@ -258,3 +258,63 @@ section
 .swiper
   margin: 0
   user-select: none
+
+
+  &_thumb
+    width: 80px
+    flex-shrink: 0
+    padding: 42px 0
+    +screen($desktop)
+      width: 60px
+    +screen($tablet)
+      display: none
+
+    &:before, &:after
+      content: ''
+      position: absolute
+      left: 0
+      width: 80px
+      height: 42px
+      background-color: $white
+      z-index: 10
+
+    &:before
+      top: 0
+
+    &:after
+      bottom: 0
+
+    .swiper
+      &-button
+        &-next, &-prev
+          top: auto
+          right: auto
+          z-index: 11
+          margin: 0
+          display: flex
+          left: 50%
+          transform: translateX(-50%)
+
+          &:after
+            display: none
+
+        &-next
+          align-items: flex-end
+          bottom: 0
+
+        &-prev
+          align-items: flex-start
+          top: 0
+
+      &-slide
+        opacity: .6
+        transition: opacity .3s
+        cursor: pointer
+        +screen($desktop)
+          height: 60px
+
+        &:hover
+          opacity: 1
+
+        &-thumb-active
+          opacity: 1

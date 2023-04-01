@@ -10,6 +10,7 @@ window.addEventListener('load', () => {
       freeMode: true,
       watchSlidesProgress: true,
       direction: 'vertical',
+      slidesPerGroup: 5,
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
@@ -92,6 +93,7 @@ window.addEventListener('load', () => {
         modalCloseContainer.classList.add('disabled')
       }
     })
+
     modalMainSlider.on('slidePrevTransitionStart', () => {
       if (modalCloseContainer.classList.contains('disabled')) {
         modalCloseContainer.classList.remove('disabled')
