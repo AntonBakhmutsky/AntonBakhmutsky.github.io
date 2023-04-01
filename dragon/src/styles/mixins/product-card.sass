@@ -47,7 +47,7 @@
       gap: 6px
       padding: 10px 16px
 
-    &-type, &-fuel
+    &-type
       background-color: $white
 
     &-type
@@ -55,54 +55,6 @@
       padding: 7px 16px
       +screen($desktop)
         padding: 5px 16px
-
-    &-fuel
-      border-radius: 21px
-      padding: 7px 10px 7px 37px
-      position: relative
-      +screen($desktop)
-        padding: 5px 10px 5px 37px
-      +screen($tablet)
-        padding-left: 26px
-
-      &_electricity
-        span
-          background: $orange url(../assets/img/lineup/electricity.svg) no-repeat center
-          +screen($desktop)
-            background-size: 11px 18px
-          +screen($tablet)
-            background-size: 7px 14px
-
-      &_gas
-        span
-          background: $blue url(../assets/img/lineup/gas.svg) no-repeat center
-          +screen($desktop)
-            background-size: 9px 14px
-          +screen($tablet)
-            background-size: 7px 11px
-
-      &_diesel
-        span
-          background: $black url(../assets/img/lineup/diesel.svg) no-repeat center
-          +screen($desktop)
-            background-size: 10px 15px
-          +screen($tablet)
-            background-size: 7px 10px
-
-      span
-        display: flex
-        width: 30px
-        height: 30px
-        border-radius: 50%
-        position: absolute
-        left: -1px
-        top: 0
-        +screen($desktop)
-          width: 26px
-          height: 26px
-        +screen($tablet)
-          width: 21px
-          height: 21px
 
   &__title
     z-index: 1

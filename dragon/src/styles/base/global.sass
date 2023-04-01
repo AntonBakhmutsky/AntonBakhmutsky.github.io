@@ -233,11 +233,11 @@ section
 
 .section
   &-title
-    +font(66px, 70px, 800)
+    +font(50px, 60px, 800)
     +screen($desktop)
-      +font(56px, 62px, 800)
+      +font(40px, 40px, 800)
     +screen($tablet)
-      +font(34px, 38px, 800)
+      +font(30px, 30px, 800)
 
 .horizontal-scroll
   overflow: auto
@@ -318,3 +318,88 @@ section
 
         &-thumb-active
           opacity: 1
+
+.fuel
+  border-radius: 21px
+  padding: 7px 10px 7px 37px
+  position: relative
+  background-color: $white
+  +screen($desktop)
+    padding: 5px 10px 5px 37px
+  +screen($tablet)
+    padding-left: 26px
+
+  &_electricity
+    span
+      background: $orange url(../assets/img/global/electricity.svg) no-repeat center
+      +screen($desktop)
+        background-size: 11px 18px
+      +screen($tablet)
+        background-size: 7px 14px
+
+    &:after
+      content: 'электричество'
+
+  &_gas
+    span
+      background: $blue url(../assets/img/global/gas.svg) no-repeat center
+      +screen($desktop)
+        background-size: 9px 14px
+      +screen($tablet)
+        background-size: 7px 11px
+
+    &:after
+      content: 'газ'
+
+  &_diesel
+    span
+      background: $black url(../assets/img/global/diesel.svg) no-repeat center
+      +screen($desktop)
+        background-size: 10px 15px
+      +screen($tablet)
+        background-size: 7px 10px
+
+    &:after
+      content: 'дизель'
+
+  span
+    display: flex
+    width: 30px
+    height: 30px
+    border-radius: 50%
+    position: absolute
+    left: -1px
+    top: 0
+    +screen($desktop)
+      width: 26px
+      height: 26px
+    +screen($tablet)
+      width: 21px
+      height: 21px
+
+.stock
+  box-sizing: border-box
+  padding: 8px 12px
+  +font(16px, 16px, 500)
+  border: 1px solid $green
+  border-radius: 21px
+  color: $green
+  +screen($tablet)
+    +font(14px, 14px, 500)
+    padding: 7px 12px
+
+  &:after
+    display: block
+    margin-top: -1px
+
+  &_in
+    &:after
+      content: 'в наличии'
+
+  &_out
+    color: #8C8C8C
+    border-color: #8C8C8C
+
+    &:after
+      content: 'нет в наличии'
+
