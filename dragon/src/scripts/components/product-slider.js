@@ -66,12 +66,10 @@ window.addEventListener('load', () => {
           spaceBetween: 0,
         },
         1025: {
-          slidesPerView: 1.5,
           spaceBetween: 40
         },
         1521: {
           centeredSlides: true,
-          slidesPerView: 1.4,
           spaceBetween: 60
         }
       }
