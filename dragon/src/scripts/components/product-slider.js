@@ -23,7 +23,7 @@ window.addEventListener('load', () => {
         }
       }
     })
-    const mainSlider = new Swiper('.product-top__slider .swiper.swiper_main', {
+    new Swiper('.product-top__slider .swiper.swiper_main', {
       modules: [Pagination, Thumbs],
       pagination: {
         el: '.swiper-pagination',
@@ -39,6 +39,7 @@ window.addEventListener('load', () => {
       freeMode: true,
       watchSlidesProgress: true,
       direction: 'vertical',
+      slidesPerGroup: 5,
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
@@ -52,7 +53,7 @@ window.addEventListener('load', () => {
         }
       }
     })
-    new Swiper('.product-modal .swiper.swiper_main', {
+    const modalMainSlider = new Swiper('.product-modal .swiper.swiper_main', {
       modules: [Thumbs],
       direction: 'vertical',
       thumbs: {
@@ -61,13 +62,14 @@ window.addEventListener('load', () => {
       breakpoints: {
         320: {
           slidesPerView: 'auto',
-          spaceBetween: 30,
+          spaceBetween: 0,
         },
         1025: {
           slidesPerView: 1.5,
           spaceBetween: 40
         },
         1521: {
+          centeredSlides: true,
           slidesPerView: 1.4,
           spaceBetween: 60
         }
@@ -85,11 +87,18 @@ window.addEventListener('load', () => {
         document.body.classList.toggle('body_fix')
     }
 
-    // mainSlider.on('s')
+    modalMainSlider.on('slideNextTransitionStart', () => {
+      if (window.innerWidth < 1025) {
+        modalCloseContainer.classList.add('disabled')
+      }
+    })
+    modalMainSlider.on('slidePrevTransitionStart', () => {
+      if (modalCloseContainer.classList.contains('disabled')) {
+        modalCloseContainer.classList.remove('disabled')
+      }
+    })
 
     slides.forEach(el => el.addEventListener('click', toggleModal))
     modalClose.addEventListener('click', toggleModal)
-
-
   }
 })

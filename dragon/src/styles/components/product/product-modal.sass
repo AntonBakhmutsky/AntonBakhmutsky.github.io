@@ -12,9 +12,9 @@
   box-sizing: border-box
   padding: 0 246px 0 100px
   transition: visibility .3s, opacity .3s
-  //visibility: hidden
-  //opacity: 0
-  //pointer-events: none
+  visibility: hidden
+  opacity: 0
+  pointer-events: none
   +screen($desktop)
     padding: 0 174px 0 60px
   +screen($tablet)
@@ -82,7 +82,7 @@
       &_main
         max-width: none
         max-height: 100vh
-        padding-top: 151px
+        box-sizing: border-box
         width: 100%
         +screen($desktop)
           padding-top: 85px
@@ -91,4 +91,10 @@
 
         .swiper
           &-slide
+            +screen($tablet)
+              padding-bottom: 30px
+
+          &-wrapper
+            box-sizing: border-box
+
 
