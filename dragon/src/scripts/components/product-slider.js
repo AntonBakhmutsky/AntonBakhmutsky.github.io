@@ -69,10 +69,12 @@ window.addEventListener('load', () => {
           },
         },
         1025: {
-          freeMode: false
+          freeMode: false,
+          spaceBetween: 10
         },
         1521: {
           centeredSlides: true,
+          spaceBetween: 10
         }
       }
     })
