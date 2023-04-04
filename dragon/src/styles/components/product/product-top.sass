@@ -13,6 +13,7 @@
     grid-template: 180px 1fr / 1fr 460px
     grid-gap: 0 50px
     +screen($tablet)
+      grid-gap: 0 40px
       padding: 0
       grid-template: auto / 1fr
 
@@ -113,6 +114,19 @@
 
       .fuel
         border: 1px solid #D9D9D9
+
+        span
+          top: -1px
+          width: 34px
+          height: 34px
+          +screen($desktop)
+            top: 0
+            width: 31px
+            height: 31px
+          +screen($tablet)
+            top: -1px
+            height: 30px
+            width: 30px
 
     &-guarantee
       margin-top: 44px

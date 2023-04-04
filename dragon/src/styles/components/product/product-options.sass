@@ -129,10 +129,11 @@
     align-items: center
     box-sizing: border-box
     padding: 16px 40px
-    +font(20px, 28px)
+    +font(18px, 28px)
+    gap: 50px
     +screen($desktop)
       padding: 16px 30px
-      +font(18px, 28px)
+      +font(16px, 28px)
     +screen($tablet)
       padding: 12px 16px
       flex-direction: column
@@ -145,12 +146,12 @@
 
     &-name
       font-weight: 500
-      flex-basis: 30%
+      flex-basis: 35%
       +screen($tablet)
         flex-basis: auto
 
     &-value
-      flex-basis: 70%
+      flex-basis: 65%
       +screen($tablet)
         flex-basis: auto
 
