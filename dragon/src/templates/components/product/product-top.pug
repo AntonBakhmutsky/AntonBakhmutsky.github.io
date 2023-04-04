@@ -1,6 +1,6 @@
 section.product-top
   .container
-    .product-top__slider
+    .product-top__slider.slide-right
       .swiper.swiper_main
         .swiper-wrapper
           each el in productSlider
@@ -16,14 +16,14 @@ section.product-top
           img(src=require('@/assets/img/global/vector-up-product.svg') alt="")
         .swiper-button-next
           img(src=require('@/assets/img/global/vector-down-product.svg') alt="")
-    .product-top__desc
+    .product-top__desc.slide-down
       .product-top__desc-type Туристический автобус
       h3.product-top__desc-title Triumph XML6126.JR
       .product-top__desc-params
         .fuel.fuel_diesel #[span]
         .stock.stock_in
       .product-top__desc-guarantee #[span Гарантия:] #[span 2 года или 150 000 км]
-    .product-top__links
+    .product-top__links.slide-up
       a.btn.btn_orange
         span Заказать
       .product-top__links-item.product-top__links-item_leasing

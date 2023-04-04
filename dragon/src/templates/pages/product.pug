@@ -13,9 +13,15 @@ append variables
       }
     ]
     productPage = true
+    orderFormTitle = 'Заявка на приобретение транспортного средства'
+    orderFormTxt = 'Оставьте свои контактные данные, и мы свяжемся с вами в ближайшее время'
+    orderFormModifier = 'product'
+
 block title
   | Golden Dragon
 
 block content
   include ../components/product/product-top
   include ../components/product/product-options
+  include ../components/product/product-similar
+  include ../components/gloabal/order-form

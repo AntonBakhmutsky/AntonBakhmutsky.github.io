@@ -9,11 +9,12 @@ mixin product-card(params)
         .fuel(class=`fuel_${params.fuel}`) #[span]
       h3.product-card__title #{params.title}
     .product-card__bottom
-      .product-card__options
-        each option in params.options
-          .product-card__options-item
-            span #{option.name}
-            span #{option.value}
+      if (params.options)
+        .product-card__options
+          each option in params.options
+            .product-card__options-item
+              span #{option.name}
+              span #{option.value}
       a.product-card__link.btn.btn_orange(href="product.html")
         span Подробнее
 
