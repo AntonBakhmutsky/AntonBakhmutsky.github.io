@@ -1,0 +1,90 @@
+@use '../../abstracts/variables' as *
+@use '../../abstracts/mixins' as *
+
+.about
+  padding: 26px 0 50px
+  +screen($desktop)
+    padding: 20px 0 40px
+  +screen($tablet)
+    padding: 17px 0 30px
+
+  &__txt
+    +font(20px, 34px)
+    +screen($desktop)
+      +font(16px, 26px)
+
+    &_bottom
+      position: relative
+      box-sizing: border-box
+      padding: 30px
+      display: flex
+      align-items: center
+      max-width: 613px
+      margin-top: -30px
+
+      span
+        z-index: 1
+
+      svg
+        position: absolute
+        top: 0
+        left: 0
+        width: 614px
+        height: 412px
+
+  &__top
+    display: flex
+    gap: 30px
+    margin-top: 50px
+    z-index: 1
+    +screen($desktop)
+      gap: 20px
+      margin-top: 40px
+    +screen($tablet)
+      margin-top: 30px
+
+    &-desc
+      max-width: 553px
+
+      &-image
+        display: flex
+        margin-top: 40px
+        +screen($desktop)
+          margin-top: 30px
+        +screen($tablet)
+          display: none
+
+    &-image
+      display: flex
+
+  &__bottom
+    margin-top: 30px
+    display: flex
+    +screen($desktop)
+      margin-top: 20px
+
+    &-mobile-image
+      display: none
+
+  &__presentation
+    height: 342px
+    width: 653px
+    box-sizing: border-box
+    padding: 49px 64px 49px 100px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    color: $white
+    flex-shrink: 0
+    background: url(../assets/img/about/presentation.jpg) no-repeat center/cover
+    margin-left: -100px
+    z-index: 1
+
+    &-download
+      width: 318px
+      height: 66px
+      border-width: 2px
+
+      svg
+        width: 20px
+        height: 18px

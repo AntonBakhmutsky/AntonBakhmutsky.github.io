@@ -1,0 +1,108 @@
+@use '../../abstracts/variables' as *
+@use '../../abstracts/mixins' as *
+
+.product-modal
+  position: fixed
+  width: 100vw
+  height: 100vh
+  top: 0
+  left: 0
+  z-index: 2000
+  background-color: $white
+  box-sizing: border-box
+  padding: 102px 246px 102px 100px
+  transition: visibility .3s, opacity .3s
+  visibility: hidden
+  opacity: 0
+  pointer-events: none
+  +screen($desktop)
+    padding: 87px 174px 87px 60px
+  +screen($tablet)
+    padding: 0
+
+  &.active
+    visibility: visible
+    opacity: 1
+    pointer-events: auto
+
+  &__close
+    position: absolute
+    top: 54px
+    right: 100px
+    visibility: visible
+    opacity: 1
+    transition: opacity .3s, visibility .3s
+    +screen($desktop)
+      right: 60px
+      top: 30px
+    +screen($tablet)
+      top: 0
+      left: 0
+      width: 100%
+      position: fixed
+      background-color: $white
+      display: flex
+      padding: 18px 20px
+      box-sizing: border-box
+      justify-content: flex-end
+      z-index: 10
+
+    &.disabled
+      visibility: hidden
+      opacity: 0
+      pointer-events: none
+
+    &-image
+      width: 30px
+      height: 30px
+      cursor: pointer
+      transition: opacity .3s
+      +screen($desktop)
+        width: 20px
+        height: 20px
+      +screen($tablet)
+        width: 18px
+        height: 18px
+
+      &:hover:not(:active)
+        opacity: .6
+
+  &__body
+    max-width: 1920px
+    margin: 0 auto
+    display: flex
+    gap: 76px
+    align-items: center
+    +screen($desktop)
+      gap: 44px
+
+    .swiper
+      &_thumb
+        height: 390px
+        width: 70px
+
+        .swiper
+          &-button
+            &-next, &-prev
+              align-items: center
+
+      &_main
+        max-width: none
+        max-height: calc(100vh - 204px)
+        box-sizing: border-box
+        width: 100%
+        +screen($tablet)
+          max-height: 100vh
+          width: auto
+          padding-top: 54px
+
+        .swiper
+          &-slide
+            display: flex
+            +screen($tablet)
+              padding-bottom: 30px
+
+          &-wrapper
+            box-sizing: border-box
+
+

@@ -50,7 +50,7 @@
       .product-options__acc
         &-visible
           background-color: $blue !important
-          color: $white
+          color: $white !important
 
         &-btn
           background-color: $blue !important
@@ -68,11 +68,28 @@
       height: 70px
       box-sizing: border-box
       padding-left: 40px
+      cursor: pointer
+      transition: background-color .3s
       +screen($desktop)
         height: 60px
       +screen($tablet)
         height: 46px
 
+
+      &:hover:not(:active)
+        background-color: $blue
+        color: $white
+        +screen($tablet)
+          color: $black
+          background-color: #F5F5F5
+
+        svg
+          transition: transform .3s
+
+          path
+            stroke: $white
+            +screen($tablet)
+              stroke: $blue
     &-title
       +font(24px, 33px, 500)
       +screen($desktop)
@@ -91,19 +108,6 @@
       +screen($tablet)
         width: 48px
         height: 46px
-
-      &:hover:not(:active)
-        background-color: $blue
-        +screen($tablet)
-          background-color: #F5F5F5
-
-        svg
-          transition: transform .3s
-
-          path
-            stroke: $white
-            +screen($tablet)
-              stroke: $blue
 
       svg
         width: 24px

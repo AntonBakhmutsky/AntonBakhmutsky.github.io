@@ -129,18 +129,24 @@
 
   &__links
     margin-top: 50px
+    +screen($desktop)
+      padding-bottom: 4px
+      margin-top: 10px
     +screen($tablet)
       margin-top: 30px
       box-sizing: border-box
-      padding: 0 16px
+      padding: 0 16px 4px
 
     .btn
       width: 335px
       height: 66px
       margin-bottom: 50px
+      +font(20px, 21px, 500)
       +screen($desktop)
         width: 294px
         height: 53px
+        +font(18px, 19px, 500)
+        margin-bottom: 40px
       +screen($tablet)
         width: 100%
         height: 60px
@@ -152,7 +158,8 @@
       gap: 11px
       margin-top: 32px
       +screen($desktop)
-        +font(18px, 21px, 500)
+        margin-top: 28px
+        +font(16px, 18px, 500)
 
       &-icon
         background-size: contain
@@ -171,6 +178,9 @@
           top: calc(100% + 2px)
           width: 100%
           height: 2px
+          background-size: cover
+          background-repeat: no-repeat
+          background-position: center
 
         &:hover:not(:active)
           color: $orange
@@ -183,7 +193,7 @@
 
         a
           &:after
-            background: url('../assets/img/product/credit-under.svg')
+            background-image: url('../assets/img/product/credit-under.svg')
 
       &_trade-in
         .product-top__links-item-icon
@@ -192,7 +202,7 @@
 
         a
           &:after
-            background: url('../assets/img/product/trade-under.svg')
+            background-image: url('../assets/img/product/trade-under.svg')
 
       &_service
         .product-top__links-item-icon
@@ -200,7 +210,7 @@
 
         a
           &:after
-            background: url('../assets/img/product/service-under.svg')
+            background-image: url('../assets/img/product/service-under.svg')
 
 
 

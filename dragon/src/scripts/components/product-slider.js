@@ -1,4 +1,4 @@
-import Swiper, {Navigation, Thumbs, Pagination, FreeMode} from 'swiper'
+import Swiper, {Navigation, Thumbs, Pagination, FreeMode, EffectFade} from 'swiper'
 
 window.addEventListener('load', () => {
   if (!document.querySelector('.product-top__slider')) {
@@ -25,10 +25,15 @@ window.addEventListener('load', () => {
       }
     })
     new Swiper('.product-top__slider .swiper.swiper_main', {
-      modules: [Pagination, Thumbs],
+      modules: [Pagination, Thumbs, EffectFade],
+      speed: 500,
       pagination: {
         el: '.swiper-pagination',
         type: 'progressbar'
+      },
+      effect: 'fade',
+      fadeEffect: {
+        crossFade: true
       },
       thumbs: {
         swiper: thumbSlider,
@@ -55,10 +60,15 @@ window.addEventListener('load', () => {
       }
     })
     const modalMainSlider = new Swiper('.product-modal .swiper.swiper_main', {
-      modules: [Thumbs, FreeMode],
+      modules: [Thumbs, FreeMode, EffectFade],
       direction: 'vertical',
+      speed: 500,
       thumbs: {
         swiper: modalThumbSlider,
+      },
+      effect: 'fade',
+      fadeEffect: {
+        crossFade: true
       },
       breakpoints: {
         320: {

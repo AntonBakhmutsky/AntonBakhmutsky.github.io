@@ -10,7 +10,7 @@ window.addEventListener('load', () => {
     container.children[0].querySelector('.product-options__acc-hidden').style.maxHeight = `${container.children[0].querySelector('.product-options__acc-hidden').scrollHeight}px`
 
     function toggleItem(e) {
-      if (e.target.closest('.product-options__acc-btn')) {
+      if (e.target.closest('.product-options__acc-visible')) {
         const item = e.target.closest('.product-options__acc')
         const itemHidden = item.querySelector('.product-options__acc-hidden')
 
@@ -20,7 +20,6 @@ window.addEventListener('load', () => {
     }
 
     function toggleAll() {
-      console.log(this.textContent)
       if (this.textContent === 'Развернуть все') {
         this.textContent = 'Свернуть все'
         items.forEach(el => {
