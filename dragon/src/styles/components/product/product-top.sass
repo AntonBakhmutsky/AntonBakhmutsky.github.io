@@ -10,8 +10,8 @@
 
   .container
     display: grid
-    grid-template: 180px 1fr / 1fr 460px
-    grid-gap: 0 50px
+    grid-template: 180px 1fr / 1fr 1fr
+    grid-gap: 0 30px
     +screen($tablet)
       grid-gap: 0 40px
       padding: 0
@@ -73,6 +73,7 @@
                 background-color: $orange
 
   &__desc
+    min-width: 459px
     +screen($tablet)
       padding: 0 16px
       box-sizing: border-box
