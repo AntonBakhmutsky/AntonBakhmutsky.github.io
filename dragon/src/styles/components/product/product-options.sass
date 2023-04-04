@@ -75,13 +75,17 @@
       +screen($tablet)
         height: 46px
 
-
       &:hover:not(:active)
-        background-color: $blue
-        color: $white
+        color: $blue
         +screen($tablet)
           color: $black
           background-color: #F5F5F5
+
+        .product-options__acc-btn
+          background-color: $blue
+          +screen($tablet)
+            background-color: #F5F5F5
+
 
         svg
           transition: transform .3s
