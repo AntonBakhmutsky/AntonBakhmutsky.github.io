@@ -7,4 +7,5 @@ require('./components/linep-slider')
 require('./components/form')
 require('./components/contact-form')
 require('./components/product-slider')
+require('./components/product-acc')
 
