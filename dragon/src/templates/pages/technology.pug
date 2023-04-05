@@ -1,0 +1,20 @@
+extends ../layouts/other/layout.pug
+
+append variables
+  -
+    breadCrumbsList = [
+      {
+        url: '/',
+        txt: 'Главная'
+      }
+    ]
+
+block title
+  | Golden Dragon
+
+block content
+  section.technology
+    .container
+      h2.section-title.opacity-animation Технологии
+      .technology__top
+

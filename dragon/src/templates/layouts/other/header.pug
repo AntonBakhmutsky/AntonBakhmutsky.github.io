@@ -1,24 +1,24 @@
-header.header
+header.header.opacity-animation
   .container
     .header__top
-      .header__logos.slide-down
+      .header__logos
         a(href="index.html")
           | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/header/sotrans-logo-white.svg')}
         a(href="index.html")
           img(src=require('@/assets/img/header/dragon-logo.png') alt="")
           | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/header/dragon-caption-white.svg')}
-      form.header__search.slide-down
+      form.header__search
         .header__search-field
           input#search(type="text" name="search" placeholder="Поиск...")
         .header__search-btn
-      .header__contacts.slide-left
+      .header__contacts
         a.header__contacts-phone(href="tel:88002223480")
           span 8 (800) #[span 222-34-80]
         .header__burger
           .header__burger-line
           .header__burger-line
     .header__bottom
-      nav.menu.slide-right
+      nav.menu
         each el in headerMenu
           a.menu__item(href=el.url) #{el.txt}
         a.header__contacts-phone(href="tel:88002223480")
