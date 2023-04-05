@@ -4,6 +4,7 @@ window.addEventListener('load', () => {
   if (!document.querySelector('.product-top__slider')) {
     return false
   } else {
+    let modalMainSlider
     const thumbSlider = new Swiper('.product-top__slider .swiper.swiper_thumb', {
       modules: [Navigation],
       slidesPerView: 5,
@@ -59,35 +60,53 @@ window.addEventListener('load', () => {
         }
       }
     })
-    const modalMainSlider = new Swiper('.product-modal .swiper.swiper_main', {
-      modules: [Thumbs, FreeMode, EffectFade],
-      direction: 'vertical',
-      speed: 500,
-      thumbs: {
-        swiper: modalThumbSlider,
-      },
-      effect: 'fade',
-      fadeEffect: {
-        crossFade: true
-      },
-      breakpoints: {
-        320: {
-          slidesPerView: 'auto',
-          freeMode: {
-            enabled: true,
-            momentum: false
+    if (window.innerWidth > 1024) {
+      modalMainSlider = new Swiper('.product-modal .swiper.swiper_main', {
+        modules: [Thumbs, FreeMode, EffectFade],
+        speed: 500,
+        effect: 'fade',
+        fadeEffect: {
+          crossFade: true
+        },
+        thumbs: {
+          swiper: modalThumbSlider,
+        },
+        breakpoints: {
+          1025: {
+            spaceBetween: 10,
           },
-        },
-        1025: {
-          freeMode: false,
-          spaceBetween: 10
-        },
-        1521: {
-          centeredSlides: true,
-          spaceBetween: 10
+          1521: {
+            centeredSlides: true,
+            spaceBetween: 10
+          }
         }
-      }
-    })
+      })
+    } else {
+      modalMainSlider = new Swiper('.product-modal .swiper.swiper_main', {
+        modules: [Thumbs, FreeMode],
+        direction: 'vertical',
+        thumbs: {
+          swiper: modalThumbSlider,
+        },
+        breakpoints: {
+          320: {
+            slidesPerView: 'auto',
+            freeMode: {
+              enabled: true,
+              momentum: false
+            },
+          },
+          1025: {
+            freeMode: false,
+            spaceBetween: 10,
+          },
+          1521: {
+            centeredSlides: true,
+            spaceBetween: 10
+          }
+        }
+      })
+    }
 
     // product modal
     const modal = document.querySelector('.product-modal')
@@ -100,15 +119,13 @@ window.addEventListener('load', () => {
         document.body.classList.toggle('body_fix')
     }
 
-    modalMainSlider.on('slideNextTransitionStart', () => {
+    modalMainSlider.on('sliderMove', (s, e) => {
       if (window.innerWidth < 1025) {
-        modalCloseContainer.classList.add('disabled')
-      }
-    })
-
-    modalMainSlider.on('slidePrevTransitionStart', () => {
-      if (modalCloseContainer.classList.contains('disabled')) {
-        modalCloseContainer.classList.remove('disabled')
+        if (e.movementY > 0) {
+          modalCloseContainer.classList.remove('disabled')
+        } else {
+          modalCloseContainer.classList.add('disabled')
+        }
       }
     })
 
