@@ -2,6 +2,21 @@ import anime from 'animejs'
 import inViewport from '../helpers/inViewport'
 
 window.addEventListener('load', () => {
+  // opacity
+  const opacityElements = document.querySelectorAll('.opacity-animation')
+
+  opacityElements.forEach(el => {
+    inViewport(el, () => {
+      anime({
+        targets: el,
+        opacity: [0, 1],
+        duration: 1800,
+        delay: Number(el.dataset.delay) || 0,
+        easing: 'easeOutQuart'
+      })
+    })
+  })
+
   // slide to right
   const slideToRightElements = document.querySelectorAll('.slide-right')
 

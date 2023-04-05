@@ -1,7 +1,7 @@
 mixin breadcrumbs(params)
   .breadcrumbs
     .container
-      ul.breadcrumbs__list.slide-right
+      ul.breadcrumbs__list.opacity-animation
         each el in params
           li.breadcrumbs__item
             a(href=el.url) #{el.txt}
