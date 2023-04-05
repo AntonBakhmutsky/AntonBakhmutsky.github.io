@@ -2,7 +2,7 @@
 @use '../../abstracts/mixins' as *
 
 .header
-  padding: 20px 0 0
+  padding: 24px 0 0
   box-sizing: border-box
   border-bottom: 2px solid $gray
   position: fixed
@@ -10,13 +10,16 @@
   top: 0
   left: 0
   z-index: 100
-  transition: background-color .3s
+  transition: background-color .3s, padding .3s
   +screen(1280)
     padding: 12px 0
     border: none
 
   &.sticky
+    padding-top: 17px
     background-color: white
+    +screen($desktop)
+      padding-top: 10px
     +screen(1280)
       border-bottom: 2px solid $gray
 
@@ -37,7 +40,9 @@
             fill: $black
 
       &__top
-        padding-bottom: 23px
+        padding-bottom: 15px
+        +screen($desktop)
+          padding-bottom: 10px
         +screen(1280)
           padding-bottom: 0
 
@@ -170,9 +175,12 @@
 
     .header__contacts-phone
       position: relative
-      width: 184px
+      width: 202px
       justify-content: flex-end
       margin-top: -10px
+      +font(23px, 24px, 500)
+      +screen($desktop)
+        +font(21px, 24px, 500)
 
       &:after
         content: 'Бесплатный звонок по России'
@@ -181,6 +189,8 @@
         position: absolute
         top: calc(100% + 2px)
         right: 0
+        +screen($desktop)
+          +font(12px, 14px, 500)
 
   &:not(.header_main)
     border-bottom: 2px solid #E8E8E8 !important
@@ -284,17 +294,6 @@
         span
           transition: color .3s
           color: $orange
-
-      &:hover:not(:active)
-        color: $black
-
-        span
-          span
-            color: $black
-
-        svg
-          path
-            fill: $orange
 
   &__bottom
     max-height: 69px
