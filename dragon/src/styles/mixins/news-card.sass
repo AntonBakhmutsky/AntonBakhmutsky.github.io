@@ -69,27 +69,3 @@
       +font(20px, 24px, 700)
     +screen($tablet)
       +font(22px, 26px, 700)
-
-  &__more
-    +font(22px, 26px, 500)
-    margin-top: 32px
-    display: flex
-    align-items: center
-    gap: 10px
-    +screen($desktop)
-      margin-top: 30px
-      +font(18px, 21px, 500)
-
-    span
-      &:last-child
-        display: flex
-        align-items: center
-        position: relative
-
-        &:before
-          content: ''
-          width: 0
-          transition: width .3s
-          height: 2px
-          background-color: $white
-          margin-left: auto

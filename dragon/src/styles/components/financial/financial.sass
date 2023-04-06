@@ -1,0 +1,55 @@
+@use '../../abstracts/variables' as *
+@use '../../abstracts/mixins' as *
+
+.financial
+  padding: 26px 0 187px
+  background: url(../assets/img/financial/fin-bg.svg) right bottom no-repeat
+  +screen($desktop)
+    background: url(../assets/img/financial/fin-bg-desk.svg) right bottom no-repeat
+    padding: 20px 0 132px
+  +screen($tablet)
+    background: url(../assets/img/financial/fin-bg-mob.svg) right bottom no-repeat
+    padding: 17px 0 60px
+
+  &__tile
+    margin-top: 42px
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    grid-gap: 22px
+    +screen($desktop)
+      grid-gap: 14px
+      margin-top: 34px
+    +screen($tablet)
+      grid-template-columns: 1fr
+      grid-gap: 40px
+      margin-top: 30px
+
+  &__item
+    .more-btn
+      +font(26px, 40px, 700)
+      +screen($desktop)
+        +font(20px, 40px, 700)
+
+    &:hover
+      color: $orange
+
+      .more-btn
+        span
+          &:last-child
+            &:before
+              width: 28px
+              background-color: $orange
+
+          svg
+            path
+              stroke: $orange
+
+    &-image
+      display: flex
+
+    .more-btn
+      margin-top: 22px
+
+      svg
+        path
+          stroke: $black
