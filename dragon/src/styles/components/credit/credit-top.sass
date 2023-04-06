@@ -9,4 +9,52 @@
     padding: 17px 0 30px
 
   .container
+    padding-right: 0
+    +screen($tablet)
+      padding: 0
 
+  .section-title
+    +screen($tablet)
+      padding: 0 16px
+      box-sizing: border-box
+
+  &__container
+    display: flex
+    gap: 30px
+    margin-top: 50px
+    +screen($desktop)
+      margin-top: 41px
+      gap: 41px
+    +screen($tablet)
+      flex-direction: column
+      gap: 30px
+
+  &__desc
+    p
+      +font(20px, 26px)
+      +screen($desktop)
+        +font(16px, 26px)
+      +screen($tablet)
+        box-sizing: border-box
+        padding: 0 16px
+
+      &:not(:first-child)
+        margin-top: 45px
+        +screen($desktop)
+          margin-top: 35px
+        +screen($tablet)
+          margin-top: 30px
+
+  &__image
+    width: 945px
+    height: 474px
+    flex-shrink: 0
+    +screen($desktop)
+      width: 710px
+      height: 356px
+    +screen(1280)
+      width: 510px
+      height: 256px
+    +screen($tablet)
+      width: auto
+      height: auto
