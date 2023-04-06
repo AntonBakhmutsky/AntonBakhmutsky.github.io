@@ -11,7 +11,7 @@
     background: url(../assets/img/financial/fin-bg-mob.svg) right bottom no-repeat
     padding: 17px 0 60px
 
-  &__tile
+  &__grid
     margin-top: 42px
     display: grid
     grid-template-columns: repeat(2, 1fr)
@@ -27,11 +27,22 @@
   &__item
     .more-btn
       +font(26px, 40px, 700)
+      margin-top: 22px
       +screen($desktop)
+        margin-top: 20px
         +font(20px, 40px, 700)
+      +screen($tablet)
+        margin-top: 6px
+
+      svg
+        path
+          stroke: $black
 
     &:hover
       color: $orange
+
+      .financial__item-image
+        transform: scale(1.03)
 
       .more-btn
         span
@@ -46,10 +57,4 @@
 
     &-image
       display: flex
-
-    .more-btn
-      margin-top: 22px
-
-      svg
-        path
-          stroke: $black
+      transition: transform .3s
