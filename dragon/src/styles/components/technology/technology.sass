@@ -5,12 +5,11 @@
   padding: 26px 0 50px
   background: url(../assets/img/technology/tech-bg.svg) 102% 104% no-repeat
   +screen($desktop)
-    background: url(../assets/img/technology/tech-bg-desk.svg) 102% 100% no-repeat
+    background: url(../assets/img/technology/tech-bg-desk.svg) 100% 104% no-repeat
     padding: 20px 0 40px
   +screen($tablet)
+    background: none
     padding: 17px 0 30px
-
-  .container
 
   &__top
     position: relative
@@ -110,8 +109,6 @@
             transform: translateY(-36px)
             +font(28px, 40px, 700)
 
-
-
   &__block
     &-title
       +font(32px, 40px, 700)
@@ -126,7 +123,7 @@
         color: $blue
         transform: translateY(-26px)
         +screen($desktop)
-          transform: translateY(-16px)
+          transform: translateY(-13px)
           +font(26px, 40px, 700)
         +screen($tablet)
           +font(20px, 40px, 700)
@@ -208,12 +205,20 @@
       gap: 28px
       align-items: center
       +screen($tablet)
-        gap: 20px
+        gap: 50px
+        flex-direction: column
+        padding: 0
 
-    .technology__block-txt
-      padding-left: 63px
-      +screen($desktop)
-        padding-left: 48px
+    .technology__block
+      +screen($tablet)
+        margin: 0 26px 0 8px
+
+      &-txt
+        padding-left: 63px
+        +screen($desktop)
+          padding-left: 48px
+        +screen($tablet)
+          padding-left: 38px
 
   &__grid
     display: grid
@@ -223,7 +228,13 @@
     +screen($desktop)
       grid-template: repeat(2, 188px) / 374px 315px
       grid-gap: 20px 21px
+    +screen($tablet-xs)
+      grid-gap: 20px
+      grid-template: 397px 106px / repeat(2, 1fr)
 
     img
       &:first-child
         grid-row: span 2
+        +screen($tablet)
+          grid-row: auto
+          grid-column: span 2
