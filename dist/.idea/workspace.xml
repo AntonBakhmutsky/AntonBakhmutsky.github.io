@@ -3,8 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="1c6251b5-a5a4-4f8e-bc86-c912a51caee8" name="Changes" comment="clear work tree">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dragon/src/assets/img/credit/credit-bg-mob.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../dragon/src/assets/img/credit/credit-bg-mob.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dragon/src/styles/components/credit/credit-partners.sass" beforeDir="false" afterPath="$PROJECT_DIR$/../dragon/src/styles/components/credit/credit-partners.sass" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../dragon/src/styles/components/credit/credit-top.sass" beforeDir="false" afterPath="$PROJECT_DIR$/../dragon/src/styles/components/credit/credit-top.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dragon/src/templates/components/credit/credit-top.pug" beforeDir="false" afterPath="$PROJECT_DIR$/../dragon/src/templates/components/credit/credit-top.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dragon/src/styles/components/credit/credit-why.sass" beforeDir="false" afterPath="$PROJECT_DIR$/../dragon/src/styles/components/credit/credit-why.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dragon/src/styles/components/credit/crfedit-bottom.sass" beforeDir="false" afterPath="$PROJECT_DIR$/../dragon/src/styles/components/credit/crfedit-bottom.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dragon/src/styles/components/layout/main.sass" beforeDir="false" afterPath="$PROJECT_DIR$/../dragon/src/styles/components/layout/main.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dragon/src/templates/components/credit/credit-bottom.pug" beforeDir="false" afterPath="$PROJECT_DIR$/../dragon/src/templates/components/credit/credit-bottom.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dragon/src/templates/components/credit/credit-partners.pug" beforeDir="false" afterPath="$PROJECT_DIR$/../dragon/src/templates/components/credit/credit-partners.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dragon/src/templates/layouts/other/layout.pug" beforeDir="false" afterPath="$PROJECT_DIR$/../dragon/src/templates/layouts/other/layout.pug" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
