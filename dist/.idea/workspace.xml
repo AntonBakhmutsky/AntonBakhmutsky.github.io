@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1c6251b5-a5a4-4f8e-bc86-c912a51caee8" name="Changes" comment="clear work tree" />
+    <list default="true" id="1c6251b5-a5a4-4f8e-bc86-c912a51caee8" name="Changes" comment="clear work tree">
+      <change afterPath="$PROJECT_DIR$/../dragon/src/styles/components/credit/credit-partners.sass" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dragon/src/styles/components/credit/credit-top.sass" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dragon/src/styles/components/credit/credit-why.sass" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dragon/src/styles/components/credit/crfedit-bottom.sass" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dragon/src/templates/components/credit/credit-bottom.pug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dragon/src/templates/components/credit/credit-partners.pug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dragon/src/templates/components/credit/credit-top.pug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dragon/src/templates/components/credit/credit-why.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/financial.html" beforeDir="false" afterPath="$PROJECT_DIR$/financial.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dragon/src/styles/app.sass" beforeDir="false" afterPath="$PROJECT_DIR$/../dragon/src/styles/app.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dragon/src/templates/abstracts/variables.pug" beforeDir="false" afterPath="$PROJECT_DIR$/../dragon/src/templates/abstracts/variables.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dragon/src/templates/layouts/other/layout.pug" beforeDir="false" afterPath="$PROJECT_DIR$/../dragon/src/templates/layouts/other/layout.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dragon/src/templates/pages/credit.pug" beforeDir="false" afterPath="$PROJECT_DIR$/../dragon/src/templates/pages/credit.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dragon/src/templates/pages/financial.pug" beforeDir="false" afterPath="$PROJECT_DIR$/../dragon/src/templates/pages/financial.pug" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -63,6 +79,7 @@
       <workItem from="1680685278207" duration="18000" />
       <workItem from="1680757483339" duration="111000" />
       <workItem from="1680761048427" duration="30000" />
+      <workItem from="1680763592972" duration="780000" />
     </task>
     <task id="LOCAL-00001" summary="clear work tree">
       <created>1679484871054</created>
@@ -281,7 +298,21 @@
       <option name="project" value="LOCAL" />
       <updated>1680761063035</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="clear work tree">
+      <created>1680763606134</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1680763606134</updated>
+    </task>
+    <task id="LOCAL-00033" summary="clear work tree">
+      <created>1680763778784</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1680763778784</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

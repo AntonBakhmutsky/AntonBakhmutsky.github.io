@@ -14,7 +14,7 @@ html(lang="ru")
   body
     include ../../components/gloabal/preloader
     include header
-    main.main
+    main.main(class=mainModifier ? mainModifier : '')
       if (breadCrumbsList)
         +breadcrumbs(breadCrumbsList)
       block content
