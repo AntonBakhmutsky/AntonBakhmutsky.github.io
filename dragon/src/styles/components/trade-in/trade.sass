@@ -1,0 +1,164 @@
+@use '../../abstracts/variables' as *
+@use '../../abstracts/mixins' as *
+
+.trade
+  padding: 26px 0 100px
+  background: url(../assets/img/trade-in/trade-bg.svg) no-repeat 100% 14%
+  +screen($desktop)
+    background: url(../assets/img/trade-in/trade-bg-desk.svg) no-repeat 100% 15%
+    padding: 20px 0 80px
+  +screen($tablet)
+    background: none
+    padding: 16px 0 40px
+
+  .section-title
+    margin-bottom: 50px
+    +screen($desktop)
+      margin-bottom: 40px
+    +screen($tablet)
+      margin-bottom: 30px
+
+  .container
+    & > .trade__txt
+      max-width: 760px
+      +screen($desktop)
+        max-width: 622px
+      +screen($tablet)
+        max-width: none
+
+      &:nth-child(3)
+        margin-top: 40px
+        +screen($tablet)
+          margin-top: 30px
+
+  &__txt, b
+    +font(20px, 28px)
+    +screen($desktop)
+      +font(16px, 26px)
+
+  b
+    font-weight: 700
+
+  &__grid
+    display: grid
+    background-color: $white
+    grid-template-columns: repeat(2, 1fr)
+    margin-top: 50px
+    +screen($desktop)
+      margin-top: 40px
+    +screen($tablet)
+      margin-top: 30px
+      grid-template-columns: 1fr
+      grid-gap: 30px
+
+  &__item
+    box-sizing: border-box
+    padding: 60px
+    +screen($desktop)
+      padding: 40px
+    +screen($tablet)
+      padding: 20px 16px 26px
+
+    &:not(:first-child)
+      +screen($tablet)
+        border: 1px solid #E4E4E4
+
+    &-icon
+      +font(40px, 40px, 700)
+      display: flex
+      align-items: center
+      gap: 11px
+      +screen($desktop)
+        +font(32px, 40px, 700)
+      +screen($tablet)
+        +font(30px, 40px, 700)
+
+      span
+        &:last-child
+          display: flex
+          align-items: center
+
+    &-title
+      margin-top: 8px
+
+    &-txt
+      margin-top: 11px
+
+    &-link
+      width: 301px
+      height: 66px
+      +font(22px, 23px, 500)
+      margin-top: 56px
+      +screen($desktop)
+        width: 254px
+        height: 57px
+        +font(18px, 19px, 500)
+        margin-top: 42px
+      +screen($tablet)
+        width: 100%
+        height: 60px
+        +font(20px, 21px, 500)
+        margin-top: 46px
+
+      &:hover
+        color: $orange
+
+        svg
+          path
+            stroke: $orange
+            fill: none
+
+    &:first-child
+      background: url(../assets/img/trade-in/choose.jpg) no-repeat center/cover
+      color: $white
+      +screen($tablet)
+        padding-bottom: 40px
+
+      .trade__item-icon
+        span
+          &:last-child
+            +screen($desktop)
+              width: 48px
+              height: 26px
+            +screen($tablet)
+              width: 49px
+              height: 27px
+
+
+    &:nth-child(2)
+      border-top: 1px solid #E4E4E4
+      border-right: 1px solid #E4E4E4
+      .trade__item-icon
+        span
+          &:last-child
+            +screen($desktop)
+              width: 34px
+              height: 27px
+            +screen($tablet)
+              width: 30px
+              height: 24px
+
+    &:nth-child(3)
+      border-left: 1px solid #E4E4E4
+      border-bottom: 1px solid #E4E4E4
+      .trade__item-icon
+        span
+          &:last-child
+            +screen($desktop)
+              width: 20px
+              height: 25px
+            +screen($tablet)
+              width: 20px
+              height: 26px
+
+    &:nth-child(4)
+      border: 1px solid #E4E4E4
+      .trade__item-icon
+        span
+          &:last-child
+            +screen($desktop)
+              width: 37px
+              height: 32px
+            +screen($tablet)
+              width: 37px
+              height: 33px
