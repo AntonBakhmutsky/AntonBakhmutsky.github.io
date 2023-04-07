@@ -75,6 +75,7 @@
       display: flex
       align-items: center
       gap: 11px
+      color: $blue
       +screen($desktop)
         +font(32px, 40px, 700)
       +screen($tablet)
@@ -96,6 +97,7 @@
       height: 66px
       +font(22px, 23px, 500)
       margin-top: 56px
+      border-width: 2px
       +screen($desktop)
         width: 254px
         height: 57px
@@ -122,6 +124,7 @@
         padding-bottom: 40px
 
       .trade__item-icon
+        color: $white
         span
           &:last-child
             +screen($desktop)
@@ -133,8 +136,8 @@
 
 
     &:nth-child(2)
-      border-top: 1px solid #E4E4E4
-      border-right: 1px solid #E4E4E4
+      border-top: 2px solid #E4E4E4
+      border-right: 2px solid #E4E4E4
       .trade__item-icon
         span
           &:last-child
@@ -146,8 +149,8 @@
               height: 24px
 
     &:nth-child(3)
-      border-left: 1px solid #E4E4E4
-      border-bottom: 1px solid #E4E4E4
+      border-left: 2px solid #E4E4E4
+      border-bottom: 2px solid #E4E4E4
       .trade__item-icon
         span
           &:last-child
@@ -159,7 +162,7 @@
               height: 26px
 
     &:nth-child(4)
-      border: 1px solid #E4E4E4
+      border: 2px solid #E4E4E4
       .trade__item-icon
         span
           &:last-child
