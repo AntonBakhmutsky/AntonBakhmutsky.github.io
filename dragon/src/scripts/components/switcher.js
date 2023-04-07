@@ -4,8 +4,8 @@ window.addEventListener('load', () => {
   } else {
     // news switcher
 
-    const switcherBtns = document.querySelectorAll('.news__switcher-btn')
-    const newsContent = document.querySelectorAll('.news__content-item')
+    const switcherBtns = document.querySelectorAll('.switcher__btn')
+    const newsContent = document.querySelectorAll('.switch-content')
 
     const toggleContent = (e) => {
       const id = e.currentTarget.dataset.id

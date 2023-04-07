@@ -8,39 +8,6 @@
   +screen($tablet)
     padding: 17px 0 60px
 
-  &__switcher
-    display: flex
-    gap: 14px
-    margin-top: 40px
-    +screen($desktop)
-      margin-top: 30px
-    +screen($tablet)
-      gap: 8px
-
-    &-btn
-      width: 135px
-      height: 50px
-      box-sizing: border-box
-      border: 2px solid #E8E8E8
-      border-radius: 50px
-      +font(20px, 20px, 500)
-      +screen($desktop)
-        width: 119px
-        height: 42px
-        +font(18px, 18px, 500)
-      +screen($tablet)
-        width: 101px
-        height: 38px
-        +font(16px, 16px, 500)
-
-      &:hover:not(.active)
-        color: $blue
-
-      &.active
-        background-color: $blue
-        border-color: $blue
-        color: $white
-
   &__content
     margin-top: 40px
     +screen($desktop)
@@ -50,15 +17,11 @@
 
     &-item
       grid-gap: 50px 30px
-      display: none
       +screen($desktop)
         grid-gap: 40px 20px
       +screen($tablet)
         grid-gap: 30px
         grid-template-columns: 1fr !important
-
-      &.active
-        display: grid
 
       &:first-child
         grid-template-columns: repeat(auto-fit, minmax(390px, 1fr))

@@ -436,3 +436,42 @@ section
         height: 2px
         background-color: $white
         margin-left: auto
+
+.switcher
+  display: flex
+  gap: 14px
+  margin-top: 40px
+  +screen($desktop)
+    margin-top: 30px
+  +screen($tablet)
+    gap: 8px
+
+  &__btn
+    width: 135px
+    height: 50px
+    box-sizing: border-box
+    border: 2px solid #E8E8E8
+    border-radius: 50px
+    +font(20px, 20px, 500)
+    +screen($desktop)
+      width: 119px
+      height: 42px
+      +font(18px, 18px, 500)
+    +screen($tablet)
+      width: 101px
+      height: 38px
+      +font(16px, 16px, 500)
+
+    &:hover:not(.active)
+      color: $blue
+
+    &.active
+      background-color: $blue
+      border-color: $blue
+      color: $white
+
+.switch-content
+  display: none
+
+  &.active
+    display: grid
