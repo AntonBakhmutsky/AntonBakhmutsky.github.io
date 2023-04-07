@@ -17,14 +17,21 @@
       margin-bottom: 40px
     +screen($tablet)
       margin-bottom: 30px
+      box-sizing: border-box
+      padding: 0 8px
 
   .container
+    +screen($tablet)
+      padding: 0 8px
+
     & > .trade__txt
       max-width: 760px
       +screen($desktop)
         max-width: 622px
       +screen($tablet)
         max-width: none
+        box-sizing: border-box
+        padding: 0 8px
 
       &:nth-child(3)
         margin-top: 40px
