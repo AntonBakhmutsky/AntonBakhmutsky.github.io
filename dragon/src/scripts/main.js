@@ -8,4 +8,5 @@ require('./components/form')
 require('./components/contact-form')
 require('./components/product-slider')
 require('./components/product-acc')
+require('./components/news')
 

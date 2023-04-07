@@ -15,7 +15,17 @@ block title
 block content
   section.news
     .container
-
+      h2.section-title.opacity-animation Новости и акции
+      .news__switcher.slide-right
+        button.news__switcher-btn.active(data-id='0') Новости
+        button.news__switcher-btn(data-id='1') Акции
+      .news__content.slide-left
+        .news__content-item.active(data-id='0')
+          each el in newsList
+            +promo-card(el)
+        .news__content-item(data-id='1')
+          each el in promoList
+            +promo-card(el)
 
 
 

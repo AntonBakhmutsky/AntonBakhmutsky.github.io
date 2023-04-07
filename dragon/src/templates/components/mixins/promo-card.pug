@@ -1,6 +1,6 @@
 mixin promo-card(params)
-  .promo-card
+  a.promo-card(href=params.url)
     .promo-card__image
-      img(src=el.image alt=el.title)
-    h3.promo-card__title #{el.title}
-    .promo-card__date #{el.date}
+      img.cover-image(src=params.image alt=params.title)
+    h3.promo-card__title #{params.title}
+    .promo-card__date #{params.date}
