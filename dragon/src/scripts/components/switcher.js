@@ -1,5 +1,5 @@
 window.addEventListener('load', () => {
-  if (!document.querySelector('.news')) {
+  if (!document.querySelector('.switcher')) {
     return null
   } else {
     // news switcher

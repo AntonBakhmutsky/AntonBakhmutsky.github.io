@@ -471,7 +471,79 @@ section
       color: $white
 
 .switch-content
-  display: none
+  display: none !important
 
   &.active
-    display: grid
+    display: grid !important
+
+.pagination
+  display: flex
+  gap: 12px
+  margin-top: 60px
+  justify-content: center
+  align-items: center
+  position: relative
+  +screen($tablet)
+    padding-top: 55px
+    justify-content: space-between
+
+  li
+    &:first-child
+      margin-right: 46px
+      +screen($tablet)
+        left: 0
+
+    &:last-child
+      margin-left: 46px
+      +screen($tablet)
+        right: 0
+
+    &:first-child, &:last-child
+      +screen($tablet)
+        position: absolute
+        top: 10px
+
+      .page-link
+        user-select: none
+        display: flex
+        align-items: center
+        gap: 10px
+        +font(18px, 20px, 500)
+        transition: color .3s
+        +screen($desktop)
+          +font(16px, 20px, 500)
+
+      &.disabled
+        .page-link
+          color: #A8A8A8
+
+          svg
+            path
+              stroke: #A8A8A8
+
+      &:hover:not(:active, .disabled)
+        .page-link
+          color: $blue
+
+          svg
+            path
+              stroke: $blue
+
+    &:not(:first-child, :last-child)
+      width: 44px
+      height: 44px
+      border-radius: 50%
+      display: flex
+      align-items: center
+      justify-content: center
+      transition: background-color .3s
+
+      &:hover
+        background-color: #F5F5F5
+
+      &.active
+        color: $white
+        background-color: $blue
+        +font(18px, 20px, 700)
+        +screen($desktop)
+          +font(16px, 20px, 700)
