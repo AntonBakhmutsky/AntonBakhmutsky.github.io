@@ -9,4 +9,5 @@ require('./components/contact-form')
 require('./components/product-slider')
 require('./components/product-acc')
 require('./components/switcher')
+require('./components/media-modal')
 
