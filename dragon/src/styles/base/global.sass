@@ -269,6 +269,10 @@ section
   margin: 0
   user-select: none
 
+  &-button
+    &-next, &-prev
+      &:after
+        display: none
 
   &_thumb
     width: 80px
@@ -304,9 +308,6 @@ section
           display: flex
           left: 50%
           transform: translateX(-50%)
-
-          &:after
-            display: none
 
         &-next
           align-items: flex-end
