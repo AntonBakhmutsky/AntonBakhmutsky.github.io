@@ -1,0 +1,52 @@
+@use '../../abstracts/variables' as *
+@use '../../abstracts/mixins' as *
+
+.service-info
+  padding: 28px 0 50px
+  +screen($desktop)
+    padding: 20px 0 40px
+  +screen($tablet)
+    padding: 30px 0 44px
+
+  .container
+    padding-right: 0
+    +screen($tablet)
+      padding: 0
+
+  &__title
+    +font(32px, 33px, 700)
+    margin-bottom: 20px
+    +screen($desktop)
+      margin-bottom: 10px
+      +font(24px, 33px, 700)
+    +screen($tablet)
+      margin-bottom: 20px
+      +font(22px, 28px, 700)
+
+  &__txt
+    +font(20px, 34px)
+    +screen($desktop)
+      +font(16px, 26px)
+    +screen($tablet)
+      +font(16px, 28px)
+
+    &:last-child:not(:first-child)
+      margin-top: 26px
+      +screen($desktop)
+        margin-top: 20px
+
+  &__top, &__bottom
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    grid-gap: 71px
+    +screen($desktop)
+      grid-gap: 38px
+    +screen($tablet)
+      grid-gap: 30px
+      grid-template-columns: 1fr
+
+  &__top
+
+  &__bottom
+    +screen($tablet)
+      grid-gap: 20px

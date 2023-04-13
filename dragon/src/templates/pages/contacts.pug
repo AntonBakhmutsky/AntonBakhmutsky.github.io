@@ -21,7 +21,7 @@ block content
           each el, index in contactsList
             button.contacts__switcher-btn(data-id=index class=index === 0 ? 'active' : '') #{el}
         .contacts__content
-          .contacts__content-item(data-id='0')
+          .contacts__content-item.active(data-id='0')
             .contacts__info
               .contacts__info-name Центральный офис продаж
               .contacts__info-address Ленинградская область, пгт. Красный Бор, ул. Промышленная д.3
@@ -46,6 +46,3 @@ block content
                 .swiper-slide
                   +contact-card(el)
             .contacts__map#mapRedForest
-
-
-

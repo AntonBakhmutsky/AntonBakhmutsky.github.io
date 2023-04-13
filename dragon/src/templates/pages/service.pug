@@ -1,0 +1,18 @@
+extends ../layouts/map/layout.pug
+
+append variables
+  -
+    breadCrumbsList = [
+      {
+        url: '/',
+        txt: 'Главная'
+      }
+    ]
+
+block title
+  | Golden Dragon
+
+block content
+  include ../components/service/service-info
+  include ../components/service/service-map
+  include ../components/service/service-form
