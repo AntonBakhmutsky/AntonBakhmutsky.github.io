@@ -64,7 +64,10 @@
 
   &__bottom
     margin-top: 50px
+    box-sizing: border-box
+    padding-right: 100px
     +screen($desktop)
+      padding-right: 60px
       margin-top: 40px
     +screen($tablet)
       margin-top: 30px
@@ -79,3 +82,30 @@
           margin-top: 40px
         +screen($tablet)
           margin-top: 0
+
+  &__accent
+    background-color: $orange
+    color: $white
+    display: flex
+    margin-top: 21px
+    box-sizing: border-box
+    padding: 26px 30px
+    align-items: center
+    gap: 10px
+    max-width: 517px
+    +font(22px, 28px, 700)
+    +screen($desktop)
+      padding: 18px 100px 18px 30px
+      +font(18px, 22px, 700)
+    +screen($tablet)
+      padding: 14px 34px
+      +font(16px, 22px, 700)
+      max-width: none
+      justify-content: center
+
+    &-image
+      flex-shrink: 0
+      width: 44px
+      height: 44px
+
+
