@@ -13,6 +13,10 @@
     +screen($tablet)
       padding: 0
 
+  .section-title
+    +screen($tablet)
+      padding: 0 16px
+
   &__title
     +font(32px, 33px, 700)
     margin-bottom: 20px
@@ -46,7 +50,32 @@
       grid-template-columns: 1fr
 
   &__top
+    margin-top: 50px
+    +screen($desktop)
+      margin-top: 40px
+    +screen($tablet)
+      margin-top: 30px
+
+    .service-info
+      &__title, &__txt
+        +screen($tablet)
+          padding: 0 16px
+          box-sizing: border-box
 
   &__bottom
+    margin-top: 50px
+    +screen($desktop)
+      margin-top: 40px
     +screen($tablet)
+      margin-top: 30px
       grid-gap: 20px
+      padding: 0 16px
+      box-sizing: border-box
+
+    .service-info__block
+      &:nth-child(2)
+        margin-top: 50px
+        +screen($desktop)
+          margin-top: 40px
+        +screen($tablet)
+          margin-top: 0
