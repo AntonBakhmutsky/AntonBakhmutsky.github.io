@@ -1,0 +1,9 @@
+mixin contact-card(params)
+  .contacts__card
+    .contacts__card__image
+      img.cover-image(src=params.image alt="")
+    .contacts__card__info
+      .contacts__card__info-position #{params.position}
+      .contacts__card__info-name #{params.name}
+      a.contacts__card__info-phone(href=params.telUrl) #{params.telTxt}
+      a.contacts__card__info-mail(href=`mailto:${params.mail}`) #{params.mail}
