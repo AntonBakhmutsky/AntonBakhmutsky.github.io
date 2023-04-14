@@ -7,23 +7,42 @@ window.addEventListener('load', () => {
   } else {
 
     // maps
-    ymaps.ready(function () {
-      const map = new ymaps.Map('mapRedForest', {
-        center: [59.66768456450318, 30.651756999999925],
-        zoom: 13,
-        controls: [],
-      })
+    main();
+    async function main() {
+      await ymaps3.ready
+      const {
+        YMap,
+        YMapDefaultSchemeLayer,
+        YMapMarker,
+        YMapControls,
+        YMapDefaultFeaturesLayer
+      } = ymaps3
 
-      const redForest = new ymaps.Placemark([59.66768456450318, 30.651756999999925], {
-      }, {
-        iconLayout: 'default#image',
-        iconImageHref: require('@/assets/img/contacts/marker.svg'),
-        iconImageSize: window.innerWidth > 1024 ? [31, 45] : [24, 35],
-        iconImageOffset: window.innerWidth > 1024 ? [-10, -60] : [-10, -40],
-      })
+      const {YMapZoomControl, YMapGeolocationControl} = await ymaps3.import('@yandex/ymaps3-controls@0.0.1');
+      const {YMapOpenMapsButton} = await ymaps3.import('@yandex/ymaps3-controls-extra')
 
-      map.geoObjects.add(redForest)
-    });
+      const map = new YMap(document.getElementById('mapRedForest'), {
+        location: {
+          center: [30.651756999999925, 59.66768456450318],
+          zoom: 13
+        },
+
+      })
+      map.addChild(new YMapControls({position: 'right'}).addChild(new YMapZoomControl({})))
+      map.addChild(new YMapDefaultFeaturesLayer({id: 'features'}))
+      map.addChild(new YMapControls({position: 'left'}).addChild(new YMapGeolocationControl({})))
+      map.addChild(new YMapControls({position: 'top left'}).addChild(new YMapOpenMapsButton({})))
+
+      map.addChild(new YMapDefaultSchemeLayer())
+
+      const content = document.createElement('div')
+
+      map.addChild(new YMapMarker({
+        coordinates: [30.651756999999925, 59.66768456450318],
+      }, content))
+
+      content.innerHTML = `<div class="map__marker map__marker_logo"></div>`
+    }
 
     // contacts slider
     const swipers = document.querySelectorAll('.contacts__list.swiper')
@@ -99,7 +118,6 @@ window.addEventListener('load', () => {
 
           if (!btn.classList.contains('active')) {
             const id = btn.dataset.id
-            const prevBtn = switchBtns.find(el => el.classList.contains('active'))
 
             activateContent(switchBtns, id)
             activateContent(switchItems, id)
@@ -111,11 +129,5 @@ window.addEventListener('load', () => {
     }
 
     switcher.addEventListener('click', switchContent)
-
-    window.addEventListener('resize', () => {
-      if (winWidth !== window.innerWidth) {
-
-      }
-    })
   }
 });

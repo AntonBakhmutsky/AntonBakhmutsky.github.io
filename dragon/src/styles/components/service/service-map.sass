@@ -2,3 +2,23 @@
 @use '../../abstracts/mixins' as *
 
 .service-map
+  &__title
+    +font(32px, 32px, 700)
+    box-sizing: border-box
+    padding: 0 100px
+    +screen($desktop)
+      padding: 0 60px
+      +font(24px, 32px, 700)
+    +screen($tablet)
+      padding: 0 16px
+      +font(22px, 28px, 700)
+
+  &__container
+    margin-top: 40px
+    height: 660px
+    +screen($desktop)
+      margin-top: 26px
+      height: 470px
+    +screen($tablet)
+      margin-top: 20px
+      height: 375px
