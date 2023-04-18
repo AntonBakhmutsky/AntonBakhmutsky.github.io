@@ -1,0 +1,234 @@
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_31_01_2023_23_57__Changes_.xml
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_31_01_2023_23_57__Changes_.xml b/.idea/shelf/Uncommitted_changes_before_Update_at_31_01_2023_23_57__Changes_.xml
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Update_at_31_01_2023_23_57__Changes_.xml	(revision d0252bf49f32cee1539e1a24874b0df5909a3c38)
++++ /dev/null	(revision d0252bf49f32cee1539e1a24874b0df5909a3c38)
+@@ -1,4 +0,0 @@
+-<changelist name="Uncommitted_changes_before_Update_at_31_01_2023_23_57_[Changes]" date="1675217733151" recycled="true" deleted="true">
+-  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_31_01_2023_23_57_[Changes]/shelved.patch" />
+-  <option name="DESCRIPTION" value="Uncommitted changes before Update at 31.01.2023 23:57 [Changes]" />
+-</changelist>
+\ No newline at end of file
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_31_01_2023_23_57_[Changes]/shelved.patch
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_31_01_2023_23_57_[Changes]/shelved.patch b/.idea/shelf/Uncommitted_changes_before_Update_at_31_01_2023_23_57_[Changes]/shelved.patch
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Update_at_31_01_2023_23_57_[Changes]/shelved.patch	(revision d0252bf49f32cee1539e1a24874b0df5909a3c38)
++++ /dev/null	(revision d0252bf49f32cee1539e1a24874b0df5909a3c38)
+@@ -1,40 +0,0 @@
+-Index: .idea/workspace.xml
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+-<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"2d225187-906f-4110-8ade-e8e2eaf3a4e8\" name=\"Changes\" comment=\"\" />\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"ComposerSettings\">\r\n    <execution />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2HQrvcYbPWosSLJqeuyKS4nMJCa\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"autoscrollFromSource\" value=\"true\" />\r\n    <option name=\"autoscrollToSource\" value=\"true\" />\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"WebServerToolWindowFactoryState\": \"false\",\r\n    \"vue.rearranger.settings.migration\": \"true\"\r\n  }\r\n}]]></component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"2d225187-906f-4110-8ade-e8e2eaf3a4e8\" name=\"Changes\" comment=\"\" />\r\n      <created>1668228379780</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1668228379780</updated>\r\n      <workItem from=\"1668228381106\" duration=\"22000\" />\r\n    </task>\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n</project>
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+-diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+---- a/.idea/workspace.xml	(revision 2a0fcb00c2beac0af15dcb33a0d6b5900e6d300f)
+-+++ b/.idea/workspace.xml	(date 1674674153022)
+-@@ -20,14 +20,14 @@
+-     <option name="hideEmptyMiddlePackages" value="true" />
+-     <option name="showLibraryContents" value="true" />
+-   </component>
+--  <component name="PropertiesComponent"><![CDATA[{
+--  "keyToString": {
+--    "RunOnceActivity.OpenProjectViewOnStart": "true",
+--    "RunOnceActivity.ShowReadmeOnStart": "true",
+--    "WebServerToolWindowFactoryState": "false",
+--    "vue.rearranger.settings.migration": "true"
+-+  <component name="PropertiesComponent">{
+-+  &quot;keyToString&quot;: {
+-+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+-+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+-+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+-+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+-   }
+--}]]></component>
+-+}</component>
+-   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+-   <component name="TaskManager">
+-     <task active="true" id="Default" summary="Default task">
+-@@ -37,6 +37,7 @@
+-       <option name="presentableId" value="Default" />
+-       <updated>1668228379780</updated>
+-       <workItem from="1668228381106" duration="22000" />
+-+      <workItem from="1674674151329" duration="2000" />
+-     </task>
+-     <servers />
+-   </component>
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"2d225187-906f-4110-8ade-e8e2eaf3a4e8\" name=\"Changes\" comment=\"\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"ComposerSettings\">\r\n    <execution />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2HQrvcYbPWosSLJqeuyKS4nMJCa\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"autoscrollFromSource\" value=\"true\" />\r\n    <option name=\"autoscrollToSource\" value=\"true\" />\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"WebServerToolWindowFactoryState\": \"false\",\r\n    \"node.js.detected.package.eslint\": \"true\",\r\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\r\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\r\n    \"vue.rearranger.settings.migration\": \"true\"\r\n  }\r\n}]]></component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"2d225187-906f-4110-8ade-e8e2eaf3a4e8\" name=\"Changes\" comment=\"\" />\r\n      <created>1668228379780</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1668228379780</updated>\r\n      <workItem from=\"1668228381106\" duration=\"22000\" />\r\n      <workItem from=\"1674460713590\" duration=\"600000\" />\r\n    </task>\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision d0252bf49f32cee1539e1a24874b0df5909a3c38)
++++ b/.idea/workspace.xml	(date 1678516480615)
+@@ -5,6 +5,8 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="2d225187-906f-4110-8ade-e8e2eaf3a4e8" name="Changes" comment="">
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_31_01_2023_23_57_[Changes]/shelved.patch" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_31_01_2023_23_57__Changes_.xml" beforeDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+@@ -28,17 +30,17 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "RunOnceActivity.OpenProjectViewOnStart": "true",
+-    "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "WebServerToolWindowFactoryState": "false",
+-    "node.js.detected.package.eslint": "true",
+-    "node.js.selected.package.eslint": "(autodetect)",
+-    "node.js.selected.package.tslint": "(autodetect)",
+-    "vue.rearranger.settings.migration": "true"
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
++    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
++    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
++    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
++    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+   }
+-}]]></component>
++}</component>
+   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+   <component name="TaskManager">
+     <task active="true" id="Default" summary="Default task">
+@@ -49,6 +51,8 @@
+       <updated>1668228379780</updated>
+       <workItem from="1668228381106" duration="22000" />
+       <workItem from="1674460713590" duration="600000" />
++      <workItem from="1677404033437" duration="10000" />
++      <workItem from="1678516420505" duration="60000" />
+     </task>
+     <servers />
+   </component>
+Index: ftk/src/scripts/components/contact-form.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>window.addEventListener('load', () => {\r\n\r\n  if (!document.querySelector('.contact-form')) {\r\n    return false\r\n  } else {\r\n\r\n    // form inputs\r\n    const contactForm = document.querySelector('.contact-form')\r\n\r\n    // toggle form\r\n    const contactFormBtn = document.querySelector('.contact-form-btn')\r\n    const contactFormClose = contactForm.querySelector('.contact-form__close')\r\n    const contactFormOverlay = document.querySelector('.contact-form__overlay')\r\n\r\n    const toggleContactForm = () => {\r\n      contactForm.classList.toggle('active')\r\n      contactFormBtn.classList.toggle('disabled')\r\n      contactFormOverlay.classList.toggle('active')\r\n      document.body.classList.toggle('body_fix')\r\n    }\r\n\r\n    contactFormBtn.addEventListener('click', toggleContactForm)\r\n    contactFormClose.addEventListener('click', toggleContactForm)\r\n    contactFormOverlay.addEventListener('click', toggleContactForm)\r\n\r\n    // input file\r\n    const inputFile = contactForm.querySelector('.contact-form__file input')\r\n    const inputFileLabel = inputFile.nextElementSibling\r\n    const labelValue = inputFileLabel.querySelector('.contact-form__file-txt')\r\n\r\n    inputFile.addEventListener('change', function (event) {\r\n      let countFiles\r\n      if (this.files && this.files.length >= 1) {\r\n        countFiles = this.files.length\r\n      }\r\n      if (countFiles) {\r\n        labelValue.innerText = 'Выбрано файлов: ' + countFiles\r\n      } else {\r\n        labelValue.innerText = 'Прикрепить файл'\r\n      }\r\n    })\r\n  }\r\n})\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/ftk/src/scripts/components/contact-form.js b/ftk/src/scripts/components/contact-form.js
+--- a/ftk/src/scripts/components/contact-form.js	(revision d0252bf49f32cee1539e1a24874b0df5909a3c38)
++++ b/ftk/src/scripts/components/contact-form.js	(date 1678546534438)
+@@ -40,4 +40,108 @@
+       }
+     })
+   }
++
++
++  function usernameTest(input) {
++    return !/^[a-zA-Zа-яА-ЯёЁ'][a-zA-Z-а-яА-ЯёЁ' ]+[a-zA-Zа-яА-ЯёЁ']?$/.test(input.value)
++  }
++
++  [].forEach.call(document.querySelectorAll('._phone'), function (input) {
++    var keyCode;
++
++    function mask(event) {
++      event.keyCode && (keyCode = event.keyCode);
++      var pos = this.selectionStart;
++      if (pos < 3) event.preventDefault();
++      var matrix = "+7 (___)-___-____",
++        i = 0,
++        def = matrix.replace(/\D/g, ""),
++        val = this.value.replace(/\D/g, ""),
++        new_value = matrix.replace(/[_\d]/g, function (a) {
++          return i < val.length ? val.charAt(i++) || def.charAt(i) : a
++        });
++      i = new_value.indexOf("_");
++      if (i != -1) {
++        i < 5 && (i = 3);
++        new_value = new_value.slice(0, i)
++      }
++      var reg = matrix.substr(0, this.value.length).replace(/_+/g,
++        function (a) {
++          return "\\d{1," + a.length + "}"
++        }).replace(/[+()]/g, "\\$&");
++      reg = new RegExp("^" + reg + "$");
++      if (!reg.test(this.value) || this.value.length < 5 || keyCode > 47 && keyCode < 58) this.value = new_value;
++      if (event.type == "blur" && this.value.length < 5) this.value = ""
++    }
++
++    input.addEventListener("input", mask, false);
++    input.addEventListener("focus", mask, false);
++    input.addEventListener("blur", mask, false);
++    input.addEventListener("keydown", mask, false)
++
++  });
++
++  $('#callForm').submit(function () {
++    $.ajax({
++      type: "POST",
++      url: '/send.php',
++      data: $('#callForm').serialize(),
++      success: function (data) {
++        $('#callForm').find('.sent').html('Заявка отправлена!');
++        $(':input', '#callForm')
++          .not(':button, :submit, :reset, :hidden')
++          .val('')
++          .prop('checked', false)
++          .prop('selected', false);
++        setTimeout(function () {
++          $('#callForm').find('.sent').html('Оставить заявку');
++        }, 1500);
++      },
++    });
++    return false;
++  });
++
++  $('#contactPageForm').submit(function () {
++    $.ajax({
++      type: "POST",
++      url: '/send.php',
++      data: $('#contactPageForm').serialize(),
++      success: function (data) {
++        $('#contactPageForm').find('.sent').html('Отправлено!');
++        $(':input', '#contactPageForm')
++          .not(':button, :submit, :reset, :hidden')
++          .val('')
++          .prop('checked', false)
++          .prop('selected', false);
++        setTimeout(function () {
++          $('#contactPageForm').find('.sent').html('Отправить');
++        }, 1500);
++      },
++    });
++    return false;
++  });
++
++  $('#contactForm').submit(function () {
++    $.ajax({
++      type: "POST",
++      url: '/send.php',
++      data: new FormData(document.getElementById('contactForm')),
++      processData: false,
++      contentType: false,
++      success: function (data) {
++        $('#contactForm').find('.sent').html('Отправлено!');
++        $(':input', '#contactForm')
++          .not(':button, :submit, :reset, :hidden')
++          .val('')
++          .prop('checked', false)
++          .prop('selected', false);
++        setTimeout(function () {
++          $('#contactForm').find('.sent').html('Отправить');
++        }, 1500);
++
++      },
++    });
++    return false;
++  });
++
+ })

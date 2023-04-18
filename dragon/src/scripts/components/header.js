@@ -56,10 +56,8 @@ window.addEventListener('load', () => {
     } else {
       search.classList.remove('active')
       searchBtn.classList.remove('disabled')
-      e.currentTarget.closest('form').reset()
+      search.closest('form').reset()
     }
   }
-
   searchBtn.addEventListener('click', toggleSearch)
-  search.addEventListener('click', toggleSearch)
 });
