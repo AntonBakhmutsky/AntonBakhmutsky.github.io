@@ -1,22 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1c6251b5-a5a4-4f8e-bc86-c912a51caee8" name="Changes" comment="clear work tree">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dragon/src/assets/img/main-page/1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../dragon/src/assets/img/main-page/1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dragon/src/assets/img/main-page/lineup-slides/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/../dragon/src/assets/img/main-page/lineup-slides/1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dragon/src/scripts/helpers/map.js" beforeDir="false" afterPath="$PROJECT_DIR$/../dragon/src/scripts/helpers/map.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dragon/src/styles/components/layout/header.sass" beforeDir="false" afterPath="$PROJECT_DIR$/../dragon/src/styles/components/layout/header.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dragon/src/styles/components/lineup/lineup.sass" beforeDir="false" afterPath="$PROJECT_DIR$/../dragon/src/styles/components/lineup/lineup.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dragon/src/styles/components/main-page/main-desc.sass" beforeDir="false" afterPath="$PROJECT_DIR$/../dragon/src/styles/components/main-page/main-desc.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dragon/src/styles/components/main-page/main-news.sass" beforeDir="false" afterPath="$PROJECT_DIR$/../dragon/src/styles/components/main-page/main-news.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dragon/src/styles/components/technology/technology.sass" beforeDir="false" afterPath="$PROJECT_DIR$/../dragon/src/styles/components/technology/technology.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dragon/src/styles/mixins/news-card.sass" beforeDir="false" afterPath="$PROJECT_DIR$/../dragon/src/styles/mixins/news-card.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dragon/src/templates/abstracts/variables.pug" beforeDir="false" afterPath="$PROJECT_DIR$/../dragon/src/templates/abstracts/variables.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dragon/src/templates/components/main-page/main-dealers.pug" beforeDir="false" afterPath="$PROJECT_DIR$/../dragon/src/templates/components/main-page/main-dealers.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dragon/src/templates/components/main-page/main-desc.pug" beforeDir="false" afterPath="$PROJECT_DIR$/../dragon/src/templates/components/main-page/main-desc.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dragon/src/templates/components/mixins/news-card.pug" beforeDir="false" afterPath="$PROJECT_DIR$/../dragon/src/templates/components/mixins/news-card.pug" afterDir="false" />
-    </list>
+    <list default="true" id="1c6251b5-a5a4-4f8e-bc86-c912a51caee8" name="Changes" comment="clear work tree" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -85,6 +70,7 @@
       <workItem from="1680859463553" duration="22000" />
       <workItem from="1681121824867" duration="706000" />
       <workItem from="1681881182841" duration="1438000" />
+      <workItem from="1681908629199" duration="4000" />
     </task>
     <task id="LOCAL-00001" summary="clear work tree">
       <created>1679484871054</created>

@@ -13,6 +13,7 @@ window.addEventListener('load', () => {
         video.play()
       } else {
         videoContainer.classList.remove('active')
+        video.pause()
       }
     }
 
