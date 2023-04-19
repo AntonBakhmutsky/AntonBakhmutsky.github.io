@@ -31,60 +31,81 @@ const maps = [
     coordinates: [60.747843, 56.70335],
     time: 'ПН-СБ 9:00--21:00 ВС 9:00-19:00',
     address: 'г. Екатеринбург, Челябинский тракт 18 км (территория кемпинга)',
-    modifier: 'shop'
+    modifier: 'shop',
+    mail: 'ekat2@sotrans.ru',
+    tel: '7(922)145-69-71'
   },
   {
     id: 5,
     coordinates: [104.252184, 52.325594],
     time: '9:00-21:00',
     address: 'г. Иркутск, ул. Олега Кошевого 61а, пав.22',
-    modifier: 'shop'
+    modifier: 'shop',
+    mail: 'irk2@sotrans.ru',
+    tel: '7(902) 763-88-08'
   },
   {
     id: 6,
     coordinates: [92.927904, 56.074891],
     time: '9:00-21:00',
     address: 'Красноярский край,город Красноярск г.о.,Красноярск г,Северное ш,,д. 17,помещение 1',
-    modifier: 'shop'
+    modifier: 'shop',
+    mail: 'krasnoyarsk@sotrans.ru',
+    tel: '7(391) 204-00-55'
   },
   {
     id: 7,
     coordinates: [38.342234, 55.847442],
     time: '9:00-21:00',
     address: 'Московская область, д. Ельня, ул. Новая 16, литер А',
-    modifier: 'shop'
+    modifier: 'shop',
+    mail: 'mo7777@inbox.ru',
+    tel: '7(910) 003-59-95'
   },
   {
     id: 8,
     coordinates: [37.337514, 55.958064],
     time: '9:00-18:00',
     address: 'Московская область, г. Химки, мкрн. Подрезково, кв-л Кирилловка, Ленинградского ш. 22 км. (ТЦ "Ленинградка" 34 пав.)',
-    modifier: 'shop'
+    modifier: 'shop',
+    mail: 'moscowparts@sotrans.ru',
+    tel: '7(929) 975-06-14'
   },
   {
     id: 9,
     coordinates: [43.503711, 56.243755],
     time: 'пн-пт 9:00-18:00 сб 9:00-15:00',
     address: 'Нижегородская область, г. Дзержинск, пр-т Ленина, д. 121А',
-    modifier: 'shop'
+    modifier: 'shop',
+    mail: 'tnn@sotrans.ru',
+    tel: '7(910) 140-90-28'
   },
   {
     id: 10,
     coordinates: [43.887058, 56.291474],
     time: 'ПН-ПТ 9:00-18:00 СБ 9:00-15:00',
     address: 'Нг. Нижний Новгород, ул. Удмуртская 37В',
+    modifier: 'shop',
+    mail: 'nn1@sotrans.ru',
+    tel: '7(910) 120-32-24'
   },
   {
     id: 11,
     coordinates: [73.292616, 54.869911],
     time: 'ПН-ПТ 9:00-20:00 СБ-ВС 9:00-18:00',
     address: 'Омская область, с. Троицкое, ул.1-я Луговая 8, литер А',
+    modifier: 'shop',
+    mail: 'omsk2@sotrans.ru',
+    tel: '7(913) 976-98-75'
   },
   {
     id: 12,
     coordinates: [34.281076, 61.807619],
     time: 'ПН-ПТ 9:00-19:00 СБ 10:00-15:00',
     address: 'г. Петрозаводск, ул.Новосулажгорская 25',
+    modifier: 'shop',
+    mail: 'hr@sotrans.ru',
+    tel: '7(911) 410-10-60'
 
   },
   {
@@ -92,6 +113,9 @@ const maps = [
     coordinates: [39.852397, 47.264447],
     time: '9:00-21:00',
     address: 'Ростовская область, г.Аксай, ул. Западная 33 (за мойкой самообслуживания)',
+    modifier: 'shop',
+    mail: 'rostov@sotrans.ru',
+    tel: '7(908) 197-50-50'
 
   },
   {
@@ -99,6 +123,9 @@ const maps = [
     coordinates: [49.606114, 53.513325],
     time: '9:00-21:00',
     address: 'Самарская область, Ставропольский р-н, 981км трассы М5 Москва-Челябинск, с. Зеленовка, участок 11А (рядом с постом ДПС)',
+    modifier: 'shop',
+    mail: 'tt@trucks.ru',
+    tel: '7(917)139-58-16'
 
   },
   {
@@ -106,6 +133,9 @@ const maps = [
     coordinates: [55.824130,54.668066],
     time: '9:00-21:00',
     address: 'Республика Башкортостан, Уфимский р-н, ул. Центральная, 59/3 к2 (Территория УТЭП)',
+    modifier: 'shop',
+    mail: 'ufa@sotrans.ru',
+    tel: '7(917) 355-13-33'
 
   },
   {
@@ -113,6 +143,9 @@ const maps = [
     coordinates: [30.397493,59.807109],
     time: '9:00-18:00',
     address: 'г.С-Петербург, Пушкинский р-н, п. Шушары, ул. Поселковая (напротив Таможенного терминала)',
+    modifier: 'shop',
+    mail: 'shushary@sotrans.ru',
+    tel: '7(921) 437-70-24'
 
   },
   {
@@ -120,6 +153,9 @@ const maps = [
     coordinates: [30.375599,60.055772],
     time: '10:00-19:00',
     address: 'г.С-Петербург, ул.Верхняя 16 ( промзона Парнас)',
+    modifier: 'shop',
+    mail: 'i.fokin@sotrans.ru',
+    tel: '7(921) 437-56-19'
 
   },
   {
@@ -127,6 +163,9 @@ const maps = [
     coordinates: [40.578220,64.559287],
     time: '9:00-18:00',
     address: 'г.Архангельск, Окружное шоссе 11 строение 2/1',
+    modifier: 'shop',
+    mail: 'd.yakovlev@sotrans.ru',
+    tel: '7(921) 439-00-42'
 
   },
   {
@@ -134,6 +173,9 @@ const maps = [
     coordinates: [61.388866,55.092462],
     time: '9:00-18:00',
     address: 'г. Челябинск, Троицкий тракт 62П',
+    modifier: 'shop',
+    mail: 'chelparts@sotrans.ru',
+    tel: '7(929)157-89-77'
 
   },
   {
@@ -141,6 +183,9 @@ const maps = [
     coordinates: [31.270462, 58.566824],
     time: '9:00-19:00',
     address: 'г. Великий Новгород, ул. Рабочая, д.31',
+    modifier: 'shop',
+    mail: 's.bachurin@sotrans.ru',
+    tel: '7(929) 157-89-81'
 
   },
   {
@@ -148,6 +193,9 @@ const maps = [
     coordinates: [30.394514, 59.801018],
     time: 'ПН-ПТ 9-00-19-00 СБ 9:00-17-00',
     address: 'г. Санкт-Петербург, пос. Шушары, ул. Железнодорожная, д.9',
+    modifier: 'shop',
+    mail: 'shushary2@sotrans.ru',
+    tel: '7(921) 404-19-79'
 
   },
   {
@@ -155,6 +203,9 @@ const maps = [
     coordinates: [28.293926, 57.831441,],
     time: '9:00-18:00',
     address: 'г. Псков, ул. Чудская, 5В',
+    modifier: 'shop',
+    mail: 'dirpskov@sotrans.ru',
+    tel: '7(921) 347 28 41'
 
   }
 ]
