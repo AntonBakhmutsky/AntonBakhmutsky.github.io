@@ -4,12 +4,18 @@ window.addEventListener('load', () => {
   } else {
     const video = document.querySelector('.main-desc__video video')
     const videoContainer = document.querySelector('.main-desc__video')
+    const videoBtn = document.querySelector('.main-desc__video button')
 
     const toggleVideo = () => {
-      videoContainer.classList.add('active')
-      video.play()
+      if (!videoContainer.classList.contains('active')) {
+        console.log(true)
+        videoContainer.classList.add('active')
+        video.play()
+      } else {
+        videoContainer.classList.remove('active')
+      }
     }
 
-    video.addEventListener('click', toggleVideo)
+    videoContainer.addEventListener('click', toggleVideo)
   }
 })

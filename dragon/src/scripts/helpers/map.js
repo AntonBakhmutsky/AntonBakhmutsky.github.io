@@ -1,4 +1,4 @@
-maps = [
+const maps = [
   {
     id: 1,
     coordinates: [82.1824651, 54.940748],
@@ -158,3 +158,5 @@ maps = [
 
   }
 ]
+
+export default maps

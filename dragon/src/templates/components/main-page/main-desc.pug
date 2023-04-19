@@ -12,7 +12,7 @@ section.main-desc
             span видео о компании
           button.main-desc__video-btn
             img(src=require('@/assets/img/main-page/play.svg') alt="")
-      video(loop muted controls)
+      video(loop muted preload="none")
         source(src=require('@/assets/video/video.mp4') type="video/mp4")
       .main-desc__video-glyphs.slide-down(data-delay='500')
         | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/main-page/glyphs.svg')}
