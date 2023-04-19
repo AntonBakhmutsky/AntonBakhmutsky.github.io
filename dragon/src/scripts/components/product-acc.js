@@ -41,7 +41,6 @@ window.addEventListener('load', () => {
     // order form anchor
     document.querySelector('.product-top__links .btn').addEventListener('click', () => {
       const y = document.querySelector('#orderForm').getBoundingClientRect().y
-      console.log(y)
       if (window.innerWidth > 1280) {
         window.scrollTo(0, y - 90)
       } else {

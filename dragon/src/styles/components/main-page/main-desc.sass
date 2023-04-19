@@ -61,7 +61,7 @@
       .main-desc__video-overlay
         display: none
 
-    iframe
+    video
       filter: drop-shadow(0px 6px 15px rgba(0, 0, 0, 0.25))
       z-index: 2
       position: relative
@@ -70,7 +70,9 @@
       object-position: center
       width: 100%
       height: 612px
-      +screen($tablet)
+      +screen($desktop)
+        height: 468px
+      +screen($tablet-xs)
         height: 193px
 
     &-overlay

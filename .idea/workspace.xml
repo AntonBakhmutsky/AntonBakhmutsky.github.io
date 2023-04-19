@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d225187-906f-4110-8ade-e8e2eaf3a4e8" name="Changes" comment="" />
+    <list default="true" id="2d225187-906f-4110-8ade-e8e2eaf3a4e8" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/dragon/src/scripts/components/main-video.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_01_04_2023_22_54_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_01_04_2023_22_54__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dragon/src/scripts/components/product-acc.js" beforeDir="false" afterPath="$PROJECT_DIR$/dragon/src/scripts/components/product-acc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dragon/src/scripts/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/dragon/src/scripts/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dragon/src/styles/components/main-page/main-desc.sass" beforeDir="false" afterPath="$PROJECT_DIR$/dragon/src/styles/components/main-page/main-desc.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dragon/src/templates/components/main-page/main-desc.pug" beforeDir="false" afterPath="$PROJECT_DIR$/dragon/src/templates/components/main-page/main-desc.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dragon/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/dragon/webpack.config.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -51,6 +61,7 @@
       <workItem from="1678798492820" duration="95000" />
       <workItem from="1679295613966" duration="8000" />
       <workItem from="1679386499961" duration="6000" />
+      <workItem from="1681900229493" duration="1191000" />
     </task>
     <task id="LOCAL-00001" summary="clear work tree">
       <created>1678697139956</created>

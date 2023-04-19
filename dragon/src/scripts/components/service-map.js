@@ -51,7 +51,7 @@ window.addEventListener('load', () => {
       const serviceContent = document.createElement('div')
       const shopContent = document.createElement('div')
       serviceContent.innerHTML = `<div class="map__marker map__marker_service"></div>`
-      shopContent.innerHTML = `<div class="map__marker map__marker_service"></div>`
+      shopContent.innerHTML = `<div class="map__marker map__marker_shop"></div>`
 
       serviceMap.addChild(new YMapMarker({
         coordinates: [30.651756999999925, 59.66768456450318],
