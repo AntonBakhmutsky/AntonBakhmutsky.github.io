@@ -2,14 +2,12 @@
 @use '../../abstracts/mixins' as *
 
 .technology
-  padding: 26px 0 50px
-  background: url(../assets/img/technology/tech-bg.svg) 102% 104% no-repeat
+  padding: 26px 0 0
   +screen($desktop)
-    background: url(../assets/img/technology/tech-bg-desk.svg) 100% 104% no-repeat
-    padding: 20px 0 40px
+    padding: 20px 0 0
   +screen($tablet)
     background: none
-    padding: 17px 0 30px
+    padding: 17px 0 0
 
   &__top
     position: relative
@@ -142,11 +140,9 @@
         color: $orange
 
   &__middle
-    padding: 50px 0
+    padding: 50px 0 0
     +screen($desktop)
-      padding: 40px 0
-    +screen($tablet)
-      padding: 0 0 30px
+      padding: 40px 0 0
 
     .container
       display: grid
@@ -200,14 +196,18 @@
 
   &__bottom
     .container
+      background: url(../assets/img/technology/tech-bg.svg) 102% 104%/contain no-repeat
       display: flex
-      padding-left: 0
+      padding: 50px 100px
       gap: 28px
       align-items: center
+      +screen($desktop)
+        background: url(../assets/img/technology/tech-bg-desk.svg) 100% 104%/contain no-repeat
+        padding: 40px 60px
       +screen($tablet)
+        padding: 40px 60px 0
         gap: 50px
         flex-direction: column
-        padding: 0
 
     .technology__block
       +screen($tablet)

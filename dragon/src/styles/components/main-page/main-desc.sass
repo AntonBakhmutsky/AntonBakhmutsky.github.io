@@ -57,7 +57,11 @@
     width: 100%
     flex-shrink: 1
 
-    video
+    &.active
+      .main-desc__video-overlay
+        display: none
+
+    iframe
       filter: drop-shadow(0px 6px 15px rgba(0, 0, 0, 0.25))
       z-index: 2
       position: relative
@@ -65,9 +69,9 @@
       object-fit: cover
       object-position: center
       width: 100%
-      height: 100%
+      height: 612px
       +screen($tablet)
-        min-height: 210px
+        height: 193px
 
     &-overlay
       background: linear-gradient(0deg, #1E2024 0%, rgba(30, 32, 36, 0.01) 100%)
@@ -99,7 +103,7 @@
       right: -162px
       width: 998px
       height: 214px
-      z-index:-1
+      z-index: -1
       +screen($desktop)
         bottom: -110px
         right: -114px
