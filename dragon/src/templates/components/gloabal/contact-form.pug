@@ -2,7 +2,7 @@ form.contact-form(id="contactForm"  method="POST" enctype="multipart/form-data" 
   .contact-form__head
     h2.contact-form__title Ответим на ваши вопросы
     button.contact-form__close
-      |!{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/global/close.svg')}
+      img(src=require('@/assets/img/global/close.svg') alt="")
   .contact-form__links
     a(href="https://t.me/+79313044482" target="_blank" rel="noopener noreferrer")
       img(src=require('@/assets/img/global/tg.svg') alt="")
