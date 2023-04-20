@@ -4,12 +4,37 @@
 .credit-bottom
   .container
     display: flex
-    padding-left: 0
+    padding: 80px 100px 0 0
     gap: 62px
     align-items: center
+    position: relative
+    +screen($desktop)
+      padding: 80px 60px 0 0
     +screen($tablet)
       flex-direction: column-reverse
-      padding: 0
+      padding: 60px 0 0
+
+    &:after
+      content: ''
+      width: 804px
+      height: 799px
+      background: url(../assets/img/credit/credit-bg.svg) 100% 100% no-repeat
+      position: absolute
+      right: 0
+      bottom: -180px
+      z-index: -1
+      +screen($desktop)
+        background: url(../assets/img/credit/credit-bg-desk.svg) 100% 100% no-repeat
+        bottom: -120px
+      +screen($tablet)
+        bottom: auto
+        right: auto
+        top: 50px
+        left: 0
+        height: 100%
+        width: 100%
+        z-index: 1
+        background: url(../assets/img/credit/credit-bg-mob.svg) center top/contain no-repeat
 
   &__image
     display: flex
@@ -24,6 +49,7 @@
     +screen($tablet)
       max-width: none
       width: 100%
+      z-index: 2
     +screen($tablet-xs)
       height: 183px
 
@@ -69,3 +95,6 @@
         +screen($tablet)
           +font(16px, 24px)
           margin-top: 2px
+
+  &__desc
+    z-index: 2
