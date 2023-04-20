@@ -3,12 +3,9 @@
 
 .trade
   padding: 26px 0 100px
-  background: url(../assets/img/trade-in/trade-bg.svg) no-repeat 100% 14%
   +screen($desktop)
-    background: url(../assets/img/trade-in/trade-bg-desk.svg) no-repeat 100% 15%
     padding: 20px 0 80px
   +screen($tablet)
-    background: none
     padding: 16px 0 40px
 
   .section-title
@@ -21,7 +18,11 @@
       padding: 0 8px
 
   .container
+    background: url(../assets/img/trade-in/trade-bg.svg) no-repeat 100% 14%
+    +screen($desktop)
+      background: url(../assets/img/trade-in/trade-bg-desk.svg) no-repeat 100% 15%
     +screen($tablet)
+      background: none
       padding: 0 8px
 
     & > .trade__txt
