@@ -27,16 +27,16 @@
     background: url(../assets/img/main-page/main-form-bg.jpg) no-repeat center/cover
 
   &__title
-    +font(50px, 59px, 700)
+    +font(40px, 47px, 700)
     text-align: center
     +screen($desktop)
-      +font(37px, 43px, 700)
+      +font(30px, 35px, 700)
     +screen($tablet)
       +font(30px, 35px, 700)
       text-align: left
 
   &__txt
-    +font(24px, 26px)
+    +font(22px, 26px)
     text-align: center
     margin-top: 14px
     +screen($desktop)
@@ -104,6 +104,10 @@
       margin-top: 40px
       +screen($tablet)
         margin-top: 30px
+
+      label
+        &:before
+          border-width: 2px !important
 
     &__field
       margin: 0
