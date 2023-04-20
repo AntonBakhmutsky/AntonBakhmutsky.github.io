@@ -5,6 +5,7 @@
   margin: 0 auto
   box-sizing: border-box
   padding: 0
+  padding-top: 20px
   width: 780px
   +screen($desktop)
     width: 594px
@@ -16,20 +17,22 @@
 
   .back__btn
    display: flex
-
-   &:hover
-      color: #EB5C2C
-      fill: #EB5C2C
-   
-   img 
+   color: #0B0B14
+   width: 78px
+   align-items: center
+   svg path, p
+      color: #0B0B14
+      stroke: #EB5C2C
+   svg 
     margin-right: 9px
+    path
+     stroke: #0B0B14
    p 
     font-family: 'TTNorms'
     font-style: normal
     font-weight: 500
     font-size: 16px
     line-height: 20px
-    color: #0B0B14
 
     &:hover
       color: #EB5C2C
@@ -92,35 +95,60 @@
       margin-top: 20px
       margin-bottom: 20px
       
-  .swiper-wrapper
-   .swiper-button-prev 
-     height: 400px
-     width: 40px
-     margin-top: -204px
-     margin-left: -12px
-     +screen($desktop)
-      height: 300px
-      width:30px
-      margin-top: -151px
-     +screen($mobile)
-      display:none
+  .swiper
+   &-wrapper
+
+   &-button
+    &-prev, &-next
+        height: 400px
+        width: 40px
+        margin-top: -204px
+        +screen($desktop)
+         height: 300px
+         width:30px
+         margin-top: -151px
+        +screen($mobile)
+         display:none
+
+        &:hover:not(:active)
+          background-color: rgba(11, 11, 20, 0.2)
       
-     &:hover 
-       background-color: rgba(11, 11, 20, 0.2)
+    &-next
+        margin-right: -12px
+        margin-left: 0
+
+    &-prev
+        margin-right: 0
+        margin-left: -12px
+
+   &-pagination
+      
+      
+
+      &-bullet
+        background-color: rgba(255, 255, 255, 0.4)
+        opacity: 1
+        width: 6px
+        height: 6px
+
+        &-active
+          background-color: $white
+
+      
 
      
   &__link
     display: flex
     background-color: #F5F5F5
     padding: 6px 16px
-    width: 210px
+    width: 180px
     align-items: center
     justify-content: space-between
     margin-top: 20px
     margin-bottom: 100px
     +screen($desktop)
       padding: 4px 16px
-      width: 176px
+      width: 150px
 
 
     img 

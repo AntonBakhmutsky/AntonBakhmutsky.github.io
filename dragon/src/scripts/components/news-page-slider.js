@@ -1,4 +1,4 @@
-import Swiper, { Navigation, Pagination, Mousewheel, Keyboard, Autoplay } from 'swiper';
+import Swiper, { Navigation, Pagination, Mousewheel, Autoplay } from 'swiper';
 
 
 window.addEventListener('load', () => {
@@ -7,8 +7,9 @@ window.addEventListener('load', () => {
     } else {
 
 const swiper = new Swiper('.swiper-container', {
-  modules: [Navigation, Pagination, Mousewheel, Keyboard, Autoplay],
+  modules: [Navigation, Pagination, Mousewheel, Autoplay],
   loop: true,
+  slidesPerView: 1,
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
@@ -21,6 +22,7 @@ const swiper = new Swiper('.swiper-container', {
     delay: 3000,
   },
 });
+
 
 }
 })
