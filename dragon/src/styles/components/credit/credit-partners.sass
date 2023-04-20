@@ -2,11 +2,11 @@
 @use '../../abstracts/mixins' as *
 
 .credit-partners
-  padding: 60px 0 90px
+  padding: 60px 0 0
   +screen($desktop)
-    padding: 40px 0 75px
+    padding: 40px 0 0
   +screen($tablet)
-    padding: 40px 0 65px
+    padding: 40px 0 0
 
   &__txt
     max-width: 550px
@@ -27,16 +27,21 @@
       gap: 40px
       margin-top: 61px
     +screen($tablet)
-      gap: 44px 55px
+      gap: 40px 0
       flex-wrap: wrap
       justify-content: center
-      margin-top: 46px
+      margin-top: 40px
 
   &__item
     filter: grayscale(100%)
     opacity: .4
     transition: opacity .3s, filter .3s
     +screen($tablet)
+      flex-basis: 50%
+      display: flex
+      justify-content: center
+      filter: none
+      opacity: 1
       &:nth-child(1)
         width: 133px
         height: 21px

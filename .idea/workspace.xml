@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2d225187-906f-4110-8ade-e8e2eaf3a4e8" name="Changes" comment="clear work tree">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dist/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/app.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dragon/src/styles/base/global.sass" beforeDir="false" afterPath="$PROJECT_DIR$/dragon/src/styles/base/global.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dragon/src/styles/components/global/order-form.sass" beforeDir="false" afterPath="$PROJECT_DIR$/dragon/src/styles/components/global/order-form.sass" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +58,7 @@
       <workItem from="1679386499961" duration="6000" />
       <workItem from="1681900229493" duration="1651000" />
       <workItem from="1681908319039" duration="326000" />
+      <workItem from="1681984426887" duration="2000" />
     </task>
     <task id="LOCAL-00001" summary="clear work tree">
       <created>1678697139956</created>

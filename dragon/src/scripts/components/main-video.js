@@ -4,7 +4,6 @@ window.addEventListener('load', () => {
   } else {
     const video = document.querySelector('.main-desc__video video')
     const videoContainer = document.querySelector('.main-desc__video')
-    const videoBtn = document.querySelector('.main-desc__video button')
 
     const toggleVideo = () => {
       if (!videoContainer.classList.contains('active')) {

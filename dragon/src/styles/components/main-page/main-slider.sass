@@ -26,6 +26,9 @@
       height: 100%
       position: relative
       box-sizing: border-box
+      padding-top: 139px
+      +screen($desktop)
+        padding-top: 69px
       +screen($tablet)
         padding: 97px 0 52px
 
@@ -73,6 +76,7 @@
         width: 311px
         height: 80px
         pointer-events: auto
+        +font(24px, 28px, 500)
         +screen($desktop)
           width: 236px
           height: 66px
@@ -83,7 +87,6 @@
           width: 222px
           height: 51px
           +font(18px, 18px, 500)
-
 
       &-image
         position: absolute
@@ -118,7 +121,6 @@
           height: 33%
           bottom: 0
           background:  linear-gradient(0deg, #131416 0%, rgba(19, 20, 22, 0) 100%)
-
 
     &-button
       &-prev, &-next

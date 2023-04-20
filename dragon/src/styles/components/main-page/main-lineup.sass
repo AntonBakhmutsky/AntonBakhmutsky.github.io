@@ -5,11 +5,14 @@
   .container
     &:nth-child(2)
       background: url(../assets/img/main-page/lineup-bg.jpg) no-repeat center/cover
-      height: 1080px
-      margin-top: 51px
+      height: 899px
+      margin-top: 40px
+      padding: 0
       +screen($desktop)
-        height: auto
+        margin-top: 20px
+        height: 646px
       +screen($tablet-xs)
+        margin-top: 16px
         height: 600px
         background: url(../assets/img/main-page/lineup-bg-mobile.jpg) no-repeat center/cover
 
@@ -19,44 +22,54 @@
     user-select: none
     padding: 55px 0
     box-sizing: border-box
+    display: flex
     +screen($tablet)
       padding: 25px 0 80px
+
+    &-wrapper
+      height: auto
 
     &-slide
       box-sizing: border-box
       display: flex
       flex-direction: column
       justify-content: space-between
+      height: 100%
+      padding: 0 100px
+      +screen($desktop)
+        padding: 0 60px
+      +screen($tablet)
+        padding: 0 16px
 
       &__nums
-        +font(60px, 70px, 700)
+        +font(48px, 56px, 700)
         +screen($desktop)
-          +font(54px, 64px, 700)
+          +font(38px, 44px, 700)
         +screen($tablet)
           +font(34px, 34px, 700)
 
         span
           &:last-child
-            +font(34px, 40px, 700)
+            +font(28px, 33px, 700)
             color: #5FA0CC
             +screen($desktop)
-              +font(30px, 35px, 700)
+              +font(22px, 26px, 700)
             +screen($tablet)
               +font(19px, 34px, 700)
 
       &__title
-        +font(46px, 50px, 500)
-        margin-top: 40px
+        +font(36px, 36px, 500)
+        margin-top: 25px
         +screen($desktop)
-          +font(41px, 41px, 500)
-          margin-top: 29px
+          +font(26px, 34px, 500)
+          margin-top: 13px
         +screen($tablet)
           margin-top: 23px
           +font(25px, 34px, 500)
 
       &__options
         display: flex
-        gap: 14px
+        gap: 10px
         margin-top: 37px
         +screen($desktop)
           margin-top: 32px
@@ -65,44 +78,76 @@
           gap: 7px
 
         &-item
-          padding: 8px 26px
+          padding: 0 18px
           box-sizing: border-box
           display: flex
           align-items: center
           gap: 7px
           border-radius: 39px
           border: 2px solid #85B9DD
-          +font(22px, 34px, 500)
+          height: 36px
+          +font(18px, 18px, 500)
           +screen($desktop)
             padding: 3px 22px
-            +font(18px, 34px, 500)
+            +font(16px, 16px, 500)
           +screen($tablet)
-            padding: 3px 16px
+            height: 30px
+            padding: 0 16px
             +font(13px, 24px, 500)
 
           &:nth-child(1)
-            +screen($tablet)
-              img
+            img
+              width: 22px
+              height: 24px
+              +screen($tablet)
                 width: 16px
                 height: 17px
 
           &:nth-child(2)
-            +screen($tablet)
-              img
+            img
+              width: 24px
+              height: 12px
+              +screen($tablet)
                 width: 17px
                 height: 8px
 
           &:nth-child(3)
-            +screen($tablet)
-              img
+            img
+              width: 16px
+              height: 24px
+              +screen($tablet)
                 width: 11px
                 height: 16px
 
       &__image
         margin: 0 auto
+        flex-grow: 1
+        display: flex
+        align-items: flex-end
+        +screen($desktop)
+          box-sizing: border-box
+          padding: 0 230px
+        +screen(1280)
+          padding: 0 100px
+        +screen($tablet)
+          align-items: center
+          padding: 0 50px
+        +screen($tablet-sm)
+          padding: 0 0 100px
+
+        img
+          width: 100%
+          height: 100%
+          object-fit: contain
+          object-position: bottom
 
       &__link
         align-self: center
+        border-width: 2px
+        flex-shrink: 0
+
+        &:hover
+          color: $blue
 
     &-pagination
       display: none
@@ -127,6 +172,7 @@
         height: 100%
         top: 0
         margin-top: 0
+        z-index: 10
         +screen($tablet)
           display: none
 
@@ -134,11 +180,9 @@
           display: none
 
       &-prev
-        left: -100px
         cursor: url(../assets/img/main-page/lineup-slides/vector-left.svg), auto
 
       &-next
         cursor: url(../assets/img/main-page/lineup-slides/vector-right.svg), auto
-        right: -100px
 
 
