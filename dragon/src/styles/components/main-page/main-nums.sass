@@ -10,32 +10,36 @@
     justify-content: space-between
     flex-wrap: wrap
     gap: 50px
+    +screen($tablet)
+      gap: 30px
 
   &__item
     display: flex
     flex-direction: column
     gap: 4px
+    +screen($tablet)
+      flex-basis: calc(50% - 15px)
 
-    &:nth-child(3)
+    &:nth-child(5)
       span
         span
           &:last-child:not(:first-child)
             +font(32px, 32px, 800)
             +screen($tablet)
-              +font(36px, 42px, 800)
+              +font(20px, 23px, 800)
 
     & > span
       &:first-child
-        +font(82px, 96px, 800)
+        +font(70px, 82px, 800)
         color: $blue
         +screen($desktop)
-          +font(64px, 75px, 800)
+          +font(60px, 70px, 800)
         +screen($tablet)
-          +font(66px, 78px, 800)
+          +font(38px, 45px, 800)
 
       &:last-child
-        +font(30px, 33px, 500)
+        +font(26px, 29px, 500)
         +screen($desktop)
-          +font(24px, 25px, 500)
+          +font(20px, 22px, 500)
         +screen($tablet)
-          +font(20px, 23px, 700)
+          +font(18px, 20px, 700)
