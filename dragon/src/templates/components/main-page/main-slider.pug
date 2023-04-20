@@ -22,3 +22,18 @@ section.main-slider
       img(src=require('@/assets/img/main-page/vector-left.svg') alt="")
     .swiper-button-next
       img(src=require('@/assets/img/main-page/vector-right.svg') alt="")
+  .swiper.swiper_mobile
+    .swiper-wrapper
+      each el in mainSlidesMobile
+        .swiper-slide
+          .container
+            if (el.main)
+              h1.swiper-slide-title.opacity-animation !{el.slideTitle}
+            else
+              h2.swiper-slide-title.opacity-animation !{el.slideTitle}
+            p.swiper-slide-txt.slide-left !{el.slideTxt}
+            a.btn.btn_orange.slide-up(href=el.slideUrl)
+              span Подробнее
+          .swiper-slide-image
+            img(src=el.slide alt="")
+    .swiper-pagination

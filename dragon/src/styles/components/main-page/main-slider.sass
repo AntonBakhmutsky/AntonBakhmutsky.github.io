@@ -13,6 +13,13 @@
     left: 0
     top: 0
     user-select: none
+    +screen($tablet)
+      display: none
+
+    &_mobile
+      display: none
+      +screen($tablet)
+        display: block
 
     &-slide
       width: 100%
@@ -20,23 +27,23 @@
       position: relative
       box-sizing: border-box
       +screen($tablet)
-        padding: 0 0 85px
+        padding: 97px 0 52px
 
       .container
         z-index: 10
         position: relative
 
       &-title
-        +font(76px, 80px, 800)
+        +font(64px, 64px, 800)
         max-width: 641px
         +screen($desktop)
           +font(54px, 54px, 800)
         +screen($tablet)
-          +font(40px, 41px, 800)
+          +font(30px, 34px, 800)
           max-width: 300px
 
         span
-          width: 213px
+          width: 176px
           height: 10px
           background-color: $white
           display: inline-block
@@ -48,18 +55,18 @@
             height: 7px
           +screen($tablet)
             transform: translateY(-7px)
-            width: 100px
+            width: 85px
             height: 5px
 
       &-txt
-        +font(30px, 40px)
-        margin-top: 44px
+        +font(24px, 36px)
+        margin-top: 24px
         +screen($desktop)
-          +font(24px, 31px)
-          margin-top: 33px
+          +font(20px, 31px)
+          margin-top: 22px
         +screen($tablet)
-          +font(20px, 26px)
-          margin-top: 20px
+          +font(16px, 20px)
+          margin-top: 16px
 
       .btn
         margin-top: 84px
@@ -67,9 +74,15 @@
         height: 80px
         pointer-events: auto
         +screen($desktop)
+          width: 236px
+          height: 66px
           margin-top: 79px
+          +font(22px, 22px, 500)
         +screen($tablet)
-          margin-top: 40px
+          margin-top: auto
+          width: 222px
+          height: 51px
+          +font(18px, 18px, 500)
 
 
       &-image
