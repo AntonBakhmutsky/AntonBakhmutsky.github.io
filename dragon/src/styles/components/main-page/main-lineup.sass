@@ -7,9 +7,10 @@
       background: url(../assets/img/main-page/lineup-bg.jpg) no-repeat center/cover
       height: 899px
       margin-top: 40px
+      padding: 0
       +screen($desktop)
         margin-top: 20px
-        height: auto
+        height: 646px
       +screen($tablet-xs)
         margin-top: 16px
         height: 600px
@@ -34,6 +35,11 @@
       flex-direction: column
       justify-content: space-between
       height: 100%
+      padding: 0 100px
+      +screen($desktop)
+        padding: 0 60px
+      +screen($tablet)
+        padding: 0 16px
 
       &__nums
         +font(48px, 56px, 700)
@@ -98,7 +104,6 @@
                 height: 17px
 
           &:nth-child(2)
-          &:nth-child(2)
             img
               width: 24px
               height: 12px
@@ -115,16 +120,31 @@
                 height: 16px
 
       &__image
-        margin: 68px auto 0
+        margin: 0 auto
+        flex-grow: 1
+        display: flex
+        align-items: flex-end
         +screen($desktop)
-          margin: 56px auto 0
+          box-sizing: border-box
+          padding: 0 230px
+        +screen(1280)
+          padding: 0 100px
         +screen($tablet)
-          margin: 114px auto 0
+          align-items: center
+          padding: 0 50px
+        +screen($tablet-sm)
+          padding: 0 0 100px
+
+        img
+          width: 100%
+          height: 100%
+          object-fit: contain
+          object-position: bottom
 
       &__link
         align-self: center
-        margin-top: auto
         border-width: 2px
+        flex-shrink: 0
 
         &:hover
           color: $blue
@@ -152,6 +172,7 @@
         height: 100%
         top: 0
         margin-top: 0
+        z-index: 10
         +screen($tablet)
           display: none
 
@@ -159,11 +180,9 @@
           display: none
 
       &-prev
-        left: -100px
         cursor: url(../assets/img/main-page/lineup-slides/vector-left.svg), auto
 
       &-next
         cursor: url(../assets/img/main-page/lineup-slides/vector-right.svg), auto
-        right: -100px
 
 

@@ -11,8 +11,14 @@
   transition: filter .3s, margin-top .3s
 
   &:hover
-    .news-card__title
-      color: $orange
+    .news-card
+      &__title
+        color: $orange
+
+      &__image
+        &:after
+          visibility: visible
+          opacity: 1
 
   &__image
     height: 220px
@@ -22,6 +28,22 @@
       height: 170px
     +screen($tablet)
       height: 184px
+
+    &:after
+      content: ''
+      width: 50px
+      height: 50px
+      background: $orange url(../assets/img/news/arrow.svg) center no-repeat
+      position: absolute
+      bottom: 0
+      right: 0
+      visibility: hidden
+      opacity: 0
+      transition: opacity .3s, visibility .3s
+      +screen($desktop)
+        width: 40px
+        height: 40px
+
 
     img
       width: 100%
