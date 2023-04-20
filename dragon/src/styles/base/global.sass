@@ -454,6 +454,7 @@ section
     border: 2px solid #E8E8E8
     border-radius: 50px
     +font(20px, 20px, 500)
+    color: $black !important
     +screen($desktop)
       width: 119px
       height: 42px
@@ -464,12 +465,12 @@ section
       +font(16px, 16px, 500)
 
     &:hover:not(.active)
-      color: $blue
+      color: $blue !important
 
     &.active
       background-color: $blue
       border-color: $blue
-      color: $white
+      color: $white !important
 
 .switch-content
   display: none !important
@@ -485,19 +486,22 @@ section
   align-items: center
   position: relative
   +screen($tablet)
-    padding-top: 55px
+    padding: 55px 31px 0
     justify-content: space-between
+
+  .page-link
+    +font(18px, 20px, 700)
 
   li
     &:first-child
       margin-right: 46px
       +screen($tablet)
-        left: 0
+        left: 18px
 
     &:last-child
       margin-left: 46px
       +screen($tablet)
-        right: 0
+        right: 18px
 
     &:first-child, &:last-child
       +screen($tablet)
