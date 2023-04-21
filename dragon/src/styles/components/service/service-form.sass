@@ -2,3 +2,70 @@
 @use '../../abstracts/mixins' as *
 
 .service-form
+  padding: 60px 60px 100px
+  max-width: 1920px
+  margin: 0 auto
+  box-sizing: border-box
+  background: url(../assets/img/service/service-bg.svg) no-repeat right bottom
+  +screen($desktop)
+    background: url(../assets/img/service/service-bg-desctop.svg) no-repeat right bottom
+    padding: 40px 60px 80px
+  +screen($tablet)
+    background: none
+    padding: 30px 16px 60px
+
+  &__panel
+    max-width: 1342px
+    margin: 0 auto
+    box-sizing: border-box
+    padding: 40px 65px
+    background: rgba(255, 255, 255, .3)
+    mix-blend-mode: normal
+    box-shadow: 0 10px 32px rgba(0, 0, 0, .16)
+    backdrop-filter: blur(3px)
+    +screen($desktop)
+      padding: 30px 42px 36px
+    +screen($tablet)
+      padding: 20px 18px 30px
+
+  &__title
+    +font(32px, 33px, 700)
+    text-align: center
+    +screen($desktop)
+      +font(24px, 28px, 700)
+    +screen($tablet)
+      +font(22px 26px, 700)
+
+  &__txt
+    +font(22px, 33px, 500)
+    margin-top: 7px
+    text-align: center
+    +screen($desktop)
+      +font(18px, 21px, 500)
+    +screen($tablet)
+      margin-top: 10px
+
+  &__fields
+    margin-top: 40px
+    +screen($desktop)
+      margin-top: 30px
+    +screen($tablet)
+      margin-top: 20px
+
+    &-top
+      display: grid
+      grid-template-columns: repeat(3, 1fr)
+      grid-gap: 26px 20px
+      +screen($tablet)
+        grid-template-columns: 1fr
+
+    &-bottom
+      margin-top: 44px
+      +screen($desktop)
+        margin-top: 36px
+      +screen($tablet)
+        margin-top: 30px
+
+  .form
+    &__field
+      margin: 0
