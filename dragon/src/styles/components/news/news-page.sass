@@ -54,7 +54,14 @@
   &__img
     margin-bottom: 26px
     +screen($desktop)
-      margin-bottom: 20px
+      padding-bottom: 20px
+    +screen($tablet)
+
+      img
+        width: 100%
+        height: 100%
+        object-fit: cover
+        object-position: center
 
   &__text
     +font(20px, 34px)
@@ -69,6 +76,14 @@
 
   .swiper
     position: relative
+
+    &-slide
+      img
+        +screen($tablet)
+          width: 100%
+          height: 100%
+          object-position: center
+          object-fit: cover
 
     &-button
       &-prev, &-next
@@ -106,9 +121,6 @@
 
         &-active
           background-color: $white
-
-
-
 
   &__link
     display: flex

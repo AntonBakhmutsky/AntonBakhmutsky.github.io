@@ -10,7 +10,7 @@ window.addEventListener('load', () => {
 
     const toggleModal = (e) => {
       if (!modal.classList.contains('active')) {
-        const content = e.currentTarget.children[0].cloneNode(true)
+        const content = e.currentTarget.cloneNode(true)
         screen.innerHTML = ''
         screen.insertAdjacentElement('afterbegin', content)
         modal.classList.add('active')
@@ -22,8 +22,22 @@ window.addEventListener('load', () => {
       }
     }
 
+    const handleModalVideo = (e) => {
+      const video = e.target.closest('.media__video').querySelector('video')
+      if (video) {
+        if (e.target.classList.contains('media__video-overlay')) {
+          e.target.closest('.media__video').classList.add('active')
+          video.play()
+        } else {
+          e.target.closest('.media__video').classList.remove('active')
+          video.pause()
+        }
+      }
+    }
+
     photos.forEach(el => el.addEventListener('click', toggleModal))
     videos.forEach(el => el.addEventListener('click', toggleModal))
     modalClose.addEventListener('click', toggleModal)
+    modal.addEventListener('click', handleModalVideo)
   }
 });
