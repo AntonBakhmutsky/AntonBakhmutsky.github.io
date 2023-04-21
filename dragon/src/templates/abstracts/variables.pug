@@ -69,8 +69,8 @@
   mainSlides = [
     {
       slide: require('@/assets/img/main-page/1.jpg'),
-      slideTitle: 'Сотранс <span></span> эксклюзивный дистрибьютор',
-      slideTxt: 'Golden Dragon в Российской Федерации',
+      slideTitle: 'Чемодан, вокзал,<br> Golden Dragon',
+      slideTxt: 'Сотранс —  эксклюзивный дистрибьютор <br>Golden Dragon в Российской Федерации',
       slideUrl: 'about.html',
       main: true
     },
@@ -78,8 +78,8 @@
   mainSlidesMobile = [
     {
       slide: require('@/assets/img/main-page/1-mob.jpg'),
-      slideTitle: 'Сотранс <span></span> эксклюзивный дистрибьютор',
-      slideTxt: 'Golden Dragon в Российской Федерации',
+      slideTitle: 'Чемодан, вокзал,<br> Golden Dragon',
+      slideTxt: 'Сотранс —  эксклюзивный дистрибьютор <br>Golden Dragon в Российской Федерации',
       slideUrl: 'about.html',
       main: true
     }
@@ -139,25 +139,25 @@
     {
       date: '13 фев 2023',
       title: 'Заголовок новости в 1 строчку',
-      url: 'javascript:',
+      url: 'news-page.html',
       image: require('@/assets/img/main-page/news/1.jpg')
     },
     {
       date: '13 фев 2023',
       title: 'Большой заголовок новости в 2 строчки',
-      url: 'javascript:',
+      url: 'news-page.html',
       image: require('@/assets/img/main-page/news/2.jpg')
     },
     {
       date: '13 фев 2023',
       title: 'Возможный длинный заголовок новости длинной в 3 строчки',
-      url: 'javascript:',
+      url: 'news-page.html',
       image: require('@/assets/img/main-page/news/3.jpg')
     },
     {
       date: '13 фев 2023',
       title: 'Большой заголовок новости в 2 строчки',
-      url: 'javascript:',
+      url: 'news-page.html',
       image: require('@/assets/img/main-page/news/4.jpg')
     }
   ]
@@ -516,43 +516,43 @@
       image: require('@/assets/img/news/1.jpg'),
       title: 'Большой заголовок новости, если он будет в 2 строчки',
       date: '31 мар 2023',
-      url: 'javascript:'
+      url: 'news-page.html'
     },
     {
       image: require('@/assets/img/news/2.jpg'),
       title: 'Заголовок новости в 1 строчку',
       date: '31 мар 2023',
-      url: 'javascript:'
+      url: 'news-page.html'
     },
     {
       image: require('@/assets/img/news/3.jpg'),
       title: 'Большой заголовок новости, если вдруг он будет 2-3 строчки, то ставить строчки, то ставить ',
       date: '31 мар 2023',
-      url: 'javascript:'
+      url: 'news-page.html'
     },
     {
       image: require('@/assets/img/news/1.jpg'),
       title: 'Большой заголовок новости, если он будет в 2 строчки',
       date: '31 мар 2023',
-      url: 'javascript:'
+      url: 'news-page.html'
     },
     {
       image: require('@/assets/img/news/2.jpg'),
       title: 'Заголовок новости в 1 строчку',
       date: '31 мар 2023',
-      url: 'javascript:'
+      url: 'news-page.html'
     },
     {
       image: require('@/assets/img/news/3.jpg'),
       title: 'Большой заголовок новости, если вдруг он будет 2-3 строчки, то ставить строчки, то ставить ',
       date: '31 мар 2023',
-      url: 'javascript:'
+      url: 'news-page.html'
     },
     {
       image: require('@/assets/img/news/1.jpg'),
       title: 'Большой заголовок новости, если вдруг он будет 2-3 строчки, то ставить строчки, то ставить ',
       date: '31 мар 2023',
-      url: 'javascript:'
+      url: 'news-page.html'
     },
   ]
 
@@ -606,8 +606,14 @@
   ]
 
   mediaVideos = [
-    require('@/assets/img/media/video.jpg'),
-    require('@/assets/img/media/video.jpg'),
+    {
+      poster: require('@/assets/img/main-page/poster.jpg'),
+      video: require('@/assets/video/video.mp4')
+    },
+    {
+      poster: require('@/assets/img/main-page/poster.jpg'),
+      video: require('@/assets/video/video.mp4')
+    }
   ]
 
   //- contacts
@@ -623,7 +629,7 @@
 
   contactsItems = [
     {
-      image: require('@/assets/img/contacts/contact.jpg'),
+      image: require('@/assets/img/contacts/red_forest/1.jpg'),
       position: 'Генеральный директор',
       name: 'Клубачук Александр',
       telTxt: '+7 (921) 439-32-11',
@@ -631,7 +637,7 @@
       mail: 'k.aa@tc-sotrans.ru'
     },
     {
-      image: require('@/assets/img/contacts/contact.jpg'),
+      image: require('@/assets/img/contacts/red_forest/2.jpg'),
       position: 'Операционный директор',
       name: 'Шилимов Виктор',
       telTxt: '+7 (921) 886-96-89',
@@ -639,7 +645,7 @@
       mail: 'v.shilimov@tc-sotrans.ru'
     },
     {
-      image: require('@/assets/img/contacts/contact.jpg'),
+      image: require('@/assets/img/contacts/red_forest/3.jpg'),
       position: 'Руководитель отдела продаж',
       name: 'Карась Андрей',
       telTxt: '+7 (921) 312-63-38',
@@ -647,7 +653,7 @@
       mail: 'a.karas@tc-sotrans.ru'
     },
     {
-      image: require('@/assets/img/contacts/contact.jpg'),
+      image: require('@/assets/img/contacts/red_forest/4.jpg'),
       position: 'Руководитель департамента сервиса',
       name: 'Петров Михаил',
       telTxt: '+7 (921) 947-11-51',
@@ -655,7 +661,7 @@
       mail: 'm.petrov@tc-sotrans.ru'
     },
     {
-      image: require('@/assets/img/contacts/contact.jpg'),
+      image: require('@/assets/img/contacts/red_forest/5.jpg'),
       position: 'Руководитель департамента логистики',
       name: 'Тупицин Максим',
       telTxt: '+7 (921) 925-38-88',

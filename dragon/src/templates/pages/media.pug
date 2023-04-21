@@ -46,16 +46,17 @@ block content
                 | Дальше
                 | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/global/pag-arrow-right.svg')}
         .media__content-item.switch-content(data-id='1')
-          // each el in mediaVideos
-          //   .media__video
-          //     .media__video-overlay
-          //     video(
-          //       loop
-          //       muted
-          //       preload="none"
-          //       poster=require('@/assets/img/main-page/poster.jpg')
-          //     )
-          //       source(src=require('@/assets/video/video.mp4') type="video/mp4")
+          .media__content-container
+            each el in mediaVideos
+              .media__video
+                .media__video-overlay
+                video(
+                  loop
+                  muted
+                  preload="none"
+                  poster=el.poster
+                )
+                  source(src=el.video type="video/mp4")
 
 
 
