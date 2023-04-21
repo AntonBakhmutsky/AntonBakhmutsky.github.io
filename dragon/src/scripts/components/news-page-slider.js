@@ -8,6 +8,7 @@ window.addEventListener('load', () => {
 
     const swiper = new Swiper('.swiper-container', {
       modules: [Navigation, Pagination, Mousewheel, Autoplay],
+      loop: true,
       slidesPerView: 1,
       navigation: {
         nextEl: '.swiper-button-next',

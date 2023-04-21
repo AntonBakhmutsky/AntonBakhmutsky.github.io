@@ -1,0 +1,24 @@
+extends ../layouts/other/layout.pug
+
+append variables
+  -
+    breadCrumbsList = [
+      {
+        url: '/',
+        txt: 'Главная'
+      },
+      {
+        url: 'lineup.html',
+        txt: 'Модельный ряд'
+      }
+    ]
+    productPage = true
+    orderFormTitle = 'Заявка на приобретение транспортного средства'
+    orderFormTxt = 'Оставьте свои контактные данные, и мы свяжемся с вами в ближайшее время'
+    orderFormModifier = 'product'
+
+block title
+  | Golden Dragon
+
+block content
+  section.search
