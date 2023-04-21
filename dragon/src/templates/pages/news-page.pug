@@ -8,40 +8,37 @@ block title
 
 block content
   section.news-page
-    a(href="#").back__btn 
+    a(href="#").back__btn
       svg(width='25' height='14' viewbox='0 0 25 14' fill='none' xmlns='http://www.w3.org/2000/svg')
         path(d='M24.5 7H2.33144' stroke='currentColor' stroke-width='2')
         path(d='M6.94141 1.64697C6.612 2.00383 3.51004 5.36428 2.00024 6.9999L6.94141 12.3528' stroke='currentColor' stroke-width='2')
-      p Назад
-    
+      span Назад
+
     .news-page__date
       p 31 марта 2023
-    h2.news-page__title Фотоотчёт с выставки BW Expo 2022 
+    h2.news-page__title Фотоотчёт с выставки BW Expo 2022
     .news-page__img
       img(src=require("@/assets/img/news-page/main-expo.png") alt="" loading="lazy")
-    .news-page__text 
+    .news-page__text
       p Компания СОТРАНС приняла участие в выставке автобусной техники BW Expo 2022.Выставка проходила в Москве с 29 ноября по 1 декабря в крупнейшем выставочном комплексе «Крокус Экспо». Наша компания представила на выставке рестайлинговую модель «Golden Dragon».
     .news-page__swiper-wrapper
-        div.swiper-container
-          div.swiper-wrapper
-            
-            .swiper-button-prev
-              img(src=require('@/assets/img/news-page/Vector-left.svg') alt="" loading="lazy")
-
-            div.swiper-slide
+        .swiper-container.swiper
+          .swiper-wrapper
+            .swiper-slide
               img(src=require("@/assets/img/news-page/slide1.png") alt="" loading="lazy")
-            div.swiper-slide
+            .swiper-slide
               img(src=require("@/assets/img/news-page/main-expo.png") alt="" loading="lazy")
-            div.swiper-slide
+            .swiper-slide
               img(src=require("@/assets/img/news-page/slide1.png") alt="" loading="lazy")
+          .swiper-button-prev
+            img(src=require('@/assets/img/news-page/Vector-left.svg') alt="" loading="lazy")
+          .swiper-button-next
+            img(src=require('@/assets/img/news-page/Vector-right.svg') alt="" loading="lazy")
+          .swiper-pagination
 
-            .swiper-button-next
-              img(src=require('@/assets/img/news-page/Vector-right.svg') alt="" loading="lazy")
-            .swiper-pagination
 
-            
 
-            
+
     .news-page__text Больше фотографий с мероприятия смотрите в новом альбоме «BW Expo 2022» в группе в ВК.
     a(href="#").news-page__link
       img(src=require("@/assets/img/news-page/vk.svg") alt="vk" loading="lazy" width="19" height="19")
