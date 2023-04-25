@@ -1,0 +1,48 @@
+@use '../../abstracts/variables' as *
+@use '../../abstracts/mixins' as *
+
+.menu
+  height: 95.5vh
+  width: 15.6vw
+  background-color: #2B2B33
+  position: absolute
+  top: 0
+  left: 0
+  padding: 14px 10px 30px 10px
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+
+  &__logo
+
+  &__list
+    position: relative
+    top: -130px
+    a
+      display: flex
+      align-items: center
+      margin-bottom: 35px
+      div
+        width: 20px
+        margin-right: 18px
+      span
+        +font(16px, 19px, 400)
+        color: $white
+
+  &__btn
+    background-color: $orange
+    +font(14px, 17px, 400)
+    color: $white
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 11.5px
+    border-radius: 8px
+
+  &__toggle-btn
+    background-color: $orange
+    width: 30px
+    height: 30px
+    border-radius: 8px
+    position: absolute
+    right: -20px
