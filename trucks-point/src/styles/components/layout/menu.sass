@@ -58,6 +58,11 @@
     justify-content: center
     padding: 11.5px
     border-radius: 8px
+    transition: 0.3s
+
+  &__btn-min
+    display: none
+    transition: 0.3s
 
   &__toggle
     background-color: $orange
@@ -66,11 +71,14 @@
     border-radius: 8px
     position: absolute
     right: -20px
+    transition: 0.3s
 
 
 
 .menu-min
+  padding-left: 9px
   width: 78px
+  align-items: center
   .menu__logo
     display: none
   .menu__logo-min
@@ -78,29 +86,31 @@
 
   .menu__list
     a
+      padding: 5px 21px
       div
         width: 20px
         margin-right: 0
       span
         display: none
 
-  &__btn
-    background-color: $orange
-    +font(14px, 17px, 400)
-    color: $white
-    display: flex
-    align-items: center
-    justify-content: center
-    padding: 11.5px
-    border-radius: 8px
 
-  &__toggle
+
+  .menu__btn
+    display: none
+
+  .menu__btn-min
+    display: flex
     background-color: $orange
-    width: 30px
-    height: 30px
+    text-align: center
+    justify-content: center
     border-radius: 8px
-    position: absolute
-    right: -20px
+    width: 40px
+    height: 40px
+
+  .menu__toggle
+    transform: rotateZ(180deg)
+
+
 
 
 

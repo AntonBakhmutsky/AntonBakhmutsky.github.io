@@ -7,44 +7,47 @@
       li
         a(href='#')
           .list__img
-            img(src=require('@/assets/img/menu/list.svg') alt="" loading='lazy')
+            | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/menu/list.svg')}
           span.list__text Заявки
       li
         a(href='#')
          .list__img
-           img(src=require('@/assets/img/menu/bell.svg') alt="" loading='lazy')
+           | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/menu/bell.svg')}
          span.list__text Уведомления
       li
         a(href='#')
           .list__img
-            img(src=require('@/assets/img/menu/van.svg') alt="" loading='lazy')
+            | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/menu/van.svg')}
           span.list__text Грузовики
       li
         a(href='#')
           .list__img
-            img(src=require('@/assets/img/menu/rudder.svg') alt="" loading='lazy')
+            | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/menu/rudder.svg')}
           span.list__text Водители
       li
         a(href='#')
           .list__img
-            img(src=require('@/assets/img/menu/trailer.svg') alt="" loading='lazy')
+            | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/menu/trailer.svg')}
           span.list__text Прицепы
       li
         a(href='#')
           .list__img
-            img(src=require('@/assets/img/menu/tracker.svg') alt="" loading='lazy')
+            | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/menu/tracker.svg')}
           span.list__text Трекеры
       li
         a(href='#')
           .list__img
-            img(src=require('@/assets/img/menu/contr.svg') alt="" loading='lazy')
+            | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/menu/contr.svg')}
           span.list__text Контрагенты
 
   a(href="#").menu__btn Назад на Trucks.ru
+  a(href="#").menu__btn-min
+    img(src=require('@/assets/img/menu/back.svg') alt="back" loading='lazy')
+
+
 
   button.menu__toggle#menu-toggle
     img(src=require('@/assets/img/menu/toggle.svg') alt="" loading='lazy')
-
 
 
 
