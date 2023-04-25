@@ -26,22 +26,22 @@ section.service-form
             input.form__field-input(type="email" name="email")
             span.form__field-placeholder Email
         .service-form__fields-bottom
+          .form__radios
+            .form__radios-title Выберите тему обращения#[span *]
+            .form__radios-container
+              input(type="radio" name='appealTheme' id="appealTheme1" checked)
+              label(for="appealTheme1") сервис
+              input(type="radio" name='appealTheme' id="appealTheme2")
+              label(for="appealTheme2") запчасти
           .service-form__fields-container
-            .form__radios
-              .form__radios-title Выберите тему обращения#[span *]
-              .form__radios-container
-                input(type="radio" name='appealTheme' id="appealTheme1")
-                label(for="appealTheme1") сервис
-                input(type="radio" name='appealTheme' id="appealTheme2")
-                label(for="appealTheme2") запчасти
-          .service-form__fields-container
-            textarea.form__textarea(placeholder='Сообщение')
-          .service-form__fields-container
-            .form__checkbox
-              input#orderFormPolicy(type="checkbox" required)
-              label(for="orderFormPolicy") Я согласен с #[a(href="javascript:") Политикой конфидициальности]
-            button.btn.btn_trans.btn_trans_orange.service-form__submit(type="submit")
-              span Отправить
+            .service-form__fields-container-item
+              textarea.form__textarea(placeholder='Сообщение')
+            .service-form__fields-container-item
+              .form__checkbox
+                input#orderFormPolicy(type="checkbox" required)
+                label(for="orderFormPolicy") Я согласен с #[a(href="javascript:") Политикой конфидициальности]
+              button.btn.btn_trans.btn_trans_orange.service-form__submit(type="submit")
+                span Отправить
 
 
 

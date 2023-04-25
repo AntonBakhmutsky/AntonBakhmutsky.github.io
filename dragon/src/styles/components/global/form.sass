@@ -212,3 +212,50 @@
       +font(18px, 26px)
       +screen($desktop)
         +font(16px, 26px)
+
+  &__radios
+    display: flex
+    gap: 10px
+    +screen($tablet)
+       flex-direction: column
+
+    &-container
+      display: flex
+      gap: 8px
+      +screen($tablet)
+        align-items: flex-start
+
+      input
+        display: none
+
+      input + label
+        border-radius: 31px
+        +font(18px, 18px)
+        box-sizing: border-box
+        padding: 8px 15px 10px
+        display: flex
+        align-items: center
+        border: 1px solid #E3E3E3
+        +screen($desktop)
+          +font(16px, 17px)
+          padding: 6px 15px 8px
+        +screen($tablet)
+          padding: 10px 18px 11px
+
+
+      input:checked + label
+        background: $orange
+        color: $white
+
+    &-title
+      +font(18px, 26px)
+      display: flex
+      align-items: center
+      +screen($desktop)
+        +font(16px, 26px)
+
+      span
+        color: $red
+        font-weight: 500
+
+
