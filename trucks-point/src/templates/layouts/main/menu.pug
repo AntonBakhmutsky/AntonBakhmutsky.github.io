@@ -1,5 +1,6 @@
 .menu
   img.menu__logo(src=require('@/assets/img/menu/logo.svg') alt="logo" loading='lazy')
+  img.menu__logo-min(src=require('@/assets/img/menu/logo-min.svg') alt="logo" loading='lazy')
 
   nav.menu__list
     ul
@@ -7,41 +8,41 @@
         a(href='#')
           .list__img
             img(src=require('@/assets/img/menu/list.svg') alt="" loading='lazy')
-          span Заявки
+          span.list__text Заявки
       li
         a(href='#')
          .list__img
            img(src=require('@/assets/img/menu/bell.svg') alt="" loading='lazy')
-         span Уведомления
+         span.list__text Уведомления
       li
         a(href='#')
           .list__img
             img(src=require('@/assets/img/menu/van.svg') alt="" loading='lazy')
-          span Грузовики
+          span.list__text Грузовики
       li
         a(href='#')
           .list__img
             img(src=require('@/assets/img/menu/rudder.svg') alt="" loading='lazy')
-          span Водители
+          span.list__text Водители
       li
         a(href='#')
           .list__img
             img(src=require('@/assets/img/menu/trailer.svg') alt="" loading='lazy')
-          span Прицепы
+          span.list__text Прицепы
       li
         a(href='#')
           .list__img
             img(src=require('@/assets/img/menu/tracker.svg') alt="" loading='lazy')
-          span Трекеры
+          span.list__text Трекеры
       li
         a(href='#')
           .list__img
             img(src=require('@/assets/img/menu/contr.svg') alt="" loading='lazy')
-          span Контрагенты
+          span.list__text Контрагенты
 
   a(href="#").menu__btn Назад на Trucks.ru
 
-  button.menu__toggle-btn
+  button.menu__toggle#menu-toggle
     img(src=require('@/assets/img/menu/toggle.svg') alt="" loading='lazy')
 
 
