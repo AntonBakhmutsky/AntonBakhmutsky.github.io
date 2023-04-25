@@ -15,6 +15,7 @@
   flex-direction: column
   justify-content: space-between
   transition: width 0.3s
+  z-index: 999
 
   &__logo
     display: block
@@ -71,7 +72,7 @@
     border-radius: 8px
     position: absolute
     right: -20px
-    transition: 0.3s
+    z-index: -5
 
 
 
@@ -108,7 +109,8 @@
     height: 40px
 
   .menu__toggle
-    transform: rotateZ(180deg)
+    img
+      transform: rotateZ(180deg)
 
 
 
