@@ -66,6 +66,73 @@
       +screen($tablet)
         margin-top: 30px
 
+    &-container
+      display: flex
+      margin-top: 16px
+      gap: 20px
+      +screen($tablet)
+        margin-top: 26px
+        flex-direction: column
+
+      &-item
+        &:first-child
+          flex-grow: 1
+
+        &:last-child
+          width: 390px
+          display: flex
+          flex-direction: column
+          justify-content: space-between
+          +screen($tablet)
+            width: 100%
+
   .form
     &__field
       margin: 0
+
+    &__checkbox
+      +font(16px, 20px)
+      margin-top: 5px
+      +screen($desktop)
+        padding-left: 27px
+        +font(13px, 20px)
+        margin: 0
+      +screen($tablet)
+        +font(14px, 17px)
+        padding-left: 42px
+
+      label:before
+        width: 30px !important
+        height: 30px !important
+        top: -5px !important
+        +screen($desktop)
+          width: 20px !important
+          height: 20px !important
+          top: -1px !important
+        +screen($tablet)
+          width: 30px !important
+          height: 30px !important
+          top: 50% !important
+          transform: translateY(-50%) !important
+
+
+    &__textarea
+      height: 140px
+      +screen($desktop)
+        height: 112px
+      +screen($tablet)
+        height: 174px
+
+
+    .service-form__submit
+      height: 66px
+      width: 100% !important
+      +font(22px, 22px, 500)
+      margin-bottom: 4px
+      +screen($desktop)
+        +font(18px, 18px, 500)
+        height: 56px
+      +screen($tablet)
+        +font(20px, 20px, 500)
+        height: 60px
+        margin-top: 30px
