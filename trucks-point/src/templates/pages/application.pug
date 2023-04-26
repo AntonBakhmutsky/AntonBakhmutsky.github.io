@@ -8,55 +8,123 @@ block content
 
     .application-user
       .application-user-block
-        img.application-user-block__avatar(src=require('@/assets/img/application/avatar.svg') alt="avatar" loading='lazy')
-        h2.application-user-block__name Константинопольский Константин
-      span.application-user-email webmaster@sortans.ru
+        .application-user-block_info
+          img.application-user-block_info__avatar(src=require('@/assets/img/application/avatar.svg') alt="avatar" loading='lazy')
+          h2.application-user-block_info__name Константинопольский Константин
+        span.application-user-block-email webmaster@sortans.ru
 
-    .application-toggle
-      button.application-toggle-organization Организация
-      button.application-toggle-settings Настройка полей
+      .application-toggle
+        button.application-toggle-organization#aplication-organization Организация
+        button.application-toggle-settings#aplication-settings Настройка полей
 
     form.application-organization
       .application-organization_left
         h3.application-organization_left_label Данные организации
         .application-organization_left__form-container
           label(for="INN") ИНН/КПП
-          input(type="text" id="INN" name="Some Text")
+          input(type="text" id="INN" name="ИНН/КПП" placeholder="Some Text")
 
           label(for="OGRN") ОГРН
-          input(type="text" id="OGRN" name="Some Text")
+          input(type="text" id="OGRN" name="ОГРН" placeholder="Some Text")
 
           label(for="bank") БАНК
-          input(type="text" id="bank" name="...")
+          input(type="text" id="bank" name="банк" placeholder="...")
 
           label(for="ks") к/с
-          input(type="text" id="ks" name="...")
+          input(type="text" id="ks" name="к/с" placeholder="...")
 
           label(for="rs") р/c
-          input(type="text" id="rs" name="...")
+          input(type="text" id="rs" name="р/c" placeholder="...")
 
           label(for="nameCompany") Название Компании
-          input(type="text" id="nameCompany" name="Some Text")
+          input(type="text" id="nameCompany" name="Название Компании" placeholder="Some Text")
 
           label(for="email") Эл. почта
-          input(type="text" id="email" name="Some Text")
+          input(type="text" id="email" name="email" placeholder="Some Text")
 
           label(for="phone") Телефон
-          input(type="text" id="phone" name="...")
+          input(type="text" id="phone" name="Телефон" placeholder="...")
 
-          label(for="site") Телефон
-          input(type="text" id="site" name="...")
+          label(for="site") Сайт
+          input(type="text" id="site" name="site" placeholder="...")
 
+          label(for="adress") Адрес
+          input(type="text" id="adress" name="Адрес" placeholder="Начните вводить адрес")
 
+          label(for="time") Часовой пояс
+          select(id="time" name="time")
+            option(value="") (UTC+03:00) Москва, стандартное время (GMT+3)
 
+          label(for="control") Контроль геозон в мобильном приложении
+          input(type="checkbox" id="control" name="Контроль геозон в мобильном приложении")
 
+          label(for="period") Закрытый период
+          input(type="checkbox" id="period" name="Закрытый период")
 
+          label(for="period-date") Дата закрытого периода (день месяца, от 1 до 28)
+          input(type='number' id='period-date' min='1' max='28' name='Дата закрытого периода' placeholder='Some Text')
 
+          label(for="critical-overrun") Критический перепробег (в км.)
+          input(type="text" id="critical-overrun" name="Критический перепробег" placeholder='Some Text')
 
+          label(for="geofence-time") Время учета геозоны (в мин.)
+          input(type="number" id="geofence-time" name="Время учета геозоны" placeholder='Some Text')
+
+          label(for="geofence-radius") Радиус геозоны по умолчанию (в м.)
+          input(type="number" id="geofence-radius" name="Радиус геозоны" placeholder='Some Text')
+
+          label(for="drafts-approval") Согласование черновиков
+          input(type="checkbox" id="drafts-approval" name='Согласование черновиков')
+
+          label(for="geofence-stay") Корректировка периода нахождения в геозоне (в мин.)
+          input(type="text" id="geofence-stay" name="Корректировка периода нахождения в геозоне" placeholder='Some Text')
+
+          label(for="desired-output") Желаемая выработка одной машины (руб/км)
+          input(type="number" id="desired-output" name="Желаемая выработка одной машины" placeholder='')
 
 
 
       .application-organization_right
+
+        h3.application-organization_left_label Настройки труда и отдыха
+        .application-organization_right__block
+          label(for="cars-speed") Средняя скорость машин (км/ч)
+          input(type="number" id="cars-speed" name="Средняя скорость машин" placeholder='Some Text')
+
+          label(for="travel-hours") Кол-во часов для поездки в сутки
+          input(type="number" id="travel-hours" name="Кол-во часов для поездки в сутки" placeholder='Some Text')
+
+          label(for="scheduled-applications") Макс. кол-во запланированных заявок
+          input(type="number" id="scheduled-applications" name="Кол-во часов для поездки в сутки" placeholder='Some Text')
+
+          label(for="loading-time") Время загрузки/выгрузки (ч)
+          input(type="text" id="loading-time" name="Время загрузки/выгрузки" placeholder='Some Text')
+
+          label(for="day-start") Начало дня
+          input(type="text" id="day-start" name="Начало дня" placeholder='Some Text')
+
+
+        h3.application-organization_left_label Настройки заправок
+        .application-organization_right__block
+          label(for="fuel-consumption") Расход топлива, л/100км
+          input(type="text" id="fuel-consumption" name="Расход топлива" placeholder='Some Text')
+
+          label(for="fuel-minimum") Минимальное кол-во топлива в баке
+          input(type="text" id="fuel-minimum" name="Расход топлива" placeholder='Some Text')
+
+
+        h3.application-organization_left_label Время отправки ежедневного отчета
+          .application-organization_right__block
+            label(for="report-time") Время отчета
+            input(type="text" id="report-time" name="Время отчета" placeholder='Some Text')
+
+            label(for="report-time-to") Время отчета
+            input(type="text" id="report-time-to" name="Время отчета" placeholder='Some Text')
+
+
+
+
+
       .application-organization_buttons
         button(type="submit").application-organization_buttons-save сохранить изменения
         button(type="reset").application-organization_buttons-save отменить
