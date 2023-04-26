@@ -1,0 +1,60 @@
+@use '../../abstracts/variables' as *
+@use '../../abstracts/mixins' as *
+
+.development
+  &__background
+    background-image: url("../assets/img/development/background.png")
+    background-size: cover
+    position: relative
+    height: 970px
+  &__overlay
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background-image: linear-gradient(180deg, #131B21 0%, rgba(20, 22, 27, 0.5) 100%)
+    border: 1px solid #000000
+    background-size: cover
+  &_dop
+    background-image: linear-gradient(180deg, #14161B 0%, rgba(20, 22, 27, 0.9) 100%)
+    background-size: cover
+
+  &__container
+    display: flex
+    flex-direction: column
+    align-items: center
+    position: absolute
+    top: 300px
+    left: 0
+    right: 0
+    bottom: 0
+
+    &__title
+      +font(50px, 64px, 800)
+      color: $white
+      margin-top: 15px
+      text-align: center
+
+      +screen($tablet-xs)
+        display:  flex
+        flex-direction: column
+
+
+      span
+        color: $orange
+        margin-left: 10px
+
+    a
+      +font(22px, 26px, 500)
+      color: $white
+      background-image: $orange-grad
+      padding: 20px 40px
+      box-shadow: 0 11px 30px rgba(235, 92, 44, 0.4)
+      margin-top: 72px
+      +screen($desktop)
+        +font(18px, 21px, 500)
+        padding: 16px 34px
+        margin-top: 45px
+      +screen($tablet-xs)
+        padding: 18.5px 37.5px
