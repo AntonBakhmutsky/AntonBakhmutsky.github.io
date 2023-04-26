@@ -7,6 +7,10 @@
     background-size: cover
     position: relative
     height: 970px
+    +screen($desktop)
+      height: 760px
+    +screen($tablet-xs)
+      height: 619px
   &__overlay
     position: absolute
     top: 0
@@ -25,21 +29,41 @@
     flex-direction: column
     align-items: center
     position: absolute
-    top: 300px
+    padding-top: 385px
+    top: 0
     left: 0
     right: 0
     bottom: 0
+    +screen($desktop)
+      padding-top: 296px
+    +screen($tablet-xs)
+      padding-top: 193px
+
+    svg
+      width: 80px
+      height: 80px
+      +screen($desktop)
+        width: 60px
+        height: 60px
+      +screen($tablet-xs)
+        width: 50px
+        height: 50px
+
+
 
     &__title
       +font(50px, 64px, 800)
       color: $white
       margin-top: 15px
       text-align: center
-
+      +screen($desktop)
+        +font(40px, 64px, 800)
+        margin-top: 10px
       +screen($tablet-xs)
         display:  flex
+        margin-top: 8px
         flex-direction: column
-
+        +font(30px, 35px, 800)
 
       span
         color: $orange
@@ -51,10 +75,13 @@
       background-image: $orange-grad
       padding: 20px 40px
       box-shadow: 0 11px 30px rgba(235, 92, 44, 0.4)
-      margin-top: 72px
+      margin-top: 56px
+      &:hover
+        background-image: $orange-grad-reverse
       +screen($desktop)
         +font(18px, 21px, 500)
         padding: 16px 34px
-        margin-top: 45px
+        margin-top: 37px
       +screen($tablet-xs)
         padding: 18.5px 37.5px
+        margin-top: 49px

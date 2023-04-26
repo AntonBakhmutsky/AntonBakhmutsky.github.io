@@ -4,7 +4,6 @@
 .page-404
   +screen($tablet-xs)
     height: 619px
-    padding: 0 36px
 
   &__background
     background-image: url("../assets/img/page-404/background-404.png")
@@ -39,8 +38,17 @@
       top: 234px
     +screen($tablet-xs)
       top: 160px
+      padding: 0 36px
 
-
+    svg
+      width: 626px
+      height: 265px
+      +screen($desktop)
+        width: 466px
+        height: 197px
+      +screen($tablet-xs)
+        width: 285px
+        height: 120.5px
 
     h2
       +font(26px, 31px, 700)
@@ -56,6 +64,9 @@
       padding: 20px 40px
       box-shadow: 0 11px 30px rgba(235, 92, 44, 0.4)
       margin-top: 72px
+      text-align: center
+      &:hover
+        background-image: $orange-grad-reverse
       +screen($desktop)
         +font(18px, 21px, 500)
         padding: 16px 34px
