@@ -1,0 +1,67 @@
+extends ../layouts/main/layout.pug
+
+block title
+  | TRUCKS.POINT
+
+block content
+  section.application
+
+    .application-user
+      .application-user-block
+        img.application-user-block__avatar(src=require('@/assets/img/application/avatar.svg') alt="avatar" loading='lazy')
+        h2.application-user-block__name Константинопольский Константин
+      span.application-user-email webmaster@sortans.ru
+
+    .application-toggle
+      button.application-toggle-organization Организация
+      button.application-toggle-settings Настройка полей
+
+    form.application-organization
+      .application-organization_left
+        h3.application-organization_left_label Данные организации
+        .application-organization_left__form-container
+          label(for="INN") ИНН/КПП
+          input(type="text" id="INN" name="Some Text")
+
+          label(for="OGRN") ОГРН
+          input(type="text" id="OGRN" name="Some Text")
+
+          label(for="bank") БАНК
+          input(type="text" id="bank" name="...")
+
+          label(for="ks") к/с
+          input(type="text" id="ks" name="...")
+
+          label(for="rs") р/c
+          input(type="text" id="rs" name="...")
+
+          label(for="nameCompany") Название Компании
+          input(type="text" id="nameCompany" name="Some Text")
+
+          label(for="email") Эл. почта
+          input(type="text" id="email" name="Some Text")
+
+          label(for="phone") Телефон
+          input(type="text" id="phone" name="...")
+
+          label(for="site") Телефон
+          input(type="text" id="site" name="...")
+
+
+
+
+
+
+
+
+
+
+      .application-organization_right
+      .application-organization_buttons
+        button(type="submit").application-organization_buttons-save сохранить изменения
+        button(type="reset").application-organization_buttons-save отменить
+
+
+
+
+

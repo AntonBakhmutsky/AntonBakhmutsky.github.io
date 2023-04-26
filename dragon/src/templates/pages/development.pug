@@ -1,0 +1,18 @@
+extends ../layouts/main/layout.pug
+
+append variables
+  -
+
+block title
+  | Golden Dragon
+
+block content
+  section.development
+  .development__background
+    .development__overlay
+    .development__overlay_dop
+    .development__container
+      img(src=require('@/assets/img/development/loading.svg') alt="" loading="lazy")
+      h2.development__container__title Раздел находится
+        span в разработке
+      a(href="/") Вернуться на главную

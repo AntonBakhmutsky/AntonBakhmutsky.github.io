@@ -1,4 +1,4 @@
-extends ../layouts/other/layout.pug
+extends ../layouts/main/layout.pug
 
 append variables
   -
@@ -8,3 +8,11 @@ block title
 
 block content
   section.page-404
+    .page-404__background
+    .page-404__overlay
+    .page-404__overlay_dop
+    .page-404__container
+      img(src=require('@/assets/img/page-404/page-404.svg') alt="404" loading="lazy")
+      h2 Cтраница, которую вы ищите, не существует либо устарела.
+      a(href="/") Вернуться на главную
+
