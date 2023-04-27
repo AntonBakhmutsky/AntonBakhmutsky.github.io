@@ -2,15 +2,9 @@
 @use '../../abstracts/mixins' as *
 
 .development
-  &__background
-    background-image: url("../assets/img/development/background.png")
-    background-size: cover
-    position: relative
-    height: 970px
-    +screen($desktop)
-      height: 760px
-    +screen($tablet-xs)
-      height: 619px
+  background-image: url("../assets/img/development/background.png")
+  background-size: cover
+
   &__overlay
     position: absolute
     top: 0
@@ -31,19 +25,18 @@
     transform: matrix(1, 0, 0, -1, 0, 0)
 
   &__container
+    height: 100vh
     display: flex
     flex-direction: column
     align-items: center
-    position: absolute
     padding-top: 385px
-    top: 0
-    left: 0
-    right: 0
-    bottom: 0
+    position: relative
     +screen($desktop)
       padding-top: 296px
+      height: 713px
     +screen($tablet-xs)
       padding-top: 193px
+      height: 619px
 
     svg
       width: 80px
@@ -60,14 +53,14 @@
     &__title
       +font(50px, 64px, 800)
       color: $white
-      margin-top: 15px
+      margin: 15px 0 56px 0
       text-align: center
       +screen($desktop)
         +font(40px, 64px, 800)
-        margin-top: 10px
+        margin: 10px 0 37px 0
       +screen($tablet-xs)
         display:  flex
-        margin-top: 8px
+        margin: 8px 0 49px 0
         flex-direction: column
         +font(30px, 35px, 800)
 
@@ -75,19 +68,16 @@
         color: $orange
         margin-left: 10px
 
-    a
+    .development__btn
       +font(22px, 26px, 500)
       color: $white
       background-image: $orange-grad
       padding: 20px 40px
       box-shadow: 0 11px 30px rgba(235, 92, 44, 0.4)
-      margin-top: 56px
       &:hover
         background-image: $orange-grad-reverse
       +screen($desktop)
         +font(18px, 21px, 500)
         padding: 16px 34px
-        margin-top: 37px
       +screen($tablet-xs)
         padding: 18.5px 37.5px
-        margin-top: 49px
