@@ -87,7 +87,7 @@ block content
       .application-organization_right
 
         h3.application-organization_left_label Настройки труда и отдыха
-        .application-organization_right__block
+        .application-organization_right__form-container
           label(for="cars-speed") Средняя скорость машин (км/ч)
           input(type="number" id="cars-speed" name="Средняя скорость машин" placeholder='Some Text')
 
@@ -105,7 +105,7 @@ block content
 
 
         h3.application-organization_left_label Настройки заправок
-        .application-organization_right__block
+        .application-organization_right__form-container
           label(for="fuel-consumption") Расход топлива, л/100км
           input(type="text" id="fuel-consumption" name="Расход топлива" placeholder='Some Text')
 
@@ -114,20 +114,20 @@ block content
 
 
         h3.application-organization_left_label Время отправки ежедневного отчета
-          .application-organization_right__block
-            label(for="report-time") Время отчета
-            input(type="text" id="report-time" name="Время отчета" placeholder='Some Text')
+        .application-organization_right__form-container
+          label(for="report-time") Время отчета
+          input(type="text" id="report-time" name="Время отчета" placeholder='Some Text')
 
-            label(for="report-time-to") Время отчета
-            input(type="text" id="report-time-to" name="Время отчета" placeholder='Some Text')
-
-
+          label(for="report-time-to") Время отчета
+          input(type="text" id="report-time-to" name="Время отчета" placeholder='Some Text')
 
 
 
-      .application-organization_buttons
-        button(type="submit").application-organization_buttons-save сохранить изменения
-        button(type="reset").application-organization_buttons-save отменить
+
+
+    .application-organization_buttons
+      button(type="submit").application-organization_buttons-save сохранить изменения
+      button(type="reset").application-organization_buttons-cancel отменить
 
 
 
