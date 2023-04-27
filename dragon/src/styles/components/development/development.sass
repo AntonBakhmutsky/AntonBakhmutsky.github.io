@@ -4,6 +4,18 @@
 .development
   background-image: url("../assets/img/development/background.png")
   background-size: cover
+  height: 100vh
+  display: flex
+  flex-direction: column
+  align-items: center
+  padding-top: 385px
+  box-sizing: border-box
+  +screen($desktop)
+    padding-top: 296px
+    height: 713px
+  +screen($tablet-xs)
+    padding-top: 193px
+    height: 619px
 
   &__overlay
     position: absolute
@@ -25,18 +37,10 @@
     transform: matrix(1, 0, 0, -1, 0, 0)
 
   &__container
-    height: 100vh
     display: flex
     flex-direction: column
     align-items: center
-    padding-top: 385px
     position: relative
-    +screen($desktop)
-      padding-top: 296px
-      height: 713px
-    +screen($tablet-xs)
-      padding-top: 193px
-      height: 619px
 
     svg
       width: 80px
