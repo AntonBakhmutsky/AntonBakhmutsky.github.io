@@ -144,3 +144,28 @@
         background-color: $gray
         margin-left: 30px
 
+
+
+
+  &-settings
+    margin-top: 40px
+    width: 100%
+
+    &__title
+      +font(20px, 24px, 600)
+      color: $black
+      margin-bottom: 20px
+
+    &__table
+      width: 100%
+      thead
+        position: relative
+        &:after
+          content: ""
+          position: absolute
+          bottom: -1px
+          left: 0
+          width: 100%
+          border: 1px solid $gray
+
+

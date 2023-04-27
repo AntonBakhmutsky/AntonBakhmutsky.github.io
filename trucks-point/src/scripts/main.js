@@ -30,5 +30,5 @@ menuToggle.addEventListener('click', function() {
   menuNavName.classList.toggle('hide-list__text')
 });
 
-organizationBtn.click();
+settingsBtn.click();
 menuToggle.click();
