@@ -8,11 +8,11 @@ block title
 
 block content
   section.page-404
-    .page-404__background
     .page-404__overlay
     .page-404__overlay_dop
     .page-404__container
       | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/page-404/page-404.svg')}
       h2 Cтраница, которую вы ищите, не существует либо устарела.
-      a(href="/") Вернуться на главную
+      a.btn.btn_orange(href="/")
+        span Вернуться на главную
 
