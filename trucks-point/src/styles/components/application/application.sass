@@ -9,6 +9,9 @@
   box-sizing: border-box
   padding: 60px
 
+  #organization-page, #settings-page
+    display: none
+
   &-user
     &-block
       display: flex
@@ -42,9 +45,9 @@
       transition: background-color 0.3s, color 0.3s
       border-radius: 8px
 
-      &:focus
-        background-color: $orange
-        color: $white
+    .active
+      background-color: $orange
+      color: $white
 
   &-organization
     display: flex
