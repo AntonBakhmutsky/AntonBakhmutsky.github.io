@@ -31,3 +31,4 @@ menuToggle.addEventListener('click', function() {
 });
 
 organizationBtn.click();
+menuToggle.click();
