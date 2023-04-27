@@ -156,16 +156,37 @@
       color: $black
       margin-bottom: 20px
 
-    &__table
+
+    &__thead
       width: 100%
-      thead
-        position: relative
-        &:after
-          content: ""
-          position: absolute
-          bottom: -1px
-          left: 0
-          width: 100%
-          border: 1px solid $gray
+      border: 1px solid $gray
+      border-radius: 8px
+      box-sizing: border-box
+      padding: 12px 30px
+      display: flex
+      justify-content: space-between
+
+      span
+        +font(12px, 15px, 600)
+
+    &__tbody
+      border: 1px solid $gray
+      border-radius: 8px
+      margin-top: 10px
+
+
+      &__line
+        box-sizing: border-box
+        padding: 10px 27px
+        border-bottom: 1px solid $gray
+        &:last-child
+          border-bottom: none
+
+        &_td
+          +font(14px, 17px, 400)
+
+
+
+
 
 

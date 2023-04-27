@@ -128,59 +128,94 @@ block content
         .application-settings#settings-page
 
            h3.application-settings__title Заявка транспортной организации
-           table.application-settings__table
-             thead.application-settings__table__head
-               tr
-                 th Название
-                 th Невидимое
-                 th Обязательное
-             tbody.application-settings__table__body
-               tr
-                 td Международная заявка
-                 td
-                   input(type="radio" id="ent-invisible" name="ent")
-                 td
-                   input(type="radio" id="ent-mandatory" name="ent")
-               tr
-                 td Порожняя заявка
-                 td
-                   input(type="radio" id="porog-invisible" name="ent")
-                 td
-                   input(type="radio" id="porog-mandatory" name="ent")
-               tr
-                 td Прицеп
-                 td
-                   input(type="radio" id="trailer-invisible" name="ent")
-                 td
-                   input(type="radio" id="trailer-mandatory" name="ent")
-               tr
-                 td Организация
-                 td
-                   input(type="radio" id="org-invisible" name="ent")
-                 td
-                   input(type="radio" id="org-mandatory" name="ent")
-               tr
-                 td Ответственный
-                 td
-                   input(type="radio" id="res-invisible" name="ent")
-                 td
-                   input(type="radio" id="res-mandatory" name="ent")
+           .application-settings__thead
+             span Название
+             span Невидимое
+             span Обязательное
+           .application-settings__tbody
+             .application-settings__tbody__line
+               .application-settings__tbody__line_td Международная заявка
+               .application-settings__tbody__line_td
+                 input(type="radio" id="ent-invisible" name="ent")
+               .application-settings__tbody__td
+                 input(type="radio" id="ent-mandatory" name="ent")
+
+             .application-settings__tbody__line
+               .application-settings__tbody__line_td Порожняя заявка
+               .application-settings__tbody__line_td
+                  input(type="radio" id="porog-invisible" name="ent")
+               .application-settings__tbody__line_td
+                  input(type="radio" id="porog-mandatory" name="ent")
+
+             .application-settings__tbody__line
+               .application-settings__tbody__line_td Прицеп
+               .application-settings__tbody__line_td
+                  input(type="radio" id="trailer-invisible" name="ent")
+               .application-settings__tbody__line_td
+                  input(type="radio" id="trailer-mandatory" name="ent")
+
+             .application-settings__tbody__line
+               .application-settings__tbody__line_td Организация
+               .application-settings__tbody__line_td
+                  input(type="radio" id="org-invisible" name="ent")
+               .application-settings__tbody__line_td
+                  input(type="radio" id="org-mandatory" name="ent")
+
+             .application-settings__tbody__line
+               .application-settings__tbody__line_td Ответственный
+               .application-settings__tbody__line_td
+                 input(type="radio" id="res-invisible" name="ent")
+               .application-settings__tbody__line_td
+                 input(type="radio" id="res-mandatory" name="ent")
+
 
 
            h3.application-settings__title Точка заявки
-           table.application-settings__table
-             thead.application-settings__table__head
-               tr
-                 th Название
-                 th Невидимое
-                 th Обязательное
-             tbody.application-settings__table__body
-               tr
-                 td Международная заявка
-                 td
-                   input(type="radio" id="en-invisible" name="ent")
-                 td
-                   input(type="radio" id="en-mandatory" name="ent")
+           .application-settings__thead
+             span Название
+             span Невидимое
+             span Обязательное
+           .application-settings__tbody
+             .application-settings__tbody__line
+               .application-settings__tbody__line_td Международная заявка
+               .application-settings__tbody__line_td
+                 input(type="radio" id="en-invisible" name="ent")
+               .application-settings__tbody__td
+                 input(type="radio" id="en-mandatory" name="ent")
+
+
+             .application-settings__tbody__line
+               .application-settings__tbody__line_td Международная заявка
+               .application-settings__tbody__line_td
+                 input(type="radio" id="e-invisible" name="ent")
+               .application-settings__tbody__td
+                 input(type="radio" id="e-mandatory" name="ent")
+
+
+             .application-settings__tbody__line
+               .application-settings__tbody__line_td Международная заявка
+               .application-settings__tbody__line_td
+                 input(type="radio" id="en-invi" name="ent")
+               .application-settings__tbody__td
+                 input(type="radio" id="en-manda" name="ent")
+
+
+             .application-settings__tbody__line
+               .application-settings__tbody__line_td Международная заявка
+               .application-settings__tbody__line_td
+                 input(type="radio" id="en-i" name="ent")
+               .application-settings__tbody__td
+                 input(type="radio" id="en-m" name="ent")
+
+
+             .application-settings__tbody__line
+               .application-settings__tbody__line_td Международная заявка
+               .application-settings__tbody__line_td
+                 input(type="radio" id="en-e" name="ent")
+               .application-settings__tbody__td
+                 input(type="radio" id="en-y" name="ent")
+
+
 
 
 
