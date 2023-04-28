@@ -8,14 +8,11 @@
   display: flex
   flex-direction: column
   align-items: center
-  padding-top: 385px
+  justify-content: center
+  padding-top: 139px
   box-sizing: border-box
   +screen($desktop)
-    padding-top: 296px
-    height: 713px
-  +screen($tablet-xs)
-    padding-top: 193px
-    height: 619px
+    padding-top: 69px
 
   &__overlay
     position: absolute
@@ -27,6 +24,7 @@
     opacity: 0.9
     border: 1px solid #000000
     background-size: cover
+
   &_dop
     position: absolute
     top: 0
@@ -52,8 +50,6 @@
         width: 50px
         height: 50px
 
-
-
     &__title
       +font(50px, 64px, 800)
       color: $white
@@ -76,12 +72,16 @@
       +font(22px, 26px, 500)
       color: $white
       background-image: $orange-grad
-      padding: 20px 40px
       box-shadow: 0 11px 30px rgba(235, 92, 44, 0.4)
+      width: 308px
+      height: 66px
+      +screen($desktop)
+        width: 255px
+        height: 53px
+        +font(18px, 21px, 500)
+      +screen($tablet-sm)
+        width: 262px
+        height: 58px
+
       &:hover
         background-image: $orange-grad-reverse
-      +screen($desktop)
-        +font(18px, 21px, 500)
-        padding: 16px 34px
-      +screen($tablet-xs)
-        padding: 18.5px 37.5px
