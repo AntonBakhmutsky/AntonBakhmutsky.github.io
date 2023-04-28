@@ -22,6 +22,9 @@
 
     &_toggle
 
+      &__title
+        display: none
+
     &_form
       display: flex
       justify-content: space-between
@@ -38,6 +41,27 @@
         display: none
 
       &_buttons
+        display: flex
+
+        button
+          padding: 7px 13px 7px 10px
+          border-radius: 5px
+          display: flex
+          align-items: center
+          span
+            +font(14px, 17px, 400)
+            margin-right: 7px
+
+        button[type="submit"]
+          border: 1px solid $orange
+          span
+            color: $orange
+
+        button[type="reset"], button[type="button"]
+          border: 1px solid $gray-dark
+          span
+            color: $gray-dark
+
         button[type="reset"]
           display: none
 

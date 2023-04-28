@@ -15,7 +15,8 @@ block content
     .application_search
 
       .application_search_toggle
-        button.application_search_toggle__btn
+        h4.application_search_toggle__title Найти заявку
+        button.application_search_toggle__btn#applicationToggle
           | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/toggle.svg')}
 
 
@@ -50,7 +51,7 @@ block content
           button(type="submit").application_search_form_buttons_btn.application_search_form_buttons_btn-orange
             span создать заявку
             | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/btn-orange.svg')}
-          button(type="reset").application_search_form_buttons_btn.application_search_form_buttons_btn-gray.application_search_form_buttons_btn-gray-reset
+          button(type="reset")#application-btn-reset.application_search_form_buttons_btn.application_search_form_buttons_btn-gray.application_search_form_buttons_btn-gray-reset
             span сбросить
             | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/reset.svg')}
           button(type="button").application_search_form_buttons_btn.application_search_form_buttons_btn-gray
