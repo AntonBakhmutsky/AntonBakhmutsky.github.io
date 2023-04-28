@@ -1,5 +1,5 @@
 window.addEventListener('load', () => {
-  if (!document.querySelector('.application')) {
+  if (!document.querySelector('.menu')) {
     return null
   } else {
     const menuToggle = document.querySelector('#menu-toggle');
