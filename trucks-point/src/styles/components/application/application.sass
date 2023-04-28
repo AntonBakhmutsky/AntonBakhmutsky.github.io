@@ -2,190 +2,44 @@
 @use '../../abstracts/mixins' as *
 
 .application
+  width: 1470px
+  height: 100vh
   margin: 0 auto
+  padding-top: 26px
+  box-sizing: border-box
   display: flex
   flex-direction: column
-  width: 1200px
-  box-sizing: border-box
-  padding: 60px
 
-  #organization-page, #settings-page
-    display: none
+  &__title
+    +font(16px, 19px, 400)
+    margin-bottom: 30px
+    color: $black
 
-  &-user
-    &-block
-      display: flex
-      justify-content: space-between
-      align-items: center
-
-      &_info
-        display: flex
-        align-items: center
-
-        &__name
-          margin-left: 17px
-          +font(27px, 33px, 600)
-          color: $black
-
-      &-email
-        +font(16px, 19px, 700)
-        color: $blue
-  &-toggle
-    width: 599px
-    height: 40px
-    box-shadow: 0px 2px 20px rgba(52, 60, 68, 0.08)
+  &_search
+    width: 100%
+    box-shadow: 0 2px 15px rgba(52, 60, 68, 0.1)
     border-radius: 8px
-    margin-top: 50px
 
-    &-organization, &-settings
-      width: 50%
-      height: 100%
-      +font(16px, 19px, 400)
-      color: $black
-      transition: background-color 0.3s, color 0.3s
-      border-radius: 8px
+    &_toggle
 
-    .active
-      background-color: $orange
-      color: $white
-
-  &-organization
-    display: flex
-    width: 100%
-    justify-content: space-between
-    margin-top: 40px
-
-    &_left
-      max-width: 50%
-
-    &_left, &_right
-
-      &_label
-        +font(20px, 24px 600)
-        margin-bottom: 20px
-
-      &__form-container
-        box-shadow: 0 2px 20px rgba(52, 60, 68, 0.08)
-        border-radius: 20px
-        padding: 40px 30px
-        box-sizing: border-box
-
-        label
-          color: $black
-
-        input, select
-          margin: 10px 0 25px 0
-
-          &:last-child
-            margin-bottom: 0
-
-        select
-          width: 100%
-          appearance: none
-          -webkit-appearance: none
-          -moz-appearance: none
-          background-image: url('../assets/img/application/arrow.svg')
-          background-repeat: no-repeat
-          background-position: right 8px top 50%
-
-          &::after
-            content: ''
-            right: 10px
-            top: 50%
-            transform: translateY(-50%)
-            border-color: red transparent transparent transparent
-            border-width: 5px 5px 0 5px
-            border-style: solid
-
-        input[type="checkbox"]
-          display: block
-          width: 18px
-          height: 18px
-          border: 3px solid $gray
-          border-radius: 3px
-          cursor: pointer
-          &:checked
-            border: 3px solid $orange
-            background-image: url("../assets/img/application/check.svg")
-            background-repeat: no-repeat
-            background-position: center center
-            background-size: contain
-            box-sizing: border-box
-            padding: 2px
-
-
-        input[type="text"], input[type="number"], select
-          height: 40px
-          padding: 12px 10px 11px 10px
-          box-sizing: border-box
-          border: 1px solid $gray
-          border-radius: 8px
-
-
-    &_right
-      max-width: 47%
-      &__form-container
-         &:nth-child(n+2)
-          margin-bottom: 50px
-
-    &_buttons
-      margin-top: 50px
-
-      &-save,&-cancel
-        +font(16px, 19px, 700)
-        color: $white
-        padding: 10.5px 25px
-        border-radius: 8px
-
-      &-save
-        background-color: $orange
-
-      &-cancel
-        background-color: $gray
-        margin-left: 30px
-
-
-
-
-  &-settings
-    margin-top: 40px
-    width: 100%
-
-    &__title
-      +font(20px, 24px, 600)
-      color: $black
-      margin-bottom: 20px
-
-
-    &__thead
-      width: 100%
-      border: 1px solid $gray
-      border-radius: 8px
-      box-sizing: border-box
-      padding: 12px 30px
+    &_form
       display: flex
       justify-content: space-between
 
-      span
-        +font(12px, 15px, 600)
+      &-closed
 
-    &__tbody
-      border: 1px solid $gray
-      border-radius: 8px
-      margin-top: 10px
+        &__input
+          display: flex
+          align-items: center
+          svg
+            margin-right: 13px
 
+      &-disclosed
+        display: none
 
-      &__line
-        box-sizing: border-box
-        padding: 10px 27px
-        border-bottom: 1px solid $gray
-        &:last-child
-          border-bottom: none
-
-        &_td
-          +font(14px, 17px, 400)
-
-
+      &_buttons
+        button[type="reset"]
+          display: none
 
 
 

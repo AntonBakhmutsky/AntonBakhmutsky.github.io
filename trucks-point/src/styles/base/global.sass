@@ -68,7 +68,20 @@ textarea
   resize: none
 
 input[type="checkbox"], input[type="radio"]
-  display: none
+  display: block
+  width: 14px
+  height: 14px
+  border: 3px solid $gray
+  border-radius: 3px
+  cursor: pointer
+  &:checked
+    border: 3px solid $orange
+    background-image: url("../assets/img/home/check.svg")
+    background-repeat: no-repeat
+    background-position: center center
+    background-size: contain
+    box-sizing: border-box
+    padding: 2px
 
 input[type="radio"] + label
   position: relative
@@ -94,3 +107,4 @@ input[type="radio"] + label
 input[type="radio"]:checked + label
   &:before
     border-width: 6px
+
