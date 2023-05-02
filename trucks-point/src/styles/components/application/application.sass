@@ -119,6 +119,7 @@
       &-disclosed
 
         &_form
+          padding: 0 20px 20px 20px
 
           &-top
             margin-top: 10px
@@ -182,8 +183,40 @@
         &_checkboxes
           border-top: 1px solid $gray
           border-bottom: 1px solid $gray
-          margin-top: 20px
           margin-bottom: 20px
+          box-sizing: border-box
+          padding: 20px 20px 10px 20px
+          display: flex
+          flex-wrap: wrap
+
+          &__item
+            border: 1px solid $gray
+            border-radius: 16px
+            padding: 5px 10px 5px 11px
+            box-sizing: border-box
+            display: flex
+            align-items: center
+            margin: 0 20px 10px 0
+            cursor: pointer
+
+
+            &__img
+              margin-right: 6px
+
+            input[type='checkbox']
+              display: none
+
+            label
+              +font(12px, 15px, 400)
+              color: $gray-input
+              cursor: pointer
+
+
+          .select-checkbox
+            background-color: $orange
+
+
+
 
       &_buttons
         width: 100%

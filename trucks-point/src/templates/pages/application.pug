@@ -74,9 +74,63 @@ block content
                   | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/toggle-light.svg')}
 
           .application_search_form-disclosed_checkboxes
-            .application_search_form-disclosed_checkboxes__item
-              input(type="checkbox" id="myCars" name="Мои машины")
+            .application_search_form-disclosed_checkboxes__item(data-id='check1')
+              .application_search_form-disclosed_checkboxes__item__img
+                | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/point.svg')}
+              input(type="checkbox" id="myCars" name="Мои машины").application_search_form-disclosed_checkboxes__item__checkbox
               label(for="myCars") С моими машинами
+
+            .application_search_form-disclosed_checkboxes__item(data-id='check2')
+              | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/point.svg')}
+              input(type="checkbox" id="madeByMe" name="Созданные мной")
+              label(for="madeByMe") Созданные мной
+
+            .application_search_form-disclosed_checkboxes__item
+              | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/point.svg')}
+              input(type="checkbox" id="withDelay" name="С опозданием")
+              label(for="withDelay") С опозданием
+
+            .application_search_form-disclosed_checkboxes__item
+              | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/point.svg')}
+              input(type="checkbox" id="emptyOrders" name="Порожние")
+              label(for="emptyOrders") Порожние
+
+            .application_search_form-disclosed_checkboxes__item
+              | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/point.svg')}
+              input(type="checkbox" id="expressApps" name="Экспресс-заявки")
+              label(for="expressApps") Экспресс-заявки
+
+            .application_search_form-disclosed_checkboxes__item
+              | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/point.svg')}
+              input(type="checkbox" id="showFullAddress" name="Полный адрес")
+              label(for="showFullAddress") Показывать полный адрес
+
+            .application_search_form-disclosed_checkboxes__item
+              | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/point.svg')}
+              input(type="checkbox" id="synchronizationError" name="Ошибка синхронизации")
+              label(for="synchronizationError") Ошибка синхронизации
+
+            .application_search_form-disclosed_checkboxes__item
+              | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/point.svg')}
+              input(type="checkbox" id="onlyWithJumpers" name="Только с пересцепками")
+              label(for="onlyWithJumpers") Только с пересцепками
+
+            .application_search_form-disclosed_checkboxes__item
+              | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/point.svg')}
+              input(type="checkbox" id="showActualDates" name="Фактические даты")
+              label(for="showActualDates") Показывать фактические даты
+
+            .application_search_form-disclosed_checkboxes__item
+              | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/point.svg')}
+              input(type="checkbox" id="differentData" name="Еще данные сортировки")
+              label(for="differentData") Еще данные сортировки
+
+
+
+
+
+
+
 
 
 
