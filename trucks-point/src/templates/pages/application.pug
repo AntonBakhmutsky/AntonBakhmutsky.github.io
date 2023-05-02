@@ -31,7 +31,7 @@ block content
             .application_search_form-disclosed_form-top
               .application_search_form-disclosed_form-top_input
                 | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/point-A.svg')}
-                span Откуда, город или область
+                span.application_search_form-disclosed_form-top_input__text Откуда, город или область
                 button.application_search_form-disclosed_form-top_input-btn
                   | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/toggle-light.svg')}
               .application_search_form-disclosed_form-top_date
@@ -39,11 +39,47 @@ block content
                 .application_search_form-disclosed_form-top_date-to Дата загрузки, До
               .application_search_form-disclosed_form-top_inputs
                 .application_search_form-disclosed_form-top_inputs_item
+                  span.application_search_form-disclosed_form-top_input__text Номер машины
                   button.application_search_form-disclosed_form-top_input-btn
                     | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/toggle-light.svg')}
                 .application_search_form-disclosed_form-top_inputs_item
+                  span.application_search_form-disclosed_form-top_input__text Водитель
                   button.application_search_form-disclosed_form-top_input-btn
                     | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/toggle-light.svg')}
+
+            .application_search_form-disclosed_form-top
+              .application_search_form-disclosed_form-top_input
+                | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/point-B.svg')}
+                span.application_search_form-disclosed_form-top_input__text Куда, город или область
+                button.application_search_form-disclosed_form-top_input-btn
+                  | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/toggle-light.svg')}
+              .application_search_form-disclosed_form-top_date
+                .application_search_form-disclosed_form-top_date-from Дата выгрузки, От
+                .application_search_form-disclosed_form-top_date-to Дата выгрузки, До
+              .application_search_form-disclosed_form-top_input
+                span.application_search_form-disclosed_form-top_input__text Контрагент
+                button.application_search_form-disclosed_form-top_input-btn
+                  | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/toggle-light.svg')}
+
+            .application_search_form-disclosed_form-top
+              .application_search_form-disclosed_form-top_input
+                input(type='text' placeholder='Номер заявки (ID, номер, номер в 1С)').application_search_form-disclosed_form-top_input__text
+              .application_search_form-disclosed_form-top_input
+                span.application_search_form-disclosed_form-top_input__text Статус
+                button.application_search_form-disclosed_form-top_input-btn
+                  | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/toggle-light.svg')}
+              .application_search_form-disclosed_form-top_input
+                span.application_search_form-disclosed_form-top_input__text Логист или ответственный
+                button.application_search_form-disclosed_form-top_input-btn
+                  | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/toggle-light.svg')}
+
+          .application_search_form-disclosed_checkboxes
+            .application_search_form-disclosed_checkboxes__item
+              input(type="checkbox" id="myCars" name="Мои машины")
+              label(for="myCars") С моими машинами
+
+
+
 
 
 
