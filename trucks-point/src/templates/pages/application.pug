@@ -81,48 +81,57 @@ block content
               label(for="myCars") С моими машинами
 
             .application_search_form-disclosed_checkboxes__item(data-id='check2')
-              | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/point.svg')}
-              input(type="checkbox" id="madeByMe" name="Созданные мной")
+              .application_search_form-disclosed_checkboxes__item__img
+                | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/point.svg')}
+              input(type="checkbox" id="madeByMe" name="Созданные мной").application_search_form-disclosed_checkboxes__item__checkbox
               label(for="madeByMe") Созданные мной
 
-            .application_search_form-disclosed_checkboxes__item
-              | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/point.svg')}
-              input(type="checkbox" id="withDelay" name="С опозданием")
+            .application_search_form-disclosed_checkboxes__item(data-id='check3')
+              .application_search_form-disclosed_checkboxes__item__img
+                | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/point.svg')}
+              input(type="checkbox" id="withDelay" name="С опозданием").application_search_form-disclosed_checkboxes__item__checkbox
               label(for="withDelay") С опозданием
 
-            .application_search_form-disclosed_checkboxes__item
-              | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/point.svg')}
-              input(type="checkbox" id="emptyOrders" name="Порожние")
+            .application_search_form-disclosed_checkboxes__item(data-id='check4')
+              .application_search_form-disclosed_checkboxes__item__img
+                | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/point.svg')}
+              input(type="checkbox" id="emptyOrders" name="Порожние").application_search_form-disclosed_checkboxes__item__checkbox
               label(for="emptyOrders") Порожние
 
-            .application_search_form-disclosed_checkboxes__item
-              | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/point.svg')}
-              input(type="checkbox" id="expressApps" name="Экспресс-заявки")
+            .application_search_form-disclosed_checkboxes__item(data-id='check5')
+              .application_search_form-disclosed_checkboxes__item__img
+                | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/point.svg')}
+              input(type="checkbox" id="expressApps" name="Экспресс-заявки").application_search_form-disclosed_checkboxes__item__checkbox
               label(for="expressApps") Экспресс-заявки
 
-            .application_search_form-disclosed_checkboxes__item
-              | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/point.svg')}
-              input(type="checkbox" id="showFullAddress" name="Полный адрес")
+            .application_search_form-disclosed_checkboxes__item(data-id='check6')
+              .application_search_form-disclosed_checkboxes__item__img
+                | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/point.svg')}
+              input(type="checkbox" id="showFullAddress" name="Полный адрес").application_search_form-disclosed_checkboxes__item__checkbox
               label(for="showFullAddress") Показывать полный адрес
 
-            .application_search_form-disclosed_checkboxes__item
-              | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/point.svg')}
-              input(type="checkbox" id="synchronizationError" name="Ошибка синхронизации")
+            .application_search_form-disclosed_checkboxes__item(data-id='check7')
+              .application_search_form-disclosed_checkboxes__item__img
+                | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/point.svg')}
+              input(type="checkbox" id="synchronizationError" name="Ошибка синхронизации").application_search_form-disclosed_checkboxes__item__checkbox
               label(for="synchronizationError") Ошибка синхронизации
 
-            .application_search_form-disclosed_checkboxes__item
-              | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/point.svg')}
-              input(type="checkbox" id="onlyWithJumpers" name="Только с пересцепками")
+            .application_search_form-disclosed_checkboxes__item(data-id='check8')
+              .application_search_form-disclosed_checkboxes__item__img
+                | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/point.svg')}
+              input(type="checkbox" id="onlyWithJumpers" name="Только с пересцепками").application_search_form-disclosed_checkboxes__item__checkbox
               label(for="onlyWithJumpers") Только с пересцепками
 
-            .application_search_form-disclosed_checkboxes__item
-              | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/point.svg')}
-              input(type="checkbox" id="showActualDates" name="Фактические даты")
+            .application_search_form-disclosed_checkboxes__item(data-id='check9')
+              .application_search_form-disclosed_checkboxes__item__img
+                | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/point.svg')}
+              input(type="checkbox" id="showActualDates" name="Фактические даты").application_search_form-disclosed_checkboxes__item__checkbox
               label(for="showActualDates") Показывать фактические даты
 
-            .application_search_form-disclosed_checkboxes__item
-              | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/point.svg')}
-              input(type="checkbox" id="differentData" name="Еще данные сортировки")
+            .application_search_form-disclosed_checkboxes__item(data-id='check10')
+              .application_search_form-disclosed_checkboxes__item__img
+                | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/point.svg')}
+              input(type="checkbox" id="differentData" name="Еще данные сортировки").application_search_form-disclosed_checkboxes__item__checkbox
               label(for="differentData") Еще данные сортировки
 
 
@@ -147,6 +156,150 @@ block content
           button(type="button").application_search_form_buttons_btn.application_search_form_buttons_btn-gray
             span обновить
             | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/update.svg')}
+
+
+
+
+    .application-list
+      .application-list-header
+        .application-list-header-name.application-list-header-name-number
+          span #
+        .application-list-header-name.application-list-header-name-id
+          span ID
+          | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/more.svg')}
+        .application-list-header-name.application-list-header-name-from
+          span Откуда
+          | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/more.svg')}
+        .application-list-header-name.application-list-header-name-to
+          span Куда
+          | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/more.svg')}
+        .application-list-header-name.application-list-header-name-cargo-car-driver
+          span Груз, машина, водитель
+        .application-list-header-name.application-list-header-name-cost-counterparty
+          span Стоимость, контрагент
+        .application-list-header-name.application-list-header-name-status
+          span Статус
+
+      .application-list-main
+        .application-list-main-item
+          .application-list-main-item-name.application-list-header-main-item-name-number
+            span 1
+          .application-list-main-item-name.application-list-main-item-name-id
+            span 42537370
+            span (45698235476)
+              | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/sber.svg')}
+          .application-list-main-item-name.application-list-main-item-name-from
+            .application-list-main-item-name-adr
+              span.application-list-main-item-name-adr-strong село Саваслейка
+              span , Нижегородская область
+            span План: 02.06.2021 12:00 (+04:00)
+          .application-list-main-item-name.application-list-main-item-name-to
+            .application-list-main-item-name-adr
+              span.application-list-item-main-name-adr-strong Екатеринбург
+              span , Свердловская область
+            span План: 02.06.2021 12:00 (+04:00)
+          .application-list-main-item-name.application-list-main-item-name-cargo-car-driver
+            span Мин вода
+            .application-list-main-item-name-cargo-car-driver-car
+              | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/arrow-green.svg')}
+              span В297РХ47
+            .application-list-main-item-name-cargo-car-driver-driver
+              span Москалев Д.Ю.
+              | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/plus-book.svg')}
+              | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/graf.svg')}
+          .application-list-main-item-name.application-list-main-item-name-cost-counterparty
+            span 82 000,00
+            span Джусто ТК (Широкий карамыш) ООО
+          .application-list-main-item-name.application-list-main-item-name-status
+            .application-list-main-item-name-status-item
+              span Запланирована
+
+        .application-list-main-item
+          .application-list-main-item-name.application-list-header-main-item-name-number
+            span 2
+          .application-list-main-item-name.application-list-main-item-name-id
+            span 42537370
+            span (45698235476)
+              | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/sber.svg')}
+          .application-list-main-item-name.application-list-main-item-name-from
+            .application-list-main-item-name-adr
+              span.application-list-main-item-name-adr-strong село Саваслейка
+              span , Нижегородская область
+            span План: 02.06.2021 12:00 (+04:00)
+          .application-list-main-item-name.application-list-main-item-name-to
+            .application-list-main-item-name-adr
+              span.application-list-item-main-name-adr-strong Екатеринбург
+              span , Свердловская область
+            span План: 02.06.2021 12:00 (+04:00)
+          .application-list-main-item-name.application-list-main-item-name-cargo-car-driver
+            span Мин вода
+            .application-list-main-item-name-cargo-car-driver-car
+              | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/arrow-green.svg')}
+              span В297РХ47
+            .application-list-main-item-name-cargo-car-driver-driver
+              span Москалев Д.Ю.
+                | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/plus-book.svg')}
+                | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/graf.svg')}
+          .application-list-main-item-name.application-list-main-item-name-cost-counterparty
+            span 82 000,00
+            span Джусто ТК (Широкий карамыш) ООО
+          .application-list-main-item-name.application-list-main-item-name-status
+            .application-list-main-item-name-status-item
+              span Запланирована
+
+  .application-pagination
+    .application-pagination-empty
+    .application-pagination-container
+       a.application-pagination-container-arrow(href='#')
+        | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/prev.svg')}
+       ul.application-pagination-container-pages
+         li
+           a(href='#') 1
+         li
+           a(href='#') 2
+         li
+           a(href='#') 3
+         li
+           a(href='#') ...
+       a.application-pagination-container-arrow(href='#')
+         | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/next.svg')}
+    .application-pagination-question
+      button#appQuestionBtn
+        | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/question.svg')}
+
+  .application-modal#applicationModal
+    .application-modal_content
+      .application-modal_content-top
+        h2.application-modal_content-top__title Чем мы можем вам помочь?
+        a(href='#').application-modal_content-top__link
+          span База знаний
+          | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/base-known.svg')}
+      .application-modal_content-articles
+        h4.application-modal_content-articles__title Рекомендуемые статьи:
+        .application-modal_content-articles_list
+          a(href='#').application-modal_content-articles_list__item
+            span.application-modal_content-articles_list__item__title Фильтры поиска заявок
+            span.application-modal_content-articles_list__item__text Для удобства просмотра и поиска заявок существуют разные виды фильтров. Для того чтобы их включить нужно: 1. Зайти на страницу всех заявок; 2. На странице заявок нажать...
+
+          a(href='#').application-modal_content-articles_list__item
+            span.application-modal_content-articles_list__item__title Статусы заявок
+            span.application-modal_content-articles_list__item__text Для удобства просмотра и поиска заявок существуют разные виды фильтров. Для того чтобы их включить нужно: 1. Зайти на страницу всех заявок; 2. На странице заявок нажать...
+
+          a(href='#').application-modal_content-articles_list__item
+            span.application-modal_content-articles_list__item__title Почему у заявки неправильный статус?
+            span.application-modal_content-articles_list__item__text Для удобства просмотра и поиска заявок существуют разные виды фильтров. Для того чтобы их включить нужно: 1. Зайти на страницу всех заявок; 2. На странице заявок нажать...
+
+          a(href='#').application-modal_content-articles_list__item
+            span.application-modal_content-articles_list__item__title Почему у заявки опоздание? Отмечена красным
+            span.application-modal_content-articles_list__item__text Для удобства просмотра и поиска заявок существуют разные виды фильтров. Для того чтобы их включить нужно: 1. Зайти на страницу всех заявок; 2. На странице заявок нажать...
+
+
+
+
+
+
+
+
 
 
 
