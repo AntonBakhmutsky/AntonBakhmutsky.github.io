@@ -1,11 +1,10 @@
 import L from 'leaflet';
 
-
 window.addEventListener('load', () => {
   if (!document.querySelector('.map')) {
     return null
   } else {
-    let map = L.map('map').setView([51.505, -0.09], 13);
+    let map = L.map('map').setView([60.055772, 30.375599], 13);
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       maxZoom: 19,
