@@ -11,8 +11,10 @@
           span.list__text Заявки
       li
         a(href='#')
-         .list__img
+         .menu__list__img
            | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/menu/bell.svg')}
+           .menu__list__img__counter
+             p 3
          span.list__text Уведомления
       li
         a(href='#')

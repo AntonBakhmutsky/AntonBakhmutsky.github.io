@@ -36,6 +36,27 @@
   &__list
     position: relative
     top: -130px
+
+    &__img
+      position: relative
+
+      &__counter
+        background-color: $orange
+        position: absolute
+        border-radius: 50%
+        width: 17px
+        height: 17px
+        display: flex
+        align-items: center
+        justify-content: center
+        bottom: 50%
+        left: 50%
+        overflow: hidden
+
+        p
+          +font(12px, 15px, 400)
+          color: $white
+
     a
       display: flex
       align-items: center
