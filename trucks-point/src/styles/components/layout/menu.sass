@@ -2,7 +2,7 @@
 @use '../../abstracts/mixins' as *
 
 .menu
-  height: 95.5vh
+  height: 100vh
   width: 15.6vw
   background-color: #2B2B33
   position: absolute
@@ -12,15 +12,26 @@
   display: flex
   flex-direction: column
   justify-content: space-between
-  transition: width 0.3s
-  z-index: 999
+  transition: width 0.7s ease
+  z-index: 850
 
   &__logo
     display: block
-    transition: 0.3s
+    transition: 0.6s
+    width: 224px
+    margin: 0 auto
+    +screen($desktop-sm)
+      width: 150px
+    +screen($tablet-sm)
+      width: 120px
   &__logo-min
     display: none
     transition: 0.3s
+    width: 60px
+    +screen($desktop-sm)
+      width: 50px
+    +screen($tablet-sm)
+      width: 43px
 
   &__list
     position: relative
@@ -33,16 +44,25 @@
       height: 50px
       padding-left: 21.5px
       transition: background-color 0.3s
+      box-sizing: border-box
+      +screen($desktop-sm)
+         padding: 9px
       &:hover
         background-color: rgba(238, 238, 238, 0.1)
 
       div
         width: 20px
         margin-right: 18px
+        +screen($desktop-sm)
+          margin-right: 13px
       span
         +font(16px, 19px, 400)
         color: $white
         transition: color 0.3s
+        +screen($tablet-sm)
+          font-size: 13px
+        +screen($tablet-xs)
+          display: none
 
       &:hover span, &:hover .list__img svg path
         color: $orange
@@ -63,21 +83,32 @@
     span
       display: block
 
-  &__toggle
+.menu__toggle
     background-color: $orange
     width: 30px
     height: 30px
     border-radius: 8px
     position: absolute
     right: -20px
-    z-index: -5
+    z-index: 840
+    +screen($tablet-xs)
+      display: none
 
 .menu-min
   padding-left: 9px
   width: 78px
   align-items: center
+  box-sizing: border-box
+  +screen($desktop-sm)
+    width: 65px
+
   .menu__logo
     display: none
+    width: 60px
+    +screen($desktop-sm)
+      width: 45px
+
+
   .menu__logo-min
     display: block
 
