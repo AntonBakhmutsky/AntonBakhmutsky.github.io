@@ -108,3 +108,44 @@ input[type="radio"]:checked + label
   &:before
     border-width: 6px
 
+.title
+  position: relative
+  cursor: pointer
+  &::before
+    content: ""
+    position: absolute
+    width: 0
+    height: 0
+    border-style: solid
+    border-width: 12px 12px 0 12px
+    border-color: $gray-dark transparent transparent transparent
+    left: 50%
+    transform: translateX(-50%)
+    bottom: 100%
+    z-index: 999
+    opacity: 0
+    transition: opacity 0.5s ease-in-out
+  &::after
+    content: attr(data-tooltip)
+    position: absolute
+    background-color: $gray-dark
+    color: $white
+    padding: 10px
+    border-radius: 5px
+    font-size: 12px
+    bottom: calc(100% + 11px)
+    left: 300%
+    transform: translateX(-50%)
+    z-index: 999
+    width: 145px
+    opacity: 0
+    transition: opacity 0.5s ease-in-out
+    box-sizing: border-box
+  &:hover::after
+    opacity: 1
+  &:hover::before
+    opacity: 1
+  &_stop
+    width: 12px
+
+

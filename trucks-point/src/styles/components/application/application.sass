@@ -234,6 +234,7 @@
 
   &-list
     margin-top: 30px
+    overflow: hidden
 
     &-header
       display: flex
@@ -252,6 +253,8 @@
         span
           +font(12px, 15px, 600)
           color: $black
+        svg
+          margin-left: 3px
 
         &-number
           width: 20px
@@ -300,12 +303,27 @@
             width: 100px
             display: flex
             flex-direction: column
+            span
+              display: flex
+              align-items: center
+              svg
+                margin-left: 3px
 
           &-from, &-to
             width: 300px
 
           &-cargo-car-driver
             width: 150px
+
+            &-car, &-driver
+              display: flex
+              align-items: center
+              flex-direction: row
+
+              svg, span
+                margin-right: 5px
+
+
 
           &-cost-counterparty
             width: 205px
@@ -324,9 +342,35 @@
               justify-content: center
               box-sizing: border-box
               padding: 2px
+              margin-top: 7px
+              &:first-child
+                margin-top: 0
               span
                 +font(10px, 12px, 600)
                 color: $black
+              &_green
+                background-color: $green
+                border: 1px solid $green
+                span
+                  color: $white
+              &_blue
+                background-color: $blue-light
+                border: 1px solid $blue-light
+                span
+                  color: $white
+              &_orange
+                background-color: $orange
+                border: 1px solid $orange
+                span
+                  color: $white
+              &_red
+                background-color: $red
+                border: 1px solid $red
+                span
+                  color: $white
+
+
+
 
 
   &-pagination

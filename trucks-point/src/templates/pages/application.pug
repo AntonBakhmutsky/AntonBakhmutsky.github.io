@@ -186,8 +186,51 @@ block content
             span 1
           .application-list-main-item-name.application-list-main-item-name-id
             span 42537370
+              .title(data-tooltip="Здесь полезный текст")
+                | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/clip.svg')}
             span (45698235476)
-              | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/sber.svg')}
+              .title(data-tooltip="Здесь полезный текст")
+                | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/sber.svg')}
+          .application-list-main-item-name.application-list-main-item-name-from
+            .application-list-main-item-name-adr
+              span.application-list-main-item-name-adr-strong село Саваслейка
+              span , Нижегородская область
+            span План: 02.06.2021 12:00 (+04:00)
+          .application-list-main-item-name.application-list-main-item-name-to
+            .application-list-main-item-name-adr
+              span.application-list-item-main-name-adr-strong Екатеринбург
+              span , Свердловская область
+            span План: 02.06.2021 12:00 (+04:00)
+          .application-list-main-item-name.application-list-main-item-name-cargo-car-driver
+            span Мин вода
+            .application-list-main-item-name-cargo-car-driver-car
+              .title(data-tooltip="Здесь полезный текст")
+                | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/arrow-green.svg')}
+              span В297РХ47
+              .title(data-tooltip="Здесь полезный текст")
+                | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/attention.svg')}
+              .title(data-tooltip="Здесь полезный текст")
+                | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/list.svg')}
+            .application-list-main-item-name-cargo-car-driver-driver
+              span Москалев Д.Ю.
+              | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/plus-book.svg')}
+              .title(data-tooltip="Рейтинг: 5")
+                | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/graf.svg')}
+          .application-list-main-item-name.application-list-main-item-name-cost-counterparty
+            span 82 000,00
+            span Джусто ТК (Широкий карамыш) ООО
+          .application-list-main-item-name.application-list-main-item-name-status
+            .application-list-main-item-name-status-item.application-list-main-item-name-status-item_green
+              span Выполнена
+
+        .application-list-main-item
+          .application-list-main-item-name.application-list-header-main-item-name-number
+            span 2
+          .application-list-main-item-name.application-list-main-item-name-id
+            span 42537370
+            span (45698235476)
+              .title(data-tooltip="Здесь полезный текст")
+                | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/sber.svg')}
           .application-list-main-item-name.application-list-main-item-name-from
             .application-list-main-item-name-adr
               span.application-list-main-item-name-adr-strong село Саваслейка
@@ -206,7 +249,8 @@ block content
             .application-list-main-item-name-cargo-car-driver-driver
               span Москалев Д.Ю.
               | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/plus-book.svg')}
-              | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/graf.svg')}
+              .title(data-tooltip="Рейтинг: 5")
+                | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/graf.svg')}
           .application-list-main-item-name.application-list-main-item-name-cost-counterparty
             span 82 000,00
             span Джусто ТК (Широкий карамыш) ООО
@@ -216,11 +260,12 @@ block content
 
         .application-list-main-item
           .application-list-main-item-name.application-list-header-main-item-name-number
-            span 2
+            span 3
           .application-list-main-item-name.application-list-main-item-name-id
             span 42537370
             span (45698235476)
-              | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/sber.svg')}
+              .title(data-tooltip="Здесь полезный текст")
+                | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/sber.svg')}
           .application-list-main-item-name.application-list-main-item-name-from
             .application-list-main-item-name-adr
               span.application-list-main-item-name-adr-strong село Саваслейка
@@ -238,14 +283,89 @@ block content
               span В297РХ47
             .application-list-main-item-name-cargo-car-driver-driver
               span Москалев Д.Ю.
-                | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/plus-book.svg')}
+              | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/plus-book.svg')}
+              .title(data-tooltip="Рейтинг: 5")
+                | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/graf.svg')}
+              span.title(data-tooltip="Ограничения: ДА Текст с расшифровкой ограничения по водителю").title_stop
+                | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/stop.svg')}
+          .application-list-main-item-name.application-list-main-item-name-cost-counterparty
+            span 82 000,00
+            span Джусто ТК (Широкий карамыш) ООО
+          .application-list-main-item-name.application-list-main-item-name-status
+            .application-list-main-item-name-status-item.application-list-main-item-name-status-item_blue
+              span На загрузке
+
+        .application-list-main-item
+          .application-list-main-item-name.application-list-header-main-item-name-number
+            span 4
+          .application-list-main-item-name.application-list-main-item-name-id
+            span 42537370
+            span (45698235476)
+              .title(data-tooltip="Здесь полезный текст")
+                | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/sber.svg')}
+          .application-list-main-item-name.application-list-main-item-name-from
+            .application-list-main-item-name-adr
+              span.application-list-main-item-name-adr-strong село Саваслейка
+              span , Нижегородская область
+            span План: 02.06.2021 12:00 (+04:00)
+          .application-list-main-item-name.application-list-main-item-name-to
+            .application-list-main-item-name-adr
+              span.application-list-item-main-name-adr-strong Екатеринбург
+              span , Свердловская область
+            span План: 02.06.2021 12:00 (+04:00)
+          .application-list-main-item-name.application-list-main-item-name-cargo-car-driver
+            span Мин вода
+            .application-list-main-item-name-cargo-car-driver-car
+              | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/arrow-green.svg')}
+              span В297РХ47
+            .application-list-main-item-name-cargo-car-driver-driver
+              span Москалев Д.Ю.
+              | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/plus-book.svg')}
+              .title(data-tooltip="Рейтинг: 5")
                 | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/graf.svg')}
           .application-list-main-item-name.application-list-main-item-name-cost-counterparty
             span 82 000,00
             span Джусто ТК (Широкий карамыш) ООО
           .application-list-main-item-name.application-list-main-item-name-status
             .application-list-main-item-name-status-item
-              span Запланирована
+              span Черновик
+
+        .application-list-main-item
+          .application-list-main-item-name.application-list-header-main-item-name-number
+            span 5
+          .application-list-main-item-name.application-list-main-item-name-id
+            span 42537370
+            span (45698235476)
+              .title(data-tooltip="Здесь полезный текст")
+                | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/sber.svg')}
+          .application-list-main-item-name.application-list-main-item-name-from
+            .application-list-main-item-name-adr
+              span.application-list-main-item-name-adr-strong село Саваслейка
+              span , Нижегородская область
+            span План: 02.06.2021 12:00 (+04:00)
+          .application-list-main-item-name.application-list-main-item-name-to
+            .application-list-main-item-name-adr
+              span.application-list-item-main-name-adr-strong Екатеринбург
+              span , Свердловская область
+            span План: 02.06.2021 12:00 (+04:00)
+          .application-list-main-item-name.application-list-main-item-name-cargo-car-driver
+            span Мин вода
+            .application-list-main-item-name-cargo-car-driver-car
+              | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/arrow-green.svg')}
+              span В297РХ47
+            .application-list-main-item-name-cargo-car-driver-driver
+              span Москалев Д.Ю.
+              | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/plus-book.svg')}
+              .title(data-tooltip="Рейтинг: 5")
+                | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/graf.svg')}
+          .application-list-main-item-name.application-list-main-item-name-cost-counterparty
+            span 82 000,00
+            span Джусто ТК (Широкий карамыш) ООО
+          .application-list-main-item-name.application-list-main-item-name-status
+            .application-list-main-item-name-status-item.application-list-main-item-name-status-item_orange
+              span Начата
+            .application-list-main-item-name-status-item.application-list-main-item-name-status-item_red
+              span 3ч 24 м
 
   .application-pagination
     .application-pagination-empty
