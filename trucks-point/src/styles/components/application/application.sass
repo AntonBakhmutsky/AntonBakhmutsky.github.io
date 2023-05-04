@@ -2,7 +2,7 @@
 @use '../../abstracts/mixins' as *
 
 .application
-  width: 1470px
+  width: 79vw
   height: 87vh
   margin: 0 auto
   padding-top: 26px
@@ -130,6 +130,10 @@
             display: flex
             width: 100%
             justify-content: space-between
+            +screen($tablet-sm)
+              display: flex
+              flex-direction: column
+
 
             &_input
               border: 1px solid $gray
@@ -137,14 +141,28 @@
               box-sizing: border-box
               padding: 14px 17px 11px 11px
               display: flex
+              align-items: center
               width: 463px
               height: 40px
+              overflow: hidden
+              +screen($desktop-m)
+                width: 403px
+              +screen($desktop-sm)
+                width: 310px
+              +screen($tablet)
+                width: 245px
+              +screen($tablet-sm)
+                width: 100%
+                margin: 20px 0 0 0
+
               svg
                 margin-right: 6px
                 max-width: 14px
+
               &__text
                 color: $gray
                 width: 100%
+
               button
                 display: flex
                 align-items: center
@@ -153,6 +171,8 @@
               display: flex
               margin: 0 20px 0 20px
               height: 40px
+              +screen($tablet-sm)
+                margin: 20px 0 0 0
 
               div
                 padding: 12px 10px 11px 10px
@@ -162,12 +182,22 @@
                 box-sizing: border-box
                 display: flex
                 align-items: center
+                +screen($desktop-m)
+                  width: 200px
+                +screen($desktop-sm)
+                  width: 150px
+                +screen($tablet)
+                  width: 130px
+                +screen($tablet-sm)
+                  width: 100%
                 &:first-child
                   margin-right: 10px
 
             &_inputs
               display: flex
               height: 40px
+              +screen($tablet-sm)
+                margin: 20px 0 0 0
 
               &_item
                 box-sizing: border-box
@@ -178,6 +208,14 @@
                 justify-content: space-between
                 align-items: center
                 width: 226px
+                +screen($desktop-m)
+                  width: 200px
+                +screen($desktop-sm)
+                  width: 150px
+                +screen($tablet)
+                  width: 130px
+                +screen($tablet-sm)
+                  width: 100%
                 &:first-child
                   margin-right: 10px
 
