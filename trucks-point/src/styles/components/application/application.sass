@@ -139,12 +139,14 @@
               border: 1px solid $gray
               border-radius: 8px
               box-sizing: border-box
-              padding: 14px 17px 11px 11px
+              padding: 14px 17px 11px 0
               display: flex
               align-items: center
               width: 463px
               height: 40px
-              overflow: hidden
+              position: relative
+              transition: border 0.3s
+
               +screen($desktop-m)
                 width: 403px
               +screen($desktop-sm)
@@ -156,16 +158,78 @@
                 margin: 20px 0 0 0
 
               svg
-                margin-right: 6px
+                margin: 0 6px 0 11px
                 max-width: 14px
 
               &__text
-                color: $gray
+                color: $black
                 width: 100%
+
+              &__text::placeholder
+                color: $gray
+                transition: color 0.3s
+
 
               button
                 display: flex
                 align-items: center
+
+              &_from-cityes, &_to-cityes
+                position: absolute
+                background-color: $white
+                width: 100%
+                top: 100%
+                z-index: 3
+                border: 1px solid $gray
+                border-radius: 8px
+                box-sizing: border-box
+                transition: border 0.3s
+                display: none
+
+                ul
+                  background-color: $white
+
+                  li
+                    display: flex
+                    +font(14px, 17px, 400)
+                    color: $gray
+                    padding: 12px 12px 10px 12px
+                    border-bottom: 1px solid $gray
+                    align-items: center
+                    box-sizing: border-box
+                    input[type="radio"] + label
+                      padding-left: 0
+                      box-sizing: border-box
+                      &:not(:first-child)
+                        margin-top: 0
+                    input[type="radio"]:checked + label
+                      color: $gray-dark
+                      +font(14px, 17px, 400)
+
+
+                    &:last-child
+                      border-bottom: none
+
+                    input[type='radio']
+                      margin-right: 7px
+
+                .display-none-container
+                  display: none
+
+            .application-input-focus
+              border: 1px solid $gray-input
+
+              svg
+                path
+                  fill: $gray-input
+
+              .application_search_form-disclosed_form-top_input__text::placeholder
+                color: $gray-input
+
+              .application_search_form-disclosed_form-top_input_from-cityes
+                border: 1px solid $gray-input
+
+
 
             &_date
               display: flex
@@ -466,6 +530,7 @@
   display: none
   justify-content: center
   align-items: center
+  z-index: 999
 
   &_content
     background-color: $white

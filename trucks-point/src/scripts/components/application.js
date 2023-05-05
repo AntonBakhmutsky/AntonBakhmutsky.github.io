@@ -13,8 +13,17 @@ window.addEventListener('load', () => {
     const buttonsContainer = document.querySelector(".application_search_form_buttons");
     const formHeaderContainer = document.querySelector(".application_search_toggle");
     const modal = document.getElementById('applicationModal');
+    const btnOpenListFromCityes = document.getElementById('btnAppFromCityes');
     const btnOpenModal = document.getElementById('appQuestionBtn');
+    const searchCityFromInput = document.querySelector('.application_search_form-disclosed_form-top_input')
+    const searchCityToInput = document.querySelector('.application_search_form-disclosed_form-top_input-to')
+    const disclosedListCityesFrom = document.querySelector('.application_search_form-disclosed_form-top_input_from-cityes')
+    const btnOpenListToCityes = document.getElementById('btnAppToCityes');
+    const disclosedListCityesTo = document.querySelector('.application_search_form-disclosed_form-top_input_to-cityes')
     let isShortFormVisible = true;
+    let isListCityesFromVisible = true;
+    let isListCityesToVisible = true;
+
 
     checkboxContainer.forEach(function(checkboxContainer) {
       const appCheckbox = checkboxContainer.querySelector('.application_search_form-disclosed_checkboxes__item__checkbox');
@@ -45,6 +54,34 @@ window.addEventListener('load', () => {
     });
 
 
+    btnOpenListFromCityes.addEventListener('click', () => {
+      searchCityFromInput.classList.toggle('application-input-focus');
+
+
+      if (!isListCityesFromVisible) {
+        disclosedListCityesFrom.style.display = 'none';
+        isListCityesFromVisible = true;
+      } else {
+        disclosedListCityesFrom.style.display = 'block';
+        isListCityesFromVisible = false;
+      }
+
+    })
+
+    btnOpenListToCityes.addEventListener('click', () => {
+      searchCityToInput.classList.toggle('application-input-focus');
+
+      if (!isListCityesFromVisible) {
+        disclosedListCityesTo.style.display = 'none';
+        isListCityesToVisible = true;
+      } else {
+        disclosedListCityesTo.style.display = 'block';
+        isListCityesToVisible = false;
+      }
+
+    })
+
+
     function openModal() {
       modal.style.display = 'flex';
     }
@@ -54,6 +91,7 @@ window.addEventListener('load', () => {
     }
 
     btnOpenModal.addEventListener('click', openModal);
+
     modal.addEventListener('click', function(e) {
       if (e.target === modal) {
         closeModal();
@@ -83,6 +121,7 @@ window.addEventListener('load', () => {
         formHeaderContainer.classList.toggle('header-for-long-form');
       }
     });
+
   }
 
 });

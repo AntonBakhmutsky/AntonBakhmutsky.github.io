@@ -83,6 +83,18 @@ input[type="checkbox"], input[type="radio"]
     box-sizing: border-box
     padding: 2px
 
+
+/* Скрываем clear button */
+input[type="search"]::-webkit-search-cancel-button
+  display: none
+
+input[type="search"]::-moz-cancel-button
+  display: none
+
+input[type="search"]::-ms-clear
+  display: none
+
+
 input[type="radio"] + label
   position: relative
   box-sizing: border-box
@@ -94,19 +106,10 @@ input[type="radio"] + label
 
   &:before
     content: ''
-    position: absolute
     top: 50%
     transform: translateY(-50%)
     left: 0
-    width: 20px
-    height: 20px
-    border: 1px solid $white
     box-sizing: border-box
-    border-radius: 50%
-
-input[type="radio"]:checked + label
-  &:before
-    border-width: 6px
 
 .title
   position: relative
@@ -147,5 +150,7 @@ input[type="radio"]:checked + label
     opacity: 1
   &_stop
     width: 12px
+
+
 
 
