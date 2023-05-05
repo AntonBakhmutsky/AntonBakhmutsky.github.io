@@ -56,8 +56,6 @@ window.addEventListener('load', () => {
 
     btnOpenListFromCityes.addEventListener('click', () => {
       searchCityFromInput.classList.toggle('application-input-focus');
-
-
       if (!isListCityesFromVisible) {
         disclosedListCityesFrom.style.display = 'none';
         isListCityesFromVisible = true;
@@ -65,20 +63,17 @@ window.addEventListener('load', () => {
         disclosedListCityesFrom.style.display = 'block';
         isListCityesFromVisible = false;
       }
-
     })
 
     btnOpenListToCityes.addEventListener('click', () => {
       searchCityToInput.classList.toggle('application-input-focus');
-
-      if (!isListCityesFromVisible) {
+      if (!isListCityesToVisible) {
         disclosedListCityesTo.style.display = 'none';
         isListCityesToVisible = true;
       } else {
         disclosedListCityesTo.style.display = 'block';
         isListCityesToVisible = false;
       }
-
     })
 
 
@@ -100,7 +95,6 @@ window.addEventListener('load', () => {
 
 
     applicationToggle.addEventListener("click", ()=>{
-
       if (!isShortFormVisible) {
         shortForm.style.display = 'block';
         longForm.style.display = 'none';

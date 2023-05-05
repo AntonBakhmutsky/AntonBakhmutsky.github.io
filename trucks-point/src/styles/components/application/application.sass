@@ -97,8 +97,6 @@
           display: none
 
 
-
-
   &_search-long-type
     flex-direction: column
     width: 100%
@@ -110,11 +108,9 @@
       justify-content: space-between
       width: 100%
 
-
       &__title
         +font(14px, 17px, 400)
         color: $black
-        &__btn
 
     .application_search_form
       display: flex
@@ -134,7 +130,6 @@
               display: flex
               flex-direction: column
 
-
             &_input
               border: 1px solid $gray
               border-radius: 8px
@@ -146,7 +141,6 @@
               height: 40px
               position: relative
               transition: border 0.3s
-
               +screen($desktop-m)
                 width: 403px
               +screen($desktop-sm)
@@ -168,7 +162,6 @@
               &__text::placeholder
                 color: $gray
                 transition: color 0.3s
-
 
               button
                 display: flex
@@ -197,15 +190,16 @@
                     border-bottom: 1px solid $gray
                     align-items: center
                     box-sizing: border-box
+
                     input[type="radio"] + label
                       padding-left: 0
                       box-sizing: border-box
                       &:not(:first-child)
                         margin-top: 0
+
                     input[type="radio"]:checked + label
                       color: $gray-dark
                       +font(14px, 17px, 400)
-
 
                     &:last-child
                       border-bottom: none
@@ -228,7 +222,6 @@
 
               .application_search_form-disclosed_form-top_input_from-cityes
                 border: 1px solid $gray-input
-
 
 
             &_date
@@ -280,6 +273,7 @@
                   width: 130px
                 +screen($tablet-sm)
                   width: 100%
+
                 &:first-child
                   margin-right: 10px
 
@@ -300,7 +294,6 @@
             align-items: center
             margin: 0 20px 10px 0
             cursor: pointer
-
 
             &__img
               margin-right: 6px
@@ -333,7 +326,6 @@
         padding: 20px
 
 
-
   &-list
     margin-top: 30px
     overflow: hidden
@@ -347,7 +339,6 @@
       padding: 12px 20px 13px
       border: 1px solid $gray
       border-radius: 8px
-
 
       &-name
         display: flex
@@ -425,8 +416,6 @@
               svg, span
                 margin-right: 5px
 
-
-
           &-cost-counterparty
             width: 205px
             display: flex
@@ -445,11 +434,14 @@
               box-sizing: border-box
               padding: 2px
               margin-top: 7px
+
               &:first-child
                 margin-top: 0
+
               span
                 +font(10px, 12px, 600)
                 color: $black
+
               &_green
                 background-color: $green
                 border: 1px solid $green
@@ -470,8 +462,6 @@
                 border: 1px solid $red
                 span
                   color: $white
-
-
 
 
 
@@ -514,8 +504,6 @@
         &:active >a, &:focus >a, &:hover >a
           color: $orange
           font-weight: 700
-
-
 
       &-pages
         display: flex
