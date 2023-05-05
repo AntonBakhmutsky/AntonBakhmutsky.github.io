@@ -8,6 +8,8 @@
   width: 65vw
   box-sizing: border-box
   padding: 60px
+  +screen($tablet-sm)
+    width: 90vw
 
   &__btn-close
     position: relative
@@ -23,6 +25,9 @@
       display: flex
       justify-content: space-between
       align-items: center
+      +screen($tablet-sm)
+        flex-direction: column
+        justify-content: center
 
       &_info
         display: flex
@@ -34,6 +39,7 @@
           color: $black
           +screen($tablet-sm)
             +font(18px, 23px, 700)
+            margin-left: 7px
 
       &-email
         +font(16px, 19px, 700)
@@ -48,7 +54,8 @@
     border-radius: 8px
     margin-top: 50px
     +screen($tablet-sm)
-       width: 460px
+       width: 100%
+       height: 50px
 
     &-organization, &-settings
       width: 50%
@@ -57,6 +64,7 @@
       color: $black
       transition: background-color 0.3s, color 0.3s
       border-radius: 8px
+      text-align: center
 
     .active
       background-color: $orange
@@ -74,6 +82,9 @@
 
     &_left
       max-width: 50%
+      +screen($tablet-sm)
+        max-width: 100%
+        margin-bottom: 50px
 
     &_left, &_right
 
@@ -129,6 +140,8 @@
 
     &_right
       max-width: 47%
+      +screen($tablet-sm)
+        max-width: 100%
       &__form-container
          &:nth-child(n+2)
           margin-bottom: 50px
@@ -136,12 +149,20 @@
 
     &_buttons //стили для кнопок
       margin-top: 50px
+      display: flex
+      +screen($tablet-sm)
+        flex-direction: column
+        margin-top: 0
 
       &-save,&-cancel
         +font(16px, 19px, 700)
         color: $white
         padding: 10.5px 25px
         border-radius: 8px
+        box-sizing: border-box
+        +screen($tablet-sm)
+          margin: 10px auto
+          width: 100%
 
       &-save
         background-color: $orange
@@ -149,6 +170,8 @@
       &-cancel
         background-color: $gray
         margin-left: 30px
+        +screen($tablet-sm)
+          margin-left: 0
 
 
 
@@ -171,34 +194,79 @@
       box-sizing: border-box
       padding: 12px 30px
       display: flex
-      justify-content: space-between
 
       span
         +font(12px, 15px, 600)
+        min-width: 252px
+        +screen($desktop-m)
+          min-width: 180px
+        +screen($desktop-m)
+          min-width: 110px
+        +screen($tablet)
+          min-width: 90px
+        +screen($tablet-sm)
+          min-width: 70px
+          +font(10px, 13px, 600)
+
         &:first-child
-          width: 495px
+          min-width: 495px
+          +screen($desktop-m)
+           min-width: 400px
+          +screen($desktop-m)
+            min-width: 300px
+          +screen($tablet)
+            min-width: 235px
+          +screen($tablet-sm)
+            min-width: 170px
+          +screen($tablet-xs)
+            min-width: 125px
 
     &__tbody
       border: 1px solid $gray
       border-radius: 8px
       margin-top: 10px
+      width: 100%
 
       &__line
         box-sizing: border-box
         padding: 10px 27px
         border-bottom: 1px solid $gray
         display: flex
-        justify-content: space-between
+
         &:last-child
           border-bottom: none
 
-        &_td
+        &_name
           +font(14px, 17px, 400)
+          min-width: 495px
+          +screen($desktop-m)
+            min-width: 400px
+          +screen($desktop-m)
+            min-width: 300px
+          +screen($tablet)
+            min-width: 235px
+          +screen($tablet-sm)
+            min-width: 170px
+            +font(12px, 15px, 400)
+          +screen($tablet-xs)
+            min-width: 125px
+            +font(10px, 13px, 400)
+
+        &_td
           display: flex
           align-items: start
           justify-content: start
-          &:first-child
-            width: 495px
+          min-width: 252px
+          +screen($desktop-m)
+            min-width: 180px
+          +screen($desktop-m)
+            min-width: 110px
+          +screen($tablet)
+            min-width: 90px
+          +screen($tablet-sm)
+            min-width: 70px
+
+
 
 
 

@@ -40,7 +40,7 @@ window.addEventListener('load', () => {
       });
 
       checkboxContainer.addEventListener('click', function(event) {
-        event.stopPropagation(); // Остановить всплытие клика, чтобы не вызывать обработчик клика родительского элемента
+        event.stopPropagation();
       });
     });
 
