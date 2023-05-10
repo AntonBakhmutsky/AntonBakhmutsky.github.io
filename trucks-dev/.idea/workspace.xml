@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5072ddb0-33eb-4ba5-af89-a7792592a26e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../.idea/AntonBakhmutsky.github.io.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../trucks-point/src/templates/layouts/main/layout-map.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/styles/components/home/home.sass" beforeDir="false" afterPath="$PROJECT_DIR$/../trucks-point/src/styles/components/home/home.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/styles/components/map/map.sass" beforeDir="false" afterPath="$PROJECT_DIR$/../trucks-point/src/styles/components/map/map.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/templates/components/map/map.pug" beforeDir="false" afterPath="$PROJECT_DIR$/../trucks-point/src/templates/layouts/main/map.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/templates/pages/index.pug" beforeDir="false" afterPath="$PROJECT_DIR$/../trucks-point/src/templates/pages/index.pug" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,18 +30,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/github/AntonBakhmutsky.github.io/trucks-dev/api&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/github/AntonBakhmutsky.github.io/trucks-dev/api",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\github\AntonBakhmutsky.github.io\trucks-dev\api" />
@@ -58,6 +59,7 @@
       <workItem from="1671438504863" duration="111000" />
       <workItem from="1671438626972" duration="1602000" />
       <workItem from="1671441144623" duration="409000" />
+      <workItem from="1683703125153" duration="9000" />
     </task>
     <servers />
   </component>
