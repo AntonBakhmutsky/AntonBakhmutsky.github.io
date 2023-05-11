@@ -5,3 +5,276 @@ block title
 
 block content
   section.one-application-creating
+    .one-application-creating_header
+      button.one-application-creating_header_btn-close
+        | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-application-creating/close.svg')}
+      h4.one-application-creating_header__title Создание заявки
+      .application-list-main-item-name-status-item.one-application-creating_header__name
+        span Черновик
+
+    form.one-application-creating_form
+
+      .one-application-creating_form__title
+        span.one-application-creating_form__title-name Общие параметры
+      .one-application-creating_form_item
+        .one-application-creating_form_item__label
+          label(for='responsible') Ответственный*
+        .one-application-creating_form_item__input
+          input(type='text' id='responsible' name='responsible' required='')
+      .one-application-creating_form_item
+        .one-application-creating_form_item__label
+          label(for='organization') Организация*
+        .one-application-creating_form_item__input
+          input(type='text' id='organization' name='organization' required='')
+      .one-application-creating_form_item
+        .one-application-creating_form_item__label
+          label(for='counterparty') Контрагент*
+        .one-application-creating_form_item__input
+          select(id='counterparty' name='counterparty' required='')
+            option(value="") Выберите контрагента
+      .one-application-creating_form_item
+        .one-application-creating_form_item__label
+          label(for='container-number') Номер контейнера
+        .one-application-creating_form_item__input
+          input(type='text' id='container-number' name='container-number' placeholder='Введите номер')
+      .one-application-creating_form_item
+        .one-application-creating_form_item__label
+          label(for='subdivision') Подразделение*
+        .one-application-creating_form_item__input
+          select(id='subdivision' name='subdivision' required='')
+            option(value="") Выберите подразделение
+            option(value="ТЭО") ТЭО
+      .one-application-creating_form_item
+        .one-application-creating_form_item__label
+          label(for='nomenclature') Номенклатура*
+        .one-application-creating_form_item__input
+          select(id='nomenclature' name='nomenclature' required='')
+            option(value="") Выберите значение
+      .one-application-creating_form_item
+        .one-application-creating_form_item__label
+          label(for='transportation-type') Вид перевозки*
+        .one-application-creating_form_item__input
+          select(id='transportation-type' name='transportation-type' required='')
+            option(value="") Выберите значение
+      .one-application-creating_form_item
+        .one-application-creating_form_item__label
+          label(for='carrier') Перевозчик
+        .one-application-creating_form_item__input
+          input(type='text' id='carrier' name='carrier' placeholder='')
+
+      .one-application-creating_form__title
+        spann.one-application-creating_form__title-name Оплата
+      .one-application-creating_form_item
+        .one-application-creating_form_item__label
+          span Тип оплаты *
+        .one-application-creating_form_item_radio-container
+          input(type="radio" id="payment-type-cash" name="payment-type" required='').check-round
+          label(for='payment-type-cash') Наличный
+          input(type="radio" id="payment-type-cashless" name="payment-type" required='').check-round
+          label(for="payment-type-cashless") Безналичный
+      .one-application-creating_form_item
+        .one-application-creating_form_item__label
+          span НДС*
+        .one-application-creating_form_item_radio-container
+          input(type="radio" id="nds-twenty" name="nds" required='').check-round
+          label(for='nds-twenty') 20%
+          input(type="radio" id="nds-zero" name="nds" required='').check-round
+          label(for="nds-zero") 0%
+          input(type="radio" id="nds-without" name="nds" required='').check-round
+          label(for="nds-without") Без НДС
+      .one-application-creating_form_item
+        .one-application-creating_form_item__label
+          label(for='customer-rate') Ставка заказчика, *
+        .one-application-creating_form_item__input
+          input(type='text' id='customer-rate' name='customer-rate' placeholder='Введите сумму' required='')
+      .one-application-creating_form_item
+        .one-application-creating_form_item__label
+          label(for='carrier-rate') Ставка перевозчику,
+        .one-application-creating_form_item__input
+          input(type='text' id='carrier-rate' name='carrier-rate' placeholder='Введите сумму')
+
+      .one-application-creating_form__title
+        spann.one-application-creating_form__title-name Данные по авто
+      .one-application-creating_form_item
+        .one-application-creating_form_item__label
+          label(for='driver') Водитель *
+        .one-application-creating_form_item__input
+          select(id='driver' name='driver' required='')
+            option(value="") Выберите значение
+      .one-application-creating_form_item
+        .one-application-creating_form_item__label
+          label(for='tractor') Тягач*
+        .one-application-creating_form_item__input
+          select(id='tractor' name='tractor' required='')
+            option(value="") Выберите значение
+      .one-application-creating_form_item
+        .one-application-creating_form_item__label
+          label(for='tractor') Тягач*
+        .one-application-creating_form_item__input
+          select(id='trailer' name='trailer' required='')
+            option(value="") Выберите значение
+
+      .one-application-creating_form__title
+        spann.one-application-creating_form__title-name Груз
+      .one-application-creating_form_item
+        .one-application-creating_form_item__label
+          label(for='shipping-name') Наименование груза*
+        .one-application-creating_form_item__input
+          input(type='text' id='shipping-name' name='shipping-name' placeholder='Введите наименование' required='')
+      .one-application-creating_form_item
+        .one-application-creating_form_item__label
+          label(for='packaging-type') Тип упаковки
+        .one-application-creating_form_item__input
+          input(type='text' id='packaging-type' name='packaging-type' placeholder='')
+      .one-application-creating_form_item
+        .one-application-creating_form_item__label
+          label(for='comment') Комментарий
+        .one-application-creating_form_item__input
+          textarea(id='comment' name='comment' placeholder='Введите текст')
+      .one-application-creating_form_item
+        .one-application-creating_form_item__label
+          label(for='weight') Вес,т
+        .one-application-creating_form_item__input
+          input(type='text' id='weight' name='weight' placeholder='Введите вес')
+      .one-application-creating_form_item
+        .one-application-creating_form_item__label
+          label(for='volume-cm') Объем, куб.м
+        .one-application-creating_form_item__input
+          input(type='text' id='volume-cm' name='Объем, куб.м' placeholder='Введите объем')
+      .one-application-creating_form_item
+        .one-application-creating_form_item__label
+          label(for='temperature-conditions') Температурный режим, °C
+        .one-application-creating_form_item__input
+          input(type='text' id='temperature-conditions' name='Температурный режим, °C' placeholder='Введите объем')
+      .one-application-creating_form_item
+        .one-application-creating_form_item__label
+          label(for='requirements') Требования
+        .one-application-creating_form_item__input
+          textarea(id='requirements' name='Требования' placeholder='Введите текст')
+      .one-application-creating_form_item
+        .one-application-creating_form_item__label
+          label(for='cargo-type') Тип груза
+        .one-application-creating_form_item__input
+          select(id='cargo-type' name='Тип груза' required='')
+            option(value="") Выберите значение
+
+      .one-application-creating_form__title
+        spann.one-application-creating_form__title-name Точка погрузки 1
+        button.one-application-creating_form__title__btn
+          span Добавить точку
+          | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-application-creating/plus-circle.svg')}
+      .one-application-creating_form_item
+        .one-application-creating_form_item__label
+          label(for='customer') Заказчик
+        .one-application-creating_form_item__input
+          select(id='customer' name='Заказчик' required='')
+            option(value="") Выберите контрагента
+      .one-application-creating_form_item
+        .one-application-creating_form_item__label
+          label(for='loading-address') Адрес*
+        .one-application-creating_form_item__input
+          input(type='search' id='loading-address' name='Адрес' placeholder='Начните вводить' required='')
+      .one-application-creating_form_item
+        .one-application-creating_form_item__label
+          label(for='loading-radius') Радиус
+        .one-application-creating_form_item__input
+          input(type='search' id='loading-radius' name='Радиус погрузки' placeholder='по умолчанию 500м')
+      .one-application-creating_form_item
+        .one-application-creating_form_item__label
+          label(for='loading-types') Типы погрузки
+        .one-application-creating_form_item_loading-types
+          .one-application-creating_form_item__input
+            select(id='loading-types' name='Типы погрузки')
+              option(value="") Выберите одно или несколько значений
+          .one-application-creating_form_item_loading-types__checkboxes
+            .one-application-creating_form_item_loading-types__checkboxes__item(data-id='checkbox1')
+              .one-application-creating_form_item_loading-types__checkboxes__item__img
+                | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/point.svg')}
+              input(type="checkbox" id="lateral" name="Боковая").one-application-creating_form_item_loading-types__checkboxes__item__input
+              label(for="lateral") Боковая
+            .one-application-creating_form_item_loading-types__checkboxes__item(data-id='checkbox2')
+              .one-application-creating_form_item_loading-types__checkboxes__item__img
+                | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/point.svg')}
+              input(type="checkbox" id="upper" name="upper").one-application-creating_form_item_loading-types__checkboxes__item__input
+              label(for="upper") Верхняя
+            .one-application-creating_form_item_loading-types__checkboxes__item(data-id='checkbox3')
+              .one-application-creating_form_item_loading-types__checkboxes__item__img
+                | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/point.svg')}
+              input(type="checkbox" id="rear" name="Задняя").one-application-creating_form_item_loading-types__checkboxes__item__input
+              label(for="rear") Задняя
+      .one-application-creating_form_item
+        .one-application-creating_form_item__label
+          label(for='comment-loading') Комментарий
+        .one-application-creating_form_item__input
+          textarea(id='comment-loading' name='comment' placeholder='Введите текст')
+      .one-application-creating_form_item
+        .one-application-creating_form_item__label
+          label(for='loading-contact-number') Контактный телефон
+        .one-application-creating_form_item__input
+          input(type='text' id='loading-contact-number' name='Контактный телефон погрузки' placeholder='Телефон')
+
+      .one-application-creating_form__title
+        spann.one-application-creating_form__title-name Точка выгрузки 1
+        button.one-application-creating_form__title__btn
+          span Добавить точку
+          | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-application-creating/plus-circle.svg')}
+      .one-application-creating_form_item
+        .one-application-creating_form_item__label
+          label(for='customer-unloading') Заказчик
+        .one-application-creating_form_item__input
+          select(id='customer-unloading' name='Заказчик' required='')
+            option(value="") Выберите контрагента
+      .one-application-creating_form_item
+        .one-application-creating_form_item__label
+          label(for='unloading-address') Адрес*
+        .one-application-creating_form_item__input
+          input(type='search' id='unloading-address' name='Адрес' placeholder='Начните вводить' required='')
+      .one-application-creating_form_item
+        .one-application-creating_form_item__label
+          label(for='unloading-radius') Радиус
+        .one-application-creating_form_item__input
+          input(type='search' id='unloading-radius' name='Радиус выгрузки' placeholder='по умолчанию 500м')
+      .one-application-creating_form_item
+        .one-application-creating_form_item__label
+          label(for='unloading-types') Типы выгрузки
+        .one-application-creating_form_item_loading-types
+          .one-application-creating_form_item__input
+            select(id='unloading-types' name='Типы выгрузки')
+              option(value="") Выберите одно или несколько значений
+          .one-application-creating_form_item_loading-types__checkboxes
+            .one-application-creating_form_item_loading-types__checkboxes__item(data-id='unloading-checkbox1')
+              .one-application-creating_form_item_loading-types__checkboxes__item__img
+                | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/point.svg')}
+              input(type="checkbox" id="lateral-unloading" name="Боковая-unloading").one-application-creating_form_item_loading-types__checkboxes__item__input
+              label(for="lateral-unloading") Боковая
+            .one-application-creating_form_item_loading-types__checkboxes__item(data-id='unloading-checkbox2')
+              .one-application-creating_form_item_loading-types__checkboxes__item__img
+                | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/point.svg')}
+              input(type="checkbox" id="upper-unloading" name="upper-unloading").one-application-creating_form_item_loading-types__checkboxes__item__input
+              label(for="upper-unloading") Верхняя
+      .one-application-creating_form_item
+        .one-application-creating_form_item__label
+          label(for='comment-unloading') Комментарий
+        .one-application-creating_form_item__input
+          textarea(id='comment-unloading' name='comment' placeholder='Введите текст')
+      .one-application-creating_form_item
+        .one-application-creating_form_item__label
+          label(for='unloading-contact-number') Контактный телефон
+        .one-application-creating_form_item__input
+          input(type='text' id='unloading-contact-number' name='Контактный телефон погрузки' placeholder='Телефон')
+
+      .one-application-creating_form__title
+        spann.one-application-creating_form__title-name Действия с заявкой
+      .one-application-creating_form_buttons
+        button(type='submit')
+          span создать заявку
+          | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-application-creating/create.svg')}
+        button(type='reset')
+          span отмена
+
+
+
+
+
+
+

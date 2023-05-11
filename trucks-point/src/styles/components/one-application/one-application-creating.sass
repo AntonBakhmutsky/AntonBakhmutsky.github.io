@@ -1,2 +1,96 @@
 @use '../../abstracts/variables' as *
 @use '../../abstracts/mixins' as *
+
+.one-application-creating
+  background-color: $white
+  height: auto
+  position: absolute
+  z-index: 900
+  top: 60px
+  left: 90px
+  box-shadow: 10px 0 15px rgba(37, 37, 45, 0.1)
+
+  &_header
+    display: flex
+    justify-content: space-between
+    align-items: center
+    box-sizing: border-box
+    padding: 27px 12px 0 27px
+
+
+    &_btn-close
+      width: 17px
+      height: 17px
+
+    &__title
+      +font(16px, 19px, 400)
+      color: $black
+
+    &__name
+      width: 108px
+
+  &_form
+    box-sizing: border-box
+    padding: 0 30px 33px 30px
+
+    &__title
+      box-sizing: border-box
+      margin: 30px 0 20px 0
+      display: flex
+      justify-content: space-between
+      align-items: center
+      padding: 11px 16px 10px 20px
+      box-shadow: 0 2px 20px rgba(52, 60, 68, 0.08)
+      border-radius: 8px
+
+      &-name
+        +font(16px, 19px, 700)
+        color: $black
+
+    &_item
+      display: flex
+      align-items: center
+      margin-bottom: 15px
+      &:last-child
+        margin-bottom: 0
+
+      &__label
+        width: 25%
+        margin: 0 20px 0 20px
+        +font(14px, 17px, 700)
+        color: $gray-dark
+
+      &__input
+        width: 73%
+        border: 1px solid $gray
+        border-radius: 8px
+        box-sizing: border-box
+        padding: 12px 10px 11px 10px
+
+        input
+          +font(14px, 17px, 400)
+          color: $gray-dark
+          &::placeholder
+            color: $gray
+
+        select
+          width: 100%
+          border: none
+          -webkit-appearance: none
+          -moz-appearance: none
+          appearance: none
+          background-image: url('../assets/img/one-application-creating/select.svg')
+          background-repeat: no-repeat
+          background-position-x: 100%
+          background-position-y: 50%
+          &:focus
+            border: none
+            outline: none
+
+      &_radio-container
+        display: flex
+
+        &_point
+          width: 16px
+          height: 16px
+          border-radius: 50%

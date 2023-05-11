@@ -67,7 +67,7 @@ input, textarea
 textarea
   resize: none
 
-input[type="checkbox"], input[type="radio"]
+.check-mark
   display: block
   width: 14px
   height: 14px
@@ -82,6 +82,23 @@ input[type="checkbox"], input[type="radio"]
     background-size: contain
     box-sizing: border-box
     padding: 2px
+
+.check-round
+  display: block
+  width: 16px
+  height: 16px
+  border: 2px solid $gray
+  border-radius: 50%
+  cursor: pointer
+  &:checked
+    border: 3px solid $orange
+    background-image: url("../assets/img/one-application-creating/ellipse.svg")
+    background-repeat: no-repeat
+    background-position: center center
+    background-size: contain
+    box-sizing: border-box
+    padding: 2px
+
 
 
 /* Скрываем clear button */
@@ -98,18 +115,13 @@ input[type="search"]::-ms-clear
 input[type="radio"] + label
   position: relative
   box-sizing: border-box
-  padding-left: 30px
   +font(14px, 22px, 500)
-
-  &:not(:first-child)
-    margin-top: 16px
 
   &:before
     content: ''
     top: 50%
     transform: translateY(-50%)
     left: 0
-    box-sizing: border-box
 
 .title
   position: relative
