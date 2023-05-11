@@ -25,6 +25,7 @@
     &__title
       +font(16px, 19px, 400)
       color: $black
+      margin-left: -25%
 
     &__name
       width: 108px
@@ -47,6 +48,22 @@
         +font(16px, 19px, 700)
         color: $black
 
+      &__btn
+        display: flex
+        align-items: center
+
+        span
+          +font(14px, 17px, 400)
+          color: $gray-dark
+          margin-right: 6px
+
+        span, svg path
+          transition: color 0.3s ease-in-out, fill 0.3s ease-in-out
+
+        &:hover span, &:hover svg path
+          color: $orange
+          fill: $orange
+
     &_item
       display: flex
       align-items: center
@@ -55,23 +72,27 @@
         margin-bottom: 0
 
       &__label
-        width: 25%
+        width: 23%
         margin: 0 20px 0 20px
         +font(14px, 17px, 700)
         color: $gray-dark
 
       &__input
-        width: 73%
+        width: 70%
         border: 1px solid $gray
         border-radius: 8px
         box-sizing: border-box
         padding: 12px 10px 11px 10px
 
-        input
+        input, textarea
           +font(14px, 17px, 400)
           color: $gray-dark
           &::placeholder
             color: $gray
+
+        select
+          +font(14px, 17px, 400)
+          color: $gray
 
         select
           width: 100%
@@ -90,7 +111,79 @@
       &_radio-container
         display: flex
 
-        &_point
-          width: 16px
-          height: 16px
-          border-radius: 50%
+        input
+          margin-right: 7px
+
+        label
+          margin-right: 22px
+          &:last-child
+            margin-right: 0
+
+      &_loading-types
+
+        .one-application-creating_form_item__input
+          width: 100%
+          color: $gray
+
+        &__checkboxes
+          display: flex
+          align-items: center
+          margin-top: 10px
+
+          &__item
+            display: flex
+            align-items: center
+            margin-right: 5px
+            border: 1px solid $gray-light
+            border-radius: 16px
+            box-sizing: border-box
+            padding: 5px 10px 5px 11px
+            transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out
+            &:last-child
+              margin-right: 0
+            &:hover
+              background-color: $gray-hover
+
+            &__img
+              margin-right: 6px
+
+            label
+              color: $gray-input
+              +font(12px, 15px, 400)
+
+          .select-checkbox
+            background-color: $orange
+            border: 1px solid $orange
+
+            &-label
+              color: $white
+
+
+
+    &_buttons
+      display: flex
+
+      button[type='submit']
+        display: flex
+        align-items: center
+        border: 1px solid $orange
+        border-radius: 5px
+        box-sizing: border-box
+        padding: 7px 10px
+        margin-right: 10px
+
+        span
+          color: $orange
+          +font(14px, 17px, 400)
+          margin-right: 8px
+
+    button[type='reset']
+      border: 1px solid $gray-input
+      border-radius: 5px
+
+      span
+        color: $gray-input
+        +font(14px, 17px, 400)
+        box-sizing: border-box
+        padding: 7px 10px
+
