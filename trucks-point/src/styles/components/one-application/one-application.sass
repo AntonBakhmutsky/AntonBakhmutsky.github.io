@@ -1,2 +1,228 @@
 @use '../../abstracts/variables' as *
 @use '../../abstracts/mixins' as *
+
+.one-application
+  background-color: $white
+  height: auto
+  position: absolute
+  z-index: 900
+  top: 60px
+  left: 90px
+  box-shadow: 10px 0 15px rgba(37, 37, 45, 0.1)
+  max-width: 633px
+
+  &_header
+    display: flex
+    justify-content: space-between
+    box-sizing: border-box
+    padding: 26px 12px 0 27px
+
+    &_btn-close
+      width: 17px
+      height: 17px
+
+    &__title
+      display: flex
+      align-items: center
+      margin-left: -23%
+
+      span
+        +font(16px, 19px, 400)
+        color: $black
+
+      svg
+        margin-left: 6px
+
+  &_main
+    box-sizing: border-box
+    padding: 0 30px 35px 30px
+
+    &_buttons
+      display: flex
+      align-items: center
+
+      &__btn
+        margin-right: 20px
+        &:last-child
+          margin-right: 0
+
+        &__img
+          position: relative
+          height: 15px
+          display: flex
+          align-items: center
+
+    &_item
+      display: flex
+      align-items: center
+      margin-bottom: 15px
+
+      &_name
+        width: 23%
+
+        span
+          color: $gray-dark
+          +font(14px, 17px, 700)
+
+      &_value
+        display: flex
+        align-items: center
+
+        &__txt
+          color: $gray-dark
+          +font(14px, 17px, 400)
+
+        &_car-number
+          border-radius: 5px
+          span
+            +font(12px, 15px, 400)
+
+          &-gray
+            background-color: $gray-input
+            box-sizing: border-box
+            padding: 3px
+            span
+              color: $white
+
+          &-transparent
+            border: 1px solid $gray
+            box-sizing: border-box
+            padding: 5px
+            margin-right: 20px
+
+        &_icons
+          margin: 0 18px 0 22px
+          display: flex
+          align-items: center
+
+          svg
+            margin-right: 4px
+
+        &__created-icon
+          margin: 0 5px 0 5px
+
+        &_first-icon
+          margin-right: 4px
+
+    &_warning
+      background-color: rgba(248, 0, 0, 0.2)
+      display: flex
+      align-items: center
+      box-sizing: border-box
+      padding: 16px 21px 13px 21px
+      border-radius: 8px
+
+      svg
+        margin-right: 6px
+
+      span
+        +font(12px, 15px, 600)
+        color: $red-bright
+
+    &_route
+      display: flex
+      margin-top: 20px
+
+      &-graf
+        margin-right: 20px
+
+        &-point
+          border: 2px solid $orange
+          border-radius: 6px
+          display: flex
+          align-items: center
+          justify-content: center
+          width: 26px
+          height: 26px
+
+          span
+            +font(12px, 15px, 600)
+            color: $orange
+
+        &-line
+          border-left: 2px solid $orange
+          height: 150px
+          margin: 10px 0 10px 13px
+
+      &-way
+
+        &-point
+          box-shadow: 0 2px 15px rgba(37, 37, 45, 0.1)
+          border-radius: 8px
+          display: flex
+          margin-bottom: 20px
+          box-sizing: border-box
+          padding: 20px 5px 22px 20px
+          &:last-child
+            margin-bottom: 0
+
+          &_left
+            margin-right: 50px
+
+            &_value
+              display: flex
+
+            &_city
+              display: flex
+              align-items: center
+
+              &-icon
+                margin-right: 8px
+
+              &-name
+                +font(14px, 17px, 700)
+                color: $black
+
+              &-time
+                +font(14px, 17px, 400)
+                color: $black
+                margin-left: 7px
+
+            &_address
+              +font(10px, 12px, 400)
+              color: $black
+              margin-top: 10px
+
+            &_titles
+              border-bottom: 1px solid $gray-light
+              box-sizing: border-box
+              padding-bottom: 5px
+              margin-top: 20px
+              display: flex
+              align-items: center
+
+              &-empty
+                margin-right: 20px
+                +font(10px, 12px, 600)
+                color: $gray-dark
+                width: 100px
+                margin-top: 10px
+
+              &-naming, &-name
+                +font(10px, 12px,600)
+                color: $gray-dark
+                width: 85px
+
+              &-name
+                margin-top: 10px
+
+                &-green
+                  color: $green
+                &-red
+                  color: $red
+
+
+
+          &_right
+            display: flex
+            align-items: start
+
+            &-icon
+              margin-left: 8px
+
+    &_buttons
+      display: flex
+      flex-wrap: wrap
+
+      button
+        margin: 0 20px 20px 0
