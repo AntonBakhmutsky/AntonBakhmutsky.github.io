@@ -1,0 +1,18 @@
+section.index-form
+  form.index-form-content
+    h2.index-form-content__title Купить по цене от производителя
+    .index-form-content-inputs
+      input#indexFormInputName.index-form-content-inputs__item(type="text" name="name" placeholder="Ваше имя" required="" onfocus="applyStyles(this)" onblur="applyStyles(this)")
+      input#indexFormInputTel.index-form-content-inputs__item(type="tel" name="phone" placeholder="Ваш телефон" required="" onfocus="applyStyles(this)" onblur="applyStyles(this)")
+      input#indexFormInputEmail.index-form-content-inputs__item(type="email" name="email" placeholder="Ваш email" required="" onfocus="applyStyles(this)" onblur="applyStyles(this)")
+    .index-form-content-file
+      input(type="file" name="document")#indexFormFileInput
+      label(for='indexFormFileInput')#indexFormFileLabel.index-form-content-file__label
+        | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/index/index-form/Vector.svg')}
+        span Прикрепить тех. задание
+      .index-form-content-file-details#indexFormFileDetails
+        span.index-form-content-file-details__name#indexFormFileName
+        button.index-form-content-file-details__btn#indexFormFileDeleteBtn
+          | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/index/index-form/cross-white.svg')}
+
+    button.btn_orange Получить предложение
