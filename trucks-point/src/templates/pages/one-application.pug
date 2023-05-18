@@ -240,14 +240,56 @@ block content
         button.button.button-blue-light
           span создать копию
           | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-application/copy.svg')}
-        button.button.button-blue-bright
+        button.button.button-blue-bright.btnCompleteManually#btnCompleteManually
           span завершить вручную
           | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-application/edit-3.svg')}
         button.button.button-gray
           span отменить
           | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-application/delete.svg')}
 
-
+  .one-application-modal.application-modal#oneApplicationModal
+    .one-application-modal_content
+      .one-application-modal_content-top
+        h3.application-modal_content-top__title Завершение заявки: №30963507 (00000009520)
+        button.application-modal_content-top__btn
+          | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-application/red-cross.svg')}
+      .one-application-modal_content_form
+        .one-application-modal_content_form-point
+          .one-application-modal_content_form-point-address
+            span.one-application-modal_content_form-point-address__title Адрес 1:
+            span.one-application-modal_content_form-point-address__text Россия, Челябинская область, Коркино, улица 30 лет ВЛКСМ, 189А (+05:00)
+          p.one-application-modal_content_form-point-label Дата прибытия на точку*
+          .one-application-modal_content_form-point-date
+            p Выберите дату
+            | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-application/date.svg')}
+          p.one-application-modal_content_form-point-label Дата загрузки/выгрузки*
+          .one-application-modal_content_form-point-date
+            p Выберите дату
+            | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-application/date.svg')}
+        .one-application-modal_content_form-point
+          .one-application-modal_content_form-point-address
+            span.one-application-modal_content_form-point-address__title Адрес 2:
+            span.one-application-modal_content_form-point-address__text Россия, Республика Башкортостан, Учалы, Кровельная улица, 1 (+05:00)
+          label(for="").one-application-modal_content_form-point-label Дата прибытия на точку*
+          .one-application-modal_content_form-point-date
+            p Выберите дату
+            | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-application/date.svg')}
+          label(for="").one-application-modal_content_form-point-label Дата загрузки/выгрузки*
+          .one-application-modal_content_form-point-date
+            p Выберите дату
+            | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-application/date.svg')}
+        .one-application-modal_content_form-cause
+          label(for="actualMileage").one-application-modal_content_form-point-label Фактический пробег*
+          input(type="text" id="actualMileage" name='Фактический пробег' placeholder='Введите значение')
+          label(for="reasonForTermination").one-application-modal_content_form-point-label Причина завершения заявки*
+          input(type="text" id="reasonForTermination" name='Причина завершения заявки' placeholder='Опишите причину')
+        .one-application-modal_content_form-buttons
+          .button.button-orange
+            span Сохранить
+            | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-application/checkmark-circle-white.svg')}
+          .button.button-gray
+            span отмена
+            | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-application/cross-gray.svg')}
 
 
 
