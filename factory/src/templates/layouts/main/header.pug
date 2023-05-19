@@ -12,6 +12,8 @@ header.header
       nav.header__menu-list.slide-left
         each el, index in headerMenu
           a(href=el.url) #{el.txt}
+        a.header__menu-phone(href="tel:+7 (812) 495-42-02")
+          span +7 (812) 495-42-02
         .header__search
           form(action='https://mz.sotrans.ru/search' method='get')
             input#search(type="text" name="search" placeholder="Поиск" autocomplete="off")
@@ -24,5 +26,8 @@ header.header
         input#search-mobile(type="text" name="search-mobile" placeholder="Поиск" autocomplete="off")
       .header__mobile-search-close
         img(src=require('@/assets/img/global/close-mobile.svg') alt="")
-    .header__mobile-search-btn.slide-left
-      img(src=require('@/assets/img/global/loupe-mobile.svg') alt="")
+    .slide-left-custom.slide-left
+      a.header__mobile-search-phone(href="tel:+7 (812) 495-42-02")
+        img(src=require('@/assets/img/global/phone.svg') alt="" loading="lazy")
+      .header__mobile-search-btn
+        img(src=require('@/assets/img/global/loupe-mobile.svg') alt="")

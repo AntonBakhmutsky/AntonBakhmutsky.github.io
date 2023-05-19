@@ -123,6 +123,15 @@
       +screen($tablet)
         display: flex
 
+    &-phone
+      display: none
+      +screen($tablet)
+        display: block
+        margin-right: 20px
+        position: relative
+        top: 4px
+
+
   &__menu
     max-width: 930px
     width: 100%
@@ -152,7 +161,7 @@
     &-list
       position: relative
       display: flex
-      +font(14px, 18px, 500)
+      +font(14px, 17px, 500)
       width: 100%
       justify-content: space-between
       align-items: center
@@ -172,6 +181,13 @@
 
           &:not(:first-child)
             margin-top: 45px
+
+    &-phone
+      span
+        color: $orange
+        +font(14px, 17px, 500)
+
+
 
     &-top, &-search
       display: none
@@ -195,5 +211,8 @@
       margin-right: 16px
       display: flex
       align-items: center
+
+.slide-left-custom
+  display: flex
 
 
