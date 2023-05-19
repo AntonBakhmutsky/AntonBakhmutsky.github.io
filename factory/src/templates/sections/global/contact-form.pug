@@ -1,15 +1,12 @@
 form.contact-form(action="")
   .contact-form__head
-    h2.contact-form__title Ответим на ваши вопросы
+    h2.contact-form__title Обратная связь
+    h3.contact-form__title-mobile Ответим на ваши вопросы
     button.contact-form__close
       |!{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/global/close.svg')}
-  .contact-form__links
-    a(href="https://tlgg.ru/@tc_sotrans" target="_blank" rel="noopener noreferrer")
-      img(src=require('@/assets/img/global/tg.svg') alt="")
-      span в Telegram
-    a(href="https://tlgg.ru/@tc_sotrans" target="_blank" rel="noopener noreferrer")
-      img(src=require('@/assets/img/global/wa.svg') alt="")
-      span в Whatsapp
+  .contact-form-btns
+    button(type="button").contact-form-btns__order-btn Оставить заявку
+    button(type="button").contact-form-btns__call-btn#btnRequestCall Заказать звонок
   .contact-form__fields
     .contact-form__input.error
       input(type="text" name="name" required placeholder="Ваше Имя")
@@ -19,11 +16,22 @@ form.contact-form(action="")
       .contact-form__error Поле не может быть пустым
     .contact-form__textarea
       textarea(name="comment" placeholder="Комментарий")
-    .contact-form__file
-      input#file.contact-form__file-input(type="file" name="attachment" multiple="multiple")
-      label.contact-form__file-label(for="file")
-        span.contact-form__file-txt Прикрепить файл
+    .contact-form-file
+      input(type="file" name="document")#formFileInput
+      label(for='formFileInput')#formFileLabel.contact-form-file__label
+        span Прикрепить файл
+        | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/global/pin-black.svg')}
+      .contact-form-file-details#formFileDetails
+        span.contact-form-file-details__name#formFileName
+        button.contact-form-file-details__btn#formFileDeleteBtn
+          | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/global/close-black.svg')}
+    //.contact-form__file
+    //  input#file.contact-form__file-input(type="file" name="attachment" multiple="multiple")
+    //  label.contact-form__file-label(for="file")
+    //    span.contact-form__file-txt Прикрепить файл
   .contact-form__policy.feedback__form-policy
     input#contactFormPolicy(type="checkbox" required)
     label(for="contactFormPolicy") Я согласен с #[a(href="javascript:") Политикой конфидициальности]
   button.contact-form__submit.btn(type="submit" name="submit" id="submit") Отправить
+
+

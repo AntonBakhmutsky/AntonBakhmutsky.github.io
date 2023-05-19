@@ -28,22 +28,5 @@ window.addEventListener('load', () => {
       fileName.textContent = '';
     })
 
-    function applyStyles(input) {
-      // Удаляем все стили классов перед применением новых стилей
-      input.classList.remove('default-input');
-      input.classList.remove('filled-input');
-      input.classList.remove('active-input');
-
-      if (input.value !== '') {
-        // Если введено значение, применяем стили для введенных input
-        input.classList.add('filled-input');
-      } else if (input === document.activeElement) {
-        // Если input активен (пользователь вводит значение), применяем стили для активного input
-        input.classList.add('active-input');
-      } else {
-        // В остальных случаях применяем стили для обычных input
-        input.classList.add('default-input');
-      }
-    }
 
 }});

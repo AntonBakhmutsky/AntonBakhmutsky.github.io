@@ -106,14 +106,45 @@
   &__title
     +font(28px, 45px, 700, $font-title)
     +screen($tablet)
-      +font(20px, 29px, 700, $font-title)
+      display: none
 
-  &__links
-    display: flex
+    &-mobile
+      display: none
+      +screen($tablet)
+        display: block
+        +font(20px, 30px, 700, $font-title)
+
+  &-btns
+    background-color: $gray-teh
+    border-radius: 4px
+    width: 100%
     margin-top: 30px
-    gap: 30px
     +screen($tablet)
       margin-top: 20px
+
+    button
+      width: 50%
+      +font(14px, 17px, 500)
+      padding: 10px 0
+      transition: color 0.2s ease
+      +screen($tablet)
+        +font(12px, 15px, 500)
+
+    &__order-btn
+      background-color: $blue-second
+      color: $white
+      height: 99%
+      border-radius: 4px
+      cursor: default
+
+    &__call-btn
+
+      &:hover
+        color: $blue-second
+
+
+
+  &_buttons
 
     a
       width: 100%
@@ -162,6 +193,11 @@
       &::placeholder
         color: #BFBFBF
 
+    input:not(:placeholder-shown):focus
+      color: $black
+      +font(14px, 17px, 500)
+      border: 1px solid $black !important
+
   &__error
     position: absolute
     +font(10px, 10px)
@@ -172,49 +208,88 @@
     opacity: 0
 
   &__textarea
-    width: 100%
-    height: 170px
-    border: 1px solid #DFDFE1
-    box-sizing: border-box
-    padding: 8px 8px 40px
 
     textarea
-      border: none
+      width: 100%
+      height: 170px
+      border: 1px solid #DFDFE1
+      box-sizing: border-box
+      padding: 13px 16px 40px
       +font(14px, 16px)
-      padding: 0 7px
 
       &::placeholder
         color: #BFBFBF
 
+    textarea:not(:placeholder-shown):focus
+      color: $black
+      border: 1px solid $black !important
 
-  &__file
+
+  &-file
     position: relative
+    display: flex
+    overflow: hidden
+    padding: 0
+    width: 100%
+    align-items: center
+    justify-content: start
+    margin: 8px 0 29px
+    +screen($tablet)
+      margin: 8px 0 16px
 
-    &-input
-      opacity: 0
+
+
+    input[type="file"]
+      border: none
       position: absolute
-      visibility: hidden
+      opacity: 0
+      right: 0
+      top: 0
+      height: 30px
+      max-width: 143px
 
-    &-label
-      width: fit-content
+    &__label
+      background-color: $gray-teh
+      border-radius: 4px
       box-sizing: border-box
-      padding: 5px 8px
-      background-color: $white-dark
-      border-radius: 1px
+      padding: 7px 10px 7px 12px
+      height: 30px
       display: flex
       align-items: center
       justify-content: center
-      margin: -30px 0 0 10px
-      z-index: 2
-      transition: .5s
-      cursor: pointer
+      transition: background-color 0.2s ease-in-out
 
-      &:hover:not(:active)
-        background-color: $blue-second
-        color: #fff
+      &:hover
+        background-color: $gray-teh-hover
 
-    &-txt
-      +font(12px, 12px)
+      svg
+        position: relative
+        top: 2px
+        margin-left: 6px
+        width: 11px
+        height: 12px
+
+      span
+        color: $black
+        +font(12px, 15px, 500)
+
+    &-details
+      height: 30px
+      display: flex
+      align-items: center
+      justify-content: center
+      text-align: center
+
+      &__name
+        margin-right: 12px
+        +font(14px, 17px, 500)
+        color: $black
+        +screen($tablet)
+          +font(12px, 15px, 500)
+
+      &__btn
+        position: relative
+        top: 3px
 
   &__submit
     margin-top: auto
@@ -228,7 +303,7 @@
       height: 46px
 
   &__policy
-    margin: 25px 0
+    margin: 0 0 25px
     +font(12px, 12px)
     +screen($tablet)
       +font(11px, 11px)
@@ -261,6 +336,19 @@
         width: 100%
         height: 1px
         background-color: #f06518
+
+  &-modal
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: rgba(0,0,0,0.6)
+    display: none
+    justify-content: center
+    align-items: center
+    z-index: 999
+
 
 @keyframes pulse
   0%
