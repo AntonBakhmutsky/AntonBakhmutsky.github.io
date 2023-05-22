@@ -23,6 +23,32 @@ window.addEventListener('load', () => {
     contactFormClose.addEventListener('click', toggleContactForm)
     contactFormOverlay.addEventListener('click', toggleContactForm)
 
+
+    const btnLeaveOrder = document.getElementById('btnLeaveOrder');
+    const btnRequestCall = document.getElementById('btnRequestCall');
+    const formLeaveOrder = document.getElementById('formLeaveOrder');
+    const formRequestCall = document.getElementById('formRequestCall');
+
+    btnLeaveOrder.addEventListener("click", () => {
+      formLeaveOrder.style.display = "flex";
+      formRequestCall.style.display = "none";
+      btnLeaveOrder.classList.add("contact-form-btns__order-btn");
+      btnRequestCall.classList.remove("contact-form-btns__order-btn");
+    });
+
+    btnRequestCall.addEventListener("click", () => {
+      formRequestCall.style.display = "flex";
+      formLeaveOrder.style.display = "none";
+      btnRequestCall.classList.add("contact-form-btns__order-btn");
+      btnLeaveOrder.classList.remove("contact-form-btns__order-btn");
+    });
+
+    btnLeaveOrder.click();
+    btnLeaveOrder.classList.add("active");
+
+
+
+
     // input file
     // const inputFile = contactForm.querySelector('.contact-form__file input')
     // const inputFileLabel = inputFile.nextElementSibling
