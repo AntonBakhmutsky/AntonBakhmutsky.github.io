@@ -1,2 +1,156 @@
 @use '../../abstracts/variables' as *
 @use '../../abstracts/mixins' as *
+
+.one-application-info
+  background-color: $white
+  height: auto
+  position: absolute
+  z-index: 996
+  top: 60px
+  left: 90px
+  box-shadow: 10px 0 15px rgba(37, 37, 45, 0.1)
+  max-height: 100vh
+
+
+  &-header
+    padding: 26px 36px 20px
+    box-sizing: border-box
+    border-bottom: 1px solid $gray-light
+    display: flex
+    align-items: start
+
+    button
+      margin-right: 30px
+
+    &-title
+
+      &__name
+        +font(16px, 19px, 400)
+        color: $black
+
+        span
+          color: $green
+          margin-left: 2px
+
+      img
+        position: relative
+        margin-top: 11px
+        right: 7px
+
+  &-main
+    overflow-y: scroll
+    box-sizing: border-box
+    padding: 10px 5px 42px 20px
+
+    &::-webkit-scrollbar
+      width: 4px
+
+    &::-webkit-scrollbar-thumb
+      color: $gray
+      border-radius: 100px
+
+    &::-webkit-scrollbar-thumb:hover
+      color: #3E8BFE
+
+    &-date
+      width: 100%
+      display: flex
+      align-items: center
+      justify-content: center
+
+      &-text
+        +font(12px, 15px, 400)
+        color: $gray-input
+        box-sizing: border-box
+        padding: 5px 10px
+        background-color: rgba(238, 238, 238, 0.35)
+        border-radius: 16px
+
+    &-chat
+      display: flex
+      flex-direction: column
+      background-color: $white
+
+    &-message
+      align-self: flex-start
+      background-color: $gray-bg
+      box-sizing: border-box
+      padding: 20px 20px 20px 30px
+      width: 90%
+      max-width: 439px
+      word-wrap: break-word
+      margin-top: 20px
+      position: relative
+      border-radius: 5px 5px 5px 24px
+      border: 1px solid $gray-light
+
+      &:before, &:after
+        content: ""
+        position: absolute
+        bottom: -2px
+        height: 24px
+
+      &::after
+        left: -27px
+        width: 26px
+        border-bottom-right-radius: 10px
+        background-color: $white
+        border-right: 1px solid $gray-light
+
+      &::before
+        left: -20px
+        width: 30px
+        border-bottom-right-radius: 16px 14px
+        background-color: $gray-bg
+        border-bottom: 1px solid $gray-light
+
+      &-info
+        width: 100%
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+        &__text
+          +font(10px, 12px, 400)
+          color: $gray-input
+
+        &-users
+
+          & span
+
+            &:last-child
+              margin-left: 10px
+
+      &-content
+        margin-top: 7px
+
+        &__text
+          +font(14px, 17px, 400)
+          color: $black
+
+        &-file
+          display: flex
+
+          &__name
+            border: 1px dashed $blue-light
+            border-radius: 8px
+            box-sizing: border-box
+            padding: 8px 24px
+            +font(14px, 17px, 400)
+            color: $black
+
+          &__btn
+            margin-left: 10px
+            display: flex
+            align-items: center
+
+            span
+              +font(14px, 17px, 400)
+              color: $orange
+
+            svg
+              margin-left: 6px
+
+
+
+
