@@ -5,11 +5,10 @@
   background-color: $white
   height: auto
   position: absolute
-  z-index: 996
+  z-index: 999
   top: 60px
   left: 90px
   box-shadow: 10px 0 15px rgba(37, 37, 45, 0.1)
-  max-height: 100vh
 
 
   &-header
@@ -38,19 +37,17 @@
         right: 7px
 
   &-main
+    max-height: 840px
     overflow-y: scroll
     box-sizing: border-box
-    padding: 10px 5px 42px 20px
+    padding: 10px 0 42px 20px
+    margin-right: 5px
 
     &::-webkit-scrollbar
       width: 4px
 
     &::-webkit-scrollbar-thumb
-      color: $gray
-      border-radius: 100px
-
-    &::-webkit-scrollbar-thumb:hover
-      color: #3E8BFE
+      background-color: $gray
 
     &-date
       width: 100%
