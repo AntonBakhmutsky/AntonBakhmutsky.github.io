@@ -1,0 +1,55 @@
+@use '../../abstracts/variables' as *
+@use '../../abstracts/mixins' as *
+
+.trucks
+  width: 79vw
+  height: calc(100vh - 90px)
+  margin: 0 auto
+  padding-top: 26px
+  box-sizing: border-box
+  position: relative
+
+  .close-btn
+    position: absolute
+    left: -50px
+    top: 18px
+
+  &-header
+
+    &__title
+      +font(16px, 19px, 400)
+      color: $black
+
+    &_events
+      width: 100%
+      display: flex
+      justify-content: space-between
+      margin-top: 30px
+      align-items: center
+
+      &_count
+
+        span
+          +font(12px, 15px, 400)
+          color: $black
+
+        button
+          +font(12px, 15px, 400)
+          color: $gray-input
+          margin-left: 10px
+
+          &:hover, &:active, &:focus
+            color: $black
+
+      &_btns
+        display: flex
+
+        &__btn
+          margin-left: 10px
+
+          svg
+            margin: 0
+
+
+
+

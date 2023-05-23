@@ -1,0 +1,33 @@
+extends ../layouts/main/layout.pug
+
+block title
+  | TRUCKS.POINT
+
+block content
+  section.trucks
+    button.close-btn
+      | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/trucks/close.svg')}
+    .trucks-container
+      .trucks-header
+        .trucks-header__title
+          | Список машин (Отображены
+          strong  1-30
+          |  из
+          strong  443
+          |  )
+        .trucks-header_events
+          .trucks-header_events_count
+            span Выводить на странице:
+            button 30
+            button 50
+            button 100
+            button 200
+          .trucks-header_events_btns
+            button.button.button-gray-dark
+              span обновить
+              | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/trucks/reload.svg')}
+            button.button.button-orange.trucks-header_events_btns__btn
+              | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/trucks/download.svg')}
+
+
+
