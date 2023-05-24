@@ -1,0 +1,62 @@
+@use '../../abstracts/variables' as *
+@use '../../abstracts/mixins' as *
+@use '../../abstracts/extends' as *
+
+.sent-modal
+  position: fixed
+  width: 100%
+  height: 100%
+  top: 0
+  left: 0
+  bottom: 0
+  right: 0
+  z-index: 1000
+  display: none
+  align-items: center
+  justify-content: center
+  background: rgba(#17263D, .6)
+  box-sizing: border-box
+  pointer-events: none
+  transition: opacity .3s, visibility .3s
+
+  &-container
+    max-width: 556px
+    width: 100%
+    background-color: $white
+    border-radius: 16px
+    overflow: hidden
+    position: relative
+    box-sizing: border-box
+    padding: 25px 25px 50px
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    +screen($tablet)
+      border-radius: 0
+      height: 100%
+      max-width: 100%
+      padding: 18px 20px
+
+  &_close
+    width: 100%
+    display: flex
+    justify-content: end
+
+  &__title
+    +font(30px, 30px, 700)
+    color: $black
+    text-align: center
+    margin-top: 25px
+    +screen($tablet)
+      margin-top: 33%
+      +font(26px, 29px, 700, $font-title)
+
+  &__txt
+    margin-top: 24px
+    +font(20px, 23px, 500)
+    color: $black
+    text-align: center
+    +screen($tablet)
+      +font(16px, 20px, 500, $font-title)
+
