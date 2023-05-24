@@ -8,6 +8,11 @@ section.contacts-map
           .contacts-map__info-item
             .contacts-map__info-item-image
               img(src=el.icon alt="")
+            if (el.iconSecond)
+              .contacts-map__info-item-image.contacts-map__info-item-image-second
+                img(src=el.iconSecond alt="")
+            else
+              null
             if (el.url)
               a.contacts-map__info-item-txt(href=el.url) #{el.txt}
             else
