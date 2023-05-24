@@ -50,6 +50,154 @@
           svg
             margin: 0
 
+  &-titles
+    display: flex
+    border: 1px solid $gray
+    border-radius: 8px
+    background-color: $gray-bg
+    margin-top: 10px
+
+    div
+      box-sizing: border-box
+      padding: 12px 10px
+      border-right: 1px solid $gray-light
+
+      &:last-child
+        border: none
+
+      span
+        +font(12px, 15px, 600)
+        color: $black
+
+      svg
+        margin-left: 4px
+
+    &-q
+      width: 1.7%
+    &-id
+      width: 6.9%
+    &-number
+      width: 7.5%
+    &-type
+      width: 8.1%
+      span
+        color: $orange !important
+      svg
+        path
+          fill: $orange
+    &-mark, &-colone, &-tracker, &-deleted
+      width: 8.1%
+    &-logist
+      width: 10.2%
+    &-datetracker
+      width: 12%
+    &-datecoords
+      width: 13.5%
+
+  &-sort
+    display: flex
+    border: 1px solid $gray
+    border-radius: 8px
+    background-color: $gray-bg
+    margin-top: 10px
+
+    div
+      box-sizing: border-box
+      padding: 5px
+
+      &:first-child
+        padding: 0
+
+      input, select, .trucks-sort-date
+        +font(12px, 15px, 400)
+        color: $gray
+        background-color: $white
+        border: 1px solid $gray
+        border-radius: 8px
+        padding: 0
+        height: 30px
+        box-sizing: border-box
+
+      input, select
+        width: 95%
+        padding: 0 10px
+
+      input
+        &::placeholder
+          color: $gray
+
+      .trucks-sort-date
+        display: flex
+        align-items: center
+        padding: 0 9px
+        margin-left: 3px
+
+    &-datetracker, &-datecoords, &-datedelete
+      display: flex
+
+    &-q
+      width: 1.7%
+    &-id
+      width: 6.9%
+    &-number
+      width: 7.5%
+    &-type
+      width: 8.1%
+    &-mark, &-colone, &-tracker, &-deleted
+      width: 8.1%
+    &-logist
+      width: 10.2%
+    &-datetracker
+      width: 12%
+    &-datecoords
+      width: 13.5%
+
+  &-list
+    border: 1px solid $gray
+    border-radius: 8px
+    margin-top: 10px
+
+    &-item
+      border-bottom: 1px solid $gray
+      display: flex
+      padding: 22px 10px
+      box-sizing: border-box
+
+      &:last-child
+        border-bottom: none
+
+      div
+        box-sizing: border-box
+        padding-left: 5px
+        display: flex
+        align-items: start
+
+        span
+          +font(12px, 15px, 400)
+          color: $gray-input
+
+      &-q
+        width: 1.7%
+      &-id
+        width: 6.9%
+      &-number
+        width: 7.5%
+      &-type
+        width: 8.1%
+      &-mark, &-colone, &-tracker, &-deleted
+        width: 8.1%
+      &-logist
+        width: 10.2%
+      &-datetracker
+        width: 12%
+      &-datecoords
+        width: 13.5%
+
+
+
+
+
+
 
 
 
