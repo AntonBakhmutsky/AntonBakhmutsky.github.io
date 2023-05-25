@@ -49,7 +49,6 @@ window.addEventListener('load', () => {
 
     function showMod (event) {
       event.preventDefault();
-      console.log('it works!')
       if (nameInput.value === "") {
         return null
       } else if (phoneInput.value === "") {

@@ -93,6 +93,68 @@ window.addEventListener('load', () => {
       detailsFile.style.display = 'none';
       nameFile.textContent = '';
     })
+
+
+    const submitBtnOrder = document.querySelector('.contact-form__submit-order')
+    const submitBtnCall = document.querySelector('.contact-form__submit-call')
+    const modalResult = document.querySelector('.sent-modal')
+    const nameInputOrder = document.getElementById("inputNameOrder");
+    const phoneInputOrder = document.getElementById("inputPhoneOrder");
+    const checkboxOrder = document.getElementById("contactFormPolicyOrder");
+    const nameInputCall = document.getElementById("inputNameCall");
+    const phoneInputCall = document.getElementById("inputPhoneCall");
+    const checkboxCall = document.getElementById("contactFormPolicyCall");
+    const btnClsModal = document.getElementById('sentModalClose')
+
+    function closeModal() {
+      modalResult.style.display = 'none';
+    }
+
+    btnClsModal.addEventListener('click', closeModal)
+
+    modalResult.addEventListener('click', function(e) {
+      if (e.target === modalResult && !modalResult.contains(e.target)) {
+        closeModal();
+      }
+    });
+
+    document.addEventListener('click', (e) => {
+      if(e.target === modalResult) {
+        modalResult.style.display = 'none'
+      }
+    });
+
+    submitBtnOrder.addEventListener('click', function (event){
+      event.preventDefault();
+      if (nameInputOrder.value === "") {
+        return null
+      } else if (phoneInputOrder.value === "") {
+        return null
+      }   else if (!checkboxOrder.checked) {
+        return null
+      } else {
+        modalResult.style.display = 'flex';
+        formLeaveOrder.reset();
+        toggleContactForm()
+      }
+    })
+
+    submitBtnCall.addEventListener('click', function (event){
+      event.preventDefault();
+      if (nameInputCall.value === "") {
+        return null
+      } else if (phoneInputCall.value === "") {
+        return null
+      }   else if (!checkboxCall.checked) {
+        return null
+      } else {
+        modalResult.style.display = 'flex';
+        formRequestCall.reset();
+        toggleContactForm()
+      }
+    })
+
+
   }
 
 
