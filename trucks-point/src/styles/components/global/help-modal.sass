@@ -1,0 +1,71 @@
+@use '../../abstracts/variables' as *
+@use '../../abstracts/mixins' as *
+
+.help-modal
+  display: none
+  position: fixed
+  width: 100%
+  height: 100%
+  top: 0
+  left: 0
+  bottom: 0
+  right: 0
+  z-index: 1000
+  align-items: center
+  justify-content: center
+  background: rgba(#17263D, .6)
+  box-sizing: border-box
+  padding: 10px
+
+  &_content
+    background-color: $white
+    border-radius: 30px
+    max-width: 735px
+
+    &-top
+      display: flex
+      justify-content: space-between
+      align-items: center
+      padding: 25px 51px 20px 30px
+      box-sizing: border-box
+      border-bottom: 1px solid $gray-light
+
+      &__title
+        +font(20px, 24px, 600)
+        color: $black
+
+      &__link
+        background-color: $orange
+        border-radius: 5px
+        box-sizing: border-box
+        padding: 9px 10px
+        display: flex
+        align-items: center
+
+        span
+          color: $white
+          +font(14px, 17px, 400)
+          margin-right: 6px
+
+    &-articles
+      box-sizing: border-box
+      padding: 20px 30px 30px 30px
+
+      &__title
+        +font(16px, 19px, 400)
+        color: $black
+        margin-bottom: 10px
+
+      &_list
+
+        &__item
+          display: flex
+          flex-direction: column
+
+          &__title
+            color: $orange
+            +font(14px, 17px, 700)
+            margin: 10px 0 10px 0
+
+          &__text
+            +font(14px, 17px, 400)

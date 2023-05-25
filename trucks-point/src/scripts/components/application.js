@@ -12,9 +12,7 @@ window.addEventListener('load', () => {
     const checkboxContainer = document.querySelectorAll(".application_search_form-disclosed_checkboxes__item");
     const buttonsContainer = document.querySelector(".application_search_form_buttons");
     const formHeaderContainer = document.querySelector(".application_search_toggle");
-    const modal = document.getElementById('applicationModal');
     const btnOpenListFromCityes = document.getElementById('btnAppFromCityes');
-    const btnOpenModal = document.getElementById('appQuestionBtn');
     const searchCityFromInput = document.querySelector('.application_search_form-disclosed_form-top_input')
     const searchCityToInput = document.querySelector('.application_search_form-disclosed_form-top_input-to')
     const disclosedListCityesFrom = document.querySelector('.application_search_form-disclosed_form-top_input_from-cityes')
@@ -75,24 +73,6 @@ window.addEventListener('load', () => {
         isListCityesToVisible = false;
       }
     })
-
-
-    function openModal() {
-      modal.style.display = 'flex';
-    }
-
-    function closeModal() {
-      modal.style.display = 'none';
-    }
-
-    btnOpenModal.addEventListener('click', openModal);
-
-    modal.addEventListener('click', function(e) {
-      if (e.target === modal) {
-        closeModal();
-      }
-    });
-
 
     applicationToggle.addEventListener("click", ()=>{
       if (!isShortFormVisible) {

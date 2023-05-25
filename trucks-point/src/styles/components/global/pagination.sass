@@ -1,0 +1,45 @@
+@use '../../abstracts/variables' as *
+@use '../../abstracts/mixins' as *
+
+.pagination
+  display: flex
+  flex-direction: row
+  width: 100vw
+  justify-content: space-between
+  box-sizing: border-box
+  padding: 10px 75px
+  box-shadow: 0px -7px 15px rgba(52, 60, 68, 0.05)
+
+  &-empty
+    width: 30px
+
+  &-container
+    display: flex
+
+    &-arrow, &-pages li
+      border: 1px solid $gray-light
+      border-radius: 8px
+      height: 31px
+      width: 30px
+      display: flex
+      align-items: center
+      justify-content: center
+      margin-left: 10px
+      transition: border 0.3s
+      a
+        color: $gray-input
+        +font(14px, 17px, 400)
+        transition: color 0.3s
+
+    &-pages li
+
+      &:active, &:focus,&:hover
+        border: 1px solid $orange
+        color: $orange
+
+      &:active >a, &:focus >a, &:hover >a
+        color: $orange
+        font-weight: 700
+
+    &-pages
+      display: flex
