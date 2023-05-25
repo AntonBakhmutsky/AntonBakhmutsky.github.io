@@ -46,8 +46,14 @@ window.addEventListener('load', () => {
     btnCloseModal.addEventListener('click', closeModal)
 
     modalSent.addEventListener('click', function(e) {
-      if (e.target === modalSent) {
-        closeModal();
+      if (e.target === modalSent && !modalSent.contains(e.target)) {
+        modalSent.style.display = 'none';
+      }
+    });
+
+    document.addEventListener('click', (e) => {
+      if(e.target === modalSent) {
+        modalSent.style.display = 'none'
       }
     });
 
@@ -59,16 +65,31 @@ window.addEventListener('load', () => {
     }
     function showModal () {
       if (nameInput.value === "") {
-        console.log("Введите имя");
+        return null
       } else if (phoneInput.value === "") {
-        console.log("Введите номер телефона");
+        return null
       }  else if (emailInput.value === "") {
-        console.log("Введите email");
+        return null
       } else if (!validateEmail()) {
-        console.log("Введён некорректный email");
+        return null
       } else {
         modalSent.style.display = 'flex';
         form.reset();
+        nameInput.addEventListener('invalid', function(event) {
+          event.preventDefault();
+          nameInput.setCustomValidity('');
+        });
+
+        phoneInput.addEventListener('invalid', function(event) {
+          event.preventDefault();
+          phoneInput.setCustomValidity('');
+        });
+
+        emailInput.addEventListener('invalid', function(event) {
+          event.preventDefault();
+          emailInput.setCustomValidity('');
+        });
+
       }
     }
 
