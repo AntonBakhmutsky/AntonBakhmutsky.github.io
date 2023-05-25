@@ -74,6 +74,12 @@ window.addEventListener('load', () => {
       } else {
         modalSent.style.display = 'flex';
         form.reset();
+
+        fileInput.value = '';
+        fileLabel.style.display = 'flex';
+        fileDetails.style.display = 'none';
+        fileName.textContent = '';
+
         nameInput.addEventListener('invalid', function(event) {
           event.preventDefault();
           nameInput.setCustomValidity('');

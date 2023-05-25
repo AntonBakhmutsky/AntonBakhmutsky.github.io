@@ -15,6 +15,7 @@ window.addEventListener('load', () => {
       if (target.closest('.call-modal__close') || target.classList.contains('call-modal')) {
         modal.classList.remove('active')
         document.body.classList.remove('body_fix')
+        forma.reset();
       }
     }
 

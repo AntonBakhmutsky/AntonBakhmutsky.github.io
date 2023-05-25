@@ -17,6 +17,12 @@ window.addEventListener('load', () => {
       contactFormBtn.classList.toggle('disabled')
       contactFormOverlay.classList.toggle('active')
       document.body.classList.toggle('body_fix')
+      formLeaveOrder.reset();
+      formRequestCall.reset();
+      inputFile.value = '';
+      labelFile.style.display = 'flex';
+      detailsFile.style.display = 'none';
+      nameFile.textContent = '';
     }
 
     contactFormBtn.addEventListener('click', toggleContactForm)
@@ -133,6 +139,10 @@ window.addEventListener('load', () => {
       }   else if (!checkboxOrder.checked) {
         return null
       } else {
+        inputFile.value = '';
+        labelFile.style.display = 'flex';
+        detailsFile.style.display = 'none';
+        nameFile.textContent = '';
         modalResult.style.display = 'flex';
         formLeaveOrder.reset();
         toggleContactForm()
