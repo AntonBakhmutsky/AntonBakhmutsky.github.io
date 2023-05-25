@@ -39,7 +39,6 @@ window.addEventListener('load', () => {
     const btnCloseModal = document.getElementById('sentModalClose')
 
     function closeModal() {
-      console.log('hf')
       modalSent.style.display = 'none';
     }
 
