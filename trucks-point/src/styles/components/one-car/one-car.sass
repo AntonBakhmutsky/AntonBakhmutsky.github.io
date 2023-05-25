@@ -1,0 +1,45 @@
+@use '../../abstracts/variables' as *
+@use '../../abstracts/mixins' as *
+
+.one-car
+  height: 100vh
+
+  &-header
+    display: flex
+    justify-content: space-between
+    align-items: center
+    box-sizing: border-box
+    padding: 26px 32px 30px 26px
+
+    &-title
+      display: flex
+      align-items: center
+
+      button
+        margin-right: 30px
+
+  &-content
+    overflow-y: scroll
+    padding: 0 12px 30px
+    box-sizing: border-box
+
+    &::-webkit-scrollbar
+      width: 6px
+
+    &::-webkit-scrollbar-thumb
+      background-color: $gray
+      border-radius: 100px
+
+    &::-webkit-scrollbar-track
+      background-color: $gray-light
+
+    &-title
+      box-shadow: 0 2px 20px rgba(52, 60, 68, 0.08)
+      border-radius: 8px
+      box-sizing: border-box
+      padding: 11px 20px
+
+      span
+        +font(16px, 19px, 700)
+        color: $black
+

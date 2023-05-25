@@ -1,0 +1,65 @@
+extends ../layouts/main/layout-map
+
+block title
+  | TRUCKS.POINT
+
+block content
+  section.one-car.page
+    .one-car-header
+      .one-car-header-title
+        button
+          | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-application-creating/close.svg')}
+        h4 Машина В855АТ147
+      button
+        | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-car/printer.svg')}
+    .one-car-content
+      .one-car-content-title
+        span Информация об автомобиле
+      .one-car-content-item
+        span.one-car-content-item__title Госномер автомобиля*
+        input(type='text' name='registration-number' required='').one-car-content-item__input
+      .one-car-content-item
+        span.one-car-content-item__title Тип автомобиля*
+        select(name='type' required='').one-car-content-item__input
+         option(value='')
+         option(value='Тягач') Тягач
+      .one-car-content-item
+        span.one-car-content-item__title Марка*
+        select(name='mark' required='').one-car-content-item__input
+          option(value='')
+          option(value='Mercedes-Benz') Mercedes-Benz
+      .one-car-content-item
+        span.one-car-content-item__title Логист
+        select(name='logist').one-car-content-item__input
+          option(value='')
+          option(value='Томсон Артём Александрович') Томсон Артём Александрович
+      .one-car-content-item
+        span.one-car-content-item__title Трекер
+        select(name='tracker').one-car-content-item__input
+          option(value='')
+          option(value='sotr_22486793') sotr_22486793
+      .one-car-content-item
+        span.one-car-content-item__title Колонна
+        select(name='colonne').one-car-content-item__input
+          option(value='')
+          option(value='Андреев Евгений') Андреев Евгений
+      .one-car-content-item
+        span.one-car-content-item__title Cсылки на документы
+        textarea(name='docks').one-car-content-item__input
+      .one-car-content-item
+        span.one-car-content-item__title Вид топлива
+        input(name='fuel' type='text').one-car-content-item__input
+      .one-car-content-item
+        span.one-car-content-item__title Объем бака №1
+        input(name='volume1' type='text').one-car-content-item__input
+      .one-car-content-item
+        span.one-car-content-item__title Объем бака №2
+        input(name='volume2' type='text').one-car-content-item__input
+      .one-car-content-item
+        span.one-car-content-item__title Расход топлива, л/100км
+        input(name='Fuel consumption' type='text').one-car-content-item__input
+      .one-car-content-item
+        span.one-car-content-item__title Минимальное кол-во топлива в баке
+        input(name='Minimum fuel' type='text').one-car-content-item__input
+
+

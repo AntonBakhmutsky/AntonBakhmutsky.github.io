@@ -1,0 +1,23 @@
+.pagination
+  .pagination-empty
+  .pagination-container
+    a.pagination-container-arrow(href='#')
+      | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/prev.svg')}
+    ul.pagination-container-pages
+      li
+        a(href='#') 1
+      li
+        a(href='#') 2
+      li
+        a(href='#') 3
+      li
+        a(href='#') ...
+    a.pagination-container-arrow(href='#')
+      | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/next.svg')}
+  .pagination-question
+    button#paginationQuestionBtn
+      | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/question.svg')}
+
+include help-modal
+
+
