@@ -1,9 +1,9 @@
 window.addEventListener('load', () => {
-  if (!document.querySelector('.pagination')) {
+  if (!document.querySelector('.help-modal')) {
     return null
   } else {
     const modal = document.getElementById('helpModal');
-    const btnOpenModal = document.getElementById('paginationQuestionBtn');
+    const btnOpenModal = document.getElementById('questionBtn');
 
     function openModal() {
       modal.style.display = 'flex';
