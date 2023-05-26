@@ -22,6 +22,7 @@
     overflow-y: scroll
     padding: 0 12px 30px
     box-sizing: border-box
+    margin-right: 12px
 
     &::-webkit-scrollbar
       width: 6px
@@ -38,8 +39,52 @@
       border-radius: 8px
       box-sizing: border-box
       padding: 11px 20px
+      margin-bottom: 10px
+      max-width: 29vw
 
       span
         +font(16px, 19px, 700)
         color: $black
+
+    &-item
+      display: flex
+      margin-top: 15px
+      align-items: center
+
+      &-docks
+        align-items: start
+
+
+      &__title
+        width: 8vw
+        +font(14px,17px, 700)
+        color: $gray-dark
+        margin-right: 27px
+
+      &__input
+        width: 19vw
+        border: 1px solid $gray
+        color: $gray
+        box-sizing: border-box
+        padding: 11px 10px
+        +font(14px, 17px,400)
+        border-radius: 8px
+
+        &:focus, &:active
+          color: $gray-dark
+
+      select
+        color: $gray
+        border: none
+        width: 100%
+        padding: 0
+
+      textarea
+        border-radius: 10px
+        height: 9.7vh
+        overflow: scroll
+
+        &::-webkit-scrollbar
+          display: none
+
 

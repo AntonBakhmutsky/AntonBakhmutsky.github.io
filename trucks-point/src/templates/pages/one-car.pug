@@ -20,30 +20,35 @@ block content
         input(type='text' name='registration-number' required='').one-car-content-item__input
       .one-car-content-item
         span.one-car-content-item__title Тип автомобиля*
-        select(name='type' required='').one-car-content-item__input
-         option(value='')
-         option(value='Тягач') Тягач
+        .one-car-content-item__input
+          select(name='type' required='')
+           option(value='')
+           option(value='Тягач') Тягач
       .one-car-content-item
         span.one-car-content-item__title Марка*
-        select(name='mark' required='').one-car-content-item__input
-          option(value='')
-          option(value='Mercedes-Benz') Mercedes-Benz
+        .one-car-content-item__input
+          select(name='mark' required='').one-car-content-item__input
+            option(value='')
+            option(value='Mercedes-Benz') Mercedes-Benz
       .one-car-content-item
         span.one-car-content-item__title Логист
-        select(name='logist').one-car-content-item__input
-          option(value='')
-          option(value='Томсон Артём Александрович') Томсон Артём Александрович
+        .one-car-content-item__input
+          select(name='logist').one-car-content-item__input
+            option(value='')
+            option(value='Томсон Артём Александрович') Томсон Артём Александрович
       .one-car-content-item
         span.one-car-content-item__title Трекер
-        select(name='tracker').one-car-content-item__input
-          option(value='')
-          option(value='sotr_22486793') sotr_22486793
+        .one-car-content-item__input
+          select(name='tracker').one-car-content-item__input
+            option(value='')
+            option(value='sotr_22486793') sotr_22486793
       .one-car-content-item
         span.one-car-content-item__title Колонна
-        select(name='colonne').one-car-content-item__input
-          option(value='')
-          option(value='Андреев Евгений') Андреев Евгений
-      .one-car-content-item
+        .one-car-content-item__input
+          select(name='colonne').one-car-content-item__input
+            option(value='')
+            option(value='Андреев Евгений') Андреев Евгений
+      .one-car-content-item.one-car-content-item-docks
         span.one-car-content-item__title Cсылки на документы
         textarea(name='docks').one-car-content-item__input
       .one-car-content-item
