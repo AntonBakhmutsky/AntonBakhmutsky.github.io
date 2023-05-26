@@ -5,10 +5,20 @@
   width: 79vw
   height: 87vh
   margin: 0 auto
-  padding-top: 26px
+  padding: 26px 0 0 50px
   box-sizing: border-box
   display: flex
   flex-direction: column
+  position: relative
+  overflow: scroll
+
+  &::-webkit-scrollbar
+    display: none
+
+  .close-btn
+    position: absolute
+    top: 18px
+    left: 0
 
   &__title
     +font(16px, 19px, 400)
