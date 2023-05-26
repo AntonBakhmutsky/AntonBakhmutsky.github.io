@@ -1,0 +1,32 @@
+extends ../layouts/main/layout-map
+
+block title
+  | TRUCKS.POINT
+
+block content
+  section.one-driver.page
+    .one-driver-header
+      .one-driver-header-title
+        button
+          | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-application-creating/close.svg')}
+        h4 Водитель
+      button
+        | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-car/printer.svg')}
+    .one-driver-content
+      .one-driver-content-title
+        span Информация о водителе
+      .one-driver-content-item
+        span.one-driver-content-item__title Фамилия*
+        input(type='text' name='Фамилия' required='').one-driver-content-item__input
+      .one-driver-content-item
+        span.one-driver-content-item__title Имя*
+        input(type='text' name='Имя' required='').one-driver-content-item__input
+      .one-driver-content-item
+        span.one-driver-content-item__title Отчество
+        input(type='text' name='Отчество').one-driver-content-item__input
+      .one-driver-content-item
+        span.one-driver-content-item__title Телефон*
+        input(type='text' name='Отчество' required='').one-driver-content-item__input
+      .one-driver-content-item.one-driver-content-item-docks
+        span.one-car-content-item__title Cсылки на документы
+        textarea(name='docks').one-car-content-item__input
