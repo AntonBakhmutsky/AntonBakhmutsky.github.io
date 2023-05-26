@@ -1,0 +1,90 @@
+@use '../../abstracts/variables' as *
+@use '../../abstracts/mixins' as *
+
+.one-trailer
+  height: 100vh
+
+  &-header
+    display: flex
+    justify-content: space-between
+    align-items: center
+    box-sizing: border-box
+    padding: 26px 32px 30px 26px
+
+    &-title
+      display: flex
+      align-items: center
+
+      button
+        margin-right: 30px
+
+  &-content
+    overflow-y: scroll
+    padding: 0 12px 30px
+    box-sizing: border-box
+    margin-right: 12px
+
+    &::-webkit-scrollbar
+      width: 6px
+
+    &::-webkit-scrollbar-thumb
+      background-color: $gray
+      border-radius: 100px
+
+    &::-webkit-scrollbar-track
+      background-color: $gray-light
+
+    &-title
+      box-shadow: 0 2px 20px rgba(52, 60, 68, 0.08)
+      border-radius: 8px
+      box-sizing: border-box
+      padding: 11px 20px
+      margin-bottom: 10px
+      max-width: 29vw
+
+      span
+        +font(16px, 19px, 700)
+        color: $black
+
+    &-item
+      display: flex
+      margin-top: 15px
+      align-items: center
+
+      &-docks
+        align-items: start
+
+
+      &__title
+        width: 8vw
+        +font(14px,17px, 700)
+        color: $gray-dark
+        margin-right: 27px
+
+      &__input
+        width: 19vw
+        border: 1px solid $gray
+        color: $gray
+        box-sizing: border-box
+        padding: 11px 10px
+        +font(14px, 17px,400)
+        border-radius: 8px
+
+        &:focus, &:active
+          color: $gray-dark
+
+      select
+        color: $gray
+        border: none
+        width: 100%
+        padding: 0
+
+      textarea
+        border-radius: 10px
+        height: 9.7vh
+        overflow: scroll
+
+        &::-webkit-scrollbar
+          display: none
+
+
