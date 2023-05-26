@@ -1,0 +1,176 @@
+@use '../../abstracts/variables' as *
+@use '../../abstracts/mixins' as *
+
+.trackers
+  width: 79vw
+  height: calc(100vh - 90px)
+  margin: 0 auto
+  padding-top: 26px
+  box-sizing: border-box
+  position: relative
+  overflow: scroll
+
+  &::-webkit-scrollbar
+    display: none
+
+  .close-btn
+    position: absolute
+    left: -50px
+    top: 18px
+
+  &-header
+
+    &__title
+      +font(16px, 19px, 400)
+      color: $black
+
+    &_events
+      width: 100%
+      display: flex
+      justify-content: space-between
+      margin-top: 30px
+      align-items: center
+
+      &_count
+
+        span
+          +font(12px, 15px, 400)
+          color: $black
+
+        button
+          +font(12px, 15px, 400)
+          color: $gray-input
+          margin-left: 10px
+
+          &:hover, &:active, &:focus
+            color: $black
+
+      &_btns
+        display: flex
+
+        &__btn
+          margin-left: 10px
+
+          svg
+            margin: 0
+
+  &-titles
+    display: flex
+    border: 1px solid $gray
+    border-radius: 8px
+    background-color: $gray-bg
+    margin-top: 10px
+
+    div
+      box-sizing: border-box
+      padding: 12px 10px
+      border-right: 1px solid $gray-light
+
+      &:last-child
+        border: none
+
+      span
+        +font(12px, 15px, 600)
+        color: $black
+
+      svg
+        margin-left: 4px
+
+    &-q
+      width: 1.7%
+    &-id
+      width: 8.16%
+    &-number
+      width: 10.2%
+    &-type
+      width: 17.6%
+    &-date-create, &-period
+      width: 13.9%
+    &-date-coord
+      width: 16.3%
+    &-car
+      width: 18.9%
+
+
+  &-sort
+    display: flex
+    border: 1px solid $gray
+    border-radius: 8px
+    background-color: $gray-bg
+    margin-top: 10px
+
+    div
+      box-sizing: border-box
+      padding: 5px
+
+      &:first-child
+        padding: 0
+
+      input, select
+        +font(12px, 15px, 400)
+        color: $gray
+        background-color: $white
+        border: 1px solid $gray
+        border-radius: 8px
+        height: 30px
+        box-sizing: border-box
+        width: 95%
+        padding: 0 10px
+        &::placeholder
+          color: $gray
+
+    &-q
+      width: 1.7%
+    &-id
+      width: 8.16%
+    &-number
+      width: 10.2%
+    &-type
+      width: 17.6%
+    &-date-create, &-period
+      width: 13.9%
+    &-date-coord
+      width: 16.3%
+    &-car
+      width: 18.9%
+
+  &-list
+    border: 1px solid $gray
+    border-radius: 8px
+    margin-top: 10px
+    height: 100%
+
+    &-item
+      border-bottom: 1px solid $gray
+      display: flex
+      padding: 22px 10px
+      box-sizing: border-box
+
+      &:last-child
+        border-bottom: none
+
+      div
+        box-sizing: border-box
+        padding-left: 5px
+        display: flex
+        align-items: start
+
+        span
+          +font(12px, 15px, 400)
+          color: $gray-input
+          margin-left: 5px
+
+      &-q
+        width: 1.7%
+      &-id
+        width: 8.16%
+      &-number
+        width: 10.2%
+      &-type
+        width: 17.6%
+      &-date-create, &-period
+        width: 13.9%
+      &-date-coord
+        width: 16.3%
+      &-car
+        width: 18.9%
