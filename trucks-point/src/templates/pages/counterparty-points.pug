@@ -1,0 +1,97 @@
+extends ../layouts/main/layout.pug
+
+block title
+  | TRUCKS.POINT
+
+block content
+  section.counterparty-points
+    button.close-btn
+      | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/trucks/close.svg')}
+    .counterparty-points-container
+      .counterparty-points-header
+        .counterparty-points-header__title
+          | Точки контрагента (Отображены
+          strong  1-3
+          |  из
+          strong  3
+          |  )
+        .counterparty-points-header_events
+          .counterparty-points-header_events_count
+            span Выводить на странице:
+            button 30
+            button 50
+            button 100
+            button 200
+          .counterparty-points-header_events_btns
+            button.button.button-gray-dark
+              span обновить
+              | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/trucks/reload.svg')}
+            button.button.button-orange.counterparty-points-header_events_btns__btn
+              | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/trucks/download.svg')}
+
+      .counterparty-points-titles
+        .counterparty-points-titles-q
+          span #
+        .counterparty-points-titles-id
+          span ID
+          | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/trucks/mask.svg')}
+        .counterparty-points-titles-name
+          span Название
+          | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/trucks/mask.svg')}
+        .counterparty-points-titles-address
+          span Адрес
+          | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/trucks/mask.svg')}
+        .counterparty-points-titles-using-date
+          span Дата последнего использования
+          | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/trucks/mask.svg')}
+
+      .counterparty-points-sort
+        .counterparty-points-sort-q
+        .counterparty-points-sort-id
+          input(type="text" placeholder="ID").counterparty-points-sort__text
+        .counterparty-points-sort-name
+          input(type="text" placeholder="Название").counterparty-points-sort__text
+        .counterparty-points-sort-address
+        .counterparty-points-sort-using-date
+          select
+            option(value="") Равно
+          .counterparty-points-sort-date
+            | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/trucks/date.svg')}
+
+      .counterparty-points-list
+        .counterparty-points-list-item
+          .counterparty-points-list-item-q
+            span 1
+          .counterparty-points-list-item-id
+            span 42537370
+          .counterparty-points-list-item-name
+            span НИКОЛЬ ПАК завод, Республика Башкортостан, Учалы, Кровельная ул, 1
+          .counterparty-points-list-item-address
+            span Россия, Республика Башкортостан, Учалы, Кровельная улица, 1
+          .counterparty-points-list-item-using-date
+            span 09.06.2021 14:58:28
+        .counterparty-points-list-item
+          .counterparty-points-list-item-q
+            span 2
+          .counterparty-points-list-item-id
+            span 42537370
+          .counterparty-points-list-item-name
+            span НИКОЛЬ ПАК завод, Республика Башкортостан, Учалы, Кровельная ул, 1
+          .counterparty-points-list-item-address
+            span Россия, Республика Башкортостан, Учалы, Кровельная улица, 1
+          .counterparty-points-list-item-using-date
+            span 09.06.2021 14:58:28
+        .counterparty-points-list-item
+          .counterparty-points-list-item-q
+            span 3
+          .counterparty-points-list-item-id
+            span 42537370
+          .counterparty-points-list-item-name
+            span НИКОЛЬ ПАК завод, Республика Башкортостан, Учалы, Кровельная ул, 1
+          .counterparty-points-list-item-address
+            span Россия, Республика Башкортостан, Учалы, Кровельная улица, 1
+          .counterparty-points-list-item-using-date
+            span 09.06.2021 14:58:28
+
+
+  include ../components/global/pagination
