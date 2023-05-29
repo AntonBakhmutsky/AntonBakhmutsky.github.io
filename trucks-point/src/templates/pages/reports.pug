@@ -1,0 +1,66 @@
+extends ../layouts/main/layout-map
+
+block title
+  | TRUCKS.POINT
+
+block content
+  section.reports.page
+    .reports-header
+      .reports-header-title
+        button
+          | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-application-creating/close.svg')}
+        h4 Отчеты
+    .reports-content
+      .reports-content-title
+        span Выберите отчет:
+      a.reports-content-item(href='#')
+        span.reports-content-item__title 1. Общий отчет
+        | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/reports/arrow.svg')}
+      a.reports-content-item(href='#')
+        span.reports-content-item__title 2. Отчет "Отклонения по точкам"
+        | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/reports/arrow.svg')}
+      a.reports-content-item(href='#')
+        span.reports-content-item__title 3. Отчет план-факт
+        | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/reports/arrow.svg')}
+      a.reports-content-item(href='#')
+        span.reports-content-item__title 4. Отчет план-факт по порожним заявкам
+        | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/reports/arrow.svg')}
+      a.reports-content-item(href='#')
+        span.reports-content-item__title 5. Отчет по водителям
+        | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/reports/arrow.svg')}
+      a.reports-content-item(href='#')
+        span.reports-content-item__title 6. Отчет по городам
+        | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/reports/arrow.svg')}
+      a.reports-content-item(href='#')
+        span.reports-content-item__title 7. Отчет по загрузке-выгрузке
+        | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/reports/arrow.svg')}
+      a.reports-content-item(href='#')
+        span.reports-content-item__title 8. Отчет по заявкам
+        | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/reports/arrow.svg')}
+      a.reports-content-item(href='#')
+        span.reports-content-item__title 9. Отчет по изменениям стоимости в заявках
+        | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/reports/arrow.svg')}
+      a.reports-content-item(href='#')
+        span.reports-content-item__title 10. Отчет по использованию приложения водителями
+        | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/reports/arrow.svg')}
+      a.reports-content-item(href='#')
+        span.reports-content-item__title 11. Отчет по контрагентам
+        | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/reports/arrow.svg')}
+      a.reports-content-item(href='#')
+        span.reports-content-item__title 12. Отчет по машинам без заявки
+        | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/reports/arrow.svg')}
+      a.reports-content-item(href='#')
+        span.reports-content-item__title 13. Отчет по ответственным логистам
+        | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/reports/arrow.svg')}
+      a.reports-content-item(href='#')
+        span.reports-content-item__title 14. Отчет по перепробегу водителей
+        | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/reports/arrow.svg')}
+      a.reports-content-item(href='#')
+        span.reports-content-item__title 15. Отчет по простоям машин
+        | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/reports/arrow.svg')}
+      a.reports-content-item(href='#')
+        span.reports-content-item__title 16. Отчет по своевременному заведению заявок
+        | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/reports/arrow.svg')}
+      a.reports-content-item(href='#')
+        span.reports-content-item__title 17. Отчет по транспортным компаниям
+        | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/reports/arrow.svg')}
