@@ -1,0 +1,27 @@
+extends ../layouts/main/layout-map
+
+block title
+  | TRUCKS.POINT
+
+block content
+  section.counterparty-point-edit.page
+    .counterparty-point-edit-header
+      .counterparty-point-edit-header-title
+        button
+          | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-application-creating/close.svg')}
+        h4 Редактирование точки
+      button
+        | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-car/printer.svg')}
+    .counterparty-point-edit-content
+      .counterparty-point-edit-content-title
+        span Редактировать точку контрагента
+      .counterparty-point-edit-content-item
+        span.counterparty-point-edit-content-item__title Наименование*
+        .counterparty-point-edit-content-item__input
+          input(type='text' name='Наименование' required='' placeholder='НИКОЛЬ ПАК завод, Республика Башкортостан, Учалы, Кровельная ул, 1')
+          | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/counterparty-point-edit/edit.svg')}
+      .counterparty-point-edit-content-item
+        span.counterparty-point-edit-content-item__title Адрес*
+        .counterparty-point-edit-content-item__input
+          input(type='text' name='Наименование' required='' placeholder='Россия, Республика Башкортостан, Учалы, Кровельная улица, 1')
+          | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/counterparty-point-edit/edit.svg')}
