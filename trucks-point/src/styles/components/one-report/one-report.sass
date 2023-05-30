@@ -70,13 +70,19 @@
         color: $black
         +font(16px, 19px, 700)
 
+      &__toggle
+        transition: all 0.3s ease
+
+        &-open
+          transform: rotate(180deg)
+
     &-points
+      display: none
       grid-template-columns: 1fr 1fr 1fr 1fr
       grid-gap: 10px
       justify-content: space-between
       box-sizing: border-box
       padding: 0 25px 20px 20px
-      display: none
 
       &-item
         display: flex
@@ -95,11 +101,11 @@
           width: 100%
 
     &-btns
+      display: none
       align-items: center
       border-top: 1px solid $gray-light
       box-sizing: border-box
       padding: 20px 20px 20px 22px
-      display: none
 
       button
         margin-right: 10px
@@ -275,7 +281,7 @@
 
       &-subtitle
         margin-top: 10px
-        display: flex
+        display: none
 
         &:first-child
           margin-top: 15px
@@ -317,6 +323,7 @@
           overflow: hidden
           border: 1px solid $gray
           border-radius: 3px
+          display: none
 
           &-row
             display: flex
@@ -406,6 +413,18 @@
         width: 15%
       &-prob, &-val, &-weight, &-var
         width: 9.86%
+
+
+.grid
+  display: grid
+.flex
+  display: flex
+.none
+  display: none
+.block
+  display: block
+
+
 
 
 
