@@ -6,6 +6,7 @@ require('./components/help-modal')
 require('./components/application')
 require('./components/one-application')
 require('./components/one-application-creating')
+require('./components/one-report')
 
 
 
