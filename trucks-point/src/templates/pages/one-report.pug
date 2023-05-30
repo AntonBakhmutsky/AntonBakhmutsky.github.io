@@ -1,0 +1,506 @@
+extends ../layouts/main/layout.pug
+
+block title
+  | TRUCKS.POINT
+
+block content
+  section.one-report
+    button.close-btn
+      | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/trucks/close.svg')}
+    .one-report-container
+      .one-report-header
+        .one-report-header__title Общий отчет
+        .one-report-header_events
+          .one-report-header_events_count
+            span Выводить на странице:
+            button 30
+            button 50
+            button 100
+            button 200
+          .one-report-header_events_btns
+            button
+              | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-report/printer.svg')}
+            button.button.button-orange.one-report-header_events_btns__btn
+              | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/trucks/download.svg')}
+
+      form.one-report-filter
+        .one-report-filter-head
+          h4.one-report-filter-head__title Фильтр:
+          button.one-report-filter-head__toggle#btnToggleFilter
+            | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-report/toggle.svg')}
+        .one-report-filter-points
+          .one-report-filter-points-item
+            input(type='search' placeholder='Период - От').one-report-filter-points-item__input
+            | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-report/date.svg')}
+          .one-report-filter-points-item
+            input(type='search' placeholder='Период - До').one-report-filter-points-item__input
+            | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-report/date.svg')}
+          .one-report-filter-points-item
+            select.one-report-filter-points-item__input
+              option(value='') Тип грузовика
+          .one-report-filter-points-item
+            select.one-report-filter-points-item__input
+              option(value='') Колонна
+        .one-report-filter-btns
+          button.button.button-gray-dark
+            span обновить
+            | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-report/reload.svg')}
+          button(type='reset').button.button-gray-dark
+            span сбросить
+            | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-report/close.svg')}
+          .one-report-filter-btns-checkbox
+            input(type='checkbox' id='nds' name='nds').check-mark
+            label(for='nds') Без НДС
+
+      .one-report-titles
+        .one-report-titles-logist
+          span Логист
+          | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/trucks/mask.svg')}
+        .one-report-titles-car
+          span Машина
+          | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/trucks/mask.svg')}
+        .one-report-titles-actprob
+          span Активный пробег, км
+          | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/trucks/mask.svg')}
+        .one-report-titles-porprobwith
+          span Порожний пробег по заявкам, км
+          | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/trucks/mask.svg')}
+        .one-report-titles-porprobwithout
+          span Порожний пробег без заявок, км
+          | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/trucks/mask.svg')}
+        .one-report-titles-prob
+          span Общий пробег, км
+          | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/trucks/mask.svg')}
+        .one-report-titles-val
+          span Вал, руб
+          | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/trucks/mask.svg')}
+        .one-report-titles-weight
+          span Сред. вес, т
+          | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/trucks/mask.svg')}
+        .one-report-titles-var
+          span Выработка, руб/км
+          | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/trucks/mask.svg')}
+
+      .one-report-sort
+        .one-report-sort-logist
+        .one-report-sort-car
+          input(type="text" placeholder="Машина").one-report-sort__text
+        .one-report-sort-actprob
+          .one-report-sort_input
+            select
+              option(value='') Равно
+          input(type="text" placeholder="").one-report-sort__text
+        .one-report-sort-porprobwith
+          .one-report-sort_input
+            select
+              option(value='') Равно
+          input(type="text" placeholder="").one-report-sort__text
+        .one-report-sort-porprobwithout
+          .one-report-sort_input
+            select
+              option(value='') Равно
+          input(type="text" placeholder="").one-report-sort__text
+        .one-report-sort-prob
+          .one-report-sort_input
+            select
+              option(value='') Равно
+          input(type="text" placeholder="").one-report-sort__text
+        .one-report-sort-val
+          .one-report-sort_input
+            select
+              option(value='') Равно
+          input(type="text" placeholder="").one-report-sort__text
+        .one-report-sort-weight
+          .one-report-sort_input
+            select
+              option(value='') Равно
+          input(type="text" placeholder="").one-report-sort__text
+        .one-report-sort-var
+          .one-report-sort_input
+            select
+              option(value='') Равно
+          input(type="text" placeholder="").one-report-sort__text
+
+      .one-report-list
+        .one-report-list-item
+          .one-report-list-item-title
+            .one-report-list-item-title-logist
+              button.one-report-list-item-title-logist__btn
+                | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-report/plus.svg')}
+              span Томсон Артем Алекс..
+            .one-report-list-item-title-car
+            .one-report-list-item-title-actprob
+              span 280 973,00
+            .one-report-list-item-title-porprobwith
+              span 0,00 (0,00 %)
+            .one-report-list-item-title-porprobwithout
+              span 33 961,00 (10,78 %)
+            .one-report-list-item-title-prob
+              span 314 934,00
+            .one-report-list-item-title-val
+              span 11 150 351,84
+            .one-report-list-item-title-weight
+              span 0,00
+            .one-report-list-item-title-var
+              span 35,41
+          .one-report-list-item-subtitle
+            .one-report-list-item-subtitle-logist
+            .one-report-list-item-subtitle-car
+              button.one-report-list-item-subtitle-car__btn
+                | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-report/plus.svg')}
+              span В855АТ147
+            .one-report-list-item-subtitle-actprob
+              span 5 641,00
+            .one-report-list-item-subtitle-porprobwith
+              span 0,00 (0,00 %)
+            .one-report-list-item-subtitle-porprobwithout
+              span 503,00 (8,00 %)
+            .one-report-list-item-subtitle-prob
+              span 6 144,00
+            .one-report-list-item-subtitle-val
+              span 197 024,33
+            .one-report-list-item-subtitle-weight
+              span 0,00
+            .one-report-list-item-subtitle-var
+              span 32,07
+
+          .one-report-list-item-subtitle-info
+            .one-report-list-item-subtitle-info-row
+              .one-report-list-item-subtitle-info-row-q
+                span.row-title #
+              .one-report-list-item-subtitle-info-row-num
+                span.row-title Номер заявки
+              .one-report-list-item-subtitle-info-row-contr
+                span.row-title Контрагент
+              .one-report-list-item-subtitle-info-row-onec
+                span.row-title Номер в 1C
+              .one-report-list-item-subtitle-info-row-route
+                span.row-title Маршрут
+              .one-report-list-item-subtitle-info-row-dates
+                span.row-title Даты выполнения
+              .one-report-list-item-subtitle-info-row-actprob
+                span.row-title Активный, км
+              .one-report-list-item-subtitle-info-row-porprob
+                span.row-title Порожний, км
+              .one-report-list-item-subtitle-info-row-prob
+                span.row-title Общий, км
+              .one-report-list-item-subtitle-info-row-val
+                span.row-title ВАЛ
+              .one-report-list-item-subtitle-info-row-weight
+                span.row-title Сред. вес, т
+              .one-report-list-item-subtitle-info-row-rub
+                span.row-title Руб/км
+
+            .one-report-list-item-subtitle-info-row
+              .one-report-list-item-subtitle-info-row-q
+                span.row-text 1
+              .one-report-list-item-subtitle-info-row-num
+                span.row-text 39095432
+                button
+                  | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-report/wrench.svg')}
+              .one-report-list-item-subtitle-info-row-contr
+                span.row-text ТЭК ЛидерТранс
+              .one-report-list-item-subtitle-info-row-onec
+                span.row-text 00000013433
+              .one-report-list-item-subtitle-info-row-route
+                span.row-text Омск - Волгоград
+              .one-report-list-item-subtitle-info-row-dates
+                span.row-text 20.05.2021 21:39 (+06:00) - 31.05.2021 00:01 (+03:00)
+              .one-report-list-item-subtitle-info-row-actprob
+                span.row-text 785,46
+              .one-report-list-item-subtitle-info-row-porprob
+                span.row-text 0,00
+              .one-report-list-item-subtitle-info-row-prob
+                span.row-text 785,46
+              .one-report-list-item-subtitle-info-row-val
+                span.row-text 26 741,58
+              .one-report-list-item-subtitle-info-row-weight
+                span.row-text 0,00
+              .one-report-list-item-subtitle-info-row-rub
+                span.row-text 34,05
+
+          .one-report-list-item-subtitle
+            .one-report-list-item-subtitle-logist
+            .one-report-list-item-subtitle-car
+              button.one-report-list-item-subtitle-car__btn
+                | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-report/plus.svg')}
+              span В855АТ147
+            .one-report-list-item-subtitle-actprob
+              span 5 641,00
+            .one-report-list-item-subtitle-porprobwith
+              span 0,00 (0,00 %)
+            .one-report-list-item-subtitle-porprobwithout
+              span 503,00 (8,00 %)
+            .one-report-list-item-subtitle-prob
+              span 6 144,00
+            .one-report-list-item-subtitle-val
+              span 197 024,33
+            .one-report-list-item-subtitle-weight
+              span 0,00
+            .one-report-list-item-subtitle-var
+              span 32,07
+
+          .one-report-list-item-subtitle-info
+            .one-report-list-item-subtitle-info-row
+              .one-report-list-item-subtitle-info-row-q
+                span.row-title #
+              .one-report-list-item-subtitle-info-row-num
+                span.row-title Номер заявки
+              .one-report-list-item-subtitle-info-row-contr
+                span.row-title Контрагент
+              .one-report-list-item-subtitle-info-row-onec
+                span.row-title Номер в 1C
+              .one-report-list-item-subtitle-info-row-route
+                span.row-title Маршрут
+              .one-report-list-item-subtitle-info-row-dates
+                span.row-title Даты выполнения
+              .one-report-list-item-subtitle-info-row-actprob
+                span.row-title Активный, км
+              .one-report-list-item-subtitle-info-row-porprob
+                span.row-title Порожний, км
+              .one-report-list-item-subtitle-info-row-prob
+                span.row-title Общий, км
+              .one-report-list-item-subtitle-info-row-val
+                span.row-title ВАЛ
+              .one-report-list-item-subtitle-info-row-weight
+                span.row-title Сред. вес, т
+              .one-report-list-item-subtitle-info-row-rub
+                span.row-title Руб/км
+
+            .one-report-list-item-subtitle-info-row
+              .one-report-list-item-subtitle-info-row-q
+                span.row-text 1
+              .one-report-list-item-subtitle-info-row-num
+                span.row-text 39095432
+                button
+                  | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-report/wrench.svg')}
+              .one-report-list-item-subtitle-info-row-contr
+                span.row-text ТЭК ЛидерТранс
+              .one-report-list-item-subtitle-info-row-onec
+                span.row-text 00000013433
+              .one-report-list-item-subtitle-info-row-route
+                span.row-text Омск - Волгоград
+              .one-report-list-item-subtitle-info-row-dates
+                span.row-text 20.05.2021 21:39 (+06:00) - 31.05.2021 00:01 (+03:00)
+              .one-report-list-item-subtitle-info-row-actprob
+                span.row-text 785,46
+              .one-report-list-item-subtitle-info-row-porprob
+                span.row-text 0,00
+              .one-report-list-item-subtitle-info-row-prob
+                span.row-text 785,46
+              .one-report-list-item-subtitle-info-row-val
+                span.row-text 26 741,58
+              .one-report-list-item-subtitle-info-row-weight
+                span.row-text 0,00
+              .one-report-list-item-subtitle-info-row-rub
+                span.row-text 34,05
+
+
+        .one-report-list-item
+          .one-report-list-item-title
+            .one-report-list-item-title-logist
+              button.one-report-list-item-title-logist__btn
+                | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-report/plus.svg')}
+              span Томсон Артем Алекс..
+            .one-report-list-item-title-car
+            .one-report-list-item-title-actprob
+              span 280 973,00
+            .one-report-list-item-title-porprobwith
+              span 0,00 (0,00 %)
+            .one-report-list-item-title-porprobwithout
+              span 33 961,00 (10,78 %)
+            .one-report-list-item-title-prob
+              span 314 934,00
+            .one-report-list-item-title-val
+              span 11 150 351,84
+            .one-report-list-item-title-weight
+              span 0,00
+            .one-report-list-item-title-var
+              span 35,41
+          .one-report-list-item-subtitle
+            .one-report-list-item-subtitle-logist
+            .one-report-list-item-subtitle-car
+              button.one-report-list-item-subtitle-car__btn
+                | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-report/plus.svg')}
+              span В855АТ147
+            .one-report-list-item-subtitle-actprob
+              span 5 641,00
+            .one-report-list-item-subtitle-porprobwith
+              span 0,00 (0,00 %)
+            .one-report-list-item-subtitle-porprobwithout
+              span 503,00 (8,00 %)
+            .one-report-list-item-subtitle-prob
+              span 6 144,00
+            .one-report-list-item-subtitle-val
+              span 197 024,33
+            .one-report-list-item-subtitle-weight
+              span 0,00
+            .one-report-list-item-subtitle-var
+              span 32,07
+
+          .one-report-list-item-subtitle-info
+            .one-report-list-item-subtitle-info-row
+              .one-report-list-item-subtitle-info-row-q
+                span.row-title #
+              .one-report-list-item-subtitle-info-row-num
+                span.row-title Номер заявки
+              .one-report-list-item-subtitle-info-row-contr
+                span.row-title Контрагент
+              .one-report-list-item-subtitle-info-row-onec
+                span.row-title Номер в 1C
+              .one-report-list-item-subtitle-info-row-route
+                span.row-title Маршрут
+              .one-report-list-item-subtitle-info-row-dates
+                span.row-title Даты выполнения
+              .one-report-list-item-subtitle-info-row-actprob
+                span.row-title Активный, км
+              .one-report-list-item-subtitle-info-row-porprob
+                span.row-title Порожний, км
+              .one-report-list-item-subtitle-info-row-prob
+                span.row-title Общий, км
+              .one-report-list-item-subtitle-info-row-val
+                span.row-title ВАЛ
+              .one-report-list-item-subtitle-info-row-weight
+                span.row-title Сред. вес, т
+              .one-report-list-item-subtitle-info-row-rub
+                span.row-title Руб/км
+
+            .one-report-list-item-subtitle-info-row
+              .one-report-list-item-subtitle-info-row-q
+                span.row-text 1
+              .one-report-list-item-subtitle-info-row-num
+                span.row-text 39095432
+                button
+                  | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-report/wrench.svg')}
+              .one-report-list-item-subtitle-info-row-contr
+                span.row-text ТЭК ЛидерТранс
+              .one-report-list-item-subtitle-info-row-onec
+                span.row-text 00000013433
+              .one-report-list-item-subtitle-info-row-route
+                span.row-text Омск - Волгоград
+              .one-report-list-item-subtitle-info-row-dates
+                span.row-text 20.05.2021 21:39 (+06:00) - 31.05.2021 00:01 (+03:00)
+              .one-report-list-item-subtitle-info-row-actprob
+                span.row-text 785,46
+              .one-report-list-item-subtitle-info-row-porprob
+                span.row-text 0,00
+              .one-report-list-item-subtitle-info-row-prob
+                span.row-text 785,46
+              .one-report-list-item-subtitle-info-row-val
+                span.row-text 26 741,58
+              .one-report-list-item-subtitle-info-row-weight
+                span.row-text 0,00
+              .one-report-list-item-subtitle-info-row-rub
+                span.row-text 34,05
+
+          .one-report-list-item-subtitle
+            .one-report-list-item-subtitle-logist
+            .one-report-list-item-subtitle-car
+              button.one-report-list-item-subtitle-car__btn
+                | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-report/plus.svg')}
+              span В855АТ147
+            .one-report-list-item-subtitle-actprob
+              span 5 641,00
+            .one-report-list-item-subtitle-porprobwith
+              span 0,00 (0,00 %)
+            .one-report-list-item-subtitle-porprobwithout
+              span 503,00 (8,00 %)
+            .one-report-list-item-subtitle-prob
+              span 6 144,00
+            .one-report-list-item-subtitle-val
+              span 197 024,33
+            .one-report-list-item-subtitle-weight
+              span 0,00
+            .one-report-list-item-subtitle-var
+              span 32,07
+
+          .one-report-list-item-subtitle-info
+            .one-report-list-item-subtitle-info-row
+              .one-report-list-item-subtitle-info-row-q
+                span.row-title #
+              .one-report-list-item-subtitle-info-row-num
+                span.row-title Номер заявки
+              .one-report-list-item-subtitle-info-row-contr
+                span.row-title Контрагент
+              .one-report-list-item-subtitle-info-row-onec
+                span.row-title Номер в 1C
+              .one-report-list-item-subtitle-info-row-route
+                span.row-title Маршрут
+              .one-report-list-item-subtitle-info-row-dates
+                span.row-title Даты выполнения
+              .one-report-list-item-subtitle-info-row-actprob
+                span.row-title Активный, км
+              .one-report-list-item-subtitle-info-row-porprob
+                span.row-title Порожний, км
+              .one-report-list-item-subtitle-info-row-prob
+                span.row-title Общий, км
+              .one-report-list-item-subtitle-info-row-val
+                span.row-title ВАЛ
+              .one-report-list-item-subtitle-info-row-weight
+                span.row-title Сред. вес, т
+              .one-report-list-item-subtitle-info-row-rub
+                span.row-title Руб/км
+
+            .one-report-list-item-subtitle-info-row
+              .one-report-list-item-subtitle-info-row-q
+                span.row-text 1
+              .one-report-list-item-subtitle-info-row-num
+                span.row-text 39095432
+                button
+                  | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-report/wrench.svg')}
+              .one-report-list-item-subtitle-info-row-contr
+                span.row-text ТЭК ЛидерТранс
+              .one-report-list-item-subtitle-info-row-onec
+                span.row-text 00000013433
+              .one-report-list-item-subtitle-info-row-route
+                span.row-text Омск - Волгоград
+              .one-report-list-item-subtitle-info-row-dates
+                span.row-text 20.05.2021 21:39 (+06:00) - 31.05.2021 00:01 (+03:00)
+              .one-report-list-item-subtitle-info-row-actprob
+                span.row-text 785,46
+              .one-report-list-item-subtitle-info-row-porprob
+                span.row-text 0,00
+              .one-report-list-item-subtitle-info-row-prob
+                span.row-text 785,46
+              .one-report-list-item-subtitle-info-row-val
+                span.row-text 26 741,58
+              .one-report-list-item-subtitle-info-row-weight
+                span.row-text 0,00
+              .one-report-list-item-subtitle-info-row-rub
+                span.row-text 34,05
+
+  .one-report-result
+    .one-report-result-container
+      .one-report-result-info
+        .one-report-result-info-logist
+        .one-report-result-info-car
+          span 414 (Общее количество...
+        .one-report-result-info-actprob
+          span 1 811 513,00
+        .one-report-result-info-porprobwith
+          span 0,00 (0,00 %)
+        .one-report-result-info-porprobwithout
+          span 358 910,00 (17,00 %)
+        .one-report-result-info-prob
+          span 2 170 423,00
+        .one-report-result-info-val
+          span 78 981 555,68 (Всего)
+          span 71 588 491,91 (сумма заявок...
+          span 7 393 063,77 (сумма заявок...
+        .one-report-result-info-weight
+          span 0,24
+        .one-report-result-info-var
+          span 36,39 (сумма заявок с НДС)
+          span 29,25 (сумма заявок без Н..
+
+
+  include ../components/global/pagination
+
+
+
+
+
+
+
+
+

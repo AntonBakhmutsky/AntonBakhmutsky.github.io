@@ -1,0 +1,412 @@
+@use '../../abstracts/variables' as *
+@use '../../abstracts/mixins' as *
+
+.one-report
+  width: 79vw
+  height: calc(100vh - 90px)
+  margin: 0 auto
+  padding: 26px 0 0 50px
+  box-sizing: border-box
+  position: relative
+  overflow: scroll
+
+  &::-webkit-scrollbar
+    display: none
+
+  .close-btn
+    position: absolute
+    top: 18px
+    left: 0
+
+  &-header
+
+    &__title
+      +font(16px, 19px, 400)
+      color: $black
+
+    &_events
+      width: 100%
+      display: flex
+      justify-content: space-between
+      margin-top: 30px
+      align-items: center
+
+      &_count
+
+        span
+          +font(12px, 15px, 400)
+          color: $black
+
+        button
+          +font(12px, 15px, 400)
+          color: $gray-input
+          margin-left: 10px
+
+          &:hover, &:active, &:focus
+            color: $black
+
+      &_btns
+        display: flex
+        align-items: center
+
+        &__btn
+          margin-left: 10px
+
+          svg
+            margin: 0
+
+  &-filter
+    box-shadow: 0 2px 15px rgba(52, 60, 68, 0.1)
+    border-radius: 8px
+    margin-top: 11px
+
+    &-head
+      display: flex
+      justify-content: space-between
+      box-sizing: border-box
+      padding: 10px 25px 10px 20px
+
+      &__title
+        color: $black
+        +font(16px, 19px, 700)
+
+    &-points
+      grid-template-columns: 1fr 1fr 1fr 1fr
+      grid-gap: 10px
+      justify-content: space-between
+      box-sizing: border-box
+      padding: 0 25px 20px 20px
+      display: none
+
+      &-item
+        display: flex
+        align-items: center
+        border: 1px solid $gray
+        border-radius: 8px
+        box-sizing: border-box
+        padding: 12px 9px 11px 10px
+
+        &__input::placeholder, select
+          +font(14px, 17px, 400)
+          color: $gray
+
+        select
+          border: none
+          width: 100%
+
+    &-btns
+      align-items: center
+      border-top: 1px solid $gray-light
+      box-sizing: border-box
+      padding: 20px 20px 20px 22px
+      display: none
+
+      button
+        margin-right: 10px
+        transition: all 0.2s ease
+
+        &:last-child
+          margin-right: 0
+
+        &:hover
+          border: 1px solid $orange
+
+        &:hover > span, &:hover > svg path
+          color: $orange
+          fill: $orange
+
+      &-checkbox
+        display: flex
+        align-items: center
+
+        label
+          margin-left: 7px
+
+  &-titles
+    display: flex
+    border: 1px solid $gray
+    border-radius: 8px
+    background-color: $gray-bg
+    margin-top: 10px
+
+    div
+      box-sizing: border-box
+      padding: 12px 10px
+      border-right: 1px solid $gray-light
+      display: flex
+      align-items: center
+
+      &:last-child
+        border: none
+
+      span
+        +font(12px, 15px, 600)
+        color: $black
+
+      svg
+        margin-left: 4px
+
+    &-logist
+      width: 10.6%
+    &-car
+      width: 8.84%
+    &-actprob
+      width: 10.88%
+    &-porprobwith
+      width: 15.23%
+    &-porprobwithout
+      width: 15%
+    &-prob, &-val, &-weight, &-var
+      width: 9.86%
+
+  &-sort
+    display: flex
+    border: 1px solid $gray
+    border-radius: 8px
+    background-color: $gray-bg
+    margin-top: 10px
+
+    &_input
+      width: 72px
+      background-color: $white
+      border: 1px solid $gray
+      border-radius: 8px
+      height: 30px
+      box-sizing: border-box
+      overflow: hidden
+      margin-right: 3px
+      padding: 7px 10px
+      display: flex
+      align-items: center
+      justify-content: center
+
+    div
+      box-sizing: border-box
+      padding: 5px
+      display: flex
+
+      &:first-child
+        padding: 0
+
+      input
+        +font(12px, 15px, 400)
+        color: $gray
+        background-color: $white
+        border: 1px solid $gray
+        border-radius: 8px
+        height: 30px
+        box-sizing: border-box
+        padding: 7px 10px
+        &::placeholder
+          color: $gray
+
+      select
+        +font(12px, 15px, 400)
+        color: $gray
+        border: none
+        width: 100%
+
+    &-logist
+      width: 10.6%
+    &-car
+      width: 8.84%
+    &-actprob
+      width: 10.88%
+    &-porprobwith
+      width: 15.23%
+    &-porprobwithout
+      width: 15%
+    &-prob, &-val, &-weight, &-var
+      width: 9.86%
+
+  &-list
+    border: 1px solid $gray
+    border-radius: 8px
+    margin-top: 11px
+    overflow: hidden
+
+    &-item
+      box-sizing: border-box
+      padding: 13px 11px
+      border-bottom: 1px solid $gray
+
+      &:last-child
+        border-bottom: none
+
+      &-title
+        display: flex
+
+        div
+          box-sizing: border-box
+          padding-left: 10px
+
+          &:first-child
+            padding-left: 0
+
+          span
+            +font(12px, 16px, 600)
+            color: $black
+
+        &-logist
+         width: 10.6%
+         display: flex
+         align-items: center
+         overflow: hidden
+         &__btn
+           margin-right: 7px
+           border: 1px solid $gray-dark
+           width: 10px
+           height: 10px
+           display: flex
+           align-items: center
+           justify-content: center
+           border-radius: 2px
+
+        &-car
+          width: 8.84%
+        &-actprob
+          width: 10.88%
+        &-porprobwith
+          width: 15.23%
+        &-porprobwithout
+          width: 15%
+        &-prob, &-val, &-weight, &-var
+          width: 9.86%
+
+      &-subtitle
+        margin-top: 10px
+        display: flex
+
+        &:first-child
+          margin-top: 15px
+
+        div
+          box-sizing: border-box
+          padding-left: 10px
+          span
+            +font(12px, 15px, 400)
+            color: $gray-input
+
+        &-logist
+          width: 10.6%
+        &-car
+          width: 8.84%
+          display: flex
+          align-items: center
+          &__btn
+            margin-right: 7px
+            border: 1px solid $gray-dark
+            width: 10px
+            height: 10px
+            display: flex
+            align-items: center
+            justify-content: center
+            border-radius: 2px
+        &-actprob
+          width: 10.88%
+        &-porprobwith
+          width: 15.23%
+        &-porprobwithout
+          width: 15%
+        &-prob, &-val, &-weight, &-var
+          width: 9.86%
+
+        &-info
+          margin-top: 10px
+          background-color: $white
+          overflow: hidden
+          border: 1px solid $gray
+          border-radius: 3px
+
+          &-row
+            display: flex
+            border-bottom:  1px solid $gray
+            box-sizing: border-box
+            padding: 6px
+
+            &:last-child
+              border-bottom: none
+
+            div
+              margin-right: 10px
+              display: flex
+              align-items: center
+
+              &:last-child
+                margin-right: 0
+
+              svg
+                margin-left: 6px
+
+              .row-title
+               +font(12px, 15px, 600)
+               color: $black
+
+              .row-text
+                +font(12px, 15px, 400)
+                color: $gray-input
+
+            &-q
+              width: 6px
+            &-num
+              .row-text
+                color: $orange !important
+            &-num, &-onec
+              width: 6.2%
+            &-contr
+              width: 7.6%
+            &-route
+              width: 11.3%
+            &-dates
+              width: 21.7%
+            &-actprob, &-porprob, &-prob, &-val, &-weight
+              width: 6.5%
+            &-rub
+              width: 4.2%
+
+  &-result
+    box-shadow: 0px -7px 15px rgba(52, 60, 68, 0.05)
+
+    &-container
+      max-width: 79vw
+      margin: 0 auto
+      box-sizing: border-box
+      padding-left: 50px
+
+    &-info
+      border-left: 1px solid $gray
+      border-right: 1px solid $gray
+      border-top: 1px solid $gray-light
+      border-bottom: 1px solid $gray-light
+      display: flex
+
+      div
+        border-right: 1px solid $gray-light
+        box-sizing: border-box
+        padding: 7px 2px 7px 10px
+        display: flex
+        flex-direction: column
+        justify-content: center
+        &:last-child
+          border-right: none
+
+        span
+          +font(10px, 12px, 400)
+          color: $black
+
+      &-logist
+       width: 10.6%
+      &-car
+        width: 8.84%
+      &-actprob
+        width: 10.88%
+      &-porprobwith
+        width: 15.23%
+      &-porprobwithout
+        width: 15%
+      &-prob, &-val, &-weight, &-var
+        width: 9.86%
+
+
+
+
