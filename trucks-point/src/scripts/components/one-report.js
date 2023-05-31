@@ -23,24 +23,27 @@ window.addEventListener('load', () => {
 // Для каждого элемента А добавляем обработчик события
     elementsA.forEach(function(elementA) {
       const toggleButtonA = elementA.querySelector(".one-report-list-item-title-logist__btn");
-      const elementBs = elementA.querySelectorAll(".one-report-list-item-subtitle");
 
       toggleButtonA.addEventListener("click", function() {
+        const elementBs = elementA.querySelectorAll(".one-report-list-item-subtitle");
+
         elementBs.forEach(function(elementB) {
           const toggleButtonB = elementB.querySelector(".one-report-list-item-subtitle-car__btn");
-          const elementCs = elementB.querySelectorAll(".one-report-list-item-subtitle-info");
+          const elementC = elementB.querySelectorAll(".one-report-list-item-subtitle-info");
 
           toggleButtonB.addEventListener("click", function(event) {
-            console.log('it works')
-            elementCs.forEach(function(elementC) {
-              elementC.classList.toggle("flex");
-              console.log('it works2')
+            elementC.forEach(function(elementC) {
+              elementC.classList.toggle("block");
             });
 
             toggleButtonB.classList.toggle("active");
           });
 
-          elementB.classList.toggle("flex");
+          elementB.classList.toggle("block");
+          elementC.forEach(function(elementC) {
+            elementC.classList.remove("block");
+          });
+
         });
 
         toggleButtonA.classList.toggle("active");
