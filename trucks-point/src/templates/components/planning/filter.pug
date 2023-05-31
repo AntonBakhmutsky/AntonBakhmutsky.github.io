@@ -1,0 +1,19 @@
+form.planning-filter
+  include ./filter-header
+  include ./filter-points
+  .planning-filter-btns
+    button.button.button-gray-dark
+      span обновить
+      | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-report/reload.svg')}
+    button(type='reset').button.button-gray-dark
+      span сбросить
+      | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-report/close.svg')}
+    .planning-filter-btns-checkboxes
+      input(type='checkbox' id='myCars' name='myCars').check-mark
+      label(for='myCars') Только мои машины
+      input(type='checkbox' id='withoutOrder' name='withoutOrder').check-mark
+      label(for='withoutOrder') Только без заявок
+      input(type='checkbox' id='showPlanDate' name='showPlanDate').check-mark
+      label(for='showPlanDate') Отображать по плановому времени
+      input(type='checkbox' id='showAllRegions' name='showAllRegions').check-mark
+      label(for='showAllRegions') Раскрыть все регионы

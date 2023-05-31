@@ -1,0 +1,199 @@
+@use '../../abstracts/variables' as *
+@use '../../abstracts/mixins' as *
+
+.planning
+  width: 79vw
+  min-height: calc(100vh - 90px)
+  margin: 0 auto
+  padding: 26px 0 0 50px
+  box-sizing: border-box
+  position: relative
+
+  .close-btn
+    position: absolute
+    top: 18px
+    left: 0
+
+  &-header
+
+    &__title
+      +font(16px, 19px, 400)
+      color: $black
+
+    &_events
+      width: 100%
+      display: flex
+      justify-content: space-between
+      margin-top: 30px
+      align-items: center
+
+      &_count
+
+        span
+          +font(12px, 15px, 400)
+          color: $black
+
+        button
+          +font(12px, 15px, 400)
+          color: $gray-input
+          margin-left: 10px
+
+          &:hover, &:active, &:focus
+            color: $black
+
+  &-filter
+    box-shadow: 0 2px 15px rgba(52, 60, 68, 0.1)
+    border-radius: 8px
+    margin-top: 11px
+
+    &-head
+      display: flex
+      justify-content: space-between
+      box-sizing: border-box
+      padding: 10px 25px 10px 20px
+
+      &__title
+        color: $black
+        +font(16px, 19px, 700)
+
+      &__toggle
+        transition: all 0.3s ease
+
+        &-open
+          transform: rotate(180deg)
+
+    &-points
+
+      &-items
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr 1fr
+        grid-gap: 10px
+        justify-content: space-between
+        box-sizing: border-box
+        padding: 0 25px 20px 20px
+
+        &-item
+          display: flex
+          align-items: center
+          border: 1px solid $gray
+          border-radius: 8px
+          box-sizing: border-box
+          padding: 12px 9px 11px 10px
+
+          &__input::placeholder, select
+            +font(14px, 17px, 400)
+            color: $gray
+
+          select
+            border: none
+            width: 100%
+
+        .count-green
+          background-color: $green
+        .count-orange
+          background-color: $orange
+        .count-light-blue
+          background-color: $blue-light
+        .count-reds
+          background-color: $red
+        .count-blue
+          background-color: $blue-bright
+        .count-grey
+          background-color: $gray-input
+
+        &-count
+          display: flex
+          justify-content: center
+          align-items: center
+          box-sizing: border-box
+          padding: 7px
+          height: 40px
+          border-radius: 8px
+
+          &__title
+            +font(13px, 17px, 400)
+            color: $white
+            margin-right: 10px
+            text-align: center
+
+
+          &_num
+            background: $white
+            border-radius: 5px
+            width: 30px
+            height: 30px
+            display: flex
+            align-items: center
+            justify-content: center
+            span
+              +font(12px, 15px, 600)
+          .count-num-green
+            color: $green
+          .count-num-orange
+            color: $orange
+          .count-num-light-blue
+            color: $blue-light
+          .count-num-reds
+            color: $red
+          .count-num-blue
+            color: $blue-bright
+          .count-num-grey
+            color: $gray-input
+
+
+
+
+    &-btns
+      display: flex
+      align-items: center
+      border-top: 1px solid $gray-light
+      box-sizing: border-box
+      padding: 20px 20px 20px 22px
+
+      button
+        margin-right: 10px
+        transition: all 0.2s ease
+
+        &:last-child
+          margin-right: 0
+
+        &:hover
+          border: 1px solid $orange
+
+        &:hover > span, &:hover > svg path
+          color: $orange
+          fill: $orange
+
+      &-checkboxes
+        display: flex
+        align-items: center
+
+        label
+          margin: 0 10px 0 7px
+          +font(14px, 17px, 400)
+          color: $black
+
+  &-titles
+    display: grid
+    border: 1px solid $gray
+    border-radius: 8px
+    background-color: $gray-bg
+    margin-top: 10px
+    grid-template-columns: repeat(9, 1fr)
+
+    div
+      box-sizing: border-box
+      padding: 12px 10px
+      border-right: 1px solid $gray-light
+      display: flex
+      align-items: center
+
+      &:last-child
+        border: none
+
+      span
+        +font(12px, 15px, 600)
+        color: $black
+
+      svg
+        margin-left: 4px

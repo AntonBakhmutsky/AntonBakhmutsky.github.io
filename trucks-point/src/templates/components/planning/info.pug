@@ -1,0 +1,13 @@
+.planning-info
+  .planning-info_item
+    .planning-info_item_title
+      .planning-info_item_title-container
+        button.planning-info_item_title-region__btn
+          .planning-info_item_title-region__btn_plus
+            | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-report/plus.svg')}
+          .planning-info_item_title-region__btn_minus
+            | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-report/minus.svg')}
+        span Алтайский край
+      each el in datesCountPlanning
+        .planning-info_item_title-date-container
+          span #{el.count}
