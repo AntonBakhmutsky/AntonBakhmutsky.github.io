@@ -71,8 +71,8 @@
             span.planning-info_item-main-city_point__text #{el.region}
           .planning-info_item-main-city_point
             span.planning-info_item-main-city_point__text #{el.city}
-          each elem in el.cars1
-            .planning-info_item-main-city_point
+          .planning-info_item-main-city_point
+            each elem in el.cars1
               .planning-info_item-main-city_point-car
                 .planning-info_item-main-city_point-car-top
                   +carNumberBtn(`${elem.numberTitle}`, `${elem.numberColor}`)
@@ -83,30 +83,28 @@
                 span.planning-info_item-main-city_point-car-time(class=`text-${elem.timeColor}`) #{elem.time}
                 if (elem.infoIcon)
                   | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/planning/info.svg')}
-          each elem in el.cars2
-            .planning-info_item-main-city_point
-              .planning-info_item-main-city_point-car
-                .planning-info_item-main-city_point-car-top
-                  +carNumberBtn(`${elem.numberTitle}`, `${elem.numberColor}`)
-                  if (elem.stopIcon)
-                    | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/planning/stop.svg')}
-                  if (elem.grafIcon)
-                    | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/planning/graf.svg')}
-                span.planning-info_item-main-city_point-car-time(class=`text-${elem.timeColor}`) #{elem.time}
-                if (elem.infoIcon)
-                  | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/planning/info.svg')}
-          each elem in el.cars3
-            .planning-info_item-main-city_point
-              .planning-info_item-main-city_point-car
-                .planning-info_item-main-city_point-car-top
-                  +carNumberBtn(`${elem.numberTitle}`, `${elem.numberColor}`)
-                  if (elem.stopIcon)
-                    | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/planning/stop.svg')}
-                  if (elem.grafIcon)
-                    | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/planning/graf.svg')}
-                span.planning-info_item-main-city_point-car-time(class=`text-${elem.timeColor}`) #{elem.time}
-                if (elem.infoIcon)
-                  | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/planning/info.svg')}
+              each elem in el.cars2
+                .planning-info_item-main-city_point-car
+                  .planning-info_item-main-city_point-car-top
+                    +carNumberBtn(`${elem.numberTitle}`, `${elem.numberColor}`)
+                    if (elem.stopIcon)
+                      | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/planning/stop.svg')}
+                    if (elem.grafIcon)
+                      | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/planning/graf.svg')}
+                  span.planning-info_item-main-city_point-car-time(class=`text-${elem.timeColor}`) #{elem.time}
+                  if (elem.infoIcon)
+                    | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/planning/info.svg')}
+              each elem in el.cars3
+                .planning-info_item-main-city_point-car
+                  .planning-info_item-main-city_point-car-top
+                    +carNumberBtn(`${elem.numberTitle}`, `${elem.numberColor}`)
+                    if (elem.stopIcon)
+                      | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/planning/stop.svg')}
+                    if (elem.grafIcon)
+                      | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/planning/graf.svg')}
+                  span.planning-info_item-main-city_point-car-time(class=`text-${elem.timeColor}`) #{elem.time}
+                  if (elem.infoIcon)
+                    | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/planning/info.svg')}
 
 
 
