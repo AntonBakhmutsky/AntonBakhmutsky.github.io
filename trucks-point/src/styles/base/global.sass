@@ -188,11 +188,13 @@ input[type="radio"] + label
   border-radius: 5px
   align-items: center
   margin-left: 10px
+  transition: all 0.5s ease
   &:first-child
     margin-left: 0
   span
     +font(14px, 17px, 400)
     white-space: nowrap
+
   &-orange
     border: 1px solid $orange
     span
@@ -200,6 +202,15 @@ input[type="radio"] + label
     svg
       path
         fill: $orange
+    &:hover
+      border: 1px solid $orange
+      background-color: $orange
+      span
+       color: $white
+      svg
+        path
+          fill: $white
+
   &-orange-bg
     border: 1px solid $orange
     background-color: $orange
@@ -208,6 +219,7 @@ input[type="radio"] + label
     svg
       path
         fill: $white
+
   &-green
     border: 1px solid $green
     span
@@ -215,6 +227,15 @@ input[type="radio"] + label
     svg
       path
         fill: $green
+    &:hover
+      border: 1px solid $green
+      background-color: $green
+      span
+        color: $white
+      svg
+        path
+          fill: $white
+
   &-red
     border: 1px solid $red
     span
@@ -222,6 +243,15 @@ input[type="radio"] + label
     svg
       path
         fill: $red
+    &:hover
+      border: 1px solid $red
+      background-color: $red
+      span
+        color: $white
+      svg
+        path
+          fill: $white
+
   &-blue-light
     border: 1px solid $blue-light
     span
@@ -229,6 +259,15 @@ input[type="radio"] + label
     svg
       path
         fill: $blue-light
+    &:hover
+      border: 1px solid $blue-light
+      background-color: $blue-light
+      span
+        color: $white
+      svg
+        path
+          fill: $white
+
   &-blue-bright
     border: 1px solid $blue-bright
     span
@@ -236,6 +275,15 @@ input[type="radio"] + label
     svg
       path
         fill: $blue-bright
+    &:hover
+      border: 1px solid $blue-bright
+      background-color: $blue-bright
+      span
+        color: $white
+      svg
+        path
+          fill: $white
+
   &-gray
     border: 1px solid $gray-input
     span
@@ -243,6 +291,15 @@ input[type="radio"] + label
     svg
       path
         fill: $gray-input
+    &:hover
+      border: 1px solid $gray-input
+      background-color: $gray-input
+      span
+        color: $white
+      svg
+        path
+          fill: $white
+
   &-gray-dark
     border: 1px solid $gray-dark
     span
