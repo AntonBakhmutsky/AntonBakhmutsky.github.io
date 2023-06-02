@@ -233,3 +233,76 @@
     background-color: $white
     border-radius: 30px
     max-width: 735px
+
+    &-top
+      box-sizing: border-box
+      padding: 30px 36px 24px 30px
+      border-bottom: 1px solid $gray-light
+      display: flex
+      justify-content: space-between
+      align-items: center
+
+      &__title
+        +font(20px, 24px, 600)
+        color: $black
+
+    &_form
+
+      &-point
+        box-sizing: border-box
+        padding: 30px 44px 30px 30px
+        border-bottom: 1px solid $gray-light
+
+        &-address
+          margin-bottom: 5px
+
+          &__title
+            +font(14px, 17px, 700)
+            color: $gray-dark
+            margin-right: 10px
+
+          &__text
+            +font(14px, 17px, 400)
+            color: $gray-dark
+
+        &-label
+          margin-top: 15px
+          +font(14px, 17px, 700)
+          color: $gray-dark
+
+        &-date
+          display: flex
+          width: 100%
+          justify-content: space-between
+          margin-top: 10px
+          border: 1px solid $gray
+          border-radius: 8px
+          box-sizing: border-box
+          padding: 12px 9px 11px 10px
+
+      &-cause
+        box-sizing: border-box
+        padding: 30px 44px 30px 30px
+        border-bottom: 1px solid $gray-light
+        display: flex
+        flex-direction: column
+
+        input
+          border: 1px solid $gray
+          border-radius: 8px
+          max-width: 388px
+          margin-top: 10px
+          box-sizing: border-box
+          padding: 11px
+
+          &::placeholder
+            +font(14px, 17px, 400)
+            color: $gray-dark
+
+      &-buttons
+        display: flex
+        box-sizing: border-box
+        padding: 30px
+
+
+

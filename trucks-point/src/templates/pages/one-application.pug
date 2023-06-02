@@ -235,11 +235,11 @@ block content
         +button('завершить вручную', 'blue-bright', 'one-application/edit-3.svg', null, 'btnCompleteManually')
         +button('отменить', 'gray', 'one-application/delete.svg', null)
 
-  .one-application-modal.application-modal#oneApplicationModal
-    .one-application-modal_content
+  .application-modal.one-application-modal#oneApplicationModal
+    form.one-application-modal_content#oneApplicationModalForm
       .one-application-modal_content-top
         h3.application-modal_content-top__title Завершение заявки: №30963507 (00000009520)
-        button.application-modal_content-top__btn
+        button.application-modal_content-top__btn#oneApplicationCloseBtn
           | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-application/red-cross.svg')}
       .one-application-modal_content_form
         .one-application-modal_content_form-point
@@ -258,11 +258,11 @@ block content
           .one-application-modal_content_form-point-address
             span.one-application-modal_content_form-point-address__title Адрес 2:
             span.one-application-modal_content_form-point-address__text Россия, Республика Башкортостан, Учалы, Кровельная улица, 1 (+05:00)
-          label(for="").one-application-modal_content_form-point-label Дата прибытия на точку*
+          p.one-application-modal_content_form-point-label Дата прибытия на точку*
           .one-application-modal_content_form-point-date
             p Выберите дату
             | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-application/date.svg')}
-          label(for="").one-application-modal_content_form-point-label Дата загрузки/выгрузки*
+          p.one-application-modal_content_form-point-label Дата загрузки/выгрузки*
           .one-application-modal_content_form-point-date
             p Выберите дату
             | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-application/date.svg')}
@@ -272,28 +272,5 @@ block content
           label(for="reasonForTermination").one-application-modal_content_form-point-label Причина завершения заявки*
           input(type="text" id="reasonForTermination" name='Причина завершения заявки' placeholder='Опишите причину')
         .one-application-modal_content_form-buttons
-          .button.button-orange
-            span Сохранить
-            | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-application/checkmark-circle-white.svg')}
-          .button.button-gray
-            span отмена
-            | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-application/cross-gray.svg')}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+          +button('Сохранить', 'orange-bg', 'one-application/checkmark-circle-white.svg', 'submit', null)
+          +button('отмена', 'gray', 'one-application/cross-gray.svg', 'reset', null)

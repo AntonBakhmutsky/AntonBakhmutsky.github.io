@@ -5,6 +5,8 @@ window.addEventListener('load', () => {
   } else {
     const modal = document.getElementById('oneApplicationModal');
     const btnOpenModal = document.getElementById('btnCompleteManually');
+    const closeBtn = document.getElementById('oneApplicationCloseBtn');
+    const modalForm = document.getElementById('oneApplicationModalForm');
 
 
     function openModal() {
@@ -12,6 +14,7 @@ window.addEventListener('load', () => {
     }
     function closeModal() {
       modal.style.display = 'none';
+      modalForm.reset();
     }
 
     btnOpenModal.addEventListener('click', openModal);
@@ -22,6 +25,7 @@ window.addEventListener('load', () => {
       }
     });
 
+    closeBtn.addEventListener('click', closeModal);
 
   }
 
