@@ -1,9 +1,17 @@
 @use '../../abstracts/variables' as *
 @use '../../abstracts/mixins' as *
 
+.menu-container
+  position: absolute
+  height: 100vh
+  width: 4vw
+  transition: all 0.6s ease
+.menu-container-max
+  width: 14vw
+
 .menu
   height: 100vh
-  width: 15.6vw
+  width: 4vw
   background-color: #2B2B33
   position: absolute
   top: 0
@@ -12,12 +20,12 @@
   display: flex
   flex-direction: column
   justify-content: space-between
-  transition: width 0.7s ease
-  z-index: 850
+  transition: all 0.6s ease
+  z-index: 980
 
   &__logo
-    display: block
-    transition: 0.6s
+    display: none
+    transition: 0.3s
     width: 224px
     margin: 0 auto
     +screen($desktop-sm)
@@ -25,9 +33,10 @@
     +screen($tablet-sm)
       width: 120px
   &__logo-min
-    display: none
+    display: block
     transition: 0.3s
     width: 60px
+    margin: 0 auto
     +screen($desktop-sm)
       width: 50px
     +screen($tablet-sm)
@@ -60,6 +69,7 @@
     a
       display: flex
       align-items: center
+      justify-content: center
       margin-bottom: 10px
       border-radius: 8px
       height: 50px
@@ -77,6 +87,7 @@
         +screen($desktop-sm)
           margin-right: 13px
       span
+        display: none
         +font(16px, 19px, 400)
         color: $white
         transition: color 0.3s
@@ -96,13 +107,18 @@
     display: flex
     align-items: center
     justify-content: center
-    padding: 11.5px
     border-radius: 8px
-    transition: 0.3s
+    transition: 0.3s ease
+    margin: 0 auto
+    width: 40px
+    height: 40px
+    padding: 0
     img
-      display: none
-    span
       display: block
+      transition: 0.3s ease
+    span
+      transition: 0.3s ease
+      display: none
 
 .menu__toggle
     background-color: $orange
@@ -110,50 +126,59 @@
     height: 30px
     border-radius: 8px
     position: absolute
-    right: -20px
-    z-index: 840
+    top: 15px
+    right: -40px
+    z-index: 500
+    transition: right 0.3s ease
+    img
+      transform: rotate(180deg)
     +screen($tablet-xs)
       display: none
 
-.menu-min
+.menu-max
   padding-left: 9px
-  width: 78px
-  align-items: center
+  width: 15vw
+  align-items: start
   box-sizing: border-box
-  +screen($desktop-sm)
-    width: 65px
 
   .menu__logo
-    display: none
-    width: 60px
+    display: block
+    width: 100%
     +screen($desktop-sm)
       width: 45px
 
 
   .menu__logo-min
-    display: block
+    display: none
 
   .menu__list
+    width: 100%
     a
       padding: 5px 21px
+      justify-content: start
       div
         width: 20px
         margin-right: 0
       span
-        display: none
+        display: block
+        margin-left: 25px
+
 
   .menu__btn
-    width: 40px
-    height: 40px
-    padding: 0
+    box-sizing: border-box
+    padding: 11.5px
+    width: 100%
+    transition: 0.3s ease
     span
-      display: none
-    img
       display: block
+      transition: 0.3s ease
+    img
+      display: none
+      transition: 0.3s ease
 
   .menu__toggle
     img
-      transform: rotateZ(180deg)
+      transform: rotate(0deg)
 
 
 

@@ -1,50 +1,51 @@
-.menu
-  img.menu__logo(src=require('@/assets/img/menu/logo.svg') alt="logo" loading='lazy')
-  img.menu__logo-min(src=require('@/assets/img/menu/logo-min.svg') alt="logo" loading='lazy')
+.menu-container
+  .menu
+    img.menu__logo(src=require('@/assets/img/menu/logo.svg') alt="logo" loading='lazy')
+    img.menu__logo-min(src=require('@/assets/img/menu/logo-min.svg') alt="logo" loading='lazy')
 
-  nav.menu__list
-    ul
-      li
-        a(href='application.html')
-          .list__img
-            | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/menu/list.svg')}
-          span.list__text Заявки
-      li
-        a(href='notice.html')
-         .menu__list__img
-           | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/menu/bell.svg')}
-           .menu__list__img__counter
-             p 3
-         span.list__text Уведомления
-      li
-        a(href='trucks.html')
-          .list__img
-            | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/menu/van.svg')}
-          span.list__text Грузовики
-      li
-        a(href='drivers.html')
-          .list__img
-            | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/menu/rudder.svg')}
-          span.list__text Водители
-      li
-        a(href='trailers.html')
-          .list__img
-            | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/menu/trailer.svg')}
-          span.list__text Прицепы
-      li
-        a(href='trackers.html')
-          .list__img
-            | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/menu/tracker.svg')}
-          span.list__text Трекеры
-      li
-        a(href='counterparties.html')
-          .list__img
-            | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/menu/contr.svg')}
-          span.list__text Контрагенты
+    nav.menu__list
+      ul
+        li
+          a(href='application.html')
+            .list__img
+              | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/menu/list.svg')}
+            span.list__text Заявки
+        li
+          a(href='notice.html')
+           .menu__list__img
+             | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/menu/bell.svg')}
+             .menu__list__img__counter
+               p 3
+           span.list__text Уведомления
+        li
+          a(href='trucks.html')
+            .list__img
+              | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/menu/van.svg')}
+            span.list__text Грузовики
+        li
+          a(href='drivers.html')
+            .list__img
+              | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/menu/rudder.svg')}
+            span.list__text Водители
+        li
+          a(href='trailers.html')
+            .list__img
+              | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/menu/trailer.svg')}
+            span.list__text Прицепы
+        li
+          a(href='trackers.html')
+            .list__img
+              | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/menu/tracker.svg')}
+            span.list__text Трекеры
+        li
+          a(href='counterparties.html')
+            .list__img
+              | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/menu/contr.svg')}
+            span.list__text Контрагенты
 
-  a(href="#").menu__btn
-    span Назад на Trucks.ru
-    img(src=require('@/assets/img/menu/back.svg') alt="back" loading='lazy')
+    a(href="index.html").menu__btn
+      span Назад на Trucks.ru
+      img(src=require('@/assets/img/menu/back.svg') alt="back" loading='lazy')
 
 
 
