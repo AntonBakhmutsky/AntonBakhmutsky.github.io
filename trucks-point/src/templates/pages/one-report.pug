@@ -20,8 +20,7 @@ block content
           .one-report-header_events_btns
             button
               | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-report/printer.svg')}
-            button.button.button-orange.one-report-header_events_btns__btn
-              | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/trucks/download.svg')}
+            +button(null, 'orange', 'trucks/download.svg', null, null)
 
       form.one-report-filter
         .one-report-filter-head

@@ -23,11 +23,8 @@ block content
             button 100
             button 200
           .counterparty-points-header_events_btns
-            button.button.button-gray-dark
-              span обновить
-              | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/trucks/reload.svg')}
-            button.button.button-orange.counterparty-points-header_events_btns__btn
-              | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/trucks/download.svg')}
+            +button('обновить', 'gray-dark', 'trucks/reload.svg')
+            +button(null, 'gray-dark', 'trucks/download.svg')
 
       .counterparty-points-titles
         .counterparty-points-titles-q

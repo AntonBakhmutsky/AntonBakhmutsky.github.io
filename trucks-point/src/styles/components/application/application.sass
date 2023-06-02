@@ -92,16 +92,23 @@
             +font(14px, 17px, 400)
             margin-right: 7px
 
-        button[type="submit"]
-          border: 1px solid $orange
-          margin-right: 20px
-          span
-            color: $orange
+        button
+          margin-left: 10px
 
-        button[type="reset"], button[type="button"]
+          &:first-child
+            margin-left: 0
+
+        button[type="reset"]
           border: 1px solid $gray-dark
           span
             color: $gray-dark
+          &:hover
+            border: 1px solid $orange
+            span
+              color: $orange
+            svg
+              path
+                fill: $orange
 
         button[type="reset"]
           display: none

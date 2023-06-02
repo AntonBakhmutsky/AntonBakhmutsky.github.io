@@ -228,24 +228,12 @@ block content
       .one-application-creating_form__title
         span.one-application-creating_form__title-name Действия с заявкой
       .one-application_main_buttons
-        button.button.button-orange
-          span редактировать
-          | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-application/edit-3.svg')}
-        button.button.button-green
-          span маршрут
-          | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-application/edit-3.svg')}
-        button.button.button-red
-          span удалить
-          | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-application/delete.svg')}
-        button.button.button-blue-light
-          span создать копию
-          | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-application/copy.svg')}
-        button.button.button-blue-bright.btnCompleteManually#btnCompleteManually
-          span завершить вручную
-          | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-application/edit-3.svg')}
-        button.button.button-gray
-          span отменить
-          | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-application/delete.svg')}
+        +button('редактировать', 'orange', 'one-application/edit-3.svg', null)
+        +button('маршрут', 'green', 'one-application/edit-3.svg', null)
+        +button('удалить', 'red', 'one-application/delete.svg', null)
+        +button('создать копию', 'blue-light', 'one-application/copy.svg', null)
+        +button('завершить вручную', 'blue-bright', 'one-application/edit-3.svg', null, 'btnCompleteManually')
+        +button('отменить', 'gray', 'one-application/delete.svg', null)
 
   .one-application-modal.application-modal#oneApplicationModal
     .one-application-modal_content

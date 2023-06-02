@@ -266,11 +266,8 @@ block content
       .one-application-creating_form__title
         spann.one-application-creating_form__title-name Действия с заявкой
       .one-application-creating_form_buttons
-        button(type='submit')
-          span создать заявку
-          | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-application-creating/create.svg')}
-        button(type='reset')
-          span отмена
+        +button('создать заявку', 'gray-dark', 'one-application-creating/create.svg', 'submit', null)
+        +button('отмена', 'gray-dark', null, 'reset', null)
 
 
 

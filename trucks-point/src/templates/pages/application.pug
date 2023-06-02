@@ -159,30 +159,12 @@ block content
               input(type="checkbox" id="differentData" name="Еще данные сортировки").application_search_form-disclosed_checkboxes__item__checkbox
               label(for="differentData") Еще данные сортировки
 
-
-
-
-
-
-
-
-
-
-
-
-
         .application_search_form_buttons
-          button(type="submit").application_search_form_buttons_btn.application_search_form_buttons_btn-orange
-            span создать заявку
-            | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/btn-orange.svg')}
+          +button('создать заявку', 'gray-dark', 'application/btn-orange.svg', 'submit' )
           button(type="reset")#application-btn-reset.application_search_form_buttons_btn.application_search_form_buttons_btn-gray.application_search_form_buttons_btn-gray-reset
             span сбросить
             | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/reset.svg')}
-          button(type="button").application_search_form_buttons_btn.application_search_form_buttons_btn-gray
-            span обновить
-            | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/update.svg')}
-
-
+          +button('обновить', 'gray-dark', 'application/update.svg')
 
 
     .application-list

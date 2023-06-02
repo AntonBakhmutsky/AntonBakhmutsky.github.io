@@ -2,12 +2,8 @@ form.planning-filter
   include ./filter-header
   include ./filter-points
   .planning-filter-btns
-    button.button.button-gray-dark
-      span обновить
-      | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-report/reload.svg')}
-    button(type='reset').button.button-gray-dark
-      span сбросить
-      | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-report/close.svg')}
+    +button('обновить', 'gray-dark', 'one-report/reload.svg', null, null)
+    +button('сбросить', 'gray-dark', 'one-report/close.svg', 'reset', null)
     .planning-filter-btns-checkboxes
       input(type='checkbox' id='myCars' name='myCars').check-mark
       label(for='myCars') Только мои машины

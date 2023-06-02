@@ -181,13 +181,18 @@ input[type="radio"] + label
 .button
   box-sizing: border-box
   padding: 7px 10px
-  display: flex
+  display: grid
+  grid-auto-flow: column
+  width: auto
+  grid-column-gap: 7px
   border-radius: 5px
   align-items: center
+  margin-left: 10px
+  &:first-child
+    margin-left: 0
   span
     +font(14px, 17px, 400)
-  svg
-    margin-left: 7px
+    white-space: nowrap
   &-orange
     border: 1px solid $orange
     span
@@ -237,6 +242,13 @@ input[type="radio"] + label
     svg
       path
         fill: $gray-dark
+    &:hover
+      border: 1px solid $orange
+      span
+        color: $orange
+      svg
+        path
+          fill: $orange
 
 
 .status

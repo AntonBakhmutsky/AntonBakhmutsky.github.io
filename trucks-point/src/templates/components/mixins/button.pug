@@ -1,2 +1,8 @@
-mixin button(title, color)
-  button.button(class=`button-${color}`)= title
+mixin button(title, color, url, type, id)
+  button.button(class=`button-${color}` type=`${type}` id=`${id}`)
+   if title
+     span= title
+   if url
+     | !{require(`!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/${url}`)}
+
+
