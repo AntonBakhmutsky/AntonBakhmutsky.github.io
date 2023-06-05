@@ -1,4 +1,7 @@
 //PAGE APPLICATION
+
+import VanillaCalendar from '@uvarov.frontend/vanilla-calendar';
+
 window.addEventListener('load', () => {
   if (!document.querySelector('.application')) {
     return null
@@ -85,6 +88,7 @@ window.addEventListener('load', () => {
         btnReset.style.display = 'none';
         longFormTitle.style.display = 'none';
         isShortFormVisible = true;
+        applicationToggle.classList.toggle('rotate');
         searchForm.classList.toggle('application_search-long-type');
         buttonsContainer.classList.toggle('buttons-for-long-form');
         formHeaderContainer.classList.toggle('header-for-long-form');
@@ -93,6 +97,7 @@ window.addEventListener('load', () => {
         longForm.style.display = 'block';
         btnReset.style.display = 'flex';
         longFormTitle.style.display = 'block';
+        applicationToggle.classList.toggle('rotate');
         isShortFormVisible = false;
         disclosedListCityesFrom.style.display = 'none';
         isListCityesFromVisible = true;
@@ -103,6 +108,36 @@ window.addEventListener('load', () => {
         formHeaderContainer.classList.toggle('header-for-long-form');
       }
     });
+
+    const options = {
+      input: true,
+      settings: {
+        selection: {
+          time: true,
+          stepMinutes: 15,
+        },
+        lang: 'ru',
+      },
+      actions: {
+        changeTime(event, time, hours, minutes, keeping) {
+          console.log(time);
+          console.log(minutes);
+        },
+        changeToInput(e, HTMLInputElement, dates, time, hours, minutes, keeping) {
+          if (dates[0]) {
+            HTMLInputElement.value = dates[0];
+            // if you want to hide the calendar after picking a date
+            calendar.HTMLElement.classList.add('vanilla-calendar_hidden');
+          } else {
+            HTMLInputElement.value = '';
+          }
+        },
+      },
+    };
+
+    const calendar = new VanillaCalendar('#calendar-input', options);
+    calendar.init();
+
 
   }
 

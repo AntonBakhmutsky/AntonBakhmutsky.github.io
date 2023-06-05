@@ -43,6 +43,7 @@
   "dependencies": {
     "@babel/polyfill": "^7.8.3",
     "@bevacqua/rome": "^3.0.4",
+    "@uvarov.frontend/vanilla-calendar": "^2.6.0",
     "leaflet": "^1.9.3",
     "leaflet-control-geocoder": "^2.4.0",
     "leaflet-routing-machine": "^3.2.12",

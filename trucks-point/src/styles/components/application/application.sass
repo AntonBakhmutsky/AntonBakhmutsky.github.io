@@ -272,24 +272,7 @@
               +screen($tablet-sm)
                 margin: 20px 0 0 0
 
-              div
-                padding: 12px 10px 11px 10px
-                border: 1px solid $gray
-                border-radius: 8px
-                width: 226px
-                box-sizing: border-box
-                display: flex
-                align-items: center
-                +screen($desktop-m)
-                  width: 200px
-                +screen($desktop-sm)
-                  width: 150px
-                +screen($tablet)
-                  width: 130px
-                +screen($tablet-sm)
-                  width: 100%
-                &:first-child
-                  margin-right: 10px
+
 
             &_inputs
               display: flex
@@ -369,7 +352,7 @@
 
   &-list
     margin-top: 30px
-    overflow: hidden
+
 
     &-header
       display: flex
@@ -414,6 +397,10 @@
       border-radius: 8px
       box-sizing: border-box
       margin-top: 10px
+      overflow: scroll
+
+      &::-webkit-scrollbar
+        display: none
 
       &-item
         box-sizing: border-box

@@ -7,8 +7,9 @@ block content
   section.one-application
     .one-application-main_container
       .one-application_header
-        button.one-application-creating_header_btn-close
-          | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-application-creating/close.svg')}
+        a(href="index.html")
+          button.one-application-creating_header_btn-close
+            | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-application-creating/close.svg')}
         .one-application_header__title
           span Заявка №30963507 (00000009520)
           | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-application/edit.svg')}

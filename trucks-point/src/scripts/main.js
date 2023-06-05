@@ -8,6 +8,9 @@ require('./components/one-application')
 require('./components/one-application-creating')
 require('./components/one-report')
 
+document.documentElement.dataset.theme = 'light';
+
+
 
 
 
