@@ -18,17 +18,23 @@ block content
         span.one-application-creating_form__title-name Общие параметры
       .one-application-creating_form_item
         .one-application-creating_form_item__label
-          label(for='responsible') Ответственный*
+          label(for='responsible')
+          span Ответственный
+          span.text-red *
         .one-application-creating_form_item__input
           input(type='text' id='responsible' name='responsible' required='')
       .one-application-creating_form_item
         .one-application-creating_form_item__label
-          label(for='organization') Организация*
+          label(for='organization')
+            span Организация
+            span.text-red *
         .one-application-creating_form_item__input
           input(type='text' id='organization' name='organization' required='')
       .one-application-creating_form_item
         .one-application-creating_form_item__label
-          label(for='counterparty') Контрагент*
+          label(for='counterparty')
+            span Контрагент
+            span.text-red *
         .one-application-creating_form_item__input
           select(id='counterparty' name='counterparty' required='')
             option(value="") Выберите контрагента
@@ -39,20 +45,26 @@ block content
           input(type='text' id='container-number' name='container-number' placeholder='Введите номер')
       .one-application-creating_form_item
         .one-application-creating_form_item__label
-          label(for='subdivision') Подразделение*
+          label(for='subdivision')
+            span Подразделение
+            span.text-red *
         .one-application-creating_form_item__input
           select(id='subdivision' name='subdivision' required='')
             option(value="") Выберите подразделение
             option(value="ТЭО") ТЭО
       .one-application-creating_form_item
         .one-application-creating_form_item__label
-          label(for='nomenclature') Номенклатура*
+          label(for='nomenclature')
+            span Номенклатура
+            span.text-red *
         .one-application-creating_form_item__input
           select(id='nomenclature' name='nomenclature' required='')
             option(value="") Выберите значение
       .one-application-creating_form_item
         .one-application-creating_form_item__label
-          label(for='transportation-type') Вид перевозки*
+          label(for='transportation-type')
+            span Вид перевозки
+            span.text-red *
         .one-application-creating_form_item__input
           select(id='transportation-type' name='transportation-type' required='')
             option(value="") Выберите значение
@@ -66,7 +78,8 @@ block content
         spann.one-application-creating_form__title-name Оплата
       .one-application-creating_form_item
         .one-application-creating_form_item__label
-          span Тип оплаты *
+          span Тип оплаты
+          span.text-red *
         .one-application-creating_form_item_radio-container
           input(type="radio" id="payment-type-cash" name="payment-type" required='').check-round
           label(for='payment-type-cash') Наличный
@@ -74,7 +87,8 @@ block content
           label(for="payment-type-cashless") Безналичный
       .one-application-creating_form_item
         .one-application-creating_form_item__label
-          span НДС*
+          span НДС
+          span.text-red *
         .one-application-creating_form_item_radio-container
           input(type="radio" id="nds-twenty" name="nds" required='').check-round
           label(for='nds-twenty') 20%
@@ -84,7 +98,9 @@ block content
           label(for="nds-without") Без НДС
       .one-application-creating_form_item
         .one-application-creating_form_item__label
-          label(for='customer-rate') Ставка заказчика, &#8381 *
+          label(for='customer-rate')
+            span Ставка заказчика, &#8381
+            span.text-red *
         .one-application-creating_form_item__input
           input(type='text' id='customer-rate' name='customer-rate' placeholder='Введите сумму' required='')
       .one-application-creating_form_item
@@ -97,19 +113,25 @@ block content
         spann.one-application-creating_form__title-name Данные по авто
       .one-application-creating_form_item
         .one-application-creating_form_item__label
-          label(for='driver') Водитель *
+          label(for='driver')
+            span Водитель
+            span.text-red *
         .one-application-creating_form_item__input
           select(id='driver' name='driver' required='')
             option(value="") Выберите значение
       .one-application-creating_form_item
         .one-application-creating_form_item__label
-          label(for='tractor') Тягач*
+          label(for='tractor')
+            span Тягач
+            span.text-red *
         .one-application-creating_form_item__input
           select(id='tractor' name='tractor' required='')
             option(value="") Выберите значение
       .one-application-creating_form_item
         .one-application-creating_form_item__label
-          label(for='tractor') Тягач*
+          label(for='tractor')
+            span Прицеп
+            span.text-red *
         .one-application-creating_form_item__input
           select(id='trailer' name='trailer' required='')
             option(value="") Выберите значение
@@ -118,7 +140,9 @@ block content
         spann.one-application-creating_form__title-name Груз
       .one-application-creating_form_item
         .one-application-creating_form_item__label
-          label(for='shipping-name') Наименование груза*
+          label(for='shipping-name')
+            span Наименование груза
+            span.text-red *
         .one-application-creating_form_item__input
           input(type='text' id='shipping-name' name='shipping-name' placeholder='Введите наименование' required='')
       .one-application-creating_form_item
@@ -171,7 +195,9 @@ block content
             option(value="") Выберите контрагента
       .one-application-creating_form_item
         .one-application-creating_form_item__label
-          label(for='loading-address') Адрес*
+          label(for='loading-address')
+            span Адрес
+            span.text-red *
         .one-application-creating_form_item__input
           input(type='search' id='loading-address' name='Адрес' placeholder='Начните вводить' required='')
       .one-application-creating_form_item
@@ -226,7 +252,9 @@ block content
             option(value="") Выберите контрагента
       .one-application-creating_form_item
         .one-application-creating_form_item__label
-          label(for='unloading-address') Адрес*
+          label(for='unloading-address')
+            span Адрес
+            span.text-red *
         .one-application-creating_form_item__input
           input(type='search' id='unloading-address' name='Адрес' placeholder='Начните вводить' required='')
       .one-application-creating_form_item

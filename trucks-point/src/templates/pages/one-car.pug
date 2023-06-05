@@ -16,16 +16,22 @@ block content
       .one-car-content-title
         span Информация об автомобиле
       .one-car-content-item
-        span.one-car-content-item__title Госномер автомобиля*
+        .one-car-content-item__title
+          span Госномер автомобиля
+          span.text-red *
         input(type='text' name='registration-number' required='').one-car-content-item__input
       .one-car-content-item
-        span.one-car-content-item__title Тип автомобиля*
+        .one-car-content-item__title
+          span Тип автомобиля
+          span.text-red *
         .one-car-content-item__input
           select(name='type' required='')
            option(value='')
            option(value='Тягач') Тягач
       .one-car-content-item
-        span.one-car-content-item__title Марка*
+        .one-car-content-item__title
+          span Марка
+          span.text-red *
         .one-car-content-item__input
           select(name='mark' required='').one-car-content-item__input
             option(value='')

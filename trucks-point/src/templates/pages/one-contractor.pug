@@ -16,7 +16,9 @@ block content
       .one-contractor-content-title
         span Информация о контрагенте
       .one-contractor-content-item
-        span.one-contractor-content-item__title Наименование*
+        .one-contractor-content-item__title
+          span Наименование
+          span.text-red *
         input(type='text' name='Naming' required='').one-contractor-content-item__input
       .one-contractor-content-item
         span.one-contractor-content-item__title Статус
@@ -25,10 +27,14 @@ block content
         span.one-contractor-content-item__title Тип
         input(type='text' name='Type').one-contractor-content-item__input
       .one-contractor-content-item
-        span.one-contractor-content-item__title ИНН*
+        .one-contractor-content-item__title
+          span ИНН
+          span.text-red *
         input(type='text' name='inn' required='').one-contractor-content-item__input
       .one-contractor-content-item
-        span.one-contractor-content-item__title КПП*
+        .one-contractor-content-item__title
+          span КПП
+          span.text-red *
         input(type='text' name='kpp' required='').one-contractor-content-item__input
       a.one-contractor-content-link(href='#' target='_blank')
         span Список адресов контрагента

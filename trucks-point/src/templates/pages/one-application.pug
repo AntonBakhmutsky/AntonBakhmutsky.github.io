@@ -248,11 +248,15 @@ block content
             .one-application-modal_content_form-point-address
               span.one-application-modal_content_form-point-address__title Адрес 1:
               span.one-application-modal_content_form-point-address__text Россия, Челябинская область, Коркино, улица 30 лет ВЛКСМ, 189А (+05:00)
-            p.one-application-modal_content_form-point-label Дата прибытия на точку*
+            label.one-application-modal_content_form-point-label
+              span Дата прибытия на точку
+              span.text-red *
             .one-application-modal_content_form-point-date
               p Выберите дату
               | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-application/date.svg')}
-            p.one-application-modal_content_form-point-label Дата загрузки/выгрузки*
+            label.one-application-modal_content_form-point-label
+              span Дата загрузки/выгрузки
+              span.text-red *
             .one-application-modal_content_form-point-date
               p Выберите дату
               | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-application/date.svg')}
@@ -260,18 +264,26 @@ block content
             .one-application-modal_content_form-point-address
               span.one-application-modal_content_form-point-address__title Адрес 2:
               span.one-application-modal_content_form-point-address__text Россия, Республика Башкортостан, Учалы, Кровельная улица, 1 (+05:00)
-            p.one-application-modal_content_form-point-label Дата прибытия на точку*
+            label.one-application-modal_content_form-point-label
+              span Дата прибытия на точку
+              span.text-red *
             .one-application-modal_content_form-point-date
               p Выберите дату
               | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-application/date.svg')}
-            p.one-application-modal_content_form-point-label Дата загрузки/выгрузки*
+            label.one-application-modal_content_form-point-label
+              span Дата прибытия на точку
+              span.text-red *
             .one-application-modal_content_form-point-date
               p Выберите дату
               | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-application/date.svg')}
           .one-application-modal_content_form-cause
-            label(for="actualMileage").one-application-modal_content_form-point-label Фактический пробег*
+            label(for="actualMileage").one-application-modal_content_form-point-label
+              span Фактический пробег
+              span.text-red *
             input(type="text" id="actualMileage" name='Фактический пробег' placeholder='Введите значение')
-            label(for="reasonForTermination").one-application-modal_content_form-point-label Причина завершения заявки*
+            label(for="reasonForTermination").one-application-modal_content_form-point-label
+              span Причина завершения заявки
+              span.text-red *
             input(type="text" id="reasonForTermination" name='Причина завершения заявки' placeholder='Опишите причину')
           .one-application-modal_content_form-buttons
             +button('Сохранить', 'orange-bg', 'one-application/checkmark-circle-white.svg', 'submit', null)
