@@ -1,0 +1,24 @@
+extends ../layouts/main/layout-map
+
+block title
+  | TRUCKS.POINT
+
+block content
+  section.filter
+    .filter-header
+      span Фильтры
+      button#btnCloseFilter
+        | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/trucks/close.svg')}
+    .filter-input
+      select
+        option(value="") Выберите логиста
+    .filter-input
+      select
+        option(value="") Выберите грузовик
+    .filter-input
+      select
+        option(value="") Выберите тип грузовика
+    .filter-checkbox
+      input(type='checkbox' id='myCarsFilter').check-mark
+      label(for='myCarsFilter') Показать только мои машины
+
