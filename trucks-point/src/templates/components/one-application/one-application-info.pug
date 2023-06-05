@@ -1,12 +1,6 @@
-extends ../layouts/main/layout-map
-
-block title
-  | TRUCKS.POINT
-
-block content
-  section.one-application-info.page
+section.one-application-info#pageOneApplicationInfo
     .one-application-info-header
-      button
+      button#btnCloseOneApplicationInfo
         | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-application-creating/close.svg')}
       .one-application-info-header-title
         .one-application-info-header-title__name Е527НР198, Заявка

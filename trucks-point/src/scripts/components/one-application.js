@@ -7,6 +7,8 @@ window.addEventListener('load', () => {
     const btnOpenModal = document.getElementById('btnCompleteManually');
     const closeBtn = document.getElementById('oneApplicationCloseBtn');
     const modalForm = document.getElementById('oneApplicationModalForm');
+    const pageOneAppInfo = document.getElementById('pageOneApplicationInfo');
+    const btnCloseOneAppInfo = document.getElementById('btnCloseOneApplicationInfo');
 
 
     function openModal() {
@@ -26,6 +28,11 @@ window.addEventListener('load', () => {
     });
 
     closeBtn.addEventListener('click', closeModal);
+
+    btnCloseOneAppInfo.addEventListener('click', function () {
+      pageOneAppInfo.style.display = 'none'
+    })
+
 
   }
 

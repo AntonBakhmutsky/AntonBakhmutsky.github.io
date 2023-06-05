@@ -5,272 +5,275 @@ block title
 
 block content
   section.one-application
-    .one-application_header
-      button.one-application-creating_header_btn-close
-        | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-application-creating/close.svg')}
-      .one-application_header__title
-        span Заявка №30963507 (00000009520)
-        | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-application/edit.svg')}
-      .one-application_header__status.status.status-green
-        span Выполнена
+    .one-application-main_container
+      .one-application_header
+        button.one-application-creating_header_btn-close
+          | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-application-creating/close.svg')}
+        .one-application_header__title
+          span Заявка №30963507 (00000009520)
+          | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-application/edit.svg')}
+        .one-application_header__status.status.status-green
+          span Выполнена
 
-    .one-application_main
+      .one-application_main
 
-      .one-application-creating_form__title
-        span.one-application-creating_form__title-name Информация о заявке
+        .one-application-creating_form__title
+          span.one-application-creating_form__title-name Информация о заявке
+          .one-application_main_buttons
+            button.one-application_main_buttons__btn
+              .one-application_main_buttons__btn__img
+                | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-application/update.svg')}
+            button.one-application_main_buttons__btn
+              .one-application_main_buttons__btn__img
+                | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-application/cloud.svg')}
+            button.one-application_main_buttons__btn
+              .one-application_main_buttons__btn__img
+                | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-application/save.svg')}
+            button.one-application_main_buttons__btn
+              .one-application_main_buttons__btn__img
+                | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-application/bell.svg')}
+                .count.count-red
+                  span 3
+            button.one-application_main_buttons__btn
+              .one-application_main_buttons__btn__img
+                | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-application/pin.svg')}
+                .count.count-lightblue
+                  span 1
+        .one-application_main_item
+          .one-application_main_item_name
+            span Стоимость
+          .one-application_main_item_value
+            span.one-application_main_item_value__txt 16 000,00 &#8381 (Безналичный, 20%)
+        .one-application_main_item
+          .one-application_main_item_name
+            span Машина
+          .one-application_main_item_value
+            .one-application_main_item_value_car-number.one-application_main_item_value_car-number-gray
+              span Е244ОВ198
+            .one-application_main_item_value_icons
+              | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-application/fence.svg')}
+            span.one-application_main_item_value__txt Тягач
+        .one-application_main_item
+          .one-application_main_item_name
+            span Прицеп
+          .one-application_main_item_value
+            .one-application_main_item_value_car-number.one-application_main_item_value_car-number-transparent
+              span УХ341777
+            span.one-application_main_item_value__txt Рефрижератор
+        .one-application_main_item
+          .one-application_main_item_name
+            span Водитель
+          .one-application_main_item_value
+            span.one-application_main_item_value__txt Рыжов Дмитрий
+            .one-application_main_item_value_icons
+              | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-application/stop.svg')}
+              | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-application/graf.svg')}
+        .one-application_main_item
+          .one-application_main_item_name
+            span Контрагент
+          .one-application_main_item_value
+            span.one-application_main_item_value__txt Синергия Групп
+        .one-application_main_item
+          .one-application_main_item_name
+            span Создана
+          .one-application_main_item_value
+            span.one-application_main_item_value__txt Бисерова С.
+            .one-application_main_item_value__created-icon
+              | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-application/created.svg')}
+            span.one-application_main_item_value__txt 14.04.2021 13:39
+        .one-application_main_item
+          .one-application_main_item_name
+            span Запущена
+          .one-application_main_item_value
+            span.one-application_main_item_value__txt Зубков В.
+            span.one-application_main_item_value__txt 14.04.2021 14:17
+        .one-application_main_item
+          .one-application_main_item_name
+            span Ответственный
+          .one-application_main_item_value
+            span.one-application_main_item_value__txt Берёзкин А. С.
+        .one-application_main_item
+          .one-application_main_item_name
+            span Подразделение
+          .one-application_main_item_value
+            span.one-application_main_item_value__txt СТС
+        .one-application_main_item
+          .one-application_main_item_name
+            span Вид перевозки
+          .one-application_main_item_value
+            span.one-application_main_item_value__txt Тент
+        .one-application_main_item
+          .one-application_main_item_name
+            span Номенклатура
+          .one-application_main_item_value
+            span.one-application_main_item_value__txt Обратный FTL
+        .one-application_main_item
+          .one-application_main_item_name
+            span Синхронизация с 1С
+          .one-application_main_item_value
+            .one-application_main_item_value_first-icon
+              | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-application/checkmark-circle.svg')}
+            span.one-application_main_item_value__txt 05.05.2021, 12:53:43 (+03:00)
+        .one-application_main_item
+          .one-application_main_item_name
+            span Номер контейнера
+          .one-application_main_item_value
+            span.one-application_main_item_value__txt 523
+        .one-application_main_item
+          .one-application_main_item_name
+            span Это обратка
+          .one-application_main_item_value
+            span.one-application_main_item_value__txt Нет
+
+        .one-application-creating_form__title
+          span.one-application-creating_form__title-name Маршрут
+        .one-application_main_warning
+          | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-application/warning.svg')}
+          span Опаздывает на 6ч. 9м от планового времени прибытия - 08.08.2021 00:00 (+03:00)
+        .one-application_main_route
+          .one-application_main_route-graf
+            .one-application_main_route-graf-point
+              span A
+            .one-application_main_route-graf-line
+            .one-application_main_route-graf-point
+              span B
+          .one-application_main_route-way
+            .one-application_main_route-way-point
+              .one-application_main_route-way-point_left
+                .one-application_main_route-way-point_left_city
+                  span.one-application_main_route-way-point_left_city-name Учалы
+                  span.one-application_main_route-way-point_left_city-time (+05:00)
+                span.one-application_main_route-way-point_left_address Россия, Республика Башкортостан, Учалы, Кровельная улица, 1
+                .one-application_main_route-way-point_left_titles
+                  .one-application_main_route-way-point_left_titles-empty
+                    span
+                  span.one-application_main_route-way-point_left_titles-naming Въезд
+                  span.one-application_main_route-way-point_left_titles-naming Выезд
+                .one-application_main_route-way-point_left_value
+                  .one-application_main_route-way-point_left_titles-empty
+                    span Плановый
+                  span.one-application_main_route-way-point_left_titles-name 14.03.2021 09:00
+                  span.one-application_main_route-way-point_left_titles-name 14.03.2021 13:00
+                .one-application_main_route-way-point_left_value
+                  .one-application_main_route-way-point_left_titles-empty
+                    span Фактический - GPS
+                  span.one-application_main_route-way-point_left_titles-name.one-application_main_route-way-point_left_titles-name-red 13.04.2021 23:48 (-30д. 14ч. 48м)
+                  span.one-application_main_route-way-point_left_titles-name.one-application_main_route-way-point_left_titles-name-red 14.04.2021 20:45 (-31д. 7ч. 46м)
+              .one-application_main_route-way-point_right
+                .status.status-blue-light
+                  span Точка загрузки
+                button.one-application_main_route-way-point_right-icon
+                  | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-application/edit-2.svg')}
+            .one-application_main_route-way-point
+              .one-application_main_route-way-point_left
+                .one-application_main_route-way-point_left_city
+                  button.one-application_main_route-way-point_left_city-icon
+                    | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-application/right.svg')}
+                  span.one-application_main_route-way-point_left_city-name Коркино
+                  span.one-application_main_route-way-point_left_city-time (+05:00)
+                span.one-application_main_route-way-point_left_address Россия, Челябинская область, Коркино, улица 30 лет ВЛКСМ, 189А
+                .one-application_main_route-way-point_left_titles
+                  .one-application_main_route-way-point_left_titles-empty
+                    span
+                  span.one-application_main_route-way-point_left_titles-naming Въезд
+                  span.one-application_main_route-way-point_left_titles-naming Выезд
+                .one-application_main_route-way-point_left_value
+                  .one-application_main_route-way-point_left_titles-empty
+                    span Плановый
+                  span.one-application_main_route-way-point_left_titles-name 15.04.2021 09:00
+                  span.one-application_main_route-way-point_left_titles-name 15.04.2021 13:00
+                .one-application_main_route-way-point_left_value
+                  .one-application_main_route-way-point_left_titles-empty
+                    span Фактический - GPS
+                  span.one-application_main_route-way-point_left_titles-name.one-application_main_route-way-point_left_titles-name-green 15.04.2021 08:57 (2м)
+                  span.one-application_main_route-way-point_left_titles-name.one-application_main_route-way-point_left_titles-name-red 15.04.2021 14:07 (-1ч. 7м)
+              .one-application_main_route-way-point_right
+                .status.status-blue-light
+                  span Точка загрузки
+                button.one-application_main_route-way-point_right-icon
+                  | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-application/edit-2.svg')}
+
+        .one-application-creating_form__title
+          span.one-application-creating_form__title-name Груз
+        .one-application_main_item
+          .one-application_main_item_name
+            span Наименование
+          .one-application_main_item_value
+            span.one-application_main_item_value__txt Сырье
+        .one-application_main_item
+          .one-application_main_item_name
+            span Тип товара
+          .one-application_main_item_value
+            span.one-application_main_item_value__txt текст текст текст
+        .one-application_main_item
+          .one-application_main_item_name
+            span Стоимость груза (р)
+          .one-application_main_item_value
+            span.one-application_main_item_value__txt 400000
+        .one-application_main_item
+          .one-application_main_item_name
+            span Вес груза (т)
+          .one-application_main_item_value
+            span.one-application_main_item_value__txt 20
+        .one-application_main_item
+          .one-application_main_item_name
+            span Требования
+          .one-application_main_item_value
+            span.one-application_main_item_value__txt текст текст текст
+        .one-application_main_item
+          .one-application_main_item_name
+            span Тип груза
+          .one-application_main_item_value
+            span.one-application_main_item_value__txt Тент 82 м3
+
+        .one-application-creating_form__title
+          span.one-application-creating_form__title-name Действия с заявкой
         .one-application_main_buttons
-          button.one-application_main_buttons__btn
-            .one-application_main_buttons__btn__img
-              | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-application/update.svg')}
-          button.one-application_main_buttons__btn
-            .one-application_main_buttons__btn__img
-              | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-application/cloud.svg')}
-          button.one-application_main_buttons__btn
-            .one-application_main_buttons__btn__img
-              | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-application/save.svg')}
-          button.one-application_main_buttons__btn
-            .one-application_main_buttons__btn__img
-              | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-application/bell.svg')}
-              .count.count-red
-                span 3
-          button.one-application_main_buttons__btn
-            .one-application_main_buttons__btn__img
-              | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-application/pin.svg')}
-              .count.count-lightblue
-                span 1
-      .one-application_main_item
-        .one-application_main_item_name
-          span Стоимость
-        .one-application_main_item_value
-          span.one-application_main_item_value__txt 16 000,00 &#8381 (Безналичный, 20%)
-      .one-application_main_item
-        .one-application_main_item_name
-          span Машина
-        .one-application_main_item_value
-          .one-application_main_item_value_car-number.one-application_main_item_value_car-number-gray
-            span Е244ОВ198
-          .one-application_main_item_value_icons
-            | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-application/fence.svg')}
-          span.one-application_main_item_value__txt Тягач
-      .one-application_main_item
-        .one-application_main_item_name
-          span Прицеп
-        .one-application_main_item_value
-          .one-application_main_item_value_car-number.one-application_main_item_value_car-number-transparent
-            span УХ341777
-          span.one-application_main_item_value__txt Рефрижератор
-      .one-application_main_item
-        .one-application_main_item_name
-          span Водитель
-        .one-application_main_item_value
-          span.one-application_main_item_value__txt Рыжов Дмитрий
-          .one-application_main_item_value_icons
-            | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-application/stop.svg')}
-            | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-application/graf.svg')}
-      .one-application_main_item
-        .one-application_main_item_name
-          span Контрагент
-        .one-application_main_item_value
-          span.one-application_main_item_value__txt Синергия Групп
-      .one-application_main_item
-        .one-application_main_item_name
-          span Создана
-        .one-application_main_item_value
-          span.one-application_main_item_value__txt Бисерова С.
-          .one-application_main_item_value__created-icon
-            | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-application/created.svg')}
-          span.one-application_main_item_value__txt 14.04.2021 13:39
-      .one-application_main_item
-        .one-application_main_item_name
-          span Запущена
-        .one-application_main_item_value
-          span.one-application_main_item_value__txt Зубков В.
-          span.one-application_main_item_value__txt 14.04.2021 14:17
-      .one-application_main_item
-        .one-application_main_item_name
-          span Ответственный
-        .one-application_main_item_value
-          span.one-application_main_item_value__txt Берёзкин А. С.
-      .one-application_main_item
-        .one-application_main_item_name
-          span Подразделение
-        .one-application_main_item_value
-          span.one-application_main_item_value__txt СТС
-      .one-application_main_item
-        .one-application_main_item_name
-          span Вид перевозки
-        .one-application_main_item_value
-          span.one-application_main_item_value__txt Тент
-      .one-application_main_item
-        .one-application_main_item_name
-          span Номенклатура
-        .one-application_main_item_value
-          span.one-application_main_item_value__txt Обратный FTL
-      .one-application_main_item
-        .one-application_main_item_name
-          span Синхронизация с 1С
-        .one-application_main_item_value
-          .one-application_main_item_value_first-icon
-            | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-application/checkmark-circle.svg')}
-          span.one-application_main_item_value__txt 05.05.2021, 12:53:43 (+03:00)
-      .one-application_main_item
-        .one-application_main_item_name
-          span Номер контейнера
-        .one-application_main_item_value
-          span.one-application_main_item_value__txt 523
-      .one-application_main_item
-        .one-application_main_item_name
-          span Это обратка
-        .one-application_main_item_value
-          span.one-application_main_item_value__txt Нет
+          +button('редактировать', 'orange', 'one-application/edit-3.svg', null)
+          +button('маршрут', 'green', 'one-application/edit-3.svg', null)
+          +button('удалить', 'red', 'one-application/delete.svg', null)
+          +button('создать копию', 'blue-light', 'one-application/copy.svg', null)
+          +button('завершить вручную', 'blue-bright', 'one-application/edit-3.svg', null, 'btnCompleteManually')
+          +button('отменить', 'gray', 'one-application/delete.svg', null)
 
-      .one-application-creating_form__title
-        span.one-application-creating_form__title-name Маршрут
-      .one-application_main_warning
-        | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-application/warning.svg')}
-        span Опаздывает на 6ч. 9м от планового времени прибытия - 08.08.2021 00:00 (+03:00)
-      .one-application_main_route
-        .one-application_main_route-graf
-          .one-application_main_route-graf-point
-            span A
-          .one-application_main_route-graf-line
-          .one-application_main_route-graf-point
-            span B
-        .one-application_main_route-way
-          .one-application_main_route-way-point
-            .one-application_main_route-way-point_left
-              .one-application_main_route-way-point_left_city
-                span.one-application_main_route-way-point_left_city-name Учалы
-                span.one-application_main_route-way-point_left_city-time (+05:00)
-              span.one-application_main_route-way-point_left_address Россия, Республика Башкортостан, Учалы, Кровельная улица, 1
-              .one-application_main_route-way-point_left_titles
-                .one-application_main_route-way-point_left_titles-empty
-                  span
-                span.one-application_main_route-way-point_left_titles-naming Въезд
-                span.one-application_main_route-way-point_left_titles-naming Выезд
-              .one-application_main_route-way-point_left_value
-                .one-application_main_route-way-point_left_titles-empty
-                  span Плановый
-                span.one-application_main_route-way-point_left_titles-name 14.03.2021 09:00
-                span.one-application_main_route-way-point_left_titles-name 14.03.2021 13:00
-              .one-application_main_route-way-point_left_value
-                .one-application_main_route-way-point_left_titles-empty
-                  span Фактический - GPS
-                span.one-application_main_route-way-point_left_titles-name.one-application_main_route-way-point_left_titles-name-red 13.04.2021 23:48 (-30д. 14ч. 48м)
-                span.one-application_main_route-way-point_left_titles-name.one-application_main_route-way-point_left_titles-name-red 14.04.2021 20:45 (-31д. 7ч. 46м)
-            .one-application_main_route-way-point_right
-              .status.status-blue-light
-                span Точка загрузки
-              button.one-application_main_route-way-point_right-icon
-                | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-application/edit-2.svg')}
-          .one-application_main_route-way-point
-            .one-application_main_route-way-point_left
-              .one-application_main_route-way-point_left_city
-                button.one-application_main_route-way-point_left_city-icon
-                  | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-application/right.svg')}
-                span.one-application_main_route-way-point_left_city-name Коркино
-                span.one-application_main_route-way-point_left_city-time (+05:00)
-              span.one-application_main_route-way-point_left_address Россия, Челябинская область, Коркино, улица 30 лет ВЛКСМ, 189А
-              .one-application_main_route-way-point_left_titles
-                .one-application_main_route-way-point_left_titles-empty
-                  span
-                span.one-application_main_route-way-point_left_titles-naming Въезд
-                span.one-application_main_route-way-point_left_titles-naming Выезд
-              .one-application_main_route-way-point_left_value
-                .one-application_main_route-way-point_left_titles-empty
-                  span Плановый
-                span.one-application_main_route-way-point_left_titles-name 15.04.2021 09:00
-                span.one-application_main_route-way-point_left_titles-name 15.04.2021 13:00
-              .one-application_main_route-way-point_left_value
-                .one-application_main_route-way-point_left_titles-empty
-                  span Фактический - GPS
-                span.one-application_main_route-way-point_left_titles-name.one-application_main_route-way-point_left_titles-name-green 15.04.2021 08:57 (2м)
-                span.one-application_main_route-way-point_left_titles-name.one-application_main_route-way-point_left_titles-name-red 15.04.2021 14:07 (-1ч. 7м)
-            .one-application_main_route-way-point_right
-              .status.status-blue-light
-                span Точка загрузки
-              button.one-application_main_route-way-point_right-icon
-                | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-application/edit-2.svg')}
+    .application-modal.one-application-modal#oneApplicationModal
+      form.one-application-modal_content#oneApplicationModalForm
+        .one-application-modal_content-top
+          h3.application-modal_content-top__title Завершение заявки: №30963507 (00000009520)
+          button.application-modal_content-top__btn#oneApplicationCloseBtn
+            | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-application/red-cross.svg')}
+        .one-application-modal_content_form
+          .one-application-modal_content_form-point
+            .one-application-modal_content_form-point-address
+              span.one-application-modal_content_form-point-address__title Адрес 1:
+              span.one-application-modal_content_form-point-address__text Россия, Челябинская область, Коркино, улица 30 лет ВЛКСМ, 189А (+05:00)
+            p.one-application-modal_content_form-point-label Дата прибытия на точку*
+            .one-application-modal_content_form-point-date
+              p Выберите дату
+              | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-application/date.svg')}
+            p.one-application-modal_content_form-point-label Дата загрузки/выгрузки*
+            .one-application-modal_content_form-point-date
+              p Выберите дату
+              | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-application/date.svg')}
+          .one-application-modal_content_form-point
+            .one-application-modal_content_form-point-address
+              span.one-application-modal_content_form-point-address__title Адрес 2:
+              span.one-application-modal_content_form-point-address__text Россия, Республика Башкортостан, Учалы, Кровельная улица, 1 (+05:00)
+            p.one-application-modal_content_form-point-label Дата прибытия на точку*
+            .one-application-modal_content_form-point-date
+              p Выберите дату
+              | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-application/date.svg')}
+            p.one-application-modal_content_form-point-label Дата загрузки/выгрузки*
+            .one-application-modal_content_form-point-date
+              p Выберите дату
+              | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-application/date.svg')}
+          .one-application-modal_content_form-cause
+            label(for="actualMileage").one-application-modal_content_form-point-label Фактический пробег*
+            input(type="text" id="actualMileage" name='Фактический пробег' placeholder='Введите значение')
+            label(for="reasonForTermination").one-application-modal_content_form-point-label Причина завершения заявки*
+            input(type="text" id="reasonForTermination" name='Причина завершения заявки' placeholder='Опишите причину')
+          .one-application-modal_content_form-buttons
+            +button('Сохранить', 'orange-bg', 'one-application/checkmark-circle-white.svg', 'submit', null)
+            +button('отмена', 'gray', 'one-application/cross-gray.svg', 'reset', null)
 
-      .one-application-creating_form__title
-        span.one-application-creating_form__title-name Груз
-      .one-application_main_item
-        .one-application_main_item_name
-          span Наименование
-        .one-application_main_item_value
-          span.one-application_main_item_value__txt Сырье
-      .one-application_main_item
-        .one-application_main_item_name
-          span Тип товара
-        .one-application_main_item_value
-          span.one-application_main_item_value__txt текст текст текст
-      .one-application_main_item
-        .one-application_main_item_name
-          span Стоимость груза (р)
-        .one-application_main_item_value
-          span.one-application_main_item_value__txt 400000
-      .one-application_main_item
-        .one-application_main_item_name
-          span Вес груза (т)
-        .one-application_main_item_value
-          span.one-application_main_item_value__txt 20
-      .one-application_main_item
-        .one-application_main_item_name
-          span Требования
-        .one-application_main_item_value
-          span.one-application_main_item_value__txt текст текст текст
-      .one-application_main_item
-        .one-application_main_item_name
-          span Тип груза
-        .one-application_main_item_value
-          span.one-application_main_item_value__txt Тент 82 м3
-
-      .one-application-creating_form__title
-        span.one-application-creating_form__title-name Действия с заявкой
-      .one-application_main_buttons
-        +button('редактировать', 'orange', 'one-application/edit-3.svg', null)
-        +button('маршрут', 'green', 'one-application/edit-3.svg', null)
-        +button('удалить', 'red', 'one-application/delete.svg', null)
-        +button('создать копию', 'blue-light', 'one-application/copy.svg', null)
-        +button('завершить вручную', 'blue-bright', 'one-application/edit-3.svg', null, 'btnCompleteManually')
-        +button('отменить', 'gray', 'one-application/delete.svg', null)
-
-  .application-modal.one-application-modal#oneApplicationModal
-    form.one-application-modal_content#oneApplicationModalForm
-      .one-application-modal_content-top
-        h3.application-modal_content-top__title Завершение заявки: №30963507 (00000009520)
-        button.application-modal_content-top__btn#oneApplicationCloseBtn
-          | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-application/red-cross.svg')}
-      .one-application-modal_content_form
-        .one-application-modal_content_form-point
-          .one-application-modal_content_form-point-address
-            span.one-application-modal_content_form-point-address__title Адрес 1:
-            span.one-application-modal_content_form-point-address__text Россия, Челябинская область, Коркино, улица 30 лет ВЛКСМ, 189А (+05:00)
-          p.one-application-modal_content_form-point-label Дата прибытия на точку*
-          .one-application-modal_content_form-point-date
-            p Выберите дату
-            | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-application/date.svg')}
-          p.one-application-modal_content_form-point-label Дата загрузки/выгрузки*
-          .one-application-modal_content_form-point-date
-            p Выберите дату
-            | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-application/date.svg')}
-        .one-application-modal_content_form-point
-          .one-application-modal_content_form-point-address
-            span.one-application-modal_content_form-point-address__title Адрес 2:
-            span.one-application-modal_content_form-point-address__text Россия, Республика Башкортостан, Учалы, Кровельная улица, 1 (+05:00)
-          p.one-application-modal_content_form-point-label Дата прибытия на точку*
-          .one-application-modal_content_form-point-date
-            p Выберите дату
-            | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-application/date.svg')}
-          p.one-application-modal_content_form-point-label Дата загрузки/выгрузки*
-          .one-application-modal_content_form-point-date
-            p Выберите дату
-            | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-application/date.svg')}
-        .one-application-modal_content_form-cause
-          label(for="actualMileage").one-application-modal_content_form-point-label Фактический пробег*
-          input(type="text" id="actualMileage" name='Фактический пробег' placeholder='Введите значение')
-          label(for="reasonForTermination").one-application-modal_content_form-point-label Причина завершения заявки*
-          input(type="text" id="reasonForTermination" name='Причина завершения заявки' placeholder='Опишите причину')
-        .one-application-modal_content_form-buttons
-          +button('Сохранить', 'orange-bg', 'one-application/checkmark-circle-white.svg', 'submit', null)
-          +button('отмена', 'gray', 'one-application/cross-gray.svg', 'reset', null)
+    include ../components/one-application/one-application-info
