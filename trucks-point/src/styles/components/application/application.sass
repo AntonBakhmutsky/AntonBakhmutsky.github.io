@@ -3,7 +3,7 @@
 
 .application
   width: 79vw
-  height: 87vh
+  height: calc(100vh - 90px)
   margin: 0 auto
   padding: 26px 0 0 50px
   box-sizing: border-box
@@ -77,6 +77,27 @@
 
           &-top
             display: flex
+
+            &_inputs, &_input
+              display: flex
+              align-items: center
+              justify-content: center
+
+              select
+                border: none
+                width: 100%
+                color: $gray
+
+              &::placeholder
+                color: $gray-dark
+
+            &_input
+              select, input
+                margin-left: 10px
+
+            &_inputs
+              select
+                margin-right: 6px
 
       &_buttons
         display: flex
@@ -188,13 +209,15 @@
                 position: absolute
                 background-color: $white
                 width: 100%
-                top: 100%
+                top: calc(100% + 1px)
+                left: 0
                 z-index: 3
                 border: 1px solid $gray
                 border-radius: 8px
                 box-sizing: border-box
                 transition: border 0.3s
                 display: none
+                overflow: hidden
 
                 ul
                   background-color: $white

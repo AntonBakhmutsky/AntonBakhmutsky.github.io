@@ -8,19 +8,7 @@ block content
     button.close-btn
       | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/trucks/close.svg')}
     .one-report-container
-      .one-report-header
-        .one-report-header__title Общий отчет
-        .one-report-header_events
-          .one-report-header_events_count
-            span Выводить на странице:
-            button 30
-            button 50
-            button 100
-            button 200
-          .one-report-header_events_btns
-            button
-              | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-report/printer.svg')}
-            +button(null, 'orange', 'trucks/download.svg', null, null)
+      +pageHeader('Общий отчет')
 
       form.one-report-filter
         .one-report-filter-head

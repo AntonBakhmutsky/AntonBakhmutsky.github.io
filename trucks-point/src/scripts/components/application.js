@@ -52,7 +52,7 @@ window.addEventListener('load', () => {
     });
 
 
-    btnOpenListFromCityes.addEventListener('click', () => {
+    btnOpenListFromCityes.addEventListener('click', (event) => {
       searchCityFromInput.classList.toggle('application-input-focus');
       if (!isListCityesFromVisible) {
         disclosedListCityesFrom.style.display = 'none';
@@ -60,10 +60,12 @@ window.addEventListener('load', () => {
       } else {
         disclosedListCityesFrom.style.display = 'block';
         isListCityesFromVisible = false;
+        disclosedListCityesTo.style.display = 'none';
+        isListCityesToVisible = true;
       }
     })
 
-    btnOpenListToCityes.addEventListener('click', () => {
+    btnOpenListToCityes.addEventListener('click', (event) => {
       searchCityToInput.classList.toggle('application-input-focus');
       if (!isListCityesToVisible) {
         disclosedListCityesTo.style.display = 'none';
@@ -71,6 +73,8 @@ window.addEventListener('load', () => {
       } else {
         disclosedListCityesTo.style.display = 'block';
         isListCityesToVisible = false;
+        disclosedListCityesFrom.style.display = 'none';
+        isListCityesFromVisible = true;
       }
     })
 
@@ -90,6 +94,10 @@ window.addEventListener('load', () => {
         btnReset.style.display = 'flex';
         longFormTitle.style.display = 'block';
         isShortFormVisible = false;
+        disclosedListCityesFrom.style.display = 'none';
+        isListCityesFromVisible = true;
+        disclosedListCityesTo.style.display = 'none';
+        isListCityesToVisible = true;
         searchForm.classList.toggle('application_search-long-type');
         buttonsContainer.classList.toggle('buttons-for-long-form');
         formHeaderContainer.classList.toggle('header-for-long-form');
