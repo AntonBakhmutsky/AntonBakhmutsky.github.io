@@ -13,10 +13,12 @@ html(lang="ru")
   head
     include head
   body
-    include header
+    header
+      include header
     main.main
       block content
-    include map
-    include ../../components/global/help-modal
-    include footer
+    footer
+      include map
+      include ../../components/global/help-modal
+      include footer
     include menu
