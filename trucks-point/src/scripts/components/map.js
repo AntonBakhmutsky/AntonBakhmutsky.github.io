@@ -12,6 +12,8 @@ window.addEventListener('load', () => {
     }).addTo(map);
 
 
+
+
     const btnOpenMapFilter = document.getElementById('map-filter');
     const imgMapFilter = document.querySelector('.map-filter-img')
     const listMapFilter = document.querySelector('.map-filter-list')

@@ -9,6 +9,9 @@ window.addEventListener('load', () => {
     const modalForm = document.getElementById('oneApplicationModalForm');
     const pageOneAppInfo = document.getElementById('pageOneApplicationInfo');
     const btnCloseOneAppInfo = document.getElementById('btnCloseOneApplicationInfo');
+    const btnShowInfo = document.getElementById('btnStatusOneAppInfo');
+    const routeImg = document.querySelector('.route-map')
+    const roteIconDescription = document.querySelector('.icon-description')
 
 
     function openModal() {
@@ -32,6 +35,16 @@ window.addEventListener('load', () => {
     btnCloseOneAppInfo.addEventListener('click', function () {
       pageOneAppInfo.style.display = 'none'
     })
+
+
+    btnShowInfo.addEventListener('click', function () {
+      pageOneAppInfo.classList.toggle('block')
+    })
+
+    routeImg.addEventListener('click', function () {
+      roteIconDescription.classList.toggle('block')
+    })
+
 
 
   }

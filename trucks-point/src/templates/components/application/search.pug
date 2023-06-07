@@ -32,8 +32,10 @@
                   input(type='radio' id="armavir" name='From-City').check-mark
                   label(for="armavir") Армавир
           .application_search_form-disclosed_form-top_date
-            .vanilla-calendar-input-wrapper
-                input(type="text" placeholder="Дата загрузки, От" id="calendar-input" readonly="")
+            .application_search_form-disclosed_form-top_date-from
+              input(type="text" placeholder="Дата загрузки, От" id="calendar-input" readonly="")
+              .datapickerInput#calendar-input-div
+              .datapickerCalendar#calendar
             .application_search_form-disclosed_form-top_date-to
                 span Дата загрузки, До
           .application_search_form-disclosed_form-top_inputs

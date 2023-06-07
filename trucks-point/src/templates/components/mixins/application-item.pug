@@ -1,0 +1,45 @@
+mixin appItem(num, id, idNum, fromAd, fromObl, fromPlan, toAd, toObl, toPlan, gruz, carNum, driver, cost, contr, status, statusColor, status1, statusColor1  )
+  a.application-list-main-item(href='one-application.html')
+    .application-list-main-item-name.application-list-header-main-item-name-number
+      span=num
+    .application-list-main-item-name.application-list-main-item-name-id
+      span=id
+        .title(data-tooltip="Здесь полезный текст")
+          | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/clip.svg')}
+      span=idNum
+        .title(data-tooltip="Здесь полезный текст")
+          | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/sber.svg')}
+    .application-list-main-item-name.application-list-main-item-name-from
+      .application-list-main-item-name-adr
+        span.application-list-main-item-name-adr-strong=fromAd
+        span=fromObl
+      span=fromPlan
+    .application-list-main-item-name.application-list-main-item-name-to
+      .application-list-main-item-name-adr
+        span.application-list-item-main-name-adr-strong=toAd
+        span=toObl
+      span=toPlan
+    .application-list-main-item-name.application-list-main-item-name-cargo-car-driver
+      span=gruz
+      .application-list-main-item-name-cargo-car-driver-car
+        .title(data-tooltip="Здесь полезный текст")
+          | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/arrow-green.svg')}
+        span=carNum
+        .title(data-tooltip="Здесь полезный текст")
+          | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/attention.svg')}
+        .title(data-tooltip="Здесь полезный текст")
+          | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/list.svg')}
+      .application-list-main-item-name-cargo-car-driver-driver
+        span=driver
+        | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/plus-book.svg')}
+        .title(data-tooltip="Рейтинг: 5")
+          | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/graf.svg')}
+    .application-list-main-item-name.application-list-main-item-name-cost-counterparty
+      span=cost
+      span=contr
+    .application-list-main-item-name.application-list-main-item-name-status
+      .application-list-main-item-name-status-item(class=`application-list-main-item-name-status-item_${statusColor}`)
+        span=status
+      if (status1)
+        .application-list-main-item-name-status-item(class=`application-list-main-item-name-status-item_${statusColor1}`)
+          span=status1

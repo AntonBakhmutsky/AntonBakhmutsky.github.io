@@ -92,6 +92,16 @@ body {
     font-family: "ProximaNova", sans-serif;
 }
 
+.vanilla-calendar {
+    z-index: 980;
+}
+
+
+
+.vanilla-calendar {
+    z-index: 890 !important;
+}
+
 .vanilla-calendar-time__keeping {
     background: transparent;
     border: 0;

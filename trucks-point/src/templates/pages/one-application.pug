@@ -13,7 +13,7 @@ block content
         .one-application_header__title
           span Заявка №30963507 (00000009520)
           | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-application/edit.svg')}
-        .one-application_header__status.status.status-green
+        button.one-application_header__status.status.status-green#btnStatusOneAppInfo
           span Выполнена
 
       .one-application_main
@@ -290,3 +290,5 @@ block content
             +button('отмена', 'gray', 'one-application/cross-gray.svg', 'reset', null)
 
     include ../components/one-application/one-application-info
+    include ../components/one-application/plan-indicators
+    include ../components/one-application/route

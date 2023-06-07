@@ -1,6 +1,10 @@
 //PAGE APPLICATION
 
 import VanillaCalendar from '@uvarov.frontend/vanilla-calendar';
+import '../../styles/base/calendar/calendar.sass';
+import '../../styles/base/calendar/themes/light.css';
+import '../../styles/base/calendar/themes/dark.css';
+
 
 window.addEventListener('load', () => {
   if (!document.querySelector('.application')) {
@@ -112,17 +116,13 @@ window.addEventListener('load', () => {
     const options = {
       input: true,
       settings: {
-        selection: {
-          time: true,
-          stepMinutes: 15,
-        },
         lang: 'ru',
       },
+      selection: {
+        time: 24,
+        stepMinutes: 15,
+      },
       actions: {
-        changeTime(event, time, hours, minutes, keeping) {
-          console.log(time);
-          console.log(minutes);
-        },
         changeToInput(e, HTMLInputElement, dates, time, hours, minutes, keeping) {
           if (dates[0]) {
             HTMLInputElement.value = dates[0];
@@ -137,6 +137,7 @@ window.addEventListener('load', () => {
 
     const calendar = new VanillaCalendar('#calendar-input', options);
     calendar.init();
+
 
 
   }

@@ -1,0 +1,512 @@
+.vanilla-calendar
+	position: relative
+	display: flex
+	height: max-content
+	width: max-content
+	min-width: 275px
+	flex-direction: column
+	border-radius: .75rem
+	padding: 1rem
+	button:focus-visible
+		border-radius: .5rem
+		outline-style: solid
+		outline-width: 1px
+
+	&.vanilla-calendar_multiple .vanilla-calendar-month, &.vanilla-calendar_multiple .vanilla-calendar-year
+		cursor: default
+		&.vanilla-calendar-month_disabled, &.vanilla-calendar-year_disabled
+			pointer-events: auto
+
+
+	&.vanilla-calendar_multiple .vanilla-calendar-days
+		flex-grow: 0
+
+	&_hidden
+		pointer-events: none
+		visibility: hidden
+		opacity: 0
+		transition-property: all
+		transition-timing-function: cubic-bezier(.4,0,.2,1)
+		transition-duration: .15s
+
+	&_to-input
+		position: absolute
+		left: 0
+		top: 100%
+		margin-top: .25rem
+
+	&-input-wrapper
+		position: relative
+
+	&-controls
+		pointer-events: none
+		position: absolute
+		left: 0
+		right: 0
+		top: 0
+		z-index: 20
+		box-sizing: content-box
+		display: flex
+		align-items: center
+		justify-content: space-between
+		padding-left: 1rem
+		padding-right: 1rem
+		padding-top: 1.25rem
+
+	&-arrow
+		pointer-events: auto
+		position: relative
+		display: block
+		height: 1.5rem
+		width: 1.5rem
+		cursor: pointer
+		border-width: 0
+		background-color: transparent
+		&:before
+			position: absolute
+			inset: 0
+			content: ""
+			-webkit-mask-repeat: no-repeat
+			mask-repeat: no-repeat
+			-webkit-mask-position: 50% 50%
+			mask-position: 50% 50%
+
+		&.vanilla-calendar-arrow_prev:before
+			-webkit-transform: rotateZ(90deg)
+			transform: rotate(90deg)
+
+		&.vanilla-calendar-arrow_next:before
+			-webkit-transform: rotateZ(-90deg)
+			transform: rotate(-90deg)
+
+
+	&-grid
+		display: grid
+		flex-grow: 1
+		grid-auto-flow: column
+		gap: 1.75rem
+
+	&-column
+		display: flex
+		min-width: min-content
+		flex-direction: column
+
+	&-header
+		position: relative
+		margin-bottom: .75rem
+		display: flex
+		align-items: center
+		padding-left: .25rem
+		padding-right: .25rem
+		&__content
+			display: grid
+			flex-grow: 1
+			grid-auto-columns: -webkit-max-content
+			grid-auto-columns: max-content
+			grid-auto-flow: column
+			align-items: center
+			justify-content: center
+			white-space: pre-wrap
+			padding-left: 1rem
+			padding-right: 1rem
+
+
+	&-month, &-year
+		cursor: pointer
+		border-radius: .25rem
+		border-width: 0px
+		background-color: transparent
+		padding: .25rem
+		font-size: 1rem
+		line-height: 1.5rem
+		font-weight: 700
+		&.vanilla-calendar-month_disabled, &.vanilla-calendar-year_disabled
+			pointer-events: none
+
+
+	&-months
+		display: grid
+		flex-grow: 1
+		grid-template-columns: repeat(4,minmax(0,1fr))
+		align-items: center
+		row-gap: 1rem
+		-webkit-column-gap: .5rem
+		column-gap: .5rem
+
+	&-years
+		display: grid
+		flex-grow: 1
+		grid-template-columns: repeat(5,minmax(0,1fr))
+		align-items: center
+		row-gap: 1rem
+		-webkit-column-gap: .5rem
+		column-gap: .5rem
+
+	&-months_selecting .vanilla-calendar-months__month, &-years_selecting .vanilla-calendar-years__year
+		cursor: pointer
+		.vanilla-calendar-months__month_disabled, .vanilla-calendar-years__year_disabled
+			cursor: default
+
+
+	&-months__month, &-years__year
+		display: flex
+		height: 2.5rem
+		align-items: center
+		justify-content: center
+		word-break: break-all
+		border-radius: .5rem
+		border-width: 0px
+		padding: .25rem
+		text-align: center
+		font-size: .75rem
+		line-height: 1rem
+		font-weight: 600
+		&.vanilla-calendar-months__month_disabled, &.vanilla-calendar-years__year_disabled
+			pointer-events: none
+
+
+	&-week-numbers
+		display: flex
+		flex-grow: 1
+		flex-direction: column
+		&__title
+			margin-bottom: .5rem
+			display: flex
+			align-items: center
+			justify-content: center
+			font-size: .75rem
+			line-height: 1rem
+			font-weight: 700
+
+		&__content
+			display: grid
+			grid-auto-flow: row
+			align-items: center
+			justify-items: center
+			row-gap: .25rem
+
+
+	&-week-number
+		display: flex
+		height: 100%
+		min-height: 1.875rem
+		width: 100%
+		min-width: 1.875rem
+		cursor: pointer
+		align-items: center
+		justify-content: center
+		font-size: .75rem
+		line-height: 1rem
+		font-weight: 600
+
+	&-wrapper
+		display: flex
+		flex-grow: 1
+
+	&-content
+		display: flex
+		flex-grow: 1
+		flex-direction: column
+
+	&-week
+		margin-bottom: .5rem
+		display: grid
+		grid-template-columns: repeat(7,1fr)
+		justify-items: center
+		&__day
+			display: flex
+			height: 100%
+			width: 100%
+			min-width: 1.875rem
+			align-items: center
+			justify-content: center
+			font-size: .75rem
+			line-height: 1rem
+			font-weight: 700
+
+
+	&-days
+		display: grid
+		flex-grow: 1
+		grid-template-columns: repeat(7,1fr)
+		align-items: center
+		justify-items: center
+		row-gap: .25rem
+		&_selecting .vanilla-calendar-day__btn
+			cursor: pointer
+			&_disabled
+				cursor: default
+
+
+
+	&-day
+		position: relative
+		display: flex
+		height: 100%
+		width: 100%
+		align-items: center
+		justify-content: center
+		&:focus-visible .vanilla-calendar-day__popup, &:hover .vanilla-calendar-day__popup
+			pointer-events: auto
+			opacity: 1
+
+		&_selected-first .vanilla-calendar-day__btn_selected
+			border-top-right-radius: 0
+			border-bottom-right-radius: 0
+			border-top-left-radius: .5rem
+			border-bottom-left-radius: .5rem
+
+		&_selected-last .vanilla-calendar-day__btn_selected
+			border-top-left-radius: 0
+			border-bottom-left-radius: 0
+			border-top-right-radius: .5rem
+			border-bottom-right-radius: .5rem
+
+		&_selected-intermediate .vanilla-calendar-day__btn_intermediate
+			border-radius: 0
+
+		&__btn
+			display: flex
+			height: 100%
+			min-height: 1.875rem
+			width: 100%
+			min-width: 1.875rem
+			cursor: default
+			align-items: center
+			justify-content: center
+			border-radius: .5rem
+			border-width: 0px
+			font-size: .75rem
+			line-height: 1rem
+			font-weight: 400
+			&_today
+				font-weight: 700
+
+			&_disabled
+				pointer-events: none
+
+
+		&__popup
+			-webkit-transform: translateX(-50%)
+			transform: translate(-50%)
+			pointer-events: none
+			position: absolute
+			left: 50%
+			top: 100%
+			z-index: 20
+			width: 8rem
+			padding: 1rem .75rem .5rem
+			font-size: .75rem
+			line-height: 1rem
+			font-weight: 400
+			opacity: 0
+			&:before
+				content: var(--tw-content)
+				position: absolute
+
+			&:after
+				content: var(--tw-content)
+				position: absolute
+
+			&:hover
+				pointer-events: auto
+				opacity: 1
+
+			&:before
+				content: ""
+				left: 0
+				bottom: 0
+				z-index: -10
+				display: block
+				height: calc(100% - 8px)
+				width: 100%
+				border-radius: .5rem
+
+			&:after
+				content: ""
+				-webkit-transform: translateX(-50%)
+				transform: translate(-50%)
+				left: 50%
+				top: 1px
+				z-index: -10
+				display: block
+				height: 0px
+				width: 0px
+				border-left-width: 8px
+				border-right-width: 8px
+				border-top-width: 0px
+				border-bottom-width: 8px
+				border-style: solid
+				border-left-color: transparent
+				border-right-color: transparent
+				border-top-color: transparent
+
+
+
+	&-time
+		margin-top: .75rem
+		display: grid
+		grid-template-columns: auto 1fr
+		gap: .75rem
+		border-top-width: 1px
+		border-bottom-width: 0px
+		border-left-width: 0px
+		border-right-width: 0px
+		border-style: solid
+		padding-top: .75rem
+		&__content
+			display: grid
+			grid-auto-flow: column
+			align-items: center
+
+		&__hours
+			position: relative
+			margin-right: .35rem
+			width: 1.75rem
+			&:after
+				position: absolute
+				right: -5px
+				top: 50%
+				display: block
+				content: var(--tw-content)
+
+
+		&__minutes
+			width: 1.75rem
+
+		&__hours input, &__minutes input
+			position: relative
+			margin: 0
+			box-sizing: border-box
+			display: block
+			width: 100%
+			border-radius: .25rem
+			border-width: 0px
+			padding: .125rem
+			text-align: center
+			font-size: 1.125rem
+			font-weight: 600
+			line-height: 1.125rem
+			&:focus-visible
+				outline-style: solid
+				outline-width: 1px
+
+			&:disabled
+				cursor: default
+
+			&:hover:disabled
+				background-color: transparent
+
+
+		&__keeping
+			margin-left: 1px
+			margin-top: .25rem
+			width: 22px
+			cursor: pointer
+			border-radius: .25rem
+			border-width: 0px
+			background-color: transparent
+			padding: 0
+			font-size: 11px
+			&:focus-visible
+				outline-style: solid
+				outline-width: 1px
+
+			&:disabled
+				cursor: default
+
+			&:hover:disabled
+				background-color: transparent
+
+
+		&__ranges
+			display: grid
+			grid-auto-flow: row
+
+		&__range
+			position: relative
+			z-index: 10
+			font-size: 0
+			&:before
+				content: var(--tw-content)
+				left: 0
+
+			&:after
+				content: var(--tw-content)
+				right: 0
+
+			&:before, &:after
+				content: ""
+				-webkit-transform: translateY(-50%)
+				transform: translateY(-50%)
+				pointer-events: none
+				position: absolute
+				top: 50%
+				z-index: 10
+				height: .5rem
+				width: 1px
+
+			input
+				position: relative
+				margin: 0
+				height: 1.25rem
+				width: 100%
+				cursor: pointer
+				-webkit-appearance: none
+				appearance: none
+				outline-width: 0px
+				&::-webkit-slider-thumb
+					position: relative
+					z-index: 20
+					margin-top: -.5rem
+					box-sizing: border-box
+					height: 1rem
+					width: .75rem
+					cursor: pointer
+					-webkit-appearance: none
+					appearance: none
+					border-radius: .25rem
+					border-width: 1px
+					border-style: solid
+					-tw-shadow: 0 0 #0000
+					-tw-shadow-colored: 0 0 #0000
+					box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow)
+
+				&::-moz-range-thumb
+					position: relative
+					z-index: 20
+					box-sizing: border-box
+					height: 1rem
+					width: .75rem
+					cursor: pointer
+					border-radius: .25rem
+					border-width: 1px
+					border-style: solid
+					-tw-shadow: 0 0 #0000
+					-tw-shadow-colored: 0 0 #0000
+					box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow)
+
+				&::-webkit-slider-runnable-track
+					margin-top: 1px
+					box-sizing: border-box
+					height: 1px
+					width: 100%
+					cursor: pointer
+					-tw-shadow: 0 0 #0000
+					-tw-shadow-colored: 0 0 #0000
+					box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow)
+
+				&::-moz-range-track
+					margin-top: 1px
+					box-sizing: border-box
+					height: 1px
+					width: 100%
+					cursor: pointer
+					-tw-shadow: 0 0 #0000
+					-tw-shadow-colored: 0 0 #0000
+					box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow)
+
+
+
+
+
