@@ -128,15 +128,20 @@
     border-radius: 8px
     margin-top: 10px
     height: 100%
+    overflow: hidden
 
     &-item
       border-bottom: 1px solid $gray
       display: flex
       padding: 22px 10px
       box-sizing: border-box
+      overflow: hidden
 
       &:last-child
         border-bottom: none
+
+      &:hover
+        background-color: $gray-bg
 
       div
         box-sizing: border-box

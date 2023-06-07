@@ -269,8 +269,32 @@
               display: flex
               margin: 0 20px 0 20px
               height: 40px
+              justify-content: space-between
               +screen($tablet-sm)
                 margin: 20px 0 0 0
+
+              &-from, &-to
+                border: 1px solid $gray
+                border-radius: 8px
+                width: 223px
+                display: flex
+                justify-content: space-between
+                align-items: center
+                box-sizing: border-box
+                padding: 11px 9px 11px 10px
+                input::placeholder
+                  color: $gray
+                +screen($desktop-m)
+                  width: 200px
+                +screen($desktop-sm)
+                  width: 150px
+                +screen($tablet)
+                  width: 130px
+                +screen($tablet-sm)
+                  width: 100%
+
+              &-from
+                margin-right: 10px
 
 
 
@@ -411,6 +435,9 @@
         &:last-child
           border: none
 
+        &:hover
+          background-color: $gray-bg
+
         &-name
 
           span
@@ -462,6 +489,7 @@
               box-sizing: border-box
               padding: 2px
               margin-top: 7px
+              background-color: $white
 
               &:first-child
                 margin-top: 0

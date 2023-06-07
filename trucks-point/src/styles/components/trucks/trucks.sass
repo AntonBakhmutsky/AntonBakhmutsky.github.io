@@ -8,10 +8,6 @@
   padding: 26px 0 0 50px
   box-sizing: border-box
   position: relative
-  overflow: scroll
-
-  &::-webkit-scrollbar
-    display: none
 
   .close-btn
     position: absolute
@@ -161,6 +157,10 @@
     border-radius: 8px
     margin-top: 10px
     height: 100%
+    overflow: scroll
+
+    &::-webkit-scrollbar
+      display: none
 
     &-item
       border-bottom: 1px solid $gray

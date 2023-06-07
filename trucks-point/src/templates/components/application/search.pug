@@ -34,10 +34,14 @@
           .application_search_form-disclosed_form-top_date
             .application_search_form-disclosed_form-top_date-from
               input(type="text" placeholder="Дата загрузки, От" id="calendar-input" readonly="")
+              | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/calendar.svg')}
               .datapickerInput#calendar-input-div
               .datapickerCalendar#calendar
             .application_search_form-disclosed_form-top_date-to
-                span Дата загрузки, До
+              input(type="text" placeholder="Дата загрузки, До" id="calendar-input1" readonly="")
+              | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/calendar.svg')}
+              .datapickerInput#calendar-input-div1
+              .datapickerCalendar#calendar1
           .application_search_form-disclosed_form-top_inputs
             .application_search_form-disclosed_form-top_inputs_item
               select
@@ -65,8 +69,16 @@
                   label(for="armavir1") Армавир
 
           .application_search_form-disclosed_form-top_date
-            .application_search_form-disclosed_form-top_date-from Дата выгрузки, От
-            .application_search_form-disclosed_form-top_date-to Дата выгрузки, До
+            .application_search_form-disclosed_form-top_date-from
+              input(type="text" placeholder="Дата выгрузки, От" id="calendar-input2" readonly="")
+              | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/calendar.svg')}
+              .datapickerInput#calendar-input-div2
+              .datapickerCalendar#calendar2
+            .application_search_form-disclosed_form-top_date-to
+              input(type="text" placeholder="Дата выгрузки, До" id="calendar-input3" readonly="")
+              | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/calendar.svg')}
+              .datapickerInput#calendar-input-div3
+              .datapickerCalendar#calendar3
           .application_search_form-disclosed_form-top_input
             select
               option(value='') Контрагент

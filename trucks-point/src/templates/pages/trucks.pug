@@ -5,7 +5,7 @@ block title
 
 block content
   section.trucks
-    button.close-btn
+    a.close-btn(href='index.html')
       | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/trucks/close.svg')}
     .trucks-container
       .trucks-header
@@ -82,21 +82,24 @@ block content
         .trucks-sort-tracker
           input(type="text" placeholder="Трекер").trucks-sort__text
         .trucks-sort-datetracker
-          select
-            option(value="") Равно
+          input(type="text" placeholder="Равно" id="calendar-input9" readonly="")
+          .datapickerInput#calendar-input-div9
+          .datapickerCalendar#calendar9
           .trucks-sort-date
             | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/trucks/date.svg')}
         .trucks-sort-datecoords
-          select
-            option(value="") Равно
+          input(type="text" placeholder="Равно" id="calendar-input10" readonly="")
+          .datapickerInput#calendar-input-div10
+          .datapickerCalendar#calendar10
           .trucks-sort-date
             | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/trucks/date.svg')}
         .trucks-sort-deleted
           select
             option(value="") Не отмечено
         .trucks-sort-datedelete
-          select
-            option(value="") Равно
+          input(type="text" placeholder="Равно" id="calendar-input11" readonly="")
+          .datapickerInput#calendar-input-div11
+          .datapickerCalendar#calendar11
           .trucks-sort-date
             | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/trucks/date.svg')}
 

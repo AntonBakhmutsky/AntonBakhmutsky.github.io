@@ -1,11 +1,8 @@
 //PAGE APPLICATION
-
 import VanillaCalendar from '@uvarov.frontend/vanilla-calendar';
-import '../../styles/base/calendar/calendar.sass';
+import '../../styles/base/calendar/vanilla-calendar.css';
 import '../../styles/base/calendar/themes/light.css';
 import '../../styles/base/calendar/themes/dark.css';
-
-
 window.addEventListener('load', () => {
   if (!document.querySelector('.application')) {
     return null
@@ -60,6 +57,7 @@ window.addEventListener('load', () => {
 
 
     btnOpenListFromCityes.addEventListener('click', (event) => {
+      event.preventDefault()
       searchCityFromInput.classList.toggle('application-input-focus');
       if (!isListCityesFromVisible) {
         disclosedListCityesFrom.style.display = 'none';
@@ -73,6 +71,7 @@ window.addEventListener('load', () => {
     })
 
     btnOpenListToCityes.addEventListener('click', (event) => {
+      event.preventDefault()
       searchCityToInput.classList.toggle('application-input-focus');
       if (!isListCityesToVisible) {
         disclosedListCityesTo.style.display = 'none';
@@ -117,17 +116,20 @@ window.addEventListener('load', () => {
       input: true,
       settings: {
         lang: 'ru',
-      },
-      selection: {
-        time: 24,
-        stepMinutes: 15,
+        selection: {
+          time: 24,
+          stepMinutes: 15,
+        },
       },
       actions: {
         changeToInput(e, HTMLInputElement, dates, time, hours, minutes, keeping) {
-          if (dates[0]) {
-            HTMLInputElement.value = dates[0];
+          if (dates[0] && time[0] && hours[0] && minutes[0]) {
+            HTMLInputElement.value = `${dates[0]}  ${hours[0]}${hours[1]}:${minutes[0]}${minutes[1]}`;
             // if you want to hide the calendar after picking a date
             calendar.HTMLElement.classList.add('vanilla-calendar_hidden');
+            calendar1.HTMLElement.classList.add('vanilla-calendar_hidden');
+            calendar2.HTMLElement.classList.add('vanilla-calendar_hidden');
+            calendar3.HTMLElement.classList.add('vanilla-calendar_hidden');
           } else {
             HTMLInputElement.value = '';
           }
@@ -137,7 +139,12 @@ window.addEventListener('load', () => {
 
     const calendar = new VanillaCalendar('#calendar-input', options);
     calendar.init();
-
+    const calendar1 = new VanillaCalendar('#calendar-input1', options);
+    calendar1.init();
+    const calendar2 = new VanillaCalendar('#calendar-input2', options);
+    calendar2.init();
+    const calendar3 = new VanillaCalendar('#calendar-input3', options);
+    calendar3.init();
 
 
   }

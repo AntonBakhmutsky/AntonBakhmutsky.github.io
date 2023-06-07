@@ -1,5 +1,103 @@
 .vanilla-calendar {
 	@apply p-4 rounded-xl relative flex flex-col min-w-[275px] w-max h-max
+
+}
+.vanilla-calendar {
+	z-index: 880;
+	background-color: #FFFFFF;
+	border-radius: 8px !important;
+	border: 1px solid #A2A2A2;
+	padding: 11px !important;
+}
+
+.vanilla-calendar-header__content {
+	background-color: #FF6C00;
+	width: 150px !important;
+	border-radius: 8px;
+	color: #FFFFFF;
+	margin-top: 15px;
+}
+
+.vanilla-calendar-month, .vanilla-calendar-year {
+	color: #FFFFFF;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 17px;
+	text-align: center;
+}
+
+.vanilla-calendar-week__day {
+	font-style: normal;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 17px;
+	text-align: center;
+	color: #A2A2A2;
+}
+
+.vanilla-calendar-months__month, .vanilla-calendar-years__year {
+	font-style: normal;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 18px;
+	text-align: center;
+	color: #A2A2A2;
+}
+
+.vanilla-calendar-day__btn {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 17px;
+	text-align: center;
+	color: #A2A2A2;
+}
+
+.vanilla-calendar-day__btn_today {
+	background: #FF6C00;
+	border-radius: 8px;
+	font-family: 'Proxima Nova', sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 17px;
+	text-align: center;
+	color: #FFFFFF;
+}
+
+.vanilla-calendar-time {
+	border-top: 1px solid #A2A2A2;
+}
+
+.vanilla-calendar-time__hours input, .vanilla-calendar-time__minutes input {
+	color: #A2A2A2;
+}
+
+.vanilla-calendar-time__range {
+	padding-top: 10px;
+}
+
+.vanilla-calendar-time__range input {
+	border-top: 1px solid #A2A2A2;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.vanilla-calendar-arrow {
+	background-color: #FF6C00;
+}
+
+.arrow-smile {
+	position: relative;
+	padding: 0;
+	background: none;
+	border: 0;
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+	transition: 0.2s all;
 }
 
 .vanilla-calendar button:focus-visible {

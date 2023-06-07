@@ -1,4 +1,7 @@
-//PAGE APPLICATION
+import VanillaCalendar from '@uvarov.frontend/vanilla-calendar';
+import '../../styles/base/calendar/vanilla-calendar.css';
+import '../../styles/base/calendar/themes/light.css';
+import '../../styles/base/calendar/themes/dark.css';
 window.addEventListener('load', () => {
   if (!document.querySelector('.one-application')) {
     return null
@@ -44,6 +47,37 @@ window.addEventListener('load', () => {
     routeImg.addEventListener('click', function () {
       roteIconDescription.classList.toggle('block')
     })
+
+
+    const options = {
+      input: true,
+      settings: {
+        lang: 'ru',
+      },
+      actions: {
+        changeToInput(e, HTMLInputElement, dates) {
+          if (dates[0] ) {
+            HTMLInputElement.value = dates[0];
+            // if you want to hide the calendar after picking a date
+            calendar5.HTMLElement.classList.add('vanilla-calendar_hidden');
+            calendar6.HTMLElement.classList.add('vanilla-calendar_hidden');
+            calendar7.HTMLElement.classList.add('vanilla-calendar_hidden');
+            calendar8.HTMLElement.classList.add('vanilla-calendar_hidden');
+          } else {
+            HTMLInputElement.value = '';
+          }
+        },
+      },
+    };
+
+    const calendar5 = new VanillaCalendar('#calendar-input5', options);
+    calendar5.init();
+    const calendar6 = new VanillaCalendar('#calendar-input6', options);
+    calendar6.init();
+    const calendar7 = new VanillaCalendar('#calendar-input7', options);
+    calendar7.init();
+    const calendar8 = new VanillaCalendar('#calendar-input8', options);
+    calendar8.init();
 
 
 

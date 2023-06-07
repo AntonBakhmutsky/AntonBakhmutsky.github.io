@@ -6,7 +6,8 @@ block title
 block content
   section.home
     button.home__btn-close
-      | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/home/close.svg')}
+      a(href='index.html')
+        | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/home/close.svg')}
 
     .home-user
       .home-user-block
