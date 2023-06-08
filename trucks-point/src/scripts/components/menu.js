@@ -9,12 +9,26 @@ window.addEventListener('load', () => {
     const btnToggleImg = document.querySelector('.menu__toggle_img');
     const mainContent = document.querySelector("main");
 
-    menuToggle.addEventListener('click', function() {
-      menu.classList.toggle('menu-max');
-      menuNavName.classList.toggle('hide-list__text')
-      menuContainer.classList.toggle('menu-container-max')
-      mainContent.classList.toggle('content-open')
-    });
+    if (!document.querySelector('.one-application-info')) {
+      menuToggle.addEventListener('click', function() {
+        menu.classList.toggle('menu-max');
+        menuNavName.classList.toggle('hide-list__text')
+        menuContainer.classList.toggle('menu-container-max')
+        mainContent.classList.toggle('content-open')
+      });
+    } else {
+      const oneAppInfoPage = document.querySelector('.one-application-info')
+      const oneAppIndicators = document.querySelector('.plan-indicators')
+
+      menuToggle.addEventListener('click', function() {
+        menu.classList.toggle('menu-max');
+        menuNavName.classList.toggle('hide-list__text')
+        menuContainer.classList.toggle('menu-container-max')
+        mainContent.classList.toggle('content-open')
+        oneAppInfoPage.classList.toggle('content-open')
+        oneAppIndicators.classList.toggle('content-open')
+      });
+    }
 
 
     // function toggleMenu() {

@@ -118,7 +118,7 @@ window.addEventListener('load', () => {
         lang: 'ru',
         selection: {
           time: 24,
-          stepMinutes: 15,
+          stepMinutes: 5,
         },
       },
       actions: {

@@ -18,6 +18,10 @@
 	margin-top: 15px;
 }
 
+.vanilla-calendar-header__content ::before{
+	content: '';
+}
+
 .vanilla-calendar-month, .vanilla-calendar-year {
 	color: #FFFFFF;
 	font-style: normal;
@@ -75,11 +79,12 @@
 }
 
 .vanilla-calendar-time__range {
-	padding-top: 10px;
+	padding-top: 5px;
 }
 
 .vanilla-calendar-time__range input {
-	border-top: 1px solid #A2A2A2;
+	background-color: #EEEEEE;
+	height: 3px !important;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -88,6 +93,8 @@
 .vanilla-calendar-arrow {
 	background-color: #FF6C00;
 }
+
+#FF6C00
 
 .arrow-smile {
 	position: relative;

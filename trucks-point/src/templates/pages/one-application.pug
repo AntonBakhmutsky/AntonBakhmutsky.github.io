@@ -18,18 +18,21 @@ block content
 
       .one-application_main
 
-        .one-application-creating_form__title
+        .one-application-creating_form__title.one-application_title
           span.one-application-creating_form__title-name Информация о заявке
           .one-application_main_buttons
             button.one-application_main_buttons__btn
-              .one-application_main_buttons__btn__img
-                | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-application/update.svg')}
+              .title(data-tooltip="обновить")
+                .one-application_main_buttons__btn__img
+                  | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-application/update.svg')}
             button.one-application_main_buttons__btn
-              .one-application_main_buttons__btn__img
-                | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-application/cloud.svg')}
+              .title(data-tooltip="полезный текст")
+                .one-application_main_buttons__btn__img
+                  | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-application/cloud.svg')}
             button.one-application_main_buttons__btn
-              .one-application_main_buttons__btn__img
-                | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-application/save.svg')}
+              .title(data-tooltip="скачать")
+                .one-application_main_buttons__btn__img
+                  | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-application/save.svg')}
             button.one-application_main_buttons__btn
               .one-application_main_buttons__btn__img
                 | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/one-application/bell.svg')}
@@ -253,17 +256,17 @@ block content
               span.text-red *
             .one-application-modal_content_form-point-date
               input(type="text" placeholder="Выберите дату" id="calendar-input5" readonly="")
-              | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/calendar.svg')}
               .datapickerInput#calendar-input-div5
               .datapickerCalendar#calendar5
-            label.one-application-modal_content_form-point-label
+              | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/calendar.svg')}
+            label.one-application-modal_content_form-point-label.date-zagruz
               span Дата загрузки/выгрузки
               span.text-red *
             .one-application-modal_content_form-point-date
               input(type="text" placeholder="Выберите дату" id="calendar-input6" readonly="")
-              | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/calendar.svg')}
               .datapickerInput#calendar-input-div6
               .datapickerCalendar#calendar6
+              | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/calendar.svg')}
           .one-application-modal_content_form-point
             .one-application-modal_content_form-point-address
               span.one-application-modal_content_form-point-address__title Адрес 2:
@@ -273,17 +276,17 @@ block content
               span.text-red *
             .one-application-modal_content_form-point-date
               input(type="text" placeholder="Выберите дату" id="calendar-input7" readonly="")
-              | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/calendar.svg')}
               .datapickerInput#calendar-input-div7
               .datapickerCalendar#calendar7
-            label.one-application-modal_content_form-point-label
-              span Дата прибытия на точку
+              | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/calendar.svg')}
+            label.one-application-modal_content_form-point-label.date-zagruz
+              span Дата загрузки/выгрузки
               span.text-red *
             .one-application-modal_content_form-point-date
               input(type="text" placeholder="Выберите дату" id="calendar-input8" readonly="")
-              | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/calendar.svg')}
               .datapickerInput#calendar-input-div8
               .datapickerCalendar#calendar8
+              | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/calendar.svg')}
           .one-application-modal_content_form-cause
             label(for="actualMileage").one-application-modal_content_form-point-label
               span Фактический пробег
@@ -297,6 +300,7 @@ block content
             +button('Сохранить', 'orange-bg', 'one-application/checkmark-circle-white.svg', 'submit', null)
             +button('отмена', 'gray', 'one-application/cross-gray.svg', 'reset', null)
 
-    include ../components/one-application/one-application-info
-    include ../components/one-application/plan-indicators
-    include ../components/one-application/route
+
+  include ../components/one-application/plan-indicators
+  include ../components/one-application/route
+  include ../components/one-application/one-application-info

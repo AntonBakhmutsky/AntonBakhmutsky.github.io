@@ -3,7 +3,6 @@
 
 .one-application
   background-color: $white
-  height: auto
   position: absolute
   z-index: 800
   margin: 0 0 0 3vw
@@ -11,12 +10,18 @@
   width: 633px
   display: flex
   box-shadow: 10px 0 15px rgba(37, 37, 45, 0.1)
+  height: calc(100vh - 30px)
+  overflow: hidden
+
+  &_title
+    margin-top: 0
 
   &_header
     display: flex
     justify-content: space-between
     box-sizing: border-box
     padding: 26px 12px 0 27px
+    margin-bottom: 23px
 
     &_btn-close
       width: 17px
@@ -36,11 +41,28 @@
 
   &_main
     box-sizing: border-box
-    padding: 0 30px 35px 30px
+    padding: 15px 30px 35px 30px
+    overflow-y: scroll
+    margin-right: 12px
+    position: relative
+    z-index: 50
+    max-height: 90vh
+
+    &::-webkit-scrollbar
+      width: 6px
+      height: 875px
+
+    &::-webkit-scrollbar-thumb
+      background-color: $gray
+      border-radius: 100px
+
+    &::-webkit-scrollbar-track
+      background-color: $gray-light
 
     &_buttons
       display: flex
       align-items: center
+      padding-top: 20px
 
       &__btn
         margin-right: 20px
@@ -60,6 +82,7 @@
 
       &_name
         width: 23%
+        margin-right: 25px
 
         span
           color: $gray-dark
@@ -227,6 +250,9 @@
 
       button
         margin: 0 20px 20px 0
+        display: flex
+        align-items: center
+        justify-content: center
 
 .one-application-modal
 
@@ -304,6 +330,3 @@
         display: flex
         box-sizing: border-box
         padding: 30px
-
-
-

@@ -5,6 +5,7 @@ window.addEventListener('load', () => {
 
     const toggleBtn = document.querySelector('.notice-main-message-title__toggle');
     const notice = document.querySelector('.notice-main-message')
+    const btnCheckAllMes = document.getElementById('btnCheckAllMes')
 
 
 
@@ -24,7 +25,7 @@ window.addEventListener('load', () => {
     }
 
 // Получаем все дивы с классом "notice-main-message-unread"
-    var divs = document.querySelectorAll('.notice-main-message-unread');
+    const divs = document.querySelectorAll('.notice-main-message-unread');
 
 // Применяем обработчик событий к каждому диву
     divs.forEach(function(div) {
