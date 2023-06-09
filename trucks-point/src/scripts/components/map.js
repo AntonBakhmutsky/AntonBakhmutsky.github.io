@@ -14,22 +14,39 @@ window.addEventListener('load', () => {
 
 
 
-    const btnOpenMapFilter = document.getElementById('map-filter');
+    const btnOpenMapFilterIndicators = document.getElementById('map-filter');
     const imgMapFilter = document.querySelector('.map-filter-img')
     const listMapFilter = document.querySelector('.map-filter-list')
     const filterPage = document.querySelector('.filter')
     const closeFilterPage = document.getElementById('btnCloseFilter')
+    const btnOpenMapFilter = document.getElementById('btnFilterMini')
 
-    btnOpenMapFilter.addEventListener('click', function (e) {
+    btnOpenMapFilterIndicators.addEventListener('click', function (e) {
       e.stopPropagation()
       imgMapFilter.classList.add('none');
       listMapFilter.classList.add('block');
-      filterPage.style.display = 'block';
     })
 
     closeFilterPage.addEventListener('click', function (){
       filterPage.style.display = 'none';
     })
+
+    btnOpenMapFilter.addEventListener('click', function (e) {
+      e.stopPropagation()
+      filterPage.style.display = 'block';
+    })
+
+    document.addEventListener("click", function(event) {
+      const targetElement = event.target; // Получаем элемент, на который был совершен щелчок
+      // Проверяем, является ли целью события элемент, который вы хотите закрыть
+      const isClickInsideElement = listMapFilter.contains(targetElement);
+      // Если целью события не является элемент, закрваем его
+      if (!isClickInsideElement) {
+        listMapFilter.classList.remove('block');
+        imgMapFilter.classList.remove('none');
+      }
+    });
+
 
   }
 

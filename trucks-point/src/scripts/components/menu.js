@@ -15,6 +15,7 @@ window.addEventListener('load', () => {
         menuNavName.classList.toggle('hide-list__text')
         menuContainer.classList.toggle('menu-container-max')
         mainContent.classList.toggle('content-open')
+        menuToggle.classList.toggle('menu__toggle-max')
       });
     } else {
       const oneAppInfoPage = document.querySelector('.one-application-info')
@@ -27,6 +28,7 @@ window.addEventListener('load', () => {
         mainContent.classList.toggle('content-open')
         oneAppInfoPage.classList.toggle('content-open')
         oneAppIndicators.classList.toggle('content-open')
+        menuToggle.classList.toggle('menu__toggle-max')
       });
     }
 

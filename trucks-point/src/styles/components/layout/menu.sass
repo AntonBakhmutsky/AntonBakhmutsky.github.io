@@ -5,10 +5,11 @@
   position: absolute
   height: 105vh
   width: 3vw
-  transition: all 0.6s ease
+  transition: width 0.6s ease
   box-sizing: border-box
 .menu-container-max
   width: 14vw
+  transition: width 0.6s ease
 
 .menu
   height: 100vh
@@ -21,13 +22,13 @@
   display: flex
   flex-direction: column
   justify-content: space-between
-  transition: all 0.6s ease
+  transition: width 0.6s ease
   z-index: 980
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.15)
 
   &__logo
     display: none
-    transition: 0.3s
+    transition: width 0.3s ease
     width: 224px
     margin: 0 auto
     +screen($desktop-sm)
@@ -36,7 +37,7 @@
       width: 120px
   &__logo-min
     display: block
-    transition: 0.3s
+    transition: width 0.3s ease
     width: 60px
     margin: 0 auto
     +screen($desktop-sm)
@@ -89,11 +90,11 @@
       border-radius: 8px
       height: 50px
       padding-left: 21.5px
-      transition: background-color 0.3s
+      transition: background-color 0.3s ease
       box-sizing: border-box
       +screen($desktop-sm)
          padding: 9px
-      &:hover
+      &:hover , &:focus
         background-color: rgba(238, 238, 238, 0.1)
 
       div
@@ -105,13 +106,16 @@
         display: none
         +font(16px, 19px, 400)
         color: $white
-        transition: color 0.3s
+        transition: color 0.3s ease
         +screen($tablet-sm)
           font-size: 13px
         +screen($tablet-xs)
           display: none
 
-      &:hover span, &:hover .list__img svg path
+      .list__img svg path
+        transition: fill 0.3s ease
+
+      &:hover span, &:hover .list__img svg path, &:focus span, &:active .list__img svg path
         color: $orange
         fill: $orange
 
@@ -144,16 +148,19 @@
     top: 15px
     right: -40px
     z-index: 500
-    transition: right 0.3s ease
+    transition: right 0.6s ease
     img
       transform: rotate(180deg)
     +screen($tablet-xs)
       display: none
+    &:hover
+      right: -44px
+      background-image: $orange-grad
 
 .menu-max
   padding-left: 9px
   width: 15vw
-  align-items: start
+  align-items: flex-start
   box-sizing: border-box
   height: 103vh
 
@@ -163,7 +170,6 @@
     +screen($desktop-sm)
       width: 45px
 
-
   .menu__logo-min
     display: none
 
@@ -171,7 +177,7 @@
     width: 100%
     a
       padding: 5px 21px
-      justify-content: start
+      justify-content: flex-start
       div
         width: 20px
         margin-right: 0
@@ -192,11 +198,6 @@
       display: none
       transition: 0.3s ease
 
-  .menu__toggle
-    img
-      transform: rotate(0deg)
-
-
-
-
-
+.menu__toggle-max
+  img
+    transform: rotate(0deg)
