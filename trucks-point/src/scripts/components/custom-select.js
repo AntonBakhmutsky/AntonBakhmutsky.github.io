@@ -19,6 +19,7 @@ window.addEventListener('load', () => {
           const checkedOptions = Array.from(options.querySelectorAll('input[type="radio"]:checked'));
           const selectedOptionsText = checkedOptions.map(option => option.value).join(', ');
           options.classList.toggle('flex');
+          btnOpenOptions.classList.toggle('rotate');
 
           selectedOption.textContent = selectedOptionsText;
         });
