@@ -68,11 +68,29 @@ block content
         .trucks-sort-number
           input(type="text" placeholder="Номер").trucks-sort__text
         .trucks-sort-type
-          select
-            option(value="") Все
+            .select
+              .select-trigger.selected-option
+                span.selected-option__text Все
+                .selected-option__toggle-btn
+                  | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/home/arrow-select.svg')}
+              .select-options
+                input#option1(type='radio' value='Все' name="select-option")
+                label(for='option1') Все
+                input#option2(type='radio' value='Грузовик' name="select-option")
+                label(for='option2') Грузовик
+                input#option3(type='radio' value='Тягач' name="select-option")
+                label(for='option3') Тягач
         .trucks-sort-mark
-          select
-            option(value="") Все
+          .select
+            .select-trigger.selected-option Все
+            .select-options
+              input#option4(type='radio' value='Все' name="select-option1")
+              label(for='option4') Все
+              input#option5(type='radio' value='Asko' name="select-option1")
+              label(for='option5') Asko
+              input#option6(type='radio' value='BAW' name="select-option1")
+              label(for='option6') BAW
+
         .trucks-titles-logist
           select
             option(value="")

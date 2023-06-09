@@ -7,6 +7,7 @@ require('./components/application')
 require('./components/one-application')
 require('./components/one-application-creating')
 require('./components/one-report')
+require('./components/custom-select')
 
 document.documentElement.dataset.theme = 'light';
 

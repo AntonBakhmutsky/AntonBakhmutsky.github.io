@@ -62,7 +62,7 @@ input, textarea
   box-sizing: border-box
   padding: 0
 
-  &::placeholder
+  &::placeholder, &:valid
     color: $black
 
 textarea
@@ -72,7 +72,9 @@ select
   &:focus
     outline: none
   & option:hover
-    background-color: $orange
+    background-color: $orange !important
+  &::placeholder, &:valid
+    color: $black
 
 .check-mark
   display: block
@@ -447,6 +449,73 @@ input[type="radio"] + label
 
 .block
   display: block
+
+.select
+  position: relative
+  box-sizing: border-box
+  width: 100%
+  background-color: $white
+  border: 1px solid $gray
+  border-radius: 8px
+  height: 30px
+
+  &-trigger, .selected-option
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin: 0 9px
+    +font(14px, 17px, 400)
+    color: $black
+
+  &-options
+    background-color: $white
+    width: 100%
+    border-left: 1px solid $gray
+    border-bottom: 1px solid $gray
+    border-right: 1px solid $gray
+    border-bottom-left-radius: 8px
+    border-bottom-right-radius: 8px
+    display: none
+    flex-direction: column
+    position: absolute
+    overflow-y: scroll
+    overflow-x: hidden
+    max-height: 120px
+
+    &::-webkit-scrollbar
+      width: 3px
+
+    &::-webkit-scrollbar-thumb
+      background-color: $gray
+      border-radius: 100px
+
+    &::-webkit-scrollbar-track
+      background-color: $gray-light
+
+    label
+      +font(14px, 17px, 400)
+      color: $gray
+      border-top: 1px solid $gray
+      box-sizing: border-box
+      padding: 10px
+
+      &:hover
+        background-color: $orange
+        color: $white
+
+      &:checked
+        color: $black
+
+    input[type="radio"]
+      display: none
+
+.selected-option__toggle-btn
+  transition: all 0.4s ease
+
+.rotate
+  transform: rotate(180deg)
+
+
 
 
 
