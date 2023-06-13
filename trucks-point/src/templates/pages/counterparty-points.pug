@@ -50,8 +50,9 @@ block content
           input(type="text" placeholder="Название").counterparty-points-sort__text
         .counterparty-points-sort-address
         .counterparty-points-sort-using-date
-          select
-            option(value="") Равно
+          input(type="text" placeholder="Равно" id="calendar-input13" readonly="")
+          .datapickerInput#calendar-input-div13
+          .datapickerCalendar#calendar13
           .counterparty-points-sort-date
             | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/trucks/date.svg')}
 

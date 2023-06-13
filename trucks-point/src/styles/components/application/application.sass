@@ -169,11 +169,8 @@
               display: flex
               flex-direction: column
 
-            &_input
-              border: 1px solid $gray
-              border-radius: 8px
+            &_input, &_input-sel
               box-sizing: border-box
-              padding: 14px 17px 11px 0
               display: flex
               align-items: center
               width: 463px
@@ -189,6 +186,10 @@
               +screen($tablet-sm)
                 width: 100%
                 margin: 20px 0 0 0
+            &_input
+              border: 1px solid $gray
+              border-radius: 8px
+              padding: 14px 17px 11px 0
 
               svg
                 margin: 0 6px 0 11px
@@ -306,12 +307,7 @@
 
               &_item
                 box-sizing: border-box
-                padding: 12px 10px 11px 10px
-                border: 1px solid $gray
-                border-radius: 8px
-                display: flex
-                justify-content: space-between
-                align-items: center
+                height: 40px
                 width: 226px
                 +screen($desktop-m)
                   width: 200px

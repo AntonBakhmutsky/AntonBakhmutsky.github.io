@@ -49,11 +49,9 @@ block content
         .trailers-sort-number
           input(type="text" placeholder="Номер").trailers-sort__text
         .trailers-sort-type
-          select.trailers-sort__text
-            option(value='') Показать все
+          +select('Показать все', '')
         .trailers-sort-type-load
-          select.trailers-sort__text
-            option(value='') Выбрать значение
+          +select('Выбрать значение', '')
 
       .trailers-list
         a.trailers-list-item(href='one-trailer.html')

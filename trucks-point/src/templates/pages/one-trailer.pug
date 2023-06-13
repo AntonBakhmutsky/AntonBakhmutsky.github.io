@@ -23,15 +23,12 @@ block content
         input(type='text' name='Марка' required='').one-trailer-content-item__input
       .one-trailer-content-item
         span.one-trailer-content-item__title Тип прицепа*
-        .one-car-content-item__input
-          select(name='Тип прицепа' required='').one-trailer-content-item__input
-            option(value='')
-            option(value='Рефрижератор') Рефрижератор
+        .one-car-content-item__input-sel
+          +select('Тип прицепа', 'Рефрижератор' )
       .one-trailer-content-item
         span.one-trailer-content-item__title Тип загрузки/выгрузки
-        .one-car-content-item__input
-          select(name='Тип загрузки/выгрузки' required='').one-trailer-content-item__input
-            option(value='')
+        .one-car-content-item__input-sel
+          +select('Тип загрузки/выгрузки', 'Задняя' )
       .one-trailer-content-item.one-trailer-content-item-docks
         span.one-car-content-item__title Cсылки на документы
         textarea(name='docks').one-car-content-item__input

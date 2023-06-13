@@ -23,7 +23,7 @@
     padding: 0 12px 30px
     box-sizing: border-box
     margin: 0 12px 0 30px
-    max-height: 90vh
+    max-height: 80vh
 
     &::-webkit-scrollbar
       width: 6px
@@ -62,13 +62,15 @@
         color: $gray-dark
         margin-right: 27px
 
-      &__input
+      &__input, &__input-sel
         width: 19vw
-        border: 1px solid $gray
         color: $gray
         box-sizing: border-box
-        padding: 11px 10px
         +font(14px, 17px,400)
+
+      &__input
+        border: 1px solid $gray
+        padding: 11px 10px
         border-radius: 8px
 
         &:focus, &:active

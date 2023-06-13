@@ -20,6 +20,7 @@ window.addEventListener('load', () => {
           const selectedOptionsText = checkedOptions.map(option => option.value).join(', ');
           options.classList.toggle('flex');
           btnOpenOptions.classList.toggle('rotate');
+          selectedOption.style.color = '#25252D';
 
           selectedOption.textContent = selectedOptionsText;
         });

@@ -63,14 +63,16 @@
         color: $gray-dark
         margin-right: 27px
 
-      &__input
+      &__input, &__input-sel
         width: 19vw
+        box-sizing: border-box
+        +font(14px, 17px,400)
+
+      &__input
         border: 1px solid $gray
         color: $gray
-        box-sizing: border-box
-        padding: 11px 10px
-        +font(14px, 17px,400)
         border-radius: 8px
+        padding: 11px 10px
 
         &:focus, &:active
           color: $gray-dark

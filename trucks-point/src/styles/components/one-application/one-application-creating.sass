@@ -10,6 +10,7 @@
   box-shadow: 10px 0 15px rgba(37, 37, 45, 0.1)
   height: calc(100vh - 35px)
   overflow: hidden
+  width: 40vw
 
 
   &_header
@@ -24,6 +25,8 @@
     &_btn-close
       width: 17px
       height: 17px
+      position: relative
+      bottom: 8px
 
     &__title
       +font(16px, 19px, 400)
@@ -82,12 +85,14 @@
         +font(14px, 17px, 700)
         color: $gray-dark
 
-      &__input
+      &__input, &__input-sel
         width: 70%
-        border: 1px solid $gray
-        border-radius: 8px
         box-sizing: border-box
+
+      &__input
+        border: 1px solid $gray
         padding: 12px 10px 11px 10px
+        border-radius: 8px
 
         input, textarea
           +font(14px, 17px, 400)
@@ -98,20 +103,6 @@
         select
           +font(14px, 17px, 400)
           color: $gray
-
-        select
-          width: 100%
-          border: none
-          -webkit-appearance: none
-          -moz-appearance: none
-          appearance: none
-          background-image: url('../assets/img/one-application-creating/select.svg')
-          background-repeat: no-repeat
-          background-position-x: 100%
-          background-position-y: 50%
-          &:focus
-            border: none
-            outline: none
 
       &_radio-container
         display: flex
@@ -125,6 +116,7 @@
             margin-right: 0
 
       &_loading-types
+        width: 100%
 
         .one-application-creating_form_item__input
           width: 100%

@@ -68,35 +68,13 @@ block content
         .trucks-sort-number
           input(type="text" placeholder="Номер").trucks-sort__text
         .trucks-sort-type
-            .select
-              .select-trigger.selected-option
-                span.selected-option__text Все
-                .selected-option__toggle-btn
-                  | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/home/arrow-select.svg')}
-              .select-options
-                input#option1(type='radio' value='Все' name="select-option")
-                label(for='option1') Все
-                input#option2(type='radio' value='Грузовик' name="select-option")
-                label(for='option2') Грузовик
-                input#option3(type='radio' value='Тягач' name="select-option")
-                label(for='option3') Тягач
+          +select('все', 'Грузовик', 'Тягач')
         .trucks-sort-mark
-          .select
-            .select-trigger.selected-option Все
-            .select-options
-              input#option4(type='radio' value='Все' name="select-option1")
-              label(for='option4') Все
-              input#option5(type='radio' value='Asko' name="select-option1")
-              label(for='option5') Asko
-              input#option6(type='radio' value='BAW' name="select-option1")
-              label(for='option6') BAW
-
+          +select('все', 'Asko', 'BAW')
         .trucks-titles-logist
-          select
-            option(value="")
+          +select('все', 'Андрей Петров', 'Константин Иванов')
         .trucks-sort-colone
-          select
-            option(value="")
+          +select('Название колонны', 'Колонна')
         .trucks-sort-tracker
           input(type="text" placeholder="Трекер").trucks-sort__text
         .trucks-sort-datetracker
@@ -112,8 +90,7 @@ block content
           .trucks-sort-date
             | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/trucks/date.svg')}
         .trucks-sort-deleted
-          select
-            option(value="") Не отмечено
+          +select('Не отмечено', 'Андрей Петров', 'Константин Иванов')
         .trucks-sort-datedelete
           input(type="text" placeholder="Равно" id="calendar-input11" readonly="")
           .datapickerInput#calendar-input-div11

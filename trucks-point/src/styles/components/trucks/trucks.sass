@@ -110,13 +110,20 @@
 
       input, select, .trucks-sort-date
         +font(12px, 15px, 400)
-        color: $gray
         background-color: $white
         border: 1px solid $gray
         border-radius: 8px
         padding: 0
         height: 30px
         box-sizing: border-box
+
+      input, select
+
+        &::placeholder
+          color: $gray
+
+      .trucks-sort-date
+        color: $black !important
 
       input
         &::placeholder, &:valid

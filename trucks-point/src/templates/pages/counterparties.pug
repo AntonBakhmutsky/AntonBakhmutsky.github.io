@@ -61,8 +61,7 @@ block content
         .counterparties-sort-email
           input(type="text" placeholder="Эл. почта").counterparties-sort__text
         .counterparties-sort-access
-          select.counterparties-sort__text
-            option(value='') Показать все
+          +select('Показать все', 'Открыть')
 
       .counterparties-list
         a.counterparties-list-item(href='one-contractor.html')

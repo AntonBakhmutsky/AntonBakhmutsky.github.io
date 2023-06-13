@@ -457,7 +457,9 @@ input[type="radio"] + label
   background-color: $white
   border: 1px solid $gray
   border-radius: 8px
-  height: 30px
+  min-height: 30px
+  height: 100%
+  padding: 9px
 
   &-trigger, .selected-option
     display: flex
@@ -465,7 +467,13 @@ input[type="radio"] + label
     align-items: center
     margin: 0 9px
     +font(14px, 17px, 400)
-    color: $black
+    color: $gray
+
+  .selected-option__text
+    white-space: nowrap
+    max-width: 90%
+    overflow: hidden
+
 
   &-options
     background-color: $white
@@ -481,6 +489,10 @@ input[type="radio"] + label
     overflow-y: scroll
     overflow-x: hidden
     max-height: 120px
+    z-index: 60
+    right: 0
+
+    &__text
 
     &::-webkit-scrollbar
       width: 3px

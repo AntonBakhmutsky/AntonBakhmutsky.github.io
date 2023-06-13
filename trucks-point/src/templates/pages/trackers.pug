@@ -58,8 +58,7 @@ block content
         .trackers-sort-number
           input(type="text" placeholder="Номер").trackers-sort__text
         .trackers-sort-type
-          select.trackers-sort__text
-            option(value='') Показать все
+          +select('Показать все', '')
         .trackers-sort-date-create
         .trackers-sort-period
         .trackers-sort-date-coord

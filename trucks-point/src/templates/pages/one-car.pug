@@ -24,36 +24,26 @@ block content
         .one-car-content-item__title
           span Тип автомобиля
           span.text-red *
-        .one-car-content-item__input
-          select(name='type' required='')
-           option(value='')
-           option(value='Тягач') Тягач
+        .one-car-content-item__input-sel
+          +select('Выберите тип автомобиля', 'Тягач')
       .one-car-content-item
         .one-car-content-item__title
           span Марка
           span.text-red *
-        .one-car-content-item__input
-          select(name='mark' required='').one-car-content-item__input
-            option(value='')
-            option(value='Mercedes-Benz') Mercedes-Benz
+        .one-car-content-item__input-sel
+          +select('Выберите марку', 'Mercedes-Benz')
       .one-car-content-item
         span.one-car-content-item__title Логист
-        .one-car-content-item__input
-          select(name='logist').one-car-content-item__input
-            option(value='')
-            option(value='Томсон Артём Александрович') Томсон Артём Александрович
+        .one-car-content-item__input-sel
+          +select('Выберите логиста', 'Томсон Артём Александрович')
       .one-car-content-item
         span.one-car-content-item__title Трекер
-        .one-car-content-item__input
-          select(name='tracker').one-car-content-item__input
-            option(value='')
-            option(value='sotr_22486793') sotr_22486793
+        .one-car-content-item__input-sel
+          +select('Выберите трекер', 'sotr_22486793')
       .one-car-content-item
         span.one-car-content-item__title Колонна
-        .one-car-content-item__input
-          select(name='colonne').one-car-content-item__input
-            option(value='')
-            option(value='Андреев Евгений') Андреев Евгений
+        .one-car-content-item__input-sel
+          +select('Выберите колонну', 'Андреев Евгений')
       .one-car-content-item.one-car-content-item-docks
         span.one-car-content-item__title Cсылки на документы
         textarea(name='docks').one-car-content-item__input
