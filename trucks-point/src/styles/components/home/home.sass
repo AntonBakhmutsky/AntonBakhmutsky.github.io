@@ -5,17 +5,30 @@
   margin: 0 auto
   display: flex
   flex-direction: column
-  width: 65vw
+  width: 100%
   box-sizing: border-box
-  padding: 60px
+  padding: 60px 15vw
   background-color: $white
+  height: calc(100vh - 90px)
+  overflow-y: scroll
+  scrollbar-width: thin
+  scrollbar-color: $gray $gray-light
   +screen($tablet-sm)
     width: 90vw
+
+  &::-webkit-scrollbar
+    width: 6px
+
+  &::-webkit-scrollbar-thumb
+    background-color: $gray
+    border-radius: 100px
+
+  &::-webkit-scrollbar-track
+    background-color: $gray-light
 
   &__btn-close
     position: relative
     right: 53%
-    top: 20%
     cursor: pointer
 
   #organization-page, #settings-page

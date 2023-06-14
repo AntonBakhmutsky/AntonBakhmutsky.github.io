@@ -2,7 +2,7 @@
 @use '../../abstracts/mixins' as *
 
 .one-driver
-  height: calc(100vh - 35px)
+  height: calc(100vh - 90px)
 
   &-header
     display: flex
@@ -24,6 +24,8 @@
     box-sizing: border-box
     margin: 0 12px 0 30px
     max-height: 90vh
+    scrollbar-width: thin
+    scrollbar-color: $gray $gray-light
 
     &::-webkit-scrollbar
       width: 6px

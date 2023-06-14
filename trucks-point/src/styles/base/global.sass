@@ -6,7 +6,8 @@ html
   min-height: 100vh
   box-sizing: border-box
   padding: 0
-  overflow-x: hidden
+  max-height: 100vh
+  overflow: hidden
 
 body
   max-width: 1920px
@@ -67,6 +68,8 @@ input, textarea
 
 textarea
   resize: none
+  scrollbar-width: thin
+  scrollbar-color: $gray $gray-light
 
 select
   &:focus
@@ -491,8 +494,8 @@ input[type="radio"] + label
     max-height: 120px
     z-index: 60
     right: 0
-
-    &__text
+    scrollbar-width: thin
+    scrollbar-color: $gray $gray-light
 
     &::-webkit-scrollbar
       width: 3px

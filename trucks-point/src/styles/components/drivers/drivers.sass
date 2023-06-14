@@ -2,16 +2,25 @@
 @use '../../abstracts/mixins' as *
 
 .drivers
-  width: 79vw
-  height: calc(100vh - 90px)
+  width: 100%
+  height: calc(100vh - 143px)
+  padding: 26px 77px 0 110px
+  overflow-y: scroll
   margin: 0 auto
-  padding: 26px 0 0 50px
   box-sizing: border-box
   position: relative
-  overflow: scroll
+  scrollbar-width: thin
+  scrollbar-color: $gray $gray-light
 
   &::-webkit-scrollbar
-    display: none
+    width: 6px
+
+  &::-webkit-scrollbar-thumb
+    background-color: $gray
+    border-radius: 100px
+
+  &::-webkit-scrollbar-track
+    background-color: $gray-light
 
   .close-btn
     position: absolute
@@ -101,7 +110,7 @@
 
       input
         +font(12px, 15px, 400)
-        color: $gray
+        color: $black
         background-color: $white
         border: 1px solid $gray
         border-radius: 8px

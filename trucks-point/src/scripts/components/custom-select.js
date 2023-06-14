@@ -11,6 +11,14 @@ window.addEventListener('load', () => {
         const btnOpenOptions = trigger.parentNode.querySelector('.selected-option__toggle-btn');
 
         trigger.addEventListener('click', function() {
+          // Закрытие других селектов
+          const otherSelects = document.querySelectorAll('.select-options');
+          otherSelects.forEach(select => {
+            if (select !== options && select.classList.contains('flex')) {
+              select.classList.remove('flex');
+            }
+          });
+
           options.classList.toggle('flex');
           btnOpenOptions.classList.toggle('rotate');
         });

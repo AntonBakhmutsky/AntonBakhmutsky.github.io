@@ -3,18 +3,27 @@
 
 .application
   transition: all 0.3s ease-in-out
-  width: 79vw
-  height: calc(100vh - 90px)
+  width: 100%
+  height: calc(100vh - 143px)
   margin: 0 auto
-  padding: 26px 0 0 50px
+  padding: 26px 77px 0 110px
   box-sizing: border-box
   display: flex
   flex-direction: column
   position: relative
-  overflow: scroll
+  overflow-y: scroll
+  scrollbar-width: thin
+  scrollbar-color: $gray $gray-light
 
   &::-webkit-scrollbar
-    display: none
+    width: 6px
+
+  &::-webkit-scrollbar-thumb
+    background-color: $gray
+    border-radius: 100px
+
+  &::-webkit-scrollbar-track
+    background-color: $gray-light
 
   .close-btn
     position: absolute
@@ -173,16 +182,10 @@
               box-sizing: border-box
               display: flex
               align-items: center
-              width: 463px
+              width: 32%
               height: 40px
               position: relative
               transition: border 0.3s
-              +screen($desktop-m)
-                width: 403px
-              +screen($desktop-sm)
-                width: 310px
-              +screen($tablet)
-                width: 245px
               +screen($tablet-sm)
                 width: 100%
                 margin: 20px 0 0 0
@@ -271,13 +274,14 @@
               margin: 0 20px 0 20px
               height: 40px
               justify-content: space-between
+              width: 32%
               +screen($tablet-sm)
                 margin: 20px 0 0 0
 
               &-from, &-to
                 border: 1px solid $gray
                 border-radius: 8px
-                width: 223px
+                width: 50%
                 display: flex
                 justify-content: space-between
                 align-items: center
@@ -285,12 +289,6 @@
                 padding: 11px 9px 11px 10px
                 input::placeholder
                   color: $gray
-                +screen($desktop-m)
-                  width: 200px
-                +screen($desktop-sm)
-                  width: 150px
-                +screen($tablet)
-                  width: 130px
                 +screen($tablet-sm)
                   width: 100%
 
@@ -302,19 +300,14 @@
             &_inputs
               display: flex
               height: 40px
+              width: 32%
               +screen($tablet-sm)
                 margin: 20px 0 0 0
 
               &_item
                 box-sizing: border-box
                 height: 40px
-                width: 226px
-                +screen($desktop-m)
-                  width: 200px
-                +screen($desktop-sm)
-                  width: 150px
-                +screen($tablet)
-                  width: 130px
+                width: 50%
                 +screen($tablet-sm)
                   width: 100%
 
@@ -411,16 +404,11 @@
         &-status
           width: 110px
 
-
     &-main
       border: 1px solid $gray
       border-radius: 8px
       box-sizing: border-box
       margin-top: 10px
-      overflow: scroll
-
-      &::-webkit-scrollbar
-        display: none
 
       &-item
         box-sizing: border-box

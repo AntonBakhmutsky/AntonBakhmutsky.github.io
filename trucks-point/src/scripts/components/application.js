@@ -16,11 +16,7 @@ window.addEventListener('load', () => {
     const checkboxContainer = document.querySelectorAll(".application_search_form-disclosed_checkboxes__item");
     const buttonsContainer = document.querySelector(".application_search_form_buttons");
     const formHeaderContainer = document.querySelector(".application_search_toggle");
-    const btnOpenListFromCityes = document.getElementById('btnAppFromCityes');
-    const searchCityFromInput = document.querySelector('.application_search_form-disclosed_form-top_input')
-    const searchCityToInput = document.querySelector('.application_search_form-disclosed_form-top_input-to')
     const disclosedListCityesFrom = document.querySelector('.application_search_form-disclosed_form-top_input_from-cityes')
-    const btnOpenListToCityes = document.getElementById('btnAppToCityes');
     const disclosedListCityesTo = document.querySelector('.application_search_form-disclosed_form-top_input_to-cityes')
     let isShortFormVisible = true;
     let isListCityesFromVisible = true;
@@ -56,33 +52,39 @@ window.addEventListener('load', () => {
     });
 
 
-    btnOpenListFromCityes.addEventListener('click', (event) => {
-      event.preventDefault()
-      searchCityFromInput.classList.toggle('application-input-focus');
-      if (!isListCityesFromVisible) {
-        disclosedListCityesFrom.style.display = 'none';
-        isListCityesFromVisible = true;
-      } else {
-        disclosedListCityesFrom.style.display = 'block';
-        isListCityesFromVisible = false;
-        disclosedListCityesTo.style.display = 'none';
-        isListCityesToVisible = true;
-      }
-    })
 
-    btnOpenListToCityes.addEventListener('click', (event) => {
-      event.preventDefault()
-      searchCityToInput.classList.toggle('application-input-focus');
-      if (!isListCityesToVisible) {
-        disclosedListCityesTo.style.display = 'none';
-        isListCityesToVisible = true;
-      } else {
-        disclosedListCityesTo.style.display = 'block';
-        isListCityesToVisible = false;
-        disclosedListCityesFrom.style.display = 'none';
-        isListCityesFromVisible = true;
-      }
-    })
+    // const btnOpenListFromCityes = document.getElementById('btnAppFromCityes');
+    // const searchCityFromInput = document.querySelector('.application_search_form-disclosed_form-top_input')
+    // const searchCityToInput = document.querySelector('.application_search_form-disclosed_form-top_input-to')
+    // const btnOpenListToCityes = document.getElementById('btnAppToCityes');
+    //
+    // btnOpenListFromCityes.addEventListener('click', (event) => {
+    //   event.preventDefault()
+    //   searchCityFromInput.classList.toggle('application-input-focus');
+    //   if (!isListCityesFromVisible) {
+    //     disclosedListCityesFrom.style.display = 'none';
+    //     isListCityesFromVisible = true;
+    //   } else {
+    //     disclosedListCityesFrom.style.display = 'block';
+    //     isListCityesFromVisible = false;
+    //     disclosedListCityesTo.style.display = 'none';
+    //     isListCityesToVisible = true;
+    //   }
+    // })
+    //
+    // btnOpenListToCityes.addEventListener('click', (event) => {
+    //   event.preventDefault()
+    //   searchCityToInput.classList.toggle('application-input-focus');
+    //   if (!isListCityesToVisible) {
+    //     disclosedListCityesTo.style.display = 'none';
+    //     isListCityesToVisible = true;
+    //   } else {
+    //     disclosedListCityesTo.style.display = 'block';
+    //     isListCityesToVisible = false;
+    //     disclosedListCityesFrom.style.display = 'none';
+    //     isListCityesFromVisible = true;
+    //   }
+    // })
 
     applicationToggle.addEventListener("click", ()=>{
       if (!isShortFormVisible) {

@@ -10,7 +10,7 @@
   width: 633px
   display: flex
   box-shadow: 10px 0 15px rgba(37, 37, 45, 0.1)
-  height: calc(100vh - 35px)
+  height: calc(100vh - 90px)
   overflow: hidden
 
   &_title
@@ -46,7 +46,9 @@
     margin-right: 12px
     position: relative
     z-index: 50
-    max-height: 90vh
+    max-height: 90%
+    scrollbar-width: thin
+    scrollbar-color: $gray $gray-light
 
     &::-webkit-scrollbar
       width: 6px

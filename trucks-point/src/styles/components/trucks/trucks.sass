@@ -2,12 +2,26 @@
 @use '../../abstracts/mixins' as *
 
 .trucks
-  width: 79vw
-  height: calc(100vh - 90px)
+  width: 100%
+  height: calc(100vh - 143px)
   margin: 0 auto
-  padding: 26px 0 0 50px
   box-sizing: border-box
   position: relative
+  padding: 26px 77px 0 110px
+  overflow-y: scroll
+  overflow-x: hidden
+  scrollbar-width: thin
+  scrollbar-color: $gray $gray-light
+
+  &::-webkit-scrollbar
+    width: 6px
+
+  &::-webkit-scrollbar-thumb
+    background-color: $gray
+    border-radius: 100px
+
+  &::-webkit-scrollbar-track
+    background-color: $gray-light
 
   .close-btn
     position: absolute
@@ -155,9 +169,7 @@
       width: 6.9%
     &-number
       width: 7.5%
-    &-type
-      width: 8.1%
-    &-mark, &-colone, &-tracker, &-deleted
+    &-type, &-mark, &-colone, &-tracker, &-deleted
       width: 8.1%
     &-logist
       width: 10.2%
@@ -174,7 +186,10 @@
     border-radius: 8px
     margin-top: 10px
     height: 100%
-    overflow: scroll
+    overflow-y: scroll
+    overflow-x: hidden
+    scrollbar-width: thin
+    scrollbar-color: $gray $gray-light
 
     &::-webkit-scrollbar
       display: none

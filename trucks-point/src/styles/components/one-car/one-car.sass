@@ -2,7 +2,7 @@
 @use '../../abstracts/mixins' as *
 
 .one-car
-  height: calc(100vh - 35px)
+  height: calc(100vh - 90px)
 
   &-header
     display: flex
@@ -23,7 +23,9 @@
     padding: 0 12px 30px
     box-sizing: border-box
     margin: 0 12px 0 30px
-    max-height: 80vh
+    max-height: 95%
+    scrollbar-width: thin
+    scrollbar-color: $gray $gray-light
 
     &::-webkit-scrollbar
       width: 6px
