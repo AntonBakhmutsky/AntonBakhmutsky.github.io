@@ -5,13 +5,13 @@
   transition: all 0.3s ease-in-out
   width: 100%
   height: calc(100vh - 143px)
-  margin: 0 auto
   padding: 26px 77px 0 110px
   box-sizing: border-box
   display: flex
   flex-direction: column
   position: relative
   overflow-y: scroll
+  overflow-x: hidden
   scrollbar-width: thin
   scrollbar-color: $gray $gray-light
 
@@ -27,8 +27,8 @@
 
   .close-btn
     position: absolute
-    top: 18px
-    left: 0
+    top: 15px
+    left: 3.9vw
 
   &__title
     +font(16px, 19px, 400)

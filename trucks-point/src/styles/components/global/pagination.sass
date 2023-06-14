@@ -29,14 +29,16 @@
       transition: border 0.3s
       a
         color: $gray-input
-        +font(14px, 17px, 400)
+        +font(14px, 17px, 600)
         transition: color 0.3s
 
-    &-pages li
+    &-pages li, &-arrow
+      cursor: pointer
 
-      &:active, &:focus,&:hover
+      &:active, &:focus, &:hover, &:hover > svg path
         border: 1px solid $orange
         color: $orange
+        fill: $orange
 
       &:active >a, &:focus >a, &:hover >a
         color: $orange

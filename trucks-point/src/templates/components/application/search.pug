@@ -138,7 +138,9 @@
           label(for="differentData") Еще данные сортировки
 
     .application_search_form_buttons
-      +button('создать заявку', 'gray-dark', 'application/btn-orange.svg', 'submit' )
+      a(href='one-application-creating.html').application_search_form_buttons_btn.application_search_form_buttons_btn-gray.button.button-gray-dark
+        span создать заявку
+        | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/btn-orange.svg')}
       button(type="reset")#application-btn-reset.application_search_form_buttons_btn.application_search_form_buttons_btn-gray.application_search_form_buttons_btn-gray-reset
         span сбросить
         | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/application/reset.svg')}
