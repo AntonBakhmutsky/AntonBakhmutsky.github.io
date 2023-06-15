@@ -9,6 +9,7 @@ require('./components/one-application-creating')
 require('./components/one-report')
 require('./components/custom-select')
 require('./components/counterparty-points')
+require('./components/calendar')
 
 document.documentElement.dataset.theme = 'light';
 
