@@ -1,0 +1,187 @@
+@use '../../abstracts/variables' as *
+@use '../../abstracts/mixins' as *
+@use '../../abstracts/extends' as *
+
+.vacancies-offer
+  padding: 40px 0 60px
+  +screen($tablet)
+    padding: 20px 0 40px
+
+  .container
+    display: flex
+    gap: 20px
+    +screen($tablet)
+      flex-direction: column
+      gap: 40px
+
+  &__left
+    flex-basis: 65.15%
+
+  &__right
+    flex-basis: calc(34.85% - 20px)
+    box-sizing: border-box
+    padding: 0 20px
+    +screen($tablet)
+      order: -1
+
+  &__items
+    display: flex
+    flex-direction: column
+    gap: 12px
+
+  &__all
+    margin-top: 40px
+
+    &-title
+      +font(22px, 29px, 700)
+
+    &-link
+      width: 203px
+      height: 137px
+      display: flex
+      flex-direction: column
+      align-items: center
+      gap: 15px
+      justify-content: center
+      box-sizing: border-box
+      border-radius: 10px
+      box-shadow: 0 4px 23px 0 #0000001A
+      margin-top: 20px
+      transition: box-shadow .3s
+
+      &:hover:not(:active)
+        box-shadow: 0 2px 10px 0 #00000014
+
+        svg
+          path[fill="#C7C7C7"]
+            fill: #DF1B12
+
+
+      span
+        +font(15px, 24px, 500)
+
+  &__hr
+    display: flex
+    gap: 20px
+    align-items: center
+
+    &-image
+      width: 175px
+      height: 175px
+      overflow: hidden
+      border-radius: 50%
+      flex-shrink: 0
+      +screen($tablet)
+        width: 100px
+        height: 100px
+
+      img
+        width: 100%
+        height: 100%
+        object-fit: cover
+        object-position: center
+
+    &-desc
+      box-sizing: border-box
+
+    &-title
+      +font(14px, 24px, 500)
+      color: #E95A2C
+
+    &-name
+      margin-top: 1px
+      +font(18px, 22px, 500)
+
+    &-phone, &-mail
+      +font(14px, 17px)
+      display: flex
+      align-items: center
+      gap: 8px
+      transition: color .3s
+
+      &:hover:not(:active)
+        color: #0B5CA0
+
+    &-phone
+      margin-top: 22px
+
+    &-mail
+      margin-top: 8px
+
+  &__txt
+    margin-top: 28px
+    display: flex
+    flex-direction: column
+    gap: 12px
+    +font(16px, 24px)
+
+  &__buttons
+    margin-top: 28px
+    display: flex
+    gap: 24px
+
+    button
+      display: flex
+      align-items: center
+      justify-content: center
+      +font(16px, 17px, 500)
+      height: 50px
+      width: calc(50% - 12px)
+      border-radius: 4px
+
+  &__summary
+    box-shadow: 0 6px 13px 0 #00000033
+    background-color: #E95A2C
+    color: $white
+    transition: background-color .3s
+
+    &:hover:not(:active)
+      background-color: #FF784C
+
+  &__call
+    border: 2px solid #E95A2C
+    color: #E95A2C
+    transition: background-color .3s, color .3s
+
+    &:hover:not(:active)
+      color: $white
+      background-color: #E95A2C
+
+.vacancies-desc
+  padding: 24px 0
+  background-color: #EDF2F9
+
+  &__title
+    +font(32px, 52px, 700)
+    text-align: center
+
+  &__container
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    margin-top: 44px
+    grid-gap: 20px
+
+  &__item
+    display: flex
+    flex-direction: column
+    align-items: center
+    gap: 20px
+
+    &-image
+      width: 60px
+      height: 60px
+
+      img
+        width: 100%
+        height: 100%
+        object-position: center
+        object-fit: cover
+
+    &-txt
+      text-align: center
+      +font(16px, 20px)
+
+      span
+        display: block
+        +font(13px, 17px)
+

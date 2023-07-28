@@ -1,0 +1,104 @@
+@use '../../abstracts/variables' as *
+@use '../../abstracts/mixins' as *
+@use '../../abstracts/extends' as *
+
+.accordion
+  padding: 10px 24px
+  box-sizing: border-box
+  border-radius: 10px
+  border: 2px solid #E8E8E8
+
+  &.open
+    .accordion__arrow
+      transform: rotate(180deg)
+
+  &__visible
+    display: flex
+    align-items: center
+    cursor: pointer
+
+    &:hover:not(:active)
+      svg
+        path
+          stroke: #0B5CA0
+
+  &__title
+    +font(18px, 24px, 500)
+    max-width: 453px
+    box-sizing: border-box
+    padding-right: 20px
+
+  &__sum
+    +font(18px, 24px, 500)
+    margin-left: auto
+    white-space: nowrap
+
+  &__arrow
+    width: 36px
+    height: 36px
+    display: flex
+    align-items: center
+    justify-content: center
+    transition: transform .3s
+    margin-left: 16px
+
+  &__hidden
+    transition: max-height .3s
+    overflow: hidden
+    max-height: 0
+
+  &__blocks
+    display: flex
+    flex-direction: column
+    gap: 16px
+    box-sizing: border-box
+    padding-top: 24px
+
+  &__block
+    display: flex
+    flex-direction: column
+    gap: 4px
+
+    &-title
+      +font(16px, 24px, 500)
+
+    &-list
+      display: flex
+      flex-direction: column
+      gap: 4px
+
+      li
+        box-sizing: border-box
+        padding-left: 20px
+        position: relative
+        +font(16px, 24px)
+
+        &:before
+          content: ''
+          width: 12px
+          height: 1px
+          background-color: $black
+          position: absolute
+          left: 0
+          top: 50%
+          transform: translateY(-50%)
+
+  &__buttons
+    box-sizing: border-box
+    padding: 20px 0 14px
+
+  &__link
+    width: 151px
+    height: 36px
+    border-radius: 4px
+    background-color: #0B5CA0
+    display: flex
+    align-items: center
+    justify-content: center
+    transition: background-color .3s
+    +font(14px, 15px, 500)
+    color: $white
+
+    &:hover:not(:active)
+      background-color: #1273C5
+

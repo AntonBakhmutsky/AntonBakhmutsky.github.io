@@ -1,0 +1,22 @@
+extends ../layouts/other-pages/layout.pug
+
+append variables
+  -
+    mainModifier = 'vacancies'
+    topSecBreadcrumbs = true
+    topTitle = 'Вакансии'
+    breadCrumbsList = [
+      {
+        url: '/',
+        txt: 'Главная'
+      },
+      {
+        url: 'vacancies.html',
+        txt: 'О компании'
+      }
+    ]
+
+block content
+  include ../sections/global/top-sec
+  include ../sections/vacancies/vacancies-offer
+  include ../sections/vacancies/vacancies-desc

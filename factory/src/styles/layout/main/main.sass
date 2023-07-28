@@ -37,7 +37,7 @@
             &:nth-child(2)
               margin-top: 14px
 
-  &_production, &_about
+  &_production, &_about, &_vacancies
     .top
       height: 454px
       +screen($tablet)
@@ -51,6 +51,12 @@
     .top
       .container
         background: url(../assets/img/about-page/top-bg.jpg) no-repeat center/cover
+        justify-content: center
+
+  &_vacancies
+    .top
+      .container
+        background: url(../assets/img/vacancies/top-bg.jpg) no-repeat center/cover
         justify-content: center
 
   &_vans-goods

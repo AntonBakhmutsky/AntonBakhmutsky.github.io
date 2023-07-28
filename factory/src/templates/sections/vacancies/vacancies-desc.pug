@@ -1,0 +1,11 @@
+section.vacancies-desc
+  .container
+    h2.vacancies-desc__title Работа на Механическом заводе СОТРАНС это:
+    .vacancies-desc__container
+      each  el in vacanciesDescItems
+        .vacancies-desc__item
+          .vacancies-desc__item-image
+            img(src=el.image alt="")
+          .vacancies-desc__item-txt  !{el.txt}
+
+
