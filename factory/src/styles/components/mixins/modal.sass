@@ -1,0 +1,68 @@
+@use '../../abstracts/variables' as *
+@use '../../abstracts/mixins' as *
+@use '../../abstracts/extends' as *
+
+.modal
+  position: fixed
+  top: 0
+  left: 0
+  z-index: 1000
+  background: rgba(#17263D, .6)
+  display: flex
+  box-sizing: border-box
+  padding: 20px
+  width: 100vw
+  height: 100vh
+  align-items: center
+  justify-content: center
+  transition: opacity .3s, visibility .3s
+  opacity: 0
+  visibility: hidden
+  pointer-events: none
+  +screen($tablet)
+    padding: 0
+
+  &.active
+    visibility: visible
+    opacity: 1
+    pointer-events: auto
+
+  &__body
+    max-width: 650px
+    position: relative
+    width: 100%
+    box-sizing: border-box
+    padding: 36px 0
+    background-color: $white
+    border-radius: 16px
+    display: flex
+    flex-direction: column
+    align-items: center
+    +screen($tablet)
+      max-width: none
+      border-radius: 0
+      height: 100%
+
+  &__close
+    position: absolute
+    width: 20px
+    height: 20px
+    top: 20px
+    right: 20px
+    cursor: pointer
+
+  &__title
+    +font(26px, 38px, 700, $font-title)
+
+  &__txt
+    +font(16px, 20px, 500)
+    margin-top: 12px
+
+  &_vacancies-success
+
+  &_vacancies-call
+
+  &_vacancies-summary
+    visibility: visible
+    opacity: 1
+    pointer-events: auto

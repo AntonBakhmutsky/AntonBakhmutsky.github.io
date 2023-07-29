@@ -7,6 +7,9 @@
   box-sizing: border-box
   border-radius: 10px
   border: 2px solid #E8E8E8
+  position: relative
+  +screen($tablet)
+    padding: 20px 0
 
   &.open
     .accordion__arrow
@@ -16,6 +19,11 @@
     display: flex
     align-items: center
     cursor: pointer
+    +screen($tablet)
+      flex-direction: column
+      align-items: flex-start
+      box-sizing: border-box
+      padding-right: 28px
 
     &:hover:not(:active)
       svg
@@ -27,11 +35,17 @@
     max-width: 453px
     box-sizing: border-box
     padding-right: 20px
+    +screen($tablet)
+      +font(16px, 20px, 500)
 
   &__sum
     +font(18px, 24px, 500)
     margin-left: auto
     white-space: nowrap
+    +screen($tablet)
+      margin-left: 0
+      width: 100%
+      margin-top: 12px
 
   &__arrow
     width: 36px
@@ -41,6 +55,12 @@
     justify-content: center
     transition: transform .3s
     margin-left: 16px
+    flex-shrink: 0
+    +screen($tablet)
+      position: absolute
+      top: 10px
+      right: 16px
+      margin: 0
 
   &__hidden
     transition: max-height .3s

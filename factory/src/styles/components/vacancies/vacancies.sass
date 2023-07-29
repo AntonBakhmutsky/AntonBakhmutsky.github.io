@@ -23,6 +23,7 @@
     padding: 0 20px
     +screen($tablet)
       order: -1
+      padding: 0
 
   &__items
     display: flex
@@ -48,6 +49,8 @@
       box-shadow: 0 4px 23px 0 #0000001A
       margin-top: 20px
       transition: box-shadow .3s
+      +screen($tablet)
+        width: 100%
 
       &:hover:not(:active)
         box-shadow: 0 2px 10px 0 #00000014
@@ -119,6 +122,9 @@
     margin-top: 28px
     display: flex
     gap: 24px
+    +screen($tablet)
+      flex-direction: column
+      gap: 20px
 
     button
       display: flex
@@ -128,6 +134,8 @@
       height: 50px
       width: calc(50% - 12px)
       border-radius: 4px
+      +screen($tablet)
+        width: 100%
 
   &__summary
     box-shadow: 0 6px 13px 0 #00000033
@@ -154,12 +162,21 @@
   &__title
     +font(32px, 52px, 700)
     text-align: center
+    +screen($tablet)
+      text-align: left
+      +font(24px, 34px, 700, $font-title)
 
   &__container
     display: grid
     grid-template-columns: repeat(4, 1fr)
     margin-top: 44px
     grid-gap: 20px
+    +screen($tablet)
+      grid-template-columns: repeat(2, 1fr)
+      grid-gap: 40px 20px
+    +screen($tablet-xs)
+      grid-template-columns: 1fr
+
 
   &__item
     display: flex

@@ -13,6 +13,7 @@ include ../../abstracts/mixins/products-tile
 include ../../abstracts/mixins/product-slider
 include ../../abstracts/mixins/product-specs
 include ../../abstracts/mixins/production-slider
+include ../../abstracts/mixins/modal
 
 doctype html
 html(lang="ru")
@@ -33,6 +34,7 @@ html(lang="ru")
     button.contact-form-btn
       img(src=require('@/assets/img/global/form-icon.svg') alt="")
     include ../../sections/global/contact-form
+    block modals
     if (imageModal)
       include ../../sections/global/image-modal
     if (callModal)
