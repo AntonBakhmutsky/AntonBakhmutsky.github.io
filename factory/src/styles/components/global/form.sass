@@ -6,7 +6,7 @@
   &__input
     position: relative
 
-    &__error
+    &-error
       color: #E04646
       position: absolute
       left: 16px
@@ -15,16 +15,17 @@
 
     &.error
       input
-        border-color: #E04646
+        border-color: #E04646 !important
 
     input
       box-sizing: border-box
-      padding: 24px 16px 8px
+      padding: 20px 16px 8px
       border-radius: 4px
       border: 1px solid #E8E8E8
       outline: none
       height: 50px
       +font(14px, 16px)
+      font-weight: 500 !important
       width: 100%
       color: $black
 
@@ -33,7 +34,7 @@
 
     label
       position: absolute
-      left: 12px
+      left: 16px
       top: 16px
       +font(14px, 14px)
       color: #949494
@@ -43,6 +44,93 @@
         bottom: auto
         top: 8px
         +font(12px, 12px)
+
+  &__file
+    position: relative
+    display: flex
+    padding: 0
+    width: 100%
+    align-items: center
+    justify-content: start
+    margin: 8px 0 29px
+    +screen($tablet)
+      margin: 8px 0 16px
+
+    &:hover:not(:active, .fill)
+      .form__file-label
+        background-color: #DDE7F5
+
+    &.fill
+      .form__file-btn
+        &-add
+          display: none
+
+        &-clear
+          display: flex
+
+      &:hover:not(:active)
+        .form__file-btn-clear
+          svg
+            path
+              stroke: $black
+
+    &.error
+      .form__file-label
+        border-color: #E04646
+
+      .form__file-error
+        display: block
+
+    svg
+      position: relative
+
+    span
+      color: $black
+      +font(12px, 13px, 500)
+
+    input[type="file"]
+      display: none
+
+    &-label
+      border-radius: 4px
+      background-color: $gray-teh
+      box-sizing: border-box
+      padding: 7px 10px
+      height: 30px
+      display: flex
+      align-items: center
+      justify-content: center
+      transition: background-color .2s
+      gap: 6px
+      cursor: pointer
+      border: 1px solid $gray-teh
+      position: relative
+
+    &-error
+      +font(12px, 14px)
+      color: #E04646
+      position: absolute
+      left: 0
+      top: calc(100% + 4px)
+      display: none
+
+    &-btn
+      &-add, &-clear
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 6px
+        width: 16px
+        height: 16px
+
+      &-clear
+        display: none
+        position: relative
+        z-index: 10
+
+        svg
+          path
+            stroke: #949494
 
 .custom-select
   position: relative

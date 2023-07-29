@@ -1,6 +1,26 @@
 +modal({title: 'Откликнуться на вакансию', modifier: 'modal_vacancies-summary'})
-  block modal-content
-    .modal__form.form
+  .modal__form.form
+    .form__fields
       .form__input
         input(type="text" name="lastName")
         label ФИО *
+      .form__input.form__input_vacancy
+        input(type="text" name="lastName")
+        label Вакансия *
+      .form__input
+        input(type="tel" name="tel")
+        label Номер телефона *
+      .form__input.error
+        input(type="email" name="email")
+        label Электронная почта *
+        .form__input-error Поле обязательное
+    .form__file
+      input(type="file" name="document")#summaryFile
+      label.form__file-label(for='summaryFile')#summaryLabel
+        span Прикрепить резюме
+        .form__file-btn
+          .form__file-btn-add
+            | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/global/pin-black.svg')}
+          .form__file-btn-clear
+            | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/global/file-clear.svg')}
+        .form__file-error Неверный тип документа
