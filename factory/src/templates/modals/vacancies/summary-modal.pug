@@ -1,5 +1,5 @@
-+modal({title: 'Откликнуться на вакансию', modifier: 'modal_vacancies-summary'})
-  .modal__form.form
++modal({title: 'Откликнуться на вакансию', modifier: 'modal_vacancies-summary', dataset: 'modal_vacancies-summary'})
+  form.modal__form.form
     .form__fields
       .form__input
         input(type="text" name="lastName")
@@ -24,3 +24,9 @@
           .form__file-btn-clear
             | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/global/file-clear.svg')}
         .form__file-error Неверный тип документа
+      .form__file-txt Прикрепите файл в формате PDF, DOCX, DOC, или PPTX
+    .form__check
+      input(type="checkbox" name="policy" id="vacanciesPolicy")
+      label(for="vacanciesPolicy") Я согласен на обработку персональных данных в соответстви #[br] с #[a(href="#") Политикой конфидициальности ]
+    .form__submit
+      button(type="submit") Отправить

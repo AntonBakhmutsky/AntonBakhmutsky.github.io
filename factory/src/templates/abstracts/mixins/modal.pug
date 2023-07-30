@@ -1,5 +1,5 @@
 mixin modal(params)
-  .modal(class=params.modifier)
+  .modal(class=params.modifier data-modal=params.dataset)
     .modal__body
       .modal__close
         img(src=require('@/assets/img/global/modal-close.svg') alt="")

@@ -3,6 +3,14 @@
 @use '../../abstracts/extends' as *
 
 .form
+  &__fields
+    display: flex
+    flex-direction: column
+    gap: 24px
+    margin-top: 32px
+    max-width: 426px
+    width: 100%
+
   &__input
     position: relative
 
@@ -50,9 +58,11 @@
     display: flex
     padding: 0
     width: 100%
-    align-items: center
+    align-items: flex-start
     justify-content: start
-    margin: 8px 0 29px
+    margin: 30px 0 0
+    flex-direction: column
+    gap: 4px
     +screen($tablet)
       margin: 8px 0 16px
 
@@ -90,6 +100,9 @@
 
     input[type="file"]
       display: none
+
+    &-txt
+      +font(12px, 14px)
 
     &-label
       border-radius: 4px
@@ -132,158 +145,205 @@
           path
             stroke: #949494
 
-.custom-select
-  position: relative
-  cursor: pointer
-
-  &.disabled
-    cursor: auto
-    .custom-select
-      &__value
-        background-color: #F4F4F4
-        color: #929292
-
-  &_warehouses
-    width: 340px
-    margin: 12px 0
-    +screen($tablet)
-      width: 100%
-      margin: 0 0 8px
-
-    &.disabled
-      display: none
-
-  &_dc
-    width: 340px
-    +screen($tablet)
-      width: 100%
-
-  &_terminals
-    width: 100%
-
-    &.disabled
-      display: block
-
-  &_city
-    width: 340px
-    flex-shrink: 0
-    +screen($tablet)
-      width: 100%
-
-  &.open
-    .custom-select
-      &__value
-        border-color: #1F1F1F
-
-        &-arrow
-          transform: rotate(180deg)
-
-          svg
-            path
-              stroke: #1F1F1F
-
-      &__options
-        visibility: visible
-        opacity: 1
-        pointer-events: auto
-
-  &__value
+  &__check
+    position: relative
+    padding-left: 24px
     display: flex
-    justify-content: space-between
-    align-items: center
-    border-radius: 4px
-    box-sizing: border-box
-    padding: 0 12px
-    height: 48px
-    border: 1px solid #DFDFE1
-    +font(14px, 16px)
-    gap: 10px
+    align-items: flex-start
+    +font(12px, 16px)
+    margin-top: 20px
 
-    &-txt
-      white-space: nowrap
-      overflow: hidden
+    a
+      +font(12px, 16px)
+      color: #F06518
+      position: relative
+      width: fit-content
+      display: inline-block
 
-      &.default
-        color: #929292
+      &:after
+        content: ''
+        width: 100%
+        height: 1px
+        position: absolute
+        bottom: 0
+        left: 0
+        background-color: #F06518
 
-    &-arrow
-      transition: transform .3s
+    input[type="checkbox"] + label
+      cursor: pointer
 
-    svg
-      path
-        fill: none
-        transition: stroke .3s
+    input[type="checkbox"] + label:before
+      content: ''
+      width: 16px
+      height: 16px
+      border-radius: 2px
+      border: 2px solid #0B5CA0
+      left: -24px
+      top: -1px
+      transform: none
 
-  &__options
-    position: absolute
-    left: 0
-    top: calc(100% + 4px)
-    width: 100%
-    border-radius: 4px
-    background-color: $white
-    box-shadow: 0 4px 16px rgba(0, 0, 0, .16)
-    z-index: 10
-    box-sizing: border-box
-    transition: visibility .3s, opacity .3s
-    visibility: hidden
-    opacity: 0
-    pointer-events: none
+    input[type="checkbox"]:checked + label:before
+      background: #0B5CA0 url(../assets/img/vacancies/check.svg) center/10px 10px no-repeat
 
-    &-container
-      overflow: auto
-      max-height: 240px
-      list-style-type: none
-      display: flex
-      flex-direction: column
-      box-sizing: border-box
-      scrollbar-width: thin
-      scrollbar-color: #DFDFE1 $white
+  &__submit
+    margin-top: 32px
 
-      &::-webkit-scrollbar
-        width: 4px
-
-      &::-webkit-scrollbar-thumb
-        border-radius: 2px
-        background-color: #929292
-
-    &-item
-      height: 48px
-      box-sizing: border-box
+    button
+      width: 330px
+      height: 50px
+      background-color: #0B5CA0
+      border-radius: 4px
+      color: $white
+      +font(16px, 17px, 500)
       display: flex
       align-items: center
-      transition: color .3s
-      flex-shrink: 0
-      +font(14px, 16px)
-      padding-left: 12px
-      position: relative
+      justify-content: center
+      transition: background-color .3s
+      margin: 0 auto
+      +screen($tablet)
+        width: 100%
+
+  &__select
+    position: relative
+    cursor: pointer
+
+    &.disabled
+      cursor: auto
+      .custom-select
+        &__value
+          background-color: #F4F4F4
+          color: #929292
+
+    &.open
+      .form__select
+        &-value
+          border-color: $black
+
+          &-arrow
+            transform: rotate(180deg)
+
+            svg
+              path
+                stroke: $black
+
+        &-options
+          visibility: visible
+          opacity: 1
+          pointer-events: auto
+
+    &-value
+      display: flex
+      justify-content: space-between
+      align-items: center
+      border-radius: 4px
+      box-sizing: border-box
+      padding: 0 12px
+      height: 48px
+      border: 1px solid #DFDFE1
+      +font(14px, 16px, 500)
+      gap: 10px
+
+      &-txt
+        white-space: nowrap
+        overflow: hidden
+
+        &.default
+          color: #929292
+          font-weight: 350
+
+      &-arrow
+        transition: transform .3s
+
+      svg
+        path
+          fill: none
+          transition: stroke .3s
+
+    &-options
+      position: absolute
+      left: 0
+      top: calc(100% + 4px)
+      width: 100%
+      border-radius: 4px
+      background-color: $white
+      box-shadow: 0 4px 16px rgba(0, 0, 0, .16)
       z-index: 10
+      box-sizing: border-box
+      transition: visibility .3s, opacity .3s
+      visibility: hidden
+      opacity: 0
+      pointer-events: none
 
-      &:hover:not(:active, .active)
-        color: #F06518
+      &-container
+        overflow: auto
+        max-height: 192px
+        list-style-type: none
+        display: flex
+        flex-direction: column
+        box-sizing: border-box
+        scrollbar-width: thin
+        scrollbar-color: #DFDFE1 $white
 
-      &:before
-        content: ''
-        position: absolute
-        right: 12px
-        top: 16px
-        width: 16px
-        height: 16px
-        background: url(/images/ordering/check.svg) no-repeat center/cover
-        display: none
+        &::-webkit-scrollbar
+          width: 4px
+
+        &::-webkit-scrollbar-thumb
+          border-radius: 2px
+          background-color: #929292
+
+      &-item
+        height: 48px
+        box-sizing: border-box
+        display: flex
+        align-items: center
+        transition: color .3s
+        flex-shrink: 0
+        +font(14px, 16px, 500)
+        padding-left: 12px
+        position: relative
         z-index: 10
 
-      &.active
-        background-color: #F4F4F4
+        &:hover:not(:active, .active)
+          color: #F06518
 
-        &:before,
-        &:after
-          display: block
+        &:before
+          content: ''
+          position: absolute
+          right: 12px
+          top: 16px
+          width: 16px
+          height: 16px
+          background: url(/images/ordering/check.svg) no-repeat center/cover
+          display: none
+          z-index: 10
 
-      span
-        z-index: 1
+        &.active
+          background-color: #F4F4F4
 
-      &-time
-        display: none
+          &:before,
+          &:after
+            display: block
 
-      &-hidden
-        display: none
+        span
+          z-index: 1
+
+        &-time
+          display: none
+
+        &-hidden
+          display: none
+
+  &__subtitle
+    +font(16px, 18px, 500)
+    align-self: flex-start
+
+  &__bottom
+    max-width: 426px
+    width: 100%
+    margin-top: 32px
+
+    .form__select
+      margin-top: 8px
+      width: 223px
+      +screen($tablet)
+        width: 100%

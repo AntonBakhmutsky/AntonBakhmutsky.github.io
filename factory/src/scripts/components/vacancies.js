@@ -1,4 +1,5 @@
 import initInputs from '@/scripts/helpers/inputs'
+import initCustomSelects from '@/scripts/helpers/custom-select'
 import PhoneMask from '@zoibana/phonemask'
 
 window.addEventListener('load', () => {
@@ -33,7 +34,7 @@ window.addEventListener('load', () => {
 
     if (document.querySelector('.form__file')) {
       const fileInput = document.querySelector('.modal input[type="file"]')
-      const fileInputClear = document.querySelector('.modal .form__input-clear')
+      const fileInputClear = document.querySelector('.modal .form__file-btn-clear')
 
       function toggleFile(e) {
           const container = this.closest('.form__file')
@@ -50,11 +51,24 @@ window.addEventListener('load', () => {
             container.classList.add('error')
             setTimeout(() => {
               container.classList.remove('error')
-            }, 5000)
+            }, 1000)
           }
       }
 
+      function clearFile(e) {
+        e.preventDefault()
+        const file = this.closest('.form__file')
+        file.querySelector('input').value = ''
+        file.classList.remove('fill')
+        file.querySelector('span').textContent = 'Прикрепить резюме'
+      }
+
       fileInput.addEventListener('change', toggleFile)
+      fileInputClear.addEventListener('click', clearFile)
     }
+  }
+
+  if (document.querySelector('.form__select')) {
+    initCustomSelects(document.querySelectorAll('.form__select'))
   }
 })
