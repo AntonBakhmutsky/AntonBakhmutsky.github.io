@@ -1,0 +1,43 @@
+@use '../abstracts/variables' as *
+@use '../abstracts/mixins' as *
+
+html
+  scroll-behavior: smooth
+  min-height: 100vh
+
+body
+  width: 100%
+  margin: 0 auto
+  min-height: 100vh
+  display: flex
+  flex-direction: column
+  font-family: $font
+  position: relative
+  background-color: $white
+
+
+.container
+  position: relative
+  width: 100%
+
+a
+  text-decoration: none
+  display: block
+  color: $black
+  transition: color .3s, opacity .3s, background-color .3s
+  outline: none
+
+h1, h2, h3, h4, p
+  margin: 0
+
+button
+  appearance: none
+  border: none
+  cursor: pointer
+  padding: 0
+  background: transparent
+  transition: .3s
+
+svg
+  path, circle, rect
+    transition: .3s
