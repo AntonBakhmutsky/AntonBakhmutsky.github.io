@@ -41,3 +41,134 @@ button
 svg
   path, circle, rect
     transition: .3s
+
+.plug
+  color: $white
+  width: 100%
+  background: url(../assets/img/bg.jpg) no-repeat center/cover
+  min-height: 100vh
+  box-sizing: border-box
+  padding: 222px 200px 20px
+  position: relative
+  +screen($desktop-m)
+    padding: 184px 100px 20px
+    background: url(../assets/img/bg-m.jpg) no-repeat center/cover
+  +screen($tablet-sm)
+    padding: 136px 20px 20px
+    background: url(../assets/img/bg-s.jpg) no-repeat center/cover
+  +screen($tablet-xs)
+    background: url(../assets/img/bg-xs.jpg) no-repeat center/cover
+
+  &__logos
+    background-color: $white
+    width: 426px
+    height: 96px
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    gap: 28px
+    box-sizing: border-box
+    padding-right: 20px
+    position: absolute
+    left: 0
+    top: 102px
+    +screen($desktop-m)
+      width: 288px
+      height: 84px
+      top: 73px
+    +screen($tablet-sm)
+      width: 207px
+      top: 29px
+
+    img
+      &:first-child
+        +screen($desktop-m)
+          width: 110px
+          height: 27px
+
+      &:last-child
+        +screen($desktop-m)
+          width: 28px
+          height: 43px
+
+  &__title
+    +font(60px, 62px, 800)
+    +screen($desktop-m)
+      +font(52px, 52px, 800)
+    +screen($tablet-sm)
+      +font(36px, 39px, 800)
+    +screen($tablet-xs)
+      +font(28px, 30px, 800)
+
+  &__txt
+    +font(24px, 30px, 600)
+    margin-top: 20px
+    +screen($desktop-m)
+      +font(18px, 22px, 600)
+    +screen($tablet-sm)
+      +font(16px, 20px, 600)
+      margin-top: 16px
+
+  &__sub-title
+    margin-top: 40px
+    +font(24px, 29px, 800)
+    +screen($desktop-m)
+      +font(18px, 22px, 800)
+      margin-top: 24px
+    +screen($tablet-sm)
+      margin-top: 32px
+
+  &__contacts
+    display: flex
+    flex-direction: column
+    gap: 24px
+    margin-top: 20px
+    +screen($desktop-m)
+      margin-top: 12px
+      gap: 12px
+    +screen($tablet-xs)
+      gap: 20px
+
+  &__item
+    display: flex
+    flex-direction: column
+    gap: 4px
+
+    &:last-child
+      .plug__item-txt
+        margin-bottom: 8px
+        +screen($desktop-m)
+          margin-bottom: 4px
+
+    &-title
+      +font(18px, 22px)
+      color: #CCCCCC
+      padding-left: 38px
+      +screen($desktop-m)
+        +font(16px, 20px)
+
+    &-container
+      display: flex
+      gap: 10px
+      align-items: center
+
+    &-image
+      flex-shrink: 0
+      width: 28px
+      height: 28px
+      background-color: #ED1C24
+      display: flex
+      align-items: center
+      justify-content: center
+      box-shadow: 0 2px 7px 0 #ED1C2480
+
+    &-txt
+      +font(20px, 24px, 600)
+      color: $white
+      +screen($desktop-m)
+        +font(16px, 20px, 600)
+
+      span
+        +font(18px, 22px)
+        +screen($desktop-m)
+          +font(14px, 17px)

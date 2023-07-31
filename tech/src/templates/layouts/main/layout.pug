@@ -2,15 +2,9 @@
 block variables
   include ../../abstracts/variables
 
-//- mixins
-include ../../components/mixins/modal
-
 doctype html
 html(lang="ru")
   head
     include head
   body
-    include header
-    main.main
-      block content
-    include footer
+    block content
