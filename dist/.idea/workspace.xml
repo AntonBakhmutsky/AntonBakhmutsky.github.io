@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="1c6251b5-a5a4-4f8e-bc86-c912a51caee8" name="Changes" comment="clear work tree">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dragon/src/styles/components/main-page/main-news.sass" beforeDir="false" afterPath="$PROJECT_DIR$/../dragon/src/styles/components/main-page/main-news.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dragon/src/templates/pages/news-page.pug" beforeDir="false" afterPath="$PROJECT_DIR$/../dragon/src/templates/pages/news-page.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lineup.html" beforeDir="false" afterPath="$PROJECT_DIR$/lineup.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +34,10 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -90,13 +96,8 @@
       <workItem from="1681992280798" duration="155000" />
       <workItem from="1682050566772" duration="270000" />
       <workItem from="1682060600068" duration="1126000" />
-    </task>
-    <task id="LOCAL-00008" summary="clear work tree">
-      <created>1680342522839</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1680342522839</updated>
+      <workItem from="1682436691317" duration="646000" />
+      <workItem from="1682520266538" duration="1810000" />
     </task>
     <task id="LOCAL-00009" summary="clear work tree">
       <created>1680343226973</created>
@@ -434,7 +435,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682060614325</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="clear work tree">
+      <created>1682436738312</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1682436738312</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
