@@ -10,6 +10,8 @@
     margin-top: 32px
     max-width: 426px
     width: 100%
+    +screen($tablet)
+      margin-top: 28px
 
   &__input
     position: relative
@@ -31,14 +33,14 @@
       border-radius: 4px
       border: 1px solid #E8E8E8
       outline: none
-      height: 50px
+      height: 50px !important
       +font(14px, 16px)
       font-weight: 500 !important
       width: 100%
       color: $black
 
       &:focus
-        border-color: $black
+        border-color: $black !important
 
     label
       position: absolute
@@ -64,7 +66,7 @@
     flex-direction: column
     gap: 4px
     +screen($tablet)
-      margin: 8px 0 16px
+      margin: 38px 0 0
 
     &:hover:not(:active, .fill)
       .form__file-label
@@ -97,12 +99,15 @@
     span
       color: $black
       +font(12px, 13px, 500)
+      +screen($tablet)
+        +font(14px, 18px, 500)
 
     input[type="file"]
       display: none
 
     &-txt
       +font(12px, 14px)
+      color: #949494
 
     &-label
       border-radius: 4px
@@ -118,13 +123,14 @@
       cursor: pointer
       border: 1px solid $gray-teh
       position: relative
+      +screen($tablet)
+        width: 100%
+        height: 40px
+        justify-content: space-between
 
     &-error
       +font(12px, 14px)
       color: #E04646
-      position: absolute
-      left: 0
-      top: calc(100% + 4px)
       display: none
 
     &-btn
@@ -152,6 +158,13 @@
     align-items: flex-start
     +font(12px, 16px)
     margin-top: 20px
+    +screen($tablet)
+      padding-left: 28px
+
+    span
+      display: block
+      +screen($tablet)
+        display: inline
 
     a
       +font(12px, 16px)
@@ -177,13 +190,29 @@
       width: 16px
       height: 16px
       border-radius: 2px
-      border: 2px solid #0B5CA0
+      border: 1px solid #E8E8E8
       left: -24px
       top: -1px
       transform: none
+      transition: border-color .3s, background-color .3s
+      +screen($tablet)
+        top: -4px
+        left: -28px
+        width: 20px
+        height: 20px
+      +screen($tablet-xs)
+        top: -2px
+
+    input[type="checkbox"] + label:hover:before
+      border-color: #0B5CA0
 
     input[type="checkbox"]:checked + label:before
       background: #0B5CA0 url(../assets/img/vacancies/check.svg) center/10px 10px no-repeat
+      border-color: #0B5CA0
+      +screen($tablet)
+        border-color: #0B5CA0
+        background: #0B5CA0 url(../assets/img/vacancies/check.svg) center/12px 12px no-repeat
+
 
   &__submit
     margin-top: 32px
@@ -341,6 +370,15 @@
     max-width: 426px
     width: 100%
     margin-top: 32px
+    +screen($tablet)
+      max-width: none
+      flex-grow: 1
+      display: flex
+      flex-direction: column
+
+      .form__submit
+        +screen($tablet)
+          margin-top: auto
 
     .form__select
       margin-top: 8px

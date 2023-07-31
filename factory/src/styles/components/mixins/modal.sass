@@ -22,6 +22,25 @@
   +screen($tablet)
     padding: 0
 
+  .form
+    max-width: 426px
+    width: 100%
+    +screen($tablet)
+      max-width: none
+      height: 100%
+      display: flex
+      flex-direction: column
+      width: 100%
+
+    &__submit
+      +screen($tablet)
+        margin-top: auto
+
+    &__fields
+      +screen($tablet)
+        width: 100%
+        max-width: none
+
   &.active
     visibility: visible
     opacity: 1
@@ -42,6 +61,7 @@
       max-width: none
       border-radius: 0
       height: 100%
+      padding: 44px 20px 32px
 
   &__close
     position: absolute
@@ -53,7 +73,28 @@
 
   &__title
     +font(26px, 38px, 700, $font-title)
+    +screen($tablet)
+      align-self: flex-start
 
   &__txt
     +font(16px, 20px, 500)
     margin-top: 12px
+
+  &_vacancies-success
+    .modal
+      &__body
+        +screen($tablet)
+          display: flex
+          flex-direction: column
+          align-items: center
+          justify-content: center
+
+      &__title
+        +screen($tablet)
+          align-self: center
+          text-align: center
+
+      &__txt
+        +screen($tablet)
+          text-align: center
+          margin-top: 24px

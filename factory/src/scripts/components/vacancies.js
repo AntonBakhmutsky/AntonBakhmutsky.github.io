@@ -51,7 +51,7 @@ window.addEventListener('load', () => {
             container.classList.add('error')
             setTimeout(() => {
               container.classList.remove('error')
-            }, 1000)
+            }, 2000)
           }
       }
 

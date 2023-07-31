@@ -1,21 +1,21 @@
-+modal({title: 'Откликнуться на вакансию', modifier: 'modal_vacancies-summary', dataset: 'modal_vacancies-summary'})
++modal({title: 'Откликнуться на вакансию', modifier: 'modal_vacancies-summary'})
   form.modal__form.form
     .form__fields
       .form__input
-        input(type="text" name="lastName")
+        input(type="text" name="lastName" required)
         label ФИО *
-      .form__input.form__input_vacancy
-        input(type="text" name="lastName")
+      .form__input
+        input(type="text" name="vacancy" required)
         label Вакансия *
       .form__input
         input(type="tel" name="tel")
         label Номер телефона *
       .form__input.error
-        input(type="email" name="email")
+        input(type="email" name="email" required)
         label Электронная почта *
         .form__input-error Поле обязательное
     .form__file
-      input(type="file" name="document")#summaryFile
+      input(type="file" name="document" required)#summaryFile
       label.form__file-label(for='summaryFile')#summaryLabel
         span Прикрепить резюме
         .form__file-btn
@@ -23,10 +23,10 @@
             | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/global/pin-black.svg')}
           .form__file-btn-clear
             | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/global/file-clear.svg')}
-        .form__file-error Неверный тип документа
+      .form__file-error Неверный тип документа
       .form__file-txt Прикрепите файл в формате PDF, DOCX, DOC, или PPTX
     .form__check
-      input(type="checkbox" name="policy" id="vacanciesPolicy")
-      label(for="vacanciesPolicy") Я согласен на обработку персональных данных в соответстви #[br] с #[a(href="#") Политикой конфидициальности ]
+      input(type="checkbox" name="policy" id="summaryVacanciesPolicy" required)
+      label(for="summaryVacanciesPolicy") Я согласен на обработку персональных данных в соответстви #[span с #[a(href="#") Политикой конфидициальности ]]
     .form__submit
       button(type="submit") Отправить

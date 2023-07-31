@@ -18,7 +18,7 @@ section.vacancies-offer
                       each el in block.list
                         li  #{el}
               .accordion__buttons
-                a.accordion__link(href="javascript:") Откликнуться
+                a.accordion__link(href="javascript:" data-modal='modal_vacancies-summary') Откликнуться
       .vacancies-offer__all
         h3.vacancies-offer__all-title Посмотреть все вакансии СОТРАНС
         a.vacancies-offer__all-link(href="javascript:")
@@ -41,6 +41,6 @@ section.vacancies-offer
         p Работа на Механическом заводе СОТРАНС — это качество, оперативность и возможность решать самые сложные задачи.
         p Отправляйте резюме и присоединяйтесь к команде лидеров рынка!
       .vacancies-offer__buttons
-        button.vacancies-offer__summary Отправить резюме
-        button.vacancies-offer__call Отправить резюме
+        button.vacancies-offer__summary(data-modal="modal_vacancies-summary") Отправить резюме
+        button.vacancies-offer__call(data-modal="modal_vacancies-call") Заказать звонок
 

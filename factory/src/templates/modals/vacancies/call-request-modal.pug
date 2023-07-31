@@ -1,15 +1,15 @@
-+modal({title: 'Заказать звонок', modifier: 'modal_vacancies-call', dataset: 'modal_vacancies-call'})
++modal({title: 'Заказать звонок', modifier: 'modal_vacancies-call'})
   .form__fields
     .form__input
-      input(type="text" name="lastName")
+      input(type="text" name="lastName" required)
       label ФИО *
     .form__input
-      input(type="tel" name="tel")
+      input(type="tel" name="tel" required)
       label Номер телефона *
   .form__bottom
     h3.form__subtitle Удобное время для звонка
     .form__select
-      input(type='hidden' name='' value='')
+      input(type='hidden' name='' value='' required)
       .form__select-value
         .form__select-value-txt.default Выберите время
         .form__select-value-arrow
@@ -26,7 +26,7 @@
           li.form__select-options-item 16:00-17:00
           li.form__select-options-item 17:00-18:00
     .form__check
-      input(type="checkbox" name="policy" id="vacanciesPolicy")
-      label(for="vacanciesPolicy") Я согласен на обработку персональных данных в соответстви #[br] с #[a(href="#") Политикой конфидициальности ]
+      input(type="checkbox" name="policy" id="callVacanciesPolicy" required)
+      label(for="callVacanciesPolicy") Я согласен на обработку персональных данных в соответстви #[span с #[a(href="#") Политикой конфидициальности ]]
     .form__submit
       button(type="submit") Отправить
