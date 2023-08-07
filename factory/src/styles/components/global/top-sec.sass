@@ -9,6 +9,11 @@
   +screen($tablet)
     height: 460px
 
+  &__container
+    max-width: 1320px
+    margin: 0 auto
+    width: 100%
+
   .breadcrumbs
     position: absolute
     left: 0
@@ -45,6 +50,8 @@
     +screen($tablet)
       padding: 64px 20px
       justify-content: flex-end
+    +screen($tablet-xs)
+      background: url(../assets/img/index/top-bg-mob.jpg) no-repeat center/cover
 
     &:before
       content: ''

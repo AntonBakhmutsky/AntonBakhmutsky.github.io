@@ -1,14 +1,15 @@
 section.top
   .container.container_xl
-    if (topSecBreadcrumbs)
-      +breadcrumbs(breadCrumbsList)
-    .top__content.slide-right
-      h1.top__title !{topTitle}
-      if (topTxt)
-        p.top__txt !{topTxt}
-    if (callModal)
-      .top__btn.slide-right.call-modal__btn
-        if (topBtnMain)
-          button.btn.btn_orange Заказать звонок
-        else
-          button.btn.btn_orange Получить предложение
+    .top__container
+      if (topSecBreadcrumbs)
+        +breadcrumbs(breadCrumbsList)
+      .top__content.slide-right
+        h1.top__title !{topTitle}
+        if (topTxt)
+          p.top__txt !{topTxt}
+      if (callModal)
+        .top__btn.slide-right.call-modal__btn
+          if (topBtnMain)
+            button.btn.btn_orange Заказать звонок
+          else
+            button.btn.btn_orange Получить предложение
