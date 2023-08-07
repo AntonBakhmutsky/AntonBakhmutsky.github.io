@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d225187-906f-4110-8ade-e8e2eaf3a4e8" name="Changes" comment="clear work tree" />
+    <list default="true" id="2d225187-906f-4110-8ade-e8e2eaf3a4e8" name="Changes" comment="clear working tree" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -57,6 +57,7 @@
       <workItem from="1681984426887" duration="2000" />
       <workItem from="1684395428546" duration="3000" />
       <workItem from="1691401234546" duration="40000" />
+      <workItem from="1691401300054" duration="661000" />
     </task>
     <task id="LOCAL-00001" summary="clear work tree">
       <created>1678697139956</created>
@@ -79,7 +80,21 @@
       <option name="project" value="LOCAL" />
       <updated>1691401265732</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="clear working tree">
+      <created>1691401307893</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1691401307893</updated>
+    </task>
+    <task id="LOCAL-00005" summary="clear working tree">
+      <created>1691401346609</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1691401346609</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -98,6 +113,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="clear work tree" />
-    <option name="LAST_COMMIT_MESSAGE" value="clear work tree" />
+    <MESSAGE value="clear working tree" />
+    <option name="LAST_COMMIT_MESSAGE" value="clear working tree" />
   </component>
 </project>
