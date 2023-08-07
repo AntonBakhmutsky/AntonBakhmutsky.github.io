@@ -35,6 +35,8 @@
 
     &-title
       +font(22px, 29px, 700)
+      +screen($tablet)
+        +font(20px, 29px, 700)
 
     &-link
       width: 203px
@@ -160,7 +162,7 @@
   background-color: #EDF2F9
 
   &__title
-    +font(32px, 52px, 700)
+    +font(32px, 52px, 700, $font-title)
     text-align: center
     +screen($tablet)
       text-align: left

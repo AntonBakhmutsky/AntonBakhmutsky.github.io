@@ -6,7 +6,7 @@
   padding: 10px 24px
   box-sizing: border-box
   border-radius: 10px
-  border: 2px solid #E8E8E8
+  border: 1px solid #E8E8E8
   position: relative
   transition: box-shadow .3s
   +screen($tablet)
@@ -15,6 +15,7 @@
   &.open
     box-shadow: 0 4px 23px 0 #0000001A
     border: none
+
     .accordion__arrow
       transform: rotate(180deg)
 
@@ -32,12 +33,20 @@
       svg
         path
           stroke: #0B5CA0
+          +screen($tablet)
+            stroke: #171717
+
+      .accordion__title
+        color: #0B5CA0
+        +screen($tablet)
+          color: #171717
 
   &__title
     +font(18px, 24px, 500)
     max-width: 453px
     box-sizing: border-box
     padding-right: 20px
+    transition: color .3s
     +screen($tablet)
       +font(16px, 20px, 500)
 
@@ -88,12 +97,14 @@
     &-title
       +font(16px, 24px, 500)
       +screen($tablet)
-        +font(14px, 24px)
+        +font(14px, 24px, 500)
 
     &-list
       display: flex
       flex-direction: column
       gap: 4px
+      +screen($tablet)
+        gap: 8px
 
       li
         box-sizing: border-box
@@ -101,7 +112,7 @@
         position: relative
         +font(16px, 24px)
         +screen($tablet)
-          +font(14px, 24px)
+          +font(14px, 20px)
 
         &:before
           content: ''

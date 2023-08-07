@@ -45,7 +45,7 @@
     label
       position: absolute
       left: 16px
-      top: 16px
+      top: 19px
       +font(14px, 14px)
       color: #949494
       transition: font-size .3s, top .3s
@@ -231,6 +231,9 @@
       margin: 0 auto
       +screen($tablet)
         width: 100%
+
+      &:hover:not(:active)
+        background-color: #1273C4
 
   &__select
     position: relative
