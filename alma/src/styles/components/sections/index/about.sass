@@ -4,4 +4,61 @@
 .about
   background-color: $light-blue
   box-sizing: border-box
-  padding: 24px
+  padding: 24px 0 60px
+  width: 100%
+
+  &-container
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    grid-template-rows: 1fr
+    grid-column-gap: 24px
+    grid-row-gap: 0
+    position: relative
+
+  &-info
+    grid-area: 1 / 1 / 2 / 2
+
+    p
+      margin-top: 16px
+
+    &-btns
+      display: flex
+      gap: 16px
+      margin-top: 36px
+
+  &-slider
+    grid-area: 1 / 2 / 2 / 3
+    overflow: hidden
+    border-radius: 16px
+
+  &-beauty
+    position: absolute
+    right: -42px
+    bottom: -42px
+
+  .swiper
+    position: relative
+
+  .swiper-button
+    width: 30px
+    height: 30px
+    border-radius: 50%
+    background-color: $blue-main
+    background-repeat: no-repeat
+    background-position: center
+    position: absolute
+    bottom: 20px
+
+    &-prev
+      background-image: url(../assets/img/index/about/arrow-left.svg)
+      right: 62px
+      left: auto
+      top: auto
+
+    &-next
+      background-image: url(../assets/img/index/about/arrow-right.svg)
+      right: 20px
+      left: auto
+      top: auto
+
+

@@ -1,22 +1,23 @@
 section.about
- .container
-   .about-info
-     h3.subtitle О медицинском центре Almamed
-     p.description-text Противоположная точка зрения подразумевает, что представители современных социальных резервов лишь добавляют фракционных разногласий и в равной степени предоставлены сами себе.
-     p.description-text Безусловно, начало повседневной работы по формированию позиции влечет за собой процесс внедрения и модернизации дальнейших направлений развития. Учитывая ключевые сценарии поведения, высококачественный прототип будущего проекта позволяет оценить значение системы обучения кадров, соответствующей насущным потребностям.
-     .about-info-btns
-        button.btn.btn-fill Подробнее
-        button.btn.btn-trans Задать вопрос
-   .about-slider#about-slider
-     .swiper
-       .swiper-wrapper
-         each slide in aboutSlides
-           .swiper-slide
-             img(src=slide alt="")
-       .swiper-button-prev
-       .swiper-button-next
-   .about-beauty
-     | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/index/about/beauty.svg')}
+  .container
+    .about-container
+      .about-info
+        h3.subtitle О медицинском центре Almamed
+        p.description-text Противоположная точка зрения подразумевает, что представители современных социальных резервов лишь добавляют фракционных разногласий и в равной степени предоставлены сами себе.
+        p.description-text Безусловно, начало повседневной работы по формированию позиции влечет за собой процесс внедрения и модернизации дальнейших направлений развития. Учитывая ключевые сценарии поведения, высококачественный прототип будущего проекта позволяет оценить значение системы обучения кадров, соответствующей насущным потребностям.
+        .about-info-btns
+          button.btn.btn-fill Подробнее
+          button.btn.btn-trans Задать вопрос
+      .about-slider#about-slider
+        .swiper
+          .swiper-wrapper
+            each slide in aboutSlides
+              .swiper-slide
+                img(src=slide alt="")
+          .swiper-button-prev.swiper-button
+          .swiper-button-next.swiper-button
+        .about-beauty
+          | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/index/about/beauty.svg')}
 
 
 
