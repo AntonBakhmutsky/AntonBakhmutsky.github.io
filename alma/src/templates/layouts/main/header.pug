@@ -14,8 +14,15 @@ header.header
         | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/global/logo.svg')}
       .header__bottom-menu
         .header__bottom-menu-block
-
+          each el, index in headerBottomMenu
+            if (index === 0)
+              each menuItem in el
+                a(href=menuItem.url) #{menuItem.txt}
         .header__bottom-menu-block
+          each el, index in headerBottomMenu
+            if (index !== 0)
+              each menuItem in el
+                a(href=menuItem.url) #{menuItem.txt}
 
 
 

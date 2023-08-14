@@ -2,3 +2,24 @@
 @use '../../abstracts/mixins' as *
 
 .header
+  background-color: $blue
+
+  .container
+    display: flex
+    flex-direction: column
+
+  &__top, &__bottom
+    display: flex
+    justify-content: space-between
+
+  &__top
+    box-sizing: border-box
+    padding: 11px 0
+
+    &-menu
+      display: flex
+      gap: 20px
+
+  &__bottom
+
+
