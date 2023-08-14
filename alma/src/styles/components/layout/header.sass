@@ -15,11 +15,72 @@
   &__top
     box-sizing: border-box
     padding: 11px 0
+    display: flex
+    align-items: center
+
+    &-menu
+      a
+        color: $white
+        +font(13px, 18px)
 
     &-menu
       display: flex
       gap: 20px
 
-  &__bottom
+  &__contacts
+    color: $white
+    display: flex
+    gap: 20px
 
+    a
+      color: $white
+
+    &-phone
+      +font(15px, 17px, 700)
+
+    &-container
+      display: flex
+      flex-direction: column
+      gap: 4px
+      align-items: flex-end
+
+  &__bottom
+    box-sizing: border-box
+    padding: 18px 0
+    display: flex
+    justify-content: space-between
+    gap: 20px
+    align-items: center
+
+    &-menu
+      display: flex
+      justify-content: space-between
+      flex-grow: 1
+
+      &-block
+        display: flex
+        gap: 20px
+        box-sizing: border-box
+
+        a
+          display: flex
+          align-items: center
+          gap: 4px
+          color: $white
+          +font(13px, 18px, 600)
+
+          span
+            &:last-child
+              width: 12px
+              height: 12px
+              display: flex
+              align-items: center
+              justify-content: center
+
+        &:nth-child(1)
+          border-radius: 10px
+          background-color: $blue-dark
+          padding: 7px 19px
+
+        &:nth-child(2)
 

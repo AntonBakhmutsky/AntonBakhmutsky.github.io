@@ -8,7 +8,7 @@ header.header
         .header__contacts-container
           .header__contacts-adress г. Пермь, ул. Николая Островского, д. 30
           a.header__contacts-phone(href="tel:+73422583747") +7 (342) 258-37-47
-        button.header__contacts-btn(data-modal="modal_call-request") Заказать звонок
+        button.white-btn.header__contacts-btn(data-modal="modal_call-request") Заказать звонок
     .header__bottom
       a.header__bottom-logo(href="/")
         | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/global/logo.svg')}
@@ -17,12 +17,16 @@ header.header
           each el, index in headerBottomMenu
             if (index === 0)
               each menuItem in el
-                a(href=menuItem.url) #{menuItem.txt}
+                a(href=menuItem.url)
+                  span #{menuItem.txt}
+                  span !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/global/vector-down-menu-white.svg')}
         .header__bottom-menu-block
           each el, index in headerBottomMenu
             if (index !== 0)
               each menuItem in el
-                a(href=menuItem.url) #{menuItem.txt}
+                a(href=menuItem.url)
+                  span #{menuItem.txt}
+                  span !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/global/vector-down-menu-white.svg')}
 
 
 

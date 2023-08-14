@@ -1,0 +1,38 @@
+@use '../abstracts/variables' as *
+@use '../abstracts/mixins' as *
+
+.form
+  &-input
+    position: relative
+
+    input
+      height: 46px
+      border: 1px solid $white
+      box-sizing: border-box
+      border-radius: 8px
+      width: 100%
+      padding: 23px 12px 7px
+      +font(14px, 16px, 600)
+
+      &:focus
+        border-color: $blue
+
+    label
+      position: absolute
+      top: 15px
+      left: 12px
+      +font(14px, 16px)
+      transition: top .3s, font-size .3s
+      color: $grey
+
+      &.active
+        +font(12px, 16px)
+        top: 7px
+
+    &_search
+      input
+        border-color: #A1B6ED
+
+      label
+        color: #F5F7FD
+

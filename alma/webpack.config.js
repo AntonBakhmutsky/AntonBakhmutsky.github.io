@@ -14,7 +14,7 @@ const pages = fs.readdirSync(pagesDir).filter(fileName => fileName.endsWith('.pu
 module.exports = {
   context: path.resolve(__dirname, 'src'),
   entry: {
-    app: ['@babel/polyfill', './app.js']
+    app: ['@babel/polyfill', './global.js']
   },
   output: {
     filename: '[name].js',
