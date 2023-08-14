@@ -1,18 +1,29 @@
-section.main-slider#main-slider
-  .swiper
-    .swiper-wrapper
-      .swiper-slide
-        h2 Уникальное торговое предложение
-        p Мы вынуждены отталкиваться от того, что экономическая повестка сегодняшнего дня прекрасно подходит для реализации самодостаточных.
-        .swiper-slide-main-btns
-          button Записаться
-          button Подробнее
-      .swiper-slide
-        h2 2 slide
-        p Мы вынуждены отталкиваться от того, что экономическая повестка сегодняшнего дня прекрасно подходит для реализации самодостаточных.
-        .swiper-slide-main-btns
-          button Записаться
-          button Подробнее
-    .swiper-pagination
-    .swiper-button-prev
-    .swiper-button-next
+section.main-page.container
+  .main-slider#main-slider
+    .swiper
+      .swiper-wrapper
+        .swiper-slide.main-page-swiper-slide1
+          .main-page-swiper-slide-info
+            h2 Уникальное торговое предложение
+            p Мы вынуждены отталкиваться от того, что экономическая повестка сегодняшнего дня прекрасно подходит для реализации самодостаточных.
+            .swiper-slide-main-btns
+              button Записаться
+              button Подробнее
+        .swiper-slide
+          h2 2 slide
+          p Мы вынуждены отталкиваться от того, что экономическая повестка сегодняшнего дня прекрасно подходит для реализации самодостаточных.
+          .swiper-slide-main-btns
+            button Записаться
+            button Подробнее
+      .swiper-pagination
+      .swiper-button-prev.swiper-button
+      .swiper-button-next.swiper-button
+  .main-page-cards
+    each card in mainPageCards
+      .main-page-cards-item
+        .main-page-cards-item__img
+          img(src=card.img alt="")
+        span.main-page-cards-item_title=card.title
+        p=card.text
+
+

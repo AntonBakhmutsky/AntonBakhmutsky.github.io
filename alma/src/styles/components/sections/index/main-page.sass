@@ -1,0 +1,95 @@
+@use '../../../abstracts/variables' as *
+@use '../../../abstracts/mixins' as *
+
+.main-page
+  padding-top: 20px
+  padding-bottom: 40px
+  box-sizing: border-box
+
+  .main-slider:hover .swiper-button
+    opacity: 1 !important
+    transition: opacity 0.3s
+
+  .swiper-pagination-bullet
+    background: rgba(255, 255, 255, 1)
+
+
+  .swiper-button
+    opacity: 0
+    width: 40px
+    height: 40px
+    border-radius: 50%
+    background-color: rgba(255, 255, 255, 0.3)
+    background-repeat: no-repeat
+    background-position: center
+    transition: opacity 0.3s
+
+    &:hover
+      background-color: $white
+
+    &-prev
+      background-image: url(../assets/img/global/arrow-left.svg)
+
+    &-next
+      background-image: url(../assets/img/global/arrow-right.svg)
+
+
+
+  .swiper-slide
+    height: 380px
+    display: flex
+    align-items: center
+    padding-left: 78px
+    box-sizing: border-box
+    border-radius: 16px
+
+    .main-page-swiper-slide-info
+      width: 408px
+
+      h2
+        +font(30px, 36px, 900)
+        color: $black
+        margin-bottom: 12px
+
+      p
+        +font(14px, 20px, 400)
+        color: $black
+        margin-bottom: 36px
+
+  &-swiper-slide1
+    background: url(../assets/img/index/main-page/slide1.jpg) no-repeat center/cover
+
+  &-cards
+    margin-top: 16px
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    grid-column-gap: 24px
+    grid-row-gap: 0
+
+    &-item
+      box-shadow: 0 4px 20px 0 rgba(14, 17, 97, 0.1)
+      padding: 16px
+      box-sizing: border-box
+      display: flex
+      flex-direction: column
+
+      &__img
+        width: 32px
+        height: 32px
+        display: flex
+        align-items: center
+
+      &_title
+        +font(16px, 20px, 700)
+        color: $black
+        margin: 8px 0
+
+      p
+        +font(14px, 20px, 400)
+        color: $black
+
+
+
+
+
+
