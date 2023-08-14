@@ -12,9 +12,9 @@ section.main-page.container
         .swiper-slide
           h2 2 slide
           p Мы вынуждены отталкиваться от того, что экономическая повестка сегодняшнего дня прекрасно подходит для реализации самодостаточных.
-          .swiper-slide-main-btns
-            button Записаться
-            button Подробнее
+          .main-page-btns
+            button.btn.btn-fill Записаться
+            button.btn.btn-trans Подробнее
       .swiper-pagination
       .swiper-button-prev.swiper-button
       .swiper-button-next.swiper-button
@@ -24,6 +24,6 @@ section.main-page.container
         .main-page-cards-item__img
           img(src=card.img alt="")
         span.main-page-cards-item_title=card.title
-        p=card.text
+        p.description-text=card.text
 
 

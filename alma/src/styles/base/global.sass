@@ -100,3 +100,27 @@ input[type="radio"]:checked + label
 .swiper-button-prev:after, .swiper-button-next:after
   display: none
 
+.subtitle
+  +font(26px, 32px, 900)
+  color: $black
+
+.description-text
+  +font(14px, 20px, 400)
+  color: $black
+
+.btn
+  padding: 14px 32px 15px
+  box-sizing: border-box
+  border-radius: 10px
+  +font(14px, 17px, 700)
+
+  &-fill
+    background-color: $blue-main
+    border: 2px solid $blue-main
+    color: $white
+
+  &-trans
+    background-color: transparent
+    border: 2px solid $blue-main
+    color: $blue-main
+
