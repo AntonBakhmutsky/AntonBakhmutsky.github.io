@@ -1,34 +1,34 @@
 footer.footer
-  .container
     .footer__top
-      .footer__block
-          .footer__logo
-            img(src=require('@/assets/img/global/logo-footer.svg') alt="")
-          p.footer__txt Лицензия Л000-0000-00/00000000 от 00.00.0000 года, выдана Министерством здравоохранения Пермского края
-          .footer__socials
-            a(href="javascript:")
-              | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/global/vk.svg')}
-      .footer__block
-        .footer__menu
-          each el in footerMenu
-            .footer__menu-block
-              each menuItem in el
-                a(href=menuItem.url) #{menuItem.txt}
-      .footer__block
-        .footer__search
-          h4.footer__search-title Поиск по сайту
-          .form-input.form__input_search
-            input(
-              type="text"
-              name="search"
-              id="search"
-            )
-            label(for="search") Введите поисковый запрос
-            .form-input-icon
-              | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/global/search-icon.svg')}
-        .footer__buttons
-          a(href="javascript:") Опрос
-          a(href="javascript:") Задать вопрос
+      .container
+        .footer__block
+            .footer__logo
+              img(src=require('@/assets/img/global/logo-footer.svg') alt="")
+            p.footer__txt Лицензия Л000-0000-00/00000000 от 00.00.0000 года, выдана Министерством здравоохранения Пермского края
+            .footer__socials
+              a(href="javascript:")
+                | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/global/vk.svg')}
+        .footer__block
+          .footer__menu
+            each el in footerMenu
+              .footer__menu-block
+                each menuItem in el
+                  a(href=menuItem.url) #{menuItem.txt}
+        .footer__block
+          .footer__search
+            h4.footer__search-title Поиск по сайту
+            .form-input.form-input_search
+              input(
+                type="text"
+                name="search"
+                id="search"
+              )
+              label(for="search") Введите поисковый запрос
+              .form-input__icon
+                | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/global/search-icon.svg')}
+          .footer__buttons.light-btns
+            a(href="javascript:") Опрос
+            a(href="javascript:") Задать вопрос
     .footer__bottom
       .container
         .footer__copyright Almamed © 2023. Все права защищены. При копирование материалов ссылка на источник обязательна.
