@@ -2,7 +2,7 @@
 @use '../../abstracts/mixins' as *
 
 .header
-  background-color: $blue
+  background-color: $blue-main
 
   .container
     display: flex
@@ -17,6 +17,7 @@
     padding: 11px 0
     display: flex
     align-items: center
+    position: relative
 
     &-menu
       a
@@ -26,6 +27,14 @@
     &-menu
       display: flex
       gap: 20px
+
+  &__options
+    position: fixed
+    background-color: $white
+    left: 0
+    z-index: 10
+    width: 100vw
+    top: 130px
 
   &__contacts
     color: $white
@@ -51,6 +60,7 @@
     justify-content: space-between
     gap: 20px
     align-items: center
+    border-top: 1px solid #3a62c6
 
     &-menu
       display: flex
@@ -66,8 +76,23 @@
           display: flex
           align-items: center
           gap: 4px
-          color: $white
+          color: $menu-static
           +font(13px, 18px, 600)
+
+          svg
+            transition: transform .3s
+
+            path
+              stroke: $menu-static
+
+          &:hover:not(:active)
+            color: $white
+
+            svg
+              transform: rotate(180deg)
+              margin-top: 2px
+              path
+                stroke: $white
 
           span
             &:last-child
@@ -81,6 +106,3 @@
           border-radius: 10px
           background-color: $blue-dark
           padding: 7px 19px
-
-        &:nth-child(2)
-

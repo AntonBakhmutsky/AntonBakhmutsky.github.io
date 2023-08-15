@@ -13,20 +13,15 @@ header.header
       a.header__bottom-logo(href="/")
         | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/global/logo.svg')}
       .header__bottom-menu
-        .header__bottom-menu-block
-          each el, index in headerBottomMenu
-            if (index === 0)
-              each menuItem in el
-                a(href=menuItem.url)
-                  span #{menuItem.txt}
-                  span !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/global/vector-down-menu-white.svg')}
-        .header__bottom-menu-block
-          each el, index in headerBottomMenu
-            if (index !== 0)
-              each menuItem in el
-                a(href=menuItem.url)
-                  span #{menuItem.txt}
-                  span !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/global/vector-down-menu-white.svg')}
-
-
-
+        each el in headerBottomMenu
+          .header__bottom-menu-block
+            each menuItem in el
+              a(href=menuItem.url)
+                span #{menuItem.txt}
+                span !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/global/vector-down-menu-white.svg')}
+                .header__options
+                  if (menuItem.options.leftMenu)
+                    .header__options-left
+                      each leftMenuItem in menuItem.options.leftMenu
+                        a(href="javascript:" data-id=leftMenuItem.id) #{leftMenuItem.txt}
+                    .header__options-links
