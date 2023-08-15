@@ -10,18 +10,34 @@
   +font(12px, 13px, 700)
 
 .btn
-  padding: 14px 32px 15px
   box-sizing: border-box
   border-radius: 10px
   +font(14px, 17px, 700)
+  display: flex
+  align-items: center
+  justify-content: center
+  height: 46px
 
   &-fill
     background-color: $blue-main
     border: 2px solid $blue-main
     color: $white
     box-shadow: 0 4px 12px 0 #1D45AA66
+    transition: background-color 0.3s ease-in, border 0.3s ease-in
+
+    &:hover
+      background-color: $blue-dark
+      border: 2px solid $blue-dark
+      transition: background-color 0.3s ease-in, border 0.3s ease-in
+
 
   &-trans
     background-color: transparent
     border: 2px solid $blue-main
     color: $blue-main
+    transition: background-color 0.3s ease-in
+
+    &:hover
+      background: rgba(29, 69, 170, 0.1)
+      transition: background-color 0.3s ease-in
+

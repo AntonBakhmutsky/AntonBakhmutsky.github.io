@@ -1,0 +1,86 @@
+@use '../../../abstracts/variables' as *
+@use '../../../abstracts/mixins' as *
+
+.treatment
+  box-sizing: border-box
+  padding: 40px 0
+
+  .description-text
+    margin: 16px 0 28px
+
+  &-switcher
+    margin: 0 20px 20px
+
+    &-btns
+      display: grid
+      grid-template-columns: repeat(5, 1fr)
+      grid-template-rows: 1fr
+      grid-column-gap: 63px
+      grid-row-gap: 0
+      box-sizing: border-box
+      padding-bottom: 10px
+      overflow-y: scroll
+      -ms-overflow-style: none /* IE и Edge */
+      scrollbar-width: none /* Firefox */
+
+      &::-webkit-scrollbar
+        display: none
+
+
+    &-indificator-line
+      height: 6px
+      width: 100%
+      border-radius: 6px
+      background-color: $light-blue
+
+    &-btn
+
+      h5
+        text-align: start
+        color: $gray-medium
+        +font(14px, 17px, 700)
+        transition: color 0.3s ease
+        white-space: nowrap
+        margin: 0
+
+        &:hover
+          transition: color 0.3s ease
+          color: $blue-main
+
+      p
+        text-align: start
+        +font(12px, 15px, 400)
+        color: $black
+        margin-top: 8px
+        height: 45px
+        overflow: hidden
+
+  &-service-card
+    background-color: $light-blue
+    border-radius: 16px
+    overflow: hidden
+    box-sizing: border-box
+    padding: 20px
+    display: flex
+    justify-content: space-between
+    gap: 24px
+
+    &-info
+      width: 64.3%
+
+      h4
+        +font(20px, 24px, 700)
+        color: $black
+        margin-bottom: 12px
+
+      &_text
+        +font(14px, 20px, 400)
+        color: $black
+        margin-bottom: 20px
+
+      &_price
+
+
+
+
+
