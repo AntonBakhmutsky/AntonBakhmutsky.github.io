@@ -4,8 +4,8 @@ section.treatment
     p.description-text Противоположная точка зрения подразумевает, что представители современных социальных резервов лишь добавляют фракционных разногласий и в равной степени предоставлены сами себе.
     .treatment-switcher
       .treatment-switcher-btns
-        each el in switcherButtons
-          button.treatment-switcher-btn
+        each el, index in switcherButtons
+          button.treatment-switcher-btn(data-id=index)
             h5=el.title
             p=el.description
             .treatment-switcher-btn_indicator
