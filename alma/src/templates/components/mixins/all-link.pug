@@ -1,0 +1,5 @@
+mixin all-link(title, link)
+  a(href=link).all-link
+    span=title
+    | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/global/arrow-right-blue-long.svg')}
+
