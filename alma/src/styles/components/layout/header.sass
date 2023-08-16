@@ -44,7 +44,6 @@
     width: 100vw
     top: 100%
     display: none
-
     &.active
       display: block
 
@@ -56,9 +55,11 @@
     .container
       display: flex
       flex-direction: row
+      height: 100%
 
     &-item
       display: none
+      height: 100%
 
       &.active
         display: block
@@ -89,6 +90,7 @@
       width: 216px
       z-index: 10
       transition: color .3s
+      cursor: pointer
 
       &:hover
         color: $blue-main
@@ -199,6 +201,7 @@
                 stroke: $white
 
           &.active
+            color: $white
 
             svg
               transform: rotate(180deg)
