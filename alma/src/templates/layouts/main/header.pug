@@ -25,14 +25,14 @@ header.header
         .container
           if (el.leftMenu)
             .header__hidden-left
-              each leftBtn in el.leftMenu
-                .header__hidden-btn
+              each leftBtn, index in el.leftMenu
+                .header__hidden-btn(data-id=index)
                   span #{leftBtn.txt}
                   span !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/global/arrow-right-blue.svg')}
           .header__hidden-links
             if (el.leftMenu)
-              each leftBtn in el.leftMenu
-                .header__hidden-links-item(data-id=el.id)
+              each leftBtn, index in el.leftMenu
+                .header__hidden-links-item(data-id=el.index)
                   each linkBlock in el.links
                     .header__hidden-links-block
                       each link in linkBlock
