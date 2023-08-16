@@ -3,6 +3,11 @@
 
 .header
   background-color: $blue-main
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  z-index: 100
 
   .container
     display: flex
@@ -24,17 +29,106 @@
         color: $white
         +font(13px, 18px)
 
+        .header__options
+          display: none
+
     &-menu
       display: flex
       gap: 20px
 
-  &__options
-    position: fixed
+  &__hidden
+    position: absolute
     background-color: $white
     left: 0
     z-index: 10
     width: 100vw
-    top: 130px
+    top: 100%
+    display: none
+
+    &.active
+      display: block
+
+    &:hover
+      .header__hidden-left
+        &:before
+          display: block
+
+    .container
+      display: flex
+      flex-direction: row
+
+    &-item
+      display: none
+
+      &.active
+        display: block
+
+    &-left
+      display: flex
+      flex-direction: column
+      gap: 28px
+      box-sizing: border-box
+      padding: 32px 26px 22px
+      position: relative
+
+      &:before
+        content: ''
+        position: absolute
+        right: 0
+        top: 0
+        width: 100vw
+        height: 100%
+        background-color: $light-blue
+        display: none
+
+    &-btn
+      +font(14px, 17px, 700)
+      display: flex
+      align-items: flex-start
+      justify-content: space-between
+      width: 216px
+      z-index: 10
+      transition: color .3s
+
+      &:hover
+        color: $blue-main
+
+      svg
+        path
+          stroke: $blue-main
+
+    &-links
+      width: 100%
+      box-sizing: border-box
+      padding: 32px 0 22px 40px
+
+      &-item
+        gap: 100px
+        justify-content: space-between
+        visibility: hidden
+        opacity: 0
+        display: none
+        transition: opacity .3s, visibility .3s
+
+        &.active
+          display: flex
+          opacity: 1
+          visibility: visible
+
+      &-block
+        max-width: 387px
+        display: flex
+        flex-direction: column
+        gap: 27px
+
+        &:last-child
+          margin-right: auto
+
+      a
+        +font(14px, 20px)
+
+        &:hover:not(:active)
+          color: $blue-main
 
   &__contacts
     color: $white
@@ -58,9 +152,21 @@
     padding: 18px 0
     display: flex
     justify-content: space-between
-    gap: 20px
+    gap: 30px
     align-items: center
-    border-top: 1px solid #3a62c6
+    position: relative
+
+    &:before
+      content: ''
+      width: 100vw
+      height: 1px
+      position: absolute
+      top: 0
+      left: 50%
+      transform: translateX(-50%)
+      background-color: $blue
+      +screen($tablet)
+        display: none
 
     &-menu
       display: flex
@@ -85,12 +191,19 @@
             path
               stroke: $menu-static
 
-          &:hover:not(:active)
+          &:hover
             color: $white
+
+            svg
+              path
+                stroke: $white
+
+          &.active
 
             svg
               transform: rotate(180deg)
               margin-top: 2px
+
               path
                 stroke: $white
 

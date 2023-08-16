@@ -16,12 +16,33 @@ header.header
         each el in headerBottomMenu
           .header__bottom-menu-block
             each menuItem in el
-              a(href=menuItem.url)
+              a(href=menuItem.url data-id=menuItem.id)
                 span #{menuItem.txt}
                 span !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/global/vector-down-menu-white.svg')}
-                .header__options
-                  if (menuItem.options.leftMenu)
-                    .header__options-left
-                      each leftMenuItem in menuItem.options.leftMenu
-                        a(href="javascript:" data-id=leftMenuItem.id) #{leftMenuItem.txt}
-                    .header__options-links
+  .header__hidden
+    each el in hiddenMenu
+      .header__hidden-item(data-id=el.id)
+        .container
+          if (el.leftMenu)
+            .header__hidden-left
+              each leftBtn in el.leftMenu
+                .header__hidden-btn
+                  span #{leftBtn.txt}
+                  span !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/global/arrow-right-blue.svg')}
+          .header__hidden-links
+            if (el.leftMenu)
+              each leftBtn in el.leftMenu
+                .header__hidden-links-item(data-id=el.id)
+                  each linkBlock in el.links
+                    .header__hidden-links-block
+                      each link in linkBlock
+                        a(href=link.url) #{link.txt}
+            else
+              .header__hidden-links-item
+                each linkBlock in el.links
+                  .header__hidden-links-block
+                    each link in linkBlock
+                      a(href=link.url) #{link.txt}
+
+
+
