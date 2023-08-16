@@ -1,0 +1,17 @@
+section.reviews
+  .container
+    .reviews-top
+      h3.subtitle.subtitle-white Отзывы пациентов
+      a(href='#').all-link.all-link-white
+        span Все отзывы
+        | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/global/arrow-right-blue-long.svg')}
+    .reviews-container
+      each el in reviews
+        .reviews-card
+          .reviews-card-info
+            h5.reviews-card_name=el.name
+            h6.reviews-card_title=el.title
+            p.reviews-card_text=el.text
+          span.reviews-card_date=el.date
+      .reviews-container-beauty
+        | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/index/reviews/beauty.svg')}
