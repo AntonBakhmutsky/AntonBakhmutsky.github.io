@@ -1,7 +1,7 @@
 window.addEventListener('load', () => {
   if (document.querySelector('.treatment')) {
 
-    document.querySelector('.treatment-service-card[data-id="0"]').style.display = "flex";
+    document.querySelector('.treatment-service-card[data-id="0"]').classList.add("active");
     document.querySelector('.treatment-switcher-btns button[data-id="0"]').classList.add("active");
 
     const buttons = document.querySelectorAll('.treatment-switcher-btn')
@@ -11,7 +11,7 @@ window.addEventListener('load', () => {
       buttons.forEach(function(button, index) {
         button.addEventListener("click", function() {
         cards.forEach(function(card) {
-        card.style.display = "none"
+        card.classList.remove("active")
       });
 
 
@@ -20,7 +20,7 @@ window.addEventListener('load', () => {
       });
 
       // Показываем карточку, связанную с нажатой кнопкой
-      cards[index].style.display = "flex"
+      cards[index].classList.add("active")
 
       // Добавляем активный стиль к нажатой кнопке
         button.classList.add("active")
