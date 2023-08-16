@@ -39,6 +39,13 @@
     padding-left: 78px
     box-sizing: border-box
     border-radius: 16px
+    position: relative
+
+    &_img
+      position: absolute
+      left: 0
+      top: 0
+      z-index: -1
 
     &-main-btns
       display: flex
@@ -59,9 +66,6 @@
         +font(14px, 20px, 400)
         color: $black
         margin-bottom: 36px
-
-  &-swiper-slide1
-    background: url(../assets/img/index/main-page/slide1.jpg) no-repeat center/cover
 
   &-cards
     margin-top: 16px

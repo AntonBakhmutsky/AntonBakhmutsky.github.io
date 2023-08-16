@@ -2,19 +2,16 @@ section.main-page.container
   .main-slider#main-slider
     .swiper
       .swiper-wrapper
-        .swiper-slide.main-page-swiper-slide1
-          .main-page-swiper-slide-info
-            h2 Уникальное торговое предложение
-            p Мы вынуждены отталкиваться от того, что экономическая повестка сегодняшнего дня прекрасно подходит для реализации самодостаточных.
-            .swiper-slide-main-btns
-              button.btn.btn-fill Записаться
-              button.btn.btn-trans Подробнее
-        .swiper-slide
-          h2 2 slide
-          p Мы вынуждены отталкиваться от того, что экономическая повестка сегодняшнего дня прекрасно подходит для реализации самодостаточных.
-          .main-page-btns
-            button.btn.btn-fill Записаться
-            button.btn.btn-trans Подробнее
+        each slide in mainPageSlides
+          .swiper-slide
+            .main-page-swiper-slide-info
+              h2=slide.title
+              p=slide.text
+              .swiper-slide-main-btns
+                button.btn.btn-fill Записаться
+                button.btn.btn-trans Подробнее
+            .swiper-slide_img
+              img(src=slide.img alt)
       .swiper-pagination
       .swiper-button-prev.swiper-button
       .swiper-button-next.swiper-button
