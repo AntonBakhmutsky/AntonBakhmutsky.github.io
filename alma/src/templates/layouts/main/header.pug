@@ -1,6 +1,12 @@
 header.header
   .container
     .header__top
+      .header__mobile-container
+        button.header__burger
+          img(src=require('@/assets/img/global/burger.svg') alt="")
+          img(src=require('@/assets/img/global/close-menu.svg') alt="")
+        a.header__top-mobile-logo(href="/")
+          img(src=require('@/assets/img/global/logo.svg') alt="")
       .header__top-menu
         each el in headerTopMenu
           a(href=el.url) #{el.txt}
