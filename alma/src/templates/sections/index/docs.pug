@@ -1,0 +1,18 @@
+section.docs
+  .container
+    .docs-top
+      h3.subtitle Лицензии
+      +all-link('Все документы', '#')
+    .docs-container
+      each doc in docs
+        .docs-card
+          img(src=doc)
+          .docs-card-overlay
+            button.expand-button
+              | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/index/docs/expand.svg')}
+  .docs-modal-overlay
+    .docs-modal
+      button.close-button ×
+
+
+
