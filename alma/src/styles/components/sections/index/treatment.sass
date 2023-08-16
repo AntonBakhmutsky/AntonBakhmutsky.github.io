@@ -87,7 +87,25 @@
           bottom: -10px
 
   &-service-card
-    display: none
+    opacity: 0
+    visibility: hidden
+    max-height: 0
+    overflow: hidden
+    transition: opacity 1s ease, visibility 1s ease
+
+    &.active
+      display: flex
+      opacity: 1
+      visibility: visible
+      max-height: min-content
+      transition: opacity 1s ease, visibility 1s ease, transform 1s ease
+      background-color: $light-blue
+      border-radius: 16px
+      overflow: hidden
+      box-sizing: border-box
+      padding: 20px
+      justify-content: space-between
+      gap: 24px
 
     &-info
       width: 64.3%
@@ -123,15 +141,7 @@
         +font(12px, 14px, 400)
         margin-top: 4px
 
-    &.active
-      display: flex
-      background-color: $light-blue
-      border-radius: 16px
-      overflow: hidden
-      box-sizing: border-box
-      padding: 20px
-      justify-content: space-between
-      gap: 24px
+
 
 
 
