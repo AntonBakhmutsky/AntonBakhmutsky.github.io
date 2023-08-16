@@ -5,4 +5,6 @@ require('./components/treatment')
 require('./components/doctors')
 require('./components/header')
 require('./components/docs')
+require('./components/answers')
+
 
