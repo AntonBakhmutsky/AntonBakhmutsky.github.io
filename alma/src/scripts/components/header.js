@@ -42,5 +42,60 @@ window.addEventListener('load', () => {
     bottomMenuLinks.forEach(el => el.addEventListener('click', toggleHiddenMenu))
     hiddenMenuButtons.forEach(el => el.addEventListener('mouseover', toggleMenuButtons))
     overlay.addEventListener('click', closeHiddenMenu)
+
+    // мобильное меню
+    const mobileMenu = document.querySelector('.mobile-menu')
+    const mobileMenuContainer = document.querySelector('.mobile-menu__hidden')
+    const mobileMenuContainerLinks = document.querySelector('.mobile-menu__hidden-links')
+    const mobileMenuContainerTitle = document.querySelector('.mobile-menu__hidden-title')
+    const burger = document.querySelector('.header__burger')
+
+    function toggleMenu(e) {
+      if (e.currentTarget.classList.contains('active')) {
+        closeMobileMenu()
+      } else {
+        document.body.classList.add('body_fix')
+        mobileMenu.classList.add('active')
+        overlay.classList.add('active')
+        burger.classList.add('active')
+      }
+    }
+
+    function closeMobileMenu() {
+      mobileMenu.classList.remove('active')
+      mobileMenuContainer.classList.remove('active')
+      document.body.classList.remove('body_fix')
+      overlay.classList.remove('active')
+      burger.classList.remove('active')
+    }
+
+    function toggleMenuContent(e) {
+      let button = null, links
+
+      if (e.target.closest('.mobile-menu__btn')) {
+        button = e.target.closest('.mobile-menu__btn')
+      }
+
+      if (button) {
+        mobileMenuContainerTitle.querySelector('span').textContent = button.querySelector('span').textContent
+        if (button.querySelector('.mobile-menu__btn-hidden').children.length > 1) {
+          links = [...button.querySelector('.mobile-menu__btn-hidden').children]
+        } else {
+          links = [...button.querySelector('.mobile-menu__btn-hidden').children[0].children]
+        }
+        mobileMenuContainerLinks.innerHTML = ''
+        links.forEach(el => mobileMenuContainerLinks.insertAdjacentElement('beforeend', el.cloneNode(true)))
+        mobileMenuContainer.classList.add('active')
+      }
+    }
+
+    mobileMenuContainerTitle.addEventListener('click', function() {
+      this.parentElement.classList.remove('active')
+    })
+
+    burger.addEventListener('click', toggleMenu)
+    overlay.addEventListener('click', closeMobileMenu)
+    mobileMenu.addEventListener('click', toggleMenuContent)
+    mobileMenuContainer.addEventListener('click', toggleMenuContent)
   }
 })

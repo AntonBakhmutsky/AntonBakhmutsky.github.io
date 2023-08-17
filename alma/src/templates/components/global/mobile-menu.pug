@@ -1,0 +1,32 @@
+.mobile-menu
+  .mobile-menu__main
+    .mobile-menu__top
+      each el in mobileTopMenu
+        .mobile-menu__btn
+          span #{el.txt}
+          img(src=require('@/assets/img/global/arrow-right-blue-big.svg') alt="")
+          .mobile-menu__btn-hidden
+            if (el.buttons)
+              each button in el.buttons
+                .mobile-menu__btn
+                  span #{button.txt}
+                  img(src=require('@/assets/img/global/arrow-right-blue-big.svg') alt="")
+                  .mobile-menu__btn-hidden
+                    .mobile-menu__btn-links
+                      each link in button.links
+                        a(href=link.url) #{link.txt}
+            else if(el.links)
+              .mobile-menu__btn-links
+                each link in el.links
+                  a(href=link.url) #{link.txt}
+    .mobile-menu__bottom
+      each el in headerTopMenu
+        a(href=el.url) #{el.txt}
+  .mobile-menu__hidden
+    .mobile-menu__hidden-title
+      img(src=require('@/assets/img/global/arrow-black-left.svg') alt="")
+      span Направления
+    .mobile-menu__hidden-links
+
+
+
