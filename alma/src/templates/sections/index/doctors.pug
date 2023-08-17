@@ -1,24 +1,25 @@
 section.doctors
-  .container
-    .doctors-top
-      h3.subtitle Наши специалисты
-      +all-link('Все врачи', '#')
-    .doctors-container
-      .doctors-slider#doctors-slider
-        .swiper
-          .swiper-wrapper
-            each doctor in doctors
-              .doctors-card.swiper-slide
-                .doctors-card-info
-                  .doctors-card_img
-                    img(src=doctor.img)
-                  h5.doctors-card_name
-                    span=doctor.lastName
-                    span=doctor.name
-                  p=doctor.prof
-                  p=doctor.experience
-                button.btn.btn-fill Подробнее
-          .swiper-button-prev.swiper-button
-          .swiper-button-next.swiper-button
+  .doctors-top.container
+    h3.subtitle Наши специалисты
+    +all-link('Все врачи', '#')
+  .doctors-container
+    .doctors-slider#doctors-slider
+      .swiper
+        .swiper-wrapper
+          each doctor in doctors
+            .doctors-card.swiper-slide
+              .doctors-card-info
+                .doctors-card_img
+                  img(src=doctor.img)
+                h5.doctors-card_name
+                  span=doctor.lastName
+                  span=doctor.name
+                p=doctor.prof
+                p=doctor.experience
+              button.btn.btn-fill Подробнее
+        .swiper-button-prev.swiper-button
+        .swiper-button-next.swiper-button
+
+
 
 

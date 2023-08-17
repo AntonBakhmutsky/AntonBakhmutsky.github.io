@@ -3,6 +3,16 @@
 
 .doctors
 
+  &-container
+    position: relative
+    width: 100%
+    max-width: 1330px
+    box-sizing: border-box
+    padding: 0 40px
+    margin: 0 auto
+    +screen($tablet-sm)
+      padding: 0 20px
+
   &-top
     display: flex
     justify-content: space-between
@@ -13,7 +23,7 @@
     width: 100%
 
     .swiper
-      padding: 0 0 40px
+      padding: 0 24px 40px
 
       &-button
         width: 40px
@@ -33,7 +43,7 @@
           display: none
 
         &-prev
-          left: -20px
+          left: 5px
           background-image: url(../assets/img/index/doctors/arrow-left-gray.svg)
 
           &:hover
@@ -41,7 +51,7 @@
 
 
         &-next
-          right: -20px
+          right: 5px
           background-image: url(../assets/img/index/doctors/arrow-right-gray.svg)
 
           &:hover
