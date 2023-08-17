@@ -2,8 +2,11 @@ section.symptoms
   .container
     h3.subtitle Услуги по симптоматике
     .symptoms-container
-      each el in symptoms
-        a(href=el.link).symptoms-link=el.text
+      each el, index in symptoms
+        if index < 13
+          a(href=el.link).symptoms-link=el.text
+        else
+          a(href=el.link class=(index > 2 ? 'hidden' : '')).symptoms-link=el.text
       button.symptoms_toggle-btn Показать еще
 
 

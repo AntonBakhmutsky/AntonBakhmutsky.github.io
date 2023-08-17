@@ -2,10 +2,61 @@
 @use '../../../abstracts/mixins' as *
 
 .symptoms
+  box-sizing: border-box
+  padding-bottom: 40px
 
-.symptoms-container
-  max-height: 70px
-  overflow: hidden
+  &-container
+    margin-top: 28px
+    overflow: hidden
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    justify-content: center
+    background-color: $light-blue
+    border-radius: 16px
+    box-sizing: border-box
+    padding: 20px
+    gap: 12px
 
-.symptoms-container.expanded
-  max-height: none
+    .hidden
+      display: none
+
+  &-link
+    background-color: $white
+    border-radius: 20px
+    box-sizing: border-box
+    padding: 9px 16px 10px
+    height: 36px
+    +font(14px, 17px, 600)
+    color: $black
+    transition: background-color .3s ease, color .3s ease
+
+    &:hover
+      background-color: $blue-main
+      color: $white
+
+    .hidden
+      display: none
+
+
+  &_toggle-btn
+    height: 32px
+    border: 2px solid $blue-main
+    color: $blue-main
+    +font(14px, 17px, 600)
+    border-radius: 20px
+    box-sizing: border-box
+    padding: 9px 16px 10px
+    display: flex
+    align-items: center
+    justify-content: center
+    cursor: pointer
+    transition: background-color .3s ease
+
+    &:hover
+      background-color: rgba(231, 237, 255, 1)
+
+
+
+
+
