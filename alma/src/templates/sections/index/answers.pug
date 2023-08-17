@@ -1,0 +1,48 @@
+section.answers
+  .container
+    h3.subtitle Отвечаем на вопросы
+    .answers-container
+      .answers-left
+        each el in questions
+          .answers-card
+            .answers-card-top
+              h5.answers-card-top_title=el.title
+              button.answers-card-top_btn
+            .answers-card-text
+              p=el.answer
+        .answers-left-info
+          | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/index/answers/attention.svg')}
+          span Приведенные на сайте обзоры не являются заменой профессионального совета врача и не должны служить руководством к самодиагностике или самолечению. Записывайтесь на приём или #[a(href="javascript:") бесплатную онлайн-консультацию.]
+      .answers-form
+        form.answers-form-container
+          h4.answers-form-title Остались вопросы?
+          .form-input
+            input(type="text" name="name" id="name" required)
+            label(for="name") Имя *
+          .form-input
+            input(type="text" name="phone" id="phone" required)
+            label(for="phone") Номер телефона *
+          button(type='submit').btn.btn-fill Отправить
+          .answers-form-check
+            input(type="checkbox" name="check" id="check" required)
+            label(for="check") Нажимая на кнопку вы соглашаетесь на #[a(href="javascript:") обработку персональных данных]
+        .answers-form-contacts
+          h4.answers-form-title Свяжитесь с нами
+          ul
+            li
+              a(href='tel:+73422583747').answers-form-contacts-item
+                | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/index/answers/phone.svg')}
+                span +7 (342) 258-37-47
+            li
+              a(href='mailto:info@almamed.ru').answers-form-contacts-item
+                | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/index/answers/email.svg')}
+                span info@almamed.ru
+
+
+
+
+
+
+
+
+
