@@ -20,6 +20,13 @@
       align-items: center
       gap: 20px
 
+  &__mobile-menu
+    display: none
+
+  &__mobile-logo
+    display: flex
+    align-items: center
+
   &__burger
     display: flex
     align-items: center
@@ -47,6 +54,10 @@
     display: flex
     align-items: center
     position: relative
+    +screen(1250)
+      padding: 12px 0
+    +screen($tablet-sm)
+      padding: 11px 0
 
     &-menu
       display: flex
@@ -167,12 +178,44 @@
 
     &-phone
       +font(15px, 17px, 700)
+      +screen($tablet-sm)
+        +font(14px, 22px, 700)
+      +screen(620)
+        display: none
+
+    &-address
+      +font(13px, 17px)
+      +screen($tablet-sm)
+        +font(12px, 18px)
+      +screen(620)
+        display: none
+
+    &-btn
+      +screen(726)
+        background-color: transparent
+        padding: 0
+
+        span
+          display: none
+      svg
+        display: none
+        +screen(726)
+          display: block
 
     &-container
       display: flex
       flex-direction: column
       gap: 4px
       align-items: flex-end
+      +screen(1250)
+        flex-direction: row
+        gap: 16px
+        align-items: center
+      +screen(905)
+        flex-direction: column
+        align-items: flex-end
+        gap: 0
+
 
   &__bottom
     box-sizing: border-box
@@ -182,6 +225,8 @@
     gap: 30px
     align-items: center
     position: relative
+    +screen(1250)
+      display: none
 
     &:before
       content: ''

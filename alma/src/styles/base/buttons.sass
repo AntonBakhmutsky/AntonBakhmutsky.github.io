@@ -41,12 +41,17 @@
       background: rgba(29, 69, 170, 0.1)
       transition: background-color 0.3s ease-in
 
-
 .light-btns
   display: flex
   box-sizing: border-box
   padding: 20px
   gap: 16px
+  +screen(1100)
+    padding: 12px 20px 0
+  +screen(910)
+    justify-content: center
+  +screen(664)
+    padding-top: 16px
 
   a
     width: 100%
@@ -60,4 +65,9 @@
     align-items: center
     justify-content: center
     +font(12px, 12px, 600)
+    +screen(910)
+      max-width: 141px
+
+    &:hover:not(:active)
+      box-shadow: 0 2px 5px 0 rgba(136, 154, 201, 0.3)
 
