@@ -1,0 +1,22 @@
+section.contacts
+  .container
+    h3.subtitle Контакты
+    .contacts-container
+      .contacts-info
+        each el in contacts
+          .contacts-info-item
+            .contacts-info-item__img
+              img(src=el.img alt)
+            if el.link
+              a(href=el.link).contacts-info-item_text=el.text
+            else
+              .contacts-info-item__text
+                span.contacts-info-item_text=el.text
+                span.contacts-info-item_text=el.time
+        button.btn.btn-fill Обратный звонок
+      .map-container
+        .map__img
+          img(src=require('@/assets/img/index/contacts/map.jpg'))
+
+
+
