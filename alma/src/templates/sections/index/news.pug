@@ -1,0 +1,19 @@
+section.news
+  .container
+    .news-top
+      h3.subtitle Новости и акции
+      +all-link('Все новости и акции', '#')
+    .news-container
+      each card in newsCards
+        .news-card
+          .news-card-info
+            .news-card_img
+              img(src=card.img)
+            .news-card-top
+              span=card.date
+              .news-card-top_dot
+              span=card.name
+            h5(class='news-title')=card.title
+          button.btn.btn-fill Подробнее
+
+
