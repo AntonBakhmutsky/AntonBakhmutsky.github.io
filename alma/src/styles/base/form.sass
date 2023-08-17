@@ -47,3 +47,47 @@
       label
         color: #F5F7FD
 
+
+  &__checkbox
+    box-sizing: border-box
+    padding-left: 24px
+    position: relative
+    +font(12px, 14px, 400)
+    cursor: pointer
+
+    a
+      +font(12px, 14px, 600)
+      display: inline
+      color: $blue-main
+      text-decoration: underline
+
+    input[type="checkbox"]
+      display: none
+
+      &:checked + label:before
+        background: $blue-main url(../assets/img/global/check-white.svg) no-repeat center
+
+      & + label
+        &:before
+          content: ''
+          width: 16px
+          height: 16px
+          box-sizing: border-box
+          border: 1px solid $blue-main
+          border-radius: 4px
+          position: absolute
+          left: 0
+          top: 4px
+          transition: background-color .3s
+          cursor: pointer
+
+input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofill:active
+  transition: background-color 5000s ease-in-out 0s, color 5000s ease-in-out 0s
+  -webkit-box-shadow: 0 0 0 1000px rgba(255, 255, 255, 0) inset !important
+  box-shadow: 0 0 0 1000px rgba(255, 255, 255, 0) inset !important
+  color: $white !important
+
+
+
+
+
