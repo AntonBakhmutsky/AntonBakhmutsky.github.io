@@ -1,0 +1,9 @@
+section.symptoms
+  .container
+    h3.subtitle Услуги по симптоматике
+    .symptoms-container
+      each el in symptoms
+        a(href=el.link).symptoms-link=el.text
+      button.symptoms_toggle-btn Показать еще
+
+

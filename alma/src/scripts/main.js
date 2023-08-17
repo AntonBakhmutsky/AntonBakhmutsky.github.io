@@ -6,5 +6,5 @@ require('./components/doctors')
 require('./components/header')
 require('./components/docs')
 require('./components/answers')
-
+require('./components/symptoms')
 
