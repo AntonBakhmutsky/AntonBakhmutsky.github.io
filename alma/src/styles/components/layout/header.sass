@@ -49,16 +49,17 @@
     position: relative
 
     &-menu
+      display: flex
+      gap: 20px
+      +screen(1250)
+        display: none
+
       a
         color: $white
         +font(13px, 18px)
 
         .header__options
           display: none
-
-    &-menu
-      display: flex
-      gap: 20px
 
   &__hidden
     position: absolute
