@@ -1,0 +1,100 @@
+@use '../../abstracts/variables' as *
+@use '../../abstracts/mixins' as *
+
+.mobile-menu
+  position: fixed
+  top: 60px
+  left: -120%
+  background-color: $white
+  z-index: 60
+  height: calc(100% - 60px)
+  width: 391px
+  overflow: hidden
+  transition: left .3s
+
+  &.active
+    left: 0
+
+  &__main
+    overflow: auto
+    height: 100%
+
+  &__top, &__bottom
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    box-sizing: border-box
+
+  &__top
+    padding: 40px 32px
+    display: flex
+    flex-direction: column
+    gap: 40px
+
+  &__bottom
+    padding: 32px
+    background-color: $light-blue
+    display: flex
+    flex-direction: column
+    gap: 32px
+
+    a
+      +font(16px, 22px)
+
+  &__btn
+    +font(20px, 22px, 700)
+    display: flex
+    align-items: center
+    justify-content: space-between
+    width: 100%
+
+    &-hidden
+      display: none
+
+  &__hidden
+    position: fixed
+    height: 100vh
+    z-index: 61
+    background-color: $white
+    top: 60px
+    left: 0
+    width: 391px
+    transition: opacity .3s, visibility .3s
+    opacity: 0
+    visibility: hidden
+    pointer-events: none
+
+    &.active
+      visibility: visible
+      opacity: 1
+      pointer-events: auto
+
+    &-title
+      position: relative
+      height: 60px
+      background-color: $light-blue
+      display: flex
+      align-items: center
+      justify-content: center
+
+      img
+        position: absolute
+        left: 28px
+        top: 50%
+        transform: translateY(-50%)
+
+      span
+        +font(20px, 22px, 700)
+
+    &-links
+      box-sizing: border-box
+      padding: 40px 32px
+      display: flex
+      flex-direction: column
+      gap: 36px
+      height: calc(100% - 60px)
+      overflow: auto
+
+      .mobile-menu__btn
+        &:not(:first-child)
+          margin-top: 4px
