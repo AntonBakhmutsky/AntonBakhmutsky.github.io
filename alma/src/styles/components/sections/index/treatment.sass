@@ -8,9 +8,13 @@
   .description-text
     margin: 16px 0 28px
     max-width: 588px
+    +screen($tablet)
+      max-width: 460px
 
   &-switcher
     margin: 0 20px 20px
+    +screen($tablet)
+      margin: 0 16px 16px
 
 
     &-btns
@@ -24,6 +28,10 @@
       padding-bottom: 10px
       -ms-overflow-style: none /* IE и Edge */
       scrollbar-width: none /* Firefox */
+      +screen($tablet)
+        overflow-x: scroll
+        overflow-y: visible
+        grid-column-gap: 48px
 
       &::-webkit-scrollbar
         display: none
@@ -33,6 +41,8 @@
       width: 100%
       border-radius: 6px
       background-color: $light-blue
+      position: relative
+      z-index: -1
 
     &-btn
       position: relative
@@ -67,6 +77,8 @@
         transform: scaleX(0)
         transform-origin: left
         transition: transform 0.5s ease
+        position: relative
+        z-index: 4
 
       &.active
 
@@ -106,9 +118,13 @@
       padding: 20px
       justify-content: space-between
       gap: 24px
+      +screen($tablet)
+        gap: 20px
 
     &-info
       width: 64.3%
+      +screen($tablet)
+        width: 59.5%
 
       &-btns
         display: flex
@@ -122,11 +138,16 @@
         +font(20px, 24px, 700)
         color: $black
         margin-bottom: 12px
+        +screen($tablet)
+          +font(18px, 22px, 700)
+
 
       &_text
         +font(14px, 20px, 400)
         color: $black
         margin-bottom: 20px
+        +screen($tablet)
+          +font(14px, 20px, 400)
 
       &_price
         +font(14px, 17px, 600)
@@ -140,12 +161,3 @@
         color: $grey
         +font(12px, 14px, 400)
         margin-top: 4px
-
-
-
-
-
-
-
-
-
