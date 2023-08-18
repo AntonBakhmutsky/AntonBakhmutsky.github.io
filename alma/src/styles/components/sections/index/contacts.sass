@@ -10,6 +10,8 @@
     display: flex
     justify-content: space-between
     margin-top: 28px
+    +screen($tablet)
+      gap: 20px
 
   &-info
 
@@ -41,7 +43,7 @@
         flex-direction: column
 
     .btn
-      width: 201px
+      width: 200px
       margin-top: 32px
 
   .map-container
@@ -49,5 +51,7 @@
     height: 274px
     border-radius: 16px
     overflow: hidden
+    +screen($tablet)
+      width: 48.9%
 
 
