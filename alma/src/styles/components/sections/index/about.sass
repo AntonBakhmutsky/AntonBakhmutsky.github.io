@@ -8,6 +8,8 @@
   width: 100%
   +screen($tablet)
     padding: 24px 0 0
+  +screen($tablet-sm)
+    padding: 24px 0
 
   &-container
     display: grid
@@ -18,6 +20,9 @@
     position: relative
     +screen($tablet)
       grid-column-gap: 20px
+    +screen($tablet-sm)
+      display: flex
+      flex-direction: column
 
   &-info
     grid-area: 1 / 1 / 2 / 2
@@ -29,15 +34,29 @@
       display: flex
       gap: 16px
       margin-top: 36px
+      +screen($tablet-sm)
+        gap: 20px
+        margin-top: 28px
+        justify-content: center
 
       button
         width: 150px
         white-space: nowrap
+        +screen($tablet-sm)
+          width: 251px
 
   &-slider
     grid-area: 1 / 2 / 2 / 3
     overflow: hidden
     border-radius: 16px
+    +screen($tablet-sm)
+      display: none
+
+    &-mobile
+      display: none
+      +screen($tablet-sm)
+        display: block
+        margin-top: 28px
 
   &-beauty
     position: absolute
@@ -52,6 +71,15 @@
 
   .swiper
     position: relative
+    +screen($tablet-sm)
+      width: 74.28%
+      padding: 50px
+      box-sizing: border-box
+
+    &-slide
+      +screen($tablet-sm)
+        margin-right: 50px
+        width: 70%
 
   .swiper-button
     width: 30px
@@ -62,17 +90,27 @@
     background-position: center
     position: absolute
     bottom: 20px
+    +screen($tablet-sm)
+      width: 40px
+      height: 40px
 
     &-prev
       background-image: url(../assets/img/index/about/arrow-left.svg)
       right: 62px
-      left: auto
-      top: auto
 
     &-next
       background-image: url(../assets/img/index/about/arrow-right.svg)
       right: 20px
-      left: auto
+      +screen($tablet-sm)
+        right: -20px
+
+    &-prev, &-next
       top: auto
+      left: auto
+      +screen($tablet-sm)
+        top: 50%
+
+
+
 
 

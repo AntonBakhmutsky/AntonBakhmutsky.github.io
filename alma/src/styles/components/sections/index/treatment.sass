@@ -4,12 +4,16 @@
 .treatment
   box-sizing: border-box
   padding: 40px 0
+  +screen($tablet-sm)
+    padding: 36px 0
 
   .description-text
     margin: 16px 0 28px
     max-width: 588px
     +screen($tablet)
       max-width: 460px
+    +screen($tablet-sm)
+      max-width: 100%
 
   &-switcher
     margin: 0 20px 20px
@@ -20,7 +24,7 @@
     &-btns
       height: 80px
       display: grid
-      grid-template-columns: repeat(5, 1fr)
+      grid-template-columns: repeat(5, 180px)
       grid-template-rows: 1fr
       grid-column-gap: 63px
       grid-row-gap: 0
@@ -32,6 +36,8 @@
         overflow-x: scroll
         overflow-y: visible
         grid-column-gap: 48px
+      +screen($tablet-sm)
+        grid-column-gap: 40px
 
       &::-webkit-scrollbar
         display: none
@@ -72,6 +78,10 @@
         opacity: 0
         height: 0
         transition: opacity 0.3s ease, height 0.5s ease
+        +screen($tablet)
+          height: 45px
+          opacity: 1
+          color: $gray-medium
 
       &_indicator
         transform: scaleX(0)
@@ -120,6 +130,20 @@
       gap: 24px
       +screen($tablet)
         gap: 20px
+      +screen($desktop-sm)
+        padding: 16px
+
+    &-img
+      display: flex
+      border-radius: 16px
+      overflow: hidden
+      +screen($tablet-sm)
+        width: 235px
+        height: 145px
+
+        img
+          width: 100%
+          object-fit: cover
 
     &-info
       width: 64.3%

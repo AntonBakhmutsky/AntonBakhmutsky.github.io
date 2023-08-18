@@ -26,6 +26,9 @@
 
     .swiper
       padding: 0 24px 40px
+      +screen($tablet-sm)
+        overflow: visible
+        padding: 0 0 36px
 
       &-button
         width: 40px
@@ -37,6 +40,8 @@
         transition: opacity 0.3s
         box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2)
         top: 141px
+        +screen($tablet-sm)
+          display: none
 
         &:hover
           background-color: $white
@@ -59,7 +64,6 @@
           &:hover
             background-image: url(../assets/img/global/arrow-right.svg)
 
-
   &-card
     height: 478px
     display: flex
@@ -72,19 +76,21 @@
     +screen($tablet)
       height: 441px
       box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.1)
+    +screen($tablet-sm)
+      height: 443px
 
     &_img
       width: 100%
       overflow: hidden
       border-radius: 16px
       display: flex
-      height: 282px
-      +screen($tablet)
-        height: 219px
+      height: auto
+      align-items: flex-start
 
       img
         width: 100%
         height: auto
+        object-fit: contain
         object-position: center
 
     &_name
@@ -99,7 +105,7 @@
 
     p
       color: $black
-      +font(14px, 17px, 400)
+      +font(14px, 18px, 400)
       margin: 0 16px 8px
 
       &:last-child
@@ -112,6 +118,7 @@
       margin-left: 16px
       +screen($tablet)
         opacity: 1
+        width: calc(100% - 32px)
 
     &:hover
       box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.1)
