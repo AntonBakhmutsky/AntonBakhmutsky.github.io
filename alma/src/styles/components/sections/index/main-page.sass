@@ -46,6 +46,8 @@
     border-radius: 16px
     position: relative
     overflow: hidden
+    +screen($tablet)
+      padding-left: 56px
 
     &_img
       position: absolute
@@ -79,6 +81,8 @@
     grid-template-columns: repeat(4, 1fr)
     grid-column-gap: 24px
     grid-row-gap: 0
+    +screen($tablet)
+      grid-column-gap: 20px
 
     &-item
       box-shadow: 0 4px 20px 0 rgba(14, 17, 97, 0.1)
@@ -93,6 +97,9 @@
         height: 32px
         display: flex
         align-items: center
+        justify-content: center
+        background-color: $light-blue
+        border-radius: 8px
 
       &_title
         +font(16px, 20px, 700)
