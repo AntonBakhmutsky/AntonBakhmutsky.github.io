@@ -40,11 +40,20 @@ header.header
           .header__hidden-links
             if (el.leftMenu)
               each leftBtn, index in el.leftMenu
-                .header__hidden-links-item(data-id=el.index)
-                  each linkBlock in el.links
-                    .header__hidden-links-block
-                      each link in linkBlock
-                        a(href=link.url) #{link.txt}
+                if (index % 2 === 0)
+                  .header__hidden-links-item(data-id=el.index)
+                    each linkBlock, index in el.links
+                        .header__hidden-links-block
+                          each link in linkBlock
+                            a(href=link.url) #{link.txt}
+                else
+                  .header__hidden-links-item(data-id=el.index)
+                    each linkBlock, index in el.links
+                      if (index % 2 === 0)
+                        .header__hidden-links-block
+                          each link in linkBlock
+                            a(href=link.url) #{link.txt}
+
             else
               .header__hidden-links-item
                 each linkBlock in el.links

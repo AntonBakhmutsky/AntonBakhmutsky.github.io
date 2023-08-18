@@ -11,6 +11,11 @@
   width: 391px
   overflow: hidden
   transition: left .3s
+  +screen(500)
+    width: 385px
+  +screen(440)
+    width: 100%
+
 
   &.active
     left: 0
@@ -63,6 +68,11 @@
     opacity: 0
     visibility: hidden
     pointer-events: none
+    +screen(500)
+      width: 385px
+    +screen(440)
+      width: 100%
+
 
     &.active
       visibility: visible
