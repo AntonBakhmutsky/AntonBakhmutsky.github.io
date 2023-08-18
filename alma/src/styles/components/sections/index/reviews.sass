@@ -7,6 +7,8 @@
   box-sizing: border-box
   +screen($tablet)
     padding: 17px 0 30px
+  +screen($tablet-sm)
+    padding: 28px 0
 
   &-top
     display: flex
@@ -24,6 +26,10 @@
     z-index: 5
     +screen($tablet)
       grid-column-gap: 20px
+    +screen($tablet-sm)
+      display: flex
+      flex-direction: column
+      gap: 16px
 
     &-beauty
       position: absolute
@@ -45,6 +51,8 @@
     padding: 16px
     +screen($tablet)
       height: 350px
+    +screen($tablet-sm)
+      height: auto
 
     &_name
       margin: 0 0 4px
@@ -63,4 +71,5 @@
     &_date
       +font(12px, 16px, 400)
       color: $menu-static
+      margin-top: 12px
 

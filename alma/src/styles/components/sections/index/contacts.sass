@@ -4,6 +4,8 @@
 .contacts
   padding-bottom: 40px
   box-sizing: border-box
+  +screen($tablet-sm)
+    padding-bottom: 36px
 
   &-container
     width: 100%
@@ -37,6 +39,8 @@
         +font(16px, 19px, 600)
         color: $black
         gap: 4px
+        +screen($tablet-sm)
+          +font(14px, 16px, 600)
 
       &__text
         display: flex
@@ -53,5 +57,8 @@
     overflow: hidden
     +screen($tablet)
       width: 48.9%
+    +screen($tablet-sm)
+      width: 49.5%
+      height: 266px
 
 

@@ -4,11 +4,16 @@
 .answers
   box-sizing: border-box
   padding: 40px 0
+  +screen($tablet-sm)
+    padding: 36px 0
 
   &-container
     display: flex
     justify-content: space-between
     margin-top: 28px
+    +screen($tablet-sm)
+      flex-direction: column
+      gap: 28px
 
   &-left
     width: 66%
@@ -19,11 +24,16 @@
     +screen($tablet)
       width: 61.7%
       margin-right: 20px
+    +screen($tablet-sm)
+      width: 100%
+      margin-right: 0
 
     &-info
       display: flex
       margin-top: 32px
       align-items: flex-start
+      +screen($tablet-sm)
+        margin-top: 20px
 
       span
         +font(12px, 16px, 400)
@@ -139,15 +149,28 @@
     +screen($tablet)
       width: 36.1%
       padding: 16px 13px 16px 16px
+    +screen($tablet-sm)
+      width: 100%
+      height: auto
+      padding: 16px
 
     &-container
       display: flex
       flex-direction: column
       gap: 16px
+      +screen($tablet-sm)
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        grid-template-rows: repeat(2, 1fr)
+        grid-column-gap: 54px
+        grid-row-gap: 28px
+        margin-top: 16px
 
     &-title
       +font(22px, 28px, 900)
       color: $black
+      +screen($tablet-sm)
+        +font(20px, 28px, 900)
 
     &-input
 
@@ -160,6 +183,8 @@
 
     &-contacts
       margin-top: 24px
+      +screen($tablet-sm)
+        margin-top: 16px
 
       h4
         margin-bottom: 16px
@@ -168,6 +193,9 @@
         display: flex
         flex-direction: column
         gap: 8px
+        +screen($tablet-sm)
+          flex-direction: row
+          gap: 73px
 
         li a
           display: flex
