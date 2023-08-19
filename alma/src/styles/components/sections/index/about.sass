@@ -72,14 +72,12 @@
   .swiper
     position: relative
     +screen($tablet-sm)
-      width: 74.28%
-      padding: 50px
+      width: 100%
       box-sizing: border-box
 
     &-slide
       +screen($tablet-sm)
-        margin-right: 50px
-        width: 70%
+        margin: 0 50px
 
   .swiper-button
     width: 30px
@@ -97,12 +95,15 @@
     &-prev
       background-image: url(../assets/img/index/about/arrow-left.svg)
       right: 62px
+      +screen($tablet-sm)
+        right: auto
+        left: -30px
 
     &-next
       background-image: url(../assets/img/index/about/arrow-right.svg)
       right: 20px
       +screen($tablet-sm)
-        right: -20px
+        right: 30px
 
     &-prev, &-next
       top: auto
