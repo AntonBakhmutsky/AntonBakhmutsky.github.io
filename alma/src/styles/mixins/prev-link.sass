@@ -1,0 +1,13 @@
+@use '../abstracts/variables' as *
+@use '../abstracts/mixins' as *
+
+.prev-link
+  display: flex
+  align-items: center
+  gap: 4px
+
+  span
+    +font(14px, 20px, 600)
+    color: $blue-main
+    +screen($tablet-xs)
+      +font(16px, 19px, 700)
