@@ -8,6 +8,8 @@
     justify-content: space-between
     align-items: flex-end
     margin-bottom: 28px
+    +screen($tablet-xs)
+      margin-bottom: 24px
 
   &-container
     display: grid
@@ -18,6 +20,11 @@
     +screen($tablet-sm)
       grid-template-columns: repeat(3, 1fr)
       grid-column-gap: 20px
+    +screen($tablet-xs)
+      display: flex
+      flex-direction: column
+      gap: 24px
+      margin-bottom: 28px
 
   &-card
     display: flex
@@ -33,10 +40,14 @@
       box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.1)
     +screen($tablet-sm)
       height: 304px
+    +screen($tablet-xs)
+      height: auto
 
     &:last-child
       +screen($tablet-sm)
         display: none
+      +screen($tablet-xs)
+        display: block
 
     .news-title
       white-space: pre-line
@@ -59,6 +70,8 @@
       gap: 4px
       align-items: center
       margin: 16px 16px 0
+      +screen($tablet-xs)
+        margin: 16px 12px 0
 
       &_dot
         width: 4px
@@ -80,6 +93,9 @@
       margin: 8px 16px 0
       +screen($tablet-sm)
         +font(14px, 18px, 700)
+      +screen($tablet-xs)
+        +font(16px, 20px, 700)
+        margin: 8px 12px 0
 
     .btn
       display: none
@@ -88,6 +104,9 @@
       +screen($tablet)
         width: calc(100% - 32px)
         display: block
+      +screen($tablet-xs)
+        margin: 20px 12px 0
+        width: calc(100% - 24px)
 
     &:hover
       box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.1)

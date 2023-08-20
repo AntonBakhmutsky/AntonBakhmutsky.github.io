@@ -2,6 +2,9 @@
 @use '../../../abstracts/mixins' as *
 
 .doctors
+  +screen($tablet-xs)
+    box-sizing: border-box
+    padding-bottom: 32px
 
   &-container
     position: relative
@@ -20,6 +23,8 @@
     justify-content: space-between
     align-items: flex-end
     margin-bottom: 28px
+    +screen($tablet-xs)
+      margin-bottom: 24px
 
   &-slider
     width: 100%
@@ -29,6 +34,11 @@
       +screen($tablet-sm)
         overflow: visible
         padding: 0 0 36px
+
+      &-pagination
+        display: none
+        +screen($tablet-xs)
+          display: block
 
       &-button
         width: 40px
@@ -56,7 +66,6 @@
           &:hover
             background-image: url(../assets/img/global/arrow-left.svg)
 
-
         &-next
           right: 5px
           background-image: url(../assets/img/index/doctors/arrow-right-gray.svg)
@@ -78,6 +87,8 @@
       box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.1)
     +screen($tablet-sm)
       height: 443px
+    +screen($tablet-xs)
+      height: auto
 
     &_img
       width: 100%
@@ -102,11 +113,17 @@
       flex-direction: column
       +screen($tablet)
         +font(15px, 20px, 700)
+      +screen($tablet-xs)
+        +font(18px, 22px, 700)
+        max-width: 100%
 
     p
       color: $black
       +font(14px, 18px, 400)
       margin: 0 16px 8px
+      +screen($tablet-xs)
+        +font(14px, 17px, 400)
+        margin: 0 16px 4px
 
       &:last-child
         margin-bottom: 0

@@ -19,7 +19,8 @@
     margin: 0 20px 20px
     +screen($tablet)
       margin: 0 16px 16px
-
+    +screen($tablet-xs)
+      margin: 0 0 20px
 
     &-btns
       height: 80px
@@ -38,6 +39,11 @@
         grid-column-gap: 48px
       +screen($tablet-sm)
         grid-column-gap: 40px
+      +screen($tablet-xs)
+        height: 90px
+        grid-template-columns: repeat(5, 260px)
+        grid-column-gap: 20px
+        padding-bottom: 17px
 
       &::-webkit-scrollbar
         display: none
@@ -64,6 +70,8 @@
         transition: color 0.3s ease
         white-space: nowrap
         margin: 0
+        +screen($tablet-xs)
+          +font(16px, 22px, 700)
 
         &:hover
           transition: color 0.3s ease
@@ -82,6 +90,9 @@
           height: 45px
           opacity: 1
           color: $gray-medium
+        +screen($tablet-xs)
+          +font(14px, 20px, 400)
+          height: 40px
 
       &_indicator
         transform: scaleX(0)
@@ -98,6 +109,8 @@
           display: block
           height: 45px
           opacity: 1
+          +screen($tablet-xs)
+            height: 40px
 
         .treatment-switcher-btn_indicator
           transform: scaleX(1)
@@ -130,7 +143,7 @@
       gap: 24px
       +screen($tablet)
         gap: 20px
-      +screen($desktop-sm)
+      +screen($tablet-sm)
         padding: 16px
 
     &-img
@@ -140,6 +153,22 @@
       +screen($tablet-sm)
         width: 235px
         height: 145px
+      +screen($tablet-xs)
+        display: none
+
+        img
+          width: 100%
+          object-fit: cover
+
+      &-mobile
+        display: none
+        +screen($tablet-xs)
+          display: flex
+          border-radius: 16px
+          overflow: hidden
+          width: 100%
+          height: auto
+          margin-bottom: 24px
 
         img
           width: 100%
@@ -149,14 +178,20 @@
       width: 64.3%
       +screen($tablet)
         width: 59.5%
+      +screen($tablet-xs)
+        width: 100%
 
       &-btns
         display: flex
         margin-top: 16px
         gap: 16px
+        +screen($tablet-xs)
+          flex-direction: column
 
         button
           width: 150px
+          +screen($tablet-xs)
+            width: 100%
 
       h4
         +font(20px, 24px, 700)
@@ -164,7 +199,8 @@
         margin-bottom: 12px
         +screen($tablet)
           +font(18px, 22px, 700)
-
+        +screen($tablet-xs)
+          +font(20px, 24px, 700)
 
       &_text
         +font(14px, 20px, 400)
@@ -172,10 +208,14 @@
         margin-bottom: 20px
         +screen($tablet)
           +font(14px, 20px, 400)
+        +screen($tablet-xs)
+          +font(16px, 22px, 400)
 
       &_price
         +font(14px, 17px, 600)
         color: $black
+        +screen($tablet-xs)
+          +font(16px, 19px, 600)
 
         span
           +font(30px, 36px, 900)
@@ -185,3 +225,5 @@
         color: $grey
         +font(12px, 14px, 400)
         margin-top: 4px
+        +screen($tablet-xs)
+          +font(14px, 20px, 400)

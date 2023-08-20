@@ -38,12 +38,17 @@
         gap: 20px
         margin-top: 28px
         justify-content: center
+      +screen($tablet-xs)
+        flex-direction: column
+        gap: 16px
 
       button
         width: 150px
         white-space: nowrap
         +screen($tablet-sm)
           width: 251px
+        +screen($tablet-xs)
+          width: 100%
 
   &-slider
     grid-area: 1 / 2 / 2 / 3
@@ -91,6 +96,8 @@
     +screen($tablet-sm)
       width: 40px
       height: 40px
+    +screen($tablet-xs)
+      display: none
 
     &-prev
       background-image: url(../assets/img/index/about/arrow-left.svg)

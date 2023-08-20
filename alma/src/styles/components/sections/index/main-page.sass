@@ -7,6 +7,8 @@
   box-sizing: border-box
   +screen($tablet-sm)
     padding-bottom: 36px
+  +screen($tablet-xs)
+    padding-bottom: 12px
 
   .main-slider:hover .swiper-button
     opacity: 1 !important
@@ -107,6 +109,22 @@
       grid-template-rows: repeat(2, 1fr)
       grid-column-gap: 12px
       grid-row-gap: 20px
+    +screen($tablet-xs)
+      display: grid
+      grid-template-columns: repeat(4, 292px)
+      grid-template-rows: 160px
+      grid-column-gap: 20px
+      grid-row-gap: 0
+      margin-top: 28px
+      overflow-x: scroll
+      overflow-y: visible
+      padding: 20px 0
+      box-sizing: border-box
+      -ms-overflow-style: none /* IE и Edge */
+      scrollbar-width: none /* Firefox */
+
+    &::-webkit-scrollbar
+      display: none
 
     &-item
       box-shadow: 0 4px 20px 0 rgba(14, 17, 97, 0.1)
@@ -115,6 +133,7 @@
       display: flex
       flex-direction: column
       border-radius: 16px
+      +screen($tablet-xs)
 
       &__img
         width: 32px

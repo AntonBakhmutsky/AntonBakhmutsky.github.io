@@ -6,6 +6,8 @@
   padding: 40px 0
   +screen($tablet-sm)
     padding: 36px 0
+  +screen($tablet-xs)
+    padding: 32px 0
 
   &-container
     margin-top: 28px
@@ -23,6 +25,9 @@
       padding: 16px
       column-gap: 12px
       grid-row-gap: 16px
+    +screen($tablet-xs)
+      margin-top: 24px
+      grid-row-gap: 20px
 
     .hidden
       display: none

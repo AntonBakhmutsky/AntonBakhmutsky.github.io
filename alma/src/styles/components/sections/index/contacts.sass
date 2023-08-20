@@ -6,6 +6,8 @@
   box-sizing: border-box
   +screen($tablet-sm)
     padding-bottom: 36px
+  +screen($tablet-sm)
+    padding-bottom: 32px
 
   &-container
     width: 100%
@@ -14,6 +16,10 @@
     margin-top: 28px
     +screen($tablet)
       gap: 20px
+    +screen($tablet-xs)
+      flex-direction: column
+      margin-top: 24px
+      gap: 28px
 
   &-info
 
@@ -21,6 +27,8 @@
       display: flex
       align-items: center
       margin-bottom: 20px
+      +screen($tablet-xs)
+        margin-bottom: 16px
 
       &:last-child
         margin-bottom: 0
@@ -41,6 +49,9 @@
         gap: 4px
         +screen($tablet-sm)
           +font(14px, 16px, 600)
+        +screen($tablet-xs)
+          width: 70%
+          +font(16px, 19px, 600)
 
       &__text
         display: flex
@@ -49,8 +60,12 @@
     .btn
       width: 200px
       margin-top: 32px
+      +screen($tablet-xs)
+        width: 100%
+        margin-top: 28px
 
   .map-container
+    border: 1px solid $light-gray
     width: 57.5%
     height: 274px
     border-radius: 16px
@@ -60,5 +75,8 @@
     +screen($tablet-sm)
       width: 49.5%
       height: 266px
+    +screen($tablet-xs)
+      width: 100%
+      height: 288px
 
 

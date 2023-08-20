@@ -5,10 +5,20 @@
   display: flex
   align-items: center
   gap: 4px
+  +screen($tablet-xs)
+    box-sizing: border-box
+    gap: 8px
+    border: 2px solid $blue-main
+    border-radius: 10px
+    width: 100%
+    justify-content: center
+    height: 50px
 
   span
     +font(14px, 20px, 600)
     color: $blue-main
+    +screen($tablet-xs)
+      +font(16px, 19px, 700)
 
   &:hover
 
@@ -19,6 +29,8 @@
       stroke: $blue-dark
 
   &-white
+    +screen($tablet-xs)
+      border: 2px solid $white
 
     span
       color: $white

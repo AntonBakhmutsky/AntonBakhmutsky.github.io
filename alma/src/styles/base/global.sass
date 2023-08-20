@@ -85,6 +85,8 @@ input
 .description-text
   +font(14px, 20px, 400)
   color: $black
+  +screen($tablet-xs)
+    +font(16px, 22px, 400)
 
 .overlay
   position: fixed
@@ -103,3 +105,14 @@ input
     visibility: visible
     opacity: 1
     pointer-events: auto
+
+.mobile-link
+  display: none
+  +screen($tablet-xs)
+    display: block
+    width: 100%
+
+.desktop-link
+  +screen($tablet-xs)
+    display: none
+

@@ -6,12 +6,16 @@
   padding-bottom: 40px
   +screen($tablet-sm)
     padding-bottom: 36px
+  +screen($tablet-xs)
+    padding-bottom: 32px
 
   &-top
     display: flex
     justify-content: space-between
     align-items: flex-end
     margin-bottom: 28px
+    +screen($tablet-xs)
+      margin-bottom: 24px
 
   &-container
     display: grid
@@ -19,10 +23,22 @@
     grid-template-rows: 1fr
     grid-column-gap: 24px
     grid-row-gap: 0
+    +screen($tablet-xs)
+      grid-template-columns: repeat(6, 139px)
+      overflow-x: scroll
+      grid-column-gap: 20px
+      -ms-overflow-style: none /* IE и Edge */
+      scrollbar-width: none /* Firefox */
+
+    &::-webkit-scrollbar
+      display: none
+
 
   &-card
     display: flex
     position: relative
+    +screen($tablet-xs)
+      margin-bottom: 28px
 
     img
       width: 100%

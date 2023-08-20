@@ -2,7 +2,8 @@ section.news
   .container
     .news-top
       h3.subtitle Новости и акции
-      +all-link('Все новости и акции', '#')
+      .desktop-link
+        +all-link('Все новости и акции', 'javascript:')
     .news-container
       each card in newsCards
         .news-card
@@ -15,5 +16,7 @@ section.news
               span=card.name
             h5(class='news-title')=card.title
           button.btn.btn-fill Подробнее
+    .mobile-link
+      +all-link('Все новости и акции', 'javascript:')
 
 

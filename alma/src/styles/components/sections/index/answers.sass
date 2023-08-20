@@ -6,6 +6,8 @@
   padding: 40px 0
   +screen($tablet-sm)
     padding: 36px 0
+  +screen($tablet-xs)
+    padding: 32px 0
 
   &-container
     display: flex
@@ -14,6 +16,8 @@
     +screen($tablet-sm)
       flex-direction: column
       gap: 28px
+    +screen($tablet-xs)
+      margin-top: 24px
 
   &-left
     width: 66%
@@ -34,6 +38,8 @@
       align-items: flex-start
       +screen($tablet-sm)
         margin-top: 20px
+      +screen($tablet-xs)
+        margin-top: 24px
 
       span
         +font(12px, 16px, 400)
@@ -53,6 +59,8 @@
     padding: 14px 16px
     margin-bottom: 12px
     cursor: pointer
+    +screen($tablet-xs)
+      margin-bottom: 16px
 
     &:last-child
       margin-bottom: 0
@@ -135,7 +143,6 @@
       .answers-card-top_btn-minus
         display: flex
 
-
   &-form
     height: 422px
     width: 32%
@@ -165,6 +172,10 @@
         grid-column-gap: 54px
         grid-row-gap: 28px
         margin-top: 16px
+      +screen($tablet-xs)
+        display: flex
+        flex-direction: column
+        gap: 16px
 
     &-title
       +font(22px, 28px, 900)
@@ -196,6 +207,9 @@
         +screen($tablet-sm)
           flex-direction: row
           gap: 73px
+        +screen($tablet-sm)
+          flex-direction: column
+          gap: 8px
 
         li a
           display: flex

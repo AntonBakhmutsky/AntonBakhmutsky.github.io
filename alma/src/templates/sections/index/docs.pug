@@ -2,7 +2,8 @@ section.docs
   .container
     .docs-top
       h3.subtitle Лицензии
-      +all-link('Все документы', '#')
+      .desktop-link
+        +all-link('Все документы', 'javascript:')
     .docs-container
       each doc in docs
         .docs-card
@@ -10,6 +11,8 @@ section.docs
           .docs-card-overlay
             button.expand-button
               | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/index/docs/expand.svg')}
+    .mobile-link
+      +all-link('Все документы', 'javascript:')
   .docs-modal-overlay
     .docs-modal
       button.close-button ×

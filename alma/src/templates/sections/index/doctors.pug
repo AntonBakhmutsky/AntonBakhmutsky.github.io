@@ -1,7 +1,8 @@
 section.doctors
   .doctors-top.container
     h3.subtitle Наши специалисты
-    +all-link('Все врачи', '#')
+    .desktop-link
+      +all-link('Все врачи', 'javascript:')
   .doctors-container
     .doctors-slider#doctors-slider
       .swiper
@@ -17,8 +18,11 @@ section.doctors
                 p=doctor.prof
                 p=doctor.experience
               button.btn.btn-fill Подробнее
+        .swiper-pagination
         .swiper-button-prev.swiper-button
         .swiper-button-next.swiper-button
+  .mobile-link.container
+    +all-link('Все врачи', 'javascript:')
 
 
 
