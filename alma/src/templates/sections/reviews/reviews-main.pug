@@ -1,0 +1,22 @@
+section.reviews-main
+  .container
+    +prev-link('Назад', 'javascript:')
+    h3.subtitle Отзывы пациентов
+    p.description-text Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях.
+    .reviews-main-container
+      each el in reviewsMain
+        .reviews-main-card
+          .reviews-main-card-top
+            .reviews-main-card-top-info
+              p=el.date
+              h4=el.name
+            .reviews-main-card-top-logo
+              img(src=el.img alt)
+          h5.reviews-main-card_title=el.title
+          .reviews-main-card__text
+            p=el.text
+            .text-overlay.text-overlay-light-blue
+          button.expand-btn Развернуть
+
+
+
