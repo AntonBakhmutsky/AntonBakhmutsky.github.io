@@ -1,0 +1,13 @@
++modal({modifier: 'modal_ask-question'})
+  h2.modal__title Задать нам вопрос
+  p.modal__txt Ответим на любой вопрос о сервисе и лечении в нашей клинике
+  form.modal__form
+    +input({type: 'text', name: 'lastName', id: 'askQuestionLastName', label: 'Фамилия *'})
+    +input({type: 'text', name: 'firstName', id: 'askQuestionFirstName', label: 'Имя *'})
+    +input({type: 'tel', name: 'tel', id: 'askQuestionPhone', placeholder: '+7 (___) ___-__-__', class: 'form-input_tel'})
+    .form-textarea
+      textarea(name="comment" placeholder="Комментарий")
+    .form-checkbox.form-checkbox_modal
+      input(type="checkbox" name="policy" id="askQuestionPolicy" checked)
+      label(for="askQuestionPolicy") Нажимая на кнопку вы соглашаетесь на #[a(href="javascript:") обработку персональных данных]
+    button.btn.btn-fill.form-submit(type="submit" disabled) Отправить заявку

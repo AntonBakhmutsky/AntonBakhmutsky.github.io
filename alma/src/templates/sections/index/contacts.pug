@@ -13,7 +13,7 @@ section.contacts
               .contacts-info-item__text
                 span.contacts-info-item_text=el.text
                 span.contacts-info-item_text=el.time
-        button.btn.btn-fill Обратный звонок
+        button.btn.btn-fill(data-modal="modal_call-request") Обратный звонок
       .map-container
         .map__img
           img(src=require('@/assets/img/index/contacts/map.jpg'))

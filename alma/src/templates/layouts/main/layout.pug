@@ -21,3 +21,8 @@ html(lang="ru")
     include footer
     .overlay
     include ../../components/modals/modal-call-request
+    if (askQuestion)
+      include ../../components/modals/modal-ask-quesiton
+    if (signUpModal)
+      include ../../components/modals/modal-sign-up
+
