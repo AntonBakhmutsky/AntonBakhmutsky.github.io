@@ -65,10 +65,14 @@ ul
 .header, .footer
   flex: 0 0 auto
 
-input
+input, textarea
   appearance: none
   outline: none
   +font(14px, 16px)
+
+textarea
+  resize: none
+  box-sizing: border-box
 
 .swiper-button-prev:after, .swiper-button-next:after
   display: none
