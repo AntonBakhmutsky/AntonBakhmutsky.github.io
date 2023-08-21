@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d225187-906f-4110-8ade-e8e2eaf3a4e8" name="Changes" comment="clear working tree" />
+    <list default="true" id="2d225187-906f-4110-8ade-e8e2eaf3a4e8" name="Changes" comment="clear working tree">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14_08_2023_8_17_[Changes]/shelved.patch" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -57,6 +59,7 @@
       <workItem from="1681984426887" duration="2000" />
       <workItem from="1684395428546" duration="3000" />
       <workItem from="1692253650331" duration="52000" />
+      <workItem from="1692598648102" duration="13000" />
     </task>
     <task id="LOCAL-00001" summary="clear work tree">
       <created>1678697139956</created>
