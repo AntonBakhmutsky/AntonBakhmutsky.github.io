@@ -40,6 +40,7 @@
         height: 90px
         overflow: hidden
         position: relative
+        transition: height .5s ease
 
         ul li
           +font(14px, 20px, 400)
@@ -51,8 +52,19 @@
           height: 100%
           top: 0
           left: 0
+          opacity: 1
           background: linear-gradient(360deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%)
           overflow: hidden
+
+    &.active
+
+      .vacancies-item-info-description
+        height: auto
+        transition: height .5s ease
+        margin-bottom: 5px
+
+      .vacancies-item-info-description-overlay
+        opacity: 0
 
     &-salary
       background-color: $light-blue
