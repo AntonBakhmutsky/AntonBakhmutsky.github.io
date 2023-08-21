@@ -20,7 +20,7 @@ window.addEventListener('load', () => {
         if (screenWidth < 576) {
           link.classList.toggle('hidden', index > 5);
         } else {
-          link.classList.remove('hidden');
+          return null
         }
       });
     }
