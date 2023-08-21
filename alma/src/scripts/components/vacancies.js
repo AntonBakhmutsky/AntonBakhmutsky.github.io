@@ -4,7 +4,7 @@ window.addEventListener('load', () => {
     const vacanciesCards = document.querySelectorAll('.vacancies-item')
 
     vacanciesCards.forEach(card => {
-      const btn = card.querySelector('.vacancies_expand-btn')
+      const btn = card.querySelector('.expand-btn')
 
       btn.addEventListener('click', () => {
         card.classList.toggle("active")
