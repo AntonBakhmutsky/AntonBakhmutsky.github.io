@@ -2,23 +2,20 @@ extends ../layouts/main/layout.pug
 
 append variables
   -
-    askQuestion = true
-    signUpModal = true
+    sectionBreadcrumbs = [
+      {txt: 'Вакансии'},
+    ]
 
 block title
   | Almamed
 
 block content
-  include ../sections/index/main-page
-  include ../sections/index/about
-  include ../sections/index/treatment
+  include ../sections/global/section-upper
+  include ../sections/vacancies/vacancies
   include ../sections/index/doctors
   include ../sections/index/docs
   include ../sections/index/reviews
-  include ../sections/index/answers
+  .indent
   include ../sections/index/news
-  include ../sections/index/symptoms
+  .indent
   include ../sections/index/contacts
-  include ../sections/index/seo
-
-

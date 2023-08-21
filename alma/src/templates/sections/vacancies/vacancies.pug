@@ -1,0 +1,31 @@
+section.vacancies
+  .container
+    +prev-link('Назад', 'javascript:')
+    h3.subtitle Наши вакансии
+    p.description-text Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях.
+    .vacancies-container
+      each el in vacancies
+        .vacancies-item
+          .vacancies-item-info
+            h4=el.title
+            .vacancies-item-info-description
+              ul
+                li=el.txtTop
+              ul
+                each item in el.txtMiddle
+                  li=item
+              ul
+                each item in el.txtBottom
+                  li=item
+              .text-overlay.text-overlay-white
+            btn.expand-btn Развернуть описание
+          .vacancies-item-salary
+            h5 Заработная плата
+            p=el.salary
+            button.btn.btn-fill Откликнуться
+
+
+
+
+
+

@@ -1,0 +1,146 @@
+@use '../../../abstracts/variables' as *
+@use '../../../abstracts/mixins' as *
+
+.vacancies
+  padding: 12px 0 60px
+  box-sizing: border-box
+  +screen($tablet)
+    padding: 12px 0 40px
+  +screen($tablet-xs)
+    padding: 20px 0 36px
+
+  .prev-link
+    display: none
+    +screen($tablet-xs)
+      display: flex
+      margin-bottom: 12px
+
+  .description-text
+    width: 690px
+    margin-top: 20px
+    +screen($desktop-sm)
+      width: 578px
+    +screen($tablet)
+      margin-top: 16px
+    +screen($tablet-xs)
+      width: 100%
+
+  &-container
+    margin-top: 32px
+    display: flex
+    flex-direction: column
+    gap: 16px
+    +screen($tablet)
+      margin-top: 24px
+    +screen($tablet-xs)
+      gap: 24px
+
+  &-item
+    border: 1px solid $light-gray
+    border-radius: 16px
+    display: flex
+    justify-content: space-between
+    overflow: hidden
+    +screen($tablet-xs)
+      flex-direction: column
+      justify-content: center
+
+    &-info
+      box-sizing: border-box
+      padding: 20px
+      width: 76.5%
+      +screen($desktop-sm)
+        width: 74.5%
+      +screen($tablet)
+        width: 64.3%
+      +screen($tablet-xs)
+        width: 100%
+        padding: 16px 16px 20px
+
+      h4
+        +font(18px, 22px,  700)
+        color: $black
+        margin-bottom: 17px
+        +screen($tablet)
+          +font(16px, 22px, 700)
+        +screen($tablet-xs)
+          margin-bottom: 12px
+
+      &-description
+        width: 77%
+        display: flex
+        flex-direction: column
+        gap: 20px
+        height: 90px
+        overflow: hidden
+        position: relative
+        transition: height .5s ease
+        +screen($desktop-sm)
+          width: 83%
+        +screen($tablet)
+          width: 100%
+        +screen($tablet-xs)
+          height: 130px
+
+        ul li
+          +font(14px, 20px, 400)
+          color: $black
+
+
+
+    &.active
+
+      .vacancies-item-info-description
+        height: auto
+        transition: height .5s ease
+        margin-bottom: 5px
+
+      .overlay-white
+        opacity: 0
+
+      .vacancies-item-info h4
+          margin-bottom: 12px
+
+    &-salary
+      background-color: $light-blue
+      width: 23.5%
+      border-radius: 15px
+      overflow: hidden
+      display: flex
+      align-items: center
+      justify-content: center
+      flex-direction: column
+      box-sizing: border-box
+      +screen($desktop-sm)
+        width: 25.5%
+        padding: 33px
+      +screen($tablet)
+        width: 35.7%
+        padding: 36px 39px
+      +screen($tablet-xs)
+        width: 100%
+        padding: 20px
+
+      h5
+        +font(14px, 20px, 400)
+        color: $grey
+        margin: 0
+        +screen($tablet)
+          +font(12px, 20px, 400)
+
+      p
+        +font(20px, 20px, 700)
+        color: $black
+        margin: 4px 0 24px
+        +screen($tablet)
+          +font(18px, 20px, 700)
+        +screen($tablet-xs)
+          margin: 4px 0 20px
+
+      .btn
+        width: 150px
+        +screen($desktop-sm)
+          width: 172px
+
+
+

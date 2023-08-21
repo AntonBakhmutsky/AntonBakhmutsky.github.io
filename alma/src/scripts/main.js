@@ -7,4 +7,6 @@ require('./components/header')
 require('./components/docs')
 require('./components/answers')
 require('./components/symptoms')
+require('./components/modals')
+require('./components/vacancies')
 

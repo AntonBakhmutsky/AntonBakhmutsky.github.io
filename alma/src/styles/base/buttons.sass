@@ -24,12 +24,19 @@
     color: $white
     box-shadow: 0 4px 12px 0 #1D45AA66
     transition: background-color 0.3s ease-in, border 0.3s ease-in
+    flex-shrink: 0
 
     &:hover
       background-color: $blue-dark
       border: 2px solid $blue-dark
       transition: background-color 0.3s ease-in, border 0.3s ease-in
 
+    &:disabled
+      background-color: #EAEAEF
+      border-color: #EAEAEF
+      color: #6B6B6B
+      box-shadow: none
+      cursor: auto
 
   &-trans
     background-color: transparent
@@ -70,4 +77,15 @@
 
     &:hover:not(:active)
       box-shadow: 0 2px 5px 0 rgba(136, 154, 201, 0.3)
+
+.expand-btn
+  border-bottom: 1px dotted $grey
+  color: $grey
+  +font(14px, 18px, 400)
+  transition: border-bottom-color 0.3s ease, color 0.3s ease
+  cursor: pointer
+
+  &:hover
+    border-bottom: 1px dotted $blue-main
+    color: $blue-main
 

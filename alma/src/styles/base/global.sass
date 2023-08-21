@@ -47,6 +47,7 @@ button
   padding: 0
   background: transparent
   transition: .3s
+  outline: none
 
 svg
   path, circle, rect
@@ -65,10 +66,14 @@ ul
 .header, .footer
   flex: 0 0 auto
 
-input
+input, textarea
   appearance: none
   outline: none
   +font(14px, 16px)
+
+textarea
+  resize: none
+  box-sizing: border-box
 
 .swiper-button-prev:after, .swiper-button-next:after
   display: none
@@ -87,6 +92,8 @@ input
   color: $black
   +screen($tablet-xs)
     +font(16px, 22px, 400)
+  +screen($mobile)
+    +font(14px, 20px, 400)
 
 .overlay
   position: fixed
@@ -106,6 +113,21 @@ input
     opacity: 1
     pointer-events: auto
 
+.text-overlay
+  position: absolute
+  width: 100%
+  height: 100%
+  top: 0
+  left: 0
+  opacity: 1
+  overflow: hidden
+
+  &-white
+    background: linear-gradient(360deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%)
+
+  &-light-blue
+    background: linear-gradient(360deg, #F5F7FD 0%, rgba(245, 247, 253, 0) 100%)
+
 .mobile-link
   display: none
   +screen($tablet-xs)
@@ -116,3 +138,17 @@ input
   +screen($tablet-xs)
     display: none
 
+.indent
+  height: 40px
+  +screen($tablet-sm)
+    height: 36px
+  +screen($tablet-xs)
+    height: 40px
+
+.section-upper
+  padding-top: 28px
+  box-sizing: border-box
+  +screen($desktop-sm)
+    padding-top: 20px
+  +screen($tablet-xs)
+    display: none

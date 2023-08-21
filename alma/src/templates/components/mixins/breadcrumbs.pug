@@ -1,0 +1,10 @@
+mixin breadcrumbs(params)
+  ul.breadcrumbs
+    li
+      a(href="/") Главная &nbsp;
+    each el in params
+      li
+        if (el.url)
+          a(href=el.url) / #{el.txt}
+        else
+          span / #{el.txt}

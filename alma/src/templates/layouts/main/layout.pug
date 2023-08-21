@@ -6,6 +6,8 @@ block variables
 include ../../components/mixins/modal
 include ../../components/mixins/all-link
 include ../../components/mixins/prev-link
+include ../../components/mixins/breadcrumbs
+include ../../components/mixins/form
 
 doctype html
 html(lang="ru")
@@ -18,3 +20,9 @@ html(lang="ru")
       block content
     include footer
     .overlay
+    include ../../components/modals/modal-call-request
+    if (askQuestion)
+      include ../../components/modals/modal-ask-quesiton
+    if (signUpModal)
+      include ../../components/modals/modal-sign-up
+
