@@ -1,5 +1,4 @@
 import Swiper from 'swiper'
-import {Navigation} from 'swiper/modules'
 import initModalImage from '@/scripts/helpers/modalImage'
 import {Navigation, Pagination} from 'swiper/modules'
 
