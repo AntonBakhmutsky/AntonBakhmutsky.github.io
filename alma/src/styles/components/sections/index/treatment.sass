@@ -16,6 +16,7 @@
       max-width: 100%
 
   &-switcher
+    position: relative
     margin: 0 20px 20px
     +screen($tablet)
       margin: 0 16px 16px
@@ -23,6 +24,8 @@
       margin: 0 0 20px
 
     &-btns
+      position: relative
+      z-index: 6
       height: 80px
       display: grid
       grid-template-columns: repeat(5, 180px)
@@ -35,12 +38,11 @@
       scrollbar-width: none /* Firefox */
       +screen($tablet)
         overflow-x: scroll
-        overflow-y: visible
+        overflow-y: visible !important
         grid-column-gap: 48px
       +screen($tablet-sm)
         grid-column-gap: 40px
       +screen($tablet-xs)
-        height: 90px
         grid-template-columns: repeat(5, 260px)
         grid-column-gap: 20px
         padding-bottom: 17px
@@ -49,12 +51,12 @@
         display: none
 
     &-indificator-line
+      position: absolute
       height: 6px
       width: 100%
       border-radius: 6px
       background-color: $light-blue
-      position: relative
-      z-index: -1
+      z-index: 1
 
     &-btn
       position: relative
@@ -62,6 +64,7 @@
       display: flex
       flex-direction: column
       justify-content: flex-end
+      z-index: 7
 
       h5
         text-align: start
@@ -95,10 +98,10 @@
           height: 40px
 
       &_indicator
+        position: relative
         transform: scaleX(0)
         transform-origin: left
         transition: transform 0.5s ease
-        position: relative
         z-index: 4
 
       &.active
