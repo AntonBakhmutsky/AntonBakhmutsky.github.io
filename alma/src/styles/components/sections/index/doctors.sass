@@ -5,6 +5,7 @@
   +screen($tablet-xs)
     box-sizing: border-box
     padding-bottom: 32px
+    overflow: hidden
 
   &-container
     position: relative
@@ -34,11 +35,14 @@
       +screen($tablet-sm)
         overflow: visible
         padding: 0 0 36px
+      +screen($tablet-xs)
+        padding-bottom: 34px
 
       &-pagination
         display: none
         +screen($tablet-xs)
           display: block
+          bottom: 0
 
       &-button
         width: 40px
@@ -145,6 +149,10 @@
 
       .btn
         opacity: 1
+
+  .all-link
+    +screen($tablet-xs)
+      margin-top: 28px
 
 
 
