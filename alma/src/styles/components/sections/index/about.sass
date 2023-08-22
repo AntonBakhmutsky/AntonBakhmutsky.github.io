@@ -80,6 +80,7 @@
       bottom: 40px
 
   .swiper
+    max-height: 304px
     position: relative
     +screen($tablet-sm)
       width: 100%
@@ -97,6 +98,8 @@
 
 
     &-slide
+      display: flex
+      border-radius: 16px
       +screen($tablet-sm)
         display: flex
         justify-content: center
@@ -104,9 +107,9 @@
         width: 100%
 
       img
+        border-radius: 16px
         +screen($desktop-sm)
           width: 523px
-          border-radius: 16px
           overflow: hidden
         +screen($tablet-xs)
           width: 100%
