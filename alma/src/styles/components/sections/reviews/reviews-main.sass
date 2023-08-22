@@ -4,6 +4,10 @@
 .reviews-main
   padding: 0 0 60px
   box-sizing: border-box
+  +screen($tablet-sm)
+    padding: 0 0 40px
+  +screen($tablet-xs)
+    padding-top: 20px
 
   .prev-link
     display: none
@@ -16,14 +20,26 @@
   .description-text
     margin-top: 20px
     width: 690px
+    +screen($tablet)
+      width: 578px
+    +screen($tablet-sm)
+      margin-top: 16px
+    +screen($tablet-xs)
+      width: 100%
 
   &-container
     width: 100%
-    margin-top: 32px
+    margin: 32px 0 40px
     display: flex
     flex-wrap: wrap
     column-gap: 28px
     row-gap: 24px
+    +screen($tablet)
+      column-gap: 20px
+      row-gap: 20px
+    +screen($tablet-sm)
+      margin: 28px 0 32px
+      flex-direction: column
 
   &-card
     width: 48.7%
@@ -33,6 +49,13 @@
     border-radius: 16px
     box-sizing: border-box
     padding: 22px
+    +screen($tablet-sm)
+      width: 100%
+      height: auto
+
+    .expand-btn, .text-overlay
+      +screen($tablet-sm)
+        display: none
 
     &-top
       display: flex
@@ -52,12 +75,14 @@
     &_title
       color: $blue-light
       +font(12px, 16px, 700)
-      margin: 4px 0 2px
+      margin: 4px 0 12px
 
     &__text
       position: relative
-      height: 100px
+      height: 80px
       overflow: hidden
+      +screen($tablet-sm)
+        height: auto
 
       p
         +font(14px, 20px, 400)

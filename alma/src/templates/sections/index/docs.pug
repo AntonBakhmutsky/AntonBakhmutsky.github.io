@@ -7,15 +7,9 @@ section.docs
     .docs-container
       each doc in docs
         .docs-card
-          img(src=doc)
-          .docs-card-overlay
-            button.expand-button
-              | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/index/docs/expand.svg')}
+          img(src=doc alt="")
     .mobile-link
       +all-link('Все документы', 'javascript:')
-  .docs-modal-overlay
-    .docs-modal
-      button.close-button ×
 
 
 
