@@ -10,4 +10,5 @@ require('./components/symptoms')
 require('./components/modals')
 require('./components/vacancies')
 require('./components/reviews')
+require('./components/doctor')
 

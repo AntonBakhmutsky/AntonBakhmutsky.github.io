@@ -3,7 +3,8 @@ section.doctor
     +prev-link('Назад ко всем врачам', 'javascript:')
     .doctor-container
       .doctor-photo
-        img(src=require('@/assets/img/doctor/ivan.jpg'))
+        .doctor-photo-img
+          img(src=require('@/assets/img/doctor/ivan.jpg'))
       .doctor-info
         h4
           | Куимов
@@ -20,14 +21,24 @@ section.doctor
           p.doctor-info-text Иван Анатольевич— врач-невролог, владеющий всеми современными методиками для оказания помощи. Занимается диагностикой и лечением заболеваний нервной системы как у детей, так и у взрослых. Владеет нейрофизиологическими методами исследований: НСГ (нейросонография) (УЗИ головного мозга), ЭЭГ (электроэнцефалография). Компетентно интерпретирует данные КТ (компьютерной) и МРТ (магнитно-резонансной) томографии головного мозга и позвоночника.
         h5 Образование:
         .doctor-info-education
-          p.doctor-info-education-year 1999 г.
-          p.doctor-info-text Интернатура поспециальности «Неврология», Детская клиническая больница имени Пичугина
-        .doctor-info-education
-          p.doctor-info-education-year 1998 г.
-          p.doctor-info-text Диплом по специальности «Педиатрия», Пермская государственная медицинская академия им.академика Вагнера
+          .doctor-info-education-point
+            .doctor-info-education-year 1999 г.
+            p.doctor-info-text Интернатура поспециальности «Неврология», Детская клиническая больница имени Пичугина
+          .doctor-info-education-point
+            .doctor-info-education-year 1998 г.
+            p.doctor-info-text Диплом по специальности «Педиатрия», Пермская государственная медицинская академия им.академика Вагнера
         h5 Профессиональные навыки:
         p.doctor-info-text Занимается диагностикой и лечением заболеваний нервной системы как у детей, так и у взрослых. Владеет нейрофизиологическими методами исследований: НСГ (нейросонография) (УЗИ головного мозга), ЭЭГ (электроэнцефалография). Компетентно интерпретирует данные КТ (компьютерной) и МРТ (магнитно-резонансной) томографии головного мозга и позвоночника.
         h5 Сертификаты:
+        .doctor-slider#doctor-slider
+          .swiper
+            .swiper-wrapper
+              each doc in docs
+                .swiper-slide
+                  .docs-card
+                    img(src=doc alt="")
+            .swiper-button-prev.swiper-button
+            .swiper-button-next.swiper-button
 
 
 
