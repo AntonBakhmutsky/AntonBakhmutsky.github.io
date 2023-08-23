@@ -1,0 +1,20 @@
+extends ../layouts/main/layout.pug
+
+append variables
+  -
+    sectionBreadcrumbs = [
+      {txt: 'Специалисты'},
+    ]
+
+block title
+  | Almamed
+
+block content
+  include ../sections/global/section-upper
+  include ../sections/doctors/doctors-main
+  include ../sections/index/docs
+  include ../sections/index/reviews
+  .indent
+  include ../sections/index/news
+  .indent
+  include ../sections/index/contacts

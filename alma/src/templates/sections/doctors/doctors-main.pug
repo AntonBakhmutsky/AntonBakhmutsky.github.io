@@ -1,0 +1,18 @@
+section.doctors-main
+  .container
+    +prev-link('Назад', 'javascript:')
+    h3.subtitle Отзывы пациентов
+    p.description-text Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях.
+    .doctors-main-container
+      each doctor in doctors
+        .doctors-card
+          .doctors-card-info
+            .doctors-card_img
+              img(src=doctor.img)
+            h5.doctors-card_name
+              span=doctor.lastName
+              span=doctor.name
+            p=doctor.prof
+            p=doctor.experience
+          button.btn.btn-fill Подробнее
+
