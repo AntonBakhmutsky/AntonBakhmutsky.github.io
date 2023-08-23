@@ -7,11 +7,11 @@ section.service
       .service-left
         .service-left-links
           each el in physiotherapy
-            a(href="javascipt:")
-              span=el
-              button Подробнее
+            a.service-left-links-item(href="javascipt:")
+              span.service-left-links-item_name=el
+              span.service-left-links-item_btn Подробнее
         h4.service_subtitle Заголовок про услуги
-        p.description-text Противоположная точка зрения подразумевает, что представители современных социальных резервов лишь добавляют фракционных разногласий и в равной степени предоставлены сами себе. Противоположная точка зрения подразумевает, что представители современных социальных резервов лишь добавляют фракционных разногласий и в равной степени предоставлены сами себе.
+        p.description-text.service-des_text Противоположная точка зрения подразумевает, что представители современных социальных резервов лишь добавляют фракционных разногласий и в равной степени предоставлены сами себе. Противоположная точка зрения подразумевает, что представители современных социальных резервов лишь добавляют фракционных разногласий и в равной степени предоставлены сами себе.
       .service-form
         h4.service-form-title Остались вопросы?
         form.service-form-container
@@ -27,7 +27,7 @@ section.service
             label(for="check3") Нажимая на кнопку вы соглашаетесь на #[a(href="javascript:") обработку персональных данных]
     h4.service_subtitle Стоимость услуг
     .service-price
-      p.service-price_title
+      p.service-price_title Физиотерапия
       each el in physiotherapyPrice
         .service-price-container
           if el.title

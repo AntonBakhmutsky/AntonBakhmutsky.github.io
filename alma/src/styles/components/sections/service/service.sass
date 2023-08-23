@@ -1,0 +1,116 @@
+@use '../../../abstracts/variables' as *
+@use '../../../abstracts/mixins' as *
+
+.service
+  padding-bottom: 60px
+
+  .prev-link
+    display: none
+
+  .subtitle
+    margin: 12px 0 20px
+
+  .description-text
+    width: 690px
+
+  &-container
+    display: flex
+    gap: 24px
+    margin: 32px 0 40px
+
+  &-left
+    width: 66%
+
+    &-links
+      display: flex
+      flex-direction: column
+      gap: 12px
+      margin-bottom: 40px
+
+      &-item
+        border: 1px solid $light-gray
+        padding: 13px 16px
+        height: 48px
+        box-sizing: border-box
+        width: 100%
+        display: flex
+        align-items: center
+        justify-content: space-between
+        border-radius: 16px
+
+        &_name
+          +font(16px, 22px, 700)
+          color: $black
+          transition: color .3s ease
+
+        &_btn
+          color: $blue-main
+          background-color: $white
+          +font(12px, 17px, 700)
+          display: flex
+          align-items: center
+          justify-content: center
+          width: 98px
+          height: 30px
+          border-radius: 8px
+          transition: color .3s ease, background-color .3s ease
+
+        &:hover
+          box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.1)
+          border: 1px solid $white
+
+          .service-left-links-item_name
+            color: $blue-main
+
+          .service-left-links-item_btn
+            background-color: $blue-main
+            color: $white
+
+  &-form
+    width: 32%
+    background-color: $light-blue
+    border-radius: 16px
+    padding: 22px
+    box-sizing: border-box
+    height: 310px
+
+    &-title
+      +font(22px, 28px, 900)
+      color: $black
+
+    &-input
+      margin-top: 16px
+
+      input
+        background-color: $light-blue
+
+    .btn
+      width: 100%
+      margin: 20px 0 16px
+
+    &_subtitle
+      +font(22px, 32px, 900)
+      color: $black
+
+  &-des_text
+    margin-top: 16px
+
+  &-price
+    margin-top: 12px
+    border: 1px solid $light-gray
+    border-radius: 16px
+    width: 66%
+    box-sizing: border-box
+    padding: 8px
+
+    &_title
+      background-color: $light-blue
+      border-radius: 10px
+      +font(16px, 19px, 700)
+      box-sizing: border-box
+      padding: 10px 8px
+
+
+
+
+
