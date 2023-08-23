@@ -28,9 +28,11 @@
       width: 100%
 
   &-container
+    max-height: 1300px
     width: 100%
     margin: 32px 0 40px
     display: flex
+    flex-direction: column
     flex-wrap: wrap
     column-gap: 28px
     row-gap: 24px
@@ -38,6 +40,7 @@
       column-gap: 20px
       row-gap: 20px
     +screen($tablet-sm)
+      max-height: none
       margin: 28px 0 32px
       flex-direction: column
 
@@ -86,4 +89,18 @@
 
       p
         +font(14px, 20px, 400)
+
+    &.active
+      height: auto
+
+      .reviews-main-card__text
+        height: auto
+
+      .text-overlay
+        display: none
+
+  .btn-else
+    display: none
+    +screen($tablet-sm)
+      display: flex
 
