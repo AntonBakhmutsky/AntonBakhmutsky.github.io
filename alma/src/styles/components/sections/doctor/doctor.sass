@@ -3,18 +3,41 @@
 
 .doctor
   padding: 28px 0 80px
+  +screen($tablet)
+    padding: 20px 0 40px
+  +screen($tablet-sm)
+    padding: 20px 0 60px
+  +screen($tablet-xs)
+    padding: 20px 0 40px
 
   &-container
     margin-top: 28px
     display: flex
     gap: 24px
+    +screen($tablet)
+      gap: 20px
+    +screen($tablet-sm)
+      margin-top: 20px
+      flex-direction: column
+      gap: 70px
+    +screen($tablet-xs)
+      gap: 68px
 
   &-photo
     width: 32%
+    +screen($tablet-sm)
+      width: 100%
+      display: flex
+      align-items: center
+      justify-content: center
 
     &-img
       position: relative
       border-radius: 16px
+      +screen($tablet-sm)
+        width: 221px
+      +screen($tablet-xs)
+        width: 100%
 
       img
         width: 100%
@@ -29,13 +52,21 @@
         position: absolute
         bottom: -42px
         left: -41px
+        +screen($tablet-sm)
+          left: -43px
+        +screen($tablet-xs)
+          left: -42px
 
   &-info
     width: 66%
+    +screen($tablet-sm)
+      width: 100%
 
     h4
       +font(26px, 32px, 700)
       color: $black
+      +screen($tablet-sm)
+        +font(22px, 27px, 700)
 
     &_prof
       color: $blue-main
@@ -51,9 +82,20 @@
       display: flex
       gap: 16px
       margin-top: 32px
+      +screen($tablet-xs)
+        flex-wrap: wrap
 
       .btn
-        width: 227px
+
+        &-fill, &-trans
+          width: 227px
+
+        &-fill
+          +screen($tablet-xs)
+            width: 100%
+        &-trans
+          +screen($tablet-xs)
+            width: calc(100% - 62px)
 
       &_link
         cursor: pointer
@@ -80,6 +122,9 @@
       margin: 36px 0 16px
       color: $black
       +font(20px, 24px, 700)
+      +screen($tablet-sm)
+        +font(18px, 22px, 700)
+        margin: 28px 0 16px
 
     &-education
       display: flex
@@ -105,25 +150,40 @@
         padding: 5px 15px
         white-space: nowrap
 
-      &-text
-        +font(14px, 20px, 400)
-        color: $black
-
   &-slider
+    margin: 20px 0 0 -24px
+    +screen($tablet)
+      margin: 20px 0 0 -20px
+    +screen($tablet-sm)
+      margin: 20px 0 0 0
+    +screen($tablet-xs)
+      min-width: 580px
 
     .swiper
       padding: 0 24px
+      +screen($tablet)
+        padding: 0 20px
       +screen($tablet-sm)
-        overflow: visible
-        padding: 0 0 36px
-      +screen($tablet-xs)
-        padding-bottom: 34px
+        padding: 0
 
-      &-pagination
-        display: none
-        +screen($tablet-xs)
-          display: block
-          bottom: 0
+        &-slide
+          margin-right: 24px
+          +screen($tablet)
+            margin-right: 20px
+          +screen($tablet-xs)
+            height: 187px
+            width: 140px
+
+          .docs-card
+            width: 100%
+            height: 100%
+
+            img
+              width: 100%
+              height: 100%
+              object-fit: cover
+
+
 
       &-button
         width: 40px
@@ -136,6 +196,9 @@
         box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2)
         top: 50%
         +screen($tablet)
+          width: 30px
+          height: 30px
+        +screen($tablet-sm)
           display: none
 
         &:hover
