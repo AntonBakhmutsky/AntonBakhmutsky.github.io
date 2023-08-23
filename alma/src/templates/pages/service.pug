@@ -1,0 +1,22 @@
+extends ../layouts/main/layout.pug
+
+append variables
+  -
+    sectionBreadcrumbs = [
+      {txt: 'Физиотерапия'},
+    ]
+
+block title
+  | Almamed
+
+block content
+  include ../sections/global/section-upper
+  include ../sections/service/service
+  include ../sections/index/doctors
+  include ../sections/index/docs
+  include ../sections/index/reviews
+  .indent
+  include ../sections/index/news
+  .indent
+  include ../sections/index/contacts
+  include ../sections/index/seo

@@ -1,0 +1,58 @@
+section.service
+  .container
+    +prev-link('Назад', 'javascript:')
+    h3.subtitle Прайс
+    p.description-text Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях.
+    .service-container
+      .service-left
+        .service-left-links
+          each el in physiotherapy
+            a(href="javascipt:")
+              span=el
+              button Подробнее
+        h4.service_subtitle Заголовок про услуги
+        p.description-text Противоположная точка зрения подразумевает, что представители современных социальных резервов лишь добавляют фракционных разногласий и в равной степени предоставлены сами себе. Противоположная точка зрения подразумевает, что представители современных социальных резервов лишь добавляют фракционных разногласий и в равной степени предоставлены сами себе.
+      .service-form
+        h4.service-form-title Остались вопросы?
+        form.service-form-container
+          .form-input.service-form-input
+            input(type="text" name="name" id="name1" required)
+            label(for="name1") Имя *
+          .form-input.service-form-input
+            input(type="text" name="phone" id="phone2" required)
+            label(for="phone2") Номер телефона *
+          button(type='submit').btn.btn-fill Отправить
+          .form-checkbox
+            input(type="checkbox" name="check" id="check3" required)
+            label(for="check3") Нажимая на кнопку вы соглашаетесь на #[a(href="javascript:") обработку персональных данных]
+    h4.service_subtitle Стоимость услуг
+    .service-price
+      p.service-price_title
+      each el in physiotherapyPrice
+        .service-price-container
+          if el.title
+            span.service-price_subtitle=el.title
+          each item in el.items
+            .service-price-item
+              span.service-price-item-name=item.name
+              span.service-price-item-cost=item.price
+    .service-registration
+      h5.service-registration_title Онлайн запись на услугу
+      form.service-registration-form
+        .form-input.service-registration-form-input
+          input(type="text" name="name" id="name4" required)
+          label(for="name4") Имя *
+        .form-input.service-registration-form-input
+          input(type="text" name="phone" id="phone5" required)
+          label(for="phone5") Номер телефона *
+        button(type='submit').btn.btn-fill Записаться
+        .form-checkbox
+          input(type="checkbox" name="check" id="check6" required)
+          label(for="check6") Нажимая на кнопку вы соглашаетесь на #[a(href="javascript:") обработку персональных данных]
+      .service-registration-photo
+        .service-registration-photo-img
+          img(src=require('@/assets/img/service/service.jpg'))
+
+
+
+
