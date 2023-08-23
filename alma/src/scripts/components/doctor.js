@@ -13,6 +13,7 @@ window.addEventListener('load', () => {
   new Swiper('.doctor-slider .swiper', {
     modules: [Navigation],
     slidesPerView: 4,
+    spaceBetween: 24,
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
