@@ -1,0 +1,16 @@
+.service-registration
+  h5.service-registration_title Онлайн запись на услугу
+  form.service-registration-form
+    .form-input.service-registration-form-input
+      input(type="text" name="name" id="name4" required)
+      label(for="name4") Имя *
+    .form-input.service-registration-form-input
+      input(type="text" name="phone" id="phone5" required)
+      label(for="phone5") Номер телефона *
+    button(type='submit').btn.btn-fill Записаться
+    .form-checkbox
+      input(type="checkbox" name="check" id="check6" required)
+      label(for="check6") Нажимая на кнопку вы соглашаетесь на #[a(href="javascript:") обработку персональных данных]
+  .service-registration-photo
+    .service-registration-photo-img
+      img(src=require('@/assets/img/service/service.jpg'))

@@ -1,7 +1,7 @@
 section.service
   .container
     +prev-link('Назад', 'javascript:')
-    h3.subtitle Прайс
+    h3.subtitle Физиотерапия
     p.description-text Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях.
     .service-container
       .service-left
@@ -36,22 +36,7 @@ section.service
             .service-price-item
               span.service-price-item-name=item.name
               span.service-price-item-cost=item.price
-    .service-registration
-      h5.service-registration_title Онлайн запись на услугу
-      form.service-registration-form
-        .form-input.service-registration-form-input
-          input(type="text" name="name" id="name4" required)
-          label(for="name4") Имя *
-        .form-input.service-registration-form-input
-          input(type="text" name="phone" id="phone5" required)
-          label(for="phone5") Номер телефона *
-        button(type='submit').btn.btn-fill Записаться
-        .form-checkbox
-          input(type="checkbox" name="check" id="check6" required)
-          label(for="check6") Нажимая на кнопку вы соглашаетесь на #[a(href="javascript:") обработку персональных данных]
-      .service-registration-photo
-        .service-registration-photo-img
-          img(src=require('@/assets/img/service/service.jpg'))
+    include ../../components/global/service-registration
 
 
 

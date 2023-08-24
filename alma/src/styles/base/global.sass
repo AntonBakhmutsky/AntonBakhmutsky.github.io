@@ -150,3 +150,65 @@ textarea
     padding-top: 20px
   +screen($tablet-xs)
     display: none
+
+.service-price
+  margin-top: 12px
+  border: 1px solid $light-gray
+  border-radius: 16px
+  width: 66%
+  box-sizing: border-box
+  padding: 8px
+  +screen($tablet)
+    width: 61.65%
+  +screen($tablet-sm)
+    width: 100%
+
+  &_title
+    background-color: $light-blue
+    border-radius: 10px
+    +font(16px, 19px, 700)
+    box-sizing: border-box
+    padding: 10px 8px
+
+  &-container
+    width: 100%
+    margin-bottom: 12px
+    box-sizing: border-box
+    padding: 0 8px
+    +screen($tablet-xs)
+      margin-bottom: 16px
+
+    &:last-child
+      margin-bottom: 0
+
+  &_subtitle
+    +font(14px, 18px, 700)
+    color: $black
+    margin-bottom: 11px
+    +screen($tablet-xs)
+      +font(16px, 19px, 700)
+      margin-bottom: 10px
+
+  &-item
+    display: flex
+    justify-content: space-between
+    border-bottom: 1px dashed $text-field
+    align-items: center
+    height: 36px
+    +screen($tablet-xs)
+      height: 60px
+      flex-direction: column
+      gap: 12px
+      align-items: flex-start
+      justify-content: center
+
+    &:last-child
+      border-bottom: none
+
+    &-name
+      +font(14px, 17px, 400)
+      color: $black
+
+    &-cost
+      +font(14px, 17px, 700)
+      color: $black

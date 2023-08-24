@@ -1,0 +1,92 @@
+@use '../../abstracts/variables' as *
+@use '../../abstracts/mixins' as *
+
+.service-registration
+  width: 100%
+  display: flex
+  gap: 24px
+  margin-top: 32px
+  align-items: flex-start
+  background-color: $light-blue
+  border-radius: 16px
+  box-sizing: border-box
+  padding: 24px
+  justify-content: space-between
+  +screen($tablet)
+    gap: 20px !important
+    margin-top: 40px
+  +screen($tablet-sm)
+    margin-top: 28px
+    flex-wrap: wrap
+  +screen($tablet-xs)
+    gap: 0 !important
+    margin-top: 24px
+
+  h5
+    margin: 0
+    +font(24px, 28px, 900)
+    color: $black
+    width: calc(30% + 3px)
+    +screen($tablet)
+      +font(22px, 28px, 900)
+      width: calc(29.38% + 15px)
+    +screen($tablet-sm)
+      width: 100%
+      +font(20px, 26px, 900)
+    +screen($tablet-xs)
+      +font(20px, 24px, 900)
+
+  &-form
+    width: calc(32% + 16px)
+    +screen($tablet)
+      width: calc(31.88% + 15px)
+    +screen($tablet-sm)
+      width: calc(45.17% + 11px)
+    +screen($tablet-xs)
+      width: 100%
+      margin: 20px 0 28px
+
+    &-input
+
+      input
+        background-color: $light-blue
+
+      &:first-child
+        margin-bottom: 16px
+        +screen($tablet-xs)
+          margin-bottom: 18px
+
+    .btn
+      width: 100%
+      margin: 24px 0 20px
+      +screen($tablet)
+        margin: 20px 0 20px
+
+  &-photo
+    +screen($tablet)
+      width: calc(29.38% + 15px)
+    +screen($tablet-sm)
+      width: calc(45.17% + 11px)
+    +screen($tablet-xs)
+      width: 100%
+
+    &-img
+      display: flex
+      position: relative
+      z-index: 1
+
+      &:before
+        position: absolute
+        content: ''
+        background: url(../assets/img/service/beauty.svg) no-repeat center
+        z-index: 3
+        height: 68px
+        width: 180px
+        right: -8px
+        bottom: -9px
+
+      img
+        border-radius: 16px
+        width: 100%
+        height: 100%
+        object-fit: contain
