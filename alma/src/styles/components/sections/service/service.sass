@@ -4,10 +4,14 @@
 .service
   padding-bottom: 60px
   +screen($tablet-sm)
-    margin-bottom: 40px
+    padding-bottom: 40px
+  +screen($tablet-xs)
+    margin-top: 20px
 
   .prev-link
     display: none
+    +screen($tablet-xs)
+      display: flex
 
   .subtitle
     margin: 12px 0 20px
@@ -18,6 +22,8 @@
     width: 690px
     +screen($tablet)
       width: 578px
+    +screen($tablet-xs)
+      width: 100%
 
   &-container
     display: flex
@@ -30,6 +36,9 @@
       flex-direction: column
       margin: 28px 0 28px
       gap: 28px
+    +screen($tablet-xs)
+      margin: 24px 0
+      gap: 24px
 
   &-left
     width: 66%
@@ -45,6 +54,8 @@
       margin-bottom: 40px
       +screen($tablet)
         margin-bottom: 28px
+      +screen($tablet-xs)
+        margin-bottom: 24px
 
       &-item
         border: 1px solid $light-gray
@@ -59,6 +70,12 @@
         +screen($tablet)
           box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.1)
           border: 1px solid $white
+        +screen($tablet-xs)
+          height: 88px
+          padding: 12px 16px
+          flex-direction: column
+          align-items: flex-start
+          gap: 12px
 
         &_name
           +font(16px, 22px, 700)
@@ -105,6 +122,8 @@
     +screen($tablet-sm)
       width: 100%
       height: 196px
+    +screen($tablet-xs)
+      height: 312px
 
     &-container
       +screen($tablet-sm)
@@ -114,6 +133,11 @@
         grid-column-gap: 54px
         grid-row-gap: 12px
         margin-top: 16px
+      +screen($tablet-xs)
+        display: flex
+        flex-direction: column
+        margin-top: 16px
+        grid-row-gap: 0
 
     &-title
       +font(22px, 28px, 900)
@@ -125,6 +149,12 @@
       margin-top: 16px
       +screen($tablet-sm)
         margin: 0
+      +screen($tablet-xs)
+        margin-top: 20px
+
+      &:first-child
+        +screen($tablet-xs)
+          margin-top: 0
 
       input
         background-color: $light-blue
@@ -135,6 +165,8 @@
       +screen($tablet-sm)
         margin: 0
         width: auto
+      +screen($tablet-xs)
+        margin: 32px 0 16px
 
     .form-checkbox
       +screen($tablet-sm)
@@ -155,6 +187,8 @@
     margin-top: 16px
     +screen($tablet-sm)
       width: 100% !important
+    +screen($tablet-xs)
+      margin-top: 12px
 
   &-price
     margin-top: 12px
@@ -180,6 +214,8 @@
       margin-bottom: 12px
       box-sizing: border-box
       padding: 0 8px
+      +screen($tablet-xs)
+        margin-bottom: 16px
 
       &:last-child
         margin-bottom: 0
@@ -188,6 +224,9 @@
       +font(14px, 18px, 700)
       color: $black
       margin-bottom: 11px
+      +screen($tablet-xs)
+        +font(16px, 19px, 700)
+        margin-bottom: 10px
 
     &-item
       display: flex
@@ -195,6 +234,12 @@
       border-bottom: 1px dashed $text-field
       align-items: center
       height: 36px
+      +screen($tablet-xs)
+        height: 60px
+        flex-direction: column
+        gap: 12px
+        align-items: flex-start
+        justify-content: center
 
       &:last-child
         border-bottom: none
@@ -224,6 +269,9 @@
     +screen($tablet-sm)
       margin-top: 28px
       flex-wrap: wrap
+    +screen($tablet-xs)
+      gap: 0 !important
+      margin-top: 24px
 
     h5
       margin: 0
@@ -236,6 +284,8 @@
       +screen($tablet-sm)
         width: 100%
         +font(20px, 26px, 900)
+      +screen($tablet-xs)
+        +font(20px, 24px, 900)
 
     &-form
       width: calc(32% + 16px)
@@ -243,6 +293,9 @@
         width: calc(31.88% + 15px)
       +screen($tablet-sm)
         width: calc(45.17% + 11px)
+      +screen($tablet-xs)
+        width: 100%
+        margin: 20px 0 28px
 
       &-input
 
@@ -251,6 +304,8 @@
 
         &:first-child
           margin-bottom: 16px
+          +screen($tablet-xs)
+            margin-bottom: 18px
 
       .btn
         width: 100%
@@ -263,6 +318,8 @@
         width: calc(29.38% + 15px)
       +screen($tablet-sm)
         width: calc(45.17% + 11px)
+      +screen($tablet-xs)
+        width: 100%
 
       &-img
         display: flex
