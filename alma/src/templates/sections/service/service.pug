@@ -26,16 +26,17 @@ section.service
             input(type="checkbox" name="check" id="check3" required)
             label(for="check3") Нажимая на кнопку вы соглашаетесь на #[a(href="javascript:") обработку персональных данных]
     h4.service_subtitle Стоимость услуг
-    .service-price
-      p.service-price_title Физиотерапия
-      each el in physiotherapyPrice
-        .service-price-container
-          if el.title
-            span.service-price_subtitle=el.title
-          each item in el.items
-            .service-price-item
-              span.service-price-item-name=item.name
-              span.service-price-item-cost=item.price
+    .service-price-contain
+      .service-price
+        p.service-price_title Физиотерапия
+        each el in physiotherapyPrice
+          .service-price-container
+            if el.title
+              span.service-price_subtitle=el.title
+            each item in el.items
+              .service-price-item
+                span.service-price-item-name=item.name
+                span.service-price-item-cost=item.price
     include ../../components/global/service-registration
 
 

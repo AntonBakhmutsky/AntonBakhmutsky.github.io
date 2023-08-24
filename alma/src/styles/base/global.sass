@@ -152,16 +152,18 @@ textarea
     display: none
 
 .service-price
-  margin-top: 12px
   border: 1px solid $light-gray
   border-radius: 16px
-  width: 66%
+  width: 100%
   box-sizing: border-box
   padding: 8px
-  +screen($tablet)
-    width: 61.65%
-  +screen($tablet-sm)
-    width: 100%
+
+  &_main-title
+    +font(18px, 22px, 700)
+    color: $blue-main
+    padding: 13px 0
+    margin: 0 8px
+    box-sizing: border-box
 
   &_title
     background-color: $light-blue
@@ -184,12 +186,16 @@ textarea
   &_subtitle
     +font(14px, 18px, 700)
     color: $black
-    margin-bottom: 11px
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    height: 40px
     +screen($tablet-xs)
       +font(16px, 19px, 700)
       margin-bottom: 10px
 
   &-item
+    width: 100%
     display: flex
     justify-content: space-between
     border-bottom: 1px dashed $text-field
