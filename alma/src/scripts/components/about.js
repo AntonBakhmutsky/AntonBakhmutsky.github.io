@@ -16,7 +16,9 @@ window.addEventListener('load', () => {
     })
 
     const slides = document.querySelectorAll('.about-slider .swiper-slide')
+    const slidesMobile = document.querySelectorAll('.about-slider-mobile .swiper-slide')
     initModalImage(slides)
+    initModalImage(slidesMobile)
   }
   new Swiper('.about-slider .swiper', {
     modules: [Navigation],
