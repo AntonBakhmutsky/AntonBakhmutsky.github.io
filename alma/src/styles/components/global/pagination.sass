@@ -32,17 +32,19 @@
         color: $black
         +font(16px, 20px, 700)
 
+      &:hover
+        span
+          color: $blue-main
+
       &.active
         background-color: $blue-main
         box-shadow: 0 4px 10px 0 rgba(29, 69, 170, 0.3)
 
-        span
+        &:hover
           color: $white
 
-      &.next
-
         span
-          color: $blue-main
+          color: $white
 
   &-btn-prev, &-btn-next
     background-color: $light-blue
@@ -64,5 +66,5 @@
       svg path
         stroke: $black
 
-
-
+      &:hover svg path
+        stroke: $blue-main

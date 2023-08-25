@@ -1,6 +1,6 @@
 .pagination
   .pagination-container
-    .pagination-btn-prev
+    .pagination-btn-prev.disabled
       | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/global/arrow-lef-light.svg')}
     .pagination-line
       .pagination-line-btn.active
@@ -17,5 +17,5 @@
         span ...
       .pagination-line-btn
         span 10
-    .pagination-btn-next
+    .pagination-btn-next.active
       | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/global/arrow-next-black.svg')}
