@@ -8,12 +8,14 @@ section.about-main
           span ALMA MED&nbsp;
           | — медицинский центр неврологии и ортопедии. Мы  специализируемся на лечении заболеваний позвоночника и суставов без операций. Используем  современные методики и аппараты.
         p.about-main-info_text Приём ведут  неврологи, рефлексотерапевты, травматологи-ортопеды, физиотерапевты, реабилитологи, врачи функциональной диагностики.
+        .about-main-img-mobile
+          img(src=require('@/assets/img/about/photo.jpg'))
         .about-main-info-points
           h4 Помогаем избавиться от:
           ul
             each el in problems
               li=el
-        .about-main-info-points
+        .about-main-info-points.about-main-info-points-next
           h4 Проводим восстановительное и профилактическое лечение:
           ul
             each el in treatmentsPoints
