@@ -3,8 +3,9 @@ import {Navigation, Pagination} from 'swiper/modules';
 
 let swiperInstance;
 
+
 function initSwiper() {
-  swiperInstance = new Swiper('.about-page-slider .swiper', {
+  swiperInstance = new Swiper('.slider-four .swiper', {
     modules: [Navigation, Pagination],
     slidesPerView: 4,
     spaceBetween: 24,
