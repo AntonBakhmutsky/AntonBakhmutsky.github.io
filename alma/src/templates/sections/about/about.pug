@@ -1,0 +1,43 @@
+section.about-main
+  .container
+    +prev-link('Назад', 'javascript:')
+    h3.subtitle О клинике
+    .about-container
+      .about-info
+        p.about-info_text #[span ALMA MED ] — медицинский центр неврологии и ортопедии. Мы  специализируемся на лечении заболеваний позвоночника и суставов без операций. Используем  современные методики и аппараты.
+        p.about-info_text Приём ведут  неврологи, рефлексотерапевты, травматологи-ортопеды, физиотерапевты, реабилитологи, врачи функциональной диагностики.
+        .about-info-points
+          h4 Помогаем избавиться от:
+          ul
+            each el in problems
+              li=el
+        .about-info-points
+          h4 Проводим восстановительное и профилактическое лечение:
+          ul
+            each el in treatmentsPoints
+              li=el
+        .about-info-contacts
+          a(href='tel:+73422583747').about-info-contacts-point
+            .img
+              | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/about/phone.svg')}
+            span +7 (342) 258-37-47
+          .about-info-contacts-point
+            .img
+              | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/about/time.svg')}
+            span Пн.-Сб.: 9:00-20:00
+      .about-img
+        img(src=require('@/assets/img/about/photo.jpg'))
+    .about-page-slider#about-page-slider
+      .swiper
+        .swiper-wrapper
+          each doc in aboutPageSlides
+            .swiper-slide
+              .docs-card
+                img(src=doc alt="")
+        .swiper-button-prev.swiper-button
+        .swiper-button-next.swiper-button
+
+
+
+
+
