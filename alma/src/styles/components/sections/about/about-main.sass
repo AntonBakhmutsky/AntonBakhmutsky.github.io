@@ -31,9 +31,9 @@
   &-info
     width: 66%
     +screen($tablet)
-      width: 61.75%
+      width: calc(61.75% + 2px)
     +screen($tablet-sm)
-      width: 65.77%
+      width: calc(64% - 2px)
     +screen($tablet-xs)
       width: 100%
       margin-bottom: 24px
@@ -59,11 +59,10 @@
       border-radius: 16px
       box-sizing: border-box
       padding: 16px
-      width: 588px
+      width: calc(74.24% + 3px)
       +screen($tablet)
-        max-width: 578px
-      +screen($tablet-sm)
         width: 100%
+      +screen($tablet-sm)
         margin-top: 24px
 
       &-next
@@ -95,7 +94,7 @@
             width: 6px
             height: 6px
             background-color: $blue-light
-            top: 50%
+            top: 6px
             left: 0
             border-radius: 50%
 
@@ -137,6 +136,9 @@
     +screen($tablet)
       width: 36.11%
       height: 444px
+    +screen($tablet-sm)
+      max-height: 290px
+      height: auto
     +screen($tablet-xs)
       display: none
 
@@ -145,10 +147,13 @@
       border-radius: 16px
 
     &-mobile
-      width: 100%
-      border-radius: 16px
-      overflow: hidden
-      margin-top: 24px
+      display: none
+      +screen($tablet-xs)
+        display: block
+        width: 100%
+        border-radius: 16px
+        overflow: hidden
+        margin-top: 24px
 
       img
         border-radius: 16px
@@ -168,6 +173,13 @@
 
       &-slide
         display: flex
+        height: 180px
+        +screen($tablet)
+          height: 140px
+        +screen($tablet-sm)
+          height: 141px
+        +screen($tablet-xs)
+          height: 188px
 
         .docs-card
           width: 100%
