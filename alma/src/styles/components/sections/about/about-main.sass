@@ -2,3 +2,41 @@
 @use '../../../abstracts/mixins' as *
 
 .about-main
+  box-sizing: border-box
+  padding-bottom: 60px
+
+  .prev-link
+    display: none
+
+  .subtitle
+    margin-top: 12px
+
+  &-container
+    display: flex
+    gap: 22px
+    margin-top: 20px
+
+  &-info
+    width: 66%
+
+    &_text
+      +font(14px, 20px, 400)
+      color: $black
+      margin-top: 20px
+
+      &:first-child
+        margin-top: 0
+
+      span
+        +font(14px, 20px, 700)
+
+  &-img
+    width: 32%
+    display: flex
+
+    img
+      height: 100%
+      width: 100%
+      object-fit: cover
+      object-position: center
+      border-radius: 16px
