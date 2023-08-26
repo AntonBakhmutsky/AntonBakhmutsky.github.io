@@ -1,15 +1,17 @@
 section.treatment
 
     h3.subtitle.container Лечение, профилактика и реабилитация в Перми
-    p.description-text.container Противоположная точка зрения подразумевает, что представители современных социальных резервов лишь добавляют фракционных разногласий и в равной степени предоставлены сами себе.
-    .treatment-switcher
-      .treatment-switcher-btns
-        each el, index in switcherButtons
-          button.treatment-switcher-btn(data-id=index)
-            h5=el.title
-            p=el.description
-            .treatment-switcher-btn_indicator
-      .treatment-switcher-indificator-line
+    .container
+      p.description-text Противоположная точка зрения подразумевает, что представители современных социальных резервов лишь добавляют фракционных разногласий и в равной степени предоставлены сами себе.
+    .treatment-switcher-container
+      .treatment-switcher
+            .treatment-switcher-btns
+              each el, index in switcherButtons
+                button.treatment-switcher-btn(data-id=index)
+                  h5=el.title
+                  p=el.description
+                  .treatment-switcher-btn_indicator
+            .treatment-switcher-indificator-line
     .container
       each el, index in treatmentServiceCard
         .treatment-service-card(data-id=index class=index === 0 ? 'active' : '')
