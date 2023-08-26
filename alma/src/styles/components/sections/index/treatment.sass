@@ -18,14 +18,16 @@
 
   &-switcher
     position: relative
-    margin: 0 20px 20px
+    margin: 0 40px 20px
     +screen($tablet)
       padding-bottom: 6px
       overflow-x: scroll
       -ms-overflow-style: none /* IE и Edge */
       scrollbar-width: none /* Firefox */
       height: 82px
-      margin: 0 16px 16px
+      margin: 0 0 16px 52px
+    +screen($tablet-sm)
+
     +screen($tablet-xs)
       margin: 0 0 20px
 

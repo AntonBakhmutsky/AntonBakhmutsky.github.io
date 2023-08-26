@@ -1,7 +1,7 @@
 section.treatment
-  .container
-    h3.subtitle Лечение, профилактика и реабилитация в Перми
-    p.description-text Противоположная точка зрения подразумевает, что представители современных социальных резервов лишь добавляют фракционных разногласий и в равной степени предоставлены сами себе.
+
+    h3.subtitle.container Лечение, профилактика и реабилитация в Перми
+    p.description-text.container Противоположная точка зрения подразумевает, что представители современных социальных резервов лишь добавляют фракционных разногласий и в равной степени предоставлены сами себе.
     .treatment-switcher
       .treatment-switcher-btns
         each el, index in switcherButtons
@@ -10,21 +10,22 @@ section.treatment
             p=el.description
             .treatment-switcher-btn_indicator
       .treatment-switcher-indificator-line
-    each el, index in treatmentServiceCard
-      .treatment-service-card(data-id=index class=index === 0 ? 'active' : '')
-        .treatment-service-card-info
-          h4=el.title
-          p.treatment-service-card-info_text=el.description
-          .treatment-service-card-img-mobile
+    .container
+      each el, index in treatmentServiceCard
+        .treatment-service-card(data-id=index class=index === 0 ? 'active' : '')
+          .treatment-service-card-info
+            h4=el.title
+            p.treatment-service-card-info_text=el.description
+            .treatment-service-card-img-mobile
+              img(src=el.img alt='')
+            p.treatment-service-card-info_price Стоимость:
+              span=el.price
+            p.treatment-service-card-info_date (Акция действует до #{el.date})
+            .treatment-service-card-info-btns
+              button.btn.btn-fill(data-modal="modal_sign-up") Записаться
+              button.btn.btn-trans(data-modal="modal_ask-question") Подробнее
+          .treatment-service-card-img
             img(src=el.img alt='')
-          p.treatment-service-card-info_price Стоимость:
-            span=el.price
-          p.treatment-service-card-info_date (Акция действует до #{el.date})
-          .treatment-service-card-info-btns
-            button.btn.btn-fill(data-modal="modal_sign-up") Записаться
-            button.btn.btn-trans(data-modal="modal_ask-question") Подробнее
-        .treatment-service-card-img
-          img(src=el.img alt='')
 
 
 
