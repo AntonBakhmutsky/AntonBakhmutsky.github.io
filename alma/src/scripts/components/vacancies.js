@@ -9,7 +9,6 @@ window.addEventListener('load', () => {
       btn.addEventListener('click', () => {
         card.classList.toggle("active")
         btn.textContent = card.classList.contains("active") ? "Свернуть описание" : "Развернуть описание";
-
       });
     });
   }
