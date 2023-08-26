@@ -18,12 +18,24 @@
       margin-bottom: 24px
 
   &-container
+    width: 100%
+    max-width: 1280px
+    box-sizing: border-box
+    padding: 0 40px
+    margin: 0 auto
     display: grid
     grid-template-columns: repeat(6, 1fr)
     grid-template-rows: 1fr
     grid-column-gap: 24px
     grid-row-gap: 0
+    +screen($desktop-xs)
+      padding: 0 32px
+    +screen($tablet)
+      padding: 0 32px
+    +screen($tablet-sm)
+      padding: 0 20px
     +screen($tablet-xs)
+      padding: 0 0 0 20px
       grid-template-columns: repeat(6, 139px)
       overflow-x: scroll
       grid-column-gap: 20px

@@ -1,13 +1,13 @@
 section.docs
+  .docs-top.container
+    h3.subtitle Лицензии
+    .desktop-link
+      +all-link('Все документы', 'javascript:')
+  .docs-container
+    each doc in docs
+      .docs-card
+        img(src=doc alt="")
   .container
-    .docs-top
-      h3.subtitle Лицензии
-      .desktop-link
-        +all-link('Все документы', 'javascript:')
-    .docs-container
-      each doc in docs
-        .docs-card
-          img(src=doc alt="")
     .mobile-link
       +all-link('Все документы', 'javascript:')
 

@@ -1,6 +1,6 @@
 section.reviews
-  .container
-    .reviews-top
+
+    .reviews-top.container
       h3.subtitle.subtitle-white Отзывы пациентов
       .desktop-link
         a(href='javascript:').all-link.all-link-white
@@ -16,7 +16,7 @@ section.reviews
           span.reviews-card_date=el.date
       .reviews-container-beauty
         | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/index/reviews/beauty.svg')}
-    .mobile-link
+    .mobile-link.container
       a(href='javascript:').all-link.all-link-white
         span Все отзывы
         | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/global/arrow-right-blue-long.svg')}

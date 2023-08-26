@@ -17,6 +17,11 @@
     margin-bottom: 28px
 
   &-container
+    width: 100%
+    max-width: 1280px
+    box-sizing: border-box
+    padding: 0 40px
+    margin: 0 auto
     display: grid
     grid-template-columns: repeat(3, 1fr)
     grid-template-rows: 1fr
@@ -24,13 +29,17 @@
     grid-row-gap: 0
     position: relative
     z-index: 5
+    +screen($desktop-xs)
+      padding: 0 32px
     +screen($tablet)
+      padding: 0 32px
       grid-column-gap: 20px
     +screen($tablet-sm)
       display: flex
       flex-direction: column
       gap: 16px
     +screen($tablet-xs)
+      padding: 0 0 0 20px
       display: grid
       grid-template-columns: repeat(3, 292px)
       grid-template-rows: 1fr
