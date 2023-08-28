@@ -6,7 +6,9 @@ window.addEventListener('load', () => {
 
     toggleButton.addEventListener("click", function() {
       hiddenLinks.forEach(link => {
-        link.style.display = link.style.display === "none" ? "inline" : "none";
+        const computedStyle = window.getComputedStyle(link);
+        const currentDisplay = computedStyle.getPropertyValue('display');
+        link.style.display = currentDisplay === "none" ? "inline" : "none";
       });
 
       toggleButton.textContent = hiddenLinks[0].style.display === "none" ? "Показать ещё" : "Свернуть";
