@@ -1,0 +1,60 @@
+section.news.all-news
+  .container
+    .news-top
+      h3.subtitle Новости и акции
+      .desktop-link
+        +all-link('Все новости и акции', 'javascript:')
+    .news-switcher.switcher
+      .switcher__btns
+        .switcher__btns-item.active(data-id="0") Все
+        .switcher__btns-item(data-id="1") Новости
+        .switcher__btns-item(data-id="2") Акции
+      .switcher__content
+        .switcher__content-item.active
+          .news-container
+            each card in newsCardsPageAll
+              .news-card
+                .news-card-info
+                  .news-card_img
+                    img(src=card.img)
+                  .news-card-top
+                    span=card.date
+                    .news-card-top_dot
+                    span=card.name
+                  h5(class='news-title')=card.title
+                button.btn.btn-fill Подробнее
+          .news-more
+              button.btn-else Показать еще
+              include ../../components/global/pagination-sm
+        .switcher__content-item
+          .news-container
+            each card in newsCardsPageNews
+              .news-card
+                .news-card-info
+                  .news-card_img
+                    img(src=card.img)
+                  .news-card-top
+                    span=card.date
+                    .news-card-top_dot
+                    span=card.name
+                  h5(class='news-title')=card.title
+                button.btn.btn-fill Подробнее
+          .news-more
+            button.btn-else Показать еще
+            include ../../components/global/pagination-sm
+        .switcher__content-item
+          .news-container
+            each card in newsCardsPageActions
+              .news-card
+                .news-card-info
+                  .news-card_img
+                    img(src=card.img)
+                  .news-card-top
+                    span=card.date
+                    .news-card-top_dot
+                    span=card.name
+                  h5(class='news-title')=card.title
+                button.btn.btn-fill Подробнее
+              .news-more
+                button.btn-else Показать еще
+                include ../../components/global/pagination-sm

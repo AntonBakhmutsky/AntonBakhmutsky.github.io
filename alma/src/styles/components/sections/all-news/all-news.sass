@@ -1,0 +1,28 @@
+@use '../../../abstracts/variables' as *
+@use '../../../abstracts/mixins' as *
+
+.all-news
+
+  .container
+    +screen($tablet-xs)
+      padding: 0
+
+  .news
+    &-container
+      background-color: transparent
+      grid-gap: 16px 24px
+      box-sizing: border-box
+      +screen($tablet-xs)
+        padding: 0 20px
+
+    &-more
+      margin-top: 20px
+      box-sizing: border-box
+      +screen($tablet-xs)
+        padding: 0 20px
+
+  .pagination
+    margin-top: 20px
+    +screen($tablet-sm)
+      display: flex
+

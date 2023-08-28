@@ -2,14 +2,11 @@
 @use '../../../abstracts/mixins' as *
 
 .news
-
   &-top
     display: flex
     justify-content: space-between
     align-items: flex-end
-    margin-bottom: 28px
-    +screen($tablet-xs)
-      margin-bottom: 24px
+    margin: 12px 0 28px
 
   &-container
     display: grid
@@ -34,10 +31,10 @@
     box-sizing: border-box
     border-radius: 16px
     overflow: hidden
-    height: 344px
+    transition: box-shadow .3s
     +screen($tablet)
       height: 326px
-      box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.1)
+      box-shadow: 0 6px 20px 0 rgba(0, 0, 0, .1)
     +screen($tablet-sm)
       height: 304px
     +screen($tablet-xs)
@@ -91,6 +88,7 @@
       color: $black
       +font(16px, 20px, 700)
       margin: 8px 16px 0
+      height: 60px
       +screen($tablet-sm)
         +font(14px, 18px, 700)
       +screen($tablet-xs)
@@ -98,12 +96,13 @@
         margin: 8px 12px 0
 
     .btn
-      display: none
+      visibility: hidden
       width: 150px
-      margin: 0 16px
+      margin: 20px 16px 0
+      transition: visibility .3s
       +screen($tablet)
         width: calc(100% - 32px)
-        display: block
+        visibility: visible
       +screen($tablet-xs)
         margin: 20px 12px 0
         width: calc(100% - 24px)
@@ -112,7 +111,7 @@
       box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.1)
 
       .btn
-        display: block
+        visibility: visible
 
       h5
         color: $blue-main

@@ -1,0 +1,76 @@
+@use '../../abstracts/variables' as *
+@use '../../abstracts/mixins' as *
+
+.switcher
+  &__btns
+    +font(20px, 24px, 700)
+    color: #AAAABB
+    display: flex
+    gap: 24px
+    box-sizing: border-box
+    padding-bottom: 12px
+    margin-bottom: 24px
+    position: relative
+    +screen($tablet-sm)
+      +font(18px, 21px, 700)
+
+    &:after
+      content: ''
+      height: 6px
+      width: 100%
+      border-radius: 6px
+      position: absolute
+      left: 0
+      bottom: 0
+      background-color: #F5F7FD
+
+    &-item
+      position: relative
+      width: 92px
+      display: flex
+      align-items: center
+      justify-content: center
+      transition: color .3s
+      cursor: pointer
+      +screen($tablet)
+        width: 83px
+
+      &:hover:not(.active)
+        color: $blue-main
+
+      &.active
+        color: $blue-main
+
+        &:after
+          width: 100%
+
+      &:after
+        content: ''
+        width: 0
+        height: 6px
+        position: absolute
+        left: 0
+        bottom: -12px
+        background-color: $blue-main
+        border-radius: 6px
+        z-index: 1
+        transition: width .3s
+
+  &__content
+    &-item
+      opacity: 0
+      visibility: hidden
+      max-height: 0
+      overflow: hidden
+      transition: opacity 1s ease, visibility 1s ease
+      padding-bottom: 20px
+
+      &.active
+        display: flex
+        flex-direction: column
+        opacity: 1
+        visibility: visible
+        max-height: min-content
+        transition: opacity 1s ease, visibility 1s ease, transform 1s ease
+        border-radius: 16px
+        overflow: hidden
