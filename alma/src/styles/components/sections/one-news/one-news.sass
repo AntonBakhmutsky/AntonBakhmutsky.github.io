@@ -1,0 +1,19 @@
+@use '../../../abstracts/variables' as *
+@use '../../../abstracts/mixins' as *
+
+.one-news
+  background-color: $light-blue
+  padding: 28px 0
+  box-sizing: border-box
+
+  .subtitle
+    margin: 12px 0 8px
+
+  &-date
+    display: flex
+    align-items: center
+    gap: 4px
+
+    span
+      +font(14px, 16px, 400)
+      color: $grey
