@@ -78,7 +78,6 @@
             background-image: url(../assets/img/global/arrow-right.svg)
 
   &-card
-    height: 478px
     display: flex
     justify-content: space-between
     flex-direction: column
@@ -87,10 +86,7 @@
     border-radius: 16px
     transition: box-shadow 0.3s ease
     +screen($tablet)
-      height: 441px
       box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.1)
-    +screen($tablet-sm)
-      height: 443px
     +screen($tablet-xs)
       height: auto
 
@@ -136,7 +132,7 @@
       opacity: 0
       width: 150px
       transition: opacity 0.3s ease
-      margin-left: 16px
+      margin: 20px 0 0 16px
       +screen($tablet)
         opacity: 1
         width: calc(100% - 32px)
