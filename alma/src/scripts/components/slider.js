@@ -3,49 +3,56 @@ import { Navigation, Pagination } from 'swiper/modules';
 
 
 window.addEventListener('load', () => {
-  const screenWidth = window.innerWidth
-  let doctorsSlider
+  let screenWidth = window.innerWidth
   let aboutSlider
 
     if (document.querySelector('.doctors-slider')) {
-
-      function initSwipers() {
-        doctorsSlider = new Swiper('.doctors-slider .swiper', {
-          modules: [Navigation, Pagination],
-          slidesPerView: 4,
-          spaceBetween: 24,
-          pagination: {
-            el: '.doctors-slider .swiper-pagination',
+      new Swiper('.doctors-slider .swiper', {
+        modules: [Navigation, Pagination],
+        slidesPerView: 4,
+        spaceBetween: 24,
+        pagination: {
+          el: '.doctors-slider .swiper-pagination',
+        },
+        navigation: {
+          nextEl: '.doctors-slider .swiper .swiper-button-next',
+          prevEl: '.doctors-slider .swiper .swiper-button-prev',
+        },
+        breakpoints: {
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 20
           },
-          navigation: {
-            nextEl: '.doctors-slider .swiper .swiper-button-next',
-            prevEl: '.doctors-slider .swiper .swiper-button-prev',
+          768: {
+            slidesPerView: 3.1,
+            spaceBetween: 20
           },
-        });
-      }
-
-      function updateSwipers() {
-
-        if (screenWidth <= 576) {
-          doctorsSlider.params.slidesPerView = 1
-          doctorsSlider.params.spaceBetween = 20
-          doctorsSlider.update();
-        } else if (screenWidth <= 768) {
-          doctorsSlider.params.slidesPerView = 3
-          doctorsSlider.params.spaceBetween = 20
-          doctorsSlider.update();
-        } else {
-          doctorsSlider.params.slidesPerView = 4
-          doctorsSlider.params.spaceBetween = 24
-          doctorsSlider.update()
+          1000: {
+            slidesPerView: 4,
+            spaceBetween: 24
+          },
         }
+      })
+
+      const swiperSlides = document.querySelectorAll('.doctors-slider .swiper-slide')
+      const swiperWrapper = document.querySelector('.doctors-slider .swiper-wrapper')
+
+      function setSwiperDoctorsHeight() {
+        const contentHeights = [];
+
+        swiperSlides.forEach(el => contentHeights.push(el.scrollHeight));
+
+        const maxImageHeight = Math.max(...contentHeights);
+
+        swiperWrapper.style.height = `${maxImageHeight}px`
       }
 
-      initSwipers()
-      updateSwipers()
+      setSwiperDoctorsHeight()
+
       window.addEventListener('resize', () => {
-        updateSwipers()
-      });
+        swiperWrapper.style.height = 'auto'
+        setSwiperDoctorsHeight()
+      })
     }
 
     if (document.querySelector('.about-main-slider')) {

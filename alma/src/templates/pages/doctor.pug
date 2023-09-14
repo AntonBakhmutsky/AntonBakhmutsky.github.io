@@ -3,6 +3,13 @@ extends ../layouts/main/layout.pug
 block title
   | Almamed
 
+append variables
+  -
+    sectionBreadcrumbs = [
+      {txt: 'Специалисты'}
+    ]
+    imageModal = true
+
 block content
   include ../sections/doctor/doctor
   include ../sections/index/doctors

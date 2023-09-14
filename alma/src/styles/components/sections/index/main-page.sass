@@ -10,6 +10,10 @@
   +screen($tablet-xs)
     padding-bottom: 12px
 
+  &.container
+    +screen($tablet)
+      padding: 0
+
   .main-slider:hover .swiper-button
     opacity: 1 !important
     transition: opacity 0.3s
@@ -38,11 +42,16 @@
     &-next
       background-image: url(../assets/img/global/arrow-right.svg)
 
+  #main-slider
+    +screen($tablet-xs)
+      display: none
+
   .swiper
     border-radius: 16px
     overflow: hidden
-    +screen($tablet-xs)
-      padding-bottom: 24px
+    +screen($tablet)
+      padding: 0 16px
+      margin-top: 20px
 
     &-pagination
       +screen($tablet-xs)
@@ -55,91 +64,27 @@
           +screen($tablet-xs)
             background: $blue-light
 
-  .swiper-slide
-    height: 380px
-    display: flex
-    align-items: center
-    padding-left: 78px
-    box-sizing: border-box
-    border-radius: 16px
-    position: relative
-    overflow: hidden
-    +screen($tablet)
-      padding-left: 56px
-    +screen($tablet-sm)
-      height: 286px
-      padding-left: 44px
-    +screen($tablet-xs)
-      height: 471px
-      padding: 12px 16px
-      align-items: flex-end
-
-    &-overlay
-      background: linear-gradient(269.82deg, rgba(237, 249, 255, 0.95), rgba(56, 165, 225, 2))
-      position: absolute
-      top: 0
-      left: 0
-      width: 100%
-      height: 100%
-      +screen($tablet-xs)
-        background: linear-gradient(178.31deg, rgba(255, 255, 255, 0) 1.03%, #DBF0FC 98.19%)
-
-    &_img
-      height: 100%
-      width: 100%
-      position: absolute
-      left: 0
-      top: 0
-      z-index: -1
+    &-slide
       display: flex
-      justify-content: flex-end
+      align-items: center
+      box-sizing: border-box
+      border-radius: 16px
+      position: relative
+      overflow: hidden
+      max-height: 380px
       +screen($tablet-xs)
-        justify-content: center
+        max-height: 472px
 
       img
-        height: 100%
-        object-fit: contain
-        object-position: center
-
-
-    &-main-btns
-      display: flex
-      gap: 16px
-      +screen($tablet-xs)
-        flex-direction: column
-
-      button
-        width: 150px
-        +screen($tablet-xs)
-          width: 100%
-
-    .main-page-swiper-slide-info
-      width: 408px
-      position: relative
-      z-index: 4
-      +screen($tablet-xs)
+        max-width: 100%
         width: 100%
+        object-fit: contain
+        object-position: top
 
-      h2
-        +font(30px, 36px, 900)
-        color: $black
-        margin-bottom: 12px
-        +screen($tablet-sm)
-          +font(24px, 28px, 900)
-          margin-bottom: 8px
-        +screen($tablet-xs)
-          +font(26px, 30px, 900)
-          margin-bottom: 12px
-
-      p
-        +font(14px, 20px, 400)
-        color: $black
-        margin-bottom: 36px
-        +screen($tablet-sm)
-          margin-bottom: 24px
-        +screen($tablet-xs)
-          +font(12px, 16px, 400)
-          margin-bottom: 28px
+  #main-slider-mobile
+    display: none
+    +screen($tablet-xs)
+      display: block
 
   &-cards
     margin-top: 16px
@@ -163,7 +108,7 @@
       margin-top: 8px
       overflow-x: scroll
       overflow-y: visible
-      padding: 20px 0
+      padding: 20px
       box-sizing: border-box
       -ms-overflow-style: none /* IE и Edge */
       scrollbar-width: none /* Firefox */

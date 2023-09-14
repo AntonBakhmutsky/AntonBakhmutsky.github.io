@@ -159,8 +159,15 @@ textarea
   box-sizing: border-box
   +screen($desktop-sm)
     padding-top: 20px
-  +screen($tablet-xs)
+
+  .breadcrumbs
+    +screen($tablet-xs)
+      display: none
+
+  .back-link
     display: none
+    +screen($tablet-xs)
+      display: flex
 
 .service-price
   border: 1px solid $light-gray
@@ -229,3 +236,18 @@ textarea
     &-cost
       +font(14px, 17px, 700)
       color: $black
+
+.back-link
+  color: #1D45AA
+  +font(14px, 20px, 600)
+  display: flex
+  align-items: center
+  gap: 4px
+  transition: color .3s
+
+  &:hover:not(:active)
+    color: #133792
+
+    svg
+      path
+        stroke: #133792

@@ -48,7 +48,7 @@ window.addEventListener('load', () => {
                 <div class="popup__body">
                     <div class="popup__close"></div>
                     <div class="popup__type popup__type_${map.modifier}">${map.modifier === 'shop' ? 'магазин запчастей' : 'сервисный центр'}</div>
-                    <div class="popup__name">${map.modifier === 'shop' ? 'ООО «Трактрейлерсервис СПб» (ГК Сотранс)' : 'ООО «Техцентры СОТСРАНС»'}</div>
+                    <div class="popup__name">${map.name}</div>
                     <p class="popup__txt">
                         <span>Адрес:</span>
                         <span>${map.address}</span>

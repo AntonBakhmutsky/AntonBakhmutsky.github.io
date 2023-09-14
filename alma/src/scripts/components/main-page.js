@@ -1,6 +1,5 @@
 import Swiper from 'swiper'
 import { Navigation, Pagination } from 'swiper/modules'
-import initModalImage from "@/scripts/helpers/modalImage";
 
 window.addEventListener('load', () => {
 
@@ -10,6 +9,19 @@ window.addEventListener('load', () => {
     new Swiper('.main-slider .swiper', {
       modules: [Navigation, Pagination],
       loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      }
+    })
+    new Swiper('.main-slider-mobile .swiper', {
+      modules: [Navigation, Pagination],
+      loop: true,
+      slidesPerView: 1,
+      spaceBetween: 20,
       pagination: {
         el: '.swiper-pagination',
       },
