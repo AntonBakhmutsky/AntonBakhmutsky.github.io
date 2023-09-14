@@ -17,6 +17,20 @@ window.addEventListener('load', () => {
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 2.1,
+        spaceBetween: 20
+      },
+      460: {
+        slidesPerView: 3.2,
+        spaceBetween: 20
+      },
+      700: {
+        slidesPerView: 4,
+        spaceBetween: 24
+      }
     }
   })
 })
