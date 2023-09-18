@@ -19,11 +19,15 @@
     padding-top: 17px
     background-color: white
     +screen($desktop)
-      padding-top: 10px
+      padding-top: 12px
     +screen(1280)
       border-bottom: 1px solid $gray
 
     &.up
+      padding-top: 24px
+      +screen($tablet)
+        padding-top: 12px
+
       .header
         &__bottom
           max-height: 69px
@@ -32,6 +36,22 @@
           +screen($tablet)
             max-height: 0
             padding-bottom: 0
+
+        &__top
+          padding-bottom: 32px
+          +screen($tablet)
+            padding-bottom: 0
+
+    &.header_main
+      .header__logos
+        a
+          &:first-child
+            svg
+              &:last-child
+                display: none
+
+              &:first-child
+                display: block
 
     .header
       &__logos
@@ -78,8 +98,14 @@
       &__logos
         a
           &:first-child
+            margin-top: 2px
+
             &:after
               background-color: $white
+
+            svg
+              &:first-child
+                display: none
 
       &__search
         color: $white
@@ -183,7 +209,7 @@
       margin-top: -10px
       +font(23px, 24px, 500)
       +screen($desktop)
-        width: 184px
+        width: 186px
         +font(21px, 24px, 500)
 
       &:after
@@ -192,7 +218,7 @@
         color: #A8A8A8
         position: absolute
         top: calc(100% + 2px)
-        right: 0
+        left: 0
         +screen($desktop)
           +font(12px, 14px, 500)
 
