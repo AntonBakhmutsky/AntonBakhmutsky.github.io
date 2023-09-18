@@ -36,13 +36,30 @@
         z-index: 10
         position: relative
 
+      &-buttons
+        display: flex
+        margin-top: 84px
+        gap: 20px
+        +screen($desktop)
+          margin-top: 79px
+        +screen($tablet)
+          margin-top: auto
+          flex-direction: column
+
+        .btn.btn_trans
+          &:hover
+            svg
+              path
+                fill: none
+                stroke: #0B0B14
+
       &-title
-        +font(64px, 64px, 800)
+        +font(64px, 64px, 900)
         max-width: 641px
         +screen($desktop)
-          +font(54px, 54px, 800)
+          +font(54px, 54px, 900)
         +screen($tablet)
-          +font(30px, 34px, 800)
+          +font(30px, 34px, 900)
           max-width: 300px
 
         span
@@ -62,31 +79,38 @@
             height: 5px
 
       &-txt
-        +font(24px, 36px)
+        +font(24px, 36px, 500)
         margin-top: 24px
         +screen($desktop)
-          +font(20px, 31px)
+          +font(20px, 31px, 500)
           margin-top: 22px
         +screen($tablet)
-          +font(16px, 20px)
+          +font(16px, 20px, 500)
           margin-top: 16px
 
       .btn
-        margin-top: 84px
         width: 282px
         height: 64px
         pointer-events: auto
         +font(20px, 24px, 500)
         +screen($desktop)
-          width: 236px
-          height: 66px
-          margin-top: 79px
-          +font(22px, 22px, 500)
+          width: 260px
+          height: 60px
+          +font(18px, 22px, 500)
         +screen($tablet)
-          margin-top: auto
-          width: 222px
-          height: 51px
-          +font(18px, 18px, 500)
+          width: 250px
+          height: 52px
+          +font(16px, 20px, 500)
+
+        svg
+          width: 28px
+          height: 28px
+          +screen($desktop)
+            width: 24px
+            height: 24px
+          +screen($tablet)
+            width: 20px
+            height: 20px
 
       &-image
         position: absolute

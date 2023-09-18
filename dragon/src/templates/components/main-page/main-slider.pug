@@ -9,8 +9,15 @@ section.main-slider
             else
               h2.swiper-slide-title.opacity-animation !{el.slideTitle}
             p.swiper-slide-txt.slide-left !{el.slideTxt}
-            a.btn.btn_orange.slide-up(href=el.slideUrl)
-              span Подробнее
+            .swiper-slide-buttons
+              a.btn.btn_orange.slide-up(href=el.slideUrl)
+                span Подробнее
+              a.swiper-slide__link.btn.btn_trans.btn_trans_lg.tc-btn.slide-up(data-delay='200' target='_blank' href='https://tc.sotrans.ru/' style='opacity: 1; transform: translateY(0px);')
+                span Техцентры Сотранс
+                span.arrow
+                  svg(fill='none' xmlns='http://www.w3.org/2000/svg')
+                      path(id='Vector 117' d='M5 7H21V23' stroke='white' stroke-width='2')
+                      path(id='Vector 118' d='M21 7L5 23' stroke='white' stroke-width='2')
           .swiper-slide-image
             img(src=el.slide alt="")
     .swiper-pagination
@@ -32,8 +39,15 @@ section.main-slider
             else
               h2.swiper-slide-title.opacity-animation !{el.slideTitle}
             p.swiper-slide-txt.slide-left !{el.slideTxt}
-            a.btn.btn_orange.slide-up(href=el.slideUrl)
-              span Подробнее
+            .swiper-slide-buttons
+              a.btn.btn_orange.slide-up(href=el.slideUrl)
+                span Подробнее
+              a.swiper-slide__link.btn.btn_trans.btn_trans_lg.tc-btn.slide-up(data-delay='200' target='_blank' href='https://tc.sotrans.ru/' style='opacity: 1; transform: translateY(0px);')
+                span Техцентры Сотранс
+                span.arrow
+                  svg(viewBox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(id='Vector 117' d='M5 7H21V23' stroke='white' stroke-width='2')
+                    path(id='Vector 118' d='M21 7L5 23' stroke='white' stroke-width='2')
           .swiper-slide-image
             img(src=el.slide alt="")
     .swiper-pagination

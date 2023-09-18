@@ -12,6 +12,7 @@
     display: flex
     align-items: center
     gap: 90px
+    justify-content: space-between
     +screen($desktop)
       gap: 28px
     +screen($tablet)
@@ -20,7 +21,7 @@
       gap: 74px
 
   &__info
-    max-width: 428px
+    max-width: 448px
     +screen($desktop)
       max-width: 338px
     +screen($tablet)
@@ -29,25 +30,36 @@
 
     .btn
       margin-top: 60px
+      width: 260px
+      height: 64px
+      +font(20px, 25px, 500)
       +screen($desktop)
+        width: 240px
+        height: 60px
         margin-top: 48px
+        +font(18px, 22px, 500)
       +screen($tablet)
+        width: 250px
+        height: 52px
         margin: 44px auto 0
+        +font(16px, 20px, 500)
 
   &__title
     +font(28px, 33px, 700)
     +screen($desktop)
       +font(22px, 25px, 700)
+    +screen($tablet)
+      +font(20px, 24px, 700)
 
   &__txt
     margin-top: 20px
-    +font(22px, 34px)
+    +font(22px, 34px, 200)
     +screen($desktop)
       margin-top: 10px
-      +font(18px, 28px)
+      +font(18px, 28px, 200)
     +screen($tablet)
       margin-top: 10px
-      +font(18px, 24px)
+      +font(16px, 22px, 200)
 
   &__video
     position: relative
