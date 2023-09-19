@@ -73,9 +73,9 @@
 
   &__txt
     margin-top: 14px
-    +font(16px, 24px)
+    +font(16px, 24px, 200)
     +screen($desktop)
-      +font(14px, 20px)
+      +font(14px, 20px, 200)
     +screen($tablet-xs)
       margin-top: 26px
 
@@ -93,25 +93,29 @@
 
     a
       color: $white
-      +font(18px, 26px, 700)
+      +font(18px, 26px, 500)
       +screen($desktop)
-        +font(16px, 26px, 700)
+        +font(16px, 26px, 500)
 
     &-block
       display: flex
       flex-direction: column
-      gap: 14px
+      gap: 23px
+      +screen($desktop)
+        gap: 14px
 
   &__contacts
     display: flex
     flex-direction: column
     justify-content: space-between
-    gap: 30px
+    gap: 24px
+    +screen($tablet)
+      gap: 32px
 
     &-item
       display: flex
       align-items: flex-start
-      gap: 13px
+      gap: 8px
 
       a
         color: $white
@@ -135,7 +139,6 @@
           a
             &:last-child
               margin-top: 17px
-
 
       &:nth-child(3)
         align-items: center
@@ -170,7 +173,6 @@
       gap: 14px
       flex-direction: column
 
-
     a
       color: #C2C2C2
       position: relative
@@ -196,7 +198,7 @@
   &__info
     display: flex
     gap: 26px
-    +font(14px, 20px)
+    +font(14px, 20px, 200)
     +screen($tablet-xs)
       gap: 14px
       flex-direction: column
