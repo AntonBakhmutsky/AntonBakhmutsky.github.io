@@ -2,27 +2,27 @@
 @use '../../abstracts/mixins' as *
 
 .financial
-  padding: 26px 0 187px
+  padding: 20px 0 187px
   background: url(../assets/img/financial/fin-bg.svg) right bottom no-repeat
   +screen($desktop)
     background: url(../assets/img/financial/fin-bg-desk.svg) right bottom no-repeat
-    padding: 20px 0 132px
+    padding: 16px 0 132px
   +screen($tablet)
     background: url(../assets/img/financial/fin-bg-mob.svg) right bottom no-repeat
-    padding: 17px 0 60px
+    padding: 12px 0 60px
 
   &__grid
-    margin-top: 42px
+    margin-top: 50px
     display: grid
     grid-template-columns: repeat(2, 1fr)
     grid-gap: 22px
     +screen($desktop)
       grid-gap: 14px
-      margin-top: 34px
+      margin-top: 40px
     +screen($tablet)
       grid-template-columns: 1fr
       grid-gap: 40px
-      margin-top: 30px
+      margin-top: 32px
 
   &__item
     .more-btn
