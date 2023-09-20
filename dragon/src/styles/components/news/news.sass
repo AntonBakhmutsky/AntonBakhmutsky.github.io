@@ -24,13 +24,28 @@
         grid-template-columns: 1fr !important
 
       &:first-child
-        grid-template-columns: repeat(auto-fit, minmax(390px, 1fr))
+        grid-template-columns: repeat(auto-fit, 397px)
+        justify-content: center
+        grid-template-rows: repeat(auto-fill, 320px)
         +screen($desktop)
-          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))
+          grid-template-columns: repeat(auto-fit, 315px)
+          grid-template-rows: repeat(auto-fill, 260px)
+        +screen($tablet)
+          grid-template-columns: 1fr
+          grid-template-rows: auto
 
         .promo-card
           &__image
             aspect-ratio: 16/9
+
+          &:hover:not(:active)
+            .promo-card
+              &__title
+                color: $black
+
+              &__image
+                &:after
+                  display: none
 
           &__title
             +font(20px, 23px, 700)
