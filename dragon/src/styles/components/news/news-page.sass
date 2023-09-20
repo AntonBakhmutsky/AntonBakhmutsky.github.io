@@ -4,52 +4,54 @@
 .news-page
   margin: 0 auto
   box-sizing: border-box
-  padding: 20px 0 0
+  padding: 50px 0 60px
   width: 780px
   +screen($desktop)
+    padding: 40px 0 50px
     width: 594px
   +screen($tablet)
     width: 100%
-    padding: 0 16px
+    padding: 32px 16px 40px
 
   .back__btn
    display: flex
    width: 78px
    align-items: center
+
    svg
     margin-right: 9px
+
     path
      stroke: $black
+
    span
     +font(16px, 20px, 500)
     transition: color 0.1s
     +screen($tablet)
       font-size: 14px
+
    &:hover span, &:hover svg path
      color: $orange
      stroke: $orange
 
   &__date
-    +font(16px, 19px, 500)
+    +font(14px, 19px, 200)
     color: $gray-medium
-    margin: 26px 0 8px 0
+    margin: 8px 0 32px
     +screen($desktop)
-      +font(16px, 19px, 500)
-      margin-top: 22px
+      margin: 8px 0 28px
     +screen($tablet)
       line-height: 26px
-      margin: 20px 0 6px 0
+      margin: 6px 0 24px
 
   &__title
-    +font(40px, 47px, 800)
+    +font(40px, 47px, 900)
     color: $black
-    margin-bottom: 30px
+    margin-top: 20px
     +screen($desktop)
-      +font(30px, 35px, 800)
-      margin-bottom: 22px
+      +font(30px, 35px, 900)
     +screen($tablet)
-      +font(20px, 24px, 800)
-      margin-bottom: 26px
+      +font(22px, 24px, 900)
 
   &__img
     margin-bottom: 26px
@@ -64,10 +66,10 @@
         object-position: center
 
   &__text
-    +font(20px, 34px)
+    +font(18px, 34px, 200)
     color: $black
     +screen($desktop)
-      +font(16px, 26px)
+      +font(16px, 26px, 200)
 
   &__swiper-wrapper
     margin: 26px 0 26px 0
@@ -126,15 +128,16 @@
     display: flex
     background-color: $white-gray
     padding: 6px 16px
-    width: 210px
-    height: 46px
+    width: 236px
+    height: 52px
     align-items: center
-    justify-content: space-between
+    justify-content: center
     box-sizing: border-box
-    margin: 20px 0 100px 0
+    margin-top: 20px
     +screen($desktop)
+      +font(14px, 14px, 500)
       padding: 4px 16px
-      width: 176px
+      width: fit-content
       height: 42px
 
 

@@ -18,26 +18,20 @@
       padding: 0 16px
 
   &__title
-    +font(32px, 33px, 700)
-    margin-bottom: 20px
+    +font(26px, 30px, 700)
+    margin-bottom: 16px
     +screen($desktop)
-      margin-bottom: 10px
-      +font(24px, 33px, 700)
+      +font(22px, 30px, 700)
     +screen($tablet)
       margin-bottom: 20px
-      +font(22px, 28px, 700)
 
   &__txt
-    +font(20px, 34px)
+    +font(18px, 32px, 200)
     +screen($desktop)
-      +font(16px, 26px)
-    +screen($tablet)
-      +font(16px, 28px)
+      +font(16px, 26px, 200)
 
     &:last-child:not(:first-child)
-      margin-top: 26px
-      +screen($desktop)
-        margin-top: 20px
+      margin-top: 16px
 
   &__top, &__bottom
     display: grid
