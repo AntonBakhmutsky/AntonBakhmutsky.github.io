@@ -28,6 +28,20 @@
       grid-template-columns: 1fr
 
     .product-card
+      .fuel, &__params-type
+        +font(14px, 14px, 500)
+        height: 28px
+        box-sizing: border-box
+        padding-top: 5px
+        +screen($desktop)
+          height: 24px
+          padding-top: 4px
+
+      .fuel
+        span
+          width: 24px
+          height: 24px
+
       &__top
         height: 338px
         +screen($desktop)
@@ -36,21 +50,19 @@
           height: 206px
 
       &__title
-        +font(22px, 27px, 700)
+        +font(20px, 24px, 700)
         +screen($desktop)
-          +font(20px, 27px, 700)
-        +screen($tablet)
           +font(18px, 27px, 700)
 
       &__link
         width: 230px
         height: 54px
+        +font(18px, 19px, 500)
         +screen($desktop)
-          width: 194px
-          height: 47px
+          width: 200px
+          height: 48px
           +font(16px, 18px, 500)
         +screen($tablet)
-          +font(18px, 19px, 500)
           width: 100%
           height: 54px
 

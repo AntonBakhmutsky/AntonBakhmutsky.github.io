@@ -21,11 +21,9 @@
       +font(24px, 28px, 700)
 
   &__container
-    margin-top: 50px
+    margin-top: 32px
     +screen($desktop)
-      margin-top: 40px
-    +screen($tablet)
-      margin-top: 30px
+      margin-top: 24px
 
   &__more
     +font(18px, 19px, 500)
@@ -56,10 +54,12 @@
 
         &-btn
           background-color: $blue !important
+
           svg
             transform: rotate(180deg)
 
             path
+              stroke-width: 3px
               stroke: $white !important
 
     &-visible

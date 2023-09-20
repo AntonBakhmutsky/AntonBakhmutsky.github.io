@@ -31,19 +31,18 @@
 
   &__desc
     p
-      +font(20px, 26px)
+      +font(18px, 32px, 200)
       +screen($desktop)
-        +font(16px, 26px)
+        +font(16px, 26px, 200)
       +screen($tablet)
         box-sizing: border-box
         padding: 0 16px
 
+      b
+        font-weight: 500
+
       &:not(:first-child)
-        margin-top: 45px
-        +screen($desktop)
-          margin-top: 35px
-        +screen($tablet)
-          margin-top: 30px
+        margin-top: 16px
 
   &__image
     width: 945px

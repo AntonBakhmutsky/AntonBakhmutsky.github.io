@@ -15,7 +15,7 @@
     +screen($desktop)
       padding: 40px 0 41px
     +screen($tablet)
-      padding: 32px 0
+      padding: 34px 0
 
     .container
       padding-left: 0
@@ -60,11 +60,9 @@
           padding: 22px 20px 22px 14px
 
         p
-          +font(20px, 30px)
+          +font(18px, 30px, 200)
           +screen($desktop)
-            +font(16px, 26px)
-          +screen($tablet)
-            +font(16px, 28px)
+            +font(16px, 26px, 200)
 
           &:first-child
             margin-bottom: 24px
@@ -76,9 +74,7 @@
               margin-bottom: 23px
 
           &:last-child
-            margin-top: 40px
-            +screen($desktop)
-              margin-top: 30px
+            margin-top: 16px
 
       &-title
         color: $blue
@@ -86,13 +82,14 @@
         box-sizing: border-box
         padding-right: 100px
         text-align: right
-        transform: translateY(18px)
+        transform: translateY(19px)
+        position: relative
         +screen($desktop)
-          transform: translateY(13px)
+          transform: translateY(14px)
           padding-right: 60px
           +font(60px, 70px, 700)
         +screen($tablet)
-          transform: translateY(10px)
+          transform: translateY(11px)
           padding: 0
           +font(46px, 54px, 700)
 
@@ -104,16 +101,20 @@
             transform: translateY(-48px)
             +font(33px, 40px, 700)
           +screen($tablet)
+            position: absolute
             transform: translateY(-36px)
             +font(28px, 40px, 700)
 
   &__block
     &-title
-      +font(32px, 40px, 700)
+      +font(26px, 40px, 700)
+      box-sizing: border-box
+      position: relative
       +screen($desktop)
-        +font(24px, 40px, 700)
+        +font(22px, 26px, 700)
       +screen($tablet)
         +font(22px, 28px, 700)
+        padding-left: 41px
 
       span
         display: inline-block
@@ -125,13 +126,16 @@
           +font(26px, 40px, 700)
         +screen($tablet)
           +font(20px, 40px, 700)
+          position: absolute
+          left: 6px
+          top: 0
 
     &-txt
-      +font(20px, 34px)
+      +font(18px, 32px, 200)
       margin-top: 12px
       +screen($desktop)
         margin-top: 2px
-        +font(16px, 26px)
+        +font(16px, 26px, 200)
       +screen($tablet)
         margin-top: 10px
 
@@ -142,7 +146,7 @@
   &__middle
     padding: 50px 0 0
     +screen($desktop)
-      padding: 40px 0 0
+      padding: 0
 
     .container
       display: grid
@@ -205,7 +209,7 @@
         background: url(../assets/img/technology/tech-bg-desk.svg) 100% 104%/contain no-repeat
         padding: 40px 60px
       +screen($tablet)
-        padding: 40px 60px 0
+        padding: 40px 16px 60px
         gap: 50px
         flex-direction: column
 
