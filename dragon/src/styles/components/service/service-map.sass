@@ -5,14 +5,9 @@
   &__title
     +font(32px, 32px, 700)
     box-sizing: border-box
-    padding: 0 100px
-    max-width: 1920px
-    margin: 0 auto
     +screen($desktop)
-      padding: 0 60px
       +font(24px, 32px, 700)
     +screen($tablet)
-      padding: 0 16px
       +font(22px, 28px, 700)
 
   &__container
@@ -25,3 +20,26 @@
     +screen($tablet)
       margin-top: 20px
       height: 375px
+
+  &__top
+    max-width: 1920px
+    box-sizing: border-box
+    padding: 0 100px
+    margin: 0 auto
+    width: 100%
+    display: flex
+    justify-content: space-between
+    +screen($desktop)
+      padding: 0 50px
+    +screen($tablet)
+      padding: 0 16px
+
+  &__link
+    box-sizing: border-box
+    padding: 14px 24px
+    border: 2px solid #EB5C2C
+    +font(16px, 18px, 500)
+    align-items: center
+    gap: 10px
+    color: #EB5C2C
+    display: flex
