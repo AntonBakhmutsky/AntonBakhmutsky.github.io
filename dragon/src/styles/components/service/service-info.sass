@@ -78,30 +78,30 @@
           margin-top: 0
 
   &__accent
-    background-color: $orange
+    background: url(../assets/img/service/bg.jpg) no-repeat center/cover
+    width: 100%
+    height: 100%
     color: $white
-    display: flex
-    margin-top: 21px
     box-sizing: border-box
-    padding: 26px 30px
-    align-items: center
-    gap: 10px
-    max-width: 517px
-    +font(22px, 28px, 700)
-    +screen($desktop)
-      margin-top: 26px
-      padding: 18px 100px 18px 30px
-      +font(18px, 22px, 700)
-    +screen($tablet)
-      margin-top: 20px
-      padding: 14px 34px
-      +font(16px, 22px, 700)
-      max-width: none
-      justify-content: center
+    padding: 52px 36px
 
-    &-image
-      flex-shrink: 0
-      width: 44px
-      height: 44px
+    &-title
+      +font(22px, 28px, 700)
+      +screen($desktop)
+        +font(20px, 32px, 700)
+      +screen($tablet)
+        +font(20px, 25px, 700)
 
+    &-txt
+      margin-top: 12px
+      +font(18px, 32px, 200)
+      +screen($desktop)
+        margin-top: 4px
+        +font(16px, 26px, 200)
+      +screen($tablet)
+        margin-top: 8px
 
+    &-link
+      svg
+        width: 24px
+        height: 24px
