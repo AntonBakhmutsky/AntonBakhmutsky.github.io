@@ -1,0 +1,72 @@
+@use '../../abstracts/variables' as *
+@use '../../abstracts/mixins' as *
+
+.service-page
+  box-sizing: border-box
+  padding: 28px 0 161px
+  background: url(../assets/img/service/service-bg.svg) no-repeat right bottom
+  +screen($desktop)
+    background: url(../assets/img/service/service-bg-desctop.svg) no-repeat right bottom
+    padding: 24px 0
+  +screen($tablet)
+    padding: 20px 0
+    background: none
+
+  &__back
+    +font(16px, 20px, 500)
+    display: flex
+    gap: 8px
+    align-items: center
+    justify-content: center
+    width: fit-content
+
+  &__title
+    margin-top: 20px
+    +font(50px, 50px, 900)
+    +screen($desktop)
+      margin-top: 16px
+      +font(40px, 40px, 900)
+    +screen($tablet)
+      +font(30px, 30px, 900)
+      margin-top: 12px
+
+  &__grid
+    margin-top: 50px
+    display: grid
+    grid-gap: 30px
+    grid-template-columns: repeat(4, 1fr)
+    +screen($desktop)
+      grid-gap: 20px
+      margin-top: 40px
+    +screen($tablet)
+      grid-template-columns: 1fr
+      margin-top: 32px
+
+
+.service-card
+  box-sizing: border-box
+  border: 1px solid #EFEFEF
+  padding: 20px
+  display: flex
+  flex-direction: column
+  gap: 20px
+  background-color: $white
+
+  &__item
+    +font(16px, 20px, 200)
+    display: flex
+    flex-direction: column
+    gap: 12px
+
+    span
+      &:first-child
+        color: #A8A8A8
+
+    &_city
+      color: $white
+      width: fit-content
+      box-sizing: border-box
+      padding: 5px 12px
+      background: #0F75BC
+      border-radius: 32px
+      +font(14px, 14px, 500)

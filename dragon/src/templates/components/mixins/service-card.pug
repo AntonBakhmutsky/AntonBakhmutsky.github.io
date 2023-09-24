@@ -1,9 +1,9 @@
-mixin service-card(params)
+mixin serviceCard(params)
   .service-card
     .service-card__item.service-card__item-city #{params.city}
-    .service-card__item
-    .service-card__
-    .service-card__
-    .service-card__
-    .service-card__
-    .service-card__
+    .service-card__item.service-card__item_title #{params.title}
+    .service-card__item.service-card__item_address #{params.address}
+    .service-card__item.service-card__item_address #{params.work}
+    a.service-card__item.service-card__item_phone(href=`tel:${params.link_phone}`) #{params.phone}
+    a.service-card__item.service-card__item_mail(href=`mailto:${params.mail}`) #{params.mail}
+

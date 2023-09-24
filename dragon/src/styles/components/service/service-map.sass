@@ -12,14 +12,14 @@
 
   &__container
     margin-top: 40px
-    height: 660px
+    height: 600px
     position: relative
     +screen($desktop)
       margin-top: 26px
-      height: 470px
+      height: 420px
     +screen($tablet)
       margin-top: 20px
-      height: 375px
+      height: 460px
 
   &__top
     max-width: 1920px
@@ -33,13 +33,23 @@
       padding: 0 50px
     +screen($tablet)
       padding: 0 16px
+      flex-direction: column
+      gap: 20px
 
   &__link
     box-sizing: border-box
     padding: 14px 24px
     border: 2px solid #EB5C2C
     +font(16px, 18px, 500)
+
     align-items: center
     gap: 10px
     color: #EB5C2C
     display: flex
+    +screen($tablet)
+      justify-content: center
+
+    .arrow
+      +screen($tablet)
+        margin-bottom: -4px
+
