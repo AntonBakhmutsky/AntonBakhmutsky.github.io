@@ -6,6 +6,25 @@ window.addEventListener('load', () => {
 
     // form inputs
     const contactForm = document.querySelector('.contact-form')
+    const inputs = contactForm.querySelectorAll('.contact-form__input input')
+
+    function toggleInput(e) {
+      const field = this.parentElement
+      const label = this.nextElementSibling
+
+      if (e.type === 'focus') {
+        label.classList.add('active')
+        field.classList.add('active')
+      } else {
+        if (!this.value.trim()) {
+          label.classList.remove('active')
+          field.classList.remove('active')
+        }
+      }
+    }
+
+    inputs.forEach(el => el.addEventListener('focus', toggleInput))
+    inputs.forEach(el => el.addEventListener('blur', toggleInput))
 
     // toggle form
     const contactFormBtn = document.querySelector('.contact-form-btn')

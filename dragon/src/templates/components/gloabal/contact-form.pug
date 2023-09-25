@@ -1,8 +1,8 @@
-form.contact-form(id="contactForm"  method="POST" enctype="multipart/form-data" accept-charset="UTF-8")
+form.contact-form(id="contactForm" method="POST" enctype="multipart/form-data" accept-charset="UTF-8")
   .contact-form__head
     h2.contact-form__title Ответим на ваши вопросы
     button.contact-form__close
-      img(src=require('@/assets/img/global/close.svg') alt="")
+      | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/global/close.svg')}
   .contact-form__links
     a(href="https://t.me/+79313044482" target="_blank" rel="noopener noreferrer")
       img(src=require('@/assets/img/global/tg.svg') alt="")
@@ -12,10 +12,12 @@ form.contact-form(id="contactForm"  method="POST" enctype="multipart/form-data" 
       span в Whatsapp
   .contact-form__fields
     .contact-form__input.error
-      input(type="text" name="name" required placeholder="Ваше Имя")
+      input(type="text" name="name" id="name" required)
+      label(for="name") Имя#[span *]
       .contact-form__error Поле не может быть пустым
     .contact-form__input
-      input(type="tel" name="tel" required placeholder="Ваш телефон" class="_req _phone")
+      input(type="tel" name="tel" id="tel" required class="_req _phone")
+      label(for="tel") Телефон#[span *]
       .contact-form__error Поле не может быть пустым
     .contact-form__textarea
       textarea(name="comment" placeholder="Комментарий")
