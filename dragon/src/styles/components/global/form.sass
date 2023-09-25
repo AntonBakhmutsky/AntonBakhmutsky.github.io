@@ -198,7 +198,7 @@
   &__textarea
     height: 178px
     box-sizing: border-box
-    padding: 17px 14px
+    padding: 14px 14px
     border: 1px solid #BBBBBB
     +font(18px, 21px, 500)
     color: $white
@@ -210,9 +210,9 @@
 
     &::placeholder
       color: #BBBBBB
-      +font(18px, 26px)
+      +font(18px, 26px, 200)
       +screen($desktop)
-        +font(16px, 26px)
+        +font(16px, 26px, 200)
 
   &__radios
     display: flex
@@ -237,23 +237,27 @@
         display: flex
         align-items: center
         border: 1px solid #E3E3E3
+        transition: color .3s
+        cursor: pointer
         +screen($desktop)
           +font(16px, 17px)
           padding: 6px 15px 8px
         +screen($tablet)
           padding: 10px 18px 11px
 
+        &:hover
+          color: #EB5C2C
 
       input:checked + label
         background: $orange
-        color: $white
+        color: $white !important
 
     &-title
-      +font(18px, 26px)
+      +font(18px, 26px, 500)
       display: flex
       align-items: center
       +screen($desktop)
-        +font(16px, 26px)
+        +font(16px, 26px, 500)
 
       span
         color: $red

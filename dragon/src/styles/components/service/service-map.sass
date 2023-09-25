@@ -41,6 +41,29 @@
     padding: 14px 24px
     border: 2px solid #EB5C2C
     +font(16px, 18px, 500)
+    transition: color .3s
+    position: relative
+
+    &:before
+      content: ''
+      height: 100%
+      width: 0
+      transition: width .3s
+      background-color: #EB5C2C
+      position: absolute
+      top: 0
+      left: 0
+      z-index: -1
+
+    &:hover:not(:active)
+      color: $white
+
+      &:before
+        width: 100%
+
+      svg
+        path
+          stroke: $white
 
     align-items: center
     gap: 10px
@@ -50,6 +73,7 @@
       justify-content: center
 
     .arrow
+      margin-top: 4px
       +screen($tablet)
+        margin-top: 0
         margin-bottom: -4px
-
