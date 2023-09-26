@@ -2,16 +2,15 @@
 @use '../../abstracts/mixins' as *
 
 .main-news
-  padding: 40px 0 80px
+  padding: 0 0 80px
   +screen($tablet)
-    padding: 40px 0
+    padding: 0 0 40px
 
   &__tile
     display: grid
     padding: 45px 0 80px
     grid-template-columns: repeat(auto-fill, 400px)
     grid-template-rows: repeat(auto-fill, 320px)
-    justify-content: center
     grid-gap: 30px
     +screen($desktop)
       grid-template-columns: repeat(auto-fill, 315px)
@@ -25,3 +24,4 @@
 
   &__link
     margin: 0 auto
+

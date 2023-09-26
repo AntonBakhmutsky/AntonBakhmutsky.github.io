@@ -10,15 +10,16 @@
   align-items: flex-start
   transition: filter .3s, margin-top .3s
 
-  &:hover
-    .news-card
-      &__title
-        color: $orange
+  +mb-screen(1025)
+    &:hover
+      .news-card
+        &__title
+          color: $orange
 
-      &__image
-        &:after
-          visibility: visible
-          opacity: 1
+        &__image
+          &:after
+            visibility: visible
+            opacity: 1
 
   &__image
     height: 220px

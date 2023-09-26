@@ -4,9 +4,11 @@
 .form
   &__field
     position: relative
-    margin-bottom: 34px
+    margin-bottom: 20px
     +screen($desktop)
-      margin-bottom: 26px
+      margin-bottom: 16px
+    +screen($tablet)
+      margin-bottom: 20px
 
     &:after
       content: ''
@@ -51,13 +53,13 @@
     &-input
       padding: 26px 14px 12px
       box-sizing: border-box
-      height: 63px
+      height: 60px
       width: 100%
       border: 1px solid #E3E3E3
       +font(18px, 21px, 500)
       +screen($desktop)
         padding: 22px 14px 12px
-        height: 54px
+        height: 48px
 
       &:required + .form__field-placeholder
         &:after
@@ -79,13 +81,13 @@
     padding-left: 42px
     margin-top: 40px
     position: relative
-    +font(18px, 20px)
+    +font(18px, 20px, 200)
     cursor: pointer
     +screen($desktop)
       margin-top: 30px
     +screen($tablet)
       padding-left: 36px
-      +font(14px, 20px)
+      +font(14px, 20px, 200)
 
     a
       display: inline

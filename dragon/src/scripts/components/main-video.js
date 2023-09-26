@@ -6,16 +6,11 @@ window.addEventListener('load', () => {
     const videoContainer = document.querySelector('.main-desc__video')
 
     const toggleVideo = () => {
-      if (!videoContainer.classList.contains('active')) {
-        console.log(true)
-        videoContainer.classList.add('active')
-        video.play()
-      } else {
-        videoContainer.classList.remove('active')
-        video.pause()
-      }
+      videoContainer.classList.add('active')
+      video.play()
     }
 
-    videoContainer.addEventListener('click', toggleVideo)
+    video.addEventListener('click', toggleVideo)
+    video.addEventListener('touchend', toggleVideo)
   }
 })

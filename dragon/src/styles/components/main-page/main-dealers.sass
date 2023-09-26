@@ -2,21 +2,17 @@
 @use '../../abstracts/mixins' as *
 
 .main-dealers
-  padding: 60px 0 40px
+  padding: 60px 0 0
   +screen($tablet)
-    padding: 60px 0 30px
+    padding: 60px 0 50px
 
   &__container
     position: relative
-    min-height: 839px
     display: flex
     justify-content: flex-end
     align-items: flex-start
     flex-direction: column
-    +screen($desktop)
-      min-height: 668px
     +screen($tablet)
-      min-height: auto
       margin-top: 32px
 
   &__image
@@ -48,18 +44,19 @@
     align-self: flex-end
     width: 553px
     box-sizing: border-box
-    padding: 20px 36px 36px
-    margin-top: -160px
+    padding: 32px 36px 36px
+    transform: translateY(-112px)
     position: relative
     z-index: 1
     +screen($desktop)
+      transform: translateY(-104px)
+      padding: 24px 36px
       width: 427px
-      padding: 24px
-      margin-top: -120px
     +screen($tablet)
+      transform: translateY(0)
       box-shadow: 0 4px 21px rgba(0, 0, 0, .16)
       order: 1
-      margin-top: 60px
+      margin-top: 40px
       width: 100%
       padding: 26px 18px 40px
 
@@ -110,24 +107,27 @@
 
     &-txt
       +font(18px, 22px, 500)
-      margin: 14px 0 40px
+      margin: 12px 0 24px
       text-align: center
       display: flex
       flex-direction: column
       +screen($desktop)
-        margin: 17px 0 24px
+        margin: 12px 0 20px
         +font(16px, 19px, 500)
       +screen($tablet)
         text-align: center
-        margin: 19px 0 35px
-        +font(16px, 26px, 500)
-        display: block
+        margin: 16px 0 20px
+        +font(14px, 20px, 500)
 
     .form
       &__checkbox
-        +font(16px, 20px)
+        +font(16px, 20px, 200)
+        margin-top: 28px
         +screen($desktop)
-          +font(14px, 16px)
+          margin-top: 20px
+          +font(14px, 16px, 200)
+        +screen($tablet)
+          margin-top: 24px
 
         label
           &:before
@@ -135,20 +135,25 @@
 
       &__submit
         border-width: 2px
-        width: 220px
-        height: 53px
+        width: 240px
+        height: 60px
         +font(18px, 18px, 500)
+        margin-top: 40px
         +screen($desktop)
+          margin-top: 32px
           +font(16px, 16px, 500)
-          width: 166px
-          height: 47px
+          width: 176px
+          height: 48px
         +screen($tablet)
           +font(20px, 23px, 500)
-          width: 262px
-          height: 60px
+          width: 250px
+          height: 52px
 
   &__link
-    margin: 80px auto 0
+    margin: 0 auto
+    transform: translateY(-60px)
+    +screen($desktop)
+      transform: translateY(-90px)
     +screen($tablet)
-      margin-top: 33px
-
+      transform: none
+      margin-top: 40px

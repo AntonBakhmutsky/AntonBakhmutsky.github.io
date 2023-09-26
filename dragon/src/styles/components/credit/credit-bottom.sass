@@ -60,11 +60,11 @@
         object-position: left
 
   &__title
-    +font(30px, 41px, 700)
+    +font(26px, 41px, 700)
     +screen($desktop)
       +font(22px, 32px, 700)
     +screen($tablet)
-      +font(20px, 28px, 700)
+      +font(18px, 28px, 700)
 
   &__contact
     display: flex
@@ -98,3 +98,6 @@
 
   &__desc
     z-index: 2
+    +screen($tablet)
+      padding: 0 16px
+      box-sizing: border-box

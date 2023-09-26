@@ -4,7 +4,7 @@ section.main-dealers
     .main-dealers__container
       .main-dealers__image.slide-left
         img(src=require('@/assets/img/main-page/dealers-map.svg') alt="")
-      form.main-dealers__form.form.slide-up
+      form.main-dealers__form.form.opacity-animation
         .main-dealers__form-container
           h3.main-dealers__form-title Хотите стать #[span дилером]?
           p.main-dealers__form-txt #[span Оставьте свои контактные данные,] #[span и мы свяжемся с вами в ближайшее время]
@@ -30,5 +30,5 @@ section.main-dealers
             label(for="mainDealersFormPolicy") Я согласен с #[a(href="javascript:") Политикой конфидициальности]
           button.btn.btn_trans.btn_trans_orange.form__submit(type="submit")
             span Отправить
-      a.btn.btn_orange.btn_orange_xs.main-dealers__link.slide-down(href="service.html")
+      a.btn.btn_orange.btn_orange_xs.main-dealers__link.opacity-animation(href="service.html")
         span Сервисная сеть

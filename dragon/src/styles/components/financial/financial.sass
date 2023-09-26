@@ -25,6 +25,25 @@
       margin-top: 32px
 
   &__item
+    +mb-screen(1025)
+      &:hover
+        color: $orange
+
+        .financial__item-image
+          transform: scale(1.03)
+          filter: drop-shadow(0px 8px 23px rgba(0, 0, 0, 0.25))
+
+        .more-btn
+          span
+            &:last-child
+              &:before
+                width: 28px
+                background-color: $orange
+
+            svg
+              path
+                stroke: $orange
+
     .more-btn
       +font(26px, 40px, 700)
       margin-top: 22px
@@ -38,23 +57,6 @@
         path
           stroke: $black
 
-    &:hover
-      color: $orange
-
-      .financial__item-image
-        transform: scale(1.03)
-        filter: drop-shadow(0px 8px 23px rgba(0, 0, 0, 0.25))
-
-      .more-btn
-        span
-          &:last-child
-            &:before
-              width: 28px
-              background-color: $orange
-
-          svg
-            path
-              stroke: $orange
 
     &-image
       display: flex
