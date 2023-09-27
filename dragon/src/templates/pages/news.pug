@@ -24,8 +24,10 @@ block content
           each el in newsList
             +news-card(el)
         .news__content-item.switch-content(data-id='1')
-          each el in promoList
-            +promo-card(el)
+          p.news__content-item-empty #[span В настоящий момент акции] #[span не проводятся]
+          // each el in promoList
+          //   +promo-card(el)
+
 
 
 

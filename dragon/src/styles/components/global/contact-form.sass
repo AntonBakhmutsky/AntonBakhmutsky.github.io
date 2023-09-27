@@ -197,6 +197,7 @@
       +font(18px, 18px)
       height: 60px !important
       +screen($desktop)
+        height: 48px !important
         +font(16px, 16px)
 
     label
@@ -206,10 +207,16 @@
       left: 16px
       top: 17px
       transition: top .3s, font-size .3s
+      +screen($desktop)
+        top: 11px
+        +font(16px, 26px, 200)
 
       &.active
         +font(14px, 18px, 200)
         top: 9px
+        +screen($desktop)
+          +font(12px, 14px, 200)
+          top: 7px
 
       span
         color: #EB2C2C
@@ -273,8 +280,10 @@
         +font(16px, 18px)
 
       &::placeholder
-        color: #BFBFBF
-        font-weight: 200
+        +font(18px, 21px, 200)
+        color: #868686
+        +screen($desktop)
+          +font(16px, 18px, 200)
 
   &__file
     position: relative

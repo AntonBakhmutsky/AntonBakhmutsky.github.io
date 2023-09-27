@@ -61,6 +61,10 @@
           padding: 0 16px
           box-sizing: border-box
 
+      &__title
+        +screen($tablet-xs)
+          max-width: 330px
+
   &__bottom
     margin-top: 50px
     box-sizing: border-box
@@ -89,6 +93,8 @@
     color: $white
     box-sizing: border-box
     padding: 52px 36px
+    +screen($tablet)
+      padding: 20px 16px
 
     &-title
       +font(22px, 28px, 700)
@@ -112,14 +118,25 @@
       height: 64px
       width: 250px
       +font(20px, 22px, 500)
+      +screen($desktop)
+        +font(18px, 22px, 500)
+        width: 260px
+        height: 60px
+      +screen($tablet)
+        width: 100%
 
-      &:hover:not(:active)
-        color: #EB5C2C
+        &:hover:not(:active)
+          background-color: transparent !important
+          &:after
+            display: none !important
+      +mb-screen(1025)
+        &:hover:not(:active)
+          color: #EB5C2C
 
-        svg
-          path
-            fill: none
-            stroke: #EB5C2C
+          svg
+            path
+              fill: none
+              stroke: #EB5C2C
 
       svg
         width: 24px

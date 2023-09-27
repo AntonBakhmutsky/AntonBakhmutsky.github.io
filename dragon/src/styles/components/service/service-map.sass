@@ -43,6 +43,16 @@
     +font(16px, 18px, 500)
     transition: color .3s
     position: relative
+    +mb-screen(1025)
+      &:hover:not(:active)
+        color: $white
+
+        &:before
+          width: 100%
+
+        svg
+          path
+            stroke: $white
 
     &:before
       content: ''
@@ -55,15 +65,6 @@
       left: 0
       z-index: -1
 
-    &:hover:not(:active)
-      color: $white
-
-      &:before
-        width: 100%
-
-      svg
-        path
-          stroke: $white
 
     align-items: center
     gap: 10px
