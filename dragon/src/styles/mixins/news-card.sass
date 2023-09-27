@@ -59,6 +59,8 @@
     color: #A8A8A8
     +screen($desktop)
       +font(14px, 26px, 200)
+    +screen($tablet)
+      margin-top: 8px
 
   &__title
     +font(20px, 23px, 700)
@@ -70,3 +72,9 @@
       height: 46px
       margin-top: 8px
       +font(18px, 22px, 700)
+    +screen($tablet)
+      height: auto
+      display: block
+      -webkit-line-clamp: none
+      -webkit-box-orient: horizontal
+      overflow: visible

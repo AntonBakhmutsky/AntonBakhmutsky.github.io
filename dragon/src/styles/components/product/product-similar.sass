@@ -38,9 +38,16 @@
           padding-top: 4px
 
       .fuel
+        padding-left: 36px
+        +screen($desktop)
+          padding-left: 32px
+
         span
-          width: 24px
-          height: 24px
+          width: 28px
+          height: 28px
+          +screen($desktop)
+            width: 24px
+            height: 24px
 
       &__top
         height: 338px
