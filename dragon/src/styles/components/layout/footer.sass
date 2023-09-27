@@ -107,8 +107,7 @@
   &__contacts
     display: flex
     flex-direction: column
-    justify-content: space-between
-    gap: 24px
+    gap: 20px
     +screen($tablet)
       gap: 32px
 
@@ -138,7 +137,9 @@
         span
           a
             &:last-child
-              margin-top: 17px
+              margin-top: 4px
+              +screen($tablet)
+                margin-top: 12px
 
       &:nth-child(3)
         align-items: center
@@ -168,7 +169,7 @@
   &__policy
     display: flex
     gap: 20px
-    +font(14px, 28px)
+    +font(14px, 28px, 200)
     +screen($tablet-xs)
       gap: 14px
       flex-direction: column
@@ -202,3 +203,18 @@
     +screen($tablet-xs)
       gap: 14px
       flex-direction: column
+
+  &__socials
+    display: flex
+    align-items: center
+    justify-content: center
+    gap: 16px
+    +screen($tablet)
+      order: -1
+
+    svg
+      width: 32px
+      height: 32px
+      +screen($tablet)
+        width: 40px
+        height: 40px
