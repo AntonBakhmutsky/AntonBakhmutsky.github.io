@@ -11,7 +11,7 @@
       z-index: 1
       +screen($desktop)
         margin-top: 20px
-        height: 646px
+        height: 740px
       +screen($tablet-xs)
         margin-top: 16px
         height: 600px
@@ -65,6 +65,10 @@
         padding: 0 60px
       +screen($tablet)
         padding: 0
+
+      &__desc
+        +screen($tablet)
+          height: 210px
 
       &__nums
         +font(48px, 56px, 700)
@@ -158,12 +162,14 @@
         display: flex
         align-items: flex-end
         padding-bottom: 67px
-        max-width: 1400px
+        max-width: 1380px
+        max-height: 486px
         +screen($desktop)
+          max-width: 1090px
           padding-bottom: 50px
           box-sizing: border-box
         +screen($tablet)
-          padding-bottom: 0
+          padding-bottom: 30px
           align-items: center
 
         img
@@ -172,7 +178,8 @@
           object-fit: contain
           object-position: bottom
           +screen($tablet)
-            object-position: center
+            object-position: top
+            object-fit: cover
             width: auto
             height: auto
 
