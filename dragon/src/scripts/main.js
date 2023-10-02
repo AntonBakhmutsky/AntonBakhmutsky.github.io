@@ -14,4 +14,5 @@ require('./components/media-modal')
 require('./components/contacts')
 require('./components/service-map')
 require('./components/main-video')
+require('./components/search')
 

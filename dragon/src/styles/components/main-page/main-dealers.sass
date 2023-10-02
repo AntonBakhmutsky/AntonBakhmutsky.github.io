@@ -5,6 +5,8 @@
   padding: 60px 0
   z-index: 10
   position: relative
+  +screen($desktop)
+    padding: 40px 0
   +screen($tablet)
     padding: 40px 0 50px
 
@@ -140,14 +142,22 @@
         +font(16px, 20px, 200)
         margin-top: 28px
         +screen($desktop)
+          padding-left: 32px
           margin-top: 20px
           +font(14px, 16px, 200)
         +screen($tablet)
           margin-top: 24px
 
         label
+
           &:before
             border-width: 2px !important
+            +screen($desktop)
+              height: 20px !important
+              width: 20px !important
+            +screen($tablet)
+              height: 24px !important
+              width: 24px !important
 
       &__submit
         border-width: 2px

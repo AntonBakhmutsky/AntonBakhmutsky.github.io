@@ -6,16 +6,13 @@ append variables
       {
         url: '/',
         txt: 'Главная'
-      },
-      {
-        url: 'lineup.html',
-        txt: 'Модельный ряд'
       }
     ]
     productPage = true
     orderFormTitle = 'Заявка на приобретение транспортного средства'
     orderFormTxt = 'Оставьте свои контактные данные, и мы свяжемся с вами в ближайшее время'
     orderFormModifier = 'product'
+    mainModifier = 'search'
 
 block title
   | Golden Dragon
@@ -31,30 +28,30 @@ block content
     .search-results
       .container
         span.search-results-text Найдено результатов: 3
-        .search-results-items
-          .search-results-items-block
-            h3.search-results-items-block__title Междугородний автобус Maxim XML6122.J
-            p.search-results-items-block__text Golden Dragon имеет более 150 инженеров, обладающих опытом в полной комплектации транспортных средств, комплектации шасси и электрооборудования. Компания расширяет сотрудничество в областях шасси и других узлов и деталей автобуса с такими международными компаниями, как MAN, ZF, Bosch, Wabco, Voith, Hino и Hyundai. Кроме того, Golden Dragon ...
-            a(href="#").search-results-items-block__link
-              span Перейти на страницу
-              | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/search/link.svg')}
-
-          .search-results-items-block
-            h3.search-results-items-block__title О компании
-            p.search-results-items-block__text Xiamen Golden Dragon Bus Co.,LTD основанная в 1992 году, разрабатывает и производит автобусы среднего и большого класса. Компания владеет 3-я заводами общая площадь которых составляет 960 тыс. м2. и производит более 40 000 единиц техники в год. С 2003 года Xiamen Golden Dragon Bus Co.,LTD начала устанавливать отношения с зарубежными дистрибьюторами. В настоящее...
-            a(href="#").search-results-items-block__link
-              span Перейти на страницу
-              | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/search/link.svg')}
-
-          .search-results-items-block
-            h3.search-results-items-block__title О компании
-            p.search-results-items-block__text Golden Dragon имеет более 150 инженеров, обладающих опытом в полной комплектации транспортных средств, комплектации шасси и электрооборудования. Компания расширяет сотрудничество в областях шасси и других узлов и деталей автобуса с такими международными компаниями, как MAN, ZF, Bosch, Wabco, Voith, Hino и Hyundai. Кроме того, Golden Dragon ...
-            a(href="#").search-results-items-block__link
-              span Перейти на страницу
-              | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/search/link.svg')}
-
-
-
+        //.search-results-items
+        //  .search-results-items-block
+        //    h3.search-results-items-block__title Междугородний автобус Maxim XML6122.J
+        //    p.search-results-items-block__text Golden Dragon имеет более 150 инженеров, обладающих опытом в полной комплектации транспортных средств, комплектации шасси и электрооборудования. Компания расширяет сотрудничество в областях шасси и других узлов и деталей автобуса с такими международными компаниями, как MAN, ZF, Bosch, Wabco, Voith, Hino и Hyundai. Кроме того, Golden Dragon ...
+        //    a(href="#").search-results-items-block__link
+        //      span Перейти на страницу
+        //      | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/search/link.svg')}
+        //
+        //  .search-results-items-block
+        //    h3.search-results-items-block__title О компании
+        //    p.search-results-items-block__text Xiamen Golden Dragon Bus Co.,LTD основанная в 1992 году, разрабатывает и производит автобусы среднего и большого класса. Компания владеет 3-я заводами общая площадь которых составляет 960 тыс. м2. и производит более 40 000 единиц техники в год. С 2003 года Xiamen Golden Dragon Bus Co.,LTD начала устанавливать отношения с зарубежными дистрибьюторами. В настоящее...
+        //    a(href="#").search-results-items-block__link
+        //      span Перейти на страницу
+        //      | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/search/link.svg')}
+        //
+        //  .search-results-items-block
+        //    h3.search-results-items-block__title О компании
+        //    p.search-results-items-block__text Golden Dragon имеет более 150 инженеров, обладающих опытом в полной комплектации транспортных средств, комплектации шасси и электрооборудования. Компания расширяет сотрудничество в областях шасси и других узлов и деталей автобуса с такими международными компаниями, как MAN, ZF, Bosch, Wabco, Voith, Hino и Hyundai. Кроме того, Golden Dragon ...
+        //    a(href="#").search-results-items-block__link
+        //      span Перейти на страницу
+        //      | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/search/link.svg')}
+        //
+        //
+        //
 
 
 

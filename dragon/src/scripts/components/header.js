@@ -45,9 +45,10 @@ window.addEventListener('load', () => {
     }
   })
 
-  // header search
+  // header search desktop
   const search = document.querySelector('.header__search-field')
   const searchBtn = document.querySelector('.header__search-btn')
+  const mobileSearchBtn = document.querySelector('.header__search-mobile-btn')
 
   const toggleSearch = (e) => {
     if (!search.classList.contains('active')) {
