@@ -26,7 +26,7 @@
       margin-bottom: 20px
 
   &__txt
-    +font(18px, 32px, 200)
+    +font(18px, 28px, 200)
     +screen($desktop)
       +font(16px, 26px, 200)
 
@@ -82,7 +82,8 @@
       &:nth-child(2)
         margin-top: 50px
         +screen($desktop)
-          margin-top: 40px
+          align-self: start
+          margin-top: 45px
         +screen($tablet)
           margin-top: 0
 
@@ -93,6 +94,8 @@
     color: $white
     box-sizing: border-box
     padding: 52px 36px
+    +screen($desktop)
+      padding: 26px 32px
     +screen($tablet)
       padding: 20px 16px
 
@@ -107,6 +110,8 @@
       margin-top: 12px
       max-width: 562px
       +font(18px, 32px, 200)
+      display: flex
+      flex-direction: column
       +screen($desktop)
         margin-top: 4px
         +font(16px, 26px, 200)

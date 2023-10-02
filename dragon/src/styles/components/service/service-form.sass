@@ -15,18 +15,20 @@
     padding: 30px 16px 60px
 
   &__panel
-    max-width: 1342px
+    max-width: 1278px
     margin: 0 auto
     box-sizing: border-box
-    padding: 40px 65px
+    padding: 40px
     background: rgba(255, 255, 255, .3)
     mix-blend-mode: normal
     box-shadow: 0 10px 32px rgba(0, 0, 0, .16)
     backdrop-filter: blur(3px)
     +screen($desktop)
-      padding: 30px 42px 36px
+      max-width: 978px
+      padding: 32px
     +screen($tablet)
-      padding: 20px 18px 30px
+      max-width: none
+      padding: 20px 16px
 
   &__title
     +font(32px, 33px, 700)
@@ -85,6 +87,8 @@
           display: flex
           flex-direction: column
           justify-content: space-between
+          +screen($desktop)
+            width: 288px
           +screen($tablet)
             width: 100%
 
@@ -97,8 +101,9 @@
 
     &__checkbox
       +font(14px, 20px, 200)
-      margin-top: 5px
+      margin-top: 1px
       padding-left: 28px
+      align-self: start
       +screen($desktop)
         +font(12px, 14px, 200)
         padding-left: 24px
