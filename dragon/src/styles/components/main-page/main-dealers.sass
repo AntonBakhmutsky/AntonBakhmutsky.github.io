@@ -2,16 +2,27 @@
 @use '../../abstracts/mixins' as *
 
 .main-dealers
-  padding: 60px 0 0
+  padding: 60px 0
   z-index: 10
   position: relative
   +screen($tablet)
-    padding: 60px 0 50px
+    padding: 40px 0 50px
 
   .container
     display: flex
     justify-content: space-between
     align-items: flex-start
+    flex-wrap: wrap
+    +screen($tablet)
+      flex-direction: column
+
+  &__btn
+    width: 100%
+    margin-top: 40px
+    +screen($desktop)
+      margin-top: 32px
+    +screen($tablet)
+      margin-top: 40px
 
   &__container
     position: relative
@@ -23,29 +34,30 @@
       margin-top: 32px
 
   &__image
-    //position: absolute
-    //left: -40px
-    //top: 0
-    //max-width: 1051px
-    //width: 100%
-    //+screen($desktop)
-    //  width: 835px
-    //  height: 543px
-    //top: -50px
-    //+screen($tablet)
-    //  width: auto
-    //  height: auto
-    //  position: relative
-    //  left: auto
-    //  top: auto
+    position: absolute
+    left: 100px
+    top: 120px
+    max-width: 1051px
+    width: 100%
+    +screen($desktop)
+      width: 782px
+      height: 434px
+      left: 60px
+      top: 98px
+    +screen($tablet)
+      width: auto
+      height: auto
+      position: relative
+      left: auto
+      top: auto
 
-    //img
-    //  width: 100%
-    //  height: 100%
-    //  object-position: center
-    //  object-fit: cover
-    //  +screen($desktop)
-    //    object-fit: contain
+    img
+      width: 100%
+      height: 100%
+      object-position: center
+      object-fit: cover
+      +screen($desktop)
+        object-fit: contain
 
   &__form
     align-self: flex-end
@@ -55,11 +67,9 @@
     position: relative
     z-index: 1
     +screen($desktop)
-      transform: translateY(-104px)
       padding: 24px 36px
       width: 427px
     +screen($tablet)
-      transform: translateY(0)
       box-shadow: 0 4px 21px rgba(0, 0, 0, .16)
       order: 1
       margin-top: 40px
@@ -157,9 +167,3 @@
 
   &__link
     margin: 0 auto
-    transform: translateY(-60px)
-    +screen($desktop)
-      transform: translateY(-90px)
-    +screen($tablet)
-      transform: none
-      margin-top: 40px
