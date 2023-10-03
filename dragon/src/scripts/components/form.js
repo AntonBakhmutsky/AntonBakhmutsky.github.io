@@ -1,7 +1,5 @@
 window.addEventListener('load', () => {
-  if (!document.querySelector('.form')) {
-    return null
-  } else {
+  if (document.querySelector('.form')) {
     // placeholder
     const inputs = document.querySelectorAll('.form__field-input')
 
@@ -18,6 +16,7 @@ window.addEventListener('load', () => {
 
     inputs.forEach(el => el.addEventListener('focus', risePlaceholder))
     inputs.forEach(el => el.addEventListener('blur', lowerPlaceholder))
+
   }
 
   if (!document.querySelector('.form__select')) {
