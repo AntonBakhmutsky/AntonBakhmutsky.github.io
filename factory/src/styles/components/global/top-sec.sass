@@ -9,6 +9,10 @@
   +screen($tablet)
     height: 460px
 
+  &__content
+    z-index: 1
+    position: relative
+
   &__video
     position: absolute
     width: 100%
@@ -19,6 +23,7 @@
     border-radius: 0
     object-position: center
     object-fit: cover
+    z-index: 0
 
   &__container
     max-width: 1320px
