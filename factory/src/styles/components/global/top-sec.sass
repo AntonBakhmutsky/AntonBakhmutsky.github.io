@@ -9,6 +9,17 @@
   +screen($tablet)
     height: 460px
 
+  &__video
+    position: absolute
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    right: 0
+    border-radius: 0
+    object-position: center
+    object-fit: cover
+
   &__container
     max-width: 1320px
     margin: 0 auto
@@ -63,23 +74,30 @@
       background: linear-gradient(90deg, #17263D 0%, rgba(23, 38, 61, 0) 100%)
       opacity: 0.96
       pointer-events: none
+      z-index: 1
       +screen($tablet-xs)
         background: linear-gradient(0, #17263D 10.33%, rgba(23, 38, 61, 0) 140%)
 
   &__title
     max-width: 800px
     +font(60px, 66px, 700, $font-title)
+    z-index: 2
+    position: relative
     +screen($tablet)
       +font(32px, 36px, 700, $font-title)
 
   &__txt
     +font(24px, 39px)
     margin-top: 14px
+    position: relative
+    z-index: 2
     +screen($tablet)
       +font(14px, 19px)
       margin-top: 18px
 
   &__btn
     margin-top: 57px
+    z-index: 2
+    position: relative
     +screen($tablet)
       margin-top: 26px
