@@ -106,10 +106,10 @@ textarea
   align-items: center
   justify-content: center
   position: relative
-
-  &:hover
-    &:after
-      width: 100%
+  +mb-screen(1025)
+    &:hover
+      &:after
+        width: 100%
 
   &_trans
     width: 196px
@@ -126,19 +126,20 @@ textarea
       +font(14px, 15px, 500)
       width: 171px
       height: 39px
+    +mb-screen(1025)
+      &:hover
+        color: $black
+
+        svg
+          path
+            fill: $black
+
+        &:after
+          color: $white
+
 
     svg
       z-index: 1
-
-    &:hover
-      color: $black
-
-      svg
-        path
-          fill: $black
-
-      &:after
-        color: $white
 
     &:after
       content: ''
@@ -200,17 +201,17 @@ textarea
         height: 60px
 
     &_xs
-      width: 276px
-      height: 66px
-      +font(22px, 22px, 500)
+      width: 260px
+      height: 64px
+      +font(20px, 20px, 500)
       +screen($desktop)
-        +font(20px, 20px, 500)
-        width: 244px
+        +font(18px, 18px, 500)
+        width: 240px
         height: 60px
       +screen($tablet)
-        width: 262px
-        height: 60px
-
+        +font(16px, 16px, 500)
+        width: 250px
+        height: 52px
 
     &:after
       content: ''
@@ -397,7 +398,7 @@ section
   color: $green
   +screen($tablet)
     +font(16px, 16px, 500)
-    padding: 5px 12px
+    padding: 6px 12px
 
   &:after
     display: block
@@ -455,10 +456,7 @@ section
     +font(18px, 20px, 500)
     color: $black !important
     +screen($desktop)
-      padding: 6px 20px
-      +font(18px, 18px, 500)
-    +screen($tablet)
-      padding: 6px 18px
+      padding: 9px 20px
       +font(16px, 16px, 500)
 
     &:hover:not(.active)

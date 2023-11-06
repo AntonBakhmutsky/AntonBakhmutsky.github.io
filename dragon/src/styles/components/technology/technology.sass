@@ -66,11 +66,12 @@
 
           &:first-child
             margin-bottom: 24px
-            +font(28px, 36px, 700)
+            +font(26px, 36px, 700)
             +screen($desktop)
               margin-bottom: 14px
-              +font(20px, 28px, 700)
+              +font(22px, 28px, 700)
             +screen($tablet)
+              +font(20px, 26px, 700)
               margin-bottom: 23px
 
           &:last-child
@@ -116,6 +117,15 @@
         +font(22px, 28px, 700)
         padding-left: 41px
 
+      &_first
+        +screen($tablet)
+          width: fit-content
+          margin-left: auto
+
+          span
+            left: -44px !important
+            transform: translateY(-15px) !important
+
       span
         display: inline-block
         +font(34px, 40px, 700)
@@ -146,6 +156,8 @@
   &__middle
     padding: 50px 0 0
     +screen($desktop)
+      padding: 40px 0 0
+    +screen($tablet)
       padding: 0
 
     .container

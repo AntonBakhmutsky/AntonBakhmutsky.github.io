@@ -1,5 +1,8 @@
 section.top
   .container.container_xl
+    if (topSecVideo)
+      video(class="top__video" autoplay muted loop playsinline)
+        source(src=require('@/assets/video/fac.mp4'))
     .top__container
       if (topSecBreadcrumbs)
         +breadcrumbs(breadCrumbsList)

@@ -26,7 +26,7 @@
       margin-bottom: 20px
 
   &__txt
-    +font(18px, 32px, 200)
+    +font(18px, 28px, 200)
     +screen($desktop)
       +font(16px, 26px, 200)
 
@@ -61,6 +61,10 @@
           padding: 0 16px
           box-sizing: border-box
 
+      &__title
+        +screen($tablet-xs)
+          max-width: 330px
+
   &__bottom
     margin-top: 50px
     box-sizing: border-box
@@ -78,7 +82,8 @@
       &:nth-child(2)
         margin-top: 50px
         +screen($desktop)
-          margin-top: 40px
+          align-self: start
+          margin-top: 45px
         +screen($tablet)
           margin-top: 0
 
@@ -89,6 +94,10 @@
     color: $white
     box-sizing: border-box
     padding: 52px 36px
+    +screen($desktop)
+      padding: 26px 32px
+    +screen($tablet)
+      padding: 20px 16px
 
     &-title
       +font(22px, 28px, 700)
@@ -101,6 +110,8 @@
       margin-top: 12px
       max-width: 562px
       +font(18px, 32px, 200)
+      display: flex
+      flex-direction: column
       +screen($desktop)
         margin-top: 4px
         +font(16px, 26px, 200)
@@ -112,12 +123,25 @@
       height: 64px
       width: 250px
       +font(20px, 22px, 500)
+      +screen($desktop)
+        +font(18px, 22px, 500)
+        width: 260px
+        height: 60px
+      +screen($tablet)
+        width: 100%
 
-      &:hover:not(:active)
-        svg
-          path
-            fill: none
-            stroke: $black
+        &:hover:not(:active)
+          background-color: transparent !important
+          &:after
+            display: none !important
+      +mb-screen(1025)
+        &:hover:not(:active)
+          color: #EB5C2C
+
+          svg
+            path
+              fill: none
+              stroke: #EB5C2C
 
       svg
         width: 24px

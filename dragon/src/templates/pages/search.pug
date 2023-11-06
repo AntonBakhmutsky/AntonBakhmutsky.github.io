@@ -6,16 +6,13 @@ append variables
       {
         url: '/',
         txt: 'Главная'
-      },
-      {
-        url: 'lineup.html',
-        txt: 'Модельный ряд'
       }
     ]
     productPage = true
     orderFormTitle = 'Заявка на приобретение транспортного средства'
     orderFormTxt = 'Оставьте свои контактные данные, и мы свяжемся с вами в ближайшее время'
     orderFormModifier = 'product'
+    mainModifier = 'search'
 
 block title
   | Golden Dragon
@@ -28,7 +25,6 @@ block content
         button(type="submit")
           img(src=require('@/assets/img/search/search.svg') alt="" loading="lazy")
       button(type="submit").search-form-btn Найти
-
     .search-results
       .container
         span.search-results-text Найдено результатов: 3

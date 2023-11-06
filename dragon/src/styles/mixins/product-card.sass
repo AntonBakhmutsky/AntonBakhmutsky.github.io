@@ -17,6 +17,25 @@
       background-size: 209px 67px
       height: 206px
 
+    .fuel
+      box-sizing: border-box
+      height: 30px
+      display: flex
+      align-items: center
+      padding-top: 4px
+      +screen($desktop)
+        height: 24px
+        padding-top: 2px
+        padding-left: 30px
+      +screen($tablet)
+        height: 24px
+        +font(12px, 12px, 500)
+
+      span
+        +screen($desktop)
+          height: 24px
+          width: 24px
+
   &__image
     position: absolute
     top: 0
@@ -43,7 +62,7 @@
       gap: 7px
       padding: 12px 15px
     +screen($tablet)
-      +font(10px, 11px, 500)
+      +font(12px, 12px, 500)
       gap: 6px
       padding: 10px 16px
 
@@ -51,23 +70,23 @@
       background-color: $white
       border-radius: 26px
       text-transform: lowercase
-      padding: 4px 10px
+      padding: 6px 10px 4px
+      box-sizing: border-box
       +screen($desktop)
-        padding: 5px 10px
+        padding: 3px 10px
+        height: 24px
 
   &__title
     z-index: 1
     box-sizing: border-box
-    padding: 23px 20px 11px
+    padding: 16px 20px 12px
     background-color: $white
     transform: translate(-1px, 6px)
-    +font(32px, 27px, 900)
+    +font(22px, 27px, 700)
     +screen($desktop)
-      +font(26px, 27px, 900)
-      padding: 15px 16px 5px
+      +font(20px, 24px, 700)
     +screen($tablet)
-      +font(20px, 27px, 900)
-      padding: 11px 16px 7px
+      padding: 16px 16px 12px
 
   &__bottom
     margin-top: 16px

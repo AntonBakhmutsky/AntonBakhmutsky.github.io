@@ -1,4 +1,3 @@
-import initInputs from '@/scripts/helpers/inputs'
 import initCustomSelects from '@/scripts/helpers/custom-select'
 import PhoneMask from '@zoibana/phonemask'
 
@@ -21,10 +20,6 @@ window.addEventListener('load', () => {
       }
 
       container.addEventListener('click', toggleAccordion)
-    }
-
-    if (document.querySelector('.form__input')) {
-      initInputs(document.querySelectorAll('.form__input'))
     }
 
     if (document.querySelector('input[type="tel"]')) {

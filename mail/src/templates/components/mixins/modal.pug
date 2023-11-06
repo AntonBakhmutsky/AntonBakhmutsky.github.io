@@ -1,0 +1,8 @@
+mixin modal(params)
+  .modal(
+    class=params.modifier
+    data-modal=params.modal
+    id=params.id
+  )
+    .modal__body
+      block content

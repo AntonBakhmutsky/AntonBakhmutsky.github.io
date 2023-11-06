@@ -2,7 +2,13 @@
 @use '../../abstracts/mixins' as *
 
 .search
-  padding-top: 107px
+  padding-top: 50px
+  height: 100%
+  +screen($desktop)
+    padding-top: 40px
+  +screen($tablet)
+    padding-top: 32px
+
   &-form
     display: flex
     flex-direction: column
@@ -10,11 +16,16 @@
     box-sizing: border-box
     +screen($desktop)
       padding-bottom: 40px
+
     &-input
       display: flex
       border-bottom: 2px solid $black
       padding-bottom: 13px
       box-sizing: border-box
+      +screen($tablet)
+        height: 44px
+        padding-bottom: 0
+
       input[type="search"]
         padding: 0
         +font(40px, 40px, 500)
@@ -24,7 +35,7 @@
         +screen($tablet-xs)
           +font(22px, 40px, 500)
         &::placeholder
-          color: $gray-dark
+          color: #BBBBBB
         &::-webkit-search-cancel-button
           display: none
           -webkit-appearance: none
@@ -45,19 +56,18 @@
       display: none
       margin-top: 40px
       background-image: $orange-grad
-      box-shadow: 0px 11px 25px rgba(235, 92, 44, 0.4)
+      box-shadow: 0 11px 25px rgba(235, 92, 44, 0.4)
       height: 64px
       +font(20px, 24px, 500)
       color: $white
       +screen($tablet-xs)
         display: block
 
-
   &-results
     box-sizing: border-box
     background-color: $white-gray
     padding: 29px 0 100px 0
-    min-height: 329px
+    height: 100%
     +screen($desktop)
       padding: 30px 0 80px 0
     +screen($tablet-xs)
@@ -70,19 +80,15 @@
         +font(16px, 19px)
 
     &-items
-      margin-top: 37px
-      +screen($desktop)
-        margin-top: 27px
-      +screen($tablet-xs)
-        margin-top: 40px
+      margin-top: 40px
+      +screen($tablet)
+        margin-top: 28px
 
       &-block
         background-color: $white
         margin-bottom: 20px
-        padding: 40px
+        padding: 24px
         box-sizing: border-box
-        +screen($tablet-xs)
-          padding: 20px
 
         &:last-child
           margin-bottom: 0
@@ -96,14 +102,11 @@
             font-size: 18px
 
         &__text
-          +font(18px, 30px)
+          +font(18px, 24px, 200)
           color: $black
           margin-top: 11px
           +screen($desktop)
-            +font(16px, 26px)
-          +screen($tablet-xs)
-            +font(14px, 24px)
-            margin-top: 10px
+            +font(16px, 24px, 200)
 
         &__link
           display: flex
@@ -111,40 +114,49 @@
           border: 2px solid $orange
           margin-top: 20px
           align-items: center
-          width: 281px
-          height: 57px
-          padding: 18px 23px 18px 28px
-          justify-content: space-between
-          transition: background-color 0.3s
+          gap: 13px
+          height: 60px
+          width: 292px
+          justify-content: center
+          +font(18px, 22px, 500)
+          position: relative
           +screen($desktop)
-            width: 256px
-            height: 55px
-          +screen($tablet-xs)
+            +font(16px, 20px, 500)
+            width: 250px
+            height: 52px
+          +screen($tablet)
             margin-top: 19px
-            width: 246px
-            height: 51px
-            padding: 16px 21px 16px 24px
+            width: 100%
+
+          &:hover:not(:active)
+            &:before
+              width: 100%
+
+            span
+              color: $white
+
+            svg
+              path
+                stroke: $white
+
+          &:before
+            content: ''
+            width: 0
+            height: 100%
+            position: absolute
+            left: 0
+            top: 0
+            background: linear-gradient(87.61deg, #D54B1D 2.2%, #FB8057 104.03%)
+            transition: width .3s
+            z-index: 0
 
           span
             +font(18px, 21px, 500)
             color: $orange
             transition: color 0.3s
+            z-index: 3
             +screen($desktop)
               +font(16px, 19px, 500)
 
           svg
-            transition: stroke 0.3s
-
-          &:hover
-            background-color: $orange
-
-          &:hover span, &:hover svg path
-            color: $white
-            stroke: $white
-
-
-
-
-
-
-
+            z-index: 3

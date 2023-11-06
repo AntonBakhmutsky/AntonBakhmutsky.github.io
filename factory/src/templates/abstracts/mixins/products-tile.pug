@@ -2,6 +2,7 @@ mixin products-tile(params)
   section.products-tile
     .container
       h2.section-title.slide-right  #{params.title}
+      +txt-link({ url: 'products.html', txt: 'Вся продукция', class: 'slide-up' })
       .products-tile__grid
         each el in params.list
           +product-card(el)

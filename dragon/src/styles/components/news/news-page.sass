@@ -14,25 +14,26 @@
     padding: 32px 16px 40px
 
   .back__btn
-   display: flex
-   width: 78px
-   align-items: center
+    display: flex
+    width: 78px
+    align-items: center
+    transition: color .3s
+    +mb-screen(1025)
+      &:hover span, &:hover svg path
+        color: $orange
+        stroke: $orange
 
-   svg
-    margin-right: 9px
+    svg
+      margin-right: 9px
 
     path
      stroke: $black
 
-   span
-    +font(16px, 20px, 500)
-    transition: color 0.1s
-    +screen($tablet)
-      font-size: 14px
-
-   &:hover span, &:hover svg path
-     color: $orange
-     stroke: $orange
+    span
+      +font(16px, 20px, 500)
+      transition: color 0.1s
+      +screen($tablet)
+        font-size: 14px
 
   &__date
     +font(14px, 19px, 200)
@@ -54,9 +55,8 @@
       +font(22px, 24px, 900)
 
   &__img
-    margin-bottom: 26px
-    +screen($desktop)
-      padding-bottom: 20px
+    margin-bottom: 24px
+    display: flex
     +screen($tablet)
 
       img
@@ -95,7 +95,7 @@
         margin: 0
         +screen($desktop)
          width: 30px
-        +screen($tablet-xs)
+        +screen($tablet)
           display: none
 
         &:hover:not(:active)
@@ -110,9 +110,16 @@
         margin-left: -12px
 
     &-pagination
-      +screen($tablet-xs)
-        display: none
+      display: none
+      +screen($tablet)
+        height: 6px
+        display: block
+        background-color: #D9D9D9
+        top: auto
+        bottom: 0
 
+        &-progressbar-fill
+          background-color: $orange
 
       &-bullet
         background-color: rgba(255, 255, 255, 0.4)
