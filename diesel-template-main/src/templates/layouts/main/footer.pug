@@ -1,0 +1,14 @@
+footer.footer
+  .container
+    a.footer__logo(href="/")
+      img(src=require('@/assets/img/footer/logo.svg/') alt="")
+    nav.menu
+      each el in headerMenu
+        a(href=el.url) #{el.txt}
+    .footer__socials
+      a(href="javascript:")
+        | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/footer/vk.svg')}
+      a(href="javascript:")
+        | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/footer/yt.svg')}
+  .container
+

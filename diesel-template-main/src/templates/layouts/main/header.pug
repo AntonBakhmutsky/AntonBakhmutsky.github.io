@@ -1,0 +1,9 @@
+header.header
+  .container
+    .header__logo
+      img(src=require('@/assets/img/header/logo.svg') alt="SOTRANS")
+    nav.menu
+      each el in headerMenu
+        a(hjref=el.url) #{el.txt}
+    button.header__contacts-btn.orange-btn Оставить заявку
+
