@@ -1,0 +1,12 @@
+section.pluses#pluses
+  .container
+    h3.section-title Преимущества
+    .pluses__grid
+      each el in plusesGridItems
+        .pluses__item
+          if (el.title)
+            h4.pluses__item-title #{el.title}
+          if (el.txt)
+            p.pluses__item-txt #{el.txt}
+          if (el.img)
+            img.pluses__item-img(src=el.img alt="")
