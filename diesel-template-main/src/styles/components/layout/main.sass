@@ -2,4 +2,8 @@
 @use '../../abstracts/mixins' as *
 
 .main
-  //height: 10000px
+  display: flex
+  flex-direction: column
+  gap: 100px
+  +screen($tablet)
+    gap: 40px
