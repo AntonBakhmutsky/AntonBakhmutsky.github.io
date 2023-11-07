@@ -6,7 +6,7 @@ html
   min-height: 100vh
 
 body
-  max-width: 1920px
+  width: 100%
   margin: 0 auto
   min-height: 100vh
   display: flex
@@ -20,6 +20,8 @@ body
   width: 100%
   box-sizing: border-box
   padding: 0 96px
+  +screen($tablet)
+    padding: 0 16px
 
 a
   text-decoration: none
@@ -76,21 +78,21 @@ input[type="checkbox"], input[type="radio"]
 .main
   flex: 1 0 auto
 
-.menu
-  display: flex
-  align-items: center
-  gap: 40px
-  +font(24px, 32px)
 
-  a
-    &:hover:not(:active)
-    position: relative
+.orange-btn
+  +font(20px, 20px, 500)
+  background-color: $orange
+  color: $white
+  box-sizing: border-box
+  padding: 16px 32px
+  transition: background-color .3s
+  border: 2px solid $orange
+  border-radius: 8px
+  +screen($tablet)
+    +font(16px, 16px)
+    padding: 16px 24px
 
-    &:before
-      content: ''
-      width: 100%
-      height: 1px
-      background-color: #1D1D1B
-      position: absolute
-      left: 0
-      top: calc(100% - 4px)
+  &:hover:not(:active)
+    +mf-screen(1025)
+      background-color: transparent
+      color: $orange

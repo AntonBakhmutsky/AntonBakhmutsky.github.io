@@ -1,14 +1,22 @@
 footer.footer
-  .container
-    a.footer__logo(href="/")
-      img(src=require('@/assets/img/footer/logo.svg/') alt="")
-    nav.menu
-      each el in headerMenu
-        a(href=el.url) #{el.txt}
-    .footer__socials
-      a(href="javascript:")
-        | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/footer/vk.svg')}
-      a(href="javascript:")
-        | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/footer/yt.svg')}
-  .container
+  .footer__top
+    .container
+      a.footer__logo(href="/")
+        img(src=require('@/assets/img/footer/logo.svg/') alt="")
+      nav.menu
+        each el in headerMenu
+          a(href=el.url) #{el.txt}
+      .footer__socials
+        a(href="javascript:")
+          | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/footer/vk.svg')}
+        a(href="javascript:")
+          | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/footer/yt.svg')}
+  .footer__bottom
+    .container
+      .footer__copyright
+        a(href="#") Copyright ©2023 All rights reserved | SOTRANS
+      .footer__docs
+        a.footer__user(href="#") Пользовательское соглашение
+        a.footer__policy(href="#") Политика конфиденциальности
+
 
