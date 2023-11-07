@@ -1,0 +1,23 @@
+.modal-request.modal
+  form.modal__body.form
+    .modal__close
+      | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/modal/cancel.svg')}
+    h3.modal__title Остались вопросы?
+    p.modal__txt Оставьте заявку на бесплатную #[br] консультацию специалиста
+    .modal__fields.form__fields
+      .modal__input.form__field.error
+        input.form__field-input(type="text" name="name" id="name")
+        label.form__field-placeholder(for="name") Имя *
+        .modal__error.form__field-error Обязательное поле
+      .modal__input.form__field
+        input.form__field-input(type="tel" name="tel" id="tel")
+        label.form__field-placeholder(for="tel") Телефон *
+        .modal__error.form__field-error Обязательное поле
+      .modal__input.form__field
+        input.form__field-input(type="email" name="email" id="email")
+        label.form__field-placeholder(for="email") Email
+        .modal__error.form__field-error Обязательное поле
+    .modal__policy Нажимая «Отправить», Вы соглашаетесь с #[a(href="#") Политикой конфиденциальности] и #[a(href="#") обработкой персональных данных]
+    button.modal__submit.orange-btn(type="submit") Отправить
+
+
