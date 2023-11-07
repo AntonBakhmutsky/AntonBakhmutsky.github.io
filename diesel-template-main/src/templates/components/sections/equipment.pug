@@ -1,0 +1,17 @@
+section.equipment#equipment
+  .container.container_flex
+    .section-block
+      .equipment__slider.swiper
+        .swiper-wrapper
+          each slide in slides
+            .swiper-slide
+              img(src=slide alt="")
+        .swiper-pagination
+        .swiper-button-prev
+          img(src=require("@/assets/img/equipment/prev.svg") alt="")
+        .swiper-button-next
+          img(src=require("@/assets/img/equipment/next.svg") alt="")
+    .section-block
+      h3.section-title Оборудование
+      p.section-txt Техническое оснащение техцентров включает в себя диагностическое оборудование #[span Maktest], которое было специально разработано для полного восстановления ресурса форсунок BOSCH, DENSO, CUMMINS и CAT.
+      p.section-txt Обращаясь в «Техцентры Сотранс» вы получается комплексное решение по диагностике, демонтажу/монтажу и ремонту топливного оборудования. При этом вы всегда можете совместить ремонт топливной аппаратуры с ремонтом или техническим обслуживанием транспортного средства.
