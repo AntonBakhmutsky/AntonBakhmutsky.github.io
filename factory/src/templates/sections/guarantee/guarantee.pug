@@ -1,0 +1,19 @@
+seciton.guarantee
+  .container
+    h1.guarantee__title.section-title.slide-right Гарантия и сервис
+    .guarantee__switcher.slide-up
+      .guarantee__switcher-top
+        each el, index in guarnteeButtons
+          button.guarantee__switcher-btn(data-index=index) #{el}
+      .guarantee__switcher-content
+        .guarantee__switcher-item(data-index=0)
+          .guarantee__switcher-block
+            h3.guarantee__switcher-title Сервисное обслуживание и ремонт
+            p.guarantee__switcher-txt Компания предоставляет услуги регулярного технического и сервисного обслуживания, гарантийного обслуживания, диагностики и ремонта полуприцепов и спецтехники SOTRANS. Специалисты отдела сервисного обслуживания «МЗ СОТРАНС» готовы проконсультировать вас и решить вопросы технического и сервисного обслуживания, заказа оригинальных запасных частей для техники SOTRANS.
+            p.guarantee__switcher-txt Мастера сервисных центров SOTRANS обладают большим опытом работы по ремонту и обслуживанию специальной техники и высокой квалификацией, которая постоянно подтверждается прохождением дополнительного обучения на базе наших центров.
+          .guarantee__switcher-block
+            .guarantee__switcher-poster «МЗ СОТРАНС» предоставляют комплексные решения для успешной и бесперебойной эксплуатации вашего транспортного парка.
+            .guarantee__switcher-image
+        .guarantee__switcher-item(data-index=1)
+        .guarantee__switcher-item(data-index=2)
+        .guarantee__switcher-item(data-index=3)

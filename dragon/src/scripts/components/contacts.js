@@ -122,7 +122,7 @@ window.addEventListener('load', () => {
             activateContent(switchBtns, id)
             activateContent(switchItems, id)
 
-            switcher.insertAdjacentElement('afterbegin', switchBtns[+id])
+            switcher.insertAdjacentElement('afterbegin', switchBtns.find(el => el.dataset.id === id))
           }
         }
       }
