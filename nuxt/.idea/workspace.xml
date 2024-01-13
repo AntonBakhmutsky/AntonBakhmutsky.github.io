@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="bc5166cd-1a3d-4f11-9c28-4433ed461584" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../factory/src/assets/img/global/close-white.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../factory/src/scripts/components/image-modal.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../factory/src/styles/components/global/image-modal.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../factory/src/scripts/components/product-slider.js" beforeDir="false" afterPath="$PROJECT_DIR$/../factory/src/scripts/components/product-slider.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../factory/src/scripts/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../factory/src/scripts/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../factory/src/styles/app.sass" beforeDir="false" afterPath="$PROJECT_DIR$/../factory/src/styles/app.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../factory/src/styles/components/about-company/about-grid.sass" beforeDir="false" afterPath="$PROJECT_DIR$/../factory/src/styles/components/about-company/about-grid.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../factory/src/styles/layout/main/header.sass" beforeDir="false" afterPath="$PROJECT_DIR$/../factory/src/styles/layout/main/header.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../factory/src/templates/layouts/main/header.pug" beforeDir="false" afterPath="$PROJECT_DIR$/../factory/src/templates/layouts/main/header.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../factory/src/templates/pages/about-page.pug" beforeDir="false" afterPath="$PROJECT_DIR$/../factory/src/templates/pages/about-page.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../factory/src/templates/sections/global/image-modal.pug" beforeDir="false" afterPath="$PROJECT_DIR$/../factory/src/templates/sections/global/image-modal.pug" afterDir="false" />
+    <list default="true" id="c502ef20-1e88-4589-998c-8994d126a154" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_08_11_2023_7_07__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_08_11_2023_7_07__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nuxt3-app/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt3-app/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/nuxt3-app/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/nuxt3-app/.idea/nuxt3-app.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/nuxt3-app/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nuxt3-app/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/nuxt3-app/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt3-app/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt3-app/.npmrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt3-app/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt3-app/app.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt3-app/nuxt.config.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/nuxt3-app/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nuxt3-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/nuxt3-app/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt3-app/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt3-app/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt3-app/tsconfig.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,9 +33,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectId" id="2LRcWqFdDhzHFTXRiMswfsGwU88" />
+  <component name="ProjectId" id="2ZwOKjunVECDICChGsFTFUQIEaE" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
     <option name="autoscrollToSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -45,6 +46,10 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
@@ -52,12 +57,13 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="bc5166cd-1a3d-4f11-9c28-4433ed461584" name="Changes" comment="" />
-      <created>1675837369531</created>
+      <changelist id="c502ef20-1e88-4589-998c-8994d126a154" name="Changes" comment="" />
+      <created>1703329614646</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1675837369531</updated>
-      <workItem from="1675837370748" duration="56000" />
+      <updated>1703329614646</updated>
+      <workItem from="1703329617272" duration="1245000" />
+      <workItem from="1703907635294" duration="2894000" />
     </task>
     <servers />
   </component>

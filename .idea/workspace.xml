@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d225187-906f-4110-8ade-e8e2eaf3a4e8" name="Changes" comment="clear working tree">
-      <change afterPath="$PROJECT_DIR$/factory/src/styles/components/guarantee/guarantee.sass" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/factory/src/templates/pages/servis-i-garantiya.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/factory/src/styles/app.sass" beforeDir="false" afterPath="$PROJECT_DIR$/factory/src/styles/app.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/factory/src/templates/abstracts/variables.pug" beforeDir="false" afterPath="$PROJECT_DIR$/factory/src/templates/abstracts/variables.pug" afterDir="false" />
-    </list>
+    <list default="true" id="2d225187-906f-4110-8ade-e8e2eaf3a4e8" name="Changes" comment="clear working tree" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -95,6 +89,11 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/ts/2/functions.js" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
