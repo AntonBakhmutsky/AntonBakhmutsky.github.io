@@ -1,0 +1,37 @@
+@use './abstracts/variables' as *
+@use './abstracts/mixins' as *
+
+*
+  box-sizing: border-box
+
+body
+  background-color: #f4f4f4
+  max-width: 1920px
+  margin: 0 auto
+  padding: 0 20px
+  +font(16px, 18px)
+  
+.app-header
+  margin: 40px 0
+  +font(34px, 40px, 400)
+  text-align: center
+
+  span
+    +font(40px, 44ps, 700)
+
+.app-container
+  display: flex
+  gap: 20px
+
+  &__left
+    flex-basis: 25%
+
+  &__right
+    flex-basis: calc(100% - 25% - 30px)
+
+  &__left, &__right
+    background-color: $white
+    padding: 20px
+    border-radius: 20px
+
+

@@ -1,0 +1,55 @@
+@use '../../abstracts/variables' as *
+@use '../../abstracts/mixins' as *
+
+.offer
+  padding: 40px
+  background: url(../assets/img/offer/offer-bg.jpg) center/cover no-repeat
+  position: relative
+  +screen($tablet)
+    background: url(../assets/img/offer/offer-bg-mobile.jpg) center/cover no-repeat
+    padding: 40px 20px
+
+  .container
+    +screen($tablet)
+      padding: 0
+
+  &:after
+    content: ''
+    width: 100%
+    height: 100%
+    position: absolute
+    left: 0
+    top: 0
+    z-index: 1
+    background-color: rgba($black, .69)
+
+  &__title
+    position: relative
+    z-index: 2
+    +font(26px, 34px, 500)
+    max-width: 890px
+    margin: 0 auto
+    color: $white
+    text-align: center
+    +screen(1500)
+      max-width: 753px
+      +font(22px, 28px, 500)
+    +screen($tablet)
+      max-width: none
+      +font(18px, 26px, 500)
+
+    span
+      color: $orange
+
+  &__links
+    position: relative
+    margin-top: 50px
+    z-index: 2
+    display: flex
+    justify-content: center
+    gap: 30px
+    +screen($tablet)
+      flex-direction: column
+      gap: 20px
+      align-items: center
+

@@ -1,0 +1,134 @@
+@use '../../abstracts/variables' as *
+@use '../../abstracts/mixins' as *
+
+.header
+  height: 80px
+  padding-top: 23px
+  box-sizing: border-box
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  z-index: 101
+  transition: transform .3s, backdrop-filter .3s, background-color .3s, mix-blend-mode .3s
+  +screen($tablet)
+    height: 60px
+    padding-top: 16px
+
+  &.sticky, &_policy
+    background-color: rgba(0, 0, 0, .51)
+    mix-blend-mode: normal
+    backdrop-filter: blur(3px)
+    padding: 17px 0
+    +screen($tablet)
+      padding: 13px 0
+
+  .container
+    display: flex
+    align-items: center
+    justify-content: space-between
+    +screen($tablet)
+      padding: 0 20px
+
+  &__logo
+    width: 182px
+    height: 45px
+    +screen($tablet)
+      width: 133px
+      height: 33px
+
+  &__burger
+    display: none
+    transition: none
+    +screen($tablet)
+      display: flex
+      align-items: center
+
+  &__menu
+    display: flex
+    align-items: center
+    gap: 38px
+    +screen(1180)
+      gap: 16px
+    +screen($tablet)
+      gap: 40px
+      flex-direction: column
+      position: fixed
+      width: 100%
+      height: calc(var(--vh, 1vh) * 100)
+      top: 0
+      right: -120%
+      background-color: $orange
+      z-index: 1000
+      align-items: flex-start
+      box-sizing: border-box
+      padding: 84px 20px 42px
+      transition: right .3s
+
+    &.active
+      right: 0
+
+    &-close
+      display: none
+      +screen($tablet)
+        display: block
+        position: absolute
+        right: 25px
+        top: 25px
+        cursor: pointer
+
+    &-item
+      +font(22px, 32px, 500)
+      color: $white
+      position: relative
+      +screen(1500)
+        +font(18px, 32px, 500)
+      +screen($tablet)
+        +font(22px, 32px, 500)
+
+        &:after
+          display: none
+
+
+      &:last-child
+        display: none
+        +screen($tablet)
+          display: block
+          margin-top: auto
+
+      &:after
+        content: ''
+        width: 5px
+        height: 5px
+        border-radius: 50%
+        background-color: $white
+        transition: opacity .3s, visibility .3s
+        +centering-x
+        top: calc(100% + 1px)
+        visibility: hidden
+        opacity: 0
+
+      &:hover
+        &:after
+          visibility: visible
+          opacity: 1
+
+  &__phone
+    display: flex
+    align-items: center
+    +font(22px, 32px, 500)
+    color: $white
+    +screen(1500)
+      +font(16px, 32px, 500)
+    +screen($tablet)
+      display: none
+
+    span
+      margin-left: 6px
+
+    svg
+      width: 17px
+      height: 18px
+      +screen(1500)
+        width: 13px
+        height: 14px

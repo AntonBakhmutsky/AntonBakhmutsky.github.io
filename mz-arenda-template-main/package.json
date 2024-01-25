@@ -1,0 +1,17 @@
+{
+  "name": "vituum",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@vituum/vite-plugin-pug": "^1.1.0",
+    "sass": "^1.69.7",
+    "vite": "^5.0.12",
+    "vituum": "^1.1.0"
+  }
+}

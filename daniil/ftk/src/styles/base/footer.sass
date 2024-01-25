@@ -1,0 +1,109 @@
+.footer
+  background-color: $dark-grey
+
+  .container
+    margin-bottom: 0
+
+    .footer__top
+      padding: 30px 0 16px 0
+      display: flex
+      flex-direction: column
+      gap: 40px
+
+      .footer__attention
+        color: $white
+        font-size: 12px
+        font-weight: 350
+        line-height: 16px
+
+      .footer__top-container
+        display: flex
+        justify-content: space-between
+        gap: 20px
+        +screen(1024)
+          flex-direction: column
+
+      .footer__links-container
+        display: grid
+        grid-template-columns: repeat(2, minmax(auto, 1fr))
+        grid-gap: 20px
+        column-gap: 80px
+        +screen(1024)
+          display: flex
+          flex-direction: column
+          gap: 24px
+
+        .footer__link
+          transition: color ease 0.3s
+          cursor: pointer
+          color: $white
+          font-size: 16px
+          font-weight: 500
+          line-height: 20px
+          &:hover
+            color: $orange
+
+      .footer__contacts-container
+        display: flex
+        flex-direction: column
+        gap: 20px
+
+        .footer__contact
+          display: flex
+          align-items: center
+          gap: 8px
+
+          .footer__contact-text
+            transition: color ease 0.3s
+            color: $white
+            font-family: Stem
+            font-size: 16px
+            font-weight: 500
+            line-height: 20px
+            cursor: pointer
+            &:hover
+              color: $orange
+
+.footer__bottom
+  width: 100%
+  background-color: $dark-grey
+
+  .container
+    margin-bottom: 0
+    display: flex
+    align-items: center
+    justify-content: space-between
+    max-width: 1440px
+    padding: 12px 60px
+    margin-left: auto
+    margin-right: auto
+    +screen(1024)
+      padding: 20px 16px
+      flex-direction: column
+      align-items: flex-start
+      gap: 12px
+
+
+  .bottom__text
+    color: $white
+    font-size: 12px
+    font-weight: 400
+    line-height: 16px
+
+  .bottom__links-container
+    color: $white
+    display: flex
+    gap: 5px
+
+    .bottom__link
+      transition: color ease 0.3s
+      color: $white
+      cursor: pointer
+      &:hover
+        color: $orange
+
+.separator
+  height: 2px
+  width: 100%
+  content: " "
+  background-color: #3E3E3E

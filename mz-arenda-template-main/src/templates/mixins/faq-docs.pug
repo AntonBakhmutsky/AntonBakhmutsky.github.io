@@ -1,0 +1,8 @@
+mixin faq-docs(items)
+    each item in items
+        a.docs__card(href='#')
+            .docs__card-title= item.text
+
+            button.docs__card-button
+                img.docs__card-icon(src="/src/assets/images/download-faq.png")
+                |Скачать

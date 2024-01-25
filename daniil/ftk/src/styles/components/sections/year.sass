@@ -1,0 +1,73 @@
+@use '../../abstracts/variables' as *
+@use '../../abstracts/mixins' as *
+
+.year
+  padding: 80px 0
+  +screen($tablet)
+    padding: 40px 0 25px
+
+  .container
+    +screen(1180)
+      padding: 0 10px
+
+  .section-title
+    +screen(1180)
+      padding: 0 0 0 20px
+
+    &:before
+      +screen(1180)
+        left: -10px
+
+  &__tile
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    margin-top: 65px
+    gap: 30px
+    +screen($tablet)
+      margin-top: 40px
+
+  &__item
+    box-sizing: border-box
+    padding-top: 38px
+    +screen($tablet)
+      padding: 0 20px
+      width: 100%
+
+    &-num
+      +font(46px, 48px, 800)
+      color: $orange
+      +screen(1500)
+        +font(30px, 32px, 800)
+
+      span
+        +font(56px, 58px, 800)
+        +screen(1500)
+          +font(40px, 40px, 800)
+        +screen($tablet)
+          +font(30px, 32px, 800)
+
+    &-txt
+      +font(30px, 36px)
+      margin-top: 20px
+      +screen(1500)
+        +font(24px, 28px)
+      +screen($tablet)
+        margin-top: 8px
+        +font(22px, 26px)
+
+    &:last-child
+      width: 498px
+      height: 217px
+      padding-left: 37px
+      background: $black url(../assets/img/year/track.svg) no-repeat top right / cover
+      color: white
+      +screen(1500)
+        width: 400px
+        height: 180px
+        padding-left: 32px
+      +screen($tablet)
+        background: $black url(../assets/img/year/track.svg) no-repeat 85% 0
+        width: 100%
+        height: 144px
+        padding: 26px 0 0 20px

@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a8ce65f1-9d40-4511-9240-f59070fa4291" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../nuxt/mastering-nuxt-3/nuxt-learn/assets/styles/app.sass" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nuxt/mastering-nuxt-3/nuxt-learn/pages/course/lesson.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_08_11_2023_7_07_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_08_11_2023_7_07__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nuxt/mastering-nuxt-3/nuxt-learn/app.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../nuxt/mastering-nuxt-3/nuxt-learn/app.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nuxt/mastering-nuxt-3/nuxt-learn/nuxt.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../nuxt/mastering-nuxt-3/nuxt-learn/nuxt.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nuxt/mastering-nuxt-3/nuxt-learn/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../nuxt/mastering-nuxt-3/nuxt-learn/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nuxt/mastering-nuxt-3/nuxt-learn/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../nuxt/mastering-nuxt-3/nuxt-learn/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nuxt/mastering-nuxt-3/nuxt-learn/pages/course.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../nuxt/mastering-nuxt-3/nuxt-learn/pages/course.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-dev/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-dev/.idea/trucks-dev.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-dev/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-dev/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/.env.example" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/postcss.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/fonts/FuturaPT-Book.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/fonts/FuturaPT-Book.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/fonts/FuturaPT-Demi.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/fonts/FuturaPT-Demi.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/fonts/FuturaPT-Light.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/fonts/FuturaPT-Light.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/fonts/ProximaNova-Bold.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/fonts/ProximaNova-Bold.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/fonts/ProximaNova-Extrabld.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/fonts/ProximaNova-Extrabld.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/fonts/ProximaNova-Light.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/fonts/ProximaNova-Light.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/fonts/ProximaNova-Regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/fonts/ProximaNova-Regular.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/application/arrow-green.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/application/attention.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/application/base-known.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/application/btn-orange.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/application/calendar.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/application/clip.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/application/close-white.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/application/graf.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/application/list.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/application/more.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/application/next.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/application/plus-book.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/application/point-A.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/application/point-B.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/application/point.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/application/prev-arrow.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/application/prev.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/application/question.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/application/reset.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/application/sber.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/application/search.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/application/stop.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/application/toggle-light.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/application/toggle.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/application/update.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/counterparty-point-edit/edit.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/header/exit.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/header/user.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/home/arrow-select.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/home/arrow.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/home/avatar.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/home/car-gray.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/home/car-green.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/home/car-red.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/home/check.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/home/close.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/home/funnel.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/home/minus.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/home/plus.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/home/prev.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/home/window.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/leaflet/layers-2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/leaflet/layers.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/leaflet/marker-icon-2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/leaflet/marker-icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/leaflet/marker-shadow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/map/Mask.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/menu/back.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/menu/bell.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/menu/contr.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/menu/list.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/menu/logo-min.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/menu/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/menu/rudder.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/menu/toggle.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/menu/tracker.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/menu/trailer.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/menu/van.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/notice/check.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/notice/pin.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/notice/reload.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/notice/toggle.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/one-application-creating/close.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/one-application-creating/create.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/one-application-creating/ellipse.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/one-application-creating/plus-circle.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/one-application-creating/select.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/one-application-info/avatar.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/one-application-info/check.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/one-application/A.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/one-application/Ellips.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/one-application/Ellipse-green.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/one-application/Ellipse-red.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/one-application/Ellipse.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/one-application/bell.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/one-application/checkmark-circle-white.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/one-application/checkmark-circle.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/one-application/cloud.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/one-application/copy.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/one-application/created.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/one-application/cross-gray.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/one-application/date.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/one-application/delete.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/one-application/edit-2.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/one-application/edit-3.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/one-application/edit-4.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/one-application/edit.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/one-application/fence.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/one-application/fl.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/one-application/graf.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/one-application/line-blue.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/one-application/line-green.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/one-application/line-orange.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/one-application/line-red.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/one-application/pin.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/one-application/question.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/one-application/red-cross.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/one-application/right.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/one-application/route.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/one-application/save.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/one-application/stop.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/one-application/update.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/one-application/warning.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/one-car/printer.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/one-contractor/arrow.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/one-report/close.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/one-report/date.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/one-report/minus.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/one-report/plus.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/one-report/printer.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/one-report/reload.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/one-report/toggle.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/one-report/wrench.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/planning/graf.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/planning/info.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/planning/stop.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/reports/arrow.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/trucks/close.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/trucks/date.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/trucks/download.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/trucks/mask.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/assets/img/trucks/reload.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/scripts/components/application.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/scripts/components/calendar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/scripts/components/counterparty-points.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/scripts/components/custom-select.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/scripts/components/help-modal.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/scripts/components/home.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/scripts/components/map.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/scripts/components/menu.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/scripts/components/notice.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/scripts/components/one-application-creating.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/scripts/components/one-application.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/scripts/components/one-report.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/scripts/components/trucks.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/scripts/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/styles/abstracts/fonts.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/styles/abstracts/mixins.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/styles/abstracts/variables.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/styles/app.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/styles/base/calendar/calendar-castom.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/styles/base/calendar/calendar.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/styles/base/calendar/themes/dark.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/styles/base/calendar/themes/light.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/styles/base/calendar/vanilla-calendar.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/styles/base/global.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/styles/base/leaflet.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/styles/components/application/application.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/styles/components/counterparties/counterparties.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/styles/components/counterparty-point-edit/counterparty-point-edit.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/styles/components/counterparty-points/counterparty-points.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/styles/components/drivers/drivers.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/styles/components/filter/filter.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/styles/components/global/help-modal.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/styles/components/global/pagination.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/styles/components/home/home.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/styles/components/layout/footer.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/styles/components/layout/header.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/styles/components/layout/main.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/styles/components/layout/menu.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/styles/components/map/controlers.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/styles/components/map/filter-mini.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/styles/components/map/map.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/styles/components/notice/notice.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/styles/components/one-application/one-application-creating.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/styles/components/one-application/one-application-info.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/styles/components/one-application/one-application.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/styles/components/one-application/plan-indicators.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/styles/components/one-application/route.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/styles/components/one-car/one-car.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/styles/components/one-contractor/one-contractor.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/styles/components/one-driver/one-driver.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/styles/components/one-report/one-report.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/styles/components/one-trailer/one-trailer.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/styles/components/planning/info.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/styles/components/planning/planning.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/styles/components/reports/reports.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/styles/components/trackers/trackers.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/styles/components/trailers/trailers.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/styles/components/trucks/trucks.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/styles/mixins/car.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/styles/mixins/modal.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/styles/mixins/page-header.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/templates/abstracts/variables.pug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/templates/components/application/list.pug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/templates/components/application/search.pug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/templates/components/global/help-modal.pug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/templates/components/global/pagination.pug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/templates/components/home/filter.pug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/templates/components/layouts/main/map/controllers.pug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/templates/components/layouts/main/map/filter-mini.pug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/templates/components/layouts/main/map/filter.pug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/templates/components/mixins/application-item.pug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/templates/components/mixins/button.pug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/templates/components/mixins/car.pug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/templates/components/mixins/dis-number.pug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/templates/components/mixins/modal.pug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/templates/components/mixins/number.pug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/templates/components/mixins/page-header.pug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/templates/components/mixins/select.pug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/templates/components/one-application/one-application-info.pug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/templates/components/one-application/plan-indicators.pug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/templates/components/one-application/route.pug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/templates/components/planning/filter-header.pug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/templates/components/planning/filter-points.pug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/templates/components/planning/filter.pug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/templates/components/planning/header.pug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/templates/components/planning/info.pug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/templates/components/planning/titles.pug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/templates/layouts/main/footer.pug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/templates/layouts/main/head.pug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/templates/layouts/main/header.pug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/templates/layouts/main/layout-map.pug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/templates/layouts/main/layout.pug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/templates/layouts/main/map.pug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/templates/layouts/main/menu.pug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/templates/pages/application.pug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/templates/pages/counterparties.pug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/templates/pages/counterparty-point-edit.pug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/templates/pages/counterparty-points.pug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/templates/pages/drivers.pug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/templates/pages/home.pug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/templates/pages/index.pug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/templates/pages/notice.pug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/templates/pages/one-application-creating.pug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/templates/pages/one-application.pug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/templates/pages/one-car.pug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/templates/pages/one-contractor.pug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/templates/pages/one-driver.pug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/templates/pages/one-report.pug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/templates/pages/one-trailer.pug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/templates/pages/planning.pug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/templates/pages/reports.pug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/templates/pages/trackers.pug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/templates/pages/trailers.pug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/src/templates/pages/trucks.pug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trucks-point/webpack.config.js" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="2bS2lpa0I9BCmcJEMBwUfIAbywA" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a8ce65f1-9d40-4511-9240-f59070fa4291" name="Changes" comment="" />
+      <created>1706194312560</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1706194312560</updated>
+      <workItem from="1706194314035" duration="25000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

@@ -1,0 +1,164 @@
+.header
+  width: 100%
+  position: fixed
+  top: 0
+  z-index: 10000
+  background-color: $white
+  +screen(1024)
+    display: none
+
+
+
+  .container
+    align-items: center
+    justify-content: space-between
+    display: flex
+    gap: 20px
+    padding: 16px 60px
+    margin-left: auto
+    margin-right: auto
+    margin-bottom: 0
+
+    .header__link
+      cursor: pointer
+      transition: color ease 0.3s
+      font-size: 16px
+      font-weight: 500
+      line-height: 20px
+
+      &:hover
+        color: $orange
+
+    .header__logo-container
+      cursor: pointer
+
+    .header__nav
+      display: flex
+      align-items: center
+      gap: 20px
+
+    .header_contacts
+      display: flex
+      align-items: center
+      gap: 20px
+
+      .header__button
+        transition: background-position ease 0.3s
+        padding: 12px 24px
+        color: $white
+        font-weight: 500
+        font-size: 16px
+        line-height: 20px
+        border: none
+        background: linear-gradient(90deg, #E9A92C 0%, #E95A2C 25%, #E9A92C 100%)
+        border-radius: 8px
+        cursor: pointer
+
+        &:hover
+          background-position: -150px
+
+.header_mobile
+  top: 0
+  z-index: 10000
+  position: fixed
+  background-color: $white
+  width: 100%
+  @media (min-width: 1025px)
+    display: none
+
+  .header_mobile-container
+    background-color: $white
+    position: relative
+    display: flex
+    justify-content: space-between
+    padding: 16px
+    z-index: 100
+
+.header__nav_mobile
+  transition: ease-in 0.3s
+  z-index: 10
+  position: absolute
+  background-color: $grey
+  padding: 16px
+  display: flex
+  flex-direction: column
+  width: 100%
+  gap: 20px
+  &._hidden
+    transform: translateY(-316px)
+
+
+  .header__link_mobile
+    font-size: 16px
+    font-weight: 500
+    line-height: 20px
+
+  .header_contacts_mobile
+    display: flex
+    flex-direction: column
+    gap: 20px
+
+    .header__link_mobile
+      color: $orange
+      font-size: 16px
+      font-weight: 500
+      line-height: 20px
+
+    .header__button_mobile
+      max-width: 175px
+      padding: 12px 24px
+      color: $white
+      font-weight: 500
+      font-size: 16px
+      line-height: 20px
+      border: none
+      background: linear-gradient(90deg, #E9A92C 0%, #E95A2C 25%, #E9A92C 100%)
+      border-radius: 8px
+
+.faded
+  box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.10)
+
+
+.header__burger-button
+  padding: 10px 6px
+  position: relative
+  width: 36px
+  height: 36px
+  border-radius: 12px
+  background: linear-gradient(90deg, #E9A92C 0%, #E95A2C 25%, #E9A92C 100%)
+  -webkit-transition: 0.4s
+  -moz-transition: 0.4s
+  -o-transition: 0.4s
+  transition: 0.4s
+  .burger-button_lines::before,
+  .burger-button_lines::after,
+  .burger-button_lines
+    position: absolute
+    width: 20px
+    height: 2px
+    background-color: $white
+    -webkit-transition: 0.4s
+    -moz-transition: 0.4s
+    -o-transition: 0.4s
+    transition: 0.4s
+  .burger-button_lines
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    &:before
+      content: ''
+      top: -7px
+    &:after
+      content: ''
+      top: 7px
+
+.header__burger-button.active
+    .burger-button_lines
+      background-color: transparent
+      &:before
+        top: 0
+        transform: rotate(45deg)
+      &:after
+        top: 0
+        transform: rotate(-45deg)
+

@@ -1,7 +1,0 @@
-mixin car(num, color, url, left, top)
-  .car(style=`left:${left}; top:${top}`)
-   a.car-number(href=`${url}`)
-     span=num
-   a(href=url)
-     | !{require(`!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/home/car-${color}.svg`)}
-

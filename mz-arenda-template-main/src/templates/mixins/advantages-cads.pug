@@ -1,0 +1,5 @@
+mixin advantages__card(items)
+    each item in items
+        .advantages__card
+            img(src=`${item.image}`).advantages__card-image
+            .advantages__card-text= item.text

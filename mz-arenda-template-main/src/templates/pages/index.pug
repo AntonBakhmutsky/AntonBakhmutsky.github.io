@@ -1,0 +1,18 @@
+extends ../layouts/main/main.pug
+
+block variables
+    include  ../abstracts/data.pug
+    -
+        var pageTitle = '123'
+        var idUsing = true
+
+block content
+    include ../sections/main/intro-section.pug
+    include ../sections/main/rent-condition-section.pug
+    include ../sections/main/specifications-section.pug
+    include ../sections/main/service-section.pug
+    include ../sections/main/advantages-section.pug
+    include ../sections/main/faq-section.pug
+    script(src="/src/scripts/faqDrop.js")
+    script(src="/src/scripts/header.js")
+

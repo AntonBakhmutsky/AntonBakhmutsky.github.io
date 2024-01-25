@@ -1,0 +1,13 @@
+<template>
+  <div class="app-header">
+    <h1>Course: <span>Mastering Nuxt</span></h1>
+  </div>
+  <div class="app-container">
+    <div class="app-container__left">
+      <h3>Chapters</h3>
+    </div>
+    <div class="app-container__right">
+      <NuxtPage />
+    </div>
+  </div>
+</template>

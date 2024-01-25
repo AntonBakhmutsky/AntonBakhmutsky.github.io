@@ -1,0 +1,177 @@
+@use '../../abstracts/variables' as *
+@use '../../abstracts/mixins' as *
+
+.top
+  position: relative
+  height: calc(var(--vh, 1vh) * 100)
+  background: url(../assets/img/top/top-bg.jpg) no-repeat center/cover
+
+  &:before,
+  &:after
+    content: ''
+    width: 100%
+    position: absolute
+    left: 0
+
+  &:before
+    height: 62%
+    top: 0
+    z-index: 1
+    background: linear-gradient(180deg, #020A0A 0%, rgba(20, 22, 27, 0) 100%)
+    opacity: .85
+
+  &:after
+    height: 83%
+    bottom: 0
+    background: linear-gradient(0deg, #EA5C2A 0%, rgba(234, 92, 42, 0) 100%)
+    z-index: 2
+
+  .container
+    height: 100%
+    z-index: 3
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    +screen($tablet)
+      padding: 0 10px 0
+
+  &__title
+    max-width: 1010px
+    +font(85px, 85px, 800)
+    +screen(1500)
+      max-width: 832px
+      +font(68px, 72px, 800)
+    +screen($tablet)
+      box-sizing: border-box
+      padding: 0 10px
+      +font(40px, 48px, 800)
+
+  &__txt
+    margin-top: 40px
+    +font(40px, 49px, 500)
+    max-width: 388px
+    +screen(1500)
+      max-width: 252px
+      +font(26px, 32px, 500)
+    +screen($tablet)
+      box-sizing: border-box
+      padding: 0 8px
+      +font(20px, 24px, 500)
+      margin-top: 16px
+
+  &__container
+    color: $white
+    z-index: 3
+
+    &:first-child
+      flex-grow: 1
+      display: flex
+      flex-direction: column
+      justify-content: center
+
+    &:last-child
+      display: flex
+      align-items: center
+      justify-content: space-between
+      height: 174px
+      +screen(1500)
+        height: 140px
+      +screen($tablet)
+        height: auto
+        margin-top: auto
+
+  &__down
+    width: 50px
+    height: 50px
+    border-radius: 50%
+    box-sizing: border-box
+    border: 2px solid $white
+    display: flex
+    align-items: center
+    justify-content: center
+    transition: background-color .3s
+    +screen($tablet)
+      display: none
+
+    &:hover:not(:active)
+      background-color: rgba(255, 255, 255, 0.2)
+
+    img
+      margin-bottom: -2px
+
+  &__list
+    height: 100%
+    display: flex
+    box-sizing: border-box
+    padding: 50px 0
+    background-color: rgba(255, 255, 255, .1)
+    margin-right: 100px
+    +screen(1500)
+      padding: 37px 0
+    +screen($tablet)
+      justify-content: space-between
+      flex-wrap: wrap
+      margin: 0
+      gap: 23px 0
+      width: 100%
+
+    &-item
+      box-sizing: border-box
+      display: flex
+      flex-direction: column
+      justify-content: center
+
+      &-name
+        +font(24px, 32px)
+        +screen(1500)
+          +font(18px, 32px)
+        +screen($tablet)
+          +font(16px, 18px)
+
+      &-value
+        display: flex
+        gap: 8px
+        align-items: center
+        +screen($tablet)
+          margin-top: 8px
+
+        span
+          white-space: nowrap
+
+          &:first-child
+            +font(44px, 44px, 700)
+            +screen(1500)
+              +font(30px, 32px, 700)
+            +screen($tablet)
+              +font(24px, 32px, 700)
+
+          &:last-child
+            +font(20px, 20px, 700)
+            +screen(1500)
+              +font(16px, 16px, 700)
+
+      &:nth-child(1)
+        padding: 0 69px 0 63px
+        +screen($tablet)
+          padding: 0 15px 0 20px
+
+        span
+          &:last-child
+            margin-bottom: 2px
+
+      &:nth-child(2)
+        padding: 0 50px
+        +screen($tablet)
+          padding: 0 15px 0 20px
+
+      &:nth-child(3)
+        padding: 0 78px 0 49px
+        +screen($tablet)
+          padding: 0 20px 0 15px
+
+      &:not(:last-child)
+        border-right: 2px solid $white
+        +screen($tablet)
+          border: none
+
+

@@ -1,0 +1,132 @@
+@use '../../abstracts/variables' as *
+@use '../../abstracts/mixins' as *
+
+.production
+  padding: 75px 0 80px
+  +screen($tablet)
+    padding: 25px 0 50px
+
+  .container
+    padding-left: 0
+    +screen($tablet)
+      padding: 0
+
+  .section-title
+    &:before
+      transform: none
+      top: 12px
+      +screen($tablet)
+        top: 8px
+
+  &__top
+    padding-left: 60px
+    +screen($tablet)
+      padding: 0 20px 0 30px
+
+    p
+      margin-top: 36px
+
+  &__bottom
+    margin-top: 60px
+    display: flex
+    gap: 60px
+    +screen(1500)
+      gap: 40px
+    +screen($tablet)
+      flex-direction: column-reverse
+      align-items: flex-start
+      justify-content: flex-start
+      padding: 0 0 0 20px
+      gap: 30px
+      margin-top: 30px
+
+    .swiper
+      flex-basis: 53%
+      height: 632px
+      box-sizing: border-box
+      padding: 0 0 70px 60px
+      flex-shrink: 0
+      user-select: none
+      +screen(1500)
+        padding: 0 0 50px 60px
+        height: 490px
+      +screen($tablet)
+        order: 1
+        padding: 0 0 50px
+        flex-basis: auto
+        width: 100%
+        height: 457px
+      +screen($tablet-sm)
+        height: 357px
+      +screen($tablet-xs)
+        height: 257px
+
+      &-slide
+        display: flex
+        max-width: 100% !important
+
+        img
+          width: 100%
+          height: 100%
+          object-fit: cover
+          object-position: center
+
+      &-button
+        &-next, &-prev
+          width: 50px
+          height: 50px
+          border-radius: 50%
+          top: auto
+          bottom: 0
+          display: flex
+          align-items: center
+          justify-content: center
+          transition: background-color .3s
+          +screen(1500)
+            width: 36px
+            height: 36px
+
+
+          &:hover:not(:active)
+            background-color: rgba(234, 92, 42, .1)
+
+          &:after
+            display: none
+
+        &-prev
+          left: auto
+          right: 66px
+          +screen(1500)
+            right: 46px
+          +screen($tablet)
+            right: 86px
+
+        &-next
+          right: 0
+          +screen($tablet)
+            right: 40px
+
+  &__desc
+    display: flex
+    flex-direction: column
+    padding-bottom: 70px
+    +screen(1500)
+      padding-bottom: 50px
+    +screen($tablet)
+      order: 2
+      padding: 0 10px
+
+    p
+      &:not(:first-child)
+        margin-top: 30px
+        +screen(1500)
+          margin-top: 20px
+
+      span
+        color: $orange
+        font-weight: 700
+
+    .btn
+      margin-top: auto
+      +screen($tablet)
+        display: none

@@ -1,0 +1,13 @@
+include ../../mixins/main-mixins.pug
+
+block variables
+
+doctype html
+html(lang="ru")
+  head
+    include head.pug
+  body
+    include header
+    block  content
+  footer
+    include ./footer.pug
