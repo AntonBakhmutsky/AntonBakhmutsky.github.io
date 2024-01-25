@@ -1,0 +1,46 @@
+@use '../abstracts/variables' as *
+@use '../abstracts/mixins' as *
+
+.rent
+  .container
+    display: flex
+    flex-direction: column
+
+    .rent__cards-container
+      display: grid
+      grid-template-columns: repeat(auto-fit, minmax(312px, 1fr))
+      grid-gap: 24px
+
+      .rent__card
+        border-radius: 12px
+        background: $grey
+        padding: 24px
+        display: flex
+        flex-direction: column
+        gap: 20px
+
+
+        .card__top
+          display: flex
+          gap: 12px
+
+          .card__icon
+            max-width: 48px
+            max-height: 48px
+
+          .card__title
+            width: min-content
+            font-size: 20px
+            font-weight: 500
+            line-height: 24px
+            letter-spacing: 0.2px
+
+        .card__bottom
+          .card__list
+            .card__list-item
+              list-style: none
+              margin-bottom: 12px
+
+
+
+
