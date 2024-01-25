@@ -1,2 +1,2 @@
-// require('./components/header')
-// require('./components/faqDrop')
+require('./components/header')
+require('./components/faqDrop')

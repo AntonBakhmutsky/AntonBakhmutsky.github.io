@@ -17,7 +17,6 @@ window.addEventListener('load', () => {
 
 
   function windowScrollHeader(){
-
     let top = window.pageYOffset
 
     let currentScrollPos = window.pageYOffset
