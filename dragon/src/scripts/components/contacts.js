@@ -21,27 +21,41 @@ window.addEventListener('load', () => {
       const {YMapZoomControl, YMapGeolocationControl} = await ymaps3.import('@yandex/ymaps3-controls@0.0.1');
       const {YMapOpenMapsButton} = await ymaps3.import('@yandex/ymaps3-controls-extra')
 
-      const map = new YMap(document.getElementById('mapRedForest'), {
-        location: {
-          center: [30.651756999999925, 59.66768456450318],
-          zoom: 13
-        },
+      const mapsArr = [
+        {id: 'mapRedForest', coords: [30.651756999999925, 59.66768456450318]},
+        {id: 'mapRedForest5', coords: [30.375390499999998, 60.055807064037396]},
+        {id: 'mapRedForest1', coords: [52.104973, 55.815162]},
+        {id: 'mapRedForest2', coords: [104.11142954398734, 52.22521718034677]},
+        {id: 'mapRedForest3', coords: [40.394136006099025, 48.938808096182676]},
+        {id: 'mapRedForest4', coords: [38.477352635989014, 55.59590622558263]},
+      ]
 
-      })
-      map.addChild(new YMapControls({position: 'right'}).addChild(new YMapZoomControl({})))
-      map.addChild(new YMapDefaultFeaturesLayer({id: 'features'}))
-      map.addChild(new YMapControls({position: 'left'}).addChild(new YMapGeolocationControl({})))
-      map.addChild(new YMapControls({position: 'top left'}).addChild(new YMapOpenMapsButton({})))
+      mapsArr.forEach(el => addMaps(el))
 
-      map.addChild(new YMapDefaultSchemeLayer())
+      function addMaps(mapData) {
+        const map = new YMap(document.getElementById(mapData.id), {
+          location: {
+            center: mapData.coords,
+            zoom: 13
+          },
+        })
 
-      const content = document.createElement('div')
+        map.addChild(new YMapControls({position: 'right'}).addChild(new YMapZoomControl({})))
+        map.addChild(new YMapDefaultFeaturesLayer({id: 'features'}))
+        map.addChild(new YMapControls({position: 'left'}).addChild(new YMapGeolocationControl({})))
+        map.addChild(new YMapControls({position: 'top left'}).addChild(new YMapOpenMapsButton({})))
 
-      map.addChild(new YMapMarker({
-        coordinates: [30.651756999999925, 59.66768456450318],
-      }, content))
+        map.addChild(new YMapDefaultSchemeLayer())
 
-      content.innerHTML = `<div class="map__marker map__marker_logo"></div>`
+        const content = document.createElement('div')
+
+        map.addChild(new YMapMarker({
+          coordinates: mapData.coords,
+        }, content))
+
+        content.innerHTML = `<div class="map__marker map__marker_logo"></div>`
+      }
+
     }
 
     // contacts slider
