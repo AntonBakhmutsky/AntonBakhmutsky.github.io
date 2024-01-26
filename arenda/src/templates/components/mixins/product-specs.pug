@@ -1,11 +1,13 @@
 mixin product-specs(params)
   .product-specs.slide-right
-    h3.product-specs__title Технические характеристики
+    h3.section-title Технические характеристики
     ul.product-specs__list
       each el in params
         li
           span !{el.name}
           span
           span !{el.value}
-    button.product-specs__more Развернуть характеристики
+    button.product-specs__more
+      span Показать еще
+      | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/specs/more-arrow.svg')}
 
