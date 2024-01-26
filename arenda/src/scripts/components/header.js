@@ -4,8 +4,6 @@ window.addEventListener('load', () => {
   const burgerButton = document.getElementById('burger')
   const header = document.querySelector('.header')
 
-
-
   burgerButton.onclick= headerNavMobileToggle
   function headerNavMobileToggle (){
     headerNavMobile.classList.toggle('_hidden')

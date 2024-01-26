@@ -2,13 +2,10 @@
 @use '../abstracts/mixins' as *
 
 .section-title
-    color: $black
-    font-family: Stem
-    font-size: 36px
-    font-style: normal
-    font-weight: 700
-    line-height: 48px
-    letter-spacing: 1.44px
-    margin-bottom: 40px
-    +screen(1024)
-        margin-bottom: 28px
+  +font(36px, 48px, 700)
+  letter-spacing: .04em
+  margin-bottom: 40px
+  +screen($tablet)
+    +font(24px, 28px, 700)
+    letter-spacing: .02em
+    margin-bottom: 28px
