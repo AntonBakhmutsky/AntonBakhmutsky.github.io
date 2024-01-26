@@ -30,9 +30,6 @@
       &:hover
         color: $orange
 
-    .header__logo-container
-      cursor: pointer
-
     .header__nav
       display: flex
       align-items: center
@@ -57,6 +54,12 @@
 
         &:hover
           background-position: -150px
+
+  &__logo-container
+    height: 36px
+
+    &_mobile
+      height: 36px
 
 .header_mobile
   top: 0
@@ -120,46 +123,27 @@
   box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.10)
 
 
-.header__burger-button
-  padding: 10px 6px
+.header__burger
   position: relative
-  width: 36px
-  height: 36px
-  border-radius: 12px
-  background: linear-gradient(90deg, #E9A92C 0%, #E95A2C 25%, #E9A92C 100%)
-  -webkit-transition: 0.4s
-  -moz-transition: 0.4s
-  -o-transition: 0.4s
-  transition: 0.4s
-  .burger-button_lines::before,
-  .burger-button_lines::after,
-  .burger-button_lines
-    position: absolute
-    width: 20px
-    height: 2px
-    background-color: $white
-    -webkit-transition: 0.4s
-    -moz-transition: 0.4s
-    -o-transition: 0.4s
-    transition: 0.4s
-  .burger-button_lines
-    top: 50%
-    left: 50%
-    transform: translate(-50%, -50%)
-    &:before
-      content: ''
-      top: -7px
-    &:after
-      content: ''
-      top: 7px
+  cursor: pointer
+  display: flex
+  align-items: center
 
-.header__burger-button.active
-    .burger-button_lines
-      background-color: transparent
-      &:before
-        top: 0
-        transform: rotate(45deg)
-      &:after
-        top: 0
-        transform: rotate(-45deg)
+  &.active
+    .header__burger
+      &-open
+        display: none
+
+      &-close
+        display: block
+
+  &-open, &-close
+    width: 36px
+    height: 36px
+
+  &-close
+    display: none
+
+
+
 

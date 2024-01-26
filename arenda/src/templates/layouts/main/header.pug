@@ -1,6 +1,6 @@
 .header
   .container
-    a.header__logo-contaienr(href="#")
+    a.header__logo-container(href="#")
       img.header__logo(src=require('@/assets/img/global/logo.png') alt="")
     nav.header__nav
       a.header__link Условия аренды
@@ -13,10 +13,13 @@
       button.header__button Оставить заявку
 .header_mobile
   .header_mobile-container
-    a.header__logo-contaienr_mobile(href="#")
+    a.header__logo-container_mobile(href="#")
       img.header__logo_mobile(src=require('@/assets/img/global/logo.png') alt="")
-    .header__burger-button(id="burger")
-      span.burger-button_lines
+    .header__burger(id="burger")
+      .header__burger-open
+        | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/global/burger.svg')}
+      .header__burger-close
+        | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/global/menu-close.svg')}
   nav.header__nav_mobile._hidden
     a.header__link_mobile Условия аренды
     a.header__link_mobile Технические характеристики
