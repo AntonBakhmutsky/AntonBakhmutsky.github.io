@@ -1,0 +1,19 @@
+mixin product-slider(params)
+  .product-slider.slide-up
+    .swiper.main-slider
+      .swiper-wrapper
+        each el in params
+          .swiper-slide
+            img(src=el alt="")
+      .swiper-pagination
+      .swiper-button-next
+        | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/specs/slider-arrow-right.svg')}
+      .swiper-button-prev
+        | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/specs/slider-arrow-left.svg')}
+    .swiper.thumb-slider(thumbsSlider="")
+      .swiper-wrapper
+        each el in params
+          .swiper-slide
+            .swiper-slide-image
+              img(src=el alt="")
+

@@ -12,7 +12,7 @@
 
   rentItems = [
     {
-      image: 'src/assets/images/rent-card-first.png',
+      image: require('@/assets/img/rent/1.png'),
       title: 'Конкурентная цена',
       list: [
         '• Обеспечительный платеж (100 000 рублей)',
@@ -20,7 +20,7 @@
       ]
     },
     {
-      image: 'src/assets/images/rent-card-second.png',
+      image: require('@/assets/img/rent/2.png'),
       title: 'Индивидуальные условия',
       list: [
         '• Аренда полуприцепа от 1 месяца без выкупа / с выкупом)',
@@ -28,14 +28,14 @@
       ]
     },
     {
-      image: 'src/assets/images/rent-card-third.png',
+      image: require('@/assets/img/rent/3.png'),
       title: 'Страхование включено',
       list: [
         '• В стоимость аренды включен страховой полис КАСКО c опцией GAP',
       ]
     },
     {
-      image: 'src/assets/images/rent-card-fourth.png',
+      image: require('@/assets/img/rent/4.png'),
       title: 'Быстрое оформление',
       list: [
         '• Проверка документов, подписание договора и получение техники за 1 рабочий день',
@@ -121,4 +121,68 @@
     {
       text: 'Акт о возврате ТС арендодателю.doc',
     },
+  ]
+
+  // specs
+  productSpecs = [
+    {
+      name: 'Длинна грузовой платформы',
+      value: '13 600 мм'
+    },
+    {
+      name: 'Ширина грузовой платформы',
+      value: '2 470 мм'
+    },
+    {
+      name: 'Высота в свету под крышей',
+      value: '2 710 мм'
+    },
+    {
+      name: 'Общая длина',
+      value: '13 900 мм'
+    },
+    {
+      name: 'Общая ширина',
+      value: '2 550 мм'
+    },
+    {
+      name: 'Межосевое расстояние',
+      value: '1 310 мм'
+    },
+    {
+      name: 'Допустимый общий вес',
+      value: '35 000 кг'
+    },
+    {
+      name: 'Технически возможный общий вес',
+      value: '38 000 кг'
+    },
+    {
+      name: 'Общая допустимая нагрузка <br> на осевой агрегат',
+      value: '24 000 кг (на каждую ось по 8 000 кг)'
+    },
+    {
+      name: 'Технически возможная нагрузка <br> на агрегат',
+      value: '27 000 кг (на каждую ось по 9 000 кг)'
+    },
+    {
+      name: 'Собственный вес в базовой комплектации',
+      value: '6 650 кг'
+    },
+    {
+      name: 'Высота седельного устройства',
+      value: '1 150 кг'
+    },
+    {
+      name: 'Допустимая нагрузка на седельное устройство',
+      value: '11 500 кг'
+    }
+  ]
+
+  productSlides = [
+    require('@/assets/img/specs/slides/1.jpg'),
+    require('@/assets/img/specs/slides/2.jpg'),
+    require('@/assets/img/specs/slides/3.jpg'),
+    require('@/assets/img/specs/slides/4.jpg'),
+    require('@/assets/img/specs/slides/5.jpg')
   ]

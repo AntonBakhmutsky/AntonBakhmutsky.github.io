@@ -1,0 +1,15 @@
+@use '../abstracts/variables' as *
+@use '../abstracts/mixins' as *
+
+.specs
+  .container
+    margin-top: 35px
+    display: flex
+    justify-content: space-between
+    gap: 20px
+    +screen($tablet)
+      margin-top: 15px
+      gap: 30px
+      flex-direction: column-reverse
+      justify-content: flex-start
+
