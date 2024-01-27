@@ -44,10 +44,12 @@
       overflow: hidden
       max-height: 336px
       box-sizing: border-box
+      +screen(1369)
+        max-height: 436px
 
       &:after
         content: ''
-        background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%)
+        background: linear-gradient(0deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%)
         position: absolute
         bottom: 0
         left: 0
@@ -60,14 +62,14 @@
       display: flex
       justify-content: space-between
       align-items: flex-start
-      +screen(1120)
+      +screen(1369)
         flex-direction: column
         justify-content: flex-start
         align-items: flex-start
 
       span
         +font(16px, 28px)
-        +screen(1120)
+        +screen(1369)
           line-height: 20px
 
         &:nth-child(2)
@@ -75,12 +77,12 @@
           flex-grow: 1
           margin: 18px 8px 0
           border-bottom: 2px dashed #EDEBEB
-          +screen(1120)
+          +screen(1369)
             display: none
 
         &:last-child
           font-weight: 500
-          +screen(1120)
+          +screen(1369)
             margin-top: 8px
 
   .call-modal__btn
