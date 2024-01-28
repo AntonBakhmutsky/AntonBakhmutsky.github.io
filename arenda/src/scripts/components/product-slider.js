@@ -23,7 +23,7 @@ window.addEventListener('load', () => {
       },
       breakpoints: {
         320: {
-          slidesPerView: 1.06,
+          slidesPerView: 1.01,
           loop: false
         },
         1025: {

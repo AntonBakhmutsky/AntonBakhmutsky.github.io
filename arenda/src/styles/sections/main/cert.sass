@@ -1,0 +1,36 @@
+@use '../../abstracts/variables' as *
+@use '../../abstracts/mixins' as *
+
+.cert
+  padding: 40px 0 50px
+  background-color: $grey
+  margin-top: 80px
+  +screen($tablet)
+    margin-top: 40px
+
+  .container
+    gap: 30px
+    display: flex
+    justify-content: space-between
+    +screen($tablet)
+      padding: 20px
+      justify-content: flex-start
+      flex-direction: column
+
+  .product__video
+    flex-basis: 67.62%
+    height: 496px
+    margin-top: 0
+    +screen($tablet)
+      height: auto
+
+  &__image
+    flex-shrink: 0
+    +screen($tablet)
+      margin: 0 auto
+      flex-shrink: 1
+      box-sizing: border-box
+      padding: 0 30px
+
+      img
+        width: 100%

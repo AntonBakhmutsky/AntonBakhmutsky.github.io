@@ -8,6 +8,11 @@ window.addEventListener('load', () => {
 
       tabButtons.forEach(el => el.classList.remove('active'))
       e.currentTarget.classList.add('active')
+      e.currentTarget.scrollIntoView({
+        behavior: 'smooth',
+        inline: 'center',
+        block: 'nearest'
+      })
       tabs.forEach(el => el.classList.remove('active'))
       currentTab.classList.add('active')
     }

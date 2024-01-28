@@ -1,11 +1,12 @@
 section.product-tabs
   .container
     .product-tabs__switcher
-      each el,index in tabButtons
-        if (index === 0)
-          button.active(data-id=0) #{el}
-        else
-          button(data-id=index) #{el}
+      .product-tabs__switcher-container
+        each el,index in tabButtons
+          if (index === 0)
+            button.active(data-id=0) #{el}
+          else
+            button(data-id=index) #{el}
     .product-tabs__content
       .product-tabs__block.active(data-id=0)
         ul.product-tabs__list
@@ -17,9 +18,9 @@ section.product-tabs
           if (tabLeftImage)
             .product-tabs__image
               img(src=tabLeftImage alt="")
-          if (tabLeftVideo)
+          if (tabLeftGif)
             .product-tabs__gif
-              img(src=require('@/assets/img/product/semitrailers/curtain/trailer.gif') alt="")
+              img(src=tabLeftGif alt="")
       .product-tabs__block(data-id=1)
         ul.product-tabs__list
           each el in tabRightDesc
