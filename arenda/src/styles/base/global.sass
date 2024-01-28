@@ -96,15 +96,25 @@ input[type="radio"]:checked + label
   &:before
     border-width: 6px
 
+section
+  &:not(:first-child)
+    margin-top: 80px
+    +screen($tablet)
+      margin-top: 40px
+
 .video
   width: 100%
   position: relative
-  height: 364px
-  border-radius: 10px
+  height: 520px
+  border-radius: 20px
   overflow: hidden
-  margin-top: 30px
+  +screen($tablet)
+    border-radius: 12px
+    height: 400px
+  +screen($tablet-sm)
+    height: 300px
   +screen($tablet-xs)
-    height: 171px
+    height: 194px
 
   &.playing
     .video__btn
