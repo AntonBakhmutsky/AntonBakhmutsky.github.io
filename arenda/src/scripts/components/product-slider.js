@@ -1,10 +1,7 @@
 import Swiper, {Navigation, Thumbs, Pagination} from 'swiper'
 
 window.addEventListener('load', () => {
-  if (!document.querySelector('.product-slider .main-slider')) {
-    return false
-  } else {
-
+  if (document.querySelector('.product-slider .main-slider')) {
     const thumbSlider = new Swiper('.product-slider .swiper.thumb-slider', {
       spaceBetween: 17,
       slidesPerView: 5,
