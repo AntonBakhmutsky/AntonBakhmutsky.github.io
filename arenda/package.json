@@ -41,6 +41,7 @@
     "webpack-dev-server": "^3.10.3"
   },
   "dependencies": {
+    "ymaps": "^0.2.1",
     "@babel/polyfill": "^7.8.3",
     "swiper": "^8.4.4"
   }

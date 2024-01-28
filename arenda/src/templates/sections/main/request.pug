@@ -1,0 +1,21 @@
+section.request
+  .container
+    form(method="POST" action="")#contactsForm
+      h2.request__title Оставить заявку
+      p.request__txt Хотите заказать прицеп SOTRANS WALLAROO или получить консультацию? #[br] Оставьте заявку и мы свяжемся с вами в ближайшее время
+      .request__fields
+        .request__field
+          input(name="name" type="text" required)#contactsFormName
+          .request__field-label ФИО *
+          .request__field-error Поле не может быть пустым
+        .request__field
+          input(name="tel" type="tel" required)#contactsFormPhone
+          .request__field-label Номер телефона *
+          .request__field-error Введите корректный номер
+        .request__field
+          input(name="email" type="email" required)#contactsFormEmail
+          .request__field-label Email
+          .request__field-error Введите корректный email
+      .request__policy Нажимая «Отправить», вы соглашаетесь с #[a(href="javascript:" target="_blank" rel="noopener noreferrer") Политикой конфидициальности] и #[a(href="javascript:" target="_blank" rel="noopener noreferrer") обработкой персональных данных]
+      button.request__submit.btn-grad(type="submit")
+        span Отправить
