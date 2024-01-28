@@ -1,8 +1,7 @@
 mixin faq-docs(items)
-    each item in items
-        a.docs__card(href='#')
-            .docs__card-title= item.text
-
-            button.docs__card-button
-                img.docs__card-icon(src="/src/assets/images/download-faq.png")
-                |Скачать
+  each item in items
+    a.docs__card(href='javascript:' download)
+      .docs__card-title= item.text
+      .docs__card-button.btn-grad
+        img.docs__card-icon(src=require('@/assets/img/faq/download-faq.png') alt="")
+        span Скачать
