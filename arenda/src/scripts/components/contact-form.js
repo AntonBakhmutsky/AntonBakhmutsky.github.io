@@ -43,21 +43,41 @@ window.addEventListener('load', () => {
 
 
     // input file
-    // const inputFile = contactForm.querySelector('.contact-form__file input')
-    // const inputFileLabel = inputFile.nextElementSibling
-    // const labelValue = inputFileLabel.querySelector('.contact-form__file-txt')
-    //
-    // inputFile.addEventListener('change', function (event) {
-    //   let countFiles
-    //   if (this.files && this.files.length >= 1) {
-    //     countFiles = this.files.length
-    //   }
-    //   if (countFiles) {
-    //     labelValue.innerText = 'Выбрано файлов: ' + countFiles
-    //   } else {
-    //     labelValue.innerText = 'Прикрепить файл'
-    //   }
-    // })
+    const inputFile = contactForm.querySelector('.contact-form__file input')
+    const filesContainer = contactForm.querySelector('.contact-form__file-container')
 
+    function getFileItemTemplate(name, id) {
+      const item = document.createElement('div')
+      item.classList.add('contact-form__file-item')
+      item.dataset.id = id
+      const fileName = document.createElement('div')
+      fileName.classList.add('contact-form__file-item-name')
+      fileName.textContent = name
+      item.insertAdjacentElement('beforeend', fileName)
+      const fileRemove = document.createElement('div')
+      item.insertAdjacentElement('beforeend', fileRemove)
+
+      return item
+    }
+
+    function toggleDownloadFiles() {
+      filesContainer.innerHTML = ''
+      const files = this.files
+      for (let key in files) {
+        if (+key === 0 || +key ) {
+          const item = getFileItemTemplate(files[key].name, key)
+          filesContainer.insertAdjacentElement('beforeend', item)
+          filesContainer.classList.remove('disabled')
+        }
+      }
+    }
+
+    function removeDownloadFile() {
+      delete inputFile.files[+this.parentElement.dataset.id]
+      console.log(inputFile.files)
+      this.parentElement.remove()
+    }
+
+    inputFile.addEventListener('change', toggleDownloadFiles)
   }
 })

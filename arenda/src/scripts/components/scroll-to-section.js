@@ -6,7 +6,9 @@ window.addEventListener('load', () => {
     if (section) {
       const y = section.getBoundingClientRect().top
       window.scrollBy({
-        top: y - document.querySelector('.header').offsetHeight
+        top: window.innerWidth > 1024 ?
+          y - document.querySelector('.header').offsetHeight :
+          y - document.querySelector('.header_mobile').offsetHeight
       })
     }
   }

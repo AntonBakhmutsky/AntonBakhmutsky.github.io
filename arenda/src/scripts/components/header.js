@@ -3,13 +3,15 @@ window.addEventListener('load', () => {
   const headerNavMobile = document.querySelector('.header__nav_mobile')
   const burgerButton = document.getElementById('burger')
   const header = document.querySelector('.header')
+  const mobileLinks = document.querySelectorAll('.header__link_mobile')
 
-  burgerButton.onclick= headerNavMobileToggle
+  burgerButton.addEventListener('click', headerNavMobileToggle)
+  mobileLinks.forEach(el => el.addEventListener('click', headerNavMobileToggle))
+
   function headerNavMobileToggle (){
     headerNavMobile.classList.toggle('_hidden')
     burgerButton.classList.toggle('active')
   }
-
 
   window.addEventListener('scroll', windowScrollHeader)
 

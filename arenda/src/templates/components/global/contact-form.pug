@@ -1,4 +1,4 @@
-.contact-form.active
+.contact-form
   .contact-form__head
     h2.contact-form__title Обратная связь
     button.contact-form__close
@@ -18,15 +18,11 @@
         .form__field-error Поле не может быть пустым
       textarea.contact-form__textarea(name="comment" placeholder="Комментарий")
       .contact-form__file
-        input(type="file" name="document" multiple)#formFileInput
+        input(type="file" name="document")#formFileInput
         label(for='formFileInput')
           | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/global/clip.svg')}
           span Прикрепить файл
         .contact-form__file-container.disabled
-          .contact-form__file-item
-            .contact-form__file-item-name
-            .contact-form__file-item-remove
-              | !{require('!svg-inline-loader?removeSVGTagAttrs=true!@/assets/img/global/close.svg')}
     .contact-form__policy.feedback__form-policy
       input#contactFormPolicyOrder(type="checkbox" required)
       label(for="contactFormPolicyOrder") Я согласен с #[a(href="javascript:") Политикой конфидициальности]

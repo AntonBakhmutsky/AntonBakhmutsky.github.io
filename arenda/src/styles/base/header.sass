@@ -41,19 +41,12 @@
       gap: 20px
 
       .header__button
-        transition: background-position ease 0.3s
         padding: 14px 24px
         color: $white
-        font-weight: 500
-        font-size: 16px
-        line-height: 20px
+        +font(16px, 20px, 500)
         border: none
-        background: linear-gradient(90deg, #E9A92C 0%, #E95A2C 25%, #E9A92C 100%)
         border-radius: 8px
         cursor: pointer
-
-        &:hover
-          background-position: -150px
 
   &__logo-container
     height: 36px
