@@ -16,6 +16,15 @@ body
   +font(16px, 28px, 350)
   min-height: 100vh
 
+  &.loaded_hiding
+    .preloader
+      transition: .3s opacity
+      opacity: 0
+
+  &.loaded
+    .preloader
+      display: none
+
 .body_fix
   overflow: hidden
 

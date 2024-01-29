@@ -72,7 +72,7 @@
     z-index: 100
 
 .header__nav_mobile
-  transition: ease-in 0.3s
+  transition: 0.3s
   z-index: 10
   position: absolute
   background-color: $grey
@@ -82,7 +82,7 @@
   width: 100%
   gap: 20px
   &._hidden
-    transform: translateY(-316px)
+    transform: translateY(-120vh)
 
 
   .header__link_mobile
@@ -109,8 +109,8 @@
       font-size: 16px
       line-height: 20px
       border: none
-      background: linear-gradient(90deg, #E9A92C 0%, #E95A2C 25%, #E9A92C 100%)
       border-radius: 8px
+      white-space: nowrap
 
 .faded
   box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.10)

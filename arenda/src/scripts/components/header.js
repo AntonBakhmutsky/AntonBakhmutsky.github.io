@@ -3,7 +3,7 @@ window.addEventListener('load', () => {
   const headerNavMobile = document.querySelector('.header__nav_mobile')
   const burgerButton = document.getElementById('burger')
   const header = document.querySelector('.header')
-  const mobileLinks = document.querySelectorAll('.header__link_mobile')
+  const mobileLinks = document.querySelectorAll('.header__nav_mobile a')
 
   burgerButton.addEventListener('click', headerNavMobileToggle)
   mobileLinks.forEach(el => el.addEventListener('click', headerNavMobileToggle))
