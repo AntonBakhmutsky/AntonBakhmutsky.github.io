@@ -13,7 +13,7 @@
       input
         border-color: #E04646
 
-      .request__field
+      .form__field
         &-error
           display: block
 
@@ -21,7 +21,7 @@
           color: #E04646
 
     &.active
-      .request__field-label
+      .form
         color: $white
 
     &:first-child
@@ -58,6 +58,7 @@
       line-height: 24px
       color: #949494
       transition: top .3s, color .3s, font-size .3s
+      pointer-events: none
 
       &.active
         top: 4px

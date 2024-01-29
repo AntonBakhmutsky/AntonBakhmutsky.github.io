@@ -1,8 +1,8 @@
 window.addEventListener('load', () => {
-  if (document.querySelector('.form')) {
+  if (document.querySelector('.form__field')) {
     // form inputs
-    const form = document.querySelector('.form')
-    const inputs = form.querySelectorAll('.form__field input')
+    const inputs = document.querySelectorAll('.form__field input')
+    console.log(inputs)
 
     function toggleInput(e) {
       const field = this.parentElement
