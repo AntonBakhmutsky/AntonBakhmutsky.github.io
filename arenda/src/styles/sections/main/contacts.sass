@@ -1,0 +1,49 @@
+@use '../../abstracts/variables' as *
+@use '../../abstracts/mixins' as *
+
+.contacts
+  &__container
+    display: flex
+    gap: 24px
+    margin-top: 40px
+    +screen($tablet)
+      flex-direction: column
+      margin-top: 28px
+
+  &__card
+    padding: 24px
+    border-radius: 12px
+    background-color: $grey
+    width: 312px
+    display: flex
+    flex-direction: column
+    gap: 20px
+    flex-shrink: 0
+    +screen($tablet)
+      padding: 20px
+      gap: 16px
+      width: 100%
+
+    &-item
+      gap: 12px
+      display: flex
+      align-items: center
+
+      img
+        flex-shrink: 0
+        +screen($tablet)
+          width: 20px
+          height: 20px
+
+      span
+        +font(16px, 28px, 500)
+        +screen($tablet)
+          +font(16px, 20px, 500)
+
+  &__map
+    width: 100%
+    border-radius: 12px
+    overflow: hidden
+    display: flex
+    +screen($tablet)
+      height: 312px
