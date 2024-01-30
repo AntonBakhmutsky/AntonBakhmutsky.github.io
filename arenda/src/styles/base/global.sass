@@ -15,6 +15,8 @@ body
   margin: 0
   +font(16px, 28px, 350)
   min-height: 100vh
+  display: flex
+  flex-direction: column
 
   &.loaded_hiding
     .preloader
@@ -86,6 +88,12 @@ section
     +screen($tablet)
       margin-top: 40px
 
+.header, .footer
+  flex: 0 1 auto
+
+.main
+  flex: 1 1 auto
+
 .btn-grad
   position: relative
   overflow: hidden
@@ -110,7 +118,6 @@ section
     visibility: hidden
 
   span
-    z-index: 1
     position: relative
     +font(16px, 20px, 500)
     color: $white
@@ -136,11 +143,7 @@ section
   overflow: hidden
   +screen($tablet)
     border-radius: 12px
-    height: 400px
-  +screen($tablet-sm)
-    height: 300px
-  +screen($tablet-xs)
-    height: 194px
+    height: auto
 
   &.playing
     .video__btn

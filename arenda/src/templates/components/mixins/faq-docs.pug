@@ -1,7 +1,7 @@
 mixin faq-docs(items)
   each item in items
     a.docs__card(href=item.doc download)
-      .docs__card-title= item.text
+      .docs__card-title #{item.text}
       .docs__card-button.btn-grad
         img.docs__card-icon(src=require('@/assets/img/faq/download-faq.png') alt="")
         span Скачать

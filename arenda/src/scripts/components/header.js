@@ -17,9 +17,9 @@ window.addEventListener('load', () => {
 
 
   function windowScrollHeader(){
-    let top = window.pageYOffset
+    let top = window.scrollY
 
-    let currentScrollPos = window.pageYOffset
+    let currentScrollPos = window.scrollY
     if (currentScrollPos > 1) {
       mobileHeader.classList.add('faded')
       header.classList.add('faded')
