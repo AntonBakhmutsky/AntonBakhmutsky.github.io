@@ -1,7 +1,8 @@
 .header
   .container
     a.header__logo-container(href="#")
-      img.header__logo(src=require('@/assets/img/global/logo.png') alt="")
+      .header__logo
+        |!{require(`!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/global/logo.svg`)}
     nav.header__nav
       a.header__link(href="javascript:" data-scroll="rent") Условия аренды
       a.header__link(href="javascript:" data-scroll="specs") Технические характеристики
@@ -14,7 +15,7 @@
 .header_mobile
   .header_mobile-container
     a.header__logo-container_mobile(href="#")
-      img.header__logo_mobile(src=require('@/assets/img/global/logo.png') alt="")
+      |!{require(`!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/global/logo2.svg`)}
     .header__burger(id="burger")
       .header__burger-open
         | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/global/burger.svg')}

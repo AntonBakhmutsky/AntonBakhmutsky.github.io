@@ -26,8 +26,11 @@
           gap: 12px
 
           .card__icon
-            max-width: 48px
-            max-height: 48px
+            width: 48px
+            height: 48px
+            svg
+              width: 48px
+              height: 48px
 
           .card__title
             width: min-content
@@ -40,7 +43,9 @@
           .card__list
             display: flex
             gap: 12px
-
+            flex-direction: column
+            .card__list-item
+              +font(16px, 24px)
 
 
 
