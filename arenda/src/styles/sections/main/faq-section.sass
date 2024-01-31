@@ -74,8 +74,8 @@
     .docs
       margin-top: 32px
       display: grid
-      grid-template-columns: repeat(auto-fill, minmax(312px, 1fr))
-      grid-gap: 24px
+      grid-template-columns: repeat(auto-fill, minmax(248px, 1fr))
+      grid-gap: 20px
       +screen(1024)
         grid-gap: 16px
         margin-top: 20px
@@ -96,10 +96,8 @@
 
         .docs__card-title
           transition: color ease 0.3s
-          font-weight: 500
-          font-size: 20px
+          +font(16px, 20px, 500)
           text-align: center
-          line-height: 24px
           +screen(1024)
             font-size: 16px
 

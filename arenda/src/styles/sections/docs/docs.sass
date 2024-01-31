@@ -2,3 +2,31 @@
 @use '../../abstracts/mixins' as *
 
 .docs
+  padding: 40px 0 0
+  +screen($tablet)
+    padding: 28px 0 0
+
+  .section-title
+    +screen($tablet)
+      margin-bottom: 24px
+
+  &__container
+    display: flex
+    flex-direction: column
+    gap: 24px
+    +screen($tablet)
+      gap: 20px
+
+  &__block
+    display: flex
+    flex-direction: column
+    gap: 16px
+
+    &-title
+      +font(20px, 24px, 500)
+
+    &-txt
+      p
+        +font(14px, 18px)
+
+

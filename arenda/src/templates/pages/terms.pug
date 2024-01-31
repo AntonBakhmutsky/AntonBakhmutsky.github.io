@@ -4,3 +4,14 @@ block title
   | Аренда полуприцепов SOTRANS
 
 block content
+  section.docs
+    .container
+      h2.section-title Пользовательское соглашение
+      .docs__container
+        each el in termsList
+          .docs__block
+            h3.docs__block-title #{el.title}
+            .docs__block-txt
+              each item in el.txt
+                p #{item}
+        .docs__date Обновлено «1» февраля 2023г.

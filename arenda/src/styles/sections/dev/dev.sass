@@ -1,0 +1,59 @@
+@use '../../abstracts/variables' as *
+@use '../../abstracts/mixins' as *
+
+.dev
+  flex: 1 1 auto
+  padding: 40px 16px
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  gap: 40px
+  +screen($tablet)
+    gap: 28px
+
+  &__logo
+    margin-bottom: 8px
+    +screen($tablet)
+      margin-bottom: 4px
+
+    img
+      +screen($tablet)
+        width: 198px
+
+  &__title
+    +font(36px, 48px, 700)
+    text-align: center
+    +screen($tablet)
+      +font(24px, 28px, 700)
+
+  &__image
+    img
+      +screen($tablet)
+        width: 253px
+
+  &__contacts
+    display: flex
+    flex-direction: column
+    gap: 24px
+    +screen($tablet)
+      gap: 16px
+
+  &__link
+    display: flex
+    align-items: center
+    gap: 12px
+    +font(32px, 40px, 500)
+    +screen($tablet)
+      +font(20px, 24px, 500)
+
+    &:hover:not(:active)
+      +mf-screen(1025)
+        color: $orange
+
+    img
+      +screen($tablet)
+        width: 24px
+        height: 24px
+
+
