@@ -8,3 +8,6 @@ mixin faq-drop(items)
         .drop__bottom
           .drop__bottom-inner
             .drop__text= item.text
+              if(item.highlight)
+              span= item.highlight
+              |.
