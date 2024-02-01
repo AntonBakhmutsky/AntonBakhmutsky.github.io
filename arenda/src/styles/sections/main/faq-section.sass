@@ -80,6 +80,7 @@
       grid-template-columns: repeat(auto-fill, minmax(248px, 1fr))
       grid-gap: 20px
       +screen(1024)
+        padding-top: 0
         grid-gap: 16px
         margin-top: 20px
 
@@ -92,6 +93,8 @@
         justify-content: space-between
         gap: 16px
         padding: 24px
+        +screen( $tablet)
+          padding: 20px
 
         &:hover
           .docs__card-title
