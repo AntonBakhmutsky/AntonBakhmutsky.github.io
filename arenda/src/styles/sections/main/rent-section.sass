@@ -119,6 +119,10 @@
       align-items: center
       +font(16px, 20px, 500)
 
+      &:hover:not(:active, .swiper-slide-thumb-active)
+        +mf-screen(1025)
+          color: $orange
+
       &.swiper-slide-thumb-active
         background: linear-gradient(90deg, #E95A2C 0%, #E9A92C 100%)
         color: $white
@@ -129,6 +133,9 @@
 
       svg
         flex-shrink: 0
+
+        path
+          transition: none
 
     .swiper
       &.swiper_main
