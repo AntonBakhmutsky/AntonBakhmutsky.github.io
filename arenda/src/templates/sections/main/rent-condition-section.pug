@@ -31,8 +31,8 @@ section.rent(id="rent")
           .swiper-pagination
         .rent__maps-buttons.swiper.swiper_thumb(thumbsSlider="")
           .swiper-wrapper
-            each el in rentMaps
-              .rent__maps-btn.swiper-slide
+            each el, index in rentMaps
+              .rent__maps-btn.swiper-slide(data-id=index)
                 | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/rent/pin.svg')}
                 span #{el}
 

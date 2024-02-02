@@ -11,35 +11,43 @@ window.addEventListener('load', () => {
     ]
 
     ymaps.ready(function () {
+      const mapBtns = document.querySelectorAll('.rent__maps-btn')
+
       const tosnoMap = new ymaps.Map('tosnoMap', {
         center: maps[0].coords,
         zoom: 12,
-        controls: ['geolocationControl']
+        controls: []
       }, {
         searchControlProvider: 'yandex#search'
       })
       const elnyiaMap = new ymaps.Map('elnyiaMap', {
         center: maps[1].coords,
         zoom: 12,
-        controls: ['geolocationControl']
+        controls: []
       }, {
         searchControlProvider: 'yandex#search'
       })
       const elabugaMap = new ymaps.Map('elabugaMap', {
         center: maps[2].coords,
         zoom: 12,
-        controls: ['geolocationControl']
+        controls: []
       }, {
         searchControlProvider: 'yandex#search'
       })
       const rostovMap = new ymaps.Map('rostovMap', {
         center: maps[3].coords,
         zoom: 12,
-        controls: ['geolocationControl']
+        controls: []
       }, {
         searchControlProvider: 'yandex#search'
       })
 
+      const currentMaps = [tosnoMap, elnyiaMap, elabugaMap, rostovMap]
+
+      function setMapCenter() {
+        const id = +this.dataset.id
+        currentMaps[id].setCenter(maps[id].coords)
+      }
 
       function setGeoObjects(address, map) {
         const placemark = new ymaps.Placemark(address.coords, {
@@ -54,9 +62,11 @@ window.addEventListener('load', () => {
         map.geoObjects.add(placemark)
       }
 
-      const currentMaps = [tosnoMap, elnyiaMap, elabugaMap, rostovMap]
 
-      maps.forEach((el, i) => setGeoObjects(el, currentMaps[i]))
+      maps.forEach((el, i) => {
+        setGeoObjects(el, currentMaps[i])
+        mapBtns[i].addEventListener('click', setMapCenter)
+      })
     })
 
     const thumbSlider = new Swiper('.swiper.swiper_thumb', {
