@@ -3,6 +3,5 @@ mixin faq-docs(items)
     a.docs__card(href=item.doc download)
       .docs__card-title #{item.text}
       .docs__card-button.btn-grad
-        .docs__card-icon
           | !{require(`!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/faq/download.svg`)}
-        span Скачать
+          span Скачать
