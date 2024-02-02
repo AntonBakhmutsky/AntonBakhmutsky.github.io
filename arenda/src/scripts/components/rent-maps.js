@@ -14,28 +14,28 @@ window.addEventListener('load', () => {
       const tosnoMap = new ymaps.Map('tosnoMap', {
         center: maps[0].coords,
         zoom: 12,
-        controls: []
+        controls: ['geolocationControl']
       }, {
         searchControlProvider: 'yandex#search'
       })
       const elnyiaMap = new ymaps.Map('elnyiaMap', {
         center: maps[1].coords,
         zoom: 12,
-        controls: []
+        controls: ['geolocationControl']
       }, {
         searchControlProvider: 'yandex#search'
       })
       const elabugaMap = new ymaps.Map('elabugaMap', {
         center: maps[2].coords,
         zoom: 12,
-        controls: []
+        controls: ['geolocationControl']
       }, {
         searchControlProvider: 'yandex#search'
       })
       const rostovMap = new ymaps.Map('rostovMap', {
         center: maps[3].coords,
         zoom: 12,
-        controls: []
+        controls: ['geolocationControl']
       }, {
         searchControlProvider: 'yandex#search'
       })
