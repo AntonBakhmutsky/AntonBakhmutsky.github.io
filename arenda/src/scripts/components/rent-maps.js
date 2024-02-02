@@ -10,6 +10,8 @@ window.addEventListener('load', () => {
       {address: 'Ростовская область, Миллерово, улица Седова 38', coords: [48.942143073699874, 40.39912449999999]}
     ]
 
+    let currentMaps = null
+
     ymaps.ready(function () {
       const mapBtns = document.querySelectorAll('.rent__maps-btn')
 
@@ -42,12 +44,7 @@ window.addEventListener('load', () => {
         searchControlProvider: 'yandex#search'
       })
 
-      const currentMaps = [tosnoMap, elnyiaMap, elabugaMap, rostovMap]
-
-      function setMapCenter() {
-        const id = +this.dataset.id
-        currentMaps[id].setCenter(maps[id].coords)
-      }
+      currentMaps = [tosnoMap, elnyiaMap, elabugaMap, rostovMap]
 
       function setGeoObjects(address, map) {
         const placemark = new ymaps.Placemark(address.coords, {
@@ -65,7 +62,6 @@ window.addEventListener('load', () => {
 
       maps.forEach((el, i) => {
         setGeoObjects(el, currentMaps[i])
-        mapBtns[i].addEventListener('click', setMapCenter)
       })
     })
 
@@ -74,7 +70,7 @@ window.addEventListener('load', () => {
       slidesPerView: 4,
       direction: 'vertical'
     })
-    new Swiper('.swiper.swiper_main', {
+    const mainSlider = new Swiper('.swiper.swiper_main', {
       modules: [Pagination, Thumbs],
       slidesPerView: 1,
       spaceBetween: 10,
@@ -93,6 +89,12 @@ window.addEventListener('load', () => {
       }
     })
 
+    mainSlider.on('slideChange', function () {
+      setMapCenter(this.activeIndex)
+    })
 
+    function setMapCenter(id) {
+      currentMaps[id].setCenter(maps[id].coords)
+    }
   }
 })
