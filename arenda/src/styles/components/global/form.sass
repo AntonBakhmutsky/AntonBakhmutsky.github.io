@@ -42,9 +42,11 @@
       padding: 16px 12px 4px
       color: $white
 
-      &:focus
+    &:focus
+      input
         border-color: $white
-      &:hover:not(:active)
+    &:hover:not(:active, .error)
+      input
         +mf-screen(1025)
           border-color: $white
 

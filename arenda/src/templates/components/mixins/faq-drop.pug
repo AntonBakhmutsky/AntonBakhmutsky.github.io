@@ -7,7 +7,6 @@ mixin faq-drop(items)
           | !{require('!svg-inline-loader?removeSVGTagAttrs=true!@/assets/img/faq/arrow.svg')}
         .drop__bottom
           .drop__bottom-inner
-            .drop__text= item.text
+            span.drop__text= item.text
               if(item.highlight)
-              span= item.highlight
-              |.
+                  a(href="tel:+79111160222")= item.highlight + ' .'

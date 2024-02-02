@@ -95,18 +95,19 @@
     display: flex
     align-items: center
     justify-content: center
+
     +screen($tablet)
-      width: 18px
-      height: 18px
-      position: relative
-      top: auto
-      right: auto
-      margin-top: 3px
+      width: 24px
+      height: 24px
+      position: absolute
+      top: 16px
+      right: 16px
+
 
     &:hover:not(:active)
       svg
         path
-          stroke: $orange
+          stroke: $black
 
   &__title
     +font(36px, 48px, 700)
@@ -120,11 +121,14 @@
     margin-top: 28px
 
     button
+      transition: color ease 0.3s
       width: 50%
       border-radius: 8px
       height: 40px
       +font(14px, 18px, 500)
-      transition: none
+      &:hover:not(:active,.active)
+        +mf-screen(1025)
+          color: $orange
 
       &.active
         background: linear-gradient(90deg, #E95A2C 0%, #E9A92C 100%)
@@ -186,6 +190,10 @@
   &__input
     &:not(:first-child)
       margin-top: 24px
+    &:not(.form__field.error)
+      input
+        &:hover
+          border-color: $black
 
   &__textarea
     width: 100%
