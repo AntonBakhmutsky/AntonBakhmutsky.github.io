@@ -1,0 +1,17 @@
+window.addEventListener('load', () => {
+  const buttons = document.querySelectorAll('[data-scroll]')
+
+  function scrollToSection() {
+    const section = document.querySelector(`#${this.dataset.scroll}`) || null
+    if (section) {
+      const y = section.getBoundingClientRect().top
+      window.scrollBy({
+        top: window.innerWidth > 1024 ?
+          y - document.querySelector('.header').offsetHeight :
+          y - document.querySelector('.header_mobile').offsetHeight
+      })
+    }
+  }
+
+  buttons.forEach(el => el.addEventListener('click', scrollToSection))
+})

@@ -15,6 +15,20 @@ body
   margin: 0
   +font(16px, 28px, 350)
   min-height: 100vh
+  display: flex
+  flex-direction: column
+
+  &.loaded_hiding
+    .preloader
+      transition: .3s opacity
+      opacity: 0
+
+  &.loaded
+    .preloader
+      display: none
+
+.body_fix
+  overflow: hidden
 
 .container
   max-width: 1440px
@@ -68,39 +82,17 @@ input, textarea
 textarea
   resize: none
 
-input[type="checkbox"], input[type="radio"]
-  display: none
-
-input[type="radio"] + label
-  position: relative
-  box-sizing: border-box
-  padding-left: 30px
-  +font(14px, 22px, 500)
-
-  &:not(:first-child)
-    margin-top: 16px
-
-  &:before
-    content: ''
-    position: absolute
-    top: 50%
-    transform: translateY(-50%)
-    left: 0
-    width: 20px
-    height: 20px
-    border: 1px solid $white
-    box-sizing: border-box
-    border-radius: 50%
-
-input[type="radio"]:checked + label
-  &:before
-    border-width: 6px
-
 section
   &:not(:first-child)
     margin-top: 80px
     +screen($tablet)
       margin-top: 40px
+
+.header, .footer
+  flex: 0 1 auto
+
+.main
+  flex: 1 1 auto
 
 .btn-grad
   position: relative
@@ -126,9 +118,9 @@ section
     visibility: hidden
 
   span
-    z-index: 1
     position: relative
     +font(16px, 20px, 500)
+    color: $white
 
   &:hover:not(:active)
     +mf-screen(1025)
@@ -140,7 +132,8 @@ section
         visibility: visible
         opacity: 1
 
-  img, span
+  img, span, svg
+    position: relative
     z-index: 1
 
 .video
@@ -151,11 +144,7 @@ section
   overflow: hidden
   +screen($tablet)
     border-radius: 12px
-    height: 400px
-  +screen($tablet-sm)
-    height: 300px
-  +screen($tablet-xs)
-    height: 194px
+    height: auto
 
   &.playing
     .video__btn

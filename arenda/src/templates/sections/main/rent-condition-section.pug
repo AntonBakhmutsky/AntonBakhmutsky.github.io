@@ -3,5 +3,39 @@ section.rent(id="rent")
     +section-title('Условия аренды').rent-title
     .rent__cards-container
       +rent-card(rentItems)
+    .rent__maps
+      h3.rent__maps-title Площадки где можно арендовать / сдать наши полуприцепы:
+      .rent__maps-container
+        .rent__maps-items.swiper.swiper_main
+          .swiper-wrapper
+            .swiper-slide.rent__maps-item
+              .rent__maps-map#tosnoMap
+              h4
+                | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/rent/pin.svg')}
+                span Ленинградская область, Тосненский район, городской посёлок Красный Бор, Промышленная улица 3
+            .swiper-slide.rent__maps-item
+              .rent__maps-map#elnyiaMap
+              h4
+                | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/rent/pin.svg')}
+                span Московская область, Богородский городской округ, деревня Ельня, Новая улица 16А
+            .swiper-slide.rent__maps-item
+              .rent__maps-map#elabugaMap
+              h4
+                | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/rent/pin.svg')}
+                span Республика Татарстан, Елабужский район, Федеральная трасса М7 1023 км
+            .swiper-slide.rent__maps-item
+              .rent__maps-map#rostovMap
+              h4
+                | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/rent/pin.svg')}
+                span Ростовская область, Миллерово, улица Седова 38
+          .swiper-pagination
+        .rent__maps-buttons.swiper.swiper_thumb(thumbsSlider="")
+          .swiper-wrapper
+            each el, index in rentMaps
+              .rent__maps-btn.swiper-slide
+                | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/rent/pin.svg')}
+                span #{el}
+
+
 
 

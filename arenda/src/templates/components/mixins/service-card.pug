@@ -1,5 +1,6 @@
 mixin service-card(items)
   each item in items
     .service__card
-      img.service__card-image(src=item.image)
+      .service__card-image
+        | !{item.image}
       .service__card-text #{item.text}

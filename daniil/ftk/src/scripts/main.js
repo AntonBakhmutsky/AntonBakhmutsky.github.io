@@ -1,3 +1,0 @@
-require('./faqDrop')
-require('./header')
-

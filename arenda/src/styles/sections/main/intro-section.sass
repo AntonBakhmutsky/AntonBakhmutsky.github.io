@@ -16,10 +16,10 @@
     top: 0
     height: 100%
     width: 100%
-    background: url(../assets/img/intro/intro-image.png) center/cover no-repeat
+    background: url(../assets/img/intro/intro-image.webp) center/cover no-repeat
     z-index: 9
     +screen(680)
-      background: url(../assets/img/intro/intro-image-mob.png) bottom/ 100% auto no-repeat
+      background: url(../assets/img/intro/intro-image-mob.webp) bottom/ 100% auto no-repeat
 
   .container
     display: flex
@@ -58,7 +58,7 @@
     .intro__text-container
       box-sizing: content-box
       z-index: 30
-      padding: 40px 142px 96px 60px
+      padding: 40px 142px 96px 0
       height: 100%
       max-width: 760px
       +screen(680)
@@ -96,7 +96,7 @@
             +font(20px, 24px, 500)
 
       .intro__list
-        max-width: 408px
+        max-width: 480px
         margin-top: 56px
         display: flex
         flex-direction: column
@@ -109,6 +109,8 @@
           align-items: flex-start
           display: flex
           gap: 12px
+          +screen($tablet)
+            gap: 8px
 
           .list-item__image
             padding-top: 3px

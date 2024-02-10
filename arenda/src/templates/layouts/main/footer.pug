@@ -1,31 +1,29 @@
 footer.footer
-  .container
-    .footer__top
+  .footer__top
+    .container
       .footer__top-container
-        .footer__image-container
-          img.footer__image(src="/src/assets/images/footer-image.png")
-        .footer__links-container
-          a.footer__link Условия аренды
-          a.footer__link Технические характеристики
-          a.footer__link Обслуживание
-          a.footer__link FAQ
-          a.footer__link Контакты
-        .footer__contacts-container
+        a.footer__image(href='/')
+          img(src=require('@/assets/img/global/footer.svg') alt="")
+        .footer__links
+          .footer__links-block
+            a.footer__link(href="javascript:" data-scroll="rent") Условия аренды
+            a.footer__link(href="javascript:" data-scroll="specs") Технические характеристики
+            a.footer__link(href="javascript:" data-scroll="service") Обслуживание
+          .footer__links-block
+            a.footer__link(href="javascript:" data-scroll="faq") FAQ
+            a.footer__link(href="javascript:" data-scroll="contacts") Контакты
+        .footer__contacts
+          a.footer__contact(href="tel:+79111160222")
+            img(src=require('@/assets/img/contacts/phone.svg') alt="")
+            span +7 (911) 116-02-22
+          a.footer__contact(href="mailto:info@mz-sotrans.ru")
+            img.footer__contact-image(src=require('@/assets/img/contacts/mail.svg') alt="")
+            span info@mz-sotrans.ru
           .footer__contact
-            img.footer__contact-image(src=require('@/assets/img/contacts/phone.png') alt="")
-            a.footer__contact-text(href="tel:+78124954202") + 7 (812) 495-42-02
-          .footer__contact
-            img.footer__contact-image(src=require('@/assets/img/contacts/mail.png') alt="")
-            a.footer__contact-text(href="mailto:info@mz-sotrans.ru") info@mz-sotrans.ru
-          .footer__contact
-            img.footer__contact-image(src=require('@/assets/img/contacts/pin.png') alt="")
-            .footer__contact-text п. Красный Бор, ул. Промышленная
+            img.footer__contact-image(src=require('@/assets/img/contacts/pin.svg') alt="")
+            span п. Красный Бор, ул. Промышленная 3
       .footer__attention *Обращаем ваше внимание на то, что данный интернет-сайт носит исключительно информационный характер и ни при каких условиях не является публичной офертой, определяемой положениями Статьи 437 Гражданского кодекса Российской Федерации.
-.separator
-.footer__bottom
-  .container
-    .bottom__text SOTRANS АРЕНДА ПОЛУПРИЦЕПОВ | © 2024 | Все права защищены
-    .bottom__links-container
-      a.bottom__link Условия пользования сайтом
-      | |
-      a.bottom__link Политика конфиденциальности
+  .footer__bottom
+    .container
+      .footer__bottom-text SOTRANS АРЕНДА ПОЛУПРИЦЕПОВ | © 2024 | Все&nbsp;права&nbsp;защищены
+      .footer__bottom-links #[a(href="#") Условия пользования сайтом] #[span |] #[a(href="#") Политика конфиденциальности]

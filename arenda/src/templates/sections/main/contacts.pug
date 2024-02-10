@@ -1,0 +1,15 @@
+section.contcts#contacts
+  .container
+    +section-title('Контакты')
+    .contacts__container
+      .contacts__card
+        a.contacts__card-item(href="https://yandex.ru/maps/-/CDBABKYk" target="_blank")
+          img(src=require('@/assets/img/contacts/pin.svg') alt="")
+          span п. Красный Бор, #[br] ул. Промышленная 3
+        a.contacts__card-item(href="mailto:info@mz-sotrans.ru" )
+          img(src=require('@/assets/img/contacts/mail.svg') alt="")
+          span mailto:info@mz-sotrans.ru
+        a.contacts__card-item(href="tel:+78124954202")
+          img(src=require('@/assets/img/contacts/phone.svg') alt="")
+          span + 7 (812) 495-42-02
+      .contacts__map#contactsMap

@@ -2,9 +2,10 @@ mixin rent-card(items)
     each item in items
         .rent__card
             .card__top
-                img.card__icon(src=item.image)
+                .card__icon
+                  | !{item.image}
                 .card__title #{item.title}
             .card__bottom
-                each listItem in item.list
                     ul.card__list
+                      each listItem in item.list
                         li.card__list-item #{listItem}

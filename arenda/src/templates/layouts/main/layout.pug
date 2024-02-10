@@ -19,7 +19,12 @@ html(lang="ru")
   head
     include head
   body
+    include ../../components/global/preloader
     include header
     main.main
       block content
     include footer
+    .contact-form__overlay
+    button.contact-form__btn
+      img(src=require('@/assets/img/global/contact-form-btn.svg') alt="")
+    include ../../components/global/contact-form

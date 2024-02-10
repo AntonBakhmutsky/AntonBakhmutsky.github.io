@@ -1,0 +1,54 @@
+.contact-form
+  .contact-form__head
+    h2.contact-form__title Обратная связь
+    button.contact-form__close
+      |!{require('!svg-inline-loader?removeSVGTagAttrs=true!@/assets/img/global/close.svg')}
+  .contact-form__btns
+    button(type="button" data-id=0).active Оставить заявку
+    button(type="button" data-id=1) Заказать звонок
+  form.contact-form__fields.form.active(action='' data-id=0)#formLeaveOrder
+    .contact-form__fields-container
+      .contact-form__input.form__field.error
+        input(type="text" name="name" required)#inputNameOrder
+        .form__field-label Имя *
+        .form__field-error Поле не может быть пустым
+      .contact-form__input.form__field
+        input(type="tel" name="tel")#inputPhoneOrder
+        .form__field-label Номер телефона *
+        .form__field-error Поле не может быть пустым
+      textarea.contact-form__textarea(name="comment" placeholder="Комментарий")
+      .contact-form__file
+        input(type="file" name="document")#formFileInput
+        label(for='formFileInput')
+          | !{require('!svg-inline-loader?removeSVGTagAttrs=false!@/assets/img/global/clip.svg')}
+          span Прикрепить файл
+        .contact-form__file-container.disabled
+    .contact-form__policy.feedback__form-policy
+      input#contactFormPolicyOrder(type="checkbox" checked required)
+      label(for="contactFormPolicyOrder") Я согласен с #[a(href="javascript:") Политикой конфидициальности]
+    button.contact-form__submit.btn-grad(type="submit" name="submitRequestCall" id="submitRequestCall")
+      span Отправить
+
+  form.contact-form__fields.form(action='' data-id=1)#formRequestCall
+    .contact-form__fields-container
+      .contact-form__input.form__field
+        input(type="text" name="name" required)#inputNameCall
+        .form__field-label Имя *
+        .form__field-error Поле не может быть пустым
+      .contact-form__input.form__field
+        input(type="tel" name="tel" required)#inputPhoneCall
+        .form__field-label Номер телефона *
+        .form__field-error Поле не может быть пустым
+      .contact-form__policy.feedback__form-policy
+        input#contactFormPolicyCall(type="checkbox" checked required)
+        label(for="contactFormPolicyCall") Я согласен с #[a(href="javascript:") Политикой конфидициальности]
+    button.contact-form__submit.btn-grad(type="submit" name="submitLeaveOrder" id="submitLeaveOrder")
+      span Отправить
+
+  .contact-form__success
+    .contact-form__success-image
+      img(src=require('@/assets/img/global/check-circle.svg') alt="")
+    .contact-form__success-title Спасибо за заявку!
+    .contact-form__success-txt Мы свяжемся с Вами в ближайшее время
+
+
