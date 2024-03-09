@@ -1,3 +1,5 @@
+import courseData from "~/moc/courseData";
+
 export const useCourse = () => {
-  return ref()
+  return courseData
 }

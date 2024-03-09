@@ -4,7 +4,8 @@
   </div>
   <div class="app-container">
     <div class="app-container__left">
-      <h3>Chapters</h3>
+      <h3 class="fir-title">Chapters</h3>
+
     </div>
     <div class="app-container__right">
       <NuxtPage />
