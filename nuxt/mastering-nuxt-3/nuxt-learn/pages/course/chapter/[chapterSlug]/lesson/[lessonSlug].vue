@@ -39,7 +39,7 @@ const lesson = computed(() => {
   </div>
   <VideoPLaer
     v-if="lesson.videoId"
-    :video-id="lesson.videoId"
+    :video-id="lesson.videoId.toString()"
   />
   <p>{{lesson.text}}</p>
 </template>
