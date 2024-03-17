@@ -1,9 +1,0 @@
-section.questions
-  .container
-    h2.section__title.slide-right Оптимизируйте свой бизнесс
-    .questions__container
-      ul.questions__list
-        each el, index in questionsList
-          li.slide-right(data-delay=`${index * 150}`) !{el}
-      .questions__image.slide-up
-        img(src=require('@/assets/img/questions/man.jpg') alt="")

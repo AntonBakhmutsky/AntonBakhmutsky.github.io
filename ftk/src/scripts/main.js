@@ -1,7 +1,0 @@
-require('./components/preloader')
-require('./components/header')
-require('./components/animations')
-require('./components/services')
-require('./components/production')
-require('./components/contact-form')
-require('./components/vh')

@@ -1,8 +1,0 @@
-section.main-news
-  .container
-    h2.section-title.opacity-animation Новости
-    .main-news__tile.slide-left
-      each el in  mainNews
-        +news-card(el)
-    a.btn.btn_orange.btn_orange_xs.main-news__link.slide-right(href="news.html")
-      span Все новости
