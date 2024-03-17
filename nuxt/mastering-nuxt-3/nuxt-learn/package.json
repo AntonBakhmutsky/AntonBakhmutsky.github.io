@@ -10,6 +10,8 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
+    "@vueuse/core": "^10.9.0",
+    "@vueuse/nuxt": "^10.9.0",
     "nuxt": "^3.9.0",
     "sass": "^1.69.7",
     "sass-loader": "^13.3.3",

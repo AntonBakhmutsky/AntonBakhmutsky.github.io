@@ -1,5 +1,6 @@
 <script setup>
 const {chapters} = useCourse()
+console.log(useCourse())
 </script>
 
 <template>
@@ -19,7 +20,7 @@ const {chapters} = useCourse()
           <NuxtLink
               v-for="(lesson, index) in chapter.lessons"
               :key="lesson.slug"
-              :href="`/course/chapter/${chapter.slug}/lesson/${lesson.slug}`"
+              :to="lesson.path"
               class="lesson-link"
           >
             <span>{{ index + 1 }}.</span>
@@ -33,3 +34,8 @@ const {chapters} = useCourse()
     </div>
   </div>
 </template>
+
+<style lang="sass" scoped>
+    .router-link-active
+      color: red
+</style>

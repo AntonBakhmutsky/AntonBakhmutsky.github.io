@@ -1,7 +1,5 @@
 <script setup>
 
-import VideoPLaer from "../../../../../components/VideoPLaer.vue";
-
 const course = useCourse()
 const route = useRoute()
 
@@ -17,29 +15,60 @@ const lesson = computed(() => {
   )
 })
 
+const title = computed(() => `${lesson.value.title} - ${course.title}`)
+
+useHead({
+  title: `${title.value}`
+})
+
+const progress = useLocalStorage('progress', [])
+
+const isLessonComplete = computed(() => {
+  if (!progress.value[chapter.value.number - 1]) {
+    return false
+  }
+
+  if (!progress.value[chapter.value.number - 1][lesson.value.number - 1]) {
+    return false
+  }
+
+  return progress.value[chapter.value.number - 1][lesson.value.number - 1]
+})
+
+const toggleComplete = () => {
+  if (!progress.value[chapter.value.number - 1]) {
+    progress.value[chapter.value.number - 1] = []
+  }
+
+  progress.value[chapter.value.number - 1][lesson.value.number - 1] = !isLessonComplete.value
+}
 </script>
 
 <template>
   <h2 class="sec-title">Lesson {{ chapter.number }} - {{ lesson.number }}</h2>
-  <h2 class="less-title">{{lesson.title}}</h2>
+  <h2 class="less-title">{{ lesson.title }}</h2>
   <div>
-    <a
+    <NuxtLink
         v-if="lesson.sourceUrl"
-        :href="lesson.sourceUrl"
+        :to="lesson.sourceUrl"
     >
       Download Source Code
-    </a>
-    <a
+    </NuxtLink>
+    <NuxtLink
         class="video-link"
         v-if="lesson.downloadUrl"
-        :href="lesson.downloadUrl"
+        :to="lesson.downloadUrl"
     >
       Download Video
-    </a>
+    </NuxtLink>
   </div>
   <VideoPLaer
-    v-if="lesson.videoId"
-    :video-id="lesson.videoId.toString()"
+      v-if="lesson.videoId"
+      :video-id="lesson.videoId.toString()"
   />
-  <p>{{lesson.text}}</p>
+  <p>{{ lesson.text }}</p>
+  <LessonCompleteButton
+      :model-value="isLessonComplete"
+      @update:model-value="toggleComplete"
+  />
 </template>

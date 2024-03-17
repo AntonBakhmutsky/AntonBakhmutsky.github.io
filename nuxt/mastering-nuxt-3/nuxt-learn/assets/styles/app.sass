@@ -102,8 +102,29 @@ a
     a
       +font(16px, 20px, 600)
 
-      &:hover:not(:active)
+      &:hover:not(:active, .router-link-active)
         color: darkorange
 
       &:first-of-type
         margin-top: 8px
+
+.complete-btn
+  margin-top: 30px
+  padding: 8px 20px
+  border-radius: 4px
+  display: flex
+  align-items: center
+  justify-content: center
+  background-color: gray
+  color: $white
+  width: fit-content
+  transition: background-color .3s, color .3s
+  +font(14px, 13px, 700)
+  cursor: pointer
+
+  &.checked
+    background-color: limegreen
+
+  input
+    display: none
+    position: absolute
